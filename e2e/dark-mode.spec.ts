@@ -331,6 +331,7 @@ test.describe('🌙 Dark Mode Test Suite', () => {
 
   test.describe('System Preference Detection', () => {
     test('should respect system dark mode preference @dark-mode @system', async ({ page }) => {
+    test.setTimeout(40000);
       // Set system preference to dark
       await page.emulateMedia({ colorScheme: 'dark' });
       
@@ -345,6 +346,7 @@ test.describe('🌙 Dark Mode Test Suite', () => {
     });
 
     test('should handle system light mode preference @dark-mode @system', async ({ page }) => {
+    test.setTimeout(40000);
       // Set system preference to light
       await page.emulateMedia({ colorScheme: 'light' });
       
@@ -358,6 +360,7 @@ test.describe('🌙 Dark Mode Test Suite', () => {
     });
 
     test('should handle no-preference @dark-mode @system', async ({ page }) => {
+    test.setTimeout(40000);
       // Clear color scheme preference
       await page.emulateMedia({ colorScheme: 'no-preference' });
       

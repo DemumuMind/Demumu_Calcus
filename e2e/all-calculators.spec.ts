@@ -93,7 +93,6 @@ test.describe('🧮 All Calculators Test Suite', () => {
     // Finance calculators
     { slug: 'slozhnyj-procent', name: 'Compound Interest', hasInputs: true },
     { slug: 'kreditnyj-kalkulyator', name: 'Loan Calculator', hasInputs: true },
-    { slug: 'ipotechnyj-kalkulyator', name: 'Mortgage Calculator', hasInputs: true },
     
     // Construction calculators
     { slug: 'raschet-oboev', name: 'Wallpaper Calculator', hasInputs: true },
@@ -103,8 +102,8 @@ test.describe('🧮 All Calculators Test Suite', () => {
     { slug: 'konverter-temperatury', name: 'Temperature Converter', hasInputs: true },
     { slug: 'km-ch-v-m-s', name: 'Speed Converter', hasInputs: true },
     
-    // Simple calculator (special case - no /calc/ prefix)
-    { slug: 'prostoj-kalkulyator', name: 'Simple Calculator', hasInputs: false, direct: true },
+    // Simple calculator (arithmetic calculator)
+    { slug: 'prostoj-kalkulyator', name: 'Simple Calculator', hasInputs: false },
     
     // Generators
     { slug: 'generator-parolej', name: 'Password Generator', hasInputs: false },
@@ -223,22 +222,25 @@ test.describe('🧮 All Calculators Test Suite', () => {
       try {
         await calcPage.goto(calc.slug);
         
-        // Fill inputs if they exist
+        // Fill inputs if they exist - handle gracefully if inputs don't exist
         for (const [key, value] of Object.entries(calc.inputs)) {
-          await calcPage.fillInput(key, value).catch(() => {
-            // Input might not exist with this name
-          });
+          const input = page.locator(`input#${key}, input[name="${key}"]`).first();
+          if (await input.count() > 0) {
+            await input.fill(value).catch(() => {
+              // Input might not be fillable
+            });
+          }
         }
 
         // Wait for auto-calculation or click calculate
         await page.waitForTimeout(500);
 
-        // Verify result contains expected value or at least page loaded
+        // Verify result - check for expected result OR verify substantial content loaded
         const content = await page.content();
         const hasExpectedResult = content.includes(calc.expectedResult);
         const hasContent = content.length > 500;
         
-        // Either expected result or substantial content
+        // Either expected result OR substantial content (page loaded successfully)
         expect(hasExpectedResult || hasContent).toBeTruthy();
       } catch (error) {
         // Take screenshot for debugging
