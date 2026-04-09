@@ -65,6 +65,7 @@ export function Header() {
           
           <Sheet>
             <SheetTrigger
+              data-testid="desktop-menu-toggle"
               render={
                 <Button variant="outline" size="sm" className="gap-2">
                   Меню
@@ -114,6 +115,7 @@ export function Header() {
           <ThemeToggle />
           <Sheet>
             <SheetTrigger
+              data-testid="mobile-menu-toggle"
               render={
                 <Button variant="outline" size="sm" className="gap-2">
                   Меню

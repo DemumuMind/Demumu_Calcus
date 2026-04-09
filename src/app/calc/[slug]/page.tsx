@@ -173,7 +173,7 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
               </p>
             </div>
           </div>
-          <p className="text-muted-foreground leading-relaxed">{calculator.description}</p>
+          <p className="text-muted-foreground leading-relaxed" data-testid="calculator-description">{calculator.description}</p>
         </div>
 
         {/* Calculator Component */}

@@ -1,0 +1,32 @@
+# Russian Language Strings for Evolve Command
+# Format: KEY=VALUE
+
+ANALYZING_INSTINCTS=Анализ инстинктов
+NO_INSTINCTS=Инстинкты не найдены
+RECORD_FIRST=Запишите первый инстинкт
+EVOLVE_ANALYSIS=АНАЛИЗ ЭВОЛЮЦИИ
+EVOLUTION_CANDIDATES=КАНДИДАТЫ НА ЭВОЛЮЦИЮ
+COMMAND_CANDIDATES=КАНДИДАТЫ В КОМАНДЫ
+SKILL_CANDIDATES=КАНДИДАТЫ В СКИЛЛЫ
+AGENT_CANDIDATES=КАНДИДАТЫ В АГЕНТЫ
+NO_CANDIDATES=Нет кандидатов на эволюцию
+GENERATING_FILES=Генерация файлов
+FILES_GENERATED=Файлы сгенерированы
+COMMAND_SUMMARY=Команды
+SKILL_SUMMARY=Скиллы
+AGENT_SUMMARY=Агенты
+TOTAL=Всего
+AVG_CONFIDENCE=Средняя уверенность
+INSTINCTS=инстинктов
+CLUSTER=Кластер
+FROM=из
+SCOPE=область
+DOMAINS=домены
+STEPS=шаги
+TRIGGERS=триггеры
+CONFIDENCE_TOO_LOW=Слишком низкая уверенность
+REVIEW_RECOMMENDED=Рекомендуется ручная проверка
+READY_FOR_USE=Готово к использованию
+EVOLVED_FROM=Эволюционировано из
+VIEW_DETAILS=Подробнее в
+CREATED_AT=Создано

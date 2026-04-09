@@ -151,7 +151,7 @@ export function ConverterCalculator({ calculator }: ConverterCalculatorProps) {
 
         {/* Results */}
         {results.length > 0 && (
-          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="converter-result">
             {results.map((result, index) => (
               <div key={index} className="text-center">
                 <p className="text-lg font-bold text-primary">

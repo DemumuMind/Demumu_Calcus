@@ -105,13 +105,14 @@ export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
           onClick={handleCalculate}
           className="w-full"
           size="lg"
+          data-testid="calculate-button"
         >
           Рассчитать
         </Button>
 
         {/* Results */}
         {calculated && results.length > 0 && (
-          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="calculator-result">
             {results.map((result, index) => (
               <div key={index} className="text-center">
                 <p className="text-sm text-muted-foreground mb-1">{result.label}</p>
