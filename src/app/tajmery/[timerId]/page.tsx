@@ -1,0 +1,193 @@
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { ArrowLeft, Timer, Clock, ArrowRight } from 'lucide-react';
+import { 
+  getTimerBySlug,
+  generateTimerTitle,
+  generateTimerDescription,
+  getRelatedTimers,
+  formatTimeText,
+} from '@/lib/timers';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { TimerComponent } from '@/components/calculator/timer-component';
+
+interface TimerPageProps {
+  params: Promise<{
+    timerId: string;
+  }>;
+}
+
+// Simplified static params - only main timers
+export function generateStaticParams() {
+  const mainTimers = [
+    { timerId: '1-minuta' },
+    { timerId: '5-minut' },
+    { timerId: '10-minut' },
+    { timerId: '25-minut' },
+    { timerId: '1-chas' },
+    { timerId: '30-sekund' },
+    { timerId: '2-minuty' },
+    { timerId: '15-minut' },
+    { timerId: '30-minut' },
+    { timerId: '45-minut' },
+    { timerId: '2-chasa' },
+    { timerId: '5-sekund' },
+    { timerId: '10-sekund' },
+    { timerId: '3-minuty' },
+    { timerId: '20-minut' },
+    { timerId: '3-chasa' },
+    { timerId: '4-chasa' },
+    { timerId: '6-chasov' },
+    { timerId: '8-chasov' },
+    { timerId: '12-chasov' },
+    { timerId: '24-chasa' },
+  ];
+  
+  console.log(`Generated ${mainTimers.length} timer pages`);
+  return mainTimers;
+}
+
+// Generate metadata for each timer page
+export async function generateMetadata({ params }: TimerPageProps): Promise<Metadata> {
+  const { timerId } = await params;
+  const timer = getTimerBySlug(timerId);
+  
+  if (!timer) {
+    return { title: 'Таймер не найден' };
+  }
+
+  const title = generateTimerTitle(timer);
+  const description = generateTimerDescription(timer);
+
+  return {
+    title,
+    description,
+    keywords: `${timer.name}, таймер онлайн, обратный отсчёт`,
+  };
+}
+
+export default async function TimerPage({ params }: TimerPageProps) {
+  const { timerId } = await params;
+  const timer = getTimerBySlug(timerId);
+  
+  if (!timer) {
+    notFound();
+  }
+
+  const relatedTimers = getRelatedTimers(timer, 5);
+
+  return (
+    <div className="flex flex-col min-h-full">
+      {/* Breadcrumb */}
+      <div className="border-b bg-muted/30">
+        <div className="mx-auto max-w-4xl px-4 py-4">
+          <nav className="text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-foreground transition-colors">
+              Главная
+            </Link>
+            <span className="mx-2">/</span>
+            <Link 
+              href="/tajmery" 
+              className="hover:text-foreground transition-colors"
+            >
+              Таймеры
+            </Link>
+            <span className="mx-2">/</span>
+            <span className="text-foreground">{timer.name}</span>
+          </nav>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main className="flex-1 mx-auto max-w-4xl px-4 py-8 w-full">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-3">
+            Таймер на {timer.name}
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Онлайн таймер обратного отсчёта на {formatTimeText(timer.seconds)}. 
+            Нажмите «Старт» для начала.
+          </p>
+        </div>
+
+        {/* Timer */}
+        <TimerComponent
+          initialTimer={timer}
+        />
+
+        {/* Information */}
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle className="text-lg">О таймере</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p>
+              <strong>Таймер на {timer.name}</strong> — это {formatTimeText(timer.seconds)}.
+            </p>
+            <p className="text-muted-foreground">
+              Таймер работает прямо в браузере и не требует установки. 
+              По окончании прозвучит звуковой сигнал (если включён звук).
+              Таймер продолжает работать даже если вы переключитесь на другую вкладку.
+            </p>
+            <div className="bg-muted p-4 rounded-lg">
+              <p className="text-sm">
+                <strong>Использование:</strong> Нажмите «Старт» для начала обратного отсчёта. 
+                Кнопка «Пауза» остановит таймер, «Сброс» вернёт к начальному значению {formatTimeText(timer.seconds)}.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Related Timers */}
+        {relatedTimers.length > 0 && (
+          <div className="mt-8">
+            <h2 className="text-xl font-bold mb-4">Похожие таймеры</h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedTimers.map((related) => (
+                <Link
+                  key={related.id}
+                  href={`/tajmery/${related.slug}`}
+                  className="group"
+                >
+                  <Card className="transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                            <Clock className="h-4 w-4" />
+                          </div>
+                          <div>
+                            <span className="font-medium group-hover:text-primary transition-colors block">
+                              {related.name}
+                            </span>
+                            <span className="text-xs text-muted-foreground">
+                              {formatTimeText(related.seconds)}
+                            </span>
+                          </div>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Navigation */}
+        <div className="mt-8 flex justify-between">
+          <Link 
+            href="/tajmery"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-muted hover:text-foreground transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Все таймеры
+          </Link>
+        </div>
+      </main>
+    </div>
+  );
+}

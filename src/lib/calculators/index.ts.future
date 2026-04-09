@@ -1,0 +1,203 @@
+import { Calculator } from '../types';
+import { mathematicalCalculators } from './math';
+import { converterCalculators } from './converters';
+import { healthCalculators } from './health';
+import { financeCalculators } from './finance';
+// NEW: Import from swarm agents
+import { constructionCalculators } from './construction';
+import { areaVolumeCalculators } from './area-volume';
+import { timeDateCalculators } from './time-date';
+import { digitalCalculators } from './digital';
+import { dailyCalculators } from './daily';
+import { engineeringCalculators } from './engineering';
+import { textCalculators } from './text';
+import { colorCalculators } from './color';
+import { generatorCalculators } from './generators';
+import { financeAdvancedCalculators } from './finance-advanced';
+
+// Простой калькулятор
+export const simpleCalculator: Calculator = {
+  id: 'simple-calculator',
+  slug: 'prostoj-kalkulyator',
+  title: 'Простой калькулятор',
+  description: 'Базовые арифметические операции: сложение, вычитание, умножение, деление',
+  category: 'nauka-i-ucheba',
+  subcategory: 'matematicheskie',
+  type: 'arithmetic',
+  inputs: [],
+  outputs: [],
+  calculate: () => [],
+  content: {
+    howTo: 'Используйте кнопки калькулятора для ввода чисел и операций. Нажмите C для сброса, = для получения результата.',
+    about: 'Простой калькулятор для базовых арифметических операций: сложение (+), вычитание (-), умножение (×), деление (÷).',
+    usage: 'Подходит для быстрых расчётов в повседневной жизни, учёбе и работе.',
+    formula: 'Следуйте стандартным правилам арифметики: сначала умножение и деление, затем сложение и вычитание.',
+    faq: [
+      {
+        question: 'Как сбросить результат?',
+        answer: 'Нажмите кнопку C для полного сброса калькулятора.'
+      },
+      {
+        question: 'Можно ли использовать клавиатуру?',
+        answer: 'Да, вы можете вводить цифры и операции с клавиатуры.'
+      },
+      {
+        question: 'Какое максимальное число?',
+        answer: 'Калькулятор поддерживает числа до 15 значащих цифр.'
+      }
+    ],
+    sources: [
+      { title: 'Арифметика — Википедия', url: 'https://ru.wikipedia.org/wiki/Арифметика' }
+    ],
+    updatedAt: '2026-04-07'
+  }
+};
+
+// Конвертер км/ч в м/с
+export const kmhToMsConverter: Calculator = {
+  id: 'kmh-to-ms',
+  slug: 'km-ch-v-m-s',
+  title: 'Км/ч в м/с',
+  description: 'Онлайн конвертер: км/ч в м/с. Быстрый и точный перевод единиц.',
+  category: 'konvertery',
+  subcategory: 'conv-skorost',
+  type: 'converter',
+  inputs: [
+    {
+      name: 'value',
+      label: 'Значение',
+      type: 'number',
+      placeholder: '1',
+      defaultValue: 1
+    },
+    {
+      name: 'from',
+      label: 'Из',
+      type: 'select',
+      options: [
+        { value: 'kmh', label: 'км/ч' },
+        { value: 'ms', label: 'м/с' },
+        { value: 'mph', label: 'миль/ч' },
+        { value: 'knot', label: 'узлы' }
+      ],
+      defaultValue: 'kmh'
+    },
+    {
+      name: 'to',
+      label: 'В',
+      type: 'select',
+      options: [
+        { value: 'kmh', label: 'км/ч' },
+        { value: 'ms', label: 'м/с' },
+        { value: 'mph', label: 'миль/ч' },
+        { value: 'knot', label: 'узлы' }
+      ],
+      defaultValue: 'ms'
+    }
+  ],
+  outputs: [
+    { name: 'result', label: 'Результат', type: 'text' }
+  ],
+  calculate: (inputs) => {
+    const value = Number(inputs.value);
+    const from = String(inputs.from);
+    const to = String(inputs.to);
+    
+    if (!value) return [{ value: '—', label: 'Результат' }];
+    
+    let ms = 0;
+    switch (from) {
+      case 'kmh': ms = value / 3.6; break;
+      case 'ms': ms = value; break;
+      case 'mph': ms = value * 0.44704; break;
+      case 'knot': ms = value * 0.514444; break;
+    }
+    
+    let result = 0;
+    switch (to) {
+      case 'kmh': result = ms * 3.6; break;
+      case 'ms': result = ms; break;
+      case 'mph': result = ms / 0.44704; break;
+      case 'knot': result = ms / 0.514444; break;
+    }
+    
+    const fromLabel = from === 'kmh' ? 'км/ч' : from === 'ms' ? 'м/с' : from === 'mph' ? 'миль/ч' : 'узлов';
+    const toLabel = to === 'kmh' ? 'км/ч' : to === 'ms' ? 'м/с' : to === 'mph' ? 'миль/ч' : 'узлов';
+    
+    return [{
+      value: `${value} ${fromLabel} = ${Math.round(result * 100000) / 100000} ${toLabel}`,
+      label: 'Результат'
+    }];
+  },
+  content: {
+    howTo: 'Введите значение скорости, выберите единицы измерения "из" и "в". Результат появится автоматически.',
+    about: 'Конвертер скорости для перевода между различными единицами измерения: км/ч, м/с, мили/ч, узлы.',
+    usage: 'Используется для перевода скорости в физике, спорте, навигации и повседневной жизни.',
+    formula: '1 км/ч = 0.277778 м/с = 0.621371 миль/ч = 0.539957 узлов',
+    faq: [
+      {
+        question: 'Как перевести км/ч в м/с?',
+        answer: 'Умножьте значение в км/ч на 0.277778 или разделите на 3.6.'
+      },
+      {
+        question: 'Сколько м/с в 1 км/ч?',
+        answer: 'В 1 км/ч содержится примерно 0.278 м/с.'
+      }
+    ],
+    sources: [
+      { title: 'Единицы измерения скорости — Википедия', url: 'https://ru.wikipedia.org/wiki/Единицы_и_эталоны_скорости' }
+    ],
+    updatedAt: '2026-04-07'
+  },
+  popularCalculations: [
+    { value: '1 км/ч в м/с', url: '/km-ch-v-m-s?value=1&from=kmh&to=ms' },
+    { value: '60 км/ч в м/с', url: '/km-ch-v-m-s?value=60&from=kmh&to=ms' },
+    { value: '100 км/ч в м/с', url: '/km-ch-v-m-s?value=100&from=kmh&to=ms' }
+  ]
+};
+
+// Registry of all calculators - SWARM ENHANCED
+export const calculators: Calculator[] = [
+  simpleCalculator,
+  kmhToMsConverter,
+  ...mathematicalCalculators,
+  ...converterCalculators,
+  ...healthCalculators,
+  ...financeCalculators,
+  // NEW: Swarm-generated calculators (90+)
+  ...constructionCalculators,
+  ...areaVolumeCalculators,
+  ...timeDateCalculators,
+  ...digitalCalculators,
+  ...dailyCalculators,
+  ...engineeringCalculators,
+  ...textCalculators,
+  ...colorCalculators,
+  ...generatorCalculators,
+  ...financeAdvancedCalculators,
+];
+
+// Helper function to get calculator by slug
+export function getCalculatorBySlug(slug: string): Calculator | undefined {
+  return calculators.find(calc => calc.slug === slug);
+}
+
+// Helper function to get calculators by category
+export function getCalculatorsByCategory(categorySlug: string): Calculator[] {
+  return calculators.filter(calc => calc.category === categorySlug);
+}
+
+// Helper function to get calculators by subcategory
+export function getCalculatorsBySubcategory(subcategorySlug: string): Calculator[] {
+  return calculators.filter(calc => calc.subcategory === subcategorySlug);
+}
+
+// Helper function to search calculators
+export function searchCalculators(query: string): Calculator[] {
+  const lowerQuery = query.toLowerCase();
+  return calculators.filter(calc => 
+    calc.title.toLowerCase().includes(lowerQuery) ||
+    calc.description.toLowerCase().includes(lowerQuery) ||
+    calc.category.toLowerCase().includes(lowerQuery)
+  );
+}
