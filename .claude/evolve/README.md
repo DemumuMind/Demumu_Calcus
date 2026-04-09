@@ -153,3 +153,59 @@ evolve --generate
 # 4. Переместить в production
 # cp .claude/evolve/evolved/skills/* .claude/skills/
 ```
+
+---
+
+## Troubleshooting
+
+### "No instincts found"
+
+**Problem:** Running `evolve` shows no instincts to analyze.
+
+**Solution:**
+- Create instinct files in `.claude/instincts/`
+- Format: Markdown files describing patterns
+- Run `evolve` again after creating instincts
+
+### "Nothing to evolve"
+
+**Problem:** Analysis runs but suggests nothing to evolve.
+
+**Solution:**
+- Ensure instincts have clear patterns
+- Check that patterns are reusable (not one-offs)
+- Wait for more codebase history
+
+### Generated Files Are Empty
+
+**Problem:** `evolve --generate` creates empty files.
+
+**Solution:**
+- Check templates in `.claude/evolve/templates/`
+- Verify instincts have enough detail
+- Check registry format
+
+### "Permission denied" (Unix/Mac)
+
+**Problem:** Cannot execute evolve.sh.
+
+**Solution:**
+```bash
+chmod +x .claude/scripts/evolve.sh
+```
+
+### Registry Not Updating
+
+**Problem:** Evolved items not appearing in registry.
+
+**Solution:**
+- Check `.claude/evolve/_registry.md` exists
+- Verify file is writable
+- Check evolve has permission to write
+
+---
+
+## See Also
+
+- [QUICKSTART.md](QUICKSTART.md) — Quick start guide
+- [GUIDE.md](GUIDE.md) — Detailed workflow guide
