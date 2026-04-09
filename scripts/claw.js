@@ -12,10 +12,29 @@ const readline = require('readline');
 const os = require('os');
 
 const CLAW_DIR = path.join(os.homedir(), '.claude', 'claw');
+const VALID_SESSION_NAME = /^[a-zA-Z0-9_-]+$/;
+
+function validateSessionName(sessionName) {
+  if (!sessionName || typeof sessionName !== 'string') {
+    throw new Error('Session name is required');
+  }
+  if (sessionName.length > 64) {
+    throw new Error('Session name too long (max 64 characters)');
+  }
+  if (!VALID_SESSION_NAME.test(sessionName)) {
+    throw new Error('Invalid session name. Use only letters, numbers, hyphens, and underscores');
+  }
+  return true;
+}
 
 function ensureClawDir() {
-  if (!fs.existsSync(CLAW_DIR)) {
-    fs.mkdirSync(CLAW_DIR, { recursive: true });
+  try {
+    if (!fs.existsSync(CLAW_DIR)) {
+      fs.mkdirSync(CLAW_DIR, { recursive: true });
+    }
+  } catch (err) {
+    console.error(`❌ Failed to create claw directory: ${err.message}`);
+    process.exit(1);
   }
 }
 
@@ -28,117 +47,151 @@ function getTimestamp() {
 }
 
 function loadHistory(sessionName) {
-  const file = getSessionFile(sessionName);
-  if (!fs.existsSync(file)) return [];
-  
-  const content = fs.readFileSync(file, 'utf8');
-  const turns = [];
-  const lines = content.split('\n');
-  
-  let currentTurn = null;
-  for (const line of lines) {
-    if (line.startsWith('## ')) {
-      if (currentTurn) turns.push(currentTurn);
-      currentTurn = { timestamp: line.slice(3).trim(), content: '' };
-    } else if (currentTurn) {
-      currentTurn.content += line + '\n';
+  try {
+    const file = getSessionFile(sessionName);
+    if (!fs.existsSync(file)) return [];
+    
+    const content = fs.readFileSync(file, 'utf8');
+    const turns = [];
+    const lines = content.split('\n');
+    
+    let currentTurn = null;
+    for (const line of lines) {
+      if (line.startsWith('## ')) {
+        if (currentTurn) turns.push(currentTurn);
+        currentTurn = { timestamp: line.slice(3).trim(), content: '' };
+      } else if (currentTurn) {
+        currentTurn.content += line + '\n';
+      }
     }
+    if (currentTurn) turns.push(currentTurn);
+    
+    return turns;
+  } catch (err) {
+    console.error(`❌ Error loading history: ${err.message}`);
+    return [];
   }
-  if (currentTurn) turns.push(currentTurn);
-  
-  return turns;
 }
 
 function saveToHistory(sessionName, role, content, metadata = {}) {
-  const file = getSessionFile(sessionName);
-  const timestamp = getTimestamp();
-  
-  const entry = `## ${timestamp}\n\n**${role}**:\n\n${content}\n\n`;
-  
-  if (metadata.model) {
-    entry += `*Model: ${metadata.model}*\n`;
+  try {
+    const file = getSessionFile(sessionName);
+    const timestamp = getTimestamp();
+    
+    let entry = `## ${timestamp}\n\n**${role}**:\n\n${content}\n\n`;
+    
+    if (metadata.model) {
+      entry += `*Model: ${metadata.model}*\n`;
+    }
+    entry += '---\n\n';
+    
+    fs.appendFileSync(file, entry);
+  } catch (err) {
+    console.error(`❌ Error saving to history: ${err.message}`);
   }
-  entry += '---\n\n';
-  
-  fs.appendFileSync(file, entry);
 }
 
 function listSessions() {
-  ensureClawDir();
-  const files = fs.readdirSync(CLAW_DIR).filter(f => f.endsWith('.md'));
-  return files.map(f => f.slice(0, -3));
+  try {
+    ensureClawDir();
+    const files = fs.readdirSync(CLAW_DIR).filter(f => f.endsWith('.md'));
+    return files.map(f => f.slice(0, -3));
+  } catch (err) {
+    console.error(`❌ Error listing sessions: ${err.message}`);
+    return [];
+  }
 }
 
 function exportSession(sessionName, format, outputPath) {
-  const turns = loadHistory(sessionName);
-  
-  let output = '';
-  
-  switch (format) {
-    case 'json':
-      output = JSON.stringify(turns, null, 2);
-      break;
-    case 'txt':
-      output = turns.map(t => `[${t.timestamp}]\n${t.content.trim()}`).join('\n\n');
-      break;
-    case 'md':
-    default:
-      output = `# Session: ${sessionName}\n\n` + 
-               turns.map(t => `## ${t.timestamp}\n\n${t.content.trim()}`).join('\n\n');
-  }
-  
-  if (outputPath) {
-    fs.writeFileSync(outputPath, output);
-    console.log(`📁 Exported to: ${outputPath}`);
-  } else {
-    console.log(output);
+  try {
+    const turns = loadHistory(sessionName);
+    
+    let output = '';
+    
+    switch (format) {
+      case 'json':
+        output = JSON.stringify(turns, null, 2);
+        break;
+      case 'txt':
+        output = turns.map(t => `[${t.timestamp}]\n${t.content.trim()}`).join('\n\n');
+        break;
+      case 'md':
+      default:
+        output = `# Session: ${sessionName}\n\n` + 
+                 turns.map(t => `## ${t.timestamp}\n\n${t.content.trim()}`).join('\n\n');
+    }
+    
+    if (outputPath) {
+      fs.writeFileSync(outputPath, output);
+      console.log(`📁 Exported to: ${outputPath}`);
+    } else {
+      console.log(output);
+    }
+  } catch (err) {
+    console.error(`❌ Error exporting session: ${err.message}`);
   }
 }
 
 function showMetrics(sessionName) {
-  const turns = loadHistory(sessionName);
-  const stats = {
-    totalTurns: turns.length,
-    userMessages: turns.filter(t => t.content.includes('**user**')).length,
-    assistantMessages: turns.filter(t => t.content.includes('**assistant**')).length,
-    fileSize: 0
-  };
-  
-  const file = getSessionFile(sessionName);
-  if (fs.existsSync(file)) {
-    stats.fileSize = (fs.statSync(file).size / 1024).toFixed(2) + ' KB';
+  try {
+    const turns = loadHistory(sessionName);
+    const stats = {
+      totalTurns: turns.length,
+      userMessages: turns.filter(t => t.content.includes('**user**')).length,
+      assistantMessages: turns.filter(t => t.content.includes('**assistant**')).length,
+      fileSize: 0
+    };
+    
+    const file = getSessionFile(sessionName);
+    if (fs.existsSync(file)) {
+      stats.fileSize = (fs.statSync(file).size / 1024).toFixed(2) + ' KB';
+    }
+    
+    console.log(`📊 Session: ${sessionName}`);
+    console.log(`   Total turns: ${stats.totalTurns}`);
+    console.log(`   User messages: ${stats.userMessages}`);
+    console.log(`   Assistant messages: ${stats.assistantMessages}`);
+    console.log(`   File size: ${stats.fileSize}`);
+  } catch (err) {
+    console.error(`❌ Error showing metrics: ${err.message}`);
   }
-  
-  console.log(`📊 Session: ${sessionName}`);
-  console.log(`   Total turns: ${stats.totalTurns}`);
-  console.log(`   User messages: ${stats.userMessages}`);
-  console.log(`   Assistant messages: ${stats.assistantMessages}`);
-  console.log(`   File size: ${stats.fileSize}`);
 }
 
 function compactSession(sessionName, keepRecent = 10) {
-  const turns = loadHistory(sessionName);
-  if (turns.length <= keepRecent) {
-    console.log('Nothing to compact');
-    return;
+  try {
+    const turns = loadHistory(sessionName);
+    if (turns.length <= keepRecent) {
+      console.log('Nothing to compact');
+      return;
+    }
+    
+    const oldCount = turns.length - keepRecent;
+    const file = getSessionFile(sessionName);
+    
+    // Create compaction header
+    const header = `# Compaction: ${getTimestamp()}\n\n` +
+                   `> Compacted ${oldCount} old turns. Kept ${keepRecent} recent.\n\n`;
+    
+    // Keep only recent turns
+    const recentTurns = turns.slice(-keepRecent);
+    const content = header + recentTurns.map(t => `## ${t.timestamp}\n\n${t.content.trim()}`).join('\n\n');
+    
+    fs.writeFileSync(file, content);
+    console.log(`✅ Compacted: removed ${oldCount} old turns, kept ${keepRecent}`);
+  } catch (err) {
+    console.error(`❌ Error compacting session: ${err.message}`);
   }
-  
-  const oldCount = turns.length - keepRecent;
-  const file = getSessionFile(sessionName);
-  
-  // Create compaction header
-  const header = `# Compaction: ${getTimestamp()}\n\n` +
-                 `> Compacted ${oldCount} old turns. Kept ${keepRecent} recent.\n\n`;
-  
-  // Keep only recent turns
-  const recentTurns = turns.slice(-keepRecent);
-  const content = header + recentTurns.map(t => `## ${t.timestamp}\n\n${t.content.trim()}`).join('\n\n');
-  
-  fs.writeFileSync(file, content);
-  console.log(`✅ Compacted: removed ${oldCount} old turns, kept ${keepRecent}`);
 }
 
 async function interactiveSession(sessionName, options = {}) {
+  // Validate session name
+  try {
+    validateSessionName(sessionName);
+  } catch (err) {
+    console.error(`❌ ${err.message}`);
+    process.exit(1);
+  }
+  
   ensureClawDir();
   
   const rl = readline.createInterface({
@@ -199,10 +252,14 @@ Claw Commands:
     }
     
     if (cmd === '/clear') {
-      const file = getSessionFile(sessionName);
-      if (fs.existsSync(file)) {
-        fs.writeFileSync(file, `# Session: ${sessionName}\n\n`);
-        console.log('✅ Session cleared');
+      try {
+        const file = getSessionFile(sessionName);
+        if (fs.existsSync(file)) {
+          fs.writeFileSync(file, `# Session: ${sessionName}\n\n`);
+          console.log('✅ Session cleared');
+        }
+      } catch (err) {
+        console.error(`❌ Error clearing session: ${err.message}`);
       }
       rl.prompt();
       return;
@@ -235,11 +292,16 @@ Claw Commands:
     if (cmd.startsWith('/branch ')) {
       const newName = cmd.split(' ')[1];
       if (newName) {
-        const oldFile = getSessionFile(sessionName);
-        const newFile = getSessionFile(newName);
-        if (fs.existsSync(oldFile)) {
-          fs.copyFileSync(oldFile, newFile);
-          console.log(`✅ Branched to: ${newName}`);
+        try {
+          validateSessionName(newName);
+          const oldFile = getSessionFile(sessionName);
+          const newFile = getSessionFile(newName);
+          if (fs.existsSync(oldFile)) {
+            fs.copyFileSync(oldFile, newFile);
+            console.log(`✅ Branched to: ${newName}`);
+          }
+        } catch (err) {
+          console.error(`❌ ${err.message}`);
         }
       }
       rl.prompt();
