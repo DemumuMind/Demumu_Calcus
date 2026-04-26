@@ -86,7 +86,7 @@ export async function generateMetadata({ params }: ReverseCookingPageProps): Pro
 
 export function generateStaticParams() {
   const params: Array<{ slug: string[] }> = [];
-  const gramsValues = [50, 100, 150, 200, 250, 300, 500];
+  const gramsValues = [50, 100, 250, 500];
   const popularIngredients = [
     'wheat_flour',
     'sugar',
@@ -94,10 +94,6 @@ export function generateStaticParams() {
     'butter',
     'milk',
     'vegetable_oil',
-    'rice',
-    'buckwheat',
-    'oats',
-    'honey',
   ];
   const popularMeasures = ['teaspoon', 'tablespoon', 'shot', 'faceted_glass'];
 

@@ -106,7 +106,7 @@ const POPULAR_CATEGORIES = [
   'moshchnost', 'vremya', 'ugly',
 ];
 
-const POPULAR_VALUES = ['1', '5', '10', '50', '100'];
+const POPULAR_VALUES = ['1', '10', '100'];
 
 const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
 const OTHER_SIX = ['ploshchad', 'energiya', 'davlenie', 'moshchnost', 'vremya', 'ugly'];
@@ -128,7 +128,7 @@ export function generateStaticParams() {
     const units = Object.keys(category.units);
 
     if (POPULAR_SIX.includes(category.slug)) {
-      // 3 priority units, 5 values
+      // 3 priority units, 3 values → ~36 pages per category
       const priorityUnits = units.slice(0, 3);
       for (let i = 0; i < priorityUnits.length; i++) {
         for (let j = 0; j < priorityUnits.length; j++) {
@@ -141,16 +141,12 @@ export function generateStaticParams() {
         }
       }
     } else if (OTHER_SIX.includes(category.slug)) {
-      // 2 priority units, 3 values
+      // base pairs only — no specific-value pages to save build time
       const priorityUnits = units.slice(0, 2);
-      const shortValues = POPULAR_VALUES.slice(0, 3);
       for (let i = 0; i < priorityUnits.length; i++) {
         for (let j = 0; j < priorityUnits.length; j++) {
           if (i !== j) {
             add(category.slug, [priorityUnits[i], 'v', priorityUnits[j]]);
-            for (const val of shortValues) {
-              add(category.slug, [val, priorityUnits[i], 'v', priorityUnits[j]]);
-            }
           }
         }
       }
@@ -160,6 +156,8 @@ export function generateStaticParams() {
   console.log(`Generated ${params.length} static converter pages`);
   return params;
 }
+
+export const dynamicParams = true;
 
 export default async function ConverterPage({ params }: ConverterPageProps) {
   const { category: categorySlug, slug } = await params;

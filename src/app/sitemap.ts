@@ -8,6 +8,8 @@ import { timerPresets } from '@/lib/timers';
 import { holidays } from '@/lib/holidays';
 import { getAllArticles } from '@/lib/articles';
 
+export const dynamic = 'force-static';
+
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-clone.vercel.app';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

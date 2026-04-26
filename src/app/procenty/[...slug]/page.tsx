@@ -14,8 +14,8 @@ import { PercentageCalculator } from '@/components/calculator/percentage-calcula
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
-const SPECIFIC_VALUE_N = [1, 5, 10, 15, 20, 25, 30, 50, 75];
-const SPECIFIC_VALUE_M = [100, 200, 500, 1000];
+const SPECIFIC_VALUE_N = [10, 50, 100];
+const SPECIFIC_VALUE_M = [100, 500];
 
 interface PercentagePageProps {
   params: Promise<{
