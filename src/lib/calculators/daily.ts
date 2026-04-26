@@ -925,6 +925,191 @@ export const ringSizeCalculator: Calculator = {
   }
 };
 
+// Калькулятор веса одежды
+export const clothingWeightCalculator: Calculator = {
+  id: 'clothing-weight-calculator',
+  slug: 'ves-odezhdy',
+  title: 'Калькулятор веса одежды',
+  description: 'Расчёт суммарного веса комплекта одежды и обуви',
+  category: 'zdorove-i-krasota',
+  subcategory: 'krasota',
+  type: 'reference',
+  inputs: [
+    {
+      name: 'tShirt',
+      label: 'Футболка / рубашка',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'jeans',
+      label: 'Джинсы / брюки',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'sweater',
+      label: 'Свитер / кофта',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'jacket',
+      label: 'Куртка / пиджак',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'shoes',
+      label: 'Обувь (пар)',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'пар'
+    },
+    {
+      name: 'underwear',
+      label: 'Нижнее бельё',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 20,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'socks',
+      label: 'Носки (пар)',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 20,
+      defaultValue: 0,
+      unit: 'пар'
+    },
+    {
+      name: 'shorts',
+      label: 'Шорты',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'dress',
+      label: 'Платье / сарафан',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 10,
+      defaultValue: 0,
+      unit: 'шт'
+    },
+    {
+      name: 'coat',
+      label: 'Пальто / пуховик',
+      type: 'number',
+      placeholder: '0',
+      min: 0,
+      max: 5,
+      defaultValue: 0,
+      unit: 'шт'
+    }
+  ],
+  outputs: [
+    { name: 'totalWeight', label: 'Общий вес', type: 'number', unit: 'г' },
+    { name: 'totalWeightKg', label: 'Общий вес', type: 'number', unit: 'кг' },
+    { name: 'itemized', label: 'По предметам', type: 'text' }
+  ],
+  calculate: (inputs) => {
+    const items: Record<string, { count: number; avgWeight: number; name: string }> = {
+      tShirt: { count: Math.max(0, Number(inputs.tShirt) || 0), avgWeight: 175, name: 'Футболка' },
+      jeans: { count: Math.max(0, Number(inputs.jeans) || 0), avgWeight: 700, name: 'Джинсы' },
+      sweater: { count: Math.max(0, Number(inputs.sweater) || 0), avgWeight: 500, name: 'Свитер' },
+      jacket: { count: Math.max(0, Number(inputs.jacket) || 0), avgWeight: 1150, name: 'Куртка' },
+      shoes: { count: Math.max(0, Number(inputs.shoes) || 0), avgWeight: 1000, name: 'Обувь' },
+      underwear: { count: Math.max(0, Number(inputs.underwear) || 0), avgWeight: 80, name: 'Нижнее бельё' },
+      socks: { count: Math.max(0, Number(inputs.socks) || 0), avgWeight: 50, name: 'Носки' },
+      shorts: { count: Math.max(0, Number(inputs.shorts) || 0), avgWeight: 250, name: 'Шорты' },
+      dress: { count: Math.max(0, Number(inputs.dress) || 0), avgWeight: 400, name: 'Платье' },
+      coat: { count: Math.max(0, Number(inputs.coat) || 0), avgWeight: 1500, name: 'Пальто' }
+    };
+
+    let totalWeight = 0;
+    const parts: string[] = [];
+
+    for (const key of Object.keys(items)) {
+      const item = items[key];
+      if (item.count > 0) {
+        const itemWeight = item.count * item.avgWeight;
+        totalWeight += itemWeight;
+        parts.push(`${item.name}: ${item.count} × ~${item.avgWeight}г = ${itemWeight}г`);
+      }
+    }
+
+    if (totalWeight === 0) {
+      return [
+        { value: 0, label: 'Общий вес', unit: 'г' },
+        { value: 0, label: 'Общий вес', unit: 'кг' },
+        { value: 'Выберите предметы одежды', label: 'По предметам' }
+      ];
+    }
+
+    return [
+      { value: totalWeight, label: 'Общий вес', unit: 'г' },
+      { value: (totalWeight / 1000).toFixed(2), label: 'Общий вес', unit: 'кг' },
+      { value: parts.join('; '), label: 'По предметам' }
+    ];
+  },
+  content: {
+    howTo: 'Введите количество каждого предмета одежды. Калькулятор покажет примерный суммарный вес.',
+    about: 'Средний вес предметов одежды зависит от материала, размера и плотности ткани. Приведённые значения — ориентировочные для среднего размера (M/L).',
+    usage: 'Используется при планировании багажа для поездки, рассчёте веса стирки, оценке груза при переезде.',
+    faq: [
+      {
+        question: 'Насколько точны эти цифры?',
+        answer: 'Значения ориентировочные для среднего размера (M/L). Фактический вес может отличаться на 20-50% в зависимости от материала (хлопок, шерсть, синтетика), бренда и размера изделия. Зимняя одежда и обувь могут быть значительно тяжелее.'
+      },
+      {
+        question: 'Почему вес может отличаться?',
+        answer: 'Вес зависит от плотности ткани, количества слоёв, фурнитуры (молнии, пуговицы), подкладки. Например, зимняя куртка с утеплителем может весить 500-2000 г, а тонкая ветровка — всего 100-200 г.'
+      },
+      {
+        question: 'Сколько весят вещи в чемодане на неделю?',
+        answer: 'Типичный набор на неделю (7 футболок, 3 джинса, 2 свитера, 7 пар носков/белья, 1 куртка, 1 пара обуви) весит примерно 4.5-6 кг без чемодана.'
+      },
+      {
+        question: 'Сколько весят зимние вещи?',
+        answer: 'Зимний комплект (пуховик ~1.5-2.5 кг, тёплые брюки ~0.8 кг, зимние ботинки ~1.2 кг, шапка+шарф+перчатки ~0.4 кг) может весить 4-5 кг.'
+      }
+    ],
+    sources: [
+      { title: 'Вес одежды — справочные данные', url: 'https://ru.wikipedia.org/wiki/Одежда' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
 export const dailyCalculators = [
   cookingTimeCalculator,
   tipCalculator,
@@ -936,4 +1121,5 @@ export const dailyCalculators = [
   clothingSizeCalculator,
   shoeSizeCalculator,
   ringSizeCalculator,
+  clothingWeightCalculator,
 ];

@@ -60,10 +60,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
-  // 5. Unit converter pages (limited set for sitemap — same 6 popular categories as generateStaticParams)
-  const POPULAR_CATEGORIES = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
+  // 5. Unit converter pages (expanded to all categories and specific values)
+  const POPULAR_CATEGORIES = [
+    'dlina', 'massa', 'temperatura', 'skorost', 'obem',
+    'informaciya', 'ploshchad', 'energiya', 'davlenie',
+    'moshchnost', 'vremya', 'ugly',
+  ];
+  const POPULAR_VALUES = ['1', '2', '5', '10', '20', '50', '100', '200', '500', '1000'];
   Object.values(allUnitCategories).forEach((category) => {
-    // Skip niche categories to keep sitemap lean and match static generation
     if (!POPULAR_CATEGORIES.includes(category.slug)) {
       return;
     }
@@ -73,12 +77,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (let i = 0; i < unitIds.length; i++) {
       for (let j = 0; j < unitIds.length; j++) {
         if (i !== j) {
+          // Base converter URL
           routes.push({
             url: `${BASE_URL}/${category.slug}/${unitIds[i]}-v-${unitIds[j]}`,
             lastModified: now,
             changeFrequency: 'monthly',
             priority: 0.5,
           });
+          // Specific-value converter URLs
+          for (const val of POPULAR_VALUES) {
+            routes.push({
+              url: `${BASE_URL}/${category.slug}/${val}-${unitIds[i]}-v-${unitIds[j]}`,
+              lastModified: now,
+              changeFrequency: 'monthly',
+              priority: 0.45,
+            });
+          }
         }
       }
     }
@@ -125,13 +139,75 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
-  // 9a. Specific-value percentage pages (percent-of-number combinations)
+  // 9a. Specific-value percentage pages for ALL 6 types
   const specificN = [1, 5, 10, 15, 20, 25, 30, 50, 75];
   const specificM = [100, 200, 500, 1000];
+
+  // percent-of-number: N-procentov-ot-M
   specificN.forEach((n) => {
     specificM.forEach((m) => {
       routes.push({
         url: `${BASE_URL}/procenty/${n}-procentov-ot-${m}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.45,
+      });
+    });
+  });
+
+  // add-percent: N-dobavit-procent-k-M
+  specificN.forEach((n) => {
+    specificM.forEach((m) => {
+      routes.push({
+        url: `${BASE_URL}/procenty/${n}-dobavit-procent-k-${m}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.45,
+      });
+    });
+  });
+
+  // subtract-percent: N-vychest-procent-iz-M
+  specificN.forEach((n) => {
+    specificM.forEach((m) => {
+      routes.push({
+        url: `${BASE_URL}/procenty/${n}-vychest-procent-iz-${m}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.45,
+      });
+    });
+  });
+
+  // percent-change: izmenenie-s-N-na-M
+  specificN.forEach((n) => {
+    specificM.forEach((m) => {
+      routes.push({
+        url: `${BASE_URL}/procenty/izmenenie-s-${n}-na-${m}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.45,
+      });
+    });
+  });
+
+  // percent-difference: raznica-mezhdu-N-i-M
+  specificN.forEach((n) => {
+    specificM.forEach((m) => {
+      routes.push({
+        url: `${BASE_URL}/procenty/raznica-mezhdu-${n}-i-${m}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.45,
+      });
+    });
+  });
+
+  // number-is-percent-of: N-sostavlyaet-skolko-procentov-ot-M
+  specificN.forEach((n) => {
+    specificM.forEach((m) => {
+      routes.push({
+        url: `${BASE_URL}/procenty/${n}-sostavlyaet-skolko-procentov-ot-${m}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.45,

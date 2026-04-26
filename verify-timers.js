@@ -1,0 +1,13 @@
+const fs = require('fs');
+const content = fs.readFileSync('src/lib/timers/index.ts', 'utf8');
+const start = content.indexOf('export const timerPresets: TimerPreset[] = [');
+const end = content.indexOf('];', start);
+const block = content.slice(start, end);
+const lines = block.split('\n').filter(l => l.trim().startsWith('{ id:') && l.includes('slug:'));
+const slugs = lines.map(l => l.trim().split('slug:')[1].split(',')[0].trim().replace(/'/g, ''));
+const ids = lines.map(l => l.trim().split("id: '")[1].split("'")[0]);
+const dupSlugs = slugs.filter((s, i) => slugs.indexOf(s) !== i);
+const dupIds = ids.filter((id, i) => ids.indexOf(id) !== i);
+console.log('Total timers:', lines.length);
+console.log('Duplicate slugs:', dupSlugs.length ? dupSlugs : 'none');
+console.log('Duplicate ids:', dupIds.length ? dupIds : 'none');

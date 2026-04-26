@@ -560,7 +560,7 @@ export function generateAllCookingConverters(): Array<{
   measureId: string;
 }> {
   const converters: Array<{ slug: string; ingredientId: string; measureId: string }> = [];
-  
+
   Object.keys(cookingIngredients).forEach((ingredientId) => {
     Object.keys(standardMeasures).forEach((measureId) => {
       const slug = generateCookingSlug(ingredientId, measureId);
@@ -569,6 +569,153 @@ export function generateAllCookingConverters(): Array<{
       }
     });
   });
-  
+
   return converters;
+}
+
+// ============================================
+// ОБРАТНЫЕ КУЛИНАРНЫЕ КОНВЕРТЕРЫ (граммы → мера)
+// ============================================
+
+const GRAMM_VALUES = [50, 100, 150, 200, 250, 300, 500];
+
+export const POPULAR_REVERSE_INGREDIENTS = [
+  'wheat_flour',
+  'sugar',
+  'salt',
+  'butter',
+  'milk',
+  'vegetable_oil',
+  'rice',
+  'buckwheat',
+  'oats',
+  'honey',
+];
+
+export const POPULAR_REVERSE_MEASURES = [
+  'teaspoon',
+  'tablespoon',
+  'shot',
+  'faceted_glass',
+];
+
+/**
+ * Генерирует slug для обратного кулинарного конвертера
+ * Формат: {N}-gramm-{ingredient}-v-{measure}
+ * Пример: 50-gramm-muka-pshenichnaya-v-stolovaya-lozhka
+ */
+export function generateReverseCookingSlug(
+  ingredientId: string,
+  measureId: string,
+  grams: number
+): string {
+  const ingredient = cookingIngredients[ingredientId];
+  const measure = standardMeasures[measureId];
+
+  if (!ingredient || !measure) return '';
+
+  const translitMap: Record<string, string> = {
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo',
+    'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm',
+    'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
+    'ф': 'f', 'х': 'h', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'sch', 'ъ': '',
+    'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya', ' ': '-',
+  };
+
+  const transliterate = (text: string): string => {
+    return text
+      .toLowerCase()
+      .split('')
+      .map(char => translitMap[char] || char)
+      .join('')
+      .replace(/[^a-z0-9-]/g, '')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+  };
+
+  return `${grams}-gramm-${transliterate(ingredient.name)}-v-${transliterate(measure.name)}`;
+}
+
+// Precomputed reverse lookup map for O(1) slug resolution
+const _reverseCookingSlugMap: Record<string, { grams: number; ingredientId: string; measureId: string }> = {};
+
+function _buildReverseCookingSlugMap(): void {
+  for (const grams of GRAMM_VALUES) {
+    for (const ingredientId of Object.keys(cookingIngredients)) {
+      for (const measureId of Object.keys(standardMeasures)) {
+        const slug = generateReverseCookingSlug(ingredientId, measureId, grams);
+        if (slug) {
+          _reverseCookingSlugMap[slug] = { grams, ingredientId, measureId };
+        }
+      }
+    }
+  }
+}
+
+// Build once on module load
+_buildReverseCookingSlugMap();
+
+/**
+ * Resolves a reverse cooking slug to ingredient, measure and grams in O(1) time.
+ */
+export function resolveReverseCookingSlug(
+  reverseSlug: string
+): { grams: number; ingredientId: string; measureId: string } | null {
+  const result = _reverseCookingSlugMap[reverseSlug];
+  return result || null;
+}
+
+/**
+ * Генерирует все популярные обратные кулинарные конвертеры для статической генерации
+ */
+export function generatePopularReverseCookingConverters(): Array<{
+  slug: string[];
+  ingredientId: string;
+  measureId: string;
+  grams: number;
+}> {
+  const converters: Array<{ slug: string[]; ingredientId: string; measureId: string; grams: number }> = [];
+
+  for (const grams of GRAMM_VALUES) {
+    for (const ingredientId of POPULAR_REVERSE_INGREDIENTS) {
+      for (const measureId of POPULAR_REVERSE_MEASURES) {
+        const slug = generateReverseCookingSlug(ingredientId, measureId, grams);
+        if (slug) {
+          converters.push({ slug: [slug], ingredientId, measureId, grams });
+        }
+      }
+    }
+  }
+
+  return converters;
+}
+
+/**
+ * Returns Russian plural form for a measure name based on count
+ */
+export function getMeasurePluralForm(measureId: string, count: number): string {
+  const measure = standardMeasures[measureId];
+  if (!measure) return measureId;
+
+  const forms: Record<string, [string, string, string]> = {
+    teaspoon: ['чайная ложка', 'чайные ложки', 'чайных ложек'],
+    tablespoon: ['столовая ложка', 'столовые ложки', 'столовых ложек'],
+    dessertspoon: ['десертная ложка', 'десертные ложки', 'десертных ложек'],
+    shot: ['рюмка', 'рюмки', 'рюмок'],
+    faceted_glass: ['гранёный стакан (до риски)', 'гранёных стакана (до риски)', 'гранёных стаканов (до риски)'],
+    faceted_glass_full: ['гранёный стакан (полный)', 'гранёных стакана (полных)', 'гранёных стаканов (полных)'],
+    tea_glass: ['чайный стакан', 'чайных стакана', 'чайных стаканов'],
+    cup_mug: ['кружка', 'кружки', 'кружек'],
+    charochka: ['чарочка', 'чарочки', 'чарочек'],
+  };
+
+  const [one, two, five] = forms[measureId] || [measure.name, measure.name, measure.name];
+  const n = Math.floor(count);
+  const lastTwo = n % 100;
+  const lastOne = n % 10;
+
+  if (lastTwo >= 11 && lastTwo <= 19) return five;
+  if (lastOne === 1) return one;
+  if (lastOne >= 2 && lastOne <= 4) return two;
+  return five;
 }

@@ -16,8 +16,6 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel
 
 const SPECIFIC_VALUE_N = [1, 5, 10, 15, 20, 25, 30, 50, 75];
 const SPECIFIC_VALUE_M = [100, 200, 500, 1000];
-const SPECIFIC_VALUE_TYPE_SLUG = 'procentov-ot-chisla';
-const SPECIFIC_VALUE_TYPE_ID = 'percent-of-number';
 
 interface PercentagePageProps {
   params: Promise<{
@@ -27,7 +25,49 @@ interface PercentagePageProps {
 
 type PageMode =
   | { kind: 'type'; typeSlug: string }
-  | { kind: 'specific'; percent: number; baseNumber: number };
+  | {
+      kind: 'specific';
+      typeId: string;
+      typeSlug: string;
+      value1: number;
+      value2: number;
+    };
+
+/**
+ * Config for each specific-value percentage type slug pattern.
+ */
+const SPECIFIC_TYPE_CONFIGS = [
+  {
+    slugPattern: ['N', 'procentov', 'ot', 'M'],
+    typeId: 'percent-of-number',
+    typeSlug: 'procentov-ot-chisla',
+  },
+  {
+    slugPattern: ['N', 'dobavit', 'procent', 'k', 'M'],
+    typeId: 'add-percent',
+    typeSlug: 'dobavit-procent',
+  },
+  {
+    slugPattern: ['N', 'vychest', 'procent', 'iz', 'M'],
+    typeId: 'subtract-percent',
+    typeSlug: 'vyčest-procent',
+  },
+  {
+    slugPattern: ['izmenenie', 's', 'N', 'na', 'M'],
+    typeId: 'percent-change',
+    typeSlug: 'izmenenie-v-procentah',
+  },
+  {
+    slugPattern: ['raznica', 'mezhdu', 'N', 'i', 'M'],
+    typeId: 'percent-difference',
+    typeSlug: 'raznica-v-procentah',
+  },
+  {
+    slugPattern: ['N', 'sostavlyaet', 'skolko', 'procentov', 'ot', 'M'],
+    typeId: 'number-is-percent-of',
+    typeSlug: 'chislo-sostavlyaet-procent',
+  },
+];
 
 /**
  * Parse the slug array to determine the page mode.
@@ -42,14 +82,45 @@ function parseSlug(slug: string[]): PageMode | null {
     return null;
   }
 
-  // Specific-value page: ['N', 'procentov', 'ot', 'M']
-  if (slug.length === 4 && slug[1] === 'procentov' && slug[2] === 'ot') {
-    const percent = parseFloat(slug[0]);
-    const baseNumber = parseFloat(slug[3]);
-    if (!isNaN(percent) && !isNaN(baseNumber)) {
-      return { kind: 'specific', percent, baseNumber };
+  // Specific-value pages: match against known patterns
+  for (const config of SPECIFIC_TYPE_CONFIGS) {
+    if (slug.length !== config.slugPattern.length) continue;
+
+    let value1: number | null = null;
+    let value2: number | null = null;
+    let match = true;
+
+    for (let i = 0; i < config.slugPattern.length; i++) {
+      const part = config.slugPattern[i];
+      if (part === 'N') {
+        const parsed = parseFloat(slug[i]);
+        if (isNaN(parsed)) {
+          match = false;
+          break;
+        }
+        value1 = parsed;
+      } else if (part === 'M') {
+        const parsed = parseFloat(slug[i]);
+        if (isNaN(parsed)) {
+          match = false;
+          break;
+        }
+        value2 = parsed;
+      } else if (slug[i] !== part) {
+        match = false;
+        break;
+      }
     }
-    return null;
+
+    if (match && value1 !== null && value2 !== null) {
+      return {
+        kind: 'specific',
+        typeId: config.typeId,
+        typeSlug: config.typeSlug,
+        value1,
+        value2,
+      };
+    }
   }
 
   return null;
@@ -63,14 +134,23 @@ export function generateStaticParams() {
     params.push({ slug: [type.slug] });
   }
 
-  // 2. Specific-value pages for percent-of-number
-  for (const n of SPECIFIC_VALUE_N) {
-    for (const m of SPECIFIC_VALUE_M) {
-      params.push({ slug: [n.toString(), 'procentov', 'ot', m.toString()] });
+  // 2. Specific-value pages for all types
+  for (const config of SPECIFIC_TYPE_CONFIGS) {
+    for (const n of SPECIFIC_VALUE_N) {
+      for (const m of SPECIFIC_VALUE_M) {
+        const slugParts = config.slugPattern.map((p) => {
+          if (p === 'N') return n.toString();
+          if (p === 'M') return m.toString();
+          return p;
+        });
+        params.push({ slug: slugParts });
+      }
     }
   }
 
-  console.log(`Generated ${params.length} percentage pages (${percentageTypes.length} types + ${params.length - percentageTypes.length} specific-value)`);
+  console.log(
+    `Generated ${params.length} percentage pages (${percentageTypes.length} types + ${params.length - percentageTypes.length} specific-value)`
+  );
   return params;
 }
 
@@ -111,18 +191,69 @@ export async function generateMetadata({ params }: PercentagePageProps): Promise
   }
 
   // Specific-value page metadata
-  const { percent, baseNumber } = parsed;
-  const result = (percent * baseNumber) / 100;
-  const formattedResult = result.toLocaleString('ru-RU', { maximumFractionDigits: 2 });
+  const { typeId, typeSlug, value1, value2 } = parsed;
+  const calcType = getPercentageTypeBySlug(typeSlug);
+  if (!calcType) {
+    return { title: 'Калькулятор не найден' };
+  }
 
-  const title = `${percent}% от ${baseNumber} — ${formattedResult}`;
-  const description = `Сколько составляет ${percent}% от ${baseNumber}? Результат: ${formattedResult}. Онлайн калькулятор процентов с формулой и объяснением.`;
-  const url = `${SITE_URL}/procenty/${percent}-procentov-ot-${baseNumber}`;
+  const { result } = calculateByType(typeId, value1, value2);
+  const formattedResult =
+    typeId === 'number-is-percent-of'
+      ? `${result.toLocaleString('ru-RU', { maximumFractionDigits: 2 })}%`
+      : result.toLocaleString('ru-RU', {
+          maximumFractionDigits: 2,
+          minimumFractionDigits: result % 1 === 0 ? 0 : 2,
+        });
+
+  let title = '';
+  let description = '';
+  let url = '';
+
+  switch (typeId) {
+    case 'percent-of-number': {
+      title = `${value1}% от ${value2} — ${formattedResult}`;
+      description = `Сколько составляет ${value1}% от ${value2}? Результат: ${formattedResult}. Онлайн калькулятор процентов с формулой и объяснением.`;
+      url = `${SITE_URL}/procenty/${value1}-procentov-ot-${value2}`;
+      break;
+    }
+    case 'add-percent': {
+      title = `${value2} + ${value1}% — ${formattedResult}`;
+      description = `Прибавить ${value1}% к ${value2} = ${formattedResult}. Онлайн калькулятор процентов с формулой и объяснением.`;
+      url = `${SITE_URL}/procenty/${value1}-dobavit-procent-k-${value2}`;
+      break;
+    }
+    case 'subtract-percent': {
+      title = `${value2} − ${value1}% — ${formattedResult}`;
+      description = `Вычесть ${value1}% из ${value2} = ${formattedResult}. Онлайн калькулятор процентов с формулой и объяснением.`;
+      url = `${SITE_URL}/procenty/${value1}-vychest-procent-iz-${value2}`;
+      break;
+    }
+    case 'percent-change': {
+      const sign = result > 0 ? '+' : '';
+      title = `Изменение с ${value1} на ${value2} — ${sign}${formattedResult}`;
+      description = `Изменение с ${value1} на ${value2} = ${sign}${formattedResult}. Онлайн калькулятор процентного изменения.`;
+      url = `${SITE_URL}/procenty/izmenenie-s-${value1}-na-${value2}`;
+      break;
+    }
+    case 'percent-difference': {
+      title = `Разница между ${value1} и ${value2} — ${formattedResult}`;
+      description = `Разница между ${value1} и ${value2} в процентах = ${formattedResult}. Онлайн калькулятор разницы в процентах.`;
+      url = `${SITE_URL}/procenty/raznica-mezhdu-${value1}-i-${value2}`;
+      break;
+    }
+    case 'number-is-percent-of': {
+      title = `${value1} от ${value2} — ${formattedResult}`;
+      description = `Сколько процентов составляет ${value1} от ${value2}? Результат: ${formattedResult}. Онлайн калькулятор процентов.`;
+      url = `${SITE_URL}/procenty/${value1}-sostavlyaet-skolko-procentov-ot-${value2}`;
+      break;
+    }
+  }
 
   return {
     title,
     description,
-    keywords: `${percent} процентов от ${baseNumber}, процент от числа, калькулятор процентов, онлайн`,
+    keywords: `${calcType.title}, проценты, калькулятор, онлайн`,
     alternates: { canonical: url },
     openGraph: {
       title,
@@ -132,6 +263,177 @@ export async function generateMetadata({ params }: PercentagePageProps): Promise
       siteName: 'Calcus',
     },
   };
+}
+
+// =====================================================
+// HELPER: get specific-value page display data
+// =====================================================
+function getSpecificPageDisplay(
+  typeId: string,
+  n: number,
+  m: number,
+  result: number,
+  explanation: string
+) {
+  const formattedResult =
+    typeId === 'number-is-percent-of'
+      ? `${result.toLocaleString('ru-RU', { maximumFractionDigits: 2 })}%`
+      : result.toLocaleString('ru-RU', {
+          maximumFractionDigits: 2,
+          minimumFractionDigits: result % 1 === 0 ? 0 : 2,
+        });
+
+  switch (typeId) {
+    case 'percent-of-number': {
+      return {
+        h1: `${n}% от ${m} — результат`,
+        subhead: `Сколько составляет ${n} процентов от ${m}? Рассчитайте онлайн с формулой.`,
+        resultLabel: `${n}% от ${m} =`,
+        resultValue: formattedResult,
+        formulaLine: `(${n} \u00d7 ${m}) \u00f7 100 = ${formattedResult}`,
+        faq: [
+          {
+            q: `Сколько составляет ${n}% от ${m}?`,
+            a: `${n}% от ${m} составляет <strong>${formattedResult}</strong>. Для расчёта используется формула: (${n} \u00d7 ${m}) \u00f7 100 = ${formattedResult}.`,
+          },
+          {
+            q: `Как посчитать ${n} процентов от ${m}?`,
+            a: `Чтобы посчитать ${n} процентов от ${m}, умножьте ${m} на ${n} и разделите на 100: (${m} \u00d7 ${n}) \u00f7 100 = ${formattedResult}. Используйте калькулятор выше, чтобы быстро получить результат для любых чисел.`,
+          },
+          {
+            q: `Как найти ${n}% от любого числа?`,
+            a: `Чтобы найти ${n}% от любого числа, умножьте это число на ${n} и разделите результат на 100. Например, ${n}% от 500 = ${((n * 500) / 100).toLocaleString('ru-RU', { maximumFractionDigits: 2 })}.`,
+          },
+        ],
+      };
+    }
+    case 'add-percent': {
+      return {
+        h1: `${m} + ${n}% — результат`,
+        subhead: `Прибавить ${n} процентов к ${m}. Онлайн расчёт с формулой.`,
+        resultLabel: `${m} + ${n}% =`,
+        resultValue: formattedResult,
+        formulaLine: `${m} + (${m} \u00d7 ${n} \u00f7 100) = ${formattedResult}`,
+        faq: [
+          {
+            q: `Сколько будет ${m} + ${n}%?`,
+            a: `${m} + ${n}% = <strong>${formattedResult}</strong>. Формула: ${m} + (${m} \u00d7 ${n} / 100) = ${formattedResult}.`,
+          },
+          {
+            q: `Как прибавить ${n}% к числу?`,
+            a: `Умножьте число на ${n}, разделите на 100 и прибавьте к исходному числу. Например, 500 + ${n}% = ${(500 + (500 * n) / 100).toLocaleString('ru-RU', { maximumFractionDigits: 2 })}.`,
+          },
+          {
+            q: `Как увеличить число на ${n} процентов?`,
+            a: `Чтобы увеличить число на ${n}%, умножьте его на (1 + ${n}/100). Например, ${m} \u00d7 (1 + ${n}/100) = ${formattedResult}.`,
+          },
+        ],
+      };
+    }
+    case 'subtract-percent': {
+      return {
+        h1: `${m} − ${n}% — результат`,
+        subhead: `Вычесть ${n} процентов из ${m}. Онлайн расчёт с формулой.`,
+        resultLabel: `${m} − ${n}% =`,
+        resultValue: formattedResult,
+        formulaLine: `${m} − (${m} \u00d7 ${n} \u00f7 100) = ${formattedResult}`,
+        faq: [
+          {
+            q: `Сколько будет ${m} − ${n}%?`,
+            a: `${m} − ${n}% = <strong>${formattedResult}</strong>. Формула: ${m} − (${m} \u00d7 ${n} / 100) = ${formattedResult}.`,
+          },
+          {
+            q: `Как вычесть ${n}% из числа?`,
+            a: `Умножьте число на ${n}, разделите на 100 и вычтите из исходного числа. Например, 500 − ${n}% = ${(500 - (500 * n) / 100).toLocaleString('ru-RU', { maximumFractionDigits: 2 })}.`,
+          },
+          {
+            q: `Как уменьшить число на ${n} процентов?`,
+            a: `Чтобы уменьшить число на ${n}%, умножьте его на (1 − ${n}/100). Например, ${m} \u00d7 (1 − ${n}/100) = ${formattedResult}.`,
+          },
+        ],
+      };
+    }
+    case 'percent-change': {
+      const sign = result > 0 ? '+' : '';
+      return {
+        h1: `Изменение с ${n} на ${m} — результат`,
+        subhead: `На сколько процентов изменилось значение с ${n} до ${m}?`,
+        resultLabel: `Изменение:`,
+        resultValue: `${sign}${formattedResult}`,
+        formulaLine: `((${m} − ${n}) \u00d7 100) \u00f7 ${n} = ${sign}${formattedResult}`,
+        faq: [
+          {
+            q: `На сколько процентов изменилось значение с ${n} на ${m}?`,
+            a: `Изменение составляет <strong>${sign}${formattedResult}</strong>. Формула: ((${m} − ${n}) \u00d7 100) \u00f7 ${n} = ${sign}${formattedResult}.`,
+          },
+          {
+            q: `Как посчитать процентное изменение?`,
+            a: `Вычтите старое значение из нового, умножьте на 100 и разделите на старое значение. Например, изменение с 100 на 150 = +50%.`,
+          },
+          {
+            q: `Что означает изменение на ${formattedResult}?`,
+            a: `Это означает, что значение ${result > 0 ? 'увеличилось' : 'уменьшилось'} на ${Math.abs(result).toFixed(2)}% от исходного.`,
+          },
+        ],
+      };
+    }
+    case 'percent-difference': {
+      return {
+        h1: `Разница между ${n} и ${m} — результат`,
+        subhead: `На сколько процентов ${m} отличается от ${n}?`,
+        resultLabel: `Разница:`,
+        resultValue: formattedResult,
+        formulaLine: `(|${m} − ${n}| \u00d7 100) \u00f7 ${n} = ${formattedResult}`,
+        faq: [
+          {
+            q: `На сколько процентов ${m} отличается от ${n}?`,
+            a: `Разница составляет <strong>${formattedResult}</strong>. Формула: (|${m} − ${n}| \u00d7 100) \u00f7 ${n} = ${formattedResult}.`,
+          },
+          {
+            q: `Как посчитать разницу в процентах?`,
+            a: `Найдите модуль разности чисел, умножьте на 100 и разделите на первое число. Например, разница между 80 и 100 = 25%.`,
+          },
+          {
+            q: `В чём разница между процентным изменением и разницей?`,
+            a: `Процентное изменение показывает направление (увеличение/уменьшение), а процентная разница — только величину отклонения.`,
+          },
+        ],
+      };
+    }
+    case 'number-is-percent-of': {
+      return {
+        h1: `${n} от ${m} — сколько процентов`,
+        subhead: `Сколько процентов составляет ${n} от ${m}?`,
+        resultLabel: `${n} от ${m} =`,
+        resultValue: formattedResult,
+        formulaLine: `(${n} \u00d7 100) \u00f7 ${m} = ${formattedResult}`,
+        faq: [
+          {
+            q: `Сколько процентов составляет ${n} от ${m}?`,
+            a: `${n} от ${m} составляет <strong>${formattedResult}</strong>. Формула: (${n} \u00d7 100) \u00f7 ${m} = ${formattedResult}.`,
+          },
+          {
+            q: `Как посчитать, сколько процентов составляет число?`,
+            a: `Умножьте число на 100 и разделите на общее значение. Например, 50 от 200 = 25%.`,
+          },
+          {
+            q: `${n} — это сколько процентов от ${m}?`,
+            a: `${n} от ${m} = ${formattedResult}. Чтобы найти, сколько процентов составляет число, используйте формулу: (число \u00d7 100) \u00f7 общее.`,
+          },
+        ],
+      };
+    }
+    default: {
+      return {
+        h1: `Расчёт`,
+        subhead: `Онлайн калькулятор процентов`,
+        resultLabel: `Результат:`,
+        resultValue: formattedResult,
+        formulaLine: explanation,
+        faq: [],
+      };
+    }
+  }
 }
 
 export default async function PercentagePage({ params }: PercentagePageProps) {
@@ -273,18 +575,24 @@ export default async function PercentagePage({ params }: PercentagePageProps) {
   }
 
   // =====================================================
-  // SPECIFIC-VALUE PAGE (new)
+  // SPECIFIC-VALUE PAGE
   // =====================================================
-  const { percent, baseNumber } = parsed;
-  const result = (percent * baseNumber) / 100;
-  const formattedResult = result.toLocaleString('ru-RU', {
-    maximumFractionDigits: 2,
-    minimumFractionDigits: result % 1 === 0 ? 0 : 2,
-  });
+  const { typeId, typeSlug, value1, value2 } = parsed;
+  const calcType = getPercentageTypeBySlug(typeSlug);
+  if (!calcType) {
+    notFound();
+  }
 
-  // Calc type used for the pre-filled calculator
-  const calcType = getPercentageTypeBySlug(SPECIFIC_VALUE_TYPE_SLUG)!;
-  const { explanation } = calculateByType(SPECIFIC_VALUE_TYPE_ID, percent, baseNumber);
+  const { result, explanation } = calculateByType(typeId, value1, value2);
+  const display = getSpecificPageDisplay(typeId, value1, value2, result, explanation);
+
+  const formattedResult =
+    typeId === 'number-is-percent-of'
+      ? `${result.toLocaleString('ru-RU', { maximumFractionDigits: 2 })}%`
+      : result.toLocaleString('ru-RU', {
+          maximumFractionDigits: 2,
+          minimumFractionDigits: result % 1 === 0 ? 0 : 2,
+        });
 
   return (
     <div className="flex flex-col min-h-full">
@@ -300,9 +608,7 @@ export default async function PercentagePage({ params }: PercentagePageProps) {
               Проценты
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-foreground">
-              {percent}% от {baseNumber}
-            </span>
+            <span className="text-foreground">{display.h1}</span>
           </nav>
         </div>
       </div>
@@ -311,36 +617,26 @@ export default async function PercentagePage({ params }: PercentagePageProps) {
       <main className="flex-1 mx-auto max-w-4xl px-4 py-8 w-full">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-3">
-            {percent}% от {baseNumber} — результат
-          </h1>
-          <p className="text-lg text-muted-foreground">
-            Сколько составляет {percent} процентов от {baseNumber}? Рассчитайте онлайн с формулой.
-          </p>
+          <h1 className="text-3xl font-bold mb-3">{display.h1}</h1>
+          <p className="text-lg text-muted-foreground">{display.subhead}</p>
         </div>
 
         {/* Prominent Result Card */}
         <Card className="mb-8 border-primary/30 bg-primary/5">
           <CardContent className="py-6">
             <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-2">
-                {percent}% от {baseNumber} =
-              </p>
-              <p className="text-4xl font-bold text-primary mb-2">
-                {formattedResult}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                ({percent} × {baseNumber}) ÷ 100 = {formattedResult}
-              </p>
+              <p className="text-sm text-muted-foreground mb-2">{display.resultLabel}</p>
+              <p className="text-4xl font-bold text-primary mb-2">{display.resultValue}</p>
+              <p className="text-sm text-muted-foreground">{display.formulaLine}</p>
             </div>
           </CardContent>
         </Card>
 
         {/* Calculator pre-filled */}
         <PercentageCalculator
-          initialType={SPECIFIC_VALUE_TYPE_SLUG}
-          initialValue1={percent}
-          initialValue2={baseNumber}
+          initialType={typeSlug}
+          initialValue1={value1}
+          initialValue2={value2}
         />
 
         {/* Formula Card */}
@@ -362,44 +658,27 @@ export default async function PercentagePage({ params }: PercentagePageProps) {
         </Card>
 
         {/* FAQ Section */}
-        <Card className="mt-8">
-          <CardHeader>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              Часто задаваемые вопросы
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <h3 className="font-medium mb-1">
-                Сколько составляет {percent}% от {baseNumber}?
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                {percent}% от {baseNumber} составляет <strong>{formattedResult}</strong>.
-                Для расчёта используется формула: ({percent} × {baseNumber}) ÷ 100 = {formattedResult}.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium mb-1">
-                Как посчитать {percent} процентов от {baseNumber}?
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Чтобы посчитать {percent} процентов от {baseNumber}, умножьте {baseNumber} на {percent} и разделите на 100:
-                ({baseNumber} × {percent}) ÷ 100 = {formattedResult}.
-                Используйте калькулятор выше, чтобы быстро получить результат для любых чисел.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium mb-1">
-                Как найти {percent}% от любого числа?
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Чтобы найти {percent}% от любого числа, умножьте это число на {percent} и разделите результат на 100.
-                Например, {percent}% от 500 = {((percent * 500) / 100).toLocaleString('ru-RU', { maximumFractionDigits: 2 })}.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+        {display.faq.length > 0 && (
+          <Card className="mt-8">
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center gap-2">
+                <HelpCircle className="h-5 w-5 text-primary" />
+                Часто задаваемые вопросы
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {display.faq.map((item, idx) => (
+                <div key={idx}>
+                  <h3 className="font-medium mb-1">{item.q}</h3>
+                  <p
+                    className="text-sm text-muted-foreground"
+                    dangerouslySetInnerHTML={{ __html: item.a }}
+                  />
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        )}
 
         {/* Navigation */}
         <div className="mt-8 flex justify-between">

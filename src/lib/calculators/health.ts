@@ -561,10 +561,265 @@ export const alcoholSimpleCalculator: Calculator = {
   }
 };
 
+// Калькулятор размера бюстгальтера
+export const braSizeCalculator: Calculator = {
+  id: 'bra-size-calculator-ru',
+  slug: 'razmer-byustgaltera',
+  title: 'Калькулятор размера бюстгальтера',
+  description: 'Определение размера бюстгальтера по обхвату под грудью и обхвату груди',
+  category: 'zdorove-i-krasota',
+  subcategory: 'krasota',
+  type: 'formula',
+  inputs: [
+    {
+      name: 'underbust',
+      label: 'Обхват под грудью (см)',
+      type: 'number',
+      placeholder: '75',
+      min: 50,
+      max: 150,
+      defaultValue: 75
+    },
+    {
+      name: 'bust',
+      label: 'Обхват груди (см)',
+      type: 'number',
+      placeholder: '90',
+      min: 60,
+      max: 170,
+      defaultValue: 90
+    },
+    {
+      name: 'country',
+      label: 'Система размеров',
+      type: 'select',
+      options: [
+        { value: 'RU', label: 'Россия / СНГ' },
+        { value: 'EU', label: 'Европа' },
+        { value: 'US', label: 'США' },
+        { value: 'UK', label: 'Великобритания' }
+      ],
+      defaultValue: 'RU'
+    }
+  ],
+  outputs: [
+    { name: 'band', label: 'Обхват (размер ленты)', type: 'text' },
+    { name: 'cup', label: 'Чашка', type: 'text' },
+    { name: 'fullSize', label: 'Полный размер', type: 'text' }
+  ],
+  calculate: (inputs) => {
+    const underbust = Number(inputs.underbust);
+    const bust = Number(inputs.bust);
+    const country = String(inputs.country);
+
+    if (!underbust || !bust || underbust <= 0 || bust <= underbust) {
+      return [{ value: 'Введите корректные замеры', label: 'Результат' }];
+    }
+
+    const diff = bust - underbust;
+    const diffInches = diff / 2.54;
+
+    let band = '';
+    let cup = '';
+    let fullSize = '';
+
+    const ruCupMap = [
+      { max: 10, label: 'AA' },
+      { max: 13, label: 'A' },
+      { max: 16, label: 'B' },
+      { max: 19, label: 'C' },
+      { max: 22, label: 'D' },
+      { max: 25, label: 'E' },
+      { max: 28, label: 'F' },
+      { max: 31, label: 'G' },
+      { max: 34, label: 'H' }
+    ];
+
+    const usCupMap = [
+      { max: 1, label: 'AA' },
+      { max: 2, label: 'A' },
+      { max: 3, label: 'B' },
+      { max: 4, label: 'C' },
+      { max: 5, label: 'D' },
+      { max: 6, label: 'DD/E' },
+      { max: 7, label: 'DDD/F' },
+      { max: 8, label: 'G' },
+      { max: 9, label: 'H' }
+    ];
+
+    const ukCupMap = [
+      { max: 1, label: 'AA' },
+      { max: 2, label: 'A' },
+      { max: 3, label: 'B' },
+      { max: 4, label: 'C' },
+      { max: 5, label: 'D' },
+      { max: 6, label: 'DD' },
+      { max: 7, label: 'E' },
+      { max: 8, label: 'F' },
+      { max: 9, label: 'FF' }
+    ];
+
+    if (country === 'RU' || country === 'EU') {
+      band = String(Math.round(underbust / 5) * 5);
+      const found = ruCupMap.find(c => diff < c.max);
+      cup = found ? found.label : 'H+';
+      fullSize = `${band}${cup}`;
+    } else if (country === 'US') {
+      const bandInches = underbust / 2.54;
+      const bandRounded = Math.max(28, Math.round(bandInches / 2) * 2);
+      band = String(bandRounded);
+      const found = usCupMap.find(c => diffInches < c.max);
+      cup = found ? found.label : 'H+';
+      fullSize = `${band}${cup}`;
+    } else if (country === 'UK') {
+      const bandInches = underbust / 2.54;
+      const bandRounded = Math.max(28, Math.round(bandInches / 2) * 2);
+      band = String(bandRounded);
+      const found = ukCupMap.find(c => diffInches < c.max);
+      cup = found ? found.label : 'FF+';
+      fullSize = `${band}${cup}`;
+    }
+
+    return [
+      { value: band, label: 'Обхват (размер ленты)' },
+      { value: cup, label: 'Чашка' },
+      { value: fullSize, label: 'Полный размер' }
+    ];
+  },
+  content: {
+    howTo: 'Измерьте обхват под грудью (плотно, на выдохе) и обхват груди по самым выступающим точкам. Выберите систему размеров.',
+    about: 'Калькулятор определяет размер бюстгальтера по двум замерам: обхват под грудью и обхват груди. Поддерживает российскую, европейскую, американскую и британскую системы размеров.',
+    usage: 'Используется для подбора правильного размера бюстгальтера при покупке онлайн или в магазине.',
+    formula: 'Размер = Обхват ленты + Чашка. Чашка определяется разницей между обхватом груди и обхватом под грудью.',
+    faq: [
+      {
+        question: 'Как правильно измерить обхват под грудью?',
+        answer: 'Используйте сантиметровую ленту. Обхват под грудью измеряется плотно, прямо под основанием груди, на выдохе. Лента должна быть горизонтальной и плотно прилегать к телу.'
+      },
+      {
+        question: 'Как правильно измерить обхват груди?',
+        answer: 'Измерьте по самым выступающим точкам груди. Лента не должна быть слишком тугой или слишком свободной. Держите ленту горизонтально на уровне сосков.'
+      },
+      {
+        question: 'Почему размеры в разных странах отличаются?',
+        answer: 'Разные страны используют разные системы измерения обхвата ленты (см vs дюймы) и разные шкалы чашек. Например, в США и Великобритании обхват ленты измеряется в дюймах и округляется до чётного числа.'
+      },
+      {
+        question: 'Какой результат, если грудь меньше обхвата под грудью?',
+        answer: 'Это физически невозможно для здоровой груди. Убедитесь, что вы правильно измерили оба параметры. Обхват груди всегда должен быть больше обхвата под грудью.'
+      }
+    ],
+    sources: [
+      { title: 'Размеры бюстгальтера — Википедия', url: 'https://ru.wikipedia.org/wiki/Размеры_бюстгальтера' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
+// Калькулятор роста волос
+export const hairGrowthCalculator: Calculator = {
+  id: 'hair-growth-calculator',
+  slug: 'rost-volos',
+  title: 'Калькулятор роста волос',
+  description: 'Расчёт времени, за которое волосы вырастут от текущей длины до желаемой',
+  category: 'zdorove-i-krasota',
+  subcategory: 'krasota',
+  type: 'formula',
+  inputs: [
+    {
+      name: 'currentLength',
+      label: 'Текущая длина (см)',
+      type: 'number',
+      placeholder: '10',
+      min: 0,
+      max: 200,
+      defaultValue: 10
+    },
+    {
+      name: 'desiredLength',
+      label: 'Желаемая длина (см)',
+      type: 'number',
+      placeholder: '30',
+      min: 0,
+      max: 200,
+      defaultValue: 30
+    },
+    {
+      name: 'growthRate',
+      label: 'Скорость роста (мм/мес)',
+      type: 'number',
+      placeholder: '12',
+      min: 1,
+      max: 50,
+      defaultValue: 12
+    }
+  ],
+  outputs: [
+    { name: 'days', label: 'Дней', type: 'number', unit: 'дн' },
+    { name: 'months', label: 'Месяцев', type: 'number', unit: 'мес' },
+    { name: 'years', label: 'Лет', type: 'number', unit: 'лет' }
+  ],
+  calculate: (inputs) => {
+    const currentLength = Number(inputs.currentLength);
+    const desiredLength = Number(inputs.desiredLength);
+    const growthRate = Number(inputs.growthRate);
+
+    if (!currentLength || !desiredLength || !growthRate || desiredLength <= currentLength) {
+      return [{ value: 'Желаемая длина должна быть больше текущей', label: 'Результат' }];
+    }
+
+    const diffCm = desiredLength - currentLength;
+    const diffMm = diffCm * 10;
+    const months = diffMm / growthRate;
+    const days = Math.round(months * 30.44);
+    const years = months / 12;
+
+    return [
+      { value: days, label: 'Дней', unit: 'дн' },
+      { value: Math.round(months * 10) / 10, label: 'Месяцев', unit: 'мес' },
+      { value: Math.round(years * 100) / 100, label: 'Лет', unit: 'лет' }
+    ];
+  },
+  content: {
+    howTo: 'Введите текущую длину волос, желаемую длину и скорость роста (по умолчанию 12 мм/мес — средний показатель). Калькулятор рассчитает, сколько времени потребуется.',
+    about: 'Волосы человека в среднем растут на 10-15 мм в месяц (около 1-1.5 см). Скорость роста зависит от генетики, возраста, питания, состояния здоровья и ухода.',
+    usage: 'Используется для планирования стрижки, оценки времени до достижения желаемой длины, планирования причёски к важному событию.',
+    formula: 'Время (мес) = (Желаемая длина − Текущая длина) × 10 / Скорость роста (мм/мес)',
+    faq: [
+      {
+        question: 'Какова средняя скорость роста волос?',
+        answer: 'В среднем волосы растут на 1-1.5 см (10-15 мм) в месяц, или около 12-18 см в год. Это примерно 0.3-0.5 мм в сутки.'
+      },
+      {
+        question: 'Можно ли ускорить рост волос?',
+        answer: 'Полностью ускорить рост невозможно из-за генетических ограничений, но можно оптимизировать: сбалансированное питание (белки, железо, цинк, витамины группы B), достаточный сон, уменьшение стресса, бережный уход (меньше горячих инструментов, щадящие средства).'
+      },
+      {
+        question: 'Почему волосы растут медленнее зимой?',
+        answer: 'В холодное время года рост волос может замедляться из-за снижения кровообращения кожи головы, недостатка витамина D и общего замедления обмена веществ.'
+      },
+      {
+        question: 'Влияет ли стрижка кончиков на рост волос?',
+        answer: 'Стрижка кончиков не ускоряет рост волос из корней, но предотвращает сечение и ломкость, благодаря чему волосы сохраняют длину и выглядят длиннее и здоровее.'
+      }
+    ],
+    sources: [
+      { title: 'Рост волос — Википедия', url: 'https://ru.wikipedia.org/wiki/Волосы' }
+    ],
+    updatedAt: '2026-04-26'
+  },
+  popularCalculations: [
+    { value: '10 см → 30 см', url: '/rost-volos?currentLength=10&desiredLength=30' },
+    { value: '5 см → 50 см', url: '/rost-volos?currentLength=5&desiredLength=50' }
+  ]
+};
+
 export const healthCalculators = [
   bmiCalculator,
   caloriesCalculator,
   bmrCalculator,
   tdeeCalculator,
   alcoholSimpleCalculator,
+  braSizeCalculator,
+  hairGrowthCalculator,
 ];

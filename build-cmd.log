@@ -1,0 +1,1273 @@
+[1m[38;2;173;127;168m▲ Next.js 16.2.2[39m[22m (Turbopack)
+
+[37m[1m [22m[39m Creating an optimized production build ...
+[32m[1m✓[22m[39m Compiled successfully in 70s
+[37m[1m [22m[39m Running TypeScript ...
+[37m[1m [22m[39m Finished TypeScript in 43s ...
+[37m[1m [22m[39m Collecting page data using 7 workers ...
+Generated 306 cooking converter pages
+Generated 792 static converter pages (reduced set)
+Generated 280 reverse cooking converter pages
+Generated 223 percentage pages (7 types + 216 specific-value)
+Generated 56 timer pages
+Generated 50 subcategory pages
+[37m[1m [22m[39m Generating static pages using 7 workers (0/2302) ...
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/reverse/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /obratnyj-otschet-do-daty. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[37m[1m [22m[39m Generating static pages using 7 workers (575/2302) 
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /[category]/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /kulinarnye-mery/[cookingId]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /calc/[slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[33m[1m⚠[22m[39m Unsupported metadata themeColor is configured in metadata export in /procenty/[...slug]. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport

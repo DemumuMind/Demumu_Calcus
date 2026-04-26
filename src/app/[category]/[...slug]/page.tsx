@@ -98,10 +98,14 @@ export async function generateMetadata({ params }: ConverterPageProps): Promise<
   };
 }
 
-// Limit static generation to the 6 most popular categories to reduce build time
+// Static generation for all converter categories with expanded popular values
 // while keeping all combos available at runtime via dynamicParams.
-const POPULAR_CATEGORIES = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
-const POPULAR_VALUES = ['1', '5', '10', '50', '100'];
+const POPULAR_CATEGORIES = [
+  'dlina', 'massa', 'temperatura', 'skorost', 'obem',
+  'informaciya', 'ploshchad', 'energiya', 'davlenie',
+  'moshchnost', 'vremya', 'ugly',
+];
+const POPULAR_VALUES = ['1', '2', '5', '10', '20', '50', '100', '200', '500', '1000'];
 
 // Allow non-pre-generated converter combos to work at runtime (Next.js 15+)
 export const dynamicParams = true;
