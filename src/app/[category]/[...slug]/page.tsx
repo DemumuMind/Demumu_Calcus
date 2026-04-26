@@ -107,9 +107,7 @@ const POPULAR_CATEGORIES = [
 ];
 
 const POPULAR_VALUES = [
-  '1', '2', '3', '5', '10', '15', '20', '25', '30', '50',
-  '75', '100', '125', '150', '200', '250', '300', '500',
-  '750', '1000', '1500', '2000', '3000', '5000', '10000',
+  '1', '5', '10', '25', '50', '100', '200', '500', '1000', '10000',
 ];
 
 const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
@@ -122,8 +120,6 @@ const TOP_PAIRS: Record<string, Array<[string, string]>> = {
   temperatura: [['c', 'f'], ['f', 'c']],
   skorost: [['kmh', 'ms'], ['ms', 'kmh'], ['mph', 'kmh'], ['kmh', 'mph']],
 };
-
-export const dynamicParams = false;
 
 export function generateStaticParams() {
   const seen = new Set<string>();
