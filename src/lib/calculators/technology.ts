@@ -659,6 +659,40 @@ export const hashCalculator: Calculator = {
   }
 };
 
+// Секундомер (данные — UI реализован как client component)
+export const stopwatchCalculator: Calculator = {
+  id: 'stopwatch-calculator',
+  slug: 'sekundomer',
+  title: 'Секундомер',
+  description: 'Онлайн-секундомер с отметками времени (круги)',
+  category: 'tekhnologii',
+  subcategory: 'data-i-vremya',
+  type: 'timer',
+  inputs: [],
+  outputs: [],
+  calculate: () => [],
+  content: {
+    howTo: 'Нажмите кнопку "Старт" для запуска секундомера, "Стоп" — для паузы, "Круг" — для фиксации промежуточного времени, "Сброс" — для обнуления.',
+    about: 'Секундомер измеряет время с точностью до миллисекунды. Использует системные часы устройства.',
+    usage: 'Для спортивных тренировок, измерения длительности задач, кулинарии, экспериментов.',
+    formula: 'Время измеряется через performance.now() или Date.now() в браузере.',
+    faq: [
+      {
+        question: 'Насколько точен секундомер?',
+        answer: 'Браузерный таймер обычно точен до 1-15 мс. Для спортивных соревнований используйте профессиональное оборудование.'
+      },
+      {
+        question: 'Сохраняются ли данные при обновлении страницы?',
+        answer: 'Нет, при обновлении страницы секундомер сбрасывается.'
+      }
+    ],
+    sources: [
+      { title: 'Секундомер — Википедия', url: 'https://ru.wikipedia.org/wiki/Секундомер' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
 export const technologyCalculators = [
   ipCalculator,
   dpiCalculator,
@@ -666,4 +700,5 @@ export const technologyCalculators = [
   bitrateCalculator,
   internetSpeedCalculator,
   hashCalculator,
+  stopwatchCalculator,
 ];

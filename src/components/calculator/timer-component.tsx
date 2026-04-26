@@ -43,78 +43,106 @@ export function TimerComponent({
   const [customHours, setCustomHours] = useState('0');
   const [customMinutes, setCustomMinutes] = useState('1');
   const [customSeconds, setCustomSeconds] = useState('0');
-  
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  
-  // Инициализация аудио (бип)
-  useEffect(() => {
-    // Создаём простой бип через Web Audio API
-    const audioContext = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-    
-    const playBeep = () => {
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-      
+
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const startTimestampRef = useRef<number | null>(null);
+  const remainingAtPauseRef = useRef<number>(0);
+  const animFrameRef = useRef<number | null>(null);
+
+  const getAudioContext = useCallback(() => {
+    if (!audioContextRef.current) {
+      audioContextRef.current = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+    }
+    if (audioContextRef.current.state === 'suspended') {
+      audioContextRef.current.resume();
+    }
+    return audioContextRef.current;
+  }, []);
+
+  const playBeep = useCallback(() => {
+    try {
+      const ctx = getAudioContext();
+      const oscillator = ctx.createOscillator();
+      const gainNode = ctx.createGain();
+
       oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-      
+      gainNode.connect(ctx.destination);
+
       oscillator.frequency.value = 800;
       oscillator.type = 'sine';
-      
-      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-      
-      oscillator.start(audioContext.currentTime);
-      oscillator.stop(audioContext.currentTime + 0.5);
-    };
-    
-    audioRef.current = { play: playBeep } as unknown as HTMLAudioElement;
-  }, []);
-  
-  // Таймер обратного отсчёта
-  useEffect(() => {
-    if (isRunning && timeLeft > 0) {
-      timerRef.current = setInterval(() => {
-        setTimeLeft((prev) => {
-          if (prev <= 1) {
-            setIsRunning(false);
-            if (isSoundEnabled && audioRef.current) {
-              // Воспроизводим бип 3 раза
-              for (let i = 0; i < 3; i++) {
-                setTimeout(() => audioRef.current?.play(), i * 600);
-              }
-            }
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    } else {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
+
+      gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
+
+      oscillator.start(ctx.currentTime);
+      oscillator.stop(ctx.currentTime + 0.5);
+    } catch {
+      // AudioContext may still fail if no user gesture — silent fallback
     }
-    
+  }, [getAudioContext]);
+
+  const playAlarm = useCallback(() => {
+    if (!isSoundEnabled) return;
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => playBeep(), i * 600);
+    }
+  }, [isSoundEnabled, playBeep]);
+
+  // Timer tick using Date.now() delta — no drift
+  useEffect(() => {
+    if (!isRunning) {
+      if (animFrameRef.current) {
+        cancelAnimationFrame(animFrameRef.current);
+        animFrameRef.current = null;
+      }
+      return;
+    }
+
+    startTimestampRef.current = Date.now();
+    remainingAtPauseRef.current = timeLeft;
+
+    const tick = () => {
+      if (startTimestampRef.current === null) return;
+
+      const elapsed = Math.floor((Date.now() - startTimestampRef.current) / 1000);
+      const newTimeLeft = Math.max(0, remainingAtPauseRef.current - elapsed);
+
+      setTimeLeft(newTimeLeft);
+
+      if (newTimeLeft <= 0) {
+        setIsRunning(false);
+        playAlarm();
+        startTimestampRef.current = null;
+        return;
+      }
+
+      animFrameRef.current = requestAnimationFrame(tick);
+    };
+
+    animFrameRef.current = requestAnimationFrame(tick);
+
     return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
+      if (animFrameRef.current) {
+        cancelAnimationFrame(animFrameRef.current);
+        animFrameRef.current = null;
       }
     };
-  }, [isRunning, timeLeft, isSoundEnabled]);
-  
-  // Старт/пауза
+  }, [isRunning, playAlarm]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const toggleTimer = () => {
+    if (isRunning) {
+      // Pausing — snapshot remaining time
+      remainingAtPauseRef.current = timeLeft;
+    }
     setIsRunning(!isRunning);
   };
-  
-  // Сброс
+
   const resetTimer = () => {
     setIsRunning(false);
     setTimeLeft(totalSeconds);
+    startTimestampRef.current = null;
   };
-  
-  // Выбор пресета
+
   const handleTimerSelect = (timerId: string | null) => {
     if (!timerId) return;
     const timer = timerPresets.find((t) => t.id === timerId);
@@ -123,38 +151,34 @@ export function TimerComponent({
       setTotalSeconds(timer.seconds);
       setTimeLeft(timer.seconds);
       setIsRunning(false);
+      startTimestampRef.current = null;
     }
   };
-  
-  // Установка произвольного времени
+
   const setCustomTime = () => {
     const hours = parseInt(customHours) || 0;
     const minutes = parseInt(customMinutes) || 0;
     const seconds = parseInt(customSeconds) || 0;
     const total = hours * 3600 + minutes * 60 + seconds;
-    
+
     if (total > 0) {
       setSelectedTimerId('custom');
       setTotalSeconds(total);
       setTimeLeft(total);
       setIsRunning(false);
+      startTimestampRef.current = null;
     }
   };
-  
-  // Прогресс в процентах
+
   const progress = totalSeconds > 0 ? ((totalSeconds - timeLeft) / totalSeconds) * 100 : 0;
-  
-  // Форматирование отображения времени
   const timeDisplay = formatTime(timeLeft);
-  
-  // Популярные пресеты для быстрого доступа
+
   const quickPresets = timerPresets.filter((t) => 
     ['5-min', '10-min', '15-min', '25-min', '30-min'].includes(t.id)
   );
-  
+
   return (
     <div className="space-y-6">
-      {/* Основной таймер */}
       <Card className="mb-8">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
@@ -163,7 +187,6 @@ export function TimerComponent({
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* Выбор пресета */}
           <div className="space-y-2">
             <Label>Готовые таймеры</Label>
             <Select value={selectedTimerId} onValueChange={handleTimerSelect}>
@@ -180,8 +203,7 @@ export function TimerComponent({
               </SelectContent>
             </Select>
           </div>
-          
-          {/* Быстрые кнопки */}
+
           <div className="flex gap-2 flex-wrap">
             {quickPresets.map((timer) => (
               <Button
@@ -194,8 +216,7 @@ export function TimerComponent({
               </Button>
             ))}
           </div>
-          
-          {/* Произвольное время */}
+
           {selectedTimerId === 'custom' && (
             <div className="space-y-4 border rounded-lg p-4">
               <Label>Произвольное время</Label>
@@ -236,31 +257,26 @@ export function TimerComponent({
               </Button>
             </div>
           )}
-          
-          {/* Отображение времени */}
+
           <div className="text-center py-8">
-            {/* Прогресс бар */}
             <div className="w-full bg-muted rounded-full h-3 mb-6 overflow-hidden">
               <div 
                 className="bg-primary h-full transition-all duration-1000"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            
-            {/* Время */}
+
             <div className={`text-6xl md:text-7xl font-mono font-bold ${
               timeLeft <= 10 && timeLeft > 0 ? 'text-red-500 animate-pulse' : 'text-primary'
             }`}>
               {timeDisplay}
             </div>
-            
-            {/* Описание */}
+
             <p className="text-muted-foreground mt-2">
               {formatTimeText(timeLeft)}
             </p>
           </div>
-          
-          {/* Кнопки управления */}
+
           <div className="flex justify-center gap-3">
             <Button
               size="lg"
@@ -292,11 +308,10 @@ export function TimerComponent({
               )}
             </Button>
           </div>
-          
-          {/* Статус */}
+
           {timeLeft === 0 && (
-            <div className="text-center p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-600 font-medium flex items-center justify-center gap-2">
+            <div className="text-center p-4 bg-red-50 border border-red-200 rounded-lg dark:bg-red-950/20 dark:border-red-800">
+              <p className="text-red-600 dark:text-red-400 font-medium flex items-center justify-center gap-2">
                 <Bell className="h-5 w-5" />
                 Время вышло!
               </p>
@@ -304,8 +319,7 @@ export function TimerComponent({
           )}
         </CardContent>
       </Card>
-      
-      {/* Информация */}
+
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Как использовать</CardTitle>

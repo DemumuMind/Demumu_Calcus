@@ -69,7 +69,6 @@ import { fashionStyleCalculators } from './fashion-style';
 import { shoppingDealsCalculators } from './shopping-deals';
 import { bmiCalculator, calorieCalculator, mortgageCalculator } from './additional-calculators';
 
-// Простой калькулятор
 export const simpleCalculator: Calculator = {
   id: 'simple-calculator',
   slug: 'prostoj-kalkulyator',
@@ -107,7 +106,6 @@ export const simpleCalculator: Calculator = {
   }
 };
 
-// Конвертер км/ч в м/с
 export const kmhToMsConverter: Calculator = {
   id: 'kmh-to-ms',
   slug: 'km-ch-v-m-s',
@@ -159,7 +157,6 @@ export const kmhToMsConverter: Calculator = {
     
     if (!value) return [{ value: '—', label: 'Результат' }];
     
-    // Convert to m/s first
     let ms = 0;
     switch (from) {
       case 'kmh': ms = value / 3.6; break;
@@ -168,7 +165,6 @@ export const kmhToMsConverter: Calculator = {
       case 'knot': ms = value * 0.514444; break;
     }
     
-    // Convert from m/s to target
     let result = 0;
     switch (to) {
       case 'kmh': result = ms * 3.6; break;
@@ -212,7 +208,6 @@ export const kmhToMsConverter: Calculator = {
   ]
 };
 
-// Registry of all calculators
 export const calculators: Calculator[] = [
   simpleCalculator,
   kmhToMsConverter,
@@ -253,7 +248,7 @@ export const calculators: Calculator[] = [
   ...dailyMore2Calculators,
   ...dailyMore3Calculators,
   ...textToolsCalculators,
-    ...engineeringCalculators,
+  ...engineeringCalculators,
   ...engineeringMoreCalculators,
   ...textCalculators,
   ...colorCalculators,
@@ -287,22 +282,20 @@ export const calculators: Calculator[] = [
   mortgageCalculator,
 ];
 
-// Helper function to get calculator by slug
+const calculatorSlugMap = new Map<string, Calculator>(calculators.map(calc => [calc.slug, calc]));
+
 export function getCalculatorBySlug(slug: string): Calculator | undefined {
-  return calculators.find(calc => calc.slug === slug);
+  return calculatorSlugMap.get(slug);
 }
 
-// Helper function to get calculators by category
 export function getCalculatorsByCategory(categorySlug: string): Calculator[] {
   return calculators.filter(calc => calc.category === categorySlug);
 }
 
-// Helper function to get calculators by subcategory
 export function getCalculatorsBySubcategory(subcategorySlug: string): Calculator[] {
   return calculators.filter(calc => calc.subcategory === subcategorySlug);
 }
 
-// Helper function to search calculators
 export function searchCalculators(query: string): Calculator[] {
   const lowerQuery = query.toLowerCase();
   return calculators.filter(calc => 

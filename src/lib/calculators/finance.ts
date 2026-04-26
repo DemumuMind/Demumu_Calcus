@@ -341,8 +341,109 @@ export const depositCalculator: Calculator = {
   }
 };
 
+// Калькулятор сложного процента (ежемесячное пополнение)
+export const compoundInterestCalculator: Calculator = {
+  id: 'compound-interest-basic',
+  slug: 'slozhnyj-procent',
+  title: 'Сложный процент',
+  description: 'Расчёт итоговой суммы при сложном проценте с ежемесячным пополнением',
+  category: 'nauka-i-ucheba',
+  subcategory: 'finansovye',
+  type: 'formula',
+  inputs: [
+    {
+      name: 'principal',
+      label: 'Начальная сумма',
+      type: 'number',
+      placeholder: '100000',
+      defaultValue: 100000,
+      min: 0
+    },
+    {
+      name: 'rate',
+      label: 'Процентная ставка (% годовых)',
+      type: 'number',
+      placeholder: '10',
+      defaultValue: 10,
+      min: 0,
+      max: 100
+    },
+    {
+      name: 'periods',
+      label: 'Срок (месяцев)',
+      type: 'number',
+      placeholder: '60',
+      defaultValue: 60,
+      min: 1,
+      max: 600
+    },
+    {
+      name: 'monthlyAddition',
+      label: 'Ежемесячное пополнение',
+      type: 'number',
+      placeholder: '5000',
+      defaultValue: 5000,
+      min: 0
+    }
+  ],
+  outputs: [
+    { name: 'finalAmount', label: 'Итоговая сумма', type: 'number', unit: '₽' },
+    { name: 'totalInterest', label: 'Общий доход от процентов', type: 'number', unit: '₽' },
+    { name: 'totalContributions', label: 'Всего внесено', type: 'number', unit: '₽' }
+  ],
+  calculate: (inputs) => {
+    const principal = Number(inputs.principal);
+    const rate = Number(inputs.rate);
+    const periods = Number(inputs.periods);
+    const monthlyAddition = Number(inputs.monthlyAddition);
+
+    if (!principal && !monthlyAddition) {
+      return [{ value: '—', label: 'Результат' }];
+    }
+
+    const monthlyRate = rate / 100 / 12;
+    let finalAmount = principal * Math.pow(1 + monthlyRate, periods);
+
+    if (monthlyAddition > 0 && monthlyRate > 0) {
+      finalAmount += monthlyAddition * (Math.pow(1 + monthlyRate, periods) - 1) / monthlyRate;
+    } else if (monthlyAddition > 0) {
+      finalAmount += monthlyAddition * periods;
+    }
+
+    const totalContributions = principal + monthlyAddition * periods;
+    const totalInterest = finalAmount - totalContributions;
+
+    return [
+      { value: finalAmount.toFixed(2), label: 'Итоговая сумма', unit: '₽' },
+      { value: totalInterest.toFixed(2), label: 'Доход от процентов', unit: '₽' },
+      { value: totalContributions.toFixed(2), label: 'Всего внесено', unit: '₽' }
+    ];
+  },
+  content: {
+    howTo: 'Введите начальную сумму, годовую процентную ставку, срок в месяцах и сумму ежемесячного пополнения. Калькулятор рассчитает итоговую сумму с учётом сложного процента.',
+    about: 'Сложный процент — начисление процентов не только на первоначальную сумму, но и на накопленные проценты. Пополнение ускоряет рост капитала.',
+    usage: 'Используется для планирования инвестиций, накоплений, вкладов с капитализацией и ежемесячным пополнением.',
+    formula: 'S = P × (1 + r)^n + A × [((1 + r)^n − 1) / r]\nГде P — начальная сумма, r — месячная ставка, n — срок, A — ежемесячное пополнение',
+    faq: [
+      {
+        question: 'Что такое сложный процент?',
+        answer: 'Сложный процент — это когда проценты начисляются не только на основную сумму, но и на ранее начисленные проценты, что ускоряет рост капитала.'
+      },
+      {
+        question: 'Почему ежемесячное пополнение так важно?',
+        answer: 'Регулярные пополнения значительно увеличивают итоговую сумму благодаря эффекту сложного процента на каждом взносе.'
+      }
+    ],
+    sources: [
+      { title: 'Сложный процент — Википедия', url: 'https://ru.wikipedia.org/wiki/Сложные_проценты' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
 export const financeCalculators = [
   vatCalculator,
   loanCalculator,
   depositCalculator,
+  compoundInterestCalculator,
 ];

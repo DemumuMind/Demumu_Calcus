@@ -9,7 +9,10 @@ import {
   UnitCategory 
 } from '@/lib/units';
 import { UniversalConverter } from '@/components/calculator/universal-converter';
+import { AdPlaceholder } from '@/components/ads/ad-placeholder';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
 interface ConverterPageProps {
   params: Promise<{
@@ -18,119 +21,154 @@ interface ConverterPageProps {
   }>;
 }
 
-// Find category by slug
 function findCategoryBySlug(slug: string): UnitCategory | undefined {
   return Object.values(allUnitCategories).find(cat => cat.slug === slug);
 }
 
-// Parse slug array to extract from and to units
-function parseSlug(slug: string[]): { from: string; to: string } | null {
-  // Expected format: ['from-unit', 'v', 'to-unit']
-  if (slug.length !== 3 || slug[1] !== 'v') {
-    return null;
+function parseSlug(slug: string[]): { value?: number; from: string; to: string } | null {
+  // Format: ['from', 'v', 'to'] — existing
+  if (slug.length === 3 && slug[1] === 'v') {
+    return { from: slug[0], to: slug[2] };
   }
-  return { from: slug[0], to: slug[2] };
+  // Format: ['value', 'from', 'v', 'to'] — new specific-value
+  if (slug.length === 4 && slug[2] === 'v') {
+    const value = parseFloat(slug[0]);
+    if (isNaN(value) || value < 0) {
+      return null;
+    }
+    return { value, from: slug[1], to: slug[3] };
+  }
+  return null;
 }
 
-// Generate metadata for each converter page
 export async function generateMetadata({ params }: ConverterPageProps): Promise<Metadata> {
   const { category: categorySlug, slug } = await params;
   const parsed = parseSlug(slug);
-  
+
   if (!parsed) {
     return { title: 'Конвертер не найден' };
   }
-  
-  const { from, to } = parsed;
+
+  const { value, from, to } = parsed;
   const category = findCategoryBySlug(categorySlug);
-  
+
   if (!category) {
     return { title: 'Конвертер не найден' };
   }
 
   const fromUnit = category.units[from];
   const toUnit = category.units[to];
-  
+
   if (!fromUnit || !toUnit) {
     return { title: 'Конвертер не найден' };
   }
 
-  const title = `${fromUnit.name} в ${toUnit.name} — онлайн конвертер`;
-  const description = `Конвертируйте ${fromUnit.name} (${fromUnit.shortName}) в ${toUnit.name} (${toUnit.shortName}) онлайн. Быстрый и точный перевод ${category.name.toLowerCase()}.`;
+  let title: string;
+  let description: string;
+  let url: string;
+
+  if (value !== undefined) {
+    const converted = convert(value, from, to, category);
+    const formatted = converted.toLocaleString('ru-RU', { maximumFractionDigits: 6 });
+    title = `${value} ${fromUnit.name} в ${toUnit.name} — ${formatted} ${toUnit.shortName}`;
+    description = `${value} ${fromUnit.name} (${fromUnit.shortName}) = ${formatted} ${toUnit.name} (${toUnit.shortName}). Быстрый и точный перевод ${category.name.toLowerCase()}.`;
+    url = `${SITE_URL}/${categorySlug}/${value}-${from}-v-${to}`;
+  } else {
+    title = `${fromUnit.name} в ${toUnit.name} — онлайн конвертер`;
+    description = `Конвертируйте ${fromUnit.name} (${fromUnit.shortName}) в ${toUnit.name} (${toUnit.shortName}) онлайн. Быстрый и точный перевод ${category.name.toLowerCase()}.`;
+    url = `${SITE_URL}/${categorySlug}/${from}-v-${to}`;
+  }
+
   const keywords = `${fromUnit.name}, ${toUnit.name}, ${fromUnit.shortName}, ${toUnit.shortName}, конвертер, перевод, ${category.name.toLowerCase()}, онлайн`;
 
   return {
     title,
     description,
     keywords,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title,
       description,
+      url,
       type: 'website',
+      siteName: 'Calcus',
     },
   };
 }
 
-// Generate limited converter combinations for static generation
+// Limit static generation to the 6 most popular categories to reduce build time
+// while keeping all combos available at runtime via dynamicParams.
+const POPULAR_CATEGORIES = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
+const POPULAR_VALUES = ['1', '5', '10', '50', '100'];
+
+// Allow non-pre-generated converter combos to work at runtime (Next.js 15+)
+export const dynamicParams = true;
+
 export function generateStaticParams() {
   const params: Array<{ category: string; slug: string[] }> = [];
-  
+
   Object.values(allUnitCategories).forEach((category) => {
+    // Skip niche categories for static generation
+    if (!POPULAR_CATEGORIES.includes(category.slug)) {
+      return;
+    }
+
     const units = Object.keys(category.units);
-    
-    // Generate limited combinations - only common ones to avoid build issues
-    // Focus on first 5 units in each category
-    const priorityUnits = units.slice(0, 5);
-    
+    const priorityUnits = units.slice(0, 3); // limit to first 3 units to keep build manageable
+
     for (let i = 0; i < priorityUnits.length; i++) {
       for (let j = 0; j < priorityUnits.length; j++) {
         if (i !== j) {
+          // Without value (existing)
           params.push({
             category: category.slug,
             slug: [priorityUnits[i], 'v', priorityUnits[j]],
           });
+          // With popular values (new)
+          for (const val of POPULAR_VALUES) {
+            params.push({
+              category: category.slug,
+              slug: [val, priorityUnits[i], 'v', priorityUnits[j]],
+            });
+          }
         }
       }
     }
   });
-  
+
   console.log(`Generated ${params.length} static converter pages (reduced set)`);
   return params;
 }
 
-// Main page component
 export default async function ConverterPage({ params }: ConverterPageProps) {
   const { category: categorySlug, slug } = await params;
-  
-  // Parse the slug
+
   const parsed = parseSlug(slug);
   if (!parsed) {
     notFound();
   }
-  
-  const { from, to } = parsed;
-  
-  // Find category
+
+  const { value, from, to } = parsed;
+
   const category = findCategoryBySlug(categorySlug);
   if (!category) {
     notFound();
   }
 
-  // Validate units exist
   const fromUnit = category.units[from];
   const toUnit = category.units[to];
-  
+
   if (!fromUnit || !toUnit) {
     notFound();
   }
 
-  // Get all unit IDs for navigation
   const unitIds = Object.keys(category.units);
   const currentIndex = unitIds.indexOf(from);
   const prevUnit = currentIndex > 0 ? unitIds[currentIndex - 1] : null;
   const nextUnit = currentIndex < unitIds.length - 1 ? unitIds[currentIndex + 1] : null;
 
-  // Generate related converters (other combinations with same "from" unit)
   const relatedConverters = unitIds
     .filter(unitId => unitId !== from && unitId !== to)
     .slice(0, 4)
@@ -141,11 +179,37 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
       toUnit: category.units[unitId],
     }));
 
-  // Generate conversion table
   const conversionTable = [1, 10, 100].map(val => ({
     fromValue: val,
     toValue: convert(val, from, to, category),
   }));
+
+  const specificValuesTable = value !== undefined
+    ? [value, 1, 5, 10, 50, 100].map(val => ({
+        fromValue: val,
+        toValue: convert(val, from, to, category),
+        isActive: val === value,
+      }))
+    : null;
+
+  const specificResult = value !== undefined
+    ? convert(value, from, to, category)
+    : null;
+
+  const pageUrl = value !== undefined
+    ? `${SITE_URL}/${categorySlug}/${value}-${from}-v-${to}`
+    : `${SITE_URL}/${categorySlug}/${from}-v-${to}`;
+
+  const formatNumber = (num: number): string => {
+    if (num === 0) return '0';
+    if (Math.abs(num) < 0.001 || Math.abs(num) > 1e6) {
+      return num.toExponential(6);
+    }
+    return num.toLocaleString('ru-RU', {
+      maximumFractionDigits: 6,
+      minimumFractionDigits: 0,
+    });
+  };
 
   return (
     <div className="flex flex-col min-h-full">
@@ -153,6 +217,7 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
       <Script
         id="schema-converter"
         type="application/ld+json"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
@@ -165,19 +230,19 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
                 '@type': 'HowToStep',
                 name: `Введите значение в ${fromUnit.name}`,
                 text: `Введите числовое значение в поле "Из" для ${fromUnit.name}.`,
-                url: `https://calcus.su/${category.slug}/${from}-v-${to}`
+                url: pageUrl
               },
               {
                 '@type': 'HowToStep',
                 name: 'Выберите единицы измерения',
                 text: `Убедитесь, что выбраны ${fromUnit.name} для конвертации из и ${toUnit.name} для конвертации в.`,
-                url: `https://calcus.su/${category.slug}/${from}-v-${to}`
+                url: pageUrl
               },
               {
                 '@type': 'HowToStep',
                 name: 'Получите результат',
                 text: `Результат конвертации отображается автоматически.`,
-                url: `https://calcus.su/${category.slug}/${from}-v-${to}`
+                url: pageUrl
               }
             ]
           })
@@ -192,15 +257,15 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
               Главная
             </Link>
             <span className="mx-2">/</span>
-            <Link 
-              href={`/${category.slug}`} 
+            <Link
+              href={`/${category.slug}`}
               className="hover:text-foreground transition-colors"
             >
               {category.name}
             </Link>
             <span className="mx-2">/</span>
             <span className="text-foreground">
-              {fromUnit.name} в {toUnit.name}
+              {value !== undefined ? `${value} ${fromUnit.name} в ${toUnit.name}` : `${fromUnit.name} в ${toUnit.name}`}
             </span>
           </nav>
         </div>
@@ -208,23 +273,83 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
 
       {/* Main Content */}
       <main className="flex-1 mx-auto max-w-4xl px-4 py-8 w-full">
+        <AdPlaceholder slot="conv-top" size="leaderboard" className="mb-8" />
+
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-3">
-            {fromUnit.name} в {toUnit.name}
+            {value !== undefined ? `${value} ${fromUnit.name} в ${toUnit.name}` : `${fromUnit.name} в ${toUnit.name}`}
           </h1>
           <p className="text-lg text-muted-foreground">
             Конвертер {category.name.toLowerCase()}. Переводите точно и быстро.
           </p>
         </div>
 
+        {/* Prominent specific result */}
+        {specificResult !== null && (
+          <Card className="mb-8 border-primary/30 bg-primary/5">
+            <CardContent className="py-6">
+              <div className="text-center">
+                <p className="text-sm text-muted-foreground mb-2">
+                  {value} {fromUnit.shortName} =
+                </p>
+                <p className="text-4xl font-bold text-primary mb-2">
+                  {formatNumber(specificResult)} {toUnit.shortName}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {fromUnit.name} → {toUnit.name}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
         {/* Converter Component */}
-        <UniversalConverter 
+        <UniversalConverter
           category={category}
           initialFrom={from}
           initialTo={to}
-          initialValue={1}
+          initialValue={value || 1}
         />
+
+        {/* Specific values conversion table */}
+        {specificValuesTable && (
+          <Card className="mt-8">
+            <CardHeader>
+              <CardTitle className="text-lg flex items-center gap-2">
+                <Calculator className="h-5 w-5 text-primary" />
+                Перевод {fromUnit.name} в {toUnit.name} для популярных значений
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted">
+                    <tr>
+                      <th className="px-4 py-3 text-left font-medium">{fromUnit.name}</th>
+                      <th className="px-4 py-3 text-left font-medium">{toUnit.name}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {specificValuesTable.map((row, index) => (
+                      <tr
+                        key={index}
+                        className={row.isActive ? 'bg-primary/10 font-semibold' : 'hover:bg-muted/50'}
+                      >
+                        <td className="px-4 py-3">
+                          {row.fromValue} {fromUnit.shortName}
+                        </td>
+                        <td className="px-4 py-3">
+                          {formatNumber(row.toValue)} {toUnit.shortName}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Conversion Table */}
         <Card className="mt-8">
@@ -259,6 +384,38 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
             </div>
           </CardContent>
         </Card>
+
+        {/* FAQ Section */}
+        <Card className="mt-8">
+          <CardHeader>
+            <CardTitle className="text-lg">Часто задаваемые вопросы</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div>
+              <h3 className="font-medium mb-1">
+                Сколько {toUnit.name} в {value !== undefined ? value : 1} {fromUnit.name}?
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {value !== undefined
+                  ? `${value} ${fromUnit.name} = ${formatNumber(convert(value, from, to, category))} ${toUnit.shortName}.`
+                  : `1 ${fromUnit.name} = ${formatNumber(convert(1, from, to, category))} ${toUnit.shortName}.`
+                } Используйте наш конвертер для точного перевода.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-medium mb-1">
+                Как перевести {fromUnit.name} в {toUnit.name}?
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Введите нужное значение в поле "Из", выберите {fromUnit.name} в левом списке
+                и {toUnit.name} в правом — результат появится автоматически.
+                Вы также можете воспользоваться таблицей перевода выше.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <AdPlaceholder slot="conv-bottom" size="rectangle" className="mt-8 mx-auto" />
 
         {/* Navigation */}
         <div className="mt-8 flex justify-between">

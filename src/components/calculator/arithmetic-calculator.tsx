@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { Calculator as CalcType } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,14 +8,31 @@ import { Calculator as CalculatorIcon, Delete, Equal } from 'lucide-react';
 
 interface ArithmeticCalculatorProps {
   calculator: CalcType;
+  initialParams?: Record<string, string>;
 }
 
-export function ArithmeticCalculator({ calculator }: ArithmeticCalculatorProps) {
-  const [display, setDisplay] = useState('0');
+export function ArithmeticCalculator({ calculator, initialParams }: ArithmeticCalculatorProps) {
+  const [display, setDisplay] = useState(() => {
+    // Pre-fill display from URL param if provided
+    if (initialParams?.value && !isNaN(Number(initialParams.value))) {
+      return initialParams.value;
+    }
+    return '0';
+  });
   const [previousValue, setPreviousValue] = useState<number | null>(null);
   const [operation, setOperation] = useState<string | null>(null);
   const [waitingForOperand, setWaitingForOperand] = useState(false);
   const [history, setHistory] = useState<string>('');
+
+  const displayRef = useRef(display);
+  const previousValueRef = useRef(previousValue);
+  const operationRef = useRef(operation);
+  const waitingForOperandRef = useRef(waitingForOperand);
+
+  displayRef.current = display;
+  previousValueRef.current = previousValue;
+  operationRef.current = operation;
+  waitingForOperandRef.current = waitingForOperand;
 
   const calculate = useCallback((left: number, right: number, op: string): number => {
     switch (op) {
@@ -27,24 +44,29 @@ export function ArithmeticCalculator({ calculator }: ArithmeticCalculatorProps) 
     }
   }, []);
 
-  const inputNumber = (num: string) => {
-    if (waitingForOperand) {
+  const inputNumber = useCallback((num: string) => {
+    const d = displayRef.current;
+    const w = waitingForOperandRef.current;
+    if (w) {
       setDisplay(num);
       setWaitingForOperand(false);
     } else {
-      setDisplay(display === '0' ? num : display + num);
+      setDisplay(d === '0' ? num : d + num);
     }
-  };
+  }, []);
 
-  const inputOperation = (op: string) => {
-    const inputValue = parseFloat(display);
+  const inputOperation = useCallback((op: string) => {
+    const d = displayRef.current;
+    const pv = previousValueRef.current;
+    const op_ = operationRef.current;
+    const inputValue = parseFloat(d);
 
-    if (previousValue === null) {
+    if (pv === null) {
       setPreviousValue(inputValue);
-      setHistory(`${display} ${op}`);
-    } else if (operation) {
-      const currentValue = previousValue || 0;
-      const newValue = calculate(currentValue, inputValue, operation);
+      setHistory(`${d} ${op}`);
+    } else if (op_) {
+      const currentValue = pv || 0;
+      const newValue = calculate(currentValue, inputValue, op_);
 
       setPreviousValue(newValue);
       setDisplay(String(newValue));
@@ -53,53 +75,59 @@ export function ArithmeticCalculator({ calculator }: ArithmeticCalculatorProps) 
 
     setWaitingForOperand(true);
     setOperation(op);
-  };
+  }, [calculate]);
 
-  const performCalculation = () => {
-    const inputValue = parseFloat(display);
+  const performCalculation = useCallback(() => {
+    const d = displayRef.current;
+    const pv = previousValueRef.current;
+    const op = operationRef.current;
+    const inputValue = parseFloat(d);
 
-    if (previousValue !== null && operation) {
-      const newValue = calculate(previousValue, inputValue, operation);
+    if (pv !== null && op) {
+      const newValue = calculate(pv, inputValue, op);
       
       setDisplay(String(newValue));
-      setHistory(`${previousValue} ${operation} ${inputValue} =`);
+      setHistory(`${pv} ${op} ${inputValue} =`);
       setPreviousValue(null);
       setOperation(null);
       setWaitingForOperand(true);
     }
-  };
+  }, [calculate]);
 
-  const clear = () => {
+  const clear = useCallback(() => {
     setDisplay('0');
     setPreviousValue(null);
     setOperation(null);
     setWaitingForOperand(false);
     setHistory('');
-  };
+  }, []);
 
-  const toggleSign = () => {
-    const newValue = parseFloat(display) * -1;
+  const toggleSign = useCallback(() => {
+    const d = displayRef.current;
+    const newValue = parseFloat(d) * -1;
     setDisplay(String(newValue));
-  };
+  }, []);
 
-  const inputPercent = () => {
-    const currentValue = parseFloat(display);
+  const inputPercent = useCallback(() => {
+    const d = displayRef.current;
+    const currentValue = parseFloat(d);
     if (currentValue === 0) return;
     
     const newValue = currentValue / 100;
     setDisplay(String(newValue));
-  };
+  }, []);
 
-  const inputDecimal = () => {
-    if (waitingForOperand) {
+  const inputDecimal = useCallback(() => {
+    const d = displayRef.current;
+    const w = waitingForOperandRef.current;
+    if (w) {
       setDisplay('0.');
       setWaitingForOperand(false);
-    } else if (display.indexOf('.') === -1) {
-      setDisplay(display + '.');
+    } else if (d.indexOf('.') === -1) {
+      setDisplay(d + '.');
     }
-  };
+  }, []);
 
-  // Keyboard support
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       const key = event.key;
@@ -121,8 +149,9 @@ export function ArithmeticCalculator({ calculator }: ArithmeticCalculatorProps) 
       } else if (key === '/') {
         inputOperation('÷');
       } else if (key === 'Backspace') {
-        if (display.length > 1) {
-          setDisplay(display.slice(0, -1));
+        const d = displayRef.current;
+        if (d.length > 1) {
+          setDisplay(d.slice(0, -1));
         } else {
           setDisplay('0');
         }
@@ -131,7 +160,7 @@ export function ArithmeticCalculator({ calculator }: ArithmeticCalculatorProps) 
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [display, previousValue, operation, waitingForOperand]);
+  }, [inputNumber, inputDecimal, performCalculation, clear, inputOperation]);
 
   const buttons = [
     { label: 'C', onClick: clear, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },

@@ -7,9 +7,12 @@ import {
   standardMeasures,
   measureToGrams,
   generateCookingSlug,
+  resolveCookingSlug,
 } from '@/lib/cooking';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CookingConverter } from '@/components/calculator/cooking-converter';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
 interface CookingConverterPageProps {
   params: Promise<{
@@ -17,9 +20,14 @@ interface CookingConverterPageProps {
   }>;
 }
 
-// Parse slug to find ingredient and measure
 function parseCookingSlug(cookingId: string): { ingredientId: string; measureId: string } | null {
-  // Find matching ingredient and measure from slug
+  // Use O(1) precomputed lookup map instead of nested iteration
+  const resolved = resolveCookingSlug(cookingId);
+  if (resolved) {
+    return resolved;
+  }
+
+  // Fallback for edge-cases not in the precomputed map
   for (const ingredient of Object.values(cookingIngredients)) {
     for (const measure of Object.values(standardMeasures)) {
       const expectedSlug = generateCookingSlug(ingredient.id, measure.id);
@@ -31,7 +39,6 @@ function parseCookingSlug(cookingId: string): { ingredientId: string; measureId:
   return null;
 }
 
-// Generate metadata
 export async function generateMetadata({ params }: CookingConverterPageProps): Promise<Metadata> {
   const { cookingId } = await params;
   const parsed = parseCookingSlug(cookingId);
@@ -49,31 +56,37 @@ export async function generateMetadata({ params }: CookingConverterPageProps): P
 
   const title = `${measure.name} ${ingredient.name} — сколько граммов`;
   const description = `Сколько граммов ${ingredient.name} в ${measure.name}. Точный перевод кулинарных мер в граммы онлайн.`;
+  const url = `${SITE_URL}/kulinarnye-mery/${cookingId}`;
 
   return {
     title,
     description,
     keywords: `${measure.name}, ${ingredient.name}, сколько грамм, кулинарные меры, перевод`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      siteName: 'Calcus',
+    },
   };
 }
 
-// Simplified static params - only popular combinations
 export function generateStaticParams() {
   const params: Array<{ cookingId: string }> = [];
-  
-  // Only popular ingredients and main measures
-  const popularIngredients = ['sugar', 'wheat_flour', 'butter', 'milk', 'salt', 'vegetable_oil'];
-  const mainMeasures = ['teaspoon', 'tablespoon', 'faceted_glass', 'shot'];
-  
-  popularIngredients.forEach((ingredientId) => {
-    mainMeasures.forEach((measureId) => {
+
+  Object.keys(cookingIngredients).forEach((ingredientId) => {
+    Object.keys(standardMeasures).forEach((measureId) => {
       const slug = generateCookingSlug(ingredientId, measureId);
       if (slug) {
         params.push({ cookingId: slug });
       }
     });
   });
-  
+
   console.log(`Generated ${params.length} cooking converter pages`);
   return params;
 }
@@ -93,7 +106,6 @@ export default async function CookingConverterPage({ params }: CookingConverterP
     notFound();
   }
 
-  // Generate conversion table
   const conversionTable = [
     { quantity: 1, grams: measureToGrams(ingredient.id, measure.id, 1) },
     { quantity: 2, grams: measureToGrams(ingredient.id, measure.id, 2) },

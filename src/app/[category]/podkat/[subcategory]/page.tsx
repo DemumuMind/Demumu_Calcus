@@ -8,6 +8,8 @@ import { getCategoryStyle, getSubcategoryIcon } from '@/lib/category-styles';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SearchBox } from '@/components/search/search-box';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+
 interface SubcategoryPageProps {
   params: Promise<{
     category: string;
@@ -26,10 +28,23 @@ export async function generateMetadata({ params }: SubcategoryPageProps): Promis
     };
   }
 
+  const title = `${subcategory.title} — ${category.title} | Calcus`;
+  const url = `${SITE_URL}/${categorySlug}/podkat/${subcategorySlug}`;
+
   return {
-    title: `${subcategory.title} — ${category.title} | Calcus Clone`,
+    title,
     description: subcategory.description,
     keywords: `${subcategory.title.toLowerCase()}, ${category.title.toLowerCase()}, калькуляторы, онлайн, расчёт`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description: subcategory.description,
+      url,
+      type: 'website',
+      siteName: 'Calcus',
+    },
   };
 }
 
@@ -134,7 +149,6 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
   );
 }
 
-// Generate static params for all subcategories
 export function generateStaticParams() {
   const params: { category: string; subcategory: string }[] = [];
   

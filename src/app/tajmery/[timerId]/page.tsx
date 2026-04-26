@@ -12,13 +12,14 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TimerComponent } from '@/components/calculator/timer-component';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+
 interface TimerPageProps {
   params: Promise<{
     timerId: string;
   }>;
 }
 
-// Simplified static params - only main timers
 export function generateStaticParams() {
   const mainTimers = [
     { timerId: '1-minuta' },
@@ -48,7 +49,6 @@ export function generateStaticParams() {
   return mainTimers;
 }
 
-// Generate metadata for each timer page
 export async function generateMetadata({ params }: TimerPageProps): Promise<Metadata> {
   const { timerId } = await params;
   const timer = getTimerBySlug(timerId);
@@ -59,11 +59,22 @@ export async function generateMetadata({ params }: TimerPageProps): Promise<Meta
 
   const title = generateTimerTitle(timer);
   const description = generateTimerDescription(timer);
+  const url = `${SITE_URL}/tajmery/${timerId}`;
 
   return {
     title,
     description,
     keywords: `${timer.name}, таймер онлайн, обратный отсчёт`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      siteName: 'Calcus',
+    },
   };
 }
 

@@ -439,9 +439,132 @@ export const caloriesCalculator: Calculator = {
   }
 };
 
+// Калькулятор алкоголя (упрощённый)
+export const alcoholSimpleCalculator: Calculator = {
+  id: 'alcohol-simple',
+  slug: 'kalkulyator-alkogolya',
+  title: 'Калькулятор алкоголя',
+  description: 'Расчёт примерного содержания алкоголя в крови и времени выведения',
+  category: 'zdorove-i-krasota',
+  subcategory: 'zdorove-raznoe',
+  type: 'formula',
+  inputs: [
+    {
+      name: 'weight',
+      label: 'Вес (кг)',
+      type: 'number',
+      placeholder: '70',
+      defaultValue: 70,
+      min: 30,
+      max: 200
+    },
+    {
+      name: 'gender',
+      label: 'Пол',
+      type: 'select',
+      options: [
+        { value: 'male', label: 'Мужской' },
+        { value: 'female', label: 'Женский' }
+      ],
+      defaultValue: 'male'
+    },
+    {
+      name: 'drinkType',
+      label: 'Тип напитка',
+      type: 'select',
+      options: [
+        { value: 'beer', label: 'Пиво (5%)' },
+        { value: 'wine', label: 'Вино (12%)' },
+        { value: 'vodka', label: 'Водка/крепкий (40%)' },
+        { value: 'cocktail', label: 'Коктейль (20%)' }
+      ],
+      defaultValue: 'beer'
+    },
+    {
+      name: 'amount',
+      label: 'Количество (мл)',
+      type: 'number',
+      placeholder: '500',
+      defaultValue: 500,
+      min: 50,
+      max: 5000
+    },
+    {
+      name: 'alcoholPercent',
+      label: 'Крепость (%)',
+      type: 'number',
+      placeholder: '5',
+      defaultValue: 5,
+      min: 0.5,
+      max: 96
+    },
+    {
+      name: 'hours',
+      label: 'Часов с момента употребления',
+      type: 'number',
+      placeholder: '0',
+      defaultValue: 0,
+      min: 0,
+      max: 72
+    }
+  ],
+  outputs: [
+    { name: 'promille', label: 'Промилле (‰)', type: 'number' },
+    { name: 'soberTime', label: 'Время до полного выведения', type: 'text' }
+  ],
+  calculate: (inputs) => {
+    const weight = Number(inputs.weight);
+    const gender = String(inputs.gender);
+    const drinkType = String(inputs.drinkType);
+    const amount = Number(inputs.amount);
+    const alcoholPercent = Number(inputs.alcoholPercent) || ({
+      beer: 5, wine: 12, vodka: 40, cocktail: 20
+    } as Record<string, number>)[drinkType] || 5;
+    const hours = Number(inputs.hours);
+
+    if (!weight || !amount) {
+      return [{ value: '—', label: 'Результат' }];
+    }
+
+    // Widmark simplified
+    const r = gender === 'male' ? 0.68 : 0.55;
+    const alcoholGrams = amount * (alcoholPercent / 100) * 0.79;
+    let promille = (alcoholGrams / (weight * r)) - (hours * 0.15);
+    promille = Math.max(0, promille);
+
+    const soberHours = promille > 0 ? Math.ceil(promille / 0.15) : 0;
+
+    return [
+      { value: promille.toFixed(2), label: 'Алкоголь в крови', unit: '‰' },
+      { value: soberHours > 0 ? `~${soberHours} ч` : 'Выведено', label: 'До трезвости', unit: '' }
+    ];
+  },
+  content: {
+    howTo: 'Введите вес, пол, тип напитка, объём и время с момента употребления. Калькулятор покажет примерное содержание алкоголя и время выведения.',
+    about: 'Упрощённый расчёт концентрации алкоголя в крови по формуле Видмарка. Результат ориентировочный и не является юридическим доказательством.',
+    usage: 'Используется для примерной оценки степени опьянения и времени до трезвого состояния.',
+    formula: 'Промилле = (мл × % × 0.79) / (кг × r) − 0.15 × ч\nr = 0.68 (муж), 0.55 (жен)',
+    faq: [
+      {
+        question: 'Насколько точен результат?',
+        answer: 'Результат ориентировочный. Фактическая концентрация зависит от множества факторов: метаболизма, еды, сна, состояния здоровья.'
+      },
+      {
+        question: 'Можно ли садиться за руль?',
+        answer: 'Нет, если промилле > 0. В России допустимая норма — 0‰ для водителей.'
+      }
+    ],
+    sources: [
+      { title: 'Алкоголь и здоровье — Википедия', url: 'https://ru.wikipedia.org/wiki/Алкоголь' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
 export const healthCalculators = [
   bmiCalculator,
   caloriesCalculator,
   bmrCalculator,
   tdeeCalculator,
+  alcoholSimpleCalculator,
 ];

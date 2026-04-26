@@ -125,11 +125,7 @@ test.describe('🧮 All Calculators Test Suite', () => {
 
       try {
         // Navigate to calculator
-        if (calc.direct) {
-          await calcPage.gotoDirect(calc.slug);
-        } else {
-          await calcPage.goto(calc.slug);
-        }
+        await calcPage.goto(calc.slug);
 
         // Verify page loads
         await expect(page.locator('body')).toBeVisible();

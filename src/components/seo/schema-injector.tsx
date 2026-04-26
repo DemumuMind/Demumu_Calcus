@@ -15,7 +15,7 @@ export function SchemaInjector({ schemas }: SchemaInjectorProps) {
           id={`schema-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
       ))}
     </>

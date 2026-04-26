@@ -44,7 +44,7 @@ class MobileMenuPage {
     const count = await buttons.count();
     for (let i = 0; i < count; i++) {
       const btn = buttons.nth(i);
-      const text = await btn.textContent().catch(() => '');
+      const text = (await btn.textContent().catch(() => '')) ?? '';
       if (text.toLowerCase().includes('меню')) {
         return btn;
       }

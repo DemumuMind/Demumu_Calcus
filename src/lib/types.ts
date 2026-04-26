@@ -1,4 +1,4 @@
-export type CalculatorType = 'arithmetic' | 'converter' | 'formula' | 'reference' | 'timer' | 'estimator' | 'tool' | 'assessment' | 'calculator';
+export type CalculatorType = 'arithmetic' | 'converter' | 'formula' | 'reference' | 'timer' | 'estimator' | 'tool' | 'assessment' | 'calculator' | 'engineering';
 
 export interface InputField {
   name: string;

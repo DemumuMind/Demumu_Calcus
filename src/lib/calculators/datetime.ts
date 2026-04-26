@@ -630,6 +630,125 @@ export const ageCalculator: Calculator = {
   }
 };
 
+// Калькулятор годовщины свадьбы
+export const weddingAnniversaryCalculator: Calculator = {
+  id: 'wedding-anniversary-calculator',
+  slug: 'godovshchina-svadby',
+  title: 'Годовщина свадьбы',
+  description: 'Название годовщины, сколько лет в браке и дней до следующей',
+  category: 'povsednevnoe',
+  subcategory: 'data-i-vremya',
+  type: 'formula',
+  inputs: [
+    {
+      name: 'weddingDate',
+      label: 'Дата свадьбы',
+      type: 'date',
+      placeholder: '2010-06-15',
+      defaultValue: '2010-06-15'
+    }
+  ],
+  outputs: [
+    { name: 'years', label: 'Лет в браке', type: 'number', unit: 'лет' },
+    { name: 'anniversaryName', label: 'Годовщина', type: 'text' },
+    { name: 'nextAnniversary', label: 'Следующая годовщина', type: 'text' },
+    { name: 'daysUntil', label: 'Дней до следующей', type: 'number', unit: 'дн' }
+  ],
+  calculate: (inputs) => {
+    const weddingDate = new Date(String(inputs.weddingDate));
+    const today = new Date();
+
+    if (isNaN(weddingDate.getTime())) {
+      return [{ value: 'Неверный формат даты', label: 'Ошибка' }];
+    }
+
+    let years = today.getFullYear() - weddingDate.getFullYear();
+    const monthDiff = today.getMonth() - weddingDate.getMonth();
+    const dayDiff = today.getDate() - weddingDate.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      years--;
+    }
+
+    const anniversaryNames: Record<number, string> = {
+      1: 'Ситцевая (1 год)',
+      2: 'Бумажная (2 года)',
+      3: 'Кожаная (3 года)',
+      4: 'Льняная (4 года)',
+      5: 'Деревянная (5 лет)',
+      6: 'Чугунная (6 лет)',
+      7: 'Медная (7 лет)',
+      8: 'Жестяная (8 лет)',
+      9: 'Фарфоровая (9 лет)',
+      10: 'Оловянная / Розовая (10 лет)',
+      11: 'Стальная (11 лет)',
+      12: 'Никелевая (12 лет)',
+      13: 'Кружевная (13 лет)',
+      14: 'Слоновая кость (14 лет)',
+      15: 'Хрустальная (15 лет)',
+      16: 'Топазовая (16 лет)',
+      17: 'Чертополох (17 лет)',
+      18: 'Бирюзовая (18 лет)',
+      19: 'Гранатовая (19 лет)',
+      20: 'Фарфоровая (20 лет)',
+      25: 'Серебряная (25 лет)',
+      30: 'Жемчужная (30 лет)',
+      35: 'Коралловая / Льняная (35 лет)',
+      40: 'Рубиновая (40 лет)',
+      45: 'Сапфировая (45 лет)',
+      50: 'Золотая (50 лет)',
+      55: 'Изумрудная (55 лет)',
+      60: 'Бриллиантовая (60 лет)',
+      65: 'Железная (65 лет)',
+      70: 'Благородная (70 лет)',
+      75: 'Коронная (75 лет)'
+    };
+
+    let anniversaryName = '';
+    if (years <= 0) {
+      anniversaryName = 'Ещё не прошёл первый год';
+    } else {
+      anniversaryName = anniversaryNames[years] || `Годовщина ${years}-летия`;
+    }
+
+    // Next anniversary date
+    const nextAnniversary = new Date(weddingDate);
+    nextAnniversary.setFullYear(today.getFullYear());
+    if (nextAnniversary < today) {
+      nextAnniversary.setFullYear(today.getFullYear() + 1);
+    }
+
+    const daysUntil = Math.ceil((nextAnniversary.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+
+    return [
+      { value: years, label: 'Лет в браке', unit: 'лет' },
+      { value: anniversaryName, label: 'Годовщина' },
+      { value: nextAnniversary.toLocaleDateString('ru-RU'), label: 'Следующая годовщина' },
+      { value: daysUntil, label: 'Дней до следующей', unit: 'дн' }
+    ];
+  },
+  content: {
+    howTo: 'Введите дату свадьбы. Калькулятор определит текущую годовщину, её традиционное название и дату следующей.',
+    about: 'Каждый год совместной жизни имеет традиционное название в разных культурах: ситцевая, деревянная, серебряная, золотая и другие.',
+    usage: 'Для поздравлений, планирования празднования, подготовки подарков.',
+    formula: 'Лет = текущий год − год свадьбы (с поправкой на месяц и день).',
+    faq: [
+      {
+        question: 'Откуда взялись названия годовщин?',
+        answer: 'Традиционные названия сложились исторически и символизируют стойкость и ценность брака с течением времени.'
+      },
+      {
+        question: 'Какие годовщины считаются юбилейными?',
+        answer: 'Основные юбилеи: 10, 15, 20, 25, 30, 40, 50, 55, 60, 70, 75 лет.'
+      }
+    ],
+    sources: [
+      { title: 'Годовщины свадьбы — Википедия', url: 'https://ru.wikipedia.org/wiki/Годовщины_свадьбы' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
 export const datetimeCalculators = [
   dateDiffCalculator,
   dateAddCalculator,
@@ -637,4 +756,5 @@ export const datetimeCalculators = [
   workdayCalculator,
   zodiacCalculator,
   ageCalculator,
+  weddingAnniversaryCalculator,
 ];

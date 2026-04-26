@@ -14,17 +14,24 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Calculator } from 'lucide-react';
-import { getCalculator } from './calculator-engine';
 
 interface FormulaCalculatorProps {
   calculator: CalcType;
+  initialParams?: Record<string, string>;
 }
 
-export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
+export function FormulaCalculator({ calculator, initialParams }: FormulaCalculatorProps) {
   const [inputs, setInputs] = useState<Record<string, number | string | boolean>>(() => {
     const defaults: Record<string, number | string | boolean> = {};
     calculator.inputs.forEach(input => {
-      defaults[input.name] = input.defaultValue ?? '';
+      // URL params take priority over defaults
+      if (initialParams && initialParams[input.name] !== undefined) {
+        defaults[input.name] = input.type === 'number' 
+          ? (Number(initialParams[input.name]) || (input.defaultValue ?? ''))
+          : initialParams[input.name];
+      } else {
+        defaults[input.name] = input.defaultValue ?? '';
+      }
     });
     return defaults;
   });
@@ -33,18 +40,22 @@ export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
   const [calculated, setCalculated] = useState(false);
 
   const handleCalculate = () => {
-    const calculateFn = getCalculator(calculator.id);
-    if (!calculateFn) return;
-    const calculatedResults = calculateFn(inputs as Record<string, number | string>);
-    setResults(calculatedResults);
-    setCalculated(true);
+    try {
+      const calculatedResults = calculator.calculate(inputs as Record<string, number | string>);
+      if (Array.isArray(calculatedResults)) {
+        setResults(calculatedResults);
+      }
+      setCalculated(true);
+    } catch {
+      setResults([{ value: 'Ошибка вычисления', label: 'Результат' }]);
+      setCalculated(true);
+    }
   };
 
   const handleInputChange = (name: string, value: string | number | boolean) => {
     setInputs(prev => ({ ...prev, [name]: value }));
   };
 
-  // Auto-calculate if all inputs are filled
   useEffect(() => {
     const allFilled = calculator.inputs.every(input => 
       inputs[input.name] !== '' && inputs[input.name] !== undefined
@@ -52,7 +63,7 @@ export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
     if (allFilled) {
       handleCalculate();
     }
-  }, [inputs]);
+  }, [inputs, calculator]);
 
   return (
     <Card className="mb-8">
@@ -63,7 +74,6 @@ export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
-        {/* Input Fields */}
         <div className="grid gap-4 sm:grid-cols-2">
           {calculator.inputs.map((input) => (
             <div key={input.name} className="space-y-2">
@@ -100,7 +110,6 @@ export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
           ))}
         </div>
 
-        {/* Calculate Button */}
         <Button 
           onClick={handleCalculate}
           className="w-full"
@@ -110,7 +119,6 @@ export function FormulaCalculator({ calculator }: FormulaCalculatorProps) {
           Рассчитать
         </Button>
 
-        {/* Results */}
         {calculated && results.length > 0 && (
           <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="calculator-result">
             {results.map((result, index) => (

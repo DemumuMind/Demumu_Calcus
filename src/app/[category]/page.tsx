@@ -9,6 +9,9 @@ import { getCalculatorsByCategory } from '@/lib/calculators';
 import { getCategoryStyle, getSubcategoryIcon } from '@/lib/category-styles';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SearchBox } from '@/components/search/search-box';
+import { AdPlaceholder } from '@/components/ads/ad-placeholder';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
 interface CategoryPageProps {
   params: Promise<{
@@ -19,17 +22,27 @@ interface CategoryPageProps {
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { category: categorySlug } = await params;
   const category = categories.find(c => c.slug === categorySlug);
-  
+
   if (!category) {
-    return {
-      title: 'Категория не найдена',
-    };
+    return { title: 'Категория не найдена' };
   }
 
+  const url = `${SITE_URL}/${categorySlug}`;
+
   return {
-    title: `${category.title} — онлайн калькуляторы | Calcus Clone`,
+    title: `${category.title} — онлайн калькуляторы | Calcus`,
     description: category.description,
-    keywords: `${category.title.toLowerCase()}, калькуляторы, онлайн, расчёт, бесплатно`,
+    openGraph: {
+      title: category.title,
+      description: category.description,
+      url,
+      siteName: 'Calcus',
+      type: 'website',
+      locale: 'ru_RU',
+    },
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
@@ -45,19 +58,26 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const style = getCategoryStyle(categorySlug);
   const CategoryIcon = style.icon;
 
+  const schemas = [
+    generateCategorySchema(categorySlug),
+    generateBreadcrumbSchema([
+      { name: 'Главная', url: SITE_URL },
+      { name: category.title, url: `${SITE_URL}/${categorySlug}` },
+    ]),
+  ];
+
   return (
     <div className="flex flex-col min-h-full">
-      {/* Hero Header */}
+      <SchemaInjector schemas={schemas} />
+
       <section className={`border-b py-12 md:py-16 bg-gradient-to-b ${style.gradient}`}>
         <div className="mx-auto max-w-7xl px-4">
-          {/* Breadcrumb */}
           <nav className="mb-6 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground transition-colors">Главная</Link>
             <span className="mx-2">/</span>
             <span className="text-foreground font-medium">{category.title}</span>
           </nav>
 
-          {/* Category Title */}
           <div className="flex items-center gap-4 mb-6">
             <div className={`flex h-16 w-16 items-center justify-center rounded-2xl ${style.bgColor} ${style.color}`}>
               <CategoryIcon className="h-8 w-8" />
@@ -70,28 +90,26 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </div>
           </div>
 
-          {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mb-6">
             {category.description}
           </p>
 
-          {/* Search in Category */}
           <div className="max-w-md">
             <SearchBox />
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="mx-auto max-w-7xl px-4 py-12 w-full">
-        {/* Subcategories Grid */}
+        <AdPlaceholder slot="cat-top" size="leaderboard" className="mb-8" />
+
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Подкатегории</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {category.subcategories.map((subcategory) => {
               const subCalculators = calculators.filter(c => c.subcategory === subcategory.slug);
               const SubIcon = getSubcategoryIcon(subcategory.slug);
-              
+
               return (
                 <Link key={subcategory.id} href={`/${category.slug}/podkat/${subcategory.slug}`}>
                   <Card className={`group h-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 border-2 hover:border-primary/20`}>
@@ -123,7 +141,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
 
-        {/* All Calculators */}
         {calculators.length > 0 && (
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -162,7 +179,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         )}
 
-        {/* Empty State */}
         {calculators.length === 0 && (
           <div className="text-center py-12">
             <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl ${style.bgColor}`}>
@@ -174,12 +190,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </p>
           </div>
         )}
+
+        <AdPlaceholder slot="cat-bottom" size="rectangle" className="mt-8 mx-auto" />
       </div>
     </div>
   );
 }
 
-// Generate static params for all categories
 export function generateStaticParams() {
   return categories.map((category) => ({
     category: category.slug,

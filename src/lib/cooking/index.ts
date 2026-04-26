@@ -526,6 +526,31 @@ export function generateCookingSlug(ingredientId: string, measureId: string): st
   return `${transliterate(measure.name)}-${transliterate(ingredient.name)}`;
 }
 
+// Precomputed reverse lookup map for O(1) slug resolution at runtime
+const _cookingSlugMap: Record<string, { ingredientId: string; measureId: string }> = {};
+
+function _buildCookingSlugMap(): void {
+  for (const ingredientId of Object.keys(cookingIngredients)) {
+    for (const measureId of Object.keys(standardMeasures)) {
+      const slug = generateCookingSlug(ingredientId, measureId);
+      if (slug) {
+        _cookingSlugMap[slug] = { ingredientId, measureId };
+      }
+    }
+  }
+}
+
+// Build once on module load
+_buildCookingSlugMap();
+
+/**
+ * Resolves a cooking slug to ingredient and measure IDs in O(1) time.
+ */
+export function resolveCookingSlug(cookingId: string): { ingredientId: string; measureId: string } | null {
+  const result = _cookingSlugMap[cookingId];
+  return result || null;
+}
+
 /**
  * Генерирует все кулинарные конвертеры для статической генерации
  */

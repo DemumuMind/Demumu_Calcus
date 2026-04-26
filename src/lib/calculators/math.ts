@@ -452,10 +452,266 @@ export const factorialSimpleCalculator: Calculator = {
   }
 };
 
+// Таблица умножения
+export const multiplicationTableCalculator: Calculator = {
+  id: 'multiplication-table',
+  slug: 'tablica-umnozheniya',
+  title: 'Таблица умножения',
+  description: 'Интерактивная таблица умножения от 1 до 10 (или 12)',
+  category: 'nauka-i-ucheba',
+  subcategory: 'matematicheskie',
+  type: 'reference',
+  inputs: [
+    {
+      name: 'max',
+      label: 'До какого числа',
+      type: 'select',
+      options: [
+        { value: '10', label: 'До 10' },
+        { value: '12', label: 'До 12' }
+      ],
+      defaultValue: '10'
+    }
+  ],
+  outputs: [
+    { name: 'table', label: 'Таблица умножения', type: 'text' }
+  ],
+  calculate: (inputs) => {
+    const max = Number(inputs.max) || 10;
+    const limit = Math.min(Math.max(max, 1), 12);
+    let table = '';
+    for (let i = 1; i <= limit; i++) {
+      const row: string[] = [];
+      for (let j = 1; j <= limit; j++) {
+        row.push(`${i}×${j}=${i * j}`);
+      }
+      table += row.join('  ') + '\n';
+    }
+    return [
+      { value: table.trim(), label: `Таблица умножения (1–${limit})`, unit: '' }
+    ];
+  },
+  content: {
+    howTo: 'Выберите размер таблицы (до 10 или до 12). Таблица отобразится в виде текста.',
+    about: 'Таблица умножения — фундаментальная основа арифметики, необходимая для быстрых вычислений в повседневной жизни.',
+    usage: 'Используется школьниками, студентами и всеми, кто хочет быстро вспомнить или проверить результат умножения.',
+    formula: 'a × b = c',
+    faq: [
+      {
+        question: 'Зачем нужна таблица умножения?',
+        answer: 'Она является основой для всех арифметических операций, облегчает деление, работу с дробями и решение уравнений.'
+      },
+      {
+        question: 'Как лучше запомнить таблицу?',
+        answer: 'Повторяйте вслух, используйте карточки, решайте примеры ежедневно по 10–15 минут.'
+      }
+    ],
+    sources: [
+      { title: 'Таблица умножения — Википедия', url: 'https://ru.wikipedia.org/wiki/Таблица_умножения' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
+// Инженерный калькулятор
+export const engineeringCalculator: Calculator = {
+  id: 'engineering-calculator',
+  slug: 'inzhenernyj-kalkulyator',
+  title: 'Инженерный калькулятор',
+  description: 'Полнофункциональный инженерный калькулятор с тригонометрией, логарифмами, памятью и историей вычислений',
+  category: 'nauka-i-ucheba',
+  subcategory: 'matematicheskie',
+  type: 'engineering',
+  inputs: [],
+  outputs: [],
+  calculate: () => [],
+  content: {
+    howTo: 'Используйте кнопки калькулятора для ввода чисел и операций. Поддерживаются базовые арифметические операции (+, −, ×, ÷), тригонометрические функции (sin, cos, tan), логарифмы (ln, log), возведение в степень (x², xʸ), факториал (x!), корень (√), константы (π, e), память (M+, M-, MR, MC) и скобки. Для вычисления нажмите = или Enter.',
+    about: 'Инженерный калькулятор для сложных математических вычислений. Поддерживает тригонометрию, логарифмы, степени, факториалы, корни, константы π и e, а также функции памяти и историю последних вычислений.',
+    usage: 'Используется студентами, инженерами, научными работниками и всеми, кто выполняет сложные математические расчёты.',
+    formula: 'Следуйте стандартным правилам арифметики. Тригонометрические функции работают в радианах.',
+    faq: [
+      {
+        question: 'В каких единицах работают тригонометрические функции?',
+        answer: 'Все тригонометрические функции (sin, cos, tan) работают в радианах. Для перевода из градусов в радианы умножьте на π/180.'
+      },
+      {
+        question: 'Как пользоваться памятью?',
+        answer: 'M+ — добавить текущее значение в память. M- — вычесть текущее значение из памяти. MR — вызвать значение из памяти. MC — очистить память.'
+      },
+      {
+        question: 'Можно ли использовать клавиатуру?',
+        answer: 'Да. Цифры 0-9, точка (.), операции + - * /, скобки (), степень (^), факториал (!), Enter (=), Escape (C), Backspace (удалить последний символ).'
+      },
+      {
+        question: 'Как вычислить факториал?',
+        answer: 'Введите число и нажмите кнопку x! или введите число на клавиатуре и нажмите !.'
+      },
+      {
+        question: 'Как вычислить xʸ?',
+        answer: 'Введите основание, нажмите xʸ, введите степень и нажмите = или Enter.'
+      }
+    ],
+    sources: [
+      { title: 'Инженерный калькулятор — Википедия', url: 'https://ru.wikipedia.org/wiki/Инженерный_калькулятор' }
+    ],
+    updatedAt: '2026-04-26'
+  },
+  popularCalculations: [
+    { value: 'sin(π/2) = 1', url: '/calc/inzhenernyj-kalkulyator?value=1' },
+    { value: '√256 = 16', url: '/calc/inzhenernyj-kalkulyator?value=16' },
+    { value: '2¹⁰ = 1024', url: '/calc/inzhenernyj-kalkulyator?value=1024' },
+    { value: '5! = 120', url: '/calc/inzhenernyj-kalkulyator?value=120' }
+  ]
+};
+
+// Калькулятор GPA
+export const gpaCalculator: Calculator = {
+  id: 'gpa-calculator-math',
+  slug: 'kalkulyator-gpa',
+  title: 'Калькулятор GPA',
+  description: 'Расчёт среднего балла (GPA) по шкале 4.0',
+  category: 'nauka-i-ucheba',
+  subcategory: 'matematicheskie',
+  type: 'formula',
+  inputs: [
+    {
+      name: 'grades',
+      label: 'Оценки и кредиты (JSON)',
+      type: 'text',
+      placeholder: '[{"grade":5,"credits":3},{"grade":4,"credits":4},{"grade":3,"credits":2}]',
+      defaultValue: '[{"grade":5,"credits":3},{"grade":4,"credits":4},{"grade":3,"credits":2}]'
+    }
+  ],
+  outputs: [
+    { name: 'gpa', label: 'GPA (4.0)', type: 'text' },
+    { name: 'avgGrade', label: 'Средний балл', type: 'number' },
+    { name: 'classification', label: 'Классификация', type: 'text' }
+  ],
+  calculate: (inputs) => {
+    const gradesStr = String(inputs.grades);
+    let items: { grade: number; credits: number }[] = [];
+    try {
+      items = JSON.parse(gradesStr);
+    } catch {
+      return [
+        { value: 'Ошибка', label: 'GPA' },
+        { value: 0, label: 'Средний балл' },
+        { value: 'Некорректный JSON', label: 'Ошибка' }
+      ];
+    }
+
+    if (!items.length) {
+      return [
+        { value: '—', label: 'GPA' },
+        { value: 0, label: 'Средний балл' },
+        { value: 'Нет данных', label: 'Классификация' }
+      ];
+    }
+
+    // Map Russian 5-point to 4.0 scale
+    const gradeMap: Record<number, number> = { 5: 4.0, 4: 3.0, 3: 2.0, 2: 1.0 };
+
+    let totalCredits = 0;
+    let weightedGpaSum = 0;
+    let gradeSum = 0;
+
+    for (const item of items) {
+      const grade = Number(item.grade);
+      const credits = Number(item.credits);
+      if (isNaN(grade) || isNaN(credits)) continue;
+      totalCredits += credits;
+      weightedGpaSum += (gradeMap[grade] || 0) * credits;
+      gradeSum += grade * credits;
+    }
+
+    if (totalCredits === 0) {
+      return [
+        { value: '—', label: 'GPA' },
+        { value: 0, label: 'Средний балл' },
+        { value: 'Нет данных', label: 'Классификация' }
+      ];
+    }
+
+    const gpa = weightedGpaSum / totalCredits;
+    const avgGrade = gradeSum / totalCredits;
+
+    let classification = '';
+    if (gpa >= 3.7) classification = 'Отлично (A)';
+    else if (gpa >= 3.0) classification = 'Хорошо (B)';
+    else if (gpa >= 2.0) classification = 'Удовлетворительно (C)';
+    else classification = 'Неудовлетворительно (D/F)';
+
+    return [
+      { value: gpa.toFixed(2), label: 'GPA (4.0)' },
+      { value: Math.round(avgGrade * 100) / 100, label: 'Средний балл' },
+      { value: classification, label: 'Классификация' }
+    ];
+  },
+  content: {
+    howTo: 'Введите оценки и кредиты (часы) в формате JSON. Калькулятор рассчитает GPA по шкале 4.0.',
+    about: 'GPA (Grade Point Average) — средний балл по шкале 4.0. Российские оценки 5→4.0, 4→3.0, 3→2.0, 2→1.0.',
+    usage: 'Используется для подготовки к поступлению в зарубежные вузы, стажировкам, грантам.',
+    formula: 'GPA = Σ(grade × credits) / Σ(credits), где grade переведён в 4.0',
+    faq: [
+      {
+        question: 'Как перевести российские оценки в GPA?',
+        answer: '5 = 4.0, 4 = 3.0, 3 = 2.0, 2 = 1.0. Некоторые системы используют дробные значения (4.5 → 3.5 и т.д.).'
+      },
+      {
+        question: 'Что такое кредиты (credits)?',
+        answer: 'Это вес предмета. В зарубежных вузах обычно 1-4 кредита за курс. Если неизвестны — можно использовать равные кредиты (все = 1).'
+      }
+    ],
+    sources: [
+      { title: 'GPA — Википедия', url: 'https://en.wikipedia.org/wiki/Grade_point_average' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
+// Таблицы Шульте (данные — UI реализован как client component)
+export const schulteTablesCalculator: Calculator = {
+  id: 'schulte-tables-calculator',
+  slug: 'tablicy-shulte',
+  title: 'Таблицы Шульте',
+  description: 'Тренировка внимания и периферического зрения на сетке 5×5',
+  category: 'nauka-i-ucheba',
+  subcategory: 'matematicheskie',
+  type: 'tool',
+  inputs: [],
+  outputs: [],
+  calculate: () => [],
+  content: {
+    howTo: 'Нажмите числа от 1 до 25 по порядку как можно быстрее. Числа расположены случайным образом на сетке 5×5.',
+    about: 'Таблицы Шульте — метод тренировки внимания, периферического зрения и скорочтения, разработанный немецким психиатром Вальтером Шульте.',
+    usage: 'Для улучшения концентрации, скорости восприятия, развития периферического зрения.',
+    formula: 'Стандартная таблица 5×5 с числами 1-25 в случайном порядке.',
+    faq: [
+      {
+        question: 'Какая норма времени?',
+        answer: 'Новичок: 60-90 сек. Средний: 40-60 сек. Хороший: 30-40 сек. Отличный: <30 сек.'
+      },
+      {
+        question: 'Как правильно тренироваться?',
+        answer: 'Фиксируйте взгляд на центре таблицы и ищите числа периферическим зрением. Тренируйтесь 5-10 минут в день.'
+      }
+    ],
+    sources: [
+      { title: 'Таблицы Шульте — Википедия', url: 'https://ru.wikipedia.org/wiki/Таблицы_Шульте' }
+    ],
+    updatedAt: '2026-04-26'
+  }
+};
+
 export const mathematicalCalculators = [
   percentageCalculator,
   quadraticEquationCalculator,
   rootCalculator,
   fractionCalculator,
   factorialSimpleCalculator,
+  multiplicationTableCalculator,
+  engineeringCalculator,
+  gpaCalculator,
+  schulteTablesCalculator,
 ];

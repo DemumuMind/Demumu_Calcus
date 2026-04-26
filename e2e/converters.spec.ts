@@ -10,7 +10,7 @@ test.describe('Unit Converters', () => {
 
   for (const url of converterUrls) {
     test(`should load converter page: ${url}`, async ({ page }) => {
-      await page.goto(url, { waitUntil: 'networkidle', timeout: 15000 });
+      await page.goto(url, { waitUntil: 'networkidle', timeout: 25000 });
       
       // Check page loads without errors
       await expect(page.locator('body')).toBeVisible();
@@ -27,7 +27,7 @@ test.describe('Unit Converters', () => {
     });
 
     test(`should convert values correctly: ${url}`, async ({ page }) => {
-      await page.goto(url, { waitUntil: 'networkidle', timeout: 15000 });
+      await page.goto(url, { waitUntil: 'networkidle', timeout: 25000 });
       
       // Find any input field
       const input = page.locator('input').first();

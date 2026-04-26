@@ -1,14 +1,12 @@
-'use client';
-
 import { notFound } from 'next/navigation';
-import { Calculator } from '@/lib/types';
+import { Metadata } from 'next';
+import Script from 'next/script';
+import { Calculator as CalculatorType } from '@/lib/types';
 import { categories } from '@/lib/categories';
-import { calculators, getCalculatorBySlug } from '@/lib/calculators';
+import { calculators, getCalculatorBySlug, getCalculatorsByCategory, getCalculatorsBySubcategory } from '@/lib/calculators';
 import { getCategoryStyle } from '@/lib/category-styles';
-import { FormulaCalculator } from '@/components/calculator/formula-calculator';
-import { ConverterCalculator } from '@/components/calculator/converter-calculator';
-import { ArithmeticCalculator } from '@/components/calculator/arithmetic-calculator';
-import { getCalculator as getCalculatorEngine } from '@/components/calculator/calculator-engine';
+import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
+import { AdPlaceholder } from '@/components/ads/ad-placeholder';
 import {
   Accordion,
   AccordionContent,
@@ -17,100 +15,136 @@ import {
 } from '@/components/ui/accordion';
 import { Separator } from '@/components/ui/separator';
 import { Card } from '@/components/ui/card';
-import { ArrowRight, Calculator as CalculatorIcon, ChevronRight, Clock, BookOpen, Info, HelpCircle, FileText } from 'lucide-react';
+import { ArrowRight, ChevronRight, Clock, BookOpen, Info, HelpCircle, FileText, Calculator as CalculatorIcon, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-import { useMemo, useEffect } from 'react';
-import { generateClientCalculatorSchema } from '@/lib/client-schema';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
 interface CalculatorPageProps {
-  params: {
-    slug: string;
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export async function generateStaticParams() {
+  return calculators.map((calc) => ({
+    slug: calc.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: CalculatorPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const calculator = getCalculatorBySlug(slug);
+  if (!calculator) return {};
+
+  const category = categories.find((c) => c.slug === calculator.category);
+
+  return {
+    title: `${calculator.title} — онлайн калькулятор | Calcus`,
+    description: calculator.description,
+    openGraph: {
+      title: calculator.title,
+      description: calculator.description,
+      url: `${SITE_URL}/calc/${slug}`,
+      siteName: 'Calcus',
+      type: 'website',
+      locale: 'ru_RU',
+    },
+    alternates: {
+      canonical: `${SITE_URL}/calc/${slug}`,
+    },
   };
 }
 
-export default function CalculatorPage({ params }: CalculatorPageProps) {
-  const { slug } = params;
+function getRelatedCalculators(calculator: CalculatorType, limit: number = 4): CalculatorType[] {
+  const sameSubcategory = getCalculatorsBySubcategory(calculator.subcategory)
+    .filter(c => c.slug !== calculator.slug);
   
-  const calculatorData = useMemo(() => getCalculatorBySlug(slug), [slug]);
-  
-  if (!calculatorData) {
+  if (sameSubcategory.length >= limit) {
+    return sameSubcategory.slice(0, limit);
+  }
+
+  const sameCategory = getCalculatorsByCategory(calculator.category)
+    .filter(c => c.slug !== calculator.slug && !sameSubcategory.some(s => s.slug === c.slug));
+
+  return [...sameSubcategory, ...sameCategory].slice(0, limit);
+}
+
+function generateCalculatorSchema(calculator: CalculatorType, slug: string, categoryTitle?: string) {
+  const schemas: object[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: calculator.title,
+      description: calculator.description,
+      url: `${SITE_URL}/calc/${slug}`,
+      applicationCategory: 'CalculatorApplication',
+      operatingSystem: 'Any',
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'RUB',
+      },
+    },
+  ];
+
+  if (calculator.content.faq && calculator.content.faq.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: calculator.content.faq.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
+      ...(categoryTitle
+        ? [{ '@type': 'ListItem', position: 2, name: categoryTitle, item: `${SITE_URL}/${calculator.category}` }]
+        : []),
+      { '@type': 'ListItem', position: categoryTitle ? 3 : 2, name: calculator.title, item: `${SITE_URL}/calc/${slug}` },
+    ],
+  });
+
+  return schemas;
+}
+
+export default async function CalculatorPage({ params, searchParams }: CalculatorPageProps) {
+  const { slug } = await params;
+  const resolvedSearchParams = await searchParams;
+  const calculator = getCalculatorBySlug(slug);
+
+  if (!calculator) {
     notFound();
   }
 
-  // Create calculator without calculate function for passing to components
-  const calculator = calculatorData;
-  
-  // Find category and subcategory
   const category = categories.find((c) => c.slug === calculator.category);
   const subcategory = category?.subcategories.find((s) => s.slug === calculator.subcategory);
   const style = getCategoryStyle(calculator.category);
   const CategoryIcon = style.icon;
 
-  // Check if we have a client-side engine for this calculator
-  const hasEngine = getCalculatorEngine(calculator.id) !== null;
-
-  // Generate schema for this calculator
-  const calculatorSchema = useMemo(() => {
-    const faqs = calculator.content.faq?.map(faq => ({
-      question: faq.question,
-      answer: faq.answer
-    })) || [];
-    
-    return generateClientCalculatorSchema(
-      calculator.title,
-      calculator.description,
-      `/calc/${slug}`,
-      category?.title,
-      faqs
-    );
-  }, [calculator, slug, category]);
-
-  // Inject JSON-LD schema using useEffect for client-side rendering
-  useEffect(() => {
-    // Remove any existing schema scripts
-    const existingScripts = document.querySelectorAll('script[data-schema="true"]');
-    existingScripts.forEach(script => script.remove());
-
-    // Add new schema scripts
-    calculatorSchema.forEach((schema, index) => {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.setAttribute('data-schema', 'true');
-      script.textContent = JSON.stringify(schema);
-      document.head.appendChild(script);
-    });
-
-    // Cleanup on unmount
-    return () => {
-      const scripts = document.querySelectorAll('script[data-schema="true"]');
-      scripts.forEach(script => script.remove());
-    };
-  }, [calculatorSchema]);
-
-  // Render appropriate calculator component
-  const renderCalculator = () => {
-    if (!hasEngine && calculator.type !== 'arithmetic') {
-      return (
-        <Card className="p-8 text-center">
-          <p className="text-muted-foreground">Калькулятор в разработке</p>
-        </Card>
-      );
-    }
-    
-    switch (calculator.type) {
-      case 'arithmetic':
-        return <ArithmeticCalculator calculator={calculator} />;
-      case 'converter':
-        return <ConverterCalculator calculator={calculator} />;
-      case 'formula':
-      default:
-        return <FormulaCalculator calculator={calculator} />;
-    }
-  };
+  const schemas = generateCalculatorSchema(calculator, slug, category?.title);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6">
-      {/* Breadcrumb */}
+      {schemas.map((schema, index) => (
+        <Script
+          key={index}
+          id={`schema-calc-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          strategy="lazyOnload"
+        />
+      ))}
+
       <nav className="mb-6" aria-label="breadcrumb">
         <ol className="flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground">
           <li className="inline-flex items-center gap-1.5">
@@ -158,7 +192,6 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
       </nav>
 
       <article>
-        {/* Header with Category Style */}
         <div className={`mb-8 rounded-2xl p-6 bg-gradient-to-br ${style.gradient} border ${style.borderColor}`}>
           <div className="flex items-center gap-4 mb-4">
             <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${style.bgColor} ${style.color}`}>
@@ -176,12 +209,14 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
           <p className="text-muted-foreground leading-relaxed" data-testid="calculator-description">{calculator.description}</p>
         </div>
 
-        {/* Calculator Component */}
+        <AdPlaceholder slot="calc-top" size="leaderboard" className="mb-8" />
+
         <div className="mb-8">
-          {renderCalculator()}
+          <CalculatorClientWrapper slug={calculator.slug} type={calculator.type} searchParams={resolvedSearchParams} />
         </div>
 
-        {/* How to Use Section */}
+        <AdPlaceholder slot="calc-bottom" size="rectangle" className="mb-8 mx-auto" />
+
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <BookOpen className="h-5 w-5 text-primary" />
@@ -194,7 +229,6 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
           </Card>
         </div>
 
-        {/* About Section */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Info className="h-5 w-5 text-primary" />
@@ -218,7 +252,6 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
           </Card>
         </div>
 
-        {/* FAQ Section */}
         {calculator.content.faq && calculator.content.faq.length > 0 && (
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
@@ -240,7 +273,30 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
           </div>
         )}
 
-        {/* Sources Section */}
+        {calculator.popularCalculations && calculator.popularCalculations.length > 0 && (
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-4">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              <h2 className="text-xl font-bold">Популярные расчёты</h2>
+            </div>
+            <Card className="p-6">
+              <div className="flex flex-wrap gap-2">
+                {calculator.popularCalculations.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.url}
+                    className="inline-flex items-center justify-center rounded-lg border border-border bg-background px-3 py-1.5 text-sm font-medium hover:bg-primary/5 hover:border-primary/30 transition-colors whitespace-nowrap"
+                  >
+                    {item.value}
+                  </Link>
+                ))}
+              </div>
+            </Card>
+          </div>
+        )}
+
+        <RelatedCalculatorsSection currentCalculator={calculator} style={style} />
+
         {calculator.content.sources && calculator.content.sources.length > 0 && (
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
@@ -267,12 +323,54 @@ export default function CalculatorPage({ params }: CalculatorPageProps) {
           </div>
         )}
 
-        {/* Updated At */}
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Clock className="h-4 w-4" />
           <span>Обновлено: {calculator.content.updatedAt}</span>
         </div>
       </article>
+    </div>
+  );
+}
+
+function RelatedCalculatorsSection({
+  currentCalculator,
+  style,
+}: {
+  currentCalculator: CalculatorType;
+  style: { bgColor: string; color: string; borderColor: string; gradient: string; icon: React.ComponentType<{ className?: string }> };
+}) {
+  const related = getRelatedCalculators(currentCalculator, 4);
+
+  if (related.length === 0) return null;
+
+  return (
+    <div className="mb-8">
+      <div className="flex items-center gap-2 mb-4">
+        <CalculatorIcon className="h-5 w-5 text-primary" />
+        <h2 className="text-xl font-bold">Похожие калькуляторы</h2>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {related.map((calc) => (
+          <Link key={calc.id} href={`/calc/${calc.slug}`}>
+            <Card className="group h-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer border-2 hover:border-primary/20">
+              <div className="flex items-center gap-3 p-4">
+                <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${style.bgColor} ${style.color} transition-transform duration-300 group-hover:scale-110`}>
+                  <CalculatorIcon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold group-hover:text-primary transition-colors">
+                    {calc.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-1">
+                    {calc.description}
+                  </p>
+                </div>
+                <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-1 ml-auto shrink-0" />
+              </div>
+            </Card>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

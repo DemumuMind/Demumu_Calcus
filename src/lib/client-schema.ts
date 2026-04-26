@@ -1,6 +1,5 @@
-/**
- * Генерирует Schema.org JSON-LD для калькулятора (для клиентских компонентов)
- */
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+
 export function generateClientCalculatorSchema(
   name: string,
   description: string,
@@ -14,7 +13,7 @@ export function generateClientCalculatorSchema(
       '@type': 'SoftwareApplication',
       name,
       description,
-      url: `https://calcus.su${url}`,
+      url: `${SITE_URL}${url}`,
       applicationCategory: 'CalculatorApplication',
       operatingSystem: 'Any',
       offers: {

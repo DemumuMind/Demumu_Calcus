@@ -5,6 +5,7 @@ import { allUnitCategories } from '@/lib/units';
 import { cookingIngredients, standardMeasures, generateCookingSlug } from '@/lib/cooking';
 import { percentageTypes } from '@/lib/percentages';
 import { timerPresets } from '@/lib/timers';
+import { holidays } from '@/lib/holidays';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-clone.vercel.app';
 
@@ -50,12 +51,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.6,
     });
+    // Top-level rewrite URLs (non-canonical, slightly lower priority)
+    routes.push({
+      url: `${BASE_URL}/${calc.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    });
   });
 
-  // 5. Unit converter pages (limited set for sitemap)
+  // 5. Unit converter pages (limited set for sitemap — same 6 popular categories as generateStaticParams)
+  const POPULAR_CATEGORIES = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
   Object.values(allUnitCategories).forEach((category) => {
-    const unitIds = Object.keys(category.units).slice(0, 5); // Only first 5 units
-    
+    // Skip niche categories to keep sitemap lean and match static generation
+    if (!POPULAR_CATEGORIES.includes(category.slug)) {
+      return;
+    }
+
+    const unitIds = Object.keys(category.units).slice(0, 3); // Only first 3 units (match generateStaticParams)
+
     for (let i = 0; i < unitIds.length; i++) {
       for (let j = 0; j < unitIds.length; j++) {
         if (i !== j) {
@@ -78,12 +92,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   });
 
-  // 7. Individual cooking converter pages (limited set)
-  const popularIngredients = ['sugar', 'wheat_flour', 'butter', 'milk', 'salt'];
-  const mainMeasures = ['teaspoon', 'tablespoon', 'faceted_glass'];
-  
-  popularIngredients.forEach((ingredientId) => {
-    mainMeasures.forEach((measureId) => {
+  // 7. Individual cooking converter pages — ALL combinations
+  Object.keys(cookingIngredients).forEach((ingredientId) => {
+    Object.keys(standardMeasures).forEach((measureId) => {
       const slug = generateCookingSlug(ingredientId, measureId);
       if (slug) {
         routes.push({
@@ -114,6 +125,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
+  // 9a. Specific-value percentage pages (percent-of-number combinations)
+  const specificN = [1, 5, 10, 15, 20, 25, 30, 50, 75];
+  const specificM = [100, 200, 500, 1000];
+  specificN.forEach((n) => {
+    specificM.forEach((m) => {
+      routes.push({
+        url: `${BASE_URL}/procenty/${n}-procentov-ot-${m}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.45,
+      });
+    });
+  });
+
   // 10. Timer pages
   routes.push({
     url: `${BASE_URL}/tajmery`,
@@ -129,6 +154,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5,
+    });
+  });
+
+  // 12. Holiday countdown main page
+  routes.push({
+    url: `${BASE_URL}/skolko-dney-do`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  });
+
+  // 13. Individual holiday countdown pages
+  holidays.forEach((holiday) => {
+    routes.push({
+      url: `${BASE_URL}/skolko-dney-do/${holiday.slug}`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.6,
     });
   });
 

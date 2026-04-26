@@ -44,30 +44,31 @@ test.describe('Calculators', () => {
 
 test.describe('Percentage Calculators', () => {
   const percentTypes = [
-    '/procenty/ot-chisla',
-    '/procenty/chislo-ot-chisla',
-    '/procenty/pribavlenie-procenta',
-    '/procenty/vychet-procenta'
+    '/procenty/procentov-ot-chisla',
+    '/procenty/chislo-sostavlyaet-procent',
+    '/procenty/izmenenie-v-procentah',
+    '/procenty/dobavit-procent',
+    '/procenty/vycet-procent',
   ];
 
   for (const url of percentTypes) {
     test(`should work: ${url}`, async ({ page }) => {
       await page.goto(url, { waitUntil: 'networkidle', timeout: 15000 });
-      
+
       // Page should load
       await expect(page.locator('body')).toBeVisible();
-      
+
       // Should have input fields (any type)
       const inputs = page.locator('input');
       const inputCount = await inputs.count();
-      
+
       // Try to interact if inputs exist
       if (inputCount > 0) {
         const firstInput = inputs.first();
         await firstInput.fill('100').catch(() => {
           // Input might be read-only or disabled
         });
-        
+
         // Check for result in page content
         await page.waitForTimeout(300);
         const content = await page.content();
@@ -79,6 +80,18 @@ test.describe('Percentage Calculators', () => {
       }
     });
   }
+
+  test('should load specific-value percentage page: 10-procentov-ot-200', async ({ page }) => {
+    await page.goto('/procenty/10-procentov-ot-200', { waitUntil: 'networkidle', timeout: 15000 });
+
+    await expect(page.locator('body')).toBeVisible();
+
+    const content = await page.content();
+    // Should show the specific result prominently
+    expect(content).toContain('20');
+    expect(content).toContain('10%');
+    expect(content).toContain('200');
+  });
 });
 
 test.describe('Timers', () => {

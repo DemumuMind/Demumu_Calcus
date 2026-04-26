@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calcus Clone (Demumu_Calcus)
 
-## Getting Started
+Клон сайта [calcus.su](https://calcus.su) — коллекция бесплатных онлайн-калькуляторов на русском языке.
 
-First, run the development server:
+## О проекте
+
+485+ онлайн-калькуляторов в 10 категориях:
+
+- 🔬 **Наука и Учёба** — математика, физика, химия
+- 🔄 **Конвертеры** — единицы измерения, валюты, системы счисления
+- 💯 **Проценты** — НДС, НДФЛ, кредиты, ипотека
+- ⏱ **Таймеры** — обратный отсчёт, pomodoro
+- 🍳 **Кулинарные меры** — перевод мер веса и объёма
+- 💪 **Здоровье и Красота** — ИМТ, калории, КБЖУ
+- 🏗 **Строительство и Ремонт** — бетон, краска, плитка
+- 🚗 **Транспорт** — расход топлива, амортизация
+- 🖥 **Технологии** — пароли, хеши, кодирование
+- 🏠 **Повседневное** — дни, возраст, дозировки
+
+## Технологии
+
+- **Next.js 16** (App Router, Server Components)
+- **React 19** + TypeScript
+- **Tailwind CSS** + shadcn/ui
+- **Vercel Analytics** + Speed Insights
+
+## Разработка
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Сборка
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Тесты
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test           # Unit-тесты (Vitest)
+npx playwright test # E2E-тесты (Playwright)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Структура
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/                  # Next.js App Router
+    calc/[slug]/        # Страница калькулятора
+    [category]/         # Страницы категорий
+  components/
+    calculator/         # UI компонентов калькуляторов
+    layout/             # Header, Footer
+    search/             # Поиск
+    ui/                 # shadcn/ui primitives
+  lib/
+    calculators/        # Данные калькуляторов (485+)
+    categories.ts       # Категории и подкатегории
+    types.ts            # TypeScript типы
+    schema.ts           # SEO Schema.org
+```
 
-## Deploy on Vercel
+## URL-параметры
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Калькуляторы поддерживают предзаполнение через query-параметры:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/calc/konverter-temperatury?value=100&from=celsius&to=fahrenheit
+/calc/kalkulyator-imt?weight=70&height=175
+```
+
+## Деплой
+
+Проект развёрнут на Vercel: [calcus-site.vercel.app](https://calcus-site.vercel.app)
