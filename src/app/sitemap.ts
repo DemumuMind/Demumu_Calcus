@@ -63,28 +63,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
-  // 5. Unit converter pages (expanded to all categories and specific values)
+  // 5. Unit converter pages — limited static set for Vercel free tier
   const POPULAR_CATEGORIES = [
     'dlina', 'massa', 'temperatura', 'skorost', 'obem',
     'informaciya', 'ploshchad', 'energiya', 'davlenie',
     'moshchnost', 'vremya', 'ugly',
   ];
 
-  const POPULAR_VALUES = [
-    '1', '2', '3', '5', '10', '15', '20', '25', '30', '50',
-    '75', '100', '125', '150', '200', '250', '300', '500',
-    '750', '1000', '1500', '2000', '3000', '5000', '10000',
-  ];
+  const POPULAR_VALUES = ['1', '10', '100'];
 
   const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
   const OTHER_SIX = ['ploshchad', 'energiya', 'davlenie', 'moshchnost', 'vremya', 'ugly'];
-
-  const TOP_PAIRS: Record<string, Array<[string, string]>> = {
-    dlina: [['inch', 'cm'], ['cm', 'inch'], ['foot', 'm'], ['m', 'foot'], ['mile', 'km'], ['km', 'mile']],
-    massa: [['kg', 'g'], ['g', 'kg'], ['pound', 'kg'], ['kg', 'pound'], ['ounce', 'g'], ['g', 'ounce']],
-    temperatura: [['c', 'f'], ['f', 'c']],
-    skorost: [['kmh', 'ms'], ['ms', 'kmh'], ['mph', 'kmh'], ['kmh', 'mph']],
-  };
 
   const seen = new Set<string>();
   function addSitemap(url: string, priority: number) {
@@ -107,7 +96,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const units = Object.keys(category.units);
 
     if (POPULAR_SIX.includes(category.slug)) {
-      const priorityUnits = units.slice(0, 5);
+      const priorityUnits = units.slice(0, 3);
       for (let i = 0; i < priorityUnits.length; i++) {
         for (let j = 0; j < priorityUnits.length; j++) {
           if (i !== j) {
@@ -119,33 +108,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
       }
     } else if (OTHER_SIX.includes(category.slug)) {
-      const priorityUnits = units.slice(0, 3);
-      const shortValues = POPULAR_VALUES.slice(0, 10);
+      const priorityUnits = units.slice(0, 2);
       for (let i = 0; i < priorityUnits.length; i++) {
         for (let j = 0; j < priorityUnits.length; j++) {
           if (i !== j) {
             addSitemap(`${BASE_URL}/${category.slug}/${priorityUnits[i]}-v-${priorityUnits[j]}`, 0.5);
-            for (const val of shortValues) {
-              addSitemap(`${BASE_URL}/${category.slug}/${val}-${priorityUnits[i]}-v-${priorityUnits[j]}`, 0.45);
-            }
           }
         }
       }
     }
   });
-
-  // TOP converter pairs
-  for (const [catSlug, pairs] of Object.entries(TOP_PAIRS)) {
-    const category = Object.values(allUnitCategories).find(c => c.slug === catSlug);
-    if (!category) continue;
-    for (const [from, to] of pairs) {
-      if (!category.units[from] || !category.units[to]) continue;
-      addSitemap(`${BASE_URL}/${catSlug}/${from}-v-${to}`, 0.5);
-      for (const val of POPULAR_VALUES) {
-        addSitemap(`${BASE_URL}/${catSlug}/${val}-${from}-v-${to}`, 0.45);
-      }
-    }
-  }
 
   // 6. Cooking pages
   routes.push({

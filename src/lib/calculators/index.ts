@@ -68,6 +68,9 @@ import { parentingBabyCalculators } from './parenting-baby';
 import { fashionStyleCalculators } from './fashion-style';
 import { shoppingDealsCalculators } from './shopping-deals';
 import { bmiCalculator, calorieCalculator, mortgageCalculator } from './additional-calculators';
+import { tipsCalculators } from './tips-calculator';
+import { pomodoroCalculators } from './pomodoro-calculator';
+import { bakingFormCalculators } from './baking-form-calculator';
 
 export const simpleCalculator: Calculator = {
   id: 'simple-calculator',
@@ -277,6 +280,9 @@ export const calculators: Calculator[] = [
   ...parentingBabyCalculators,
   ...fashionStyleCalculators,
   ...shoppingDealsCalculators,
+  ...tipsCalculators,
+  ...pomodoroCalculators,
+  ...bakingFormCalculators,
   bmiCalculator,
   calorieCalculator,
   mortgageCalculator,
