@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -13,14 +13,32 @@ import { calculators } from "@/lib/calculators";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: `Calcus — ${calculators.length}+ онлайн-калькуляторов`,
   description: "Бесплатные онлайн-калькуляторы для математики, финансов, здоровья, строительства. Все расчёты выполняются мгновенно и без регистрации.",
   keywords: "калькулятор, онлайн калькулятор, конвертер, математика, финансы, здоровье",
-  themeColor: "#000000",
   manifest: "/manifest.json",
   icons: {
     apple: { url: "/icon-192x192.png", sizes: "192x192" },
+    icon: [
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Calcus",
+    startupImage: [
+      { url: "/icon-512x512.png", media: "(device-width: 768px) and (device-height: 1024px)" },
+    ],
   },
   openGraph: {
     title: `Calcus — ${calculators.length}+ онлайн-калькуляторов`,
