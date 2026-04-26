@@ -1,21 +1,8 @@
-import { redirect } from 'next/navigation';
 import { categories } from '@/lib/categories';
 
-// Force static generation for all subcategory paths
-export const dynamic = 'force-dynamic';
-export const revalidate = false;
-
-interface RedirectPageProps {
-  params: Promise<{
-    category: string;
-    subcategory: string;
-  }>;
-}
-
-// Generate static params for all subcategories (old URL format redirect)
 export function generateStaticParams() {
   const params: { category: string; subcategory: string }[] = [];
-  
+
   for (const category of categories) {
     for (const subcategory of category.subcategories) {
       params.push({
@@ -24,14 +11,28 @@ export function generateStaticParams() {
       });
     }
   }
-  
+
   return params;
 }
 
-// Redirect old URL format /[category]/[subcategory] to new format /[category]/podkat/[subcategory]
+interface RedirectPageProps {
+  params: Promise<{ category: string; subcategory: string }>;
+}
+
 export default async function RedirectPage({ params }: RedirectPageProps) {
   const { category, subcategory } = await params;
-  
-  // Redirect to new URL format with podkat
-  redirect(`/${category}/podkat/${subcategory}`);
+  const redirectUrl = `/${category}/podkat/${subcategory}`;
+
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <meta httpEquiv="refresh" content={`0; url=${redirectUrl}`} />
+      <p className="text-muted-foreground">
+        Перенаправление... Если ничего не произошло,{' '}
+        <a href={redirectUrl} className="text-primary underline">
+          нажмите здесь
+        </a>
+        .
+      </p>
+    </div>
+  );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Calculator as CalcType, CalculationResult, InputField } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Calculator, ArrowRightLeft } from 'lucide-react';
+import { addToHistory } from '@/lib/history';
 
 interface ConverterCalculatorProps {
   calculator: CalcType;
@@ -66,29 +67,63 @@ export function ConverterCalculator({ calculator, initialParams }: ConverterCalc
   // Detect swappable pair once — works for any naming convention
   const swappablePair = useMemo(() => findSwappablePair(calculator.inputs), [calculator.inputs]);
 
-  const handleCalculate = () => {
+  const [hasCalculated, setHasCalculated] = useState(false);
+
+  const handleCalculate = useCallback(() => {
     try {
       const calculatedResults = calculator.calculate(inputs as Record<string, number | string>);
       if (Array.isArray(calculatedResults)) {
         setResults(calculatedResults);
       }
+      setHasCalculated(true);
     } catch {
       setResults([{ value: 'Ошибка вычисления', label: 'Результат' }]);
+      setHasCalculated(true);
     }
-  };
+  }, [inputs, calculator]);
 
   const handleInputChange = (name: string, value: string | number | boolean) => {
     setInputs(prev => ({ ...prev, [name]: value }));
   };
 
   useEffect(() => {
-    const allFilled = calculator.inputs.every(input => 
+    const allFilled = calculator.inputs.every(input =>
       inputs[input.name] !== '' && inputs[input.name] !== undefined
     );
     if (allFilled) {
       handleCalculate();
     }
-  }, [inputs, calculator]);
+  }, [inputs, calculator, handleCalculate]);
+
+  // Debounced history save
+  useEffect(() => {
+    if (!hasCalculated || results.length === 0) return;
+
+    const hasError = results.some(r => r.value === 'Ошибка вычисления');
+    if (hasError) return;
+
+    const hasEmptyInputs = calculator.inputs.some(
+      input => inputs[input.name] === '' || inputs[input.name] === undefined
+    );
+    if (hasEmptyInputs) return;
+
+    const timer = setTimeout(() => {
+      addToHistory({
+        calculatorSlug: calculator.slug,
+        calculatorTitle: calculator.title,
+        inputs: Object.fromEntries(
+          Object.entries(inputs).map(([k, v]) => [k, String(v)])
+        ),
+        results: results.map(r => ({ label: r.label, value: r.value })),
+        url: `/calc/${calculator.slug}?${new URLSearchParams(
+          Object.entries(inputs).map(([k, v]) => [k, String(v)])
+        ).toString()}`,
+      });
+      window.dispatchEvent(new Event('calcus-history-update'));
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [results, hasCalculated, calculator, inputs]);
 
   const swapUnits = () => {
     if (!swappablePair) return;

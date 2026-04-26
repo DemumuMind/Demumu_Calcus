@@ -9,7 +9,8 @@ import {
   UnitCategory 
 } from '@/lib/units';
 import { UniversalConverter } from '@/components/calculator/universal-converter';
-import { AdPlaceholder } from '@/components/ads/ad-placeholder';
+import { YandexAdBlock } from '@/components/ads/ad-placeholder';
+import { AD_BLOCK_IDS } from '@/lib/ads/config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
@@ -98,20 +99,43 @@ export async function generateMetadata({ params }: ConverterPageProps): Promise<
   };
 }
 
-// Static generation for all converter categories with expanded popular values
-// while keeping all combos available at runtime via dynamicParams.
+// Static generation for all converter categories with expanded popular values.
 const POPULAR_CATEGORIES = [
   'dlina', 'massa', 'temperatura', 'skorost', 'obem',
   'informaciya', 'ploshchad', 'energiya', 'davlenie',
   'moshchnost', 'vremya', 'ugly',
 ];
-const POPULAR_VALUES = ['1', '2', '5', '10', '20', '50', '100', '200', '500', '1000'];
 
-// Allow non-pre-generated converter combos to work at runtime (Next.js 15+)
-export const dynamicParams = true;
+const POPULAR_VALUES = [
+  '1', '2', '3', '5', '10', '15', '20', '25', '30', '50',
+  '75', '100', '125', '150', '200', '250', '300', '500',
+  '750', '1000', '1500', '2000', '3000', '5000', '10000',
+];
+
+const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
+const OTHER_SIX = ['ploshchad', 'energiya', 'davlenie', 'moshchnost', 'vremya', 'ugly'];
+
+// TOP converter pairs for additional specific-value pages beyond the priority units
+const TOP_PAIRS: Record<string, Array<[string, string]>> = {
+  dlina: [['inch', 'cm'], ['cm', 'inch'], ['foot', 'm'], ['m', 'foot'], ['mile', 'km'], ['km', 'mile']],
+  massa: [['kg', 'g'], ['g', 'kg'], ['pound', 'kg'], ['kg', 'pound'], ['ounce', 'g'], ['g', 'ounce']],
+  temperatura: [['c', 'f'], ['f', 'c']],
+  skorost: [['kmh', 'ms'], ['ms', 'kmh'], ['mph', 'kmh'], ['kmh', 'mph']],
+};
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
+  const seen = new Set<string>();
   const params: Array<{ category: string; slug: string[] }> = [];
+
+  function add(category: string, slug: string[]) {
+    const key = `${category}/${slug.join('/')}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      params.push({ category, slug });
+    }
+  }
 
   Object.values(allUnitCategories).forEach((category) => {
     // Skip niche categories for static generation
@@ -120,29 +144,51 @@ export function generateStaticParams() {
     }
 
     const units = Object.keys(category.units);
-    const priorityUnits = units.slice(0, 3); // limit to first 3 units to keep build manageable
 
-    for (let i = 0; i < priorityUnits.length; i++) {
-      for (let j = 0; j < priorityUnits.length; j++) {
-        if (i !== j) {
-          // Without value (existing)
-          params.push({
-            category: category.slug,
-            slug: [priorityUnits[i], 'v', priorityUnits[j]],
-          });
-          // With popular values (new)
-          for (const val of POPULAR_VALUES) {
-            params.push({
-              category: category.slug,
-              slug: [val, priorityUnits[i], 'v', priorityUnits[j]],
-            });
+    if (POPULAR_SIX.includes(category.slug)) {
+      // 5 priority units for popular categories, all 25 values
+      const priorityUnits = units.slice(0, 5);
+      for (let i = 0; i < priorityUnits.length; i++) {
+        for (let j = 0; j < priorityUnits.length; j++) {
+          if (i !== j) {
+            add(category.slug, [priorityUnits[i], 'v', priorityUnits[j]]);
+            for (const val of POPULAR_VALUES) {
+              add(category.slug, [val, priorityUnits[i], 'v', priorityUnits[j]]);
+            }
+          }
+        }
+      }
+    } else if (OTHER_SIX.includes(category.slug)) {
+      // 3 priority units for other categories, only first 10 values
+      const priorityUnits = units.slice(0, 3);
+      const shortValues = POPULAR_VALUES.slice(0, 10);
+      for (let i = 0; i < priorityUnits.length; i++) {
+        for (let j = 0; j < priorityUnits.length; j++) {
+          if (i !== j) {
+            add(category.slug, [priorityUnits[i], 'v', priorityUnits[j]]);
+            for (const val of shortValues) {
+              add(category.slug, [val, priorityUnits[i], 'v', priorityUnits[j]]);
+            }
           }
         }
       }
     }
   });
 
-  console.log(`Generated ${params.length} static converter pages (reduced set)`);
+  // TOP converter pairs with all 25 values
+  for (const [catSlug, pairs] of Object.entries(TOP_PAIRS)) {
+    const category = Object.values(allUnitCategories).find(c => c.slug === catSlug);
+    if (!category) continue;
+    for (const [from, to] of pairs) {
+      if (!category.units[from] || !category.units[to]) continue;
+      add(catSlug, [from, 'v', to]);
+      for (const val of POPULAR_VALUES) {
+        add(catSlug, [val, from, 'v', to]);
+      }
+    }
+  }
+
+  console.log(`Generated ${params.length} static converter pages`);
   return params;
 }
 
@@ -277,7 +323,7 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
 
       {/* Main Content */}
       <main className="flex-1 mx-auto max-w-4xl px-4 py-8 w-full">
-        <AdPlaceholder slot="conv-top" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.converterTop} renderTo="yandex_rtb_R-A-99999999-7" size="leaderboard" className="mb-8" />
 
         {/* Header */}
         <div className="mb-8">
@@ -419,7 +465,7 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
           </CardContent>
         </Card>
 
-        <AdPlaceholder slot="conv-bottom" size="rectangle" className="mt-8 mx-auto" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.converterBottom} renderTo="yandex_rtb_R-A-99999999-8" size="rectangle" className="mt-8 mx-auto" />
 
         {/* Navigation */}
         <div className="mt-8 flex justify-between">

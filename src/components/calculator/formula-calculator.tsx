@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Calculator as CalcType, CalculationResult } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Calculator } from 'lucide-react';
+import { addToHistory } from '@/lib/history';
 
 interface FormulaCalculatorProps {
   calculator: CalcType;
@@ -26,7 +27,7 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
     calculator.inputs.forEach(input => {
       // URL params take priority over defaults
       if (initialParams && initialParams[input.name] !== undefined) {
-        defaults[input.name] = input.type === 'number' 
+        defaults[input.name] = input.type === 'number'
           ? (Number(initialParams[input.name]) || (input.defaultValue ?? ''))
           : initialParams[input.name];
       } else {
@@ -35,11 +36,11 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
     });
     return defaults;
   });
-  
+
   const [results, setResults] = useState<CalculationResult[]>([]);
   const [calculated, setCalculated] = useState(false);
 
-  const handleCalculate = () => {
+  const handleCalculate = useCallback(() => {
     try {
       const calculatedResults = calculator.calculate(inputs as Record<string, number | string>);
       if (Array.isArray(calculatedResults)) {
@@ -50,20 +51,50 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
       setResults([{ value: 'Ошибка вычисления', label: 'Результат' }]);
       setCalculated(true);
     }
-  };
+  }, [inputs, calculator]);
 
   const handleInputChange = (name: string, value: string | number | boolean) => {
     setInputs(prev => ({ ...prev, [name]: value }));
   };
 
   useEffect(() => {
-    const allFilled = calculator.inputs.every(input => 
+    const allFilled = calculator.inputs.every(input =>
       inputs[input.name] !== '' && inputs[input.name] !== undefined
     );
     if (allFilled) {
       handleCalculate();
     }
-  }, [inputs, calculator]);
+  }, [inputs, calculator, handleCalculate]);
+
+  // Debounced history save — only save 2 seconds after results stabilize
+  useEffect(() => {
+    if (!calculated || results.length === 0) return;
+
+    const hasError = results.some(r => r.value === 'Ошибка вычисления');
+    if (hasError) return;
+
+    const hasEmptyInputs = calculator.inputs.some(
+      input => inputs[input.name] === '' || inputs[input.name] === undefined
+    );
+    if (hasEmptyInputs) return;
+
+    const timer = setTimeout(() => {
+      addToHistory({
+        calculatorSlug: calculator.slug,
+        calculatorTitle: calculator.title,
+        inputs: Object.fromEntries(
+          Object.entries(inputs).map(([k, v]) => [k, String(v)])
+        ),
+        results: results.map(r => ({ label: r.label, value: r.value })),
+        url: `/calc/${calculator.slug}?${new URLSearchParams(
+          Object.entries(inputs).map(([k, v]) => [k, String(v)])
+        ).toString()}`,
+      });
+      window.dispatchEvent(new Event('calcus-history-update'));
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [results, calculated, calculator, inputs]);
 
   return (
     <Card className="mb-8">

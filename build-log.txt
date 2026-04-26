@@ -1,0 +1,11 @@
+
+> calcus-clone@0.1.0 build
+> next build
+
+[31m[1m⨯[22m[39m Another [36mnext build[39m process is already running.
+
+  This could be:
+  - A [36mnext build[39m still in progress
+  - A previous build that didn't exit cleanly
+
+[37m[1m [22m[39m [1mSuggestion:[22m Wait for the build to complete.

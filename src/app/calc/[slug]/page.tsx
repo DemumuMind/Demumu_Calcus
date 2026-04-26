@@ -6,7 +6,8 @@ import { categories } from '@/lib/categories';
 import { calculators, getCalculatorBySlug, getCalculatorsByCategory, getCalculatorsBySubcategory } from '@/lib/calculators';
 import { getCategoryStyle } from '@/lib/category-styles';
 import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
-import { AdPlaceholder } from '@/components/ads/ad-placeholder';
+import { YandexAdBlock } from '@/components/ads/ad-placeholder';
+import { AD_BLOCK_IDS } from '@/lib/ads/config';
 import {
   Accordion,
   AccordionContent,
@@ -22,7 +23,6 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel
 
 interface CalculatorPageProps {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function generateStaticParams() {
@@ -117,9 +117,8 @@ function generateCalculatorSchema(calculator: CalculatorType, slug: string, cate
   return schemas;
 }
 
-export default async function CalculatorPage({ params, searchParams }: CalculatorPageProps) {
+export default async function CalculatorPage({ params }: CalculatorPageProps) {
   const { slug } = await params;
-  const resolvedSearchParams = await searchParams;
   const calculator = getCalculatorBySlug(slug);
 
   if (!calculator) {
@@ -209,13 +208,13 @@ export default async function CalculatorPage({ params, searchParams }: Calculato
           <p className="text-muted-foreground leading-relaxed" data-testid="calculator-description">{calculator.description}</p>
         </div>
 
-        <AdPlaceholder slot="calc-top" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.calcTop} renderTo="yandex_rtb_R-A-99999999-3" size="leaderboard" className="mb-8" />
 
         <div className="mb-8">
-          <CalculatorClientWrapper slug={calculator.slug} type={calculator.type} searchParams={resolvedSearchParams} />
+          <CalculatorClientWrapper slug={calculator.slug} type={calculator.type} />
         </div>
 
-        <AdPlaceholder slot="calc-bottom" size="rectangle" className="mb-8 mx-auto" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.calcBottom} renderTo="yandex_rtb_R-A-99999999-4" size="rectangle" className="mb-8 mx-auto" />
 
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">

@@ -9,7 +9,8 @@ import { getCalculatorsByCategory } from '@/lib/calculators';
 import { getCategoryStyle, getSubcategoryIcon } from '@/lib/category-styles';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SearchBox } from '@/components/search/search-box';
-import { AdPlaceholder } from '@/components/ads/ad-placeholder';
+import { YandexAdBlock } from '@/components/ads/ad-placeholder';
+import { AD_BLOCK_IDS } from '@/lib/ads/config';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
@@ -101,7 +102,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </section>
 
       <div className="mx-auto max-w-7xl px-4 py-12 w-full">
-        <AdPlaceholder slot="cat-top" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.categoryTop} renderTo="yandex_rtb_R-A-99999999-5" size="leaderboard" className="mb-8" />
 
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Подкатегории</h2>
@@ -191,7 +192,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         )}
 
-        <AdPlaceholder slot="cat-bottom" size="rectangle" className="mt-8 mx-auto" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.categoryBottom} renderTo="yandex_rtb_R-A-99999999-6" size="rectangle" className="mt-8 mx-auto" />
       </div>
     </div>
   );
