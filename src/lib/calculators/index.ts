@@ -71,6 +71,7 @@ import { bmiCalculator, calorieCalculator, mortgageCalculator } from './addition
 import { tipsCalculators } from './tips-calculator';
 import { pomodoroCalculators } from './pomodoro-calculator';
 import { bakingFormCalculators } from './baking-form-calculator';
+import { remainingCalculators } from './remaining-calculators';
 
 export const simpleCalculator: Calculator = {
   id: 'simple-calculator',
@@ -286,6 +287,7 @@ export const calculators: Calculator[] = [
   bmiCalculator,
   calorieCalculator,
   mortgageCalculator,
+  ...remainingCalculators,
 ];
 
 const calculatorSlugMap = new Map<string, Calculator>(calculators.map(calc => [calc.slug, calc]));
