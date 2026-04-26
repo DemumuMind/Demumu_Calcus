@@ -106,20 +106,10 @@ const POPULAR_CATEGORIES = [
   'moshchnost', 'vremya', 'ugly',
 ];
 
-const POPULAR_VALUES = [
-  '1', '5', '10', '25', '50', '100', '200', '500', '1000', '10000',
-];
+const POPULAR_VALUES = ['1', '5', '10', '50', '100'];
 
 const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
 const OTHER_SIX = ['ploshchad', 'energiya', 'davlenie', 'moshchnost', 'vremya', 'ugly'];
-
-// TOP converter pairs for additional specific-value pages beyond the priority units
-const TOP_PAIRS: Record<string, Array<[string, string]>> = {
-  dlina: [['inch', 'cm'], ['cm', 'inch'], ['foot', 'm'], ['m', 'foot'], ['mile', 'km'], ['km', 'mile']],
-  massa: [['kg', 'g'], ['g', 'kg'], ['pound', 'kg'], ['kg', 'pound'], ['ounce', 'g'], ['g', 'ounce']],
-  temperatura: [['c', 'f'], ['f', 'c']],
-  skorost: [['kmh', 'ms'], ['ms', 'kmh'], ['mph', 'kmh'], ['kmh', 'mph']],
-};
 
 export function generateStaticParams() {
   const seen = new Set<string>();
@@ -134,16 +124,12 @@ export function generateStaticParams() {
   }
 
   Object.values(allUnitCategories).forEach((category) => {
-    // Skip niche categories for static generation
-    if (!POPULAR_CATEGORIES.includes(category.slug)) {
-      return;
-    }
-
+    if (!POPULAR_CATEGORIES.includes(category.slug)) return;
     const units = Object.keys(category.units);
 
     if (POPULAR_SIX.includes(category.slug)) {
-      // 5 priority units for popular categories, all 25 values
-      const priorityUnits = units.slice(0, 5);
+      // 3 priority units, 5 values
+      const priorityUnits = units.slice(0, 3);
       for (let i = 0; i < priorityUnits.length; i++) {
         for (let j = 0; j < priorityUnits.length; j++) {
           if (i !== j) {
@@ -155,9 +141,9 @@ export function generateStaticParams() {
         }
       }
     } else if (OTHER_SIX.includes(category.slug)) {
-      // 3 priority units for other categories, only first 10 values
-      const priorityUnits = units.slice(0, 3);
-      const shortValues = POPULAR_VALUES.slice(0, 10);
+      // 2 priority units, 3 values
+      const priorityUnits = units.slice(0, 2);
+      const shortValues = POPULAR_VALUES.slice(0, 3);
       for (let i = 0; i < priorityUnits.length; i++) {
         for (let j = 0; j < priorityUnits.length; j++) {
           if (i !== j) {
@@ -170,19 +156,6 @@ export function generateStaticParams() {
       }
     }
   });
-
-  // TOP converter pairs with all 25 values
-  for (const [catSlug, pairs] of Object.entries(TOP_PAIRS)) {
-    const category = Object.values(allUnitCategories).find(c => c.slug === catSlug);
-    if (!category) continue;
-    for (const [from, to] of pairs) {
-      if (!category.units[from] || !category.units[to]) continue;
-      add(catSlug, [from, 'v', to]);
-      for (const val of POPULAR_VALUES) {
-        add(catSlug, [val, from, 'v', to]);
-      }
-    }
-  }
 
   console.log(`Generated ${params.length} static converter pages`);
   return params;
