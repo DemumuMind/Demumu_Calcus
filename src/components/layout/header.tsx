@@ -5,8 +5,6 @@ import { Menu, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { SearchBox } from '@/components/search/search-box';
-import { HistoryPanel } from '@/components/history/calculation-history';
-import { UserMenu } from '@/components/auth/user-menu';
 import {
   Sheet,
   SheetContent,
@@ -29,9 +27,7 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-4">
           <SearchBox variant="icon" />
-          <HistoryPanel />
           <ThemeToggle />
-          <UserMenu />
 
           <Sheet>
             <SheetTrigger
@@ -82,7 +78,6 @@ export function Header() {
 
         <div className="flex md:hidden items-center gap-2">
           <SearchBox variant="icon" />
-          <HistoryPanel />
           <ThemeToggle />
           <Sheet>
             <SheetTrigger

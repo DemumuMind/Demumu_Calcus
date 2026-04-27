@@ -14,7 +14,6 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Calculator, Share2, Copy, Check, Send } from 'lucide-react';
-import { addToHistory } from '@/lib/history';
 
 interface FormulaCalculatorProps {
   calculator: CalcType;
@@ -104,35 +103,7 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
     }
   }, [inputs, calculator, handleCalculate]);
 
-  // Debounced history save — only save 2 seconds after results stabilize
-  useEffect(() => {
-    if (!calculated || results.length === 0) return;
 
-    const hasError = results.some(r => r.value === 'Ошибка вычисления');
-    if (hasError) return;
-
-    const hasEmptyInputs = calculator.inputs.some(
-      input => inputs[input.name] === '' || inputs[input.name] === undefined
-    );
-    if (hasEmptyInputs) return;
-
-    const timer = setTimeout(() => {
-      addToHistory({
-        calculatorSlug: calculator.slug,
-        calculatorTitle: calculator.title,
-        inputs: Object.fromEntries(
-          Object.entries(inputs).map(([k, v]) => [k, String(v)])
-        ),
-        results: results.map(r => ({ label: r.label, value: r.value })),
-        url: `/calc/${calculator.slug}?${new URLSearchParams(
-          Object.entries(inputs).map(([k, v]) => [k, String(v)])
-        ).toString()}`,
-      });
-      window.dispatchEvent(new Event('calcus-history-update'));
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [results, calculated, calculator, inputs]);
 
   return (
     <Card className="mb-8">

@@ -8,8 +8,7 @@ import { getCategoryStyle } from '@/lib/category-styles';
 import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
 import { AD_BLOCK_IDS } from '@/lib/ads/config';
-import { FavoriteButton } from '@/components/auth/favorite-button';
-import { SubscribeInline } from '@/components/subscribe/subscribe-inline';
+
 import {
   Accordion,
   AccordionContent,
@@ -199,21 +198,13 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
               <CategoryIcon className="h-7 w-7" />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h1 className="text-2xl font-bold text-foreground md:text-3xl">
-                    {calculator.title}
-                  </h1>
-                  <p className="text-sm text-muted-foreground">
-                    {category?.title} {subcategory && `• ${subcategory.title}`}
-                  </p>
-                </div>
-                <FavoriteButton
-                  calculatorSlug={calculator.slug}
-                  calculatorTitle={calculator.title}
-                  category={calculator.category}
-                  subcategory={calculator.subcategory}
-                />
+              <div>
+                <h1 className="text-2xl font-bold text-foreground md:text-3xl">
+                  {calculator.title}
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  {category?.title} {subcategory && `• ${subcategory.title}`}
+                </p>
               </div>
             </div>
           </div>

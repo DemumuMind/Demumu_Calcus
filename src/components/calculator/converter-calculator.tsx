@@ -14,7 +14,6 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Calculator, ArrowRightLeft } from 'lucide-react';
-import { addToHistory } from '@/lib/history';
 
 interface ConverterCalculatorProps {
   calculator: CalcType;
@@ -95,35 +94,7 @@ export function ConverterCalculator({ calculator, initialParams }: ConverterCalc
     }
   }, [inputs, calculator, handleCalculate]);
 
-  // Debounced history save
-  useEffect(() => {
-    if (!hasCalculated || results.length === 0) return;
 
-    const hasError = results.some(r => r.value === 'Ошибка вычисления');
-    if (hasError) return;
-
-    const hasEmptyInputs = calculator.inputs.some(
-      input => inputs[input.name] === '' || inputs[input.name] === undefined
-    );
-    if (hasEmptyInputs) return;
-
-    const timer = setTimeout(() => {
-      addToHistory({
-        calculatorSlug: calculator.slug,
-        calculatorTitle: calculator.title,
-        inputs: Object.fromEntries(
-          Object.entries(inputs).map(([k, v]) => [k, String(v)])
-        ),
-        results: results.map(r => ({ label: r.label, value: r.value })),
-        url: `/calc/${calculator.slug}?${new URLSearchParams(
-          Object.entries(inputs).map(([k, v]) => [k, String(v)])
-        ).toString()}`,
-      });
-      window.dispatchEvent(new Event('calcus-history-update'));
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, [results, hasCalculated, calculator, inputs]);
 
   const swapUnits = () => {
     if (!swappablePair) return;
