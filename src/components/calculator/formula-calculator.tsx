@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Calculator } from 'lucide-react';
+import { Calculator, Share2, Copy, Check, Send } from 'lucide-react';
 import { addToHistory } from '@/lib/history';
 
 interface FormulaCalculatorProps {
@@ -39,6 +39,44 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
 
   const [results, setResults] = useState<CalculationResult[]>([]);
   const [calculated, setCalculated] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const buildShareUrl = useCallback(() => {
+    const params = new URLSearchParams();
+    Object.entries(inputs).forEach(([key, value]) => {
+      if (value !== '' && value !== undefined) {
+        params.set(key, String(value));
+      }
+    });
+    const query = params.toString();
+    return `${window.location.origin}/calc/${calculator.slug}${query ? `?${query}` : ''}`;
+  }, [inputs, calculator.slug]);
+
+  const handleCopyUrl = useCallback(async () => {
+    const url = buildShareUrl();
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = url;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  }, [buildShareUrl]);
+
+  const handleShareTelegram = useCallback(() => {
+    const url = buildShareUrl();
+    const text = `Результат расчёта в ${calculator.title}`;
+    const tgUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+    window.open(tgUrl, '_blank', 'width=600,height=400');
+  }, [buildShareUrl, calculator.title]);
 
   const handleCalculate = useCallback(() => {
     try {
@@ -151,7 +189,7 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
         </Button>
 
         {calculated && results.length > 0 && (
-          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="calculator-result">
+          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-4 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="calculator-result">
             {results.map((result, index) => (
               <div key={index} className="text-center">
                 <p className="text-sm text-muted-foreground mb-1">{result.label}</p>
@@ -166,6 +204,40 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
                 )}
               </div>
             ))}
+
+            {/* Share results */}
+            <div className="pt-4 border-t border-primary/10">
+              <p className="text-xs text-muted-foreground mb-3 text-center">Поделиться результатом</p>
+              <div className="flex gap-2 justify-center">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleCopyUrl}
+                  className="gap-1.5"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-4 w-4 text-green-500" />
+                      <span>Скопировано</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-4 w-4" />
+                      <span>Скопировать ссылку</span>
+                    </>
+                  )}
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleShareTelegram}
+                  className="gap-1.5 bg-[#229ED9]/10 hover:bg-[#229ED9]/20 border-[#229ED9]/30"
+                >
+                  <Send className="h-4 w-4 text-[#229ED9]" />
+                  <span>Telegram</span>
+                </Button>
+              </div>
+            </div>
           </div>
         )}
       </CardContent>

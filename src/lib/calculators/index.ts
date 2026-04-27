@@ -72,6 +72,7 @@ import { tipsCalculators } from './tips-calculator';
 import { pomodoroCalculators } from './pomodoro-calculator';
 import { bakingFormCalculators } from './baking-form-calculator';
 import { remainingCalculators } from './remaining-calculators';
+import { nicheCalculators } from './niche-calculators';
 
 export const simpleCalculator: Calculator = {
   id: 'simple-calculator',
@@ -284,6 +285,7 @@ export const calculators: Calculator[] = [
   ...tipsCalculators,
   ...pomodoroCalculators,
   ...bakingFormCalculators,
+  ...nicheCalculators,
   bmiCalculator,
   calorieCalculator,
   mortgageCalculator,
