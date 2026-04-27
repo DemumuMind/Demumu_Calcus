@@ -8,6 +8,8 @@ import { getCategoryStyle } from '@/lib/category-styles';
 import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
 import { AD_BLOCK_IDS } from '@/lib/ads/config';
+import { FavoriteButton } from '@/components/auth/favorite-button';
+import { SubscribeInline } from '@/components/subscribe/subscribe-inline';
 import {
   Accordion,
   AccordionContent,
@@ -192,17 +194,27 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
 
       <article>
         <div className={`mb-8 rounded-2xl p-6 bg-gradient-to-br ${style.gradient} border ${style.borderColor}`}>
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-start gap-4 mb-4">
             <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${style.bgColor} ${style.color}`}>
               <CategoryIcon className="h-7 w-7" />
             </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground md:text-3xl">
-                {calculator.title}
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                {category?.title} {subcategory && `• ${subcategory.title}`}
-              </p>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <h1 className="text-2xl font-bold text-foreground md:text-3xl">
+                    {calculator.title}
+                  </h1>
+                  <p className="text-sm text-muted-foreground">
+                    {category?.title} {subcategory && `• ${subcategory.title}`}
+                  </p>
+                </div>
+                <FavoriteButton
+                  calculatorSlug={calculator.slug}
+                  calculatorTitle={calculator.title}
+                  category={calculator.category}
+                  subcategory={calculator.subcategory}
+                />
+              </div>
             </div>
           </div>
           <p className="text-muted-foreground leading-relaxed" data-testid="calculator-description">{calculator.description}</p>

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { SearchBox } from '@/components/search/search-box';
 import { HistoryPanel } from '@/components/history/calculation-history';
+import { UserMenu } from '@/components/auth/user-menu';
 import {
   Sheet,
   SheetContent,
@@ -30,7 +31,8 @@ export function Header() {
           <SearchBox variant="icon" />
           <HistoryPanel />
           <ThemeToggle />
-          
+          <UserMenu />
+
           <Sheet>
             <SheetTrigger
               data-testid="desktop-menu-toggle"
