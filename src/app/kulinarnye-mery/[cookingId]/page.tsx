@@ -91,6 +91,8 @@ export function generateStaticParams() {
   return params;
 }
 
+export const dynamicParams = false;
+
 export default async function CookingConverterPage({ params }: CookingConverterPageProps) {
   const { cookingId } = await params;
   const parsed = parseCookingSlug(cookingId);

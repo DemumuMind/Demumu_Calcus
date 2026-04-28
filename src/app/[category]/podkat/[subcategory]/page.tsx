@@ -164,3 +164,5 @@ export function generateStaticParams() {
   console.log(`Generated ${params.length} subcategory pages`);
   return params;
 }
+
+export const dynamicParams = false;

@@ -203,3 +203,5 @@ export function generateStaticParams() {
     category: category.slug,
   }));
 }
+
+export const dynamicParams = false;

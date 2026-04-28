@@ -25,6 +25,8 @@ export function generateStaticParams() {
   return holidays.map((h) => ({ holiday: h.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: HolidayPageProps): Promise<Metadata> {
   const { holiday: holidaySlug } = await params;
   const holiday = getHolidayBySlug(holidaySlug);

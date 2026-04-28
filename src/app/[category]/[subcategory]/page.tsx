@@ -15,6 +15,8 @@ export function generateStaticParams() {
   return params;
 }
 
+export const dynamicParams = false;
+
 interface RedirectPageProps {
   params: Promise<{ category: string; subcategory: string }>;
 }
