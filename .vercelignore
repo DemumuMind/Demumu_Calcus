@@ -12,3 +12,6 @@ ts-check.log
 ts-output.log
 tsc-output.log
 vitest.config.ts
+tmp-analysis
+.planning
+scripts

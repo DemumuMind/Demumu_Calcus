@@ -5,13 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { BottomNav } from "@/components/mobile/bottom-nav";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AnalyticsProvider } from "@/components/analytics-provider";
 import { PwaProvider } from "@/components/pwa-provider";
 import { calculators } from "@/lib/calculators";
-
-const isDevelopment = process.env.NODE_ENV === "development";
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -72,14 +68,12 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
         <AnalyticsProvider />
         <PwaProvider />
         {process.env.NODE_ENV !== 'development' && (
           <Script
             id="yandex-rtb"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             src="https://an.yandex.ru/system/context.js"
           />
         )}

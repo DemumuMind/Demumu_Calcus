@@ -1,5 +1,3 @@
-import Script from 'next/script';
-
 interface SchemaInjectorProps {
   schemas: object | object[];
 }
@@ -10,12 +8,11 @@ export function SchemaInjector({ schemas }: SchemaInjectorProps) {
   return (
     <>
       {schemaArray.map((schema, index) => (
-        <Script
+        <script
           key={index}
           id={`schema-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          strategy="lazyOnload"
         />
       ))}
     </>

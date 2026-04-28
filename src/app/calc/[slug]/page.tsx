@@ -1,13 +1,11 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import Script from 'next/script';
 import { Calculator as CalculatorType } from '@/lib/types';
 import { categories } from '@/lib/categories';
 import { calculators, getCalculatorBySlug, getCalculatorsByCategory, getCalculatorsBySubcategory } from '@/lib/calculators';
 import { getCategoryStyle } from '@/lib/category-styles';
 import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
-import { AD_BLOCK_IDS } from '@/lib/ads/config';
 import { TableOfContents } from '@/components/table-of-contents';
 
 import {
@@ -137,12 +135,11 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
   return (
     <div className="mx-auto max-w-4xl px-4 py-6">
       {schemas.map((schema, index) => (
-        <Script
+        <script
           key={index}
           id={`schema-calc-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          strategy="lazyOnload"
         />
       ))}
 
@@ -214,13 +211,13 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           <p className="text-muted-foreground leading-relaxed" data-testid="calculator-description">{calculator.description}</p>
         </div>
 
-        <YandexAdBlock blockId={AD_BLOCK_IDS.calcTop} renderTo="yandex_rtb_R-A-99999999-3" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId="R-A-99999999-3" renderTo="yandex_rtb_R-A-99999999-3" size="leaderboard" className="mb-8" />
 
         <div className="mb-8">
           <CalculatorClientWrapper slug={calculator.slug} type={calculator.type} />
         </div>
 
-        <YandexAdBlock blockId={AD_BLOCK_IDS.calcBottom} renderTo="yandex_rtb_R-A-99999999-4" size="rectangle" className="mb-8 mx-auto" />
+        <YandexAdBlock blockId="R-A-99999999-4" renderTo="yandex_rtb_R-A-99999999-4" size="rectangle" className="mb-8 mx-auto" />
 
         <div id="how-to" className="mb-8">
           <div className="flex items-center gap-2 mb-4">
