@@ -78,7 +78,7 @@ export function SearchBox({ variant = 'full', onOpen }: SearchBoxProps) {
       closeSearch();
     }
     if (e.key === 'Enter' && searchResults.calculators.length > 0) {
-      router.push(`/calc/${searchResults.calculators[0].slug}`);
+      router.push(`/${searchResults.calculators[0].slug}`);
       closeSearch();
     }
   }, [searchResults.calculators, router, closeSearch]);
@@ -178,7 +178,7 @@ export function SearchBox({ variant = 'full', onOpen }: SearchBoxProps) {
                           return (
                             <Link
                               key={calc.id}
-                              href={`/calc/${calc.slug}`}
+                              href={`/${calc.slug}`}
                               onClick={closeSearch}
                               className="flex items-center gap-3 rounded-lg p-3 hover:bg-accent transition-colors"
                             >
@@ -305,7 +305,7 @@ export function SearchBox({ variant = 'full', onOpen }: SearchBoxProps) {
                         return (
                           <Link
                             key={calc.id}
-                            href={`/calc/${calc.slug}`}
+                            href={`/${calc.slug}`}
                             onClick={closeSearch}
                             className="flex items-center gap-3 rounded-lg p-3 hover:bg-accent transition-colors"
                           >

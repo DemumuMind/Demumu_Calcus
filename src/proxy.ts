@@ -18,7 +18,7 @@ export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   if (
-    pathname.startsWith('/calc/') ||
+    pathname.startsWith('/') ||
     pathname.startsWith('/api/') ||
     pathname.startsWith('/_next/') ||
     pathname.startsWith('/static/') ||
@@ -41,7 +41,7 @@ export function proxy(request: NextRequest) {
   }
 
   if (calculatorSlugSet.has(slug)) {
-    return NextResponse.rewrite(new URL(`/calc/${slug}`, request.url));
+    return NextResponse.rewrite(new URL(`/${slug}`, request.url));
   }
 
   return NextResponse.next();

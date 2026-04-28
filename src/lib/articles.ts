@@ -84,13 +84,13 @@ export const additionalArticles: Article[] = [
     ],
     cta: {
       text: 'Рассчитайте свой кредит с графиком платежей и переплатой',
-      link: '/calc/kreditnyj-kalkulyator',
+      link: '/kreditnyj-kalkulyator',
       linkText: 'Кредитный калькулятор',
     },
     relatedLinks: [
-      { title: 'Калькулятор ипотеки', href: '/calc/ipotechnyj-kalkulyator' },
-      { title: 'Калькулятор рефинансирования', href: '/calc/kalkulyator-refinansirovaniya' },
-      { title: 'Калькулятор досрочного погашения', href: '/calc/dosrochnoe-pogashenie' },
+      { title: 'Калькулятор ипотеки', href: '/ipotechnyj-kalkulyator' },
+      { title: 'Калькулятор рефинансирования', href: '/kalkulyator-refinansirovaniya' },
+      { title: 'Калькулятор досрочного погашения', href: '/dosrochnoe-pogashenie' },
     ],
   },
   {
@@ -159,8 +159,8 @@ export const additionalArticles: Article[] = [
     },
     relatedLinks: [
       { title: 'Как рассчитать проценты — подробная статья', href: '/stati/kak-rasschitat-procenty' },
-      { title: 'Калькулятор НДС', href: '/calc/kalkulyator-nds' },
-      { title: 'Калькулятор чаевых', href: '/calc/kalkulyator-chaevyh' },
+      { title: 'Калькулятор НДС', href: '/kalkulyator-nds' },
+      { title: 'Калькулятор чаевых', href: '/kalkulyator-chaevyh' },
     ],
   },
   {
@@ -294,12 +294,12 @@ export const additionalArticles: Article[] = [
     ],
     cta: {
       text: 'Рассчитайте налоги и зарплату для вашего бизнеса',
-      link: '/calc/kalkulyator-nds',
+      link: '/kalkulyator-nds',
       linkText: 'Калькулятор НДС',
     },
     relatedLinks: [
-      { title: 'Кредитный калькулятор', href: '/calc/kreditnyj-kalkulyator' },
-      { title: 'Калькулятор неустойки 395 ГК РФ', href: '/calc/neustojka-395-gk' },
+      { title: 'Кредитный калькулятор', href: '/kreditnyj-kalkulyator' },
+      { title: 'Калькулятор неустойки 395 ГК РФ', href: '/neustojka-395-gk' },
       { title: 'Калькулятор процентов', href: '/procenty' },
     ],
   },
@@ -364,12 +364,12 @@ export const additionalArticles: Article[] = [
     ],
     cta: {
       text: 'Рассчитайте свою норму калорий и КБЖУ',
-      link: '/calc/kalkulyator-kalorij-kbzhu',
+      link: '/kalkulyator-kalorij-kbzhu',
       linkText: 'Калькулятор КБЖУ',
     },
     relatedLinks: [
-      { title: 'Калькулятор ИМТ', href: '/calc/kalkulyator-imt' },
-      { title: 'Калькулятор нормы воды', href: '/calc/norma-vody' },
+      { title: 'Калькулятор ИМТ', href: '/kalkulyator-imt' },
+      { title: 'Калькулятор нормы воды', href: '/norma-vody' },
       { title: 'Как рассчитать ИМТ', href: '/stati/kak-rasschitat-imt' },
     ],
   },
@@ -437,12 +437,12 @@ export const articles: Article[] = [
     ],
     cta: {
       text: 'Рассчитайте свой ИМТ прямо сейчас — просто введите вес и рост.',
-      link: '/calc/kalkulyator-imt',
+      link: '/kalkulyator-imt',
       linkText: 'Калькулятор ИМТ',
     },
     relatedLinks: [
-      { title: 'Калькулятор идеального веса', href: '/calc/idealnyj-ves' },
-      { title: 'Калькулятор калорий (КБЖУ)', href: '/calc/kalkulyator-kalorij-kbzhu' },
+      { title: 'Калькулятор идеального веса', href: '/idealnyj-ves' },
+      { title: 'Калькулятор калорий (КБЖУ)', href: '/kalkulyator-kalorij-kbzhu' },
       { title: 'Конвертер единиц массы', href: '/konvertery/massa' },
     ],
   },
@@ -517,9 +517,9 @@ export const articles: Article[] = [
       linkText: 'Калькулятор процентов',
     },
     relatedLinks: [
-      { title: 'Калькулятор НДС', href: '/calc/kalkulyator-nds' },
-      { title: 'Кредитный калькулятор', href: '/calc/kreditnyj-kalkulyator' },
-      { title: 'Простой калькулятор', href: '/calc/prostoj-kalkulyator' },
+      { title: 'Калькулятор НДС', href: '/kalkulyator-nds' },
+      { title: 'Кредитный калькулятор', href: '/kreditnyj-kalkulyator' },
+      { title: 'Простой калькулятор', href: '/prostoj-kalkulyator' },
     ],
   },
 
@@ -652,13 +652,13 @@ export const articles: Article[] = [
     ],
     cta: {
       text: 'Рассчитайте кредит с графиком платежей и переплатой за секунды.',
-      link: '/calc/kreditnyj-kalkulyator',
+      link: '/kreditnyj-kalkulyator',
       linkText: 'Кредитный калькулятор',
     },
     relatedLinks: [
-      { title: 'Калькулятор ипотеки', href: '/calc/ipotechnyj-kalkulyator' },
+      { title: 'Калькулятор ипотеки', href: '/ipotechnyj-kalkulyator' },
       { title: 'Калькулятор процентов', href: '/procenty' },
-      { title: 'Калькулятор вкладов', href: '/calc/kalkulyator-vkladov' },
+      { title: 'Калькулятор вкладов', href: '/kalkulyator-vkladov' },
     ],
   },
 
@@ -722,13 +722,13 @@ export const articles: Article[] = [
     ],
     cta: {
       text: 'Выделяйте и начисляйте НДС мгновенно — без ошибок и сложных формул.',
-      link: '/calc/kalkulyator-nds',
+      link: '/kalkulyator-nds',
       linkText: 'Калькулятор НДС',
     },
     relatedLinks: [
       { title: 'Калькулятор процентов', href: '/procenty' },
-      { title: 'Простой калькулятор', href: '/calc/prostoj-kalkulyator' },
-      { title: 'Кредитный калькулятор', href: '/calc/kreditnyj-kalkulyator' },
+      { title: 'Простой калькулятор', href: '/prostoj-kalkulyator' },
+      { title: 'Кредитный калькулятор', href: '/kreditnyj-kalkulyator' },
     ],
   },
 
@@ -796,7 +796,7 @@ export const articles: Article[] = [
     relatedLinks: [
       { title: 'Конвертер массы', href: '/konvertery/massa' },
       { title: 'Конвертер объёма', href: '/konvertery/obem' },
-      { title: 'Калькулятор калорий', href: '/calc/kalkulyator-kalorij-kbzhu' },
+      { title: 'Калькулятор калорий', href: '/kalkulyator-kalorij-kbzhu' },
     ],
   },
 ];

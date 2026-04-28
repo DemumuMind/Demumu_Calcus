@@ -89,10 +89,10 @@ export const tipsCalculator: Calculator = {
     updatedAt: '2026-04-26',
   },
   popularCalculations: [
-    { value: '2000 + 10%', url: '/calc/kalkulyator-chaevyh?billAmount=2000&tipPercent=10&peopleCount=1' },
-    { value: '3000 + 15% на двоих', url: '/calc/kalkulyator-chaevyh?billAmount=3000&tipPercent=15&peopleCount=2' },
-    { value: '5000 + 20% на четверых', url: '/calc/kalkulyator-chaevyh?billAmount=5000&tipPercent=20&peopleCount=4' },
-    { value: '1000 без чаевых', url: '/calc/kalkulyator-chaevyh?billAmount=1000&tipPercent=0&peopleCount=1' },
+    { value: '2000 + 10%', url: '/kalkulyator-chaevyh?billAmount=2000&tipPercent=10&peopleCount=1' },
+    { value: '3000 + 15% на двоих', url: '/kalkulyator-chaevyh?billAmount=3000&tipPercent=15&peopleCount=2' },
+    { value: '5000 + 20% на четверых', url: '/kalkulyator-chaevyh?billAmount=5000&tipPercent=20&peopleCount=4' },
+    { value: '1000 без чаевых', url: '/kalkulyator-chaevyh?billAmount=1000&tipPercent=0&peopleCount=1' },
   ],
 };
 

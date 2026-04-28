@@ -132,10 +132,10 @@ export const bakingFormCalculator: Calculator = {
     updatedAt: '2026-04-26',
   },
   popularCalculations: [
-    { value: 'Круг Ø24 → Круг Ø20', url: '/calc/kalkulyator-formy-dlya-vypechki?originalShape=round24&targetShape=round20&ingredientAmount=200' },
-    { value: 'Круг Ø24 → Прямоуг. 20×30', url: '/calc/kalkulyator-formy-dlya-vypechki?originalShape=round24&targetShape=rect20x30&ingredientAmount=200' },
-    { value: 'Квадрат 20×20 → Круг Ø22', url: '/calc/kalkulyator-formy-dlya-vypechki?originalShape=square20&targetShape=round22&ingredientAmount=300' },
-    { value: 'Круг Ø26 → Квадрат 22×22', url: '/calc/kalkulyator-formy-dlya-vypechki?originalShape=round26&targetShape=square22&ingredientAmount=250' },
+    { value: 'Круг Ø24 → Круг Ø20', url: '/kalkulyator-formy-dlya-vypechki?originalShape=round24&targetShape=round20&ingredientAmount=200' },
+    { value: 'Круг Ø24 → Прямоуг. 20×30', url: '/kalkulyator-formy-dlya-vypechki?originalShape=round24&targetShape=rect20x30&ingredientAmount=200' },
+    { value: 'Квадрат 20×20 → Круг Ø22', url: '/kalkulyator-formy-dlya-vypechki?originalShape=square20&targetShape=round22&ingredientAmount=300' },
+    { value: 'Круг Ø26 → Квадрат 22×22', url: '/kalkulyator-formy-dlya-vypechki?originalShape=round26&targetShape=square22&ingredientAmount=250' },
   ],
 };
 

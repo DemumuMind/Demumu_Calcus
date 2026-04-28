@@ -6,8 +6,8 @@ export const vatCalculator: Calculator = {
   slug: 'kalkulyator-nds',
   title: 'Калькулятор НДС',
   description: 'Расчёт НДС: выделить из суммы или начислить на сумму',
-  category: 'nauka-i-ucheba',
-  subcategory: 'finansovye',
+  category: 'finansy',
+  subcategory: 'kredity',
   type: 'formula',
   inputs: [
     {
@@ -104,8 +104,8 @@ export const loanCalculator: Calculator = {
   slug: 'kreditnyj-kalkulyator',
   title: 'Кредитный калькулятор',
   description: 'Расчёт ежемесячного платежа, переплаты и общей суммы',
-  category: 'nauka-i-ucheba',
-  subcategory: 'finansovye',
+  category: 'finansy',
+  subcategory: 'kredity',
   type: 'formula',
   inputs: [
     {
@@ -223,8 +223,8 @@ export const depositCalculator: Calculator = {
   slug: 'kalkulyator-vklada',
   title: 'Калькулятор вклада',
   description: 'Расчёт дохода по банковскому вкладу с капитализацией',
-  category: 'nauka-i-ucheba',
-  subcategory: 'finansovye',
+  category: 'finansy',
+  subcategory: 'kredity',
   type: 'formula',
   inputs: [
     {
@@ -347,8 +347,8 @@ export const compoundInterestCalculator: Calculator = {
   slug: 'slozhnyj-procent',
   title: 'Сложный процент',
   description: 'Расчёт итоговой суммы при сложном проценте с ежемесячным пополнением',
-  category: 'nauka-i-ucheba',
-  subcategory: 'finansovye',
+  category: 'finansy',
+  subcategory: 'kredity',
   type: 'formula',
   inputs: [
     {

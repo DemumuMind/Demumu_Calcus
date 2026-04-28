@@ -140,10 +140,10 @@ export const pomodoroCalculator: Calculator = {
     updatedAt: '2026-04-26',
   },
   popularCalculations: [
-    { value: 'Классика: 8ч, 25/5, перерыв 15', url: '/calc/pomodoro-taymer?workHours=8&pomodoroMinutes=25&breakMinutes=5&longBreakAfter=4&longBreakMinutes=15' },
-    { value: 'Глубокая работа: 8ч, 45/10', url: '/calc/pomodoro-taymer?workHours=8&pomodoroMinutes=45&breakMinutes=10&longBreakAfter=4&longBreakMinutes=20' },
-    { value: '52/17: 8ч, 52/17, перерыв 30', url: '/calc/pomodoro-taymer?workHours=8&pomodoroMinutes=52&breakMinutes=17&longBreakAfter=4&longBreakMinutes=30' },
-    { value: 'Короткий день: 4ч, 25/5', url: '/calc/pomodoro-taymer?workHours=4&pomodoroMinutes=25&breakMinutes=5&longBreakAfter=4&longBreakMinutes=15' },
+    { value: 'Классика: 8ч, 25/5, перерыв 15', url: '/pomodoro-taymer?workHours=8&pomodoroMinutes=25&breakMinutes=5&longBreakAfter=4&longBreakMinutes=15' },
+    { value: 'Глубокая работа: 8ч, 45/10', url: '/pomodoro-taymer?workHours=8&pomodoroMinutes=45&breakMinutes=10&longBreakAfter=4&longBreakMinutes=20' },
+    { value: '52/17: 8ч, 52/17, перерыв 30', url: '/pomodoro-taymer?workHours=8&pomodoroMinutes=52&breakMinutes=17&longBreakAfter=4&longBreakMinutes=30' },
+    { value: 'Короткий день: 4ч, 25/5', url: '/pomodoro-taymer?workHours=4&pomodoroMinutes=25&breakMinutes=5&longBreakAfter=4&longBreakMinutes=15' },
   ],
 };
 

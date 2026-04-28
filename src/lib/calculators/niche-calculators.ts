@@ -142,11 +142,11 @@ export const chessClockCalculator: Calculator = {
     updatedAt: '2026-04-27'
   },
   popularCalculations: [
-    { value: 'Блиц 3+0', url: '/calc/shakhmatnye-chasy?mode=blitz3&increment=0&delayType=none' },
-    { value: 'Блиц 3+2', url: '/calc/shakhmatnye-chasy?mode=blitz3&increment=2&delayType=increment' },
-    { value: 'Рапид 10+0', url: '/calc/shakhmatnye-chasy?mode=rapid10&increment=0&delayType=none' },
-    { value: 'Рапид 15+10', url: '/calc/shakhmatnye-chasy?mode=rapid15&increment=10&delayType=increment' },
-    { value: 'Классика 90+30', url: '/calc/shakhmatnye-chasy?mode=classical90&increment=30&delayType=increment' }
+    { value: 'Блиц 3+0', url: '/shakhmatnye-chasy?mode=blitz3&increment=0&delayType=none' },
+    { value: 'Блиц 3+2', url: '/shakhmatnye-chasy?mode=blitz3&increment=2&delayType=increment' },
+    { value: 'Рапид 10+0', url: '/shakhmatnye-chasy?mode=rapid10&increment=0&delayType=none' },
+    { value: 'Рапид 15+10', url: '/shakhmatnye-chasy?mode=rapid15&increment=10&delayType=increment' },
+    { value: 'Классика 90+30', url: '/shakhmatnye-chasy?mode=classical90&increment=30&delayType=increment' }
   ]
 }
 
@@ -290,10 +290,10 @@ export const morseCodeCalculator: Calculator = {
     updatedAt: '2026-04-27'
   },
   popularCalculations: [
-    { value: 'SOS в Морзе', url: '/calc/azbuka-morze?direction=textToMorse&input=SOS&speed=normal' },
-    { value: 'Помощь в Морзе', url: '/calc/azbuka-morze?direction=textToMorse&input=Помощь&speed=normal' },
-    { value: 'Love в Морзе', url: '/calc/azbuka-morze?direction=textToMorse&input=Love&speed=normal' },
-    { value: '... --- ... в текст', url: '/calc/azbuka-morze?direction=morseToText&input=...+---+...&speed=normal' }
+    { value: 'SOS в Морзе', url: '/azbuka-morze?direction=textToMorse&input=SOS&speed=normal' },
+    { value: 'Помощь в Морзе', url: '/azbuka-morze?direction=textToMorse&input=Помощь&speed=normal' },
+    { value: 'Love в Морзе', url: '/azbuka-morze?direction=textToMorse&input=Love&speed=normal' },
+    { value: '... --- ... в текст', url: '/azbuka-morze?direction=morseToText&input=...+---+...&speed=normal' }
   ]
 }
 
@@ -493,10 +493,10 @@ export const colorModelConverter: Calculator = {
     updatedAt: '2026-04-27'
   },
   popularCalculations: [
-    { value: 'Красный #FF0000', url: '/calc/konverter-cvetovyh-modelej?inputFormat=hex&hexInput=%23FF0000' },
-    { value: 'Зелёный #00FF00', url: '/calc/konverter-cvetovyh-modelej?inputFormat=hex&hexInput=%2300FF00' },
-    { value: 'Синий #0000FF', url: '/calc/konverter-cvetovyh-modelej?inputFormat=hex&hexInput=%230000FF' },
-    { value: 'Оранжевый HSL 30,100,50', url: '/calc/konverter-cvetovyh-modelej?inputFormat=hsl&hslH=30&hslS=100&hslL=50' }
+    { value: 'Красный #FF0000', url: '/konverter-cvetovyh-modelej?inputFormat=hex&hexInput=%23FF0000' },
+    { value: 'Зелёный #00FF00', url: '/konverter-cvetovyh-modelej?inputFormat=hex&hexInput=%2300FF00' },
+    { value: 'Синий #0000FF', url: '/konverter-cvetovyh-modelej?inputFormat=hex&hexInput=%230000FF' },
+    { value: 'Оранжевый HSL 30,100,50', url: '/konverter-cvetovyh-modelej?inputFormat=hsl&hslH=30&hslS=100&hslL=50' }
   ]
 }
 
@@ -637,10 +637,10 @@ export const timezoneConverter: Calculator = {
     updatedAt: '2026-04-27'
   },
   popularCalculations: [
-    { value: 'Москва → Нью-Йорк', url: '/calc/konverter-chasovyh-poyasov?fromCity=Moscow&toCity=NewYork&localTime=12:00' },
-    { value: 'Москва → Токио', url: '/calc/konverter-chasovyh-poyasov?fromCity=Moscow&toCity=Tokyo&localTime=12:00' },
-    { value: 'Москва → Лондон', url: '/calc/konverter-chasovyh-poyasov?fromCity=Moscow&toCity=London&localTime=12:00' },
-    { value: 'Нью-Йорк → Пекин', url: '/calc/konverter-chasovyh-poyasov?fromCity=NewYork&toCity=Beijing&localTime=12:00' }
+    { value: 'Москва → Нью-Йорк', url: '/konverter-chasovyh-poyasov?fromCity=Moscow&toCity=NewYork&localTime=12:00' },
+    { value: 'Москва → Токио', url: '/konverter-chasovyh-poyasov?fromCity=Moscow&toCity=Tokyo&localTime=12:00' },
+    { value: 'Москва → Лондон', url: '/konverter-chasovyh-poyasov?fromCity=Moscow&toCity=London&localTime=12:00' },
+    { value: 'Нью-Йорк → Пекин', url: '/konverter-chasovyh-poyasov?fromCity=NewYork&toCity=Beijing&localTime=12:00' }
   ]
 }
 
@@ -808,10 +808,10 @@ export const childGrowthCalculator: Calculator = {
     updatedAt: '2026-04-27'
   },
   popularCalculations: [
-    { value: 'Мальчик 2 года, 90см, 13кг', url: '/calc/kalkulyator-rosta-rebenka?ageMonths=24&gender=boy&heightCm=90&weightKg=13' },
-    { value: 'Девочка 2 года, 88см, 12кг', url: '/calc/kalkulyator-rosta-rebenka?ageMonths=24&gender=girl&heightCm=88&weightKg=12' },
-    { value: 'Мальчик 5 лет, 110см, 18кг', url: '/calc/kalkulyator-rosta-rebenka?ageMonths=60&gender=boy&heightCm=110&weightKg=18' },
-    { value: 'Девочка 5 лет, 108см, 17кг', url: '/calc/kalkulyator-rosta-rebenka?ageMonths=60&gender=girl&heightCm=108&weightKg=17' }
+    { value: 'Мальчик 2 года, 90см, 13кг', url: '/kalkulyator-rosta-rebenka?ageMonths=24&gender=boy&heightCm=90&weightKg=13' },
+    { value: 'Девочка 2 года, 88см, 12кг', url: '/kalkulyator-rosta-rebenka?ageMonths=24&gender=girl&heightCm=88&weightKg=12' },
+    { value: 'Мальчик 5 лет, 110см, 18кг', url: '/kalkulyator-rosta-rebenka?ageMonths=60&gender=boy&heightCm=110&weightKg=18' },
+    { value: 'Девочка 5 лет, 108см, 17кг', url: '/kalkulyator-rosta-rebenka?ageMonths=60&gender=girl&heightCm=108&weightKg=17' }
   ]
 }
 

@@ -86,7 +86,7 @@ const FEATURED_BLOCKS = [
 function MiniCalcCard({ calc }: { calc: { slug: string; title: string; desc: string; icon: React.ElementType; color: string } }) {
   const Icon = calc.icon;
   return (
-    <Link href={`/calc/${calc.slug}`}>
+    <Link href={`/${calc.slug}`}>
       <Card className="group h-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer border hover:border-primary/20">
         <CardHeader className="pb-2">
           <div className="flex items-center gap-3">
@@ -143,7 +143,7 @@ function FeaturedBlock({
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {calcs.map((calc) => (
-          <Link key={calc.slug} href={`/calc/${calc.slug}`}>
+          <Link key={calc.slug} href={`/${calc.slug}`}>
             <Card className="group h-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer border hover:border-primary/20">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm group-hover:text-primary transition-colors line-clamp-1">

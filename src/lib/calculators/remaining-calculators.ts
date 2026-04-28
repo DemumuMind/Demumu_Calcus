@@ -102,9 +102,9 @@ export const stepsToDistanceCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: '10 000 шагов при росте 170 см', url: '/calc/shagi-v-kilometry?steps=10000&height=170&gender=male' },
-    { value: '5 000 шагов при росте 160 см', url: '/calc/shagi-v-kilometry?steps=5000&height=160&gender=female' },
-    { value: '15 000 шагов при росте 180 см', url: '/calc/shagi-v-kilometry?steps=15000&height=180&gender=male' }
+    { value: '10 000 шагов при росте 170 см', url: '/shagi-v-kilometry?steps=10000&height=170&gender=male' },
+    { value: '5 000 шагов при росте 160 см', url: '/shagi-v-kilometry?steps=5000&height=160&gender=female' },
+    { value: '15 000 шагов при росте 180 см', url: '/shagi-v-kilometry?steps=15000&height=180&gender=male' }
   ]
 }
 
@@ -190,9 +190,9 @@ export const sleepCyclesCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Лечь в 23:00, засыпать 15 мин', url: '/calc/tsikly-sna?bedtime=23:00&fallAsleepMinutes=15' },
-    { value: 'Лечь в 22:30, засыпать 10 мин', url: '/calc/tsikly-sna?bedtime=22:30&fallAsleepMinutes=10' },
-    { value: 'Лечь в 00:00, засыпать 20 мин', url: '/calc/tsikly-sna?bedtime=00:00&fallAsleepMinutes=20' }
+    { value: 'Лечь в 23:00, засыпать 15 мин', url: '/tsikly-sna?bedtime=23:00&fallAsleepMinutes=15' },
+    { value: 'Лечь в 22:30, засыпать 10 мин', url: '/tsikly-sna?bedtime=22:30&fallAsleepMinutes=10' },
+    { value: 'Лечь в 00:00, засыпать 20 мин', url: '/tsikly-sna?bedtime=00:00&fallAsleepMinutes=20' }
   ]
 }
 
@@ -305,9 +305,9 @@ export const waterIntakeCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Вес 70 кг, средняя активность', url: '/calc/norma-vody?weight=70&activity=moderate&climate=cold' },
-    { value: 'Вес 55 кг, высокая активность', url: '/calc/norma-vody?weight=55&activity=high&climate=warm' },
-    { value: 'Вес 90 кг, сидячий образ', url: '/calc/norma-vody?weight=90&activity=low&climate=cold' }
+    { value: 'Вес 70 кг, средняя активность', url: '/norma-vody?weight=70&activity=moderate&climate=cold' },
+    { value: 'Вес 55 кг, высокая активность', url: '/norma-vody?weight=55&activity=high&climate=warm' },
+    { value: 'Вес 90 кг, сидячий образ', url: '/norma-vody?weight=90&activity=low&climate=cold' }
   ]
 }
 
@@ -396,9 +396,9 @@ export const brineSaltCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: '1 литр рассола 3%', url: '/calc/rassol-sol?totalWeight=1000&salinity=3' },
-    { value: '2 литра рассола 5%', url: '/calc/rassol-sol?totalWeight=2000&salinity=5' },
-    { value: '1,5 литра рассола 8%', url: '/calc/rassol-sol?totalWeight=1500&salinity=8' }
+    { value: '1 литр рассола 3%', url: '/rassol-sol?totalWeight=1000&salinity=3' },
+    { value: '2 литра рассола 5%', url: '/rassol-sol?totalWeight=2000&salinity=5' },
+    { value: '1,5 литра рассола 8%', url: '/rassol-sol?totalWeight=1500&salinity=8' }
   ]
 }
 
@@ -500,9 +500,9 @@ export const gpaCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Оценки 4,5,5,3,4 (5-балльная)', url: '/calc/srednij-ball-gpa?scale=5&grades=4,5,5,3,4' },
-    { value: 'Оценки 8,9,7,10 (10-балльная)', url: '/calc/srednij-ball-gpa?scale=10&grades=8,9,7,10' },
-    { value: 'Оценки 10,11,9,12 (12-балльная)', url: '/calc/srednij-ball-gpa?scale=12&grades=10,11,9,12' }
+    { value: 'Оценки 4,5,5,3,4 (5-балльная)', url: '/srednij-ball-gpa?scale=5&grades=4,5,5,3,4' },
+    { value: 'Оценки 8,9,7,10 (10-балльная)', url: '/srednij-ball-gpa?scale=10&grades=8,9,7,10' },
+    { value: 'Оценки 10,11,9,12 (12-балльная)', url: '/srednij-ball-gpa?scale=12&grades=10,11,9,12' }
   ]
 }
 
@@ -630,8 +630,8 @@ export const wallpaperCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Комната 16 м периметр, потолок 2,7 м', url: '/calc/oboi-kalkulyator?perimeter=16&height=2.7&rollWidth=0.53&rollLength=10&patternRepeat=0' },
-    { value: 'Комната 20 м, потолок 3 м, раппорт 32 см', url: '/calc/oboi-kalkulyator?perimeter=20&height=3&rollWidth=0.53&rollLength=10&patternRepeat=32' }
+    { value: 'Комната 16 м периметр, потолок 2,7 м', url: '/oboi-kalkulyator?perimeter=16&height=2.7&rollWidth=0.53&rollLength=10&patternRepeat=0' },
+    { value: 'Комната 20 м, потолок 3 м, раппорт 32 см', url: '/oboi-kalkulyator?perimeter=20&height=3&rollWidth=0.53&rollLength=10&patternRepeat=32' }
   ]
 }
 
@@ -739,8 +739,8 @@ export const tileCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Ванная 8 м², плитка 30×30 см', url: '/calc/plitka-kalkulyator?area=8&tileWidth=30&tileHeight=30&reservePercent=10' },
-    { value: 'Кухня 12 м², плитка 60×60 см', url: '/calc/plitka-kalkulyator?area=12&tileWidth=60&tileHeight=60&reservePercent=10' }
+    { value: 'Ванная 8 м², плитка 30×30 см', url: '/plitka-kalkulyator?area=8&tileWidth=30&tileHeight=30&reservePercent=10' },
+    { value: 'Кухня 12 м², плитка 60×60 см', url: '/plitka-kalkulyator?area=12&tileWidth=60&tileHeight=60&reservePercent=10' }
   ]
 }
 
@@ -852,8 +852,8 @@ export const paintCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Комната 40 м² стен + 16 м² потолка, 2 слоя', url: '/calc/kraska-raskhod?wallArea=40&ceilingArea=16&consumption=10&coats=2&canVolume=2.5' },
-    { value: 'Стены 25 м², 1 слой, банки 5 л', url: '/calc/kraska-raskhod?wallArea=25&ceilingArea=0&consumption=12&coats=1&canVolume=5' }
+    { value: 'Комната 40 м² стен + 16 м² потолка, 2 слоя', url: '/kraska-raskhod?wallArea=40&ceilingArea=16&consumption=10&coats=2&canVolume=2.5' },
+    { value: 'Стены 25 м², 1 слой, банки 5 л', url: '/kraska-raskhod?wallArea=25&ceilingArea=0&consumption=12&coats=1&canVolume=5' }
   ]
 }
 
@@ -963,8 +963,8 @@ export const laminateCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Комната 5×4 м, упаковка 2,4 м²', url: '/calc/laminat-kalkulyator?roomLength=5&roomWidth=4&packageArea=2.4&reservePercent=10' },
-    { value: 'Комната 6×3 м, упаковка 1,8 м²', url: '/calc/laminat-kalkulyator?roomLength=6&roomWidth=3&packageArea=1.8&reservePercent=10' }
+    { value: 'Комната 5×4 м, упаковка 2,4 м²', url: '/laminat-kalkulyator?roomLength=5&roomWidth=4&packageArea=2.4&reservePercent=10' },
+    { value: 'Комната 6×3 м, упаковка 1,8 м²', url: '/laminat-kalkulyator?roomLength=6&roomWidth=3&packageArea=1.8&reservePercent=10' }
   ]
 }
 
@@ -1087,8 +1087,8 @@ export const movingCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: '2-комнатная, холодильник, 50 км', url: '/calc/pereezd-kalkulyator?rooms=2&extraItems=fridge&distance=50' },
-    { value: '3-комнатная, мебель, 20 км', url: '/calc/pereezd-kalkulyator?rooms=3&extraItems=furniture&distance=20' }
+    { value: '2-комнатная, холодильник, 50 км', url: '/pereezd-kalkulyator?rooms=2&extraItems=fridge&distance=50' },
+    { value: '3-комнатная, мебель, 20 км', url: '/pereezd-kalkulyator?rooms=3&extraItems=furniture&distance=20' }
   ]
 }
 
@@ -1191,9 +1191,9 @@ export const weddingBudgetCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: '50 гостей, стандарт', url: '/calc/svadebnyj-byudzhet?guests=50&budgetLevel=standard' },
-    { value: '30 гостей, премиум', url: '/calc/svadebnyj-byudzhet?guests=30&budgetLevel=premium' },
-    { value: '80 гостей, эконом', url: '/calc/svadebnyj-byudzhet?guests=80&budgetLevel=economy' }
+    { value: '50 гостей, стандарт', url: '/svadebnyj-byudzhet?guests=50&budgetLevel=standard' },
+    { value: '30 гостей, премиум', url: '/svadebnyj-byudzhet?guests=30&budgetLevel=premium' },
+    { value: '80 гостей, эконом', url: '/svadebnyj-byudzhet?guests=80&budgetLevel=economy' }
   ]
 }
 
@@ -1293,8 +1293,8 @@ export const vacationCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Зарплата 80 000 ₽, 14 дней', url: '/calc/otpusknye-kalkulyator?salary=80000&vacationDays=14&workedMonths=12' },
-    { value: 'Зарплата 50 000 ₽, 28 дней', url: '/calc/otpusknye-kalkulyator?salary=50000&vacationDays=28&workedMonths=12' }
+    { value: 'Зарплата 80 000 ₽, 14 дней', url: '/otpusknye-kalkulyator?salary=80000&vacationDays=14&workedMonths=12' },
+    { value: 'Зарплата 50 000 ₽, 28 дней', url: '/otpusknye-kalkulyator?salary=50000&vacationDays=28&workedMonths=12' }
   ]
 }
 
@@ -1401,8 +1401,8 @@ export const maternityCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Зарплата 1,8 млн за 2 года, 140 дней', url: '/calc/dekretnye-kalkulyator?salary2Years=1800000&excludedDays=30&leaveDays=140' },
-    { value: 'Зарплата 3 млн за 2 года, 140 дней', url: '/calc/dekretnye-kalkulyator?salary2Years=3000000&excludedDays=0&leaveDays=140' }
+    { value: 'Зарплата 1,8 млн за 2 года, 140 дней', url: '/dekretnye-kalkulyator?salary2Years=1800000&excludedDays=30&leaveDays=140' },
+    { value: 'Зарплата 3 млн за 2 года, 140 дней', url: '/dekretnye-kalkulyator?salary2Years=3000000&excludedDays=0&leaveDays=140' }
   ]
 }
 
@@ -1495,8 +1495,8 @@ export const penaltyCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Долг 100 000 ₽, 30 дней, ставка 21%', url: '/calc/neustojka-395-gk?debt=100000&days=30&rate=21' },
-    { value: 'Долг 500 000 ₽, 90 дней, ставка 21%', url: '/calc/neustojka-395-gk?debt=500000&days=90&rate=21' }
+    { value: 'Долг 100 000 ₽, 30 дней, ставка 21%', url: '/neustojka-395-gk?debt=100000&days=30&rate=21' },
+    { value: 'Долг 500 000 ₽, 90 дней, ставка 21%', url: '/neustojka-395-gk?debt=500000&days=90&rate=21' }
   ]
 }
 
@@ -1577,9 +1577,9 @@ export const shoeSizeConverter: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'Российский 40', url: '/calc/razmer-obuvi-konverter?ruSize=40' },
-    { value: 'Российский 42', url: '/calc/razmer-obuvi-konverter?ruSize=42' },
-    { value: 'Российский 36', url: '/calc/razmer-obuvi-konverter?ruSize=36' }
+    { value: 'Российский 40', url: '/razmer-obuvi-konverter?ruSize=40' },
+    { value: 'Российский 42', url: '/razmer-obuvi-konverter?ruSize=42' },
+    { value: 'Российский 36', url: '/razmer-obuvi-konverter?ruSize=36' }
   ]
 }
 

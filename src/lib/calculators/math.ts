@@ -558,10 +558,10 @@ export const engineeringCalculator: Calculator = {
     updatedAt: '2026-04-26'
   },
   popularCalculations: [
-    { value: 'sin(π/2) = 1', url: '/calc/inzhenernyj-kalkulyator?value=1' },
-    { value: '√256 = 16', url: '/calc/inzhenernyj-kalkulyator?value=16' },
-    { value: '2¹⁰ = 1024', url: '/calc/inzhenernyj-kalkulyator?value=1024' },
-    { value: '5! = 120', url: '/calc/inzhenernyj-kalkulyator?value=120' }
+    { value: 'sin(π/2) = 1', url: '/inzhenernyj-kalkulyator?value=1' },
+    { value: '√256 = 16', url: '/inzhenernyj-kalkulyator?value=16' },
+    { value: '2¹⁰ = 1024', url: '/inzhenernyj-kalkulyator?value=1024' },
+    { value: '5! = 120', url: '/inzhenernyj-kalkulyator?value=120' }
   ]
 };
 

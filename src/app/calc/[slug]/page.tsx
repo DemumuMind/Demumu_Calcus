@@ -8,6 +8,7 @@ import { getCategoryStyle } from '@/lib/category-styles';
 import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
 import { AD_BLOCK_IDS } from '@/lib/ads/config';
+import { TableOfContents } from '@/components/table-of-contents';
 
 import {
   Accordion,
@@ -45,13 +46,13 @@ export async function generateMetadata({ params }: CalculatorPageProps): Promise
     openGraph: {
       title: calculator.title,
       description: calculator.description,
-      url: `${SITE_URL}/calc/${slug}`,
+      url: `${SITE_URL}/${slug}`,
       siteName: 'Calcus',
       type: 'website',
       locale: 'ru_RU',
     },
     alternates: {
-      canonical: `${SITE_URL}/calc/${slug}`,
+      canonical: `${SITE_URL}/${slug}`,
     },
   };
 }
@@ -77,7 +78,7 @@ function generateCalculatorSchema(calculator: CalculatorType, slug: string, cate
       '@type': 'SoftwareApplication',
       name: calculator.title,
       description: calculator.description,
-      url: `${SITE_URL}/calc/${slug}`,
+      url: `${SITE_URL}/${slug}`,
       applicationCategory: 'CalculatorApplication',
       operatingSystem: 'Any',
       offers: {
@@ -111,7 +112,7 @@ function generateCalculatorSchema(calculator: CalculatorType, slug: string, cate
       ...(categoryTitle
         ? [{ '@type': 'ListItem', position: 2, name: categoryTitle, item: `${SITE_URL}/${calculator.category}` }]
         : []),
-      { '@type': 'ListItem', position: categoryTitle ? 3 : 2, name: calculator.title, item: `${SITE_URL}/calc/${slug}` },
+      { '@type': 'ListItem', position: categoryTitle ? 3 : 2, name: calculator.title, item: `${SITE_URL}/${slug}` },
     ],
   });
 
@@ -191,8 +192,10 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
         </ol>
       </nav>
 
+      <TableOfContents items={getTocItems(calculator)} />
+
       <article>
-        <div className={`mb-8 rounded-2xl p-6 bg-gradient-to-br ${style.gradient} border ${style.borderColor}`}>
+        <div id="calculator" className={`mb-8 rounded-2xl p-6 bg-gradient-to-br ${style.gradient} border ${style.borderColor}`}>
           <div className="flex items-start gap-4 mb-4">
             <div className={`flex h-14 w-14 items-center justify-center rounded-xl ${style.bgColor} ${style.color}`}>
               <CategoryIcon className="h-7 w-7" />
@@ -219,7 +222,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
 
         <YandexAdBlock blockId={AD_BLOCK_IDS.calcBottom} renderTo="yandex_rtb_R-A-99999999-4" size="rectangle" className="mb-8 mx-auto" />
 
-        <div className="mb-8">
+        <div id="how-to" className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <BookOpen className="h-5 w-5 text-primary" />
             <h2 className="text-xl font-bold">Как использовать</h2>
@@ -231,7 +234,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           </Card>
         </div>
 
-        <div className="mb-8">
+        <div id="about" className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Info className="h-5 w-5 text-primary" />
             <h2 className="text-xl font-bold">О калькуляторе</h2>
@@ -243,7 +246,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
             {calculator.content.formula && (
               <>
                 <Separator className="my-4" />
-                <div>
+                <div id="formula">
                   <h3 className="font-semibold mb-2">Формула</h3>
                   <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
                     {calculator.content.formula}
@@ -255,7 +258,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
         </div>
 
         {calculator.content.faq && calculator.content.faq.length > 0 && (
-          <div className="mb-8">
+          <div id="faq" className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <HelpCircle className="h-5 w-5 text-primary" />
               <h2 className="text-xl font-bold">Часто задаваемые вопросы</h2>
@@ -276,7 +279,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
         )}
 
         {calculator.popularCalculations && calculator.popularCalculations.length > 0 && (
-          <div className="mb-8">
+          <div id="popular" className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp className="h-5 w-5 text-primary" />
               <h2 className="text-xl font-bold">Популярные расчёты</h2>
@@ -297,10 +300,12 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           </div>
         )}
 
-        <RelatedCalculatorsSection currentCalculator={calculator} style={style} />
+        <div id="related">
+          <RelatedCalculatorsSection currentCalculator={calculator} style={style} />
+        </div>
 
         {calculator.content.sources && calculator.content.sources.length > 0 && (
-          <div className="mb-8">
+          <div id="sources" className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <FileText className="h-5 w-5 text-primary" />
               <h2 className="text-xl font-bold">Источники</h2>
@@ -334,6 +339,34 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
   );
 }
 
+function getTocItems(calculator: CalculatorType): { id: string; label: string }[] {
+  const items = [
+    { id: 'calculator', label: 'Калькулятор' },
+    { id: 'how-to', label: 'Как использовать' },
+    { id: 'about', label: 'О калькуляторе' },
+  ];
+  
+  if (calculator.content.formula) {
+    items.push({ id: 'formula', label: 'Формула' });
+  }
+  
+  if (calculator.content.faq && calculator.content.faq.length > 0) {
+    items.push({ id: 'faq', label: 'Часто задаваемые вопросы' });
+  }
+  
+  if (calculator.popularCalculations && calculator.popularCalculations.length > 0) {
+    items.push({ id: 'popular', label: 'Популярные расчёты' });
+  }
+  
+  items.push({ id: 'related', label: 'Похожие калькуляторы' });
+  
+  if (calculator.content.sources && calculator.content.sources.length > 0) {
+    items.push({ id: 'sources', label: 'Источники' });
+  }
+  
+  return items;
+}
+
 function RelatedCalculatorsSection({
   currentCalculator,
   style,
@@ -353,7 +386,7 @@ function RelatedCalculatorsSection({
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {related.map((calc) => (
-          <Link key={calc.id} href={`/calc/${calc.slug}`}>
+          <Link key={calc.id} href={`/${calc.slug}`}>
             <Card className="group h-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer border-2 hover:border-primary/20">
               <div className="flex items-center gap-3 p-4">
                 <div className={`flex h-10 w-10 items-center justify-center rounded-xl ${style.bgColor} ${style.color} transition-transform duration-300 group-hover:scale-110`}>

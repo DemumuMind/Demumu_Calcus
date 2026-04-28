@@ -40,7 +40,7 @@
       "name": "Простой калькулятор",
       "short_name": "Калькулятор",
       "description": "Быстрые арифметические расчёты",
-      "url": "/calc/prostoj-kalkulyator",
+      "url": "/prostoj-kalkulyator",
       "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     },
     {

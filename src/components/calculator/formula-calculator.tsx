@@ -48,7 +48,7 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
       }
     });
     const query = params.toString();
-    return `${window.location.origin}/calc/${calculator.slug}${query ? `?${query}` : ''}`;
+    return `${window.location.origin}/${calculator.slug}${query ? `?${query}` : ''}`;
   }, [inputs, calculator.slug]);
 
   const handleCopyUrl = useCallback(async () => {

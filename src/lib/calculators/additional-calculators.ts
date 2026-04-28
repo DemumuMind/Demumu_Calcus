@@ -158,9 +158,9 @@ export const bmiCalculator: Calculator = {
     updatedAt: '2026-04-08'
   },
   popularCalculations: [
-    { value: 'Рост 170 см, вес 70 кг', url: '/calc/kalkulyator-imt?height=170&weight=70' },
-    { value: 'Рост 160 см, вес 55 кг', url: '/calc/kalkulyator-imt?height=160&weight=55' },
-    { value: 'Рост 180 см, вес 85 кг', url: '/calc/kalkulyator-imt?height=180&weight=85' }
+    { value: 'Рост 170 см, вес 70 кг', url: '/kalkulyator-imt?height=170&weight=70' },
+    { value: 'Рост 160 см, вес 55 кг', url: '/kalkulyator-imt?height=160&weight=55' },
+    { value: 'Рост 180 см, вес 85 кг', url: '/kalkulyator-imt?height=180&weight=85' }
   ]
 };
 
@@ -345,9 +345,9 @@ export const calorieCalculator: Calculator = {
     updatedAt: '2026-04-08'
   },
   popularCalculations: [
-    { value: 'Мужчина 30 лет, 180 см, 80 кг, средняя активность', url: '/calc/kalkulyator-kalorij?gender=male&age=30&height=180&weight=80&activity=moderate&goal=maintain' },
-    { value: 'Женщина 25 лет, 165 см, 60 кг, лёгкая активность', url: '/calc/kalkulyator-kalorij?gender=female&age=25&height=165&weight=60&activity=light&goal=maintain' },
-    { value: 'Мужчина 35 лет, 175 см, 90 кг, дефицит для похудения', url: '/calc/kalkulyator-kalorij?gender=male&age=35&height=175&weight=90&activity=moderate&goal=lose' }
+    { value: 'Мужчина 30 лет, 180 см, 80 кг, средняя активность', url: '/kalkulyator-kalorij?gender=male&age=30&height=180&weight=80&activity=moderate&goal=maintain' },
+    { value: 'Женщина 25 лет, 165 см, 60 кг, лёгкая активность', url: '/kalkulyator-kalorij?gender=female&age=25&height=165&weight=60&activity=light&goal=maintain' },
+    { value: 'Мужчина 35 лет, 175 см, 90 кг, дефицит для похудения', url: '/kalkulyator-kalorij?gender=male&age=35&height=175&weight=90&activity=moderate&goal=lose' }
   ]
 };
 
@@ -537,8 +537,8 @@ export const mortgageCalculator: Calculator = {
     updatedAt: '2026-04-08'
   },
   popularCalculations: [
-    { value: 'Квартира 5 млн, взнос 1 млн, ставка 8%, 20 лет', url: '/calc/ipotchnyj-kalkulyator?propertyValue=5000000&downPayment=1000000&interestRate=8&loanTerm=20&paymentType=annuity' },
-    { value: 'Квартира 8 млн, взнос 2 млн, ставка 7.5%, 15 лет', url: '/calc/ipotchnyj-kalkulyator?propertyValue=8000000&downPayment=2000000&interestRate=7.5&loanTerm=15&paymentType=annuity' },
-    { value: 'Квартира 3 млн, без взноса, ставка 9%, 25 лет', url: '/calc/ipotchnyj-kalkulyator?propertyValue=3000000&downPayment=0&interestRate=9&loanTerm=25&paymentType=annuity' }
+    { value: 'Квартира 5 млн, взнос 1 млн, ставка 8%, 20 лет', url: '/ipotchnyj-kalkulyator?propertyValue=5000000&downPayment=1000000&interestRate=8&loanTerm=20&paymentType=annuity' },
+    { value: 'Квартира 8 млн, взнос 2 млн, ставка 7.5%, 15 лет', url: '/ipotchnyj-kalkulyator?propertyValue=8000000&downPayment=2000000&interestRate=7.5&loanTerm=15&paymentType=annuity' },
+    { value: 'Квартира 3 млн, без взноса, ставка 9%, 25 лет', url: '/ipotchnyj-kalkulyator?propertyValue=3000000&downPayment=0&interestRate=9&loanTerm=25&paymentType=annuity' }
   ]
 };

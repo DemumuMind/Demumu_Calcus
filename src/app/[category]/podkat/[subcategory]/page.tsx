@@ -108,7 +108,7 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
         {calculators.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {calculators.map((calc) => (
-              <Link key={calc.id} href={`/calc/${calc.slug}`}>
+              <Link key={calc.id} href={`/${calc.slug}`}>
                 <Card className="group h-full transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-pointer border-2 hover:border-primary/20">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-3">

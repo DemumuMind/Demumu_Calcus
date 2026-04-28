@@ -34,6 +34,7 @@ import { datetimeCalculators } from './datetime';
 import { specialConverters } from './converters-special';
 import { specialConvertersMore } from './converters-special-more';
 import { currencyConverters } from './converters-currency';
+import { currencyFrequencyForceConverters } from './converters-currency-frequency-force';
 import { constructionFinalCalculators } from './construction-final';
 import { constructionExtendedCalculators } from './construction-extended';
 import { healthMore1Calculators } from './health-more-1';
@@ -76,6 +77,15 @@ import { nicheCalculators } from './niche-calculators';
 import { percentageCalculators } from './percentage-calculators';
 import { timerCalculators } from './timer-calculators';
 import { cookingCalculators } from './cooking-calculators';
+import { russianFinanceCalculators } from './finance-russian';
+import { additionalConstructionCalculators } from './construction-additional';
+import { pressureAreaConverters } from './converters-pressure-area';
+import { lengthMassConverters } from './converters-length-mass';
+import { missingCalculators } from './missing-calculators';
+import { allConverters as pressureEnergyPowerTimeAnglesConverters } from './converters-pressure-energy-power-time-angles-data';
+import { tempSpeedVolumeAreaConverters } from './converters-temp-speed-volume-area';
+import { specialPairConverters } from './converters-special-pairs';
+import { sizeTravelPairConverters } from './converters-sizes-travel-pairs';
 
 export const simpleCalculator: Calculator = {
   id: 'simple-calculator',
@@ -231,6 +241,7 @@ export const calculators: Calculator[] = [
   ...specialConverters,
   ...specialConvertersMore,
   ...currencyConverters,
+  ...currencyFrequencyForceConverters,
   ...moreConvertersCalculators,
   ...healthCalculators,
   ...healthExtendedCalculators,
@@ -296,6 +307,16 @@ export const calculators: Calculator[] = [
   ...percentageCalculators,
   ...timerCalculators,
   ...cookingCalculators,
+  ...russianFinanceCalculators,
+  ...additionalConstructionCalculators,
+  ...pressureAreaConverters,
+  ...lengthMassConverters,
+  ...missingCalculators,
+  ...pressureEnergyPowerTimeAnglesConverters,
+  ...tempSpeedVolumeAreaConverters,
+  ...currencyFrequencyForceConverters,
+  ...specialPairConverters,
+  ...sizeTravelPairConverters,
 ];
 
 const calculatorSlugMap = new Map<string, Calculator>(calculators.map(calc => [calc.slug, calc]));

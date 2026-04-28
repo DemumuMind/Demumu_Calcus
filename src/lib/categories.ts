@@ -31,6 +31,9 @@ export const categories: Category[] = [
       { id: 'conv-moshchnost', slug: 'conv-moshchnost', title: 'Мощность', description: 'Ватты, киловатты, л.с.' },
       { id: 'conv-vremya', slug: 'conv-vremya', title: 'Время', description: 'Секунды, минуты, часы, дни' },
       { id: 'conv-ugly', slug: 'conv-ugly', title: 'Углы', description: 'Градусы, радианы, грады' },
+      { id: 'finansovye', slug: 'finansovye', title: 'Финансовые конвертеры', description: 'Валютные конвертеры и финансовые расчёты' },
+      { id: 'conv-chastota', slug: 'conv-chastota', title: 'Частота', description: 'Герцы, килогерцы, мегагерцы, обороты в минуту' },
+      { id: 'conv-sila', slug: 'conv-sila', title: 'Сила', description: 'Ньютоны, килоньютоны, кгс, дины' },
     ],
   },
   {
@@ -42,6 +45,19 @@ export const categories: Category[] = [
       { id: 'procenty-osnovnye', slug: 'procenty-osnovnye', title: 'Основные расчёты', description: 'Процент от числа, число в процентах' },
       { id: 'procenty-izmenenie', slug: 'procenty-izmenenie', title: 'Изменения', description: 'Прибавить, вычесть процент' },
       { id: 'procenty-slozhnye', slug: 'procenty-slozhnye', title: 'Сложные проценты', description: 'Капитализация, рост' },
+    ],
+  },
+  {
+    id: 'finansy',
+    slug: 'finansy',
+    title: 'Финансы',
+    description: 'Расчёт зарплаты, пенсии, кредитов, налогов и госпошлин',
+    subcategories: [
+      { id: 'zarplata', slug: 'zarplata', title: 'Зарплата', description: 'Отпускные, декретные, НДФЛ' },
+      { id: 'pensiya', slug: 'pensiya', title: 'Пенсия', description: 'Расчёт пенсии по старости' },
+      { id: 'kredity', slug: 'kredity', title: 'Кредиты', description: 'Ипотека, потребительские кредиты, вклады' },
+      { id: 'nalogi', slug: 'nalogi', title: 'Налоги', description: 'НДС, транспортный налог' },
+      { id: 'yuridicheskie', slug: 'yuridicheskie', title: 'Юридические', description: 'Госпошлины, неустойка, алименты' },
     ],
   },
   {
@@ -137,6 +153,7 @@ export const categoryIcons: Record<string, string> = {
   'nauka-i-ucheba': 'Calculator',
   'konvertery': 'ArrowRightLeft',
   'procenty': 'Percent',
+  'finansy': 'Wallet',
   'tajmery': 'Timer',
   'kulinarnye-mery': 'ChefHat',
   'zdorove-i-krasota': 'Heart',

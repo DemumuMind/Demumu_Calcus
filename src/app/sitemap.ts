@@ -46,21 +46,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   });
 
+  // Helper to avoid duplicate URLs
+  const seen = new Set<string>();
+  function addSitemap(url: string, priority: number) {
+    if (!seen.has(url)) {
+      seen.add(url);
+      routes.push({
+        url,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority,
+      });
+    }
+  }
+
   // 4. Calculator pages
   calculators.forEach((calc) => {
-    routes.push({
-      url: `${BASE_URL}/calc/${calc.slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    });
-    // Top-level rewrite URLs (non-canonical, slightly lower priority)
-    routes.push({
-      url: `${BASE_URL}/${calc.slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    });
+    addSitemap(`${BASE_URL}/${calc.slug}`, 0.6);
   });
 
   // 5. Unit converter pages — limited static set for Vercel free tier
@@ -74,19 +76,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
   const OTHER_SIX = ['ploshchad', 'energiya', 'davlenie', 'moshchnost', 'vremya', 'ugly'];
-
-  const seen = new Set<string>();
-  function addSitemap(url: string, priority: number) {
-    if (!seen.has(url)) {
-      seen.add(url);
-      routes.push({
-        url,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority,
-      });
-    }
-  }
 
   Object.values(allUnitCategories).forEach((category) => {
     if (!POPULAR_CATEGORIES.includes(category.slug)) {
