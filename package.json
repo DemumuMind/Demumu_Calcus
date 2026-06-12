@@ -9,8 +9,7 @@
     "claw": "node scripts/claw.js",
     "build:mobile": "next build && npx cap sync",
     "build:android": "npm run build:mobile && npx cap open android",
-    "build:ios": "npm run build:mobile && npx cap open ios",
-    "postinstall": "sh scripts/postinstall.sh"
+    "build:ios": "npm run build:mobile && npx cap open ios"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
