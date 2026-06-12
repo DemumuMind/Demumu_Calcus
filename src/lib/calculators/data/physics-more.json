@@ -6,7 +6,23 @@
     "description": "Расчёт скорости звука в воздухе, воде, металлах и других средах при разной температуре",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "effekt-doplera",
@@ -15,7 +31,23 @@
     "description": "Расчёт изменения частоты звука при движении источника или наблюдателя",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "radioaktivnyj-raspad",
@@ -24,7 +56,23 @@
     "description": "Расчёт оставшегося количества вещества и периода полураспада",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "e-mc-kvadrat",
@@ -33,7 +81,23 @@
     "description": "Расчёт энергии по формуле E=mc² Эйнштейна",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "zakon-snelliusa",
@@ -42,7 +106,23 @@
     "description": "Расчёт угла преломления света при переходе между средами",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "moment-inertsii",
@@ -51,7 +131,23 @@
     "description": "Расчёт момента инерции для различных форм тел",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "uglovaya-skorost",
@@ -60,7 +156,23 @@
     "description": "Расчёт угловой скорости, ускорения и связи с линейной скоростью",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gidrostaticheskoe-davlenie",
@@ -69,7 +181,23 @@
     "description": "Расчёт давления жидкости на глубине",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "centrostremitelnaya-sila",
@@ -78,7 +206,23 @@
     "description": "Расчёт силы, удерживающей тело на окружности",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "teploprovodnost",
@@ -87,6 +231,22 @@
     "description": "Расчёт теплового потока через стенку (закон Фурье)",
     "subcategory": "fizika",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

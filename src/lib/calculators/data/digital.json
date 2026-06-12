@@ -119,7 +119,23 @@
     "description": "Расчёт плотности пикселей экрана или изображения",
     "subcategory": "tekhnologii-raznoe",
     "type": "formula",
-    "category": "tekhnologii"
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "sootnoshenie-storon",

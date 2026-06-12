@@ -6,7 +6,23 @@
     "description": "Расчёт стоимости и объёма при переезде в новую квартиру",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "remont-telefona-stoimost",
@@ -15,7 +31,22 @@
     "description": "Ориентировочная стоимость ремонта смартфона",
     "subcategory": "povsednevnye-drugoe",
     "type": "reference",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "domashnij-byudzhet",
@@ -24,7 +55,23 @@
     "description": "Расчёт семейного бюджета и баланса доходов/расходов",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "rashody-na-pitomca",
@@ -33,7 +80,23 @@
     "description": "Расчёт месячных и годовых расходов на содержание животного",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "podarki-na-svadbu",
@@ -42,7 +105,23 @@
     "description": "Сколько подарить денег или что подарить на свадьбу",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vstrecha-novogo-goda",
@@ -51,7 +130,23 @@
     "description": "Расчёт бюджета и продуктов на новогоднюю вечеринку",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "poezdka-na-mashine",
@@ -60,7 +155,23 @@
     "description": "Расчёт расходов на поездку на автомобиле",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "sad-ogorod-raschet",
@@ -69,7 +180,23 @@
     "description": "Расчёт количества семян и расстояний между растениями",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "rashody-na-otpusk",
@@ -78,7 +205,23 @@
     "description": "Планирование бюджета отпуска с учётом всех статей расходов",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "investiczii-v-sebya",
@@ -87,6 +230,22 @@
     "description": "Окупаемость обучения и курсов повышения квалификации",
     "subcategory": "povsednevnye-drugoe",
     "type": "formula",
-    "category": "povsednevnye"
+    "category": "povsednevnye",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

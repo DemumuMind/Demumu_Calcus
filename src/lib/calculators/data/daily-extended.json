@@ -6,7 +6,23 @@
     "description": "Расчёт чаевых в ресторане, кафе, такси — процент от суммы чека",
     "subcategory": "everyday-dengi",
     "type": "formula",
-    "category": "povsednevnoe"
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "razdelenie-cheka",
@@ -205,7 +221,23 @@
     "description": "Расчёт оптимального времени отхода ко сну или пробуждения по циклам сна",
     "subcategory": "everyday-vremya",
     "type": "formula",
-    "category": "povsednevnoe"
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "poliv-rastenij",

@@ -6,7 +6,23 @@
     "description": "Расчёт количества краски для стен и потолка",
     "subcategory": "build-materialy",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "shtukaturka",
@@ -15,7 +31,23 @@
     "description": "Расчёт количества штукатурки для стен",
     "subcategory": "build-materialy",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "plitka-na-pol-steny",
@@ -24,7 +56,23 @@
     "description": "Расчёт количества плитки для пола или стен",
     "subcategory": "build-materialy",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "laminat",
@@ -33,7 +81,23 @@
     "description": "Расчёт количества досок ламината для пола",
     "subcategory": "build-materialy",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kirpich",
@@ -42,7 +106,23 @@
     "description": "Расчёт количества кирпича для стен с учётом толщины шва",
     "subcategory": "build-steny",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "fundament",

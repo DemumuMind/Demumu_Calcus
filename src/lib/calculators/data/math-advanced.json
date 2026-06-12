@@ -344,7 +344,23 @@
     "description": "Находит корни уравнения ax² + bx + c = 0",
     "subcategory": "matematicheskie",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "nod-i-nok",

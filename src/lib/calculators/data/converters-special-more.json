@@ -654,7 +654,22 @@
     "description": "Перевод между системами размеров обуви США, Великобритании, ЕС, России, Японии, Китая и длиной стопы",
     "subcategory": "special",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "konverter-kalibra-provoda",

@@ -10,7 +10,7 @@ import { getAllArticles } from '@/lib/articles';
 
 export const dynamic = 'force-static';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-clone.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
 
 /** Helper to add a sitemap entry with deduplication */
 function addRoute(routes: MetadataRoute.Sitemap, seen: Set<string>, url: string, priority: number, changeFrequency: MetadataRoute.Sitemap[0]['changeFrequency'] = 'monthly') {

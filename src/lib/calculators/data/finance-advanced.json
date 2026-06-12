@@ -6,7 +6,23 @@
     "description": "Рассчитайте рост инвестиций с учетом сложного процента и капитализации.",
     "subcategory": "finansovye",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dohodnost-investicij",
@@ -15,7 +31,23 @@
     "description": "Рассчитайте общую доходность инвестиций за любой период.",
     "subcategory": "finansovye",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "tochka-bezubytochnosti",
@@ -116,7 +148,23 @@
     "description": "Рассчитайте платежи по ипотеке, график погашения и переплату.",
     "subcategory": "finansovye",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "arenda-ili-pokupka",
@@ -125,7 +173,23 @@
     "description": "Сравните финансовые выгоды аренды жилья и покупки собственного.",
     "subcategory": "finansovye",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "inflyaciya",
@@ -226,7 +290,23 @@
     "description": "Переведите зарплату между разными периодами: час, день, неделя, месяц, год.",
     "subcategory": "finansovye",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "cel-nakopleniya",
@@ -235,6 +315,22 @@
     "description": "Рассчитайте, сколько нужно откладывать для достижения финансовой цели.",
     "subcategory": "finansovye",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

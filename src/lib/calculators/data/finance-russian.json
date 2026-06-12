@@ -6,7 +6,23 @@
     "description": "Расчёт отпускных по среднему заработку за 12 месяцев",
     "subcategory": "zarplata",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-dekretnyh",
@@ -15,7 +31,23 @@
     "description": "Расчёт пособия по беременности и родам (декретные)",
     "subcategory": "zarplata",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-pensii",

@@ -6,7 +6,22 @@
     "description": "Перевод давления из миллиметров ртутного столба в Паскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "atm-v-bar",
@@ -15,7 +30,22 @@
     "description": "Перевод давления из физических атмосфер в бары",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "bar-v-paskali",
@@ -24,7 +54,22 @@
     "description": "Перевод давления из баров в Паскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "paskali-v-bar",
@@ -33,7 +78,22 @@
     "description": "Перевод давления из Паскалей в бары",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "bar-v-psi",
@@ -42,7 +102,22 @@
     "description": "Перевод давления из баров в фунты на квадратный дюйм",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kpa-v-pa",
@@ -51,7 +126,22 @@
     "description": "Перевод давления из килопаскалей в Паскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "pa-v-kpa",
@@ -60,7 +150,22 @@
     "description": "Перевод давления из Паскалей в килопаскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "mpa-v-pa",
@@ -69,7 +174,22 @@
     "description": "Перевод давления из мегапаскалей в Паскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "pa-v-mpa",
@@ -78,7 +198,22 @@
     "description": "Перевод давления из Паскалей в мегапаскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "tehn-atm-v-pa",
@@ -87,7 +222,22 @@
     "description": "Перевод давления из технических атмосфер в Паскали",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "pa-v-tehn-atm",
@@ -96,7 +246,22 @@
     "description": "Перевод давления из Паскалей в технические атмосферы",
     "subcategory": "conv-davlenie",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dzhouli-v-kalorii",
@@ -105,7 +270,22 @@
     "description": "Перевод энергии из Джоулей в калории",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalorii-v-dzhouli",
@@ -114,7 +294,22 @@
     "description": "Перевод энергии из калорий в Джоули",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kkal-v-dzhouli",
@@ -123,7 +318,22 @@
     "description": "Перевод энергии из килокалорий в Джоули",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dzhouli-v-kkal",
@@ -132,7 +342,22 @@
     "description": "Перевод энергии из Джоулей в килокалории",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kvt-ch-v-dzhouli",
@@ -141,7 +366,22 @@
     "description": "Перевод энергии из киловатт-часов в Джоули",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dzhouli-v-kvt-ch",
@@ -150,7 +390,22 @@
     "description": "Перевод энергии из Джоулей в киловатт-часы",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "ev-v-dzhouli",
@@ -159,7 +414,22 @@
     "description": "Перевод энергии из электронвольтов в Джоули",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dzhouli-v-ev",
@@ -168,7 +438,22 @@
     "description": "Перевод энергии из Джоулей в электронвольты",
     "subcategory": "conv-energiya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vatty-v-kilovatty",
@@ -177,7 +462,22 @@
     "description": "Перевод мощности из ватт в киловатты",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kilovatty-v-vatty",
@@ -186,7 +486,22 @@
     "description": "Перевод мощности из киловатт в ватты",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kilovatty-v-ls",
@@ -195,7 +510,22 @@
     "description": "Перевод мощности из киловатт в лошадиные силы",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "ls-v-kilovatty",
@@ -204,7 +534,22 @@
     "description": "Перевод мощности из лошадиных сил в киловатты",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vatty-v-ls",
@@ -213,7 +558,22 @@
     "description": "Перевод мощности из ватт в лошадиные силы",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "ls-v-vatty",
@@ -222,7 +582,22 @@
     "description": "Перевод мощности из лошадиных сил в ватты",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "megavatty-v-kilovatty",
@@ -231,7 +606,22 @@
     "description": "Перевод мощности из мегаватт в киловатты",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kilovatty-v-megavatty",
@@ -240,7 +630,22 @@
     "description": "Перевод мощности из киловатт в мегаватты",
     "subcategory": "conv-moshchnost",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "sekundy-v-minuty",
@@ -249,7 +654,22 @@
     "description": "Перевод времени из секунд в минуты",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "minuty-v-sekundy",
@@ -258,7 +678,22 @@
     "description": "Перевод времени из минут в секунды",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "minuty-v-chasy",
@@ -267,7 +702,22 @@
     "description": "Перевод времени из минут в часы",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "chasy-v-minuty",
@@ -276,7 +726,22 @@
     "description": "Перевод времени из часов в минуты",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "chasy-v-dni",
@@ -285,7 +750,22 @@
     "description": "Перевод времени из часов в дни",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dni-v-chasy",
@@ -294,7 +774,22 @@
     "description": "Перевод времени из дней в часы",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dni-v-nedeli",
@@ -303,7 +798,22 @@
     "description": "Перевод времени из дней в недели",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "nedeli-v-dni",
@@ -312,7 +822,22 @@
     "description": "Перевод времени из недель в дни",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "dni-v-mesyacy",
@@ -321,7 +846,22 @@
     "description": "Перевод времени из дней в месяцы",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "mesyacy-v-dni",
@@ -330,7 +870,22 @@
     "description": "Перевод времени из месяцев в дни",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "mesyacy-v-gody",
@@ -339,7 +894,22 @@
     "description": "Перевод времени из месяцев в годы",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gody-v-mesyacy",
@@ -348,7 +918,22 @@
     "description": "Перевод времени из годов в месяцы",
     "subcategory": "conv-vremya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gradusy-v-radiany",
@@ -357,7 +942,22 @@
     "description": "Перевод угловых величин из градусов в радианы",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "radiany-v-gradusy",
@@ -366,7 +966,22 @@
     "description": "Перевод угловых величин из радиан в градусы",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gradusy-v-grady",
@@ -375,7 +990,22 @@
     "description": "Перевод угловых величин из градусов в грады",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "grady-v-gradusy",
@@ -384,7 +1014,22 @@
     "description": "Перевод угловых величин из градов в градусы",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "uglovye-minuty-v-gradusy",
@@ -393,7 +1038,22 @@
     "description": "Перевод угловых величин из угловых минут в градусы",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gradusy-v-uglovye-minuty",
@@ -402,7 +1062,22 @@
     "description": "Перевод угловых величин из градусов в угловые минуты",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "uglovye-sekundy-v-gradusy",
@@ -411,7 +1086,22 @@
     "description": "Перевод угловых величин из угловых секунд в градусы",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gradusy-v-uglovye-sekundy",
@@ -420,7 +1110,22 @@
     "description": "Перевод угловых величин из градусов в угловые секунды",
     "subcategory": "conv-ugly",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "bajty-v-kilobajty",
@@ -429,7 +1134,22 @@
     "description": "Перевод данных из байт в килобайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kilobajty-v-bajty",
@@ -438,7 +1158,22 @@
     "description": "Перевод данных из килобайт в байты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kilobajty-v-megabajty",
@@ -447,7 +1182,22 @@
     "description": "Перевод данных из килобайт в мегабайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "megabajty-v-kilobajty",
@@ -456,7 +1206,22 @@
     "description": "Перевод данных из мегабайт в килобайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "megabajty-v-gigabajty",
@@ -465,7 +1230,22 @@
     "description": "Перевод данных из мегабайт в гигабайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gigabajty-v-megabajty",
@@ -474,7 +1254,22 @@
     "description": "Перевод данных из гигабайт в мегабайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gigabajty-v-terabajty",
@@ -483,7 +1278,22 @@
     "description": "Перевод данных из гигабайт в терабайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "terabajty-v-gigabajty",
@@ -492,7 +1302,22 @@
     "description": "Перевод данных из терабайт в гигабайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "megabity-v-megabajty",
@@ -501,7 +1326,22 @@
     "description": "Перевод данных из мегабит в мегабайты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "megabajty-v-megabity",
@@ -510,6 +1350,21 @@
     "description": "Перевод данных из мегабайт в мегабиты",
     "subcategory": "conv-informaciya",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

@@ -6,7 +6,22 @@
     "description": "Рассчитайте финальную цену с учётом всех скидок",
     "subcategory": "deals",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "bulk-discount-calculator",
@@ -15,7 +30,22 @@
     "description": "Рассчитайте выгоду от покупки оптом или в большом количестве",
     "subcategory": "deals",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "loyalty-cashback-calculator",
@@ -24,7 +54,22 @@
     "description": "Рассчитайте выгоду от программ лояльности",
     "subcategory": "deals",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "compare-price-calculator",
@@ -33,7 +78,22 @@
     "description": "Сравните цены в разных магазинах с учётом доставки",
     "subcategory": "deals",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "unit-price-calculator",
@@ -42,7 +102,22 @@
     "description": "Сравните, где выгоднее: большая упаковка или маленькая",
     "subcategory": "deals",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "installment-calculator",
@@ -51,7 +126,22 @@
     "description": "Рассчитайте переплату и ежемесячный платёж при покупке в рассрочку",
     "subcategory": "deals",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "shopping-budget-calculator",
@@ -60,7 +150,22 @@
     "description": "Распределите бюджет между категориями одежды",
     "subcategory": "budget",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "wishlist-priority-calculator",
@@ -69,7 +174,23 @@
     "description": "Расставьте приоритеты покупкам по полезности и цене",
     "subcategory": "planning",
     "type": "formula",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "sales-calendar",
@@ -78,6 +199,21 @@
     "description": "Узнайте когда лучше всего покупать разные категории товаров",
     "subcategory": "planning",
     "type": "arithmetic",
-    "category": "shopping"
+    "category": "shopping",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

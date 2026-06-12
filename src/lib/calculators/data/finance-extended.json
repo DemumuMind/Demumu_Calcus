@@ -6,7 +6,23 @@
     "description": "Расчёт прибыли/убытка по опционам call и put",
     "subcategory": "investiczii",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "obligaczii-dokhodnost",
@@ -15,7 +31,23 @@
     "description": "Расчёт текущей доходности и доходности к погашению",
     "subcategory": "investiczii",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "pensionnyj-kalkulyator",
@@ -24,7 +56,23 @@
     "description": "Расчёт накоплений к выходу на пенсию и ежемесячных выплат",
     "subcategory": "lichnye-finansy",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "nalog-na-pribyl",
@@ -33,7 +81,23 @@
     "description": "Расчёт налога на прибыль от продажи активов",
     "subcategory": "nalogi",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "realnyj-dokhod",
@@ -42,7 +106,23 @@
     "description": "Расчёт реальной доходности инвестиций после вычета инфляции",
     "subcategory": "investiczii",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "lizing-raschet",
@@ -51,7 +131,23 @@
     "description": "Расчёт ежемесячных платежей по лизингу автомобиля или оборудования",
     "subcategory": "kreditovanie",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "komissii-brokera",
@@ -60,7 +156,23 @@
     "description": "Сравнение комиссий разных брокеров для разных стратегий торговли",
     "subcategory": "investiczii",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "reinvestirovanie-dividendov",
@@ -69,7 +181,23 @@
     "description": "Сравнение доходности с реинвестированием и без него",
     "subcategory": "investiczii",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "valyutnyj-kalkulyator",
@@ -78,7 +206,23 @@
     "description": "Расчёт обмена валют с учётом спреда и комиссии обменника",
     "subcategory": "valyuty",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vliyanie-inflyaczii",
@@ -87,6 +231,22 @@
     "description": "Расчёт потери покупательной способности денег со временем",
     "subcategory": "investiczii",
     "type": "formula",
-    "category": "finansy"
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

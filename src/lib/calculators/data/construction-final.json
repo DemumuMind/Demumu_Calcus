@@ -102,7 +102,23 @@
     "description": "Расчёт расхода грунтовки для стен и потолков",
     "subcategory": "build-materialy",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "utepitel",
@@ -111,6 +127,22 @@
     "description": "Расчёт количества утеплителя для стен, полов и крыш",
     "subcategory": "build-materialy",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

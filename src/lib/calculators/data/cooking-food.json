@@ -521,7 +521,23 @@
     "description": "Расчёт времени приготовления мяса, овощей, выпечки в зависимости от веса и температуры",
     "subcategory": "cooking",
     "type": "formula",
-    "category": "povsednevnoe"
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "brozhenie-testa",

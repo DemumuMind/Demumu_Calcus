@@ -102,7 +102,23 @@
     "description": "Расчёт суточной нормы калорий в состоянии покоя по формуле Миффлина-Сан Жеора",
     "subcategory": "health-vse",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "sutochnaya-norma-kalorij",
@@ -111,7 +127,23 @@
     "description": "Расчёт полной суточной нормы калорий с учётом уровня активности",
     "subcategory": "health-pitanie",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "raschet-bzhu",

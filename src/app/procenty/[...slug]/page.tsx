@@ -13,7 +13,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PercentageCalculator } from '@/components/calculator/percentage-calculator';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
 
 const SPECIFIC_VALUE_N = [10, 50, 100];
 const SPECIFIC_VALUE_M = [100, 500];

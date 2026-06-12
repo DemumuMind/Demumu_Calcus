@@ -6,7 +6,23 @@
     "description": "Расчёт функционального порога мощности для велосипедистов",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "puls-zony-karvonen",
@@ -15,7 +31,23 @@
     "description": "Расчёт тренировочных зон по методу Каравонена (HRR)",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "temp-bega",
@@ -24,7 +56,23 @@
     "description": "Расчёт темпа (мин/км) из скорости или времени дистанции",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "prognoz-marafona",
@@ -33,7 +81,23 @@
     "description": "Предсказание времени на марафоне по времени на коротких дистанциях",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "skorost-plavaniya",
@@ -42,7 +106,23 @@
     "description": "Расчёт темпа на 100м и скорости для разных бассейнов",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vdot-dzhek-deniels",
@@ -51,7 +131,23 @@
     "description": "Расчёт VO2max и тренировочных темпов по таблицам Дэниэлса",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "trenirovochnaya-nagruzka",
@@ -60,7 +156,23 @@
     "description": "Расчёт TSS (Training Stress Score) для планирования формы",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gidratacziya-sportsmena",
@@ -69,7 +181,23 @@
     "description": "Сколько пить во время длительных тренировок и гонок",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "pitanie-vo-vremya-trenirovki",
@@ -78,7 +206,23 @@
     "description": "Сколько углеводов нужно во время тренировки разной длительности",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vosstanovlenie-posle",
@@ -87,6 +231,22 @@
     "description": "Оценка времени восстановления после разных типов тренировок",
     "subcategory": "sport-drugoe",
     "type": "formula",
-    "category": "sport"
+    "category": "sport",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

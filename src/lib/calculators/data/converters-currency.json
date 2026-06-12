@@ -6,7 +6,22 @@
     "description": "Конвертер доллара США в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "eur-v-rub",
@@ -15,7 +30,22 @@
     "description": "Конвертер евро в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gbp-v-rub",
@@ -24,7 +54,22 @@
     "description": "Конвертер фунта стерлингов в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "cny-v-rub",
@@ -33,7 +78,22 @@
     "description": "Конвертер китайского юаня в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "jpy-v-rub",
@@ -42,7 +102,22 @@
     "description": "Конвертер японской иены в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "chf-v-rub",
@@ -51,7 +126,22 @@
     "description": "Конвертер швейцарского франка в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "btc-v-rub",
@@ -60,7 +150,22 @@
     "description": "Конвертер биткоина в российский рубль",
     "subcategory": "conv-kriptovalyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "eth-v-rub",
@@ -69,7 +174,22 @@
     "description": "Конвертер эфириума в российский рубль",
     "subcategory": "conv-kriptovalyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "usdt-v-rub",
@@ -78,7 +198,22 @@
     "description": "Конвертер Tether (USDT) в российский рубль",
     "subcategory": "conv-kriptovalyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "usd-v-eur",
@@ -87,7 +222,22 @@
     "description": "Конвертер доллара в евро",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "usd-v-gbp",
@@ -96,7 +246,22 @@
     "description": "Конвертер доллара в фунт стерлингов",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "try-v-rub",
@@ -105,7 +270,22 @@
     "description": "Конвертер турецкой лиры в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kzt-v-rub",
@@ -114,7 +294,22 @@
     "description": "Конвертер казахстанского тенге в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "byn-v-rub",
@@ -123,7 +318,22 @@
     "description": "Конвертер белорусского рубля в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "uah-v-rub",
@@ -132,7 +342,22 @@
     "description": "Конвертер украинской гривны в российский рубль",
     "subcategory": "conv-valyuty",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "zoloto-v-rub",
@@ -141,6 +366,21 @@
     "description": "Конвертер цены золота в российские рубли за грамм и унцию",
     "subcategory": "conv-dragocennye-metally",
     "type": "converter",
-    "category": "konvertery"
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

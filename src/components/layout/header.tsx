@@ -139,7 +139,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Calculator className="h-7 w-7 text-primary" />
           <span className="text-lg font-bold uppercase tracking-tight">
-            CALCUS.CLONE
+            CALCUS
           </span>
         </Link>
 

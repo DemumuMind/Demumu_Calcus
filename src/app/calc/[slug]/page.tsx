@@ -19,7 +19,7 @@ import { Card } from '@/components/ui/card';
 import { ArrowRight, ChevronRight, Clock, BookOpen, Info, HelpCircle, FileText, Calculator as CalculatorIcon, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
 
 interface CalculatorPageProps {
   params: Promise<{ slug: string }>;

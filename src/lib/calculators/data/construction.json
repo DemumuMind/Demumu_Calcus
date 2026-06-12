@@ -6,7 +6,23 @@
     "description": "Расчёт количества плитки для пола и стен с учётом запаса",
     "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-i-remont"
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-kraski",
@@ -15,7 +31,23 @@
     "description": "Расчёт количества краски для стен и потолка",
     "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-i-remont"
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-betona",
@@ -105,7 +137,23 @@
     "description": "Расчёт количества рулонов обоев для комнаты",
     "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-i-remont"
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-laminata",
@@ -114,7 +162,23 @@
     "description": "Расчёт ламината, паркета, линолеума для пола",
     "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-i-remont"
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-kirpicha",

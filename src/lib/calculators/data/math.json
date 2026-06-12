@@ -456,7 +456,22 @@
         }
       ],
       "updatedAt": "2026-04-26"
-    }
+    },
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-gpa",
@@ -465,7 +480,23 @@
     "description": "Расчёт среднего балла (GPA) по шкале 4.0",
     "subcategory": "matematicheskie",
     "type": "formula",
-    "category": "nauka-i-ucheba"
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "tablicy-shulte",
@@ -497,6 +528,21 @@
         }
       ],
       "updatedAt": "2026-04-26"
-    }
+    },
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

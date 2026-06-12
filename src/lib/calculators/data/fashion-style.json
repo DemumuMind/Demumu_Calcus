@@ -6,7 +6,22 @@
     "description": "Переводите размеры одежды между разными системами",
     "subcategory": "shopping",
     "type": "converter",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "shoe-size-converter",
@@ -15,7 +30,22 @@
     "description": "Переводите размеры обуви между разными странами",
     "subcategory": "shopping",
     "type": "converter",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "body-shape-calculator",
@@ -24,7 +54,23 @@
     "description": "Определите свой тип фигуры по обхватам",
     "subcategory": "style",
     "type": "formula",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "color-season-calculator",
@@ -33,7 +79,23 @@
     "description": "Определите свой цветовой тип (весна, лето, осень, зима)",
     "subcategory": "style",
     "type": "formula",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "bra-size-calculator",
@@ -42,7 +104,22 @@
     "description": "Определите правильный размер бюстгальтера",
     "subcategory": "shopping",
     "type": "arithmetic",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "outfit-cost-calculator",
@@ -51,7 +128,22 @@
     "description": "Рассчитайте стоимость комплекта одежды и cost-per-wear",
     "subcategory": "budget",
     "type": "arithmetic",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "capsule-wardrobe-calculator",
@@ -60,7 +152,23 @@
     "description": "Рассчитайте минимальный набор одежды для разных образов",
     "subcategory": "style",
     "type": "formula",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "jewelry-calculator",
@@ -69,6 +177,21 @@
     "description": "Подберите украшения по типу лица и образу",
     "subcategory": "style",
     "type": "arithmetic",
-    "category": "fashion"
+    "category": "fashion",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

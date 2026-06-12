@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -30,35 +28,29 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files
 .env*
 
 # vercel
 .vercel
 
-# Capacitor
-/android/
-/ios/
-/dist/
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
+# scripts (not needed in repo)
+scripts/
 
-# Capacitor
-/android/
-/ios/
-/dist/
-tmp-analysis/
-
-tmp-analysis/
-
-tmp-analysis/
+# test artifacts
+test-results/
 playwright-report/
-e2e/screenshots/
-test-results/
 tmp-playwright-*
-.planning/
-test-results/
+
+# playwright MCP logs
+.playwright-mcp/
+
+# deep-slop history
+.deep-slop/
+
+# e2e screenshots
+e2e/screenshots/

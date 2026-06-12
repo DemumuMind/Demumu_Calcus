@@ -6,7 +6,23 @@
     "description": "Расчёт количества краски для стен и потолка с учётом площади, пористости и количества слоёв",
     "subcategory": "home-improvement",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "raskhod-laminata",
@@ -140,7 +156,23 @@
     "description": "Расчёт количества рулонов обоев с учётом площади, рисунка и высоты потолков",
     "subcategory": "home-improvement",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "raskhod-shtukaturki",
@@ -262,7 +294,23 @@
     "description": "Расчёт количества плитки для стен и пола с учётом способа укладки и запаса",
     "subcategory": "home-improvement",
     "type": "formula",
-    "category": "stroitelstvo"
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "raschet-otopleniya",

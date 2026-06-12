@@ -5,7 +5,7 @@ import type { CookingIngredient } from './cooking';
 import type { TimerPreset } from './timers';
 import type { PercentageCalculation } from './percentages';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
 
 /** Helper to create a HowTo schema with steps */
 function makeHowToSchema(name: string, description: string, steps: Array<{ name: string; text: string; url?: string }>) {

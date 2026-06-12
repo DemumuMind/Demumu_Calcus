@@ -6,7 +6,23 @@
     "description": "Рассчитайте свой годовой углеродный след",
     "subcategory": "eco-lifestyle",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "waste-sorting-calculator",
@@ -15,7 +31,23 @@
     "description": "Рассчитайте, сколько отходов вы можете переработать",
     "subcategory": "eco-lifestyle",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "water-footprint-calculator",
@@ -24,7 +56,23 @@
     "description": "Рассчитайте прямое и косвенное потребление воды",
     "subcategory": "eco-lifestyle",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "solar-calculator",
@@ -33,7 +81,23 @@
     "description": "Рассчитайте мощность и окупаемость солнечной станции",
     "subcategory": "energy",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "energy-efficiency-calculator",
@@ -42,7 +106,23 @@
     "description": "Рассчитайте экономию от энергоэффективных решений",
     "subcategory": "energy",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "compost-calculator",
@@ -51,7 +131,23 @@
     "description": "Рассчитайте, сколько удобрений вы получите из органики",
     "subcategory": "garden-eco",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "electric-car-savings",
@@ -60,7 +156,23 @@
     "description": "Рассчитайте, сколько вы сэкономите на переходе на электромобиль",
     "subcategory": "transport",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "eco-score-calculator",
@@ -69,7 +181,23 @@
     "description": "Узнайте, насколько экологичен ваш образ жизни",
     "subcategory": "eco-lifestyle",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "tree-impact-calculator",
@@ -78,7 +206,23 @@
     "description": "Рассчитайте, сколько CO₂ поглощают деревья",
     "subcategory": "nature",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "reusable-items-calculator",
@@ -87,7 +231,23 @@
     "description": "Рассчитайте экономию и снижение отходов от многоразовых предметов",
     "subcategory": "eco-lifestyle",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "garden-water-calculator",
@@ -96,6 +256,22 @@
     "description": "Рассчитайте оптимальное количество воды для огорода",
     "subcategory": "garden-eco",
     "type": "formula",
-    "category": "environment"
+    "category": "environment",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

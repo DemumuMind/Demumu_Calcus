@@ -6,7 +6,23 @@
     "description": "Расчёт количества штукатурки по площади и толщине слоя",
     "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-i-remont"
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-sypuchih-materialov",
@@ -294,7 +310,23 @@
     "description": "Расчёт объёма бетона для ленточного или плитного фундамента",
     "subcategory": "fundamenty",
     "type": "formula",
-    "category": "stroitelstvo-i-remont"
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "kalkulyator-elektriki",

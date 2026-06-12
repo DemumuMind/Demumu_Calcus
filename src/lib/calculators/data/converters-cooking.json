@@ -6,7 +6,22 @@
     "description": "Переводит кулинарные меры: стаканы, ложки, граммы, миллилитры",
     "subcategory": "cooking",
     "type": "converter",
-    "category": "converters"
+    "category": "converters",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "oven-temp-converter",
@@ -15,6 +30,21 @@
     "description": "Переводит температуру духовки между °C, °F и газовыми марками",
     "subcategory": "cooking",
     "type": "converter",
-    "category": "converters"
+    "category": "converters",
+    "inputs": [
+      {
+        "name": "fromValue",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

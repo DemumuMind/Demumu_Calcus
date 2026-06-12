@@ -20,7 +20,7 @@ export interface ArticleSection {
   body: string;
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
 
 /** Helper to reduce repetitive article object structure */
 export function makeArticle(

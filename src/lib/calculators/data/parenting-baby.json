@@ -6,7 +6,22 @@
     "description": "Рассчитайте предполагаемую дату родов по дате последней менструации",
     "subcategory": "pregnancy",
     "type": "arithmetic",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "baby-growth-calculator",
@@ -15,7 +30,23 @@
     "description": "Отслеживайте рост и вес ребёнка по процентилям ВОЗ",
     "subcategory": "baby-health",
     "type": "formula",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "feeding-amount-calculator",
@@ -24,7 +55,22 @@
     "description": "Рассчитайте сколько молока или смеси нужно ребёнку",
     "subcategory": "feeding",
     "type": "arithmetic",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "diaper-calculator",
@@ -33,7 +79,23 @@
     "description": "Рассчитайте сколько подгузников нужно и во сколько это обойдётся",
     "subcategory": "supplies",
     "type": "formula",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "sleep-calculator",
@@ -42,7 +104,22 @@
     "description": "Рассчитайте оптимальное время сна по возрасту",
     "subcategory": "sleep",
     "type": "arithmetic",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "vaccination-calendar",
@@ -51,7 +128,22 @@
     "description": "Рассчитайте график вакцинации для вашего ребёнка",
     "subcategory": "health",
     "type": "arithmetic",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "maternity-benefit-calculator",
@@ -60,7 +152,22 @@
     "description": "Рассчитайте пособия по беременности и родам",
     "subcategory": "benefits",
     "type": "arithmetic",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "toy-age-calculator",
@@ -69,7 +176,22 @@
     "description": "Подберите подходящие игрушки для развития ребёнка",
     "subcategory": "development",
     "type": "arithmetic",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "baby-clothes-calculator",
@@ -78,6 +200,22 @@
     "description": "Рассчитайте необходимый гардероб для ребёнка",
     "subcategory": "shopping",
     "type": "formula",
-    "category": "parenting"
+    "category": "parenting",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]

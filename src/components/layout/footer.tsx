@@ -11,9 +11,9 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-2 space-y-3">
-            <h3 className="text-lg font-bold">CALCUS.CLONE</h3>
+            <h3 className="text-lg font-bold">CALCUS</h3>
             <p className="text-sm text-muted-foreground">
-              538+ онлайн-калькуляторов для математики, финансов, здоровья,
+              760+ онлайн-калькуляторов для математики, финансов, здоровья,
               строительства и других задач. Все расчёты выполняются мгновенно,
               бесплатно и без регистрации.
             </p>

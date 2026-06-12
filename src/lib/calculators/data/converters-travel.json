@@ -160,7 +160,23 @@
     "description": "Расчёт чаевых в ресторане с учётом процента, количества людей и качества обслуживания",
     "subcategory": "travel-tools",
     "type": "formula",
-    "category": "puteshestviya"
+    "category": "puteshestviya",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "raschet-bagazha",

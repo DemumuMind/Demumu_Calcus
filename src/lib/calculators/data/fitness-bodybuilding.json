@@ -270,7 +270,23 @@
     "description": "Расчёт одноповторного максимума (1RM) по формулам Бриzycki, Эпли и Ломбарди",
     "subcategory": "fitness",
     "type": "formula",
-    "category": "zdorove"
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "obyom-trenirovki",

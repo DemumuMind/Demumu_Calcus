@@ -6,7 +6,23 @@
     "description": "Расчёт ИМТ с учётом срока беременности и рекомендуемого набора веса",
     "subcategory": "vesc-rost",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "data-rodov-rasshirennyj",
@@ -15,7 +31,23 @@
     "description": "Расчёт предполагаемой даты родов по нескольким методам",
     "subcategory": "detyam",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "prikorm-dlya-malysha",
@@ -24,7 +56,22 @@
     "description": "Когда и какие продукты вводить при прикорме",
     "subcategory": "detyam",
     "type": "reference",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "razvitie-rebenka",
@@ -33,7 +80,22 @@
     "description": "Основные этапы развития от рождения до 3 лет",
     "subcategory": "detyam",
     "type": "reference",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "menstrualnyj-cikl",
@@ -42,7 +104,23 @@
     "description": "Отслеживание цикла, предсказание следующих месячных и овуляции",
     "subcategory": "detyam",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "klimaks-kalkulyator",
@@ -51,7 +129,23 @@
     "description": "Расчёт возраста наступления менопаузы и перименопаузы",
     "subcategory": "detyam",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "norma-belka",
@@ -60,7 +154,23 @@
     "description": "Расчёт дневной потребности в белке по весу и активности",
     "subcategory": "pitanie-diety",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "gidratacziya-rasshirennaya",
@@ -69,7 +179,23 @@
     "description": "Дневная норма воды с учётом климата, активности и диеты",
     "subcategory": "pitanie-diety",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "pishhevaya-allergiya",
@@ -78,7 +204,22 @@
     "description": "Симптомы и вероятность аллергической реакции на продукты",
     "subcategory": "pitanie-diety",
     "type": "reference",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   },
   {
     "slug": "lekztva-dlya-zhivotnyh",
@@ -87,6 +228,22 @@
     "description": "Расчёт дозировки лекарств для собак и кошек по весу",
     "subcategory": "pitanie-diety",
     "type": "formula",
-    "category": "zdorove-i-krasota"
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "default": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      }
+    ]
   }
 ]
