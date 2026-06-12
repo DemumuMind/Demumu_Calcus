@@ -1,0 +1,1013 @@
+[
+  {
+    "slug": "schyotchik-simvolov",
+    "id": "character-counter",
+    "title": "Счётчик символов",
+    "description": "Подсчёт символов с пробелами и без, строк, абзацев и байтов",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст",
+        "type": "text",
+        "placeholder": "Введите или вставьте текст...",
+        "defaultValue": ""
+      }
+    ],
+    "outputs": [
+      {
+        "name": "withSpaces",
+        "label": "Символов с пробелами",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "withoutSpaces",
+        "label": "Символов без пробелов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "words",
+        "label": "Слов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "lines",
+        "label": "Строк",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "paragraphs",
+        "label": "Абзацев",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "bytes",
+        "label": "Байт",
+        "type": "number",
+        "unit": "байт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите или вставьте текст в поле. Калькулятор автоматически подсчитает все показатели.",
+      "about": "Инструмент для детального анализа текста: подсчёт символов с пробелами и без, количество слов, строк, абзацев и размер в байтах.",
+      "usage": "Используется для написания статей с лимитом символов, SEO-оптимизации, подготовки публикаций, программирования.",
+      "formula": "Символы с пробелами = общая длина текста\nСимволы без пробелов = длина без s\nСлова = последовательности непробельных символов\nБайты = размер в UTF-8",
+      "faq": [
+        {
+          "question": "Как считаются байты?",
+          "answer": "Используется кодировка UTF-8. Латинские буквы и цифры — 1 байт, кириллица — 2 байта."
+        },
+        {
+          "question": "Что считается абзацем?",
+          "answer": "Абзац — это блок текста, отделённый от других пустой строкой (двойным переносом строки)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "UTF-8 — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/UTF-8"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "analiz-teksta",
+    "id": "text-analyzer",
+    "title": "Анализ текста",
+    "description": "Частотность слов, читаемость по Флешу, количество уникальных слов",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст для анализа",
+        "type": "text",
+        "placeholder": "Введите текст на русском или английском...",
+        "defaultValue": ""
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalWords",
+        "label": "Всего слов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "uniqueWords",
+        "label": "Уникальных слов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "fleschScore",
+        "label": "Индекс Флеша",
+        "type": "number"
+      },
+      {
+        "name": "readability",
+        "label": "Уровень читаемости",
+        "type": "text"
+      },
+      {
+        "name": "avgWordLength",
+        "label": "Средняя длина слова",
+        "type": "number",
+        "unit": "симв"
+      },
+      {
+        "name": "topWords",
+        "label": "Топ-5 слов",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст для анализа. Калькулятор покажет статистику слов, индекс читаемости по Флешу и частотность слов.",
+      "about": "Комплексный анализ текста: подсчёт уникальных слов, оценка читаемости по шкале Флеша (Flesch Reading Ease), средняя длина слова, топ слов по частотности.",
+      "usage": "Используется для проверки качества текста, SEO-анализа, оценки сложности образовательных материалов, копирайтинга.",
+      "formula": "Индекс Флеша = 206.835 - 1.3 × (слова/предложения) - 60 × (слоги/слова)\nЧем выше индекс — тем легче текст",
+      "faq": [
+        {
+          "question": "Что такое индекс Флеша?",
+          "answer": "Шкала читаемости текста от 0 до 100. 90-100 — очень легко (детская книга), 0-30 — сложно (научная статья)."
+        },
+        {
+          "question": "Какие слова считаются топовыми?",
+          "answer": "Показываются 5 самых частотных слов с указанием количества вхождений. Игнорируется регистр и пунктуация."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Индекс Флеша — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Индекс_удобочитаемости"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "lorem-ipsum-generator",
+    "id": "lorem-ipsum-generator",
+    "title": "Генератор Lorem Ipsum",
+    "description": "Генерация рыбного текста — слова, предложения, абзацы",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "type",
+        "label": "Тип генерации",
+        "type": "select",
+        "options": [
+          {
+            "value": "words",
+            "label": "Слова"
+          },
+          {
+            "value": "sentences",
+            "label": "Предложения"
+          },
+          {
+            "value": "paragraphs",
+            "label": "Абзацы"
+          }
+        ],
+        "defaultValue": "paragraphs"
+      },
+      {
+        "name": "count",
+        "label": "Количество",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 50
+      },
+      {
+        "name": "startWithLorem",
+        "label": "Начинать с \"Lorem ipsum\"",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "stats",
+        "label": "Статистика",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип генерации (слова, предложения или абзацы) и количество. Можно начать с классического \"Lorem ipsum dolor sit amet\".",
+      "about": "Генератор Lorem Ipsum — стандартного \"рыбного\" текста для вёрстки и дизайна. Используется для заполнения макетов.",
+      "usage": "Используется в вёрстке, дизайне, веб-разработке для демонстрации макетов до получения реального текста.",
+      "formula": "Случайный выбор слов из классического набора латинских терминов",
+      "faq": [
+        {
+          "question": "Что такое Lorem Ipsum?",
+          "answer": "Фрагмент латинского текста, используемый в печати и вёрстке как заполнитель. Используется с XVI века."
+        },
+        {
+          "question": "Почему используется именно этот текст?",
+          "answer": "Он имеет нормальное распределение букв и длину слов, похожую на естественный язык, но не отвлекает читателя смыслом."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Lorem ipsum — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Lorem_ipsum"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "transliteratsiya",
+    "id": "transliteration",
+    "title": "Транслитерация",
+    "description": "Преобразование текста между кириллицей и латиницей по международным стандартам",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст",
+        "type": "text",
+        "placeholder": "Введите текст на русском или латинице...",
+        "defaultValue": ""
+      },
+      {
+        "name": "direction",
+        "label": "Направление",
+        "type": "select",
+        "options": [
+          {
+            "value": "ru-to-lat",
+            "label": "Русский → Латиница"
+          },
+          {
+            "value": "lat-to-ru",
+            "label": "Латиница → Русский"
+          }
+        ],
+        "defaultValue": "ru-to-lat"
+      },
+      {
+        "name": "standard",
+        "label": "Стандарт",
+        "type": "select",
+        "options": [
+          {
+            "value": "icao",
+            "label": "ICAO (паспорта, Doc 9303)"
+          },
+          {
+            "value": "bgn",
+            "label": "BGN/PCGN (США, Библиотека Конгресса)"
+          },
+          {
+            "value": "scholarly",
+            "label": "Научный (ISO 9:1995)"
+          }
+        ],
+        "defaultValue": "icao"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "originalLength",
+        "label": "Исходных символов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "resultLength",
+        "label": "Результат символов",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст, выберите направление транслитерации и стандарт. Нажмите \"Рассчитать\" для преобразования.",
+      "about": "Транслитерация по международным стандартам: ICAO (для паспортов), BGN/PCGN (американский), ISO 9 (научный).",
+      "usage": "Используется для написания имен в загранпаспортах, научных публикаций, URL-адресов, email.",
+      "formula": "Поэлементная замена символов по таблице соответствия выбранного стандарта",
+      "faq": [
+        {
+          "question": "Какой стандарт использовать для паспорта?",
+          "answer": "ICAO Doc 9303 — это международный стандарт для машиночитаемых проездных документов."
+        },
+        {
+          "question": "В чём разница между BGN и ICAO?",
+          "answer": "BGN/PCGN использует \"yu\" для ю, \"ya\" для я и разделяет ъ и ь знаками. ICAO упрощает некоторые буквы."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Транслитерация — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Транслитерация"
+        },
+        {
+          "title": "ICAO Doc 9303",
+          "url": "https://www.icao.int/publications/documents/9303_p9_cons_en.pdf"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "tsifrt-tsezarya",
+    "id": "caesar-cipher",
+    "title": "Шифр Цезаря",
+    "description": "Шифрование методом сдвига (ROT13, произвольный сдвиг)",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст",
+        "type": "text",
+        "placeholder": "Введите текст для шифрования...",
+        "defaultValue": ""
+      },
+      {
+        "name": "shift",
+        "label": "Сдвиг",
+        "type": "select",
+        "options": [
+          {
+            "value": "13",
+            "label": "ROT13 (классический)"
+          },
+          {
+            "value": "1",
+            "label": "Сдвиг 1 (A→B)"
+          },
+          {
+            "value": "3",
+            "label": "Сдвиг 3 (как у Цезаря)"
+          },
+          {
+            "value": "5",
+            "label": "Сдвиг 5"
+          },
+          {
+            "value": "7",
+            "label": "Сдвиг 7"
+          },
+          {
+            "value": "10",
+            "label": "Сдвиг 10"
+          },
+          {
+            "value": "custom",
+            "label": "Произвольный (введите ниже)"
+          }
+        ],
+        "defaultValue": "13"
+      },
+      {
+        "name": "customShift",
+        "label": "Произвольный сдвиг (1-25)",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 25
+      },
+      {
+        "name": "mode",
+        "label": "Режим",
+        "type": "select",
+        "options": [
+          {
+            "value": "encode",
+            "label": "Зашифровать"
+          },
+          {
+            "value": "decode",
+            "label": "Расшифровать"
+          }
+        ],
+        "defaultValue": "encode"
+      },
+      {
+        "name": "alphabet",
+        "label": "Алфавит",
+        "type": "select",
+        "options": [
+          {
+            "value": "latin",
+            "label": "Латиница (A-Z)"
+          },
+          {
+            "value": "russian",
+            "label": "Кириллица (А-Я)"
+          }
+        ],
+        "defaultValue": "latin"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "shiftInfo",
+        "label": "Использованный сдвиг",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст, выберите сдвиг (ROT13 или произвольный от 1-25), режим и алфавит. Калькулятор зашифрует или расшифрует текст.",
+      "about": "Шифр Цезаря — метод шифрования путём сдвига букв алфавита на фиксированное число позиций. ROT13 — сдвиг на 13 (взаимно обратный).",
+      "usage": "Используется для простого шифрования, головоломок, обучения криптографии, создания спойлеров (ROT13).",
+      "formula": "Шифрование: C = (P + K) mod N\nРасшифровка: P = (C - K) mod N\nгде P — открытый текст, K — ключ (сдвиг), N — размер алфавита",
+      "faq": [
+        {
+          "question": "Что такое ROT13?",
+          "answer": "ROT13 — специальный случай шифра Цезаря со сдвигом 13. Применяется дважды возвращает исходный текст."
+        },
+        {
+          "question": "Безопасен ли этот шифр?",
+          "answer": "Нет, это классический пример небезопасного шифра. Его легко взломать перебором или частотным анализом."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Шифр Цезаря — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Шифр_Цезаря"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "url-kodirovshchik",
+    "id": "url-encoder",
+    "title": "URL кодировщик",
+    "description": "Кодирование и декодирование URL (percent-encoding)",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст или URL",
+        "type": "text",
+        "placeholder": "Введите текст для кодирования или закодированный URL...",
+        "defaultValue": ""
+      },
+      {
+        "name": "mode",
+        "label": "Режим",
+        "type": "select",
+        "options": [
+          {
+            "value": "encode",
+            "label": "Кодировать (encodeURIComponent)"
+          },
+          {
+            "value": "decode",
+            "label": "Декодировать (decodeURIComponent)"
+          },
+          {
+            "value": "encodeUri",
+            "label": "Кодировать URL (encodeURI)"
+          },
+          {
+            "value": "fullUrl",
+            "label": "Закодировать весь URL"
+          }
+        ],
+        "defaultValue": "encode"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "originalLength",
+        "label": "Исходная длина",
+        "type": "number",
+        "unit": "симв"
+      },
+      {
+        "name": "resultLength",
+        "label": "Длина результата",
+        "type": "number",
+        "unit": "симв"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст или URL, выберите режим кодирования. Для параметров запроса используйте encodeURIComponent, для полных URL — encodeURI.",
+      "about": "Percent-encoding (URL encoding) — кодирование специальных символов в URL: пробелы → %20, кириллица → %D0%9E и т.д.",
+      "usage": "Используется при формировании URL-запросов, работе с GET-параметрами, API, отправке данных через URL.",
+      "formula": "encodeURIComponent: кодирует все спецсимволы\nencodeURI: сохраняет структуру URL (:, /, ?, &, =)",
+      "faq": [
+        {
+          "question": "В чём разница между encodeURI и encodeURIComponent?",
+          "answer": "encodeURI сохраняет служебные символы URL (:/?#&=). encodeURIComponent кодирует всё, включая эти символы — для значений параметров."
+        },
+        {
+          "question": "Почему пробел кодируется как %20?",
+          "answer": "Пробел в URL запрещён. %20 — это шестнадцатеричный код пробела (32 в ASCII) в формате percent-encoding."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Percent-encoding — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кодирование_URL"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "generator-parolej-pro",
+    "id": "advanced-password-generator",
+    "title": "Генератор паролей PRO",
+    "description": "Генератор с настройкой длины, сложности и произносимых паролей",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина пароля",
+        "type": "number",
+        "placeholder": "16",
+        "defaultValue": 16,
+        "min": 8,
+        "max": 128
+      },
+      {
+        "name": "uppercase",
+        "label": "Заглавные буквы (A-Z)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "lowercase",
+        "label": "Строчные буквы (a-z)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "digits",
+        "label": "Цифры (0-9)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "symbols",
+        "label": "Спецсимволы (!@#$%^&*)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "mode",
+        "label": "Режим генерации",
+        "type": "select",
+        "options": [
+          {
+            "value": "random",
+            "label": "Случайный"
+          },
+          {
+            "value": "pronounceable",
+            "label": "Произносимый (запоминаемый)"
+          },
+          {
+            "value": "passphrase",
+            "label": "Парольная фраза"
+          }
+        ],
+        "defaultValue": "random"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "password",
+        "label": "Пароль",
+        "type": "text"
+      },
+      {
+        "name": "strength",
+        "label": "Сила пароля",
+        "type": "text"
+      },
+      {
+        "name": "entropy",
+        "label": "Энтропия",
+        "type": "number",
+        "unit": "бит"
+      },
+      {
+        "name": "timeToCrack",
+        "label": "Время взлома",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Настройте длину (8-128), наборы символов и режим. \"Произносимый\" генерирует запоминаемые пароли, \"Парольная фраза\" — из слов.",
+      "about": "Продвинутый генератор паролей с тремя режимами: случайный (максимальная энтропия), произносимый (легко запомнить), парольная фраза (из слов).",
+      "usage": "Случайный — для менеджеров паролей. Произносимый — для паролей, которые нужно запомнить. Парольная фраза — высокая энтропия при запоминаемости.",
+      "formula": "Энтропия = L × log₂(N)\nгде L — длина, N — размер набора символов\nПример: 16 символов из 95 = ~105 бит",
+      "faq": [
+        {
+          "question": "Какой пароль самый надёжный?",
+          "answer": "Случайный с длиной 20+ символов, всеми типами символов — энтропия 130+ бит, не поддаётся подбору."
+        },
+        {
+          "question": "Что лучше: сложный или длинный?",
+          "answer": "Длина важнее сложности. \"correct-horse-battery-staple\" (28 символов) надёжнее, чем \"Tr0ub4dor&3\" (11 символов)."
+        },
+        {
+          "question": "Где хранить пароли?",
+          "answer": "Используйте менеджер паролей (Bitwarden, KeePassXC, 1Password). Не сохраняйте в браузере или текстовых файлах."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Менеджер паролей — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Менеджер_паролей"
+        },
+        {
+          "title": "Энтропия пароля — Википедия",
+          "url": "https://en.wikipedia.org/wiki/Password_strength"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "proverka-palindromov",
+    "id": "palindrome-checker",
+    "title": "Проверка палиндромов",
+    "description": "Проверка слов и фраз на чтение одинаково в обе стороны",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст для проверки",
+        "type": "text",
+        "placeholder": "Введите слово или фразу...",
+        "defaultValue": ""
+      },
+      {
+        "name": "ignoreSpaces",
+        "label": "Игнорировать пробелы",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "ignorePunctuation",
+        "label": "Игнорировать знаки препинания",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "ignoreCase",
+        "label": "Игнорировать регистр",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "isPalindrome",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "cleanedText",
+        "label": "Очищенный текст",
+        "type": "text"
+      },
+      {
+        "name": "reversedText",
+        "label": "Текст наоборот",
+        "type": "text"
+      },
+      {
+        "name": "length",
+        "label": "Длина",
+        "type": "number",
+        "unit": "симв"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст и выберите параметры сравнения. Можно игнорировать пробелы, знаки препинания и регистр.",
+      "about": "Проверка на палиндром — слово или фраза, читающаяся одинаково слева направо и справа налево. Примеры: \"кошка\", \"A man a plan a canal Panama\".",
+      "usage": "Используется для головоломок, лингвистических игр, образовательных целей, проверки текстов.",
+      "formula": "Очистка текста от игнорируемых символов → Сравнение с обратной строкой",
+      "faq": [
+        {
+          "question": "Что такое палиндром?",
+          "answer": "Слово, число или фраза, одинаково читающиеся в обе стороны. Например: \"топот\", \"12321\", \"Шалаш\"."
+        },
+        {
+          "question": "Самый длинный палиндром?",
+          "answer": "Существуют палиндромы на тысячи слов. В русском: \"А роза упала на лапу Азора\" — самый известный."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Палиндром — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Палиндром"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "reshetka-anagramm",
+    "id": "anagram-solver",
+    "title": "Решатель анаграмм",
+    "description": "Поиск слов из заданных букв",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "letters",
+        "label": "Буквы",
+        "type": "text",
+        "placeholder": "Введите буквы (например: слот)...",
+        "defaultValue": ""
+      },
+      {
+        "name": "minLength",
+        "label": "Минимальная длина слова",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 2,
+        "max": 20
+      },
+      {
+        "name": "maxResults",
+        "label": "Максимум результатов",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 5,
+        "max": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "words",
+        "label": "Найденные слова",
+        "type": "text"
+      },
+      {
+        "name": "count",
+        "label": "Количество",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "sorted",
+        "label": "Буквы отсортированы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите набор букв, задайте минимальную длину слова. Калькулятор найдёт слова, которые можно составить из этих букв.",
+      "about": "Решатель анаграмм находит слова, которые можно составить из заданных букв. Поддерживает русский и английский языки.",
+      "usage": "Используется для головоломок (Scrabble, Эрудит), кроссвордов, лингвистических игр, проверки орфографии.",
+      "formula": "Проверка каждого слова из словаря: все буквы слова должны присутствовать в исходном наборе с учётом повторений",
+      "faq": [
+        {
+          "question": "Что такое анаграмма?",
+          "answer": "Слово или фраза, образованная перестановкой букв другого слова. Например: \"кот\" → \"ток\", \"listen\" → \"silent\"."
+        },
+        {
+          "question": "Как увеличить словарь?",
+          "answer": "Базовый набор содержит ~150 частотных слов. Для полного поиска используйте специализированные сервисы или расширяйте словарь."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Анаграмма — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Анаграмма"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-registra",
+    "id": "case-converter",
+    "title": "Конвертер регистра",
+    "description": "Преобразование между различными стилями написания",
+    "subcategory": "tekstovye-instrumenty",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст",
+        "type": "text",
+        "placeholder": "Введите текст для преобразования...",
+        "defaultValue": ""
+      },
+      {
+        "name": "targetCase",
+        "label": "Целевой регистр",
+        "type": "select",
+        "options": [
+          {
+            "value": "upper",
+            "label": "ВЕРХНИЙ РЕГИСТР"
+          },
+          {
+            "value": "lower",
+            "label": "нижний регистр"
+          },
+          {
+            "value": "title",
+            "label": "Заглавные Буквы Каждого Слова"
+          },
+          {
+            "value": "sentence",
+            "label": "Предложения. С заглавной."
+          },
+          {
+            "value": "camel",
+            "label": "camelCase"
+          },
+          {
+            "value": "snake",
+            "label": "snake_case"
+          },
+          {
+            "value": "kebab",
+            "label": "kebab-case"
+          },
+          {
+            "value": "alternating",
+            "label": "ЧеРеДоВаНиЕ"
+          }
+        ],
+        "defaultValue": "title"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "originalLength",
+        "label": "Исходная длина",
+        "type": "number",
+        "unit": "симв"
+      },
+      {
+        "name": "resultLength",
+        "label": "Длина результата",
+        "type": "number",
+        "unit": "симв"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст и выберите целевой регистр. Калькулятор мгновенно преобразует текст в выбранный формат.",
+      "about": "Конвертер регистра преобразует текст между различными стилями: UPPER, lower, Title Case, Sentence case, camelCase, snake_case, kebab-case.",
+      "usage": "Используется в программировании (имена переменных), SEO (заголовки), редактировании текста, нормализации данных.",
+      "formula": "Регулярные выражения и методы строк JavaScript для трансформации регистра",
+      "faq": [
+        {
+          "question": "Что такое camelCase?",
+          "answer": "Стиль написания, где первое слово строчное, а каждое следующее начинается с заглавной: myVariableName, getUserById."
+        },
+        {
+          "question": "В чём разница между snake_case и kebab-case?",
+          "answer": "snake_case использует подчёркивания (user_name), kebab-case — дефисы (user-name). Первый популярен в Python, второй в URL."
+        },
+        {
+          "question": "Работает ли с русским языком?",
+          "answer": "Да, но camelCase, snake_case и kebab-case лучше работают с латиницей (для программирования). Title Case и Sentence case поддерживают оба алфавита."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Стиль написания идентификаторов — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Стиль_написания_идентификаторов"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

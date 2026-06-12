@@ -108,7 +108,6 @@ export function generateStaticParams() {
     }
   }
 
-  console.log(`Generated ${params.length} reverse cooking converter pages`);
   return params;
 }
 

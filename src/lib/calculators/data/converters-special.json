@@ -1,0 +1,691 @@
+[
+  {
+    "slug": "perevod-sistem-schisleniya",
+    "id": "number-system-converter",
+    "title": "Перевод систем счисления",
+    "description": "Конвертер между двоичной, восьмеричной, десятичной и шестнадцатеричной системами",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "number",
+        "label": "Число",
+        "type": "text",
+        "placeholder": "1010"
+      },
+      {
+        "name": "from",
+        "label": "Из системы",
+        "type": "select",
+        "options": [
+          {
+            "value": "2",
+            "label": "Двоичная (2)"
+          },
+          {
+            "value": "8",
+            "label": "Восьмеричная (8)"
+          },
+          {
+            "value": "10",
+            "label": "Десятичная (10)"
+          },
+          {
+            "value": "16",
+            "label": "Шестнадцатеричная (16)"
+          }
+        ],
+        "defaultValue": "10"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "binary",
+        "label": "Двоичная",
+        "type": "text"
+      },
+      {
+        "name": "octal",
+        "label": "Восьмеричная",
+        "type": "text"
+      },
+      {
+        "name": "decimal",
+        "label": "Десятичная",
+        "type": "text"
+      },
+      {
+        "name": "hex",
+        "label": "Шестнадцатеричная",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите число и выберите систему счисления. Все остальные системы будут рассчитаны автоматически.",
+      "about": "Конвертер систем счисления позволяет переводить числа между двоичной, восьмеричной, десятичной и шестнадцатеричной системами. Используется в программировании, информатике и электронике.",
+      "formula": "Используется стандартный алгоритм перевода между системами счисления через десятичную систему.",
+      "faq": [
+        {
+          "question": "Что такое система счисления?",
+          "answer": "Способ записи чисел с помощью определённого набора символов (цифр)."
+        },
+        {
+          "question": "Где используется двоичная система?",
+          "answer": "В компьютерах и цифровой электронике."
+        },
+        {
+          "question": "Что такое HEX?",
+          "answer": "Шестнадцатеричная система (base-16), используется для записи цветов и адресов памяти."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Системы счисления",
+          "url": "https://ru.wikipedia.org/wiki/Система_счисления"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-cvetovyh-modelej",
+    "id": "color-model-converter",
+    "title": "Конвертер цветовых моделей",
+    "description": "Перевод между RGB, HEX, CMYK, HSL и HSV",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "inputFormat",
+        "label": "Из формата",
+        "type": "select",
+        "options": [
+          {
+            "value": "rgb",
+            "label": "RGB"
+          },
+          {
+            "value": "hex",
+            "label": "HEX"
+          },
+          {
+            "value": "hsl",
+            "label": "HSL"
+          },
+          {
+            "value": "cmyk",
+            "label": "CMYK"
+          }
+        ],
+        "defaultValue": "rgb"
+      },
+      {
+        "name": "r",
+        "label": "R (0-255)",
+        "type": "number",
+        "placeholder": "255",
+        "defaultValue": 255,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "g",
+        "label": "G (0-255)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "b",
+        "label": "B (0-255)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "hexInput",
+        "label": "HEX (например #FF6432)",
+        "type": "text",
+        "placeholder": "#FF6432",
+        "defaultValue": "#FF6432"
+      },
+      {
+        "name": "hslH",
+        "label": "H (0-360)",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15,
+        "min": 0,
+        "max": 360
+      },
+      {
+        "name": "hslS",
+        "label": "S (0-100%)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "hslL",
+        "label": "L (0-100%)",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60,
+        "min": 0,
+        "max": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "hex",
+        "label": "HEX",
+        "type": "text"
+      },
+      {
+        "name": "rgb",
+        "label": "RGB",
+        "type": "text"
+      },
+      {
+        "name": "hsl",
+        "label": "HSL",
+        "type": "text"
+      },
+      {
+        "name": "cmyk",
+        "label": "CMYK",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите исходный формат и введите значения цвета. Калькулятор мгновенно конвертирует в RGB, HEX, HSL и CMYK.",
+      "about": "Конвертер между основными цветовыми моделями. RGB для экранов, CMYK для печати, HSL для удобного редактирования цвета, HEX для веб.",
+      "usage": "Используется в веб-дизайне, графических редакторах, печати, фотографии для согласования цветов между разными системами.",
+      "formula": "RGB: красный, зелёный, синий (0-255). HEX: шестнадцатеричный код. HSL: тон, насыщенность, светлота. CMYK: голубой, пурпурный, жёлтый, чёрный.",
+      "faq": [
+        {
+          "question": "Чем HSL лучше RGB?",
+          "answer": "HSL интуитивен: H — оттенок (0-360°), S — насыщенность, L — яркость. Удобнее для создания палитр и оттенков."
+        },
+        {
+          "question": "Почему CMYK нужен для печати?",
+          "answer": "Принтеры работают субтрактивно — смешивают голубой, пурпурный, жёлтый и чёрный. RGB для излучающих экранов, CMYK для отражающих поверхностей."
+        },
+        {
+          "question": "Как получить белый цвет в HEX?",
+          "answer": "Белый = #FFFFFF (максимум всех компонентов RGB). Чёрный = #000000."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Цветовая модель — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Цветовая_модель"
+        },
+        {
+          "title": "HSL и HSV — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/HSL"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "konverter-shriftov",
+    "id": "typography-converter",
+    "title": "Конвертер типографики",
+    "description": "Перевод между pt, px, em, rem, % и другими единицами шрифтов",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "16",
+        "defaultValue": 16
+      },
+      {
+        "name": "from",
+        "label": "Из единицы",
+        "type": "select",
+        "options": [
+          {
+            "value": "px",
+            "label": "Пиксели (px)"
+          },
+          {
+            "value": "pt",
+            "label": "Пункты (pt)"
+          },
+          {
+            "value": "em",
+            "label": "EM (em)"
+          },
+          {
+            "value": "rem",
+            "label": "REM (rem)"
+          },
+          {
+            "value": "percent",
+            "label": "Проценты (%)"
+          },
+          {
+            "value": "mm",
+            "label": "Миллиметры (mm)"
+          },
+          {
+            "value": "cm",
+            "label": "Сантиметры (cm)"
+          },
+          {
+            "value": "inch",
+            "label": "Дюймы (in)"
+          }
+        ],
+        "defaultValue": "px"
+      },
+      {
+        "name": "baseSize",
+        "label": "Базовый размер шрифта (px)",
+        "type": "number",
+        "placeholder": "16",
+        "defaultValue": 16,
+        "min": 1,
+        "max": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "px",
+        "label": "Пиксели (px)",
+        "type": "text"
+      },
+      {
+        "name": "pt",
+        "label": "Пункты (pt)",
+        "type": "text"
+      },
+      {
+        "name": "em",
+        "label": "EM",
+        "type": "text"
+      },
+      {
+        "name": "rem",
+        "label": "REM",
+        "type": "text"
+      },
+      {
+        "name": "percent",
+        "label": "Проценты",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение, выберите единицу измерения и укажите базовый размер шрифта (обычно 16px).",
+      "about": "Конвертер типографики позволяет переводить размеры шрифтов между различными единицами. Используется в веб-разработке и дизайне.",
+      "formula": "1pt = 1.333px (при 96 DPI), em/rem зависят от базового размера шрифта.",
+      "faq": [
+        {
+          "question": "Что такое px?",
+          "answer": "Пиксель — базовая единица для экранов."
+        },
+        {
+          "question": "Что такое em?",
+          "answer": "Относительная единица, зависит от размера шрифта родителя."
+        },
+        {
+          "question": "Что такое rem?",
+          "answer": "Root em — относительная единица, зависит от размера шрифта корневого элемента."
+        }
+      ],
+      "sources": [
+        {
+          "title": "CSS единицы",
+          "url": "https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Values_and_units"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-ph",
+    "id": "ph-converter",
+    "title": "Конвертер pH",
+    "description": "Перевод pH в концентрацию ионов водорода и определение характера среды",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "ph",
+        "label": "pH значение",
+        "type": "number",
+        "placeholder": "7.0",
+        "min": 0,
+        "max": 14,
+        "step": 0.1,
+        "defaultValue": 7
+      }
+    ],
+    "outputs": [
+      {
+        "name": "concentration",
+        "label": "[H+] моль/л",
+        "type": "text"
+      },
+      {
+        "name": "description",
+        "label": "Характер среды",
+        "type": "text"
+      },
+      {
+        "name": "examples",
+        "label": "Примеры",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение pH от 0 до 14. pH 7 — нейтральная среда, ниже 7 — кислая, выше 7 — щелочная.",
+      "about": "pH (водородный показатель) — мера кислотности или щёлочности водного раствора. Используется в химии, биологии, медицине и экологии.",
+      "formula": "pH = -log[H+], где [H+] — концентрация ионов водорода в моль/л.",
+      "faq": [
+        {
+          "question": "Что такое pH?",
+          "answer": "Водородный показатель — мера кислотности раствора."
+        },
+        {
+          "question": "Какой pH у крови?",
+          "answer": "pH крови составляет 7.35-7.45 (слабощелочная среда)."
+        },
+        {
+          "question": "Что такое нейтральная среда?",
+          "answer": "Среда с pH = 7, где концентрация H+ и OH- равны."
+        }
+      ],
+      "sources": [
+        {
+          "title": "pH",
+          "url": "https://ru.wikipedia.org/wiki/Водородный_показатель"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-kreposti",
+    "id": "alcohol-strength-converter",
+    "title": "Конвертер крепости алкоголя",
+    "description": "Перевод между градусами (°), ABV, Proof и другими шкалами",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "40",
+        "defaultValue": 40
+      },
+      {
+        "name": "from",
+        "label": "Из шкалы",
+        "type": "select",
+        "options": [
+          {
+            "value": "abv",
+            "label": "ABV (об.%)"
+          },
+          {
+            "value": "proof_us",
+            "label": "Proof (US)"
+          },
+          {
+            "value": "proof_uk",
+            "label": "Proof (UK)"
+          },
+          {
+            "value": "degrees",
+            "label": "Градусы (°)"
+          }
+        ],
+        "defaultValue": "abv"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "abv",
+        "label": "ABV (об.% по объёму)",
+        "type": "text"
+      },
+      {
+        "name": "proof_us",
+        "label": "Proof (американский)",
+        "type": "text"
+      },
+      {
+        "name": "proof_uk",
+        "label": "Proof (британский)",
+        "type": "text"
+      },
+      {
+        "name": "degrees",
+        "label": "Градусы (°)",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение крепости и выберите шкалу. ABV — стандартная международная шкала (объёмные проценты).",
+      "about": "Конвертер крепости алкоголя переводит между различными шкалами измерения содержания алкоголя. Используется в производстве напитков и торговле.",
+      "formula": "US Proof = ABV × 2, UK Proof = ABV × 1.75, 1° = 1% ABV",
+      "faq": [
+        {
+          "question": "Что такое ABV?",
+          "answer": "Alcohol by Volume — объёмная доля алкоголя в процентах."
+        },
+        {
+          "question": "Что такое Proof?",
+          "answer": "Историческая шкала, в США Proof = 2 × ABV, в UK Proof = 1.75 × ABV."
+        },
+        {
+          "question": "Сколько градусов у водки?",
+          "answer": "Стандартная крепость водки — 40° (40% ABV)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Алкогольные градусы",
+          "url": "https://ru.wikipedia.org/wiki/Алкогольные_градусы"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-tverdosti",
+    "id": "hardness-converter",
+    "title": "Конвертер твёрдости",
+    "description": "Перевод между шкалами Мооса, Бриннеля, Роквелла, Виккерса",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение твёрдости",
+        "type": "number",
+        "placeholder": "200",
+        "defaultValue": 200
+      },
+      {
+        "name": "scale",
+        "label": "Шкала",
+        "type": "select",
+        "options": [
+          {
+            "value": "hb",
+            "label": "HB (Бриннель)"
+          },
+          {
+            "value": "hrc",
+            "label": "HRC (Роквелл)"
+          },
+          {
+            "value": "hv",
+            "label": "HV (Виккерс)"
+          },
+          {
+            "value": "hs",
+            "label": "HS (Шор)"
+          }
+        ],
+        "defaultValue": "hb"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "hb",
+        "label": "HB (Бриннель)",
+        "type": "text"
+      },
+      {
+        "name": "hrc",
+        "label": "HRC (Роквелл)",
+        "type": "text"
+      },
+      {
+        "name": "hv",
+        "label": "HV (Виккерс)",
+        "type": "text"
+      },
+      {
+        "name": "tensile",
+        "label": "Примерная прочность (MPa)",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение твёрдости по одной из шкал. Конвертация приблизительная и зависит от материала.",
+      "about": "Твёрдость материала — способность сопротивляться локальному пластическому деформированию. Используется в металлургии и материаловедении.",
+      "formula": "HB ≈ HV × 0.95, HRC ≈ -13.6 + 0.094×HB (приближённые формулы)",
+      "faq": [
+        {
+          "question": "Что такое шкала Бриннеля?",
+          "answer": "Метод измерения твёрдости с помощью стального шарика."
+        },
+        {
+          "question": "Что такое HRC?",
+          "answer": "Rockwell C — шкала для твёрдых материалов (сталь, закалённые сплавы)."
+        },
+        {
+          "question": "Что такое шкала Виккерса?",
+          "answer": "Метод с алмазной пирамидой, универсальный для всех материалов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Твёрдость материалов",
+          "url": "https://ru.wikipedia.org/wiki/Твёрдость"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-koncentracii",
+    "id": "solution-concentration",
+    "title": "Конвертер концентрации растворов",
+    "description": "Перевод между массовой долей, мольной долей, моляльностью и молярностью",
+    "subcategory": "special",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "massSolute",
+        "label": "Масса растворённого вещества (г)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      },
+      {
+        "name": "molarMass",
+        "label": "Молярная масса (г/моль)",
+        "type": "number",
+        "placeholder": "58.44",
+        "defaultValue": 58.44
+      },
+      {
+        "name": "massSolution",
+        "label": "Масса раствора (г)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "volumeSolution",
+        "label": "Объём раствора (мл)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "massPercent",
+        "label": "Массовая доля (%)",
+        "type": "text"
+      },
+      {
+        "name": "molarity",
+        "label": "Молярность (моль/л)",
+        "type": "text"
+      },
+      {
+        "name": "molality",
+        "label": "Моляльность (моль/кг)",
+        "type": "text"
+      },
+      {
+        "name": "moleFraction",
+        "label": "Мольная доля",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу вещества, его молярную массу (можно найти в таблице Менделеева), массу и объём раствора.",
+      "about": "Конвертер концентрации растворов позволяет переводить между различными способами выражения концентрации. Используется в химии, фармакологии и пищевой промышленности.",
+      "formula": "Молярность = моль/л, Моляльность = моль/кг растворителя, Массовая доля = масса вещества / масса раствора",
+      "faq": [
+        {
+          "question": "Что такое молярность?",
+          "answer": "Количество молей вещества на литр раствора (моль/л)."
+        },
+        {
+          "question": "Что такое моляльность?",
+          "answer": "Количество молей вещества на килограмм растворителя."
+        },
+        {
+          "question": "Чем отличаются массовая и мольная доли?",
+          "answer": "Массовая доля — отношение масс, мольная — отношение количества вещества."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Концентрация растворов",
+          "url": "https://ru.wikipedia.org/wiki/Концентрация"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

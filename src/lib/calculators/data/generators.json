@@ -1,0 +1,256 @@
+[
+  {
+    "slug": "generator-sluchajnyh-chisel",
+    "id": "random-number",
+    "title": "Случайное число",
+    "description": "Генератор случайных чисел в заданном диапазоне",
+    "subcategory": "generatory",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "min",
+        "label": "Минимум",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "max",
+        "label": "Максимум",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "count",
+        "label": "Количество",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 10
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите минимум, максимум и количество чисел. Калькулятор сгенерирует случайные числа в диапазоне.",
+      "about": "Генератор псевдослучайных чисел в заданном диапазоне. Использует встроенный генератор JavaScript.",
+      "usage": "Используется для лотерей, жеребьёвки, выбора случайного элемента, игр, обучения.",
+      "formula": "Math.floor(Math.random() × (max - min + 1)) + min",
+      "faq": [
+        {
+          "question": "Это действительно случайные числа?",
+          "answer": "Нет, это псевдослучайные числа, достаточные для большинства задач, но не для криптографии."
+        },
+        {
+          "question": "Можно ли сгенерировать несколько чисел?",
+          "answer": "Да, укажите количество от 1 до 10. Числа могут повторяться."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Генератор случайных чисел — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Генератор_случайных_чисел"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "generator-parolej",
+    "id": "password-generator",
+    "title": "Генератор паролей",
+    "description": "Генератор надёжных случайных паролей",
+    "subcategory": "generatory",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина пароля",
+        "type": "number",
+        "placeholder": "16",
+        "defaultValue": 16,
+        "min": 4,
+        "max": 64
+      },
+      {
+        "name": "uppercase",
+        "label": "Заглавные буквы (A-Z)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "numbers",
+        "label": "Цифры (0-9)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "symbols",
+        "label": "Спецсимволы (!@#$%^&*)",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "yes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "password",
+        "label": "Пароль",
+        "type": "text"
+      },
+      {
+        "name": "strength",
+        "label": "Оценка надёжности",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите длину и типы символов. Калькулятор сгенерирует случайный пароль с указанными параметрами.",
+      "about": "Генератор создаёт надёжные случайные пароли с различными наборами символов для безопасности.",
+      "usage": "Используется для создания новых паролей, обновления старых, генерации ключей и кодов.",
+      "formula": "Случайный выбор символов из заданного набора",
+      "faq": [
+        {
+          "question": "Какой пароль считается надёжным?",
+          "answer": "Минимум 12 символов с буквами разных регистров, цифрами и спецсимволами."
+        },
+        {
+          "question": "Где хранить сгенерированные пароли?",
+          "answer": "Используйте менеджер паролей: Bitwarden, KeePass, 1Password. Не храните в открытом виде."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Менеджер паролей — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Менеджер_паролей"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "broskok-kostej",
+    "id": "dice-roller",
+    "title": "Бросок костей",
+    "description": "Симуляция броска игральных костей d4, d6, d8, d10, d12, d20",
+    "subcategory": "razvlecheniya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "diceType",
+        "label": "Тип кости",
+        "type": "select",
+        "options": [
+          {
+            "value": "4",
+            "label": "d4 (4 грани)"
+          },
+          {
+            "value": "6",
+            "label": "d6 (6 граней) — стандартная"
+          },
+          {
+            "value": "8",
+            "label": "d8 (8 граней)"
+          },
+          {
+            "value": "10",
+            "label": "d10 (10 граней)"
+          },
+          {
+            "value": "12",
+            "label": "d12 (12 граней)"
+          },
+          {
+            "value": "20",
+            "label": "d20 (20 граней) — D&D"
+          }
+        ],
+        "defaultValue": "6"
+      },
+      {
+        "name": "count",
+        "label": "Количество костей",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 10
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результаты",
+        "type": "text"
+      },
+      {
+        "name": "total",
+        "label": "Сумма",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип кости и количество. Калькулятор имитирует бросок и покажет результаты.",
+      "about": "Симулятор броска многогранных костей (d4, d6, d8, d10, d12, d20), используемых в настольных играх и D&D.",
+      "usage": "Используется для настольных игр (D&D, Pathfinder), когда нет физических костей.",
+      "formula": "Math.floor(Math.random() × граней) + 1",
+      "faq": [
+        {
+          "question": "Что такое d20?",
+          "answer": "d20 — 20-гранная кость, основная в Dungeons & Dragons. Результат 20 — критический успех, 1 — провал."
+        },
+        {
+          "question": "Можно ли бросить несколько костей?",
+          "answer": "Да, можно бросить до 10 костей одновременно. Результаты и сумма показываются отдельно."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Игральная кость — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Игральная_кость"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

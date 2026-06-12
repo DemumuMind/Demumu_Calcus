@@ -1,0 +1,515 @@
+[
+  {
+    "slug": "mm-rt-st-v-paskali",
+    "id": "pressureMmHgToPa",
+    "title": "мм рт. ст. в Паскали",
+    "description": "Перевод давления из миллиметров ртутного столба в Паскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "atm-v-bar",
+    "id": "pressureAtmToBar",
+    "title": "Атмосферы в бар",
+    "description": "Перевод давления из физических атмосфер в бары",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "bar-v-paskali",
+    "id": "pressureBarToPa",
+    "title": "Бар в Паскали",
+    "description": "Перевод давления из баров в Паскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "paskali-v-bar",
+    "id": "pressurePaToBar",
+    "title": "Паскали в бар",
+    "description": "Перевод давления из Паскалей в бары",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "bar-v-psi",
+    "id": "pressureBarToPsi",
+    "title": "Бар в PSI",
+    "description": "Перевод давления из баров в фунты на квадратный дюйм",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kpa-v-pa",
+    "id": "pressureKpaToPa",
+    "title": "кПа в Па",
+    "description": "Перевод давления из килопаскалей в Паскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "pa-v-kpa",
+    "id": "pressurePaToKpa",
+    "title": "Па в кПа",
+    "description": "Перевод давления из Паскалей в килопаскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "mpa-v-pa",
+    "id": "pressureMpaToPa",
+    "title": "МПа в Па",
+    "description": "Перевод давления из мегапаскалей в Паскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "pa-v-mpa",
+    "id": "pressurePaToMpa",
+    "title": "Па в МПа",
+    "description": "Перевод давления из Паскалей в мегапаскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "tehn-atm-v-pa",
+    "id": "pressureAtToPa",
+    "title": "техн. атм в Па",
+    "description": "Перевод давления из технических атмосфер в Паскали",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "pa-v-tehn-atm",
+    "id": "pressurePaToAt",
+    "title": "Па в техн. атм",
+    "description": "Перевод давления из Паскалей в технические атмосферы",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dzhouli-v-kalorii",
+    "id": "energyJToCal",
+    "title": "Джоули в калории",
+    "description": "Перевод энергии из Джоулей в калории",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kalorii-v-dzhouli",
+    "id": "energyCalToJ",
+    "title": "Калории в джоули",
+    "description": "Перевод энергии из калорий в Джоули",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kkal-v-dzhouli",
+    "id": "energyKcalToJ",
+    "title": "ккал в джоули",
+    "description": "Перевод энергии из килокалорий в Джоули",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dzhouli-v-kkal",
+    "id": "energyJToKcal",
+    "title": "Джоули в ккал",
+    "description": "Перевод энергии из Джоулей в килокалории",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kvt-ch-v-dzhouli",
+    "id": "energyKwhToJ",
+    "title": "кВт·ч в джоули",
+    "description": "Перевод энергии из киловатт-часов в Джоули",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dzhouli-v-kvt-ch",
+    "id": "energyJToKwh",
+    "title": "Джоули в кВт·ч",
+    "description": "Перевод энергии из Джоулей в киловатт-часы",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "ev-v-dzhouli",
+    "id": "energyEvToJ",
+    "title": "эВ в джоули",
+    "description": "Перевод энергии из электронвольтов в Джоули",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dzhouli-v-ev",
+    "id": "energyJToEv",
+    "title": "Джоули в эВ",
+    "description": "Перевод энергии из Джоулей в электронвольты",
+    "subcategory": "conv-energiya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "vatty-v-kilovatty",
+    "id": "powerWToKw",
+    "title": "Ватты в киловатты",
+    "description": "Перевод мощности из ватт в киловатты",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kilovatty-v-vatty",
+    "id": "powerKwToW",
+    "title": "Киловатты в ватты",
+    "description": "Перевод мощности из киловатт в ватты",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kilovatty-v-ls",
+    "id": "powerKwToHp",
+    "title": "Киловатты в л.с.",
+    "description": "Перевод мощности из киловатт в лошадиные силы",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "ls-v-kilovatty",
+    "id": "powerHpToKw",
+    "title": "л.с. в киловатты",
+    "description": "Перевод мощности из лошадиных сил в киловатты",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "vatty-v-ls",
+    "id": "powerWToHp",
+    "title": "Ватты в л.с.",
+    "description": "Перевод мощности из ватт в лошадиные силы",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "ls-v-vatty",
+    "id": "powerHpToW",
+    "title": "л.с. в ватты",
+    "description": "Перевод мощности из лошадиных сил в ватты",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "megavatty-v-kilovatty",
+    "id": "powerMwToKw",
+    "title": "Мегаватты в киловатты",
+    "description": "Перевод мощности из мегаватт в киловатты",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kilovatty-v-megavatty",
+    "id": "powerKwToMw",
+    "title": "Киловатты в мегаватты",
+    "description": "Перевод мощности из киловатт в мегаватты",
+    "subcategory": "conv-moshchnost",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "sekundy-v-minuty",
+    "id": "timeSecToMin",
+    "title": "Секунды в минуты",
+    "description": "Перевод времени из секунд в минуты",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "minuty-v-sekundy",
+    "id": "timeMinToSec",
+    "title": "Минуты в секунды",
+    "description": "Перевод времени из минут в секунды",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "minuty-v-chasy",
+    "id": "timeMinToHour",
+    "title": "Минуты в часы",
+    "description": "Перевод времени из минут в часы",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "chasy-v-minuty",
+    "id": "timeHourToMin",
+    "title": "Часы в минуты",
+    "description": "Перевод времени из часов в минуты",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "chasy-v-dni",
+    "id": "timeHourToDay",
+    "title": "Часы в дни",
+    "description": "Перевод времени из часов в дни",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dni-v-chasy",
+    "id": "timeDayToHour",
+    "title": "Дни в часы",
+    "description": "Перевод времени из дней в часы",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dni-v-nedeli",
+    "id": "timeDayToWeek",
+    "title": "Дни в недели",
+    "description": "Перевод времени из дней в недели",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "nedeli-v-dni",
+    "id": "timeWeekToDay",
+    "title": "Недели в дни",
+    "description": "Перевод времени из недель в дни",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "dni-v-mesyacy",
+    "id": "timeDayToMonth",
+    "title": "Дни в месяцы",
+    "description": "Перевод времени из дней в месяцы",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "mesyacy-v-dni",
+    "id": "timeMonthToDay",
+    "title": "Месяцы в дни",
+    "description": "Перевод времени из месяцев в дни",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "mesyacy-v-gody",
+    "id": "timeMonthToYear",
+    "title": "Месяцы в годы",
+    "description": "Перевод времени из месяцев в годы",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gody-v-mesyacy",
+    "id": "timeYearToMonth",
+    "title": "Годы в месяцы",
+    "description": "Перевод времени из годов в месяцы",
+    "subcategory": "conv-vremya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gradusy-v-radiany",
+    "id": "angleDegToRad",
+    "title": "Градусы в радианы",
+    "description": "Перевод угловых величин из градусов в радианы",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "radiany-v-gradusy",
+    "id": "angleRadToDeg",
+    "title": "Радианы в градусы",
+    "description": "Перевод угловых величин из радиан в градусы",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gradusy-v-grady",
+    "id": "angleDegToGrad",
+    "title": "Градусы в грады",
+    "description": "Перевод угловых величин из градусов в грады",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "grady-v-gradusy",
+    "id": "angleGradToDeg",
+    "title": "Грады в градусы",
+    "description": "Перевод угловых величин из градов в градусы",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "uglovye-minuty-v-gradusy",
+    "id": "angleArcminToDeg",
+    "title": "Угловые минуты в градусы",
+    "description": "Перевод угловых величин из угловых минут в градусы",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gradusy-v-uglovye-minuty",
+    "id": "angleDegToArcmin",
+    "title": "Градусы в угловые минуты",
+    "description": "Перевод угловых величин из градусов в угловые минуты",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "uglovye-sekundy-v-gradusy",
+    "id": "angleArcsecToDeg",
+    "title": "Угловые секунды в градусы",
+    "description": "Перевод угловых величин из угловых секунд в градусы",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gradusy-v-uglovye-sekundy",
+    "id": "angleDegToArcsec",
+    "title": "Градусы в угловые секунды",
+    "description": "Перевод угловых величин из градусов в угловые секунды",
+    "subcategory": "conv-ugly",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "bajty-v-kilobajty",
+    "id": "dataByteToKb",
+    "title": "Байты в килобайты",
+    "description": "Перевод данных из байт в килобайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kilobajty-v-bajty",
+    "id": "dataKbToByte",
+    "title": "Килобайты в байты",
+    "description": "Перевод данных из килобайт в байты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kilobajty-v-megabajty",
+    "id": "dataKbToMb",
+    "title": "Килобайты в мегабайты",
+    "description": "Перевод данных из килобайт в мегабайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "megabajty-v-kilobajty",
+    "id": "dataMbToKb",
+    "title": "Мегабайты в килобайты",
+    "description": "Перевод данных из мегабайт в килобайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "megabajty-v-gigabajty",
+    "id": "dataMbToGb",
+    "title": "Мегабайты в гигабайты",
+    "description": "Перевод данных из мегабайт в гигабайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gigabajty-v-megabajty",
+    "id": "dataGbToMb",
+    "title": "Гигабайты в мегабайты",
+    "description": "Перевод данных из гигабайт в мегабайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gigabajty-v-terabajty",
+    "id": "dataGbToTb",
+    "title": "Гигабайты в терабайты",
+    "description": "Перевод данных из гигабайт в терабайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "terabajty-v-gigabajty",
+    "id": "dataTbToGb",
+    "title": "Терабайты в гигабайты",
+    "description": "Перевод данных из терабайт в гигабайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "megabity-v-megabajty",
+    "id": "dataMbitToMb",
+    "title": "Мегабиты в мегабайты",
+    "description": "Перевод данных из мегабит в мегабайты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "megabajty-v-megabity",
+    "id": "dataMbToMbit",
+    "title": "Мегабайты в мегабиты",
+    "description": "Перевод данных из мегабайт в мегабиты",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery"
+  }
+]

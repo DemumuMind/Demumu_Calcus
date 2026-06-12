@@ -1,0 +1,3262 @@
+[
+  {
+    "slug": "kaloriynost-priema-pishchi",
+    "id": "meal-calories",
+    "title": "Калькулятор калорийности приёма пищи",
+    "description": "Расчёт калорийности завтрака, обеда, ужина и перекусов",
+    "subcategory": "pitanie-i-ves",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "mealType",
+        "label": "Приём пищи",
+        "type": "select",
+        "options": [
+          {
+            "value": "breakfast",
+            "label": "Завтрак"
+          },
+          {
+            "value": "lunch",
+            "label": "Обед"
+          },
+          {
+            "value": "dinner",
+            "label": "Ужин"
+          },
+          {
+            "value": "snack",
+            "label": "Перекус"
+          }
+        ],
+        "defaultValue": "breakfast"
+      },
+      {
+        "name": "items",
+        "label": "Количество продуктов",
+        "type": "select",
+        "options": [
+          {
+            "value": "2",
+            "label": "2 продукта"
+          },
+          {
+            "value": "3",
+            "label": "3 продукта"
+          },
+          {
+            "value": "4",
+            "label": "4 продукта"
+          },
+          {
+            "value": "5",
+            "label": "5 продуктов"
+          }
+        ],
+        "defaultValue": "3"
+      },
+      {
+        "name": "food1",
+        "label": "Продукт 1",
+        "type": "select",
+        "options": [
+          {
+            "value": "grechka",
+            "label": "Гречневая каша"
+          },
+          {
+            "value": "ovsyanka",
+            "label": "Овсяная каша на воде"
+          },
+          {
+            "value": "pshenka",
+            "label": "Пшенная каша"
+          },
+          {
+            "value": "ris",
+            "label": "Рис отварной"
+          },
+          {
+            "value": "manka",
+            "label": "Манная каша"
+          },
+          {
+            "value": "rzhanye_hlebcy",
+            "label": "Ржаные хлебцы"
+          },
+          {
+            "value": "borodino",
+            "label": "Хлеб Бородинский"
+          },
+          {
+            "value": "baton",
+            "label": "Батон нарезной"
+          },
+          {
+            "value": "moloko_3_2",
+            "label": "Молоко 3.2%"
+          },
+          {
+            "value": "kefir_2_5",
+            "label": "Кефир 2.5%"
+          },
+          {
+            "value": "kefir_3_2",
+            "label": "Кефир 3.2%"
+          },
+          {
+            "value": "ryazhenka",
+            "label": "Ряженка 2.5%"
+          },
+          {
+            "value": "prostokvasha",
+            "label": "Простокваша"
+          },
+          {
+            "value": "tvorog_5",
+            "label": "Творог 5%"
+          },
+          {
+            "value": "tvorog_9",
+            "label": "Творог 9%"
+          },
+          {
+            "value": "tvorog_18",
+            "label": "Творог 18%"
+          },
+          {
+            "value": "smetana_15",
+            "label": "Сметана 15%"
+          },
+          {
+            "value": "smetana_20",
+            "label": "Сметана 20%"
+          },
+          {
+            "value": "syr_tv",
+            "label": "Сыр твёрдый"
+          },
+          {
+            "value": "syr_pl",
+            "label": "Сыр плавленый"
+          },
+          {
+            "value": "syr_tvor",
+            "label": "Сырок творожный"
+          },
+          {
+            "value": "maslo_sl",
+            "label": "Сливочное масло"
+          },
+          {
+            "value": "margarin",
+            "label": "Маргарин"
+          },
+          {
+            "value": "yogurt_grech",
+            "label": "Йогурт греческий"
+          },
+          {
+            "value": "govyadina_vr",
+            "label": "Говядина варёная"
+          },
+          {
+            "value": "govyadina_zh",
+            "label": "Говядина жареная"
+          },
+          {
+            "value": "svinina_vr",
+            "label": "Свинина варёная"
+          },
+          {
+            "value": "svinina_zh",
+            "label": "Свинина жареная"
+          },
+          {
+            "value": "kur_grud",
+            "label": "Куриная грудка"
+          },
+          {
+            "value": "kur_bedro",
+            "label": "Куриное бедро"
+          },
+          {
+            "value": "kur_jaico",
+            "label": "Яйцо куриное"
+          },
+          {
+            "value": "kur_jaico_vr",
+            "label": "Яйцо варёное"
+          },
+          {
+            "value": "kur_jaico_je",
+            "label": "Яичница"
+          },
+          {
+            "value": "ind_kur",
+            "label": "Индейка"
+          },
+          {
+            "value": "baran",
+            "label": "Баранина"
+          },
+          {
+            "value": "krolik",
+            "label": "Кролик"
+          },
+          {
+            "value": "vetchina",
+            "label": "Ветчина"
+          },
+          {
+            "value": "kolbasa_dok",
+            "label": "Колбаса докторская"
+          },
+          {
+            "value": "kolbasa_milk",
+            "label": "Молочная колбаса"
+          },
+          {
+            "value": "sosiska",
+            "label": "Сосиски молочные"
+          },
+          {
+            "value": "sardelki",
+            "label": "Сардельки"
+          },
+          {
+            "value": "treska",
+            "label": "Треска"
+          },
+          {
+            "value": "kambala",
+            "label": "Камбала"
+          },
+          {
+            "value": "mintay",
+            "label": "Минтай"
+          },
+          {
+            "value": "seledka",
+            "label": "Селёдка"
+          },
+          {
+            "value": "losos",
+            "label": "Лосось"
+          },
+          {
+            "value": "gorbusha",
+            "label": "Горбуша"
+          },
+          {
+            "value": "keta",
+            "label": "Кета"
+          },
+          {
+            "value": "semga",
+            "label": "Сёмга"
+          },
+          {
+            "value": "skumbria",
+            "label": "Скумбрия"
+          },
+          {
+            "value": "sardina",
+            "label": "Сардина"
+          },
+          {
+            "value": "tunec",
+            "label": "Тунец"
+          },
+          {
+            "value": "krevetki",
+            "label": "Креветки"
+          },
+          {
+            "value": "kalmar",
+            "label": "Кальмар"
+          },
+          {
+            "value": "mussels",
+            "label": "Мидии"
+          },
+          {
+            "value": "kartoshka_vr",
+            "label": "Картофель варёный"
+          },
+          {
+            "value": "kartoshka_zh",
+            "label": "Картофель жареный"
+          },
+          {
+            "value": "morkov",
+            "label": "Морковь"
+          },
+          {
+            "value": "svekla",
+            "label": "Свёкла"
+          },
+          {
+            "value": "kapusta",
+            "label": "Капуста белокочанная"
+          },
+          {
+            "value": "kapusta_cv",
+            "label": "Цветная капуста"
+          },
+          {
+            "value": "brokkoli",
+            "label": "Брокколи"
+          },
+          {
+            "value": "pomidor",
+            "label": "Помидор"
+          },
+          {
+            "value": "ogurec",
+            "label": "Огурец"
+          },
+          {
+            "value": "baklazhan",
+            "label": "Баклажан"
+          },
+          {
+            "value": "kabachok",
+            "label": "Кабачок"
+          },
+          {
+            "value": "perets",
+            "label": "Перец болгарский"
+          },
+          {
+            "value": "luk_rep",
+            "label": "Лук репчатый"
+          },
+          {
+            "value": "chesnok",
+            "label": "Чеснок"
+          },
+          {
+            "value": "ukrop",
+            "label": "Укроп"
+          },
+          {
+            "value": "petrushka",
+            "label": "Петрушка"
+          },
+          {
+            "value": "shampin",
+            "label": "Шампиньоны"
+          },
+          {
+            "value": "bely_grib",
+            "label": "Белые грибы"
+          },
+          {
+            "value": "yabloko",
+            "label": "Яблоко"
+          },
+          {
+            "value": "banan",
+            "label": "Банан"
+          },
+          {
+            "value": "apelsin",
+            "label": "Апельсин"
+          },
+          {
+            "value": "grusha",
+            "label": "Груша"
+          },
+          {
+            "value": "persik",
+            "label": "Персик"
+          },
+          {
+            "value": "vinograd",
+            "label": "Виноград"
+          },
+          {
+            "value": "sliva",
+            "label": "Слива"
+          },
+          {
+            "value": "klubnika",
+            "label": "Клубника"
+          },
+          {
+            "value": "malina",
+            "label": "Малина"
+          },
+          {
+            "value": "smorodina",
+            "label": "Смородина чёрная"
+          },
+          {
+            "value": "chernika",
+            "label": "Черника"
+          },
+          {
+            "value": "arbuz",
+            "label": "Арбуз"
+          },
+          {
+            "value": "dynya",
+            "label": "Дыня"
+          },
+          {
+            "value": "avokado",
+            "label": "Авокадо"
+          },
+          {
+            "value": "limon",
+            "label": "Лимон"
+          },
+          {
+            "value": "grech_oreh",
+            "label": "Грецкие орехи"
+          },
+          {
+            "value": "mindal",
+            "label": "Миндаль"
+          },
+          {
+            "value": "keshyu",
+            "label": "Кешью"
+          },
+          {
+            "value": "fistashki",
+            "label": "Фисташки"
+          },
+          {
+            "value": "izum",
+            "label": "Изюм"
+          },
+          {
+            "value": "kuraga",
+            "label": "Курага"
+          },
+          {
+            "value": "finiki",
+            "label": "Финики"
+          },
+          {
+            "value": "kofe",
+            "label": "Кофе чёрный"
+          },
+          {
+            "value": "kofe_mol",
+            "label": "Кофе с молоком"
+          },
+          {
+            "value": "chay",
+            "label": "Чай чёрный"
+          },
+          {
+            "value": "kakao",
+            "label": "Какао на молоке"
+          },
+          {
+            "value": "kompot",
+            "label": "Компот"
+          },
+          {
+            "value": "kissel",
+            "label": "Кисель"
+          },
+          {
+            "value": "mors",
+            "label": "Морс"
+          },
+          {
+            "value": "kvass",
+            "label": "Квас"
+          },
+          {
+            "value": "shokolad",
+            "label": "Шоколад молочный"
+          },
+          {
+            "value": "shok_gor",
+            "label": "Шоколад горький"
+          },
+          {
+            "value": "zefir",
+            "label": "Зефир"
+          },
+          {
+            "value": "pastila",
+            "label": "Пастила"
+          },
+          {
+            "value": "marmelad",
+            "label": "Мармелад"
+          },
+          {
+            "value": "varene",
+            "label": "Варенье"
+          },
+          {
+            "value": "med",
+            "label": "Мёд"
+          },
+          {
+            "value": "sahar",
+            "label": "Сахар"
+          },
+          {
+            "value": "sahar_raf",
+            "label": "Сахар рафинад"
+          },
+          {
+            "value": "vareniki",
+            "label": "Вареники с творогом"
+          },
+          {
+            "value": "vareniki_kar",
+            "label": "Вареники с картошкой"
+          },
+          {
+            "value": "pelmeni",
+            "label": "Пельмени"
+          },
+          {
+            "value": "bliny",
+            "label": "Блины"
+          },
+          {
+            "value": "sirniki",
+            "label": "Сырники"
+          },
+          {
+            "value": "vatrushka",
+            "label": "Ватрушка с творогом"
+          },
+          {
+            "value": "pizza",
+            "label": "Пицца пепперони"
+          },
+          {
+            "value": "burger",
+            "label": "Бургер"
+          },
+          {
+            "value": "kart_fr",
+            "label": "Картофель фри"
+          },
+          {
+            "value": "naggets",
+            "label": "Куриные наггетсы"
+          },
+          {
+            "value": "hot_dog",
+            "label": "Хот-дог"
+          }
+        ],
+        "defaultValue": "ovsyanka"
+      },
+      {
+        "name": "weight1",
+        "label": "Вес продукта 1 (г)",
+        "type": "number",
+        "placeholder": "150",
+        "defaultValue": 150,
+        "min": 1,
+        "max": 1000
+      },
+      {
+        "name": "food2",
+        "label": "Продукт 2",
+        "type": "select",
+        "options": [
+          {
+            "value": "grechka",
+            "label": "Гречневая каша"
+          },
+          {
+            "value": "ovsyanka",
+            "label": "Овсяная каша на воде"
+          },
+          {
+            "value": "pshenka",
+            "label": "Пшенная каша"
+          },
+          {
+            "value": "ris",
+            "label": "Рис отварной"
+          },
+          {
+            "value": "manka",
+            "label": "Манная каша"
+          },
+          {
+            "value": "rzhanye_hlebcy",
+            "label": "Ржаные хлебцы"
+          },
+          {
+            "value": "borodino",
+            "label": "Хлеб Бородинский"
+          },
+          {
+            "value": "baton",
+            "label": "Батон нарезной"
+          },
+          {
+            "value": "moloko_3_2",
+            "label": "Молоко 3.2%"
+          },
+          {
+            "value": "kefir_2_5",
+            "label": "Кефир 2.5%"
+          },
+          {
+            "value": "kefir_3_2",
+            "label": "Кефир 3.2%"
+          },
+          {
+            "value": "ryazhenka",
+            "label": "Ряженка 2.5%"
+          },
+          {
+            "value": "prostokvasha",
+            "label": "Простокваша"
+          },
+          {
+            "value": "tvorog_5",
+            "label": "Творог 5%"
+          },
+          {
+            "value": "tvorog_9",
+            "label": "Творог 9%"
+          },
+          {
+            "value": "tvorog_18",
+            "label": "Творог 18%"
+          },
+          {
+            "value": "smetana_15",
+            "label": "Сметана 15%"
+          },
+          {
+            "value": "smetana_20",
+            "label": "Сметана 20%"
+          },
+          {
+            "value": "syr_tv",
+            "label": "Сыр твёрдый"
+          },
+          {
+            "value": "syr_pl",
+            "label": "Сыр плавленый"
+          },
+          {
+            "value": "syr_tvor",
+            "label": "Сырок творожный"
+          },
+          {
+            "value": "maslo_sl",
+            "label": "Сливочное масло"
+          },
+          {
+            "value": "margarin",
+            "label": "Маргарин"
+          },
+          {
+            "value": "yogurt_grech",
+            "label": "Йогурт греческий"
+          },
+          {
+            "value": "govyadina_vr",
+            "label": "Говядина варёная"
+          },
+          {
+            "value": "govyadina_zh",
+            "label": "Говядина жареная"
+          },
+          {
+            "value": "svinina_vr",
+            "label": "Свинина варёная"
+          },
+          {
+            "value": "svinina_zh",
+            "label": "Свинина жареная"
+          },
+          {
+            "value": "kur_grud",
+            "label": "Куриная грудка"
+          },
+          {
+            "value": "kur_bedro",
+            "label": "Куриное бедро"
+          },
+          {
+            "value": "kur_jaico",
+            "label": "Яйцо куриное"
+          },
+          {
+            "value": "kur_jaico_vr",
+            "label": "Яйцо варёное"
+          },
+          {
+            "value": "kur_jaico_je",
+            "label": "Яичница"
+          },
+          {
+            "value": "ind_kur",
+            "label": "Индейка"
+          },
+          {
+            "value": "baran",
+            "label": "Баранина"
+          },
+          {
+            "value": "krolik",
+            "label": "Кролик"
+          },
+          {
+            "value": "vetchina",
+            "label": "Ветчина"
+          },
+          {
+            "value": "kolbasa_dok",
+            "label": "Колбаса докторская"
+          },
+          {
+            "value": "kolbasa_milk",
+            "label": "Молочная колбаса"
+          },
+          {
+            "value": "sosiska",
+            "label": "Сосиски молочные"
+          },
+          {
+            "value": "sardelki",
+            "label": "Сардельки"
+          },
+          {
+            "value": "treska",
+            "label": "Треска"
+          },
+          {
+            "value": "kambala",
+            "label": "Камбала"
+          },
+          {
+            "value": "mintay",
+            "label": "Минтай"
+          },
+          {
+            "value": "seledka",
+            "label": "Селёдка"
+          },
+          {
+            "value": "losos",
+            "label": "Лосось"
+          },
+          {
+            "value": "gorbusha",
+            "label": "Горбуша"
+          },
+          {
+            "value": "keta",
+            "label": "Кета"
+          },
+          {
+            "value": "semga",
+            "label": "Сёмга"
+          },
+          {
+            "value": "skumbria",
+            "label": "Скумбрия"
+          },
+          {
+            "value": "sardina",
+            "label": "Сардина"
+          },
+          {
+            "value": "tunec",
+            "label": "Тунец"
+          },
+          {
+            "value": "krevetki",
+            "label": "Креветки"
+          },
+          {
+            "value": "kalmar",
+            "label": "Кальмар"
+          },
+          {
+            "value": "mussels",
+            "label": "Мидии"
+          },
+          {
+            "value": "kartoshka_vr",
+            "label": "Картофель варёный"
+          },
+          {
+            "value": "kartoshka_zh",
+            "label": "Картофель жареный"
+          },
+          {
+            "value": "morkov",
+            "label": "Морковь"
+          },
+          {
+            "value": "svekla",
+            "label": "Свёкла"
+          },
+          {
+            "value": "kapusta",
+            "label": "Капуста белокочанная"
+          },
+          {
+            "value": "kapusta_cv",
+            "label": "Цветная капуста"
+          },
+          {
+            "value": "brokkoli",
+            "label": "Брокколи"
+          },
+          {
+            "value": "pomidor",
+            "label": "Помидор"
+          },
+          {
+            "value": "ogurec",
+            "label": "Огурец"
+          },
+          {
+            "value": "baklazhan",
+            "label": "Баклажан"
+          },
+          {
+            "value": "kabachok",
+            "label": "Кабачок"
+          },
+          {
+            "value": "perets",
+            "label": "Перец болгарский"
+          },
+          {
+            "value": "luk_rep",
+            "label": "Лук репчатый"
+          },
+          {
+            "value": "chesnok",
+            "label": "Чеснок"
+          },
+          {
+            "value": "ukrop",
+            "label": "Укроп"
+          },
+          {
+            "value": "petrushka",
+            "label": "Петрушка"
+          },
+          {
+            "value": "shampin",
+            "label": "Шампиньоны"
+          },
+          {
+            "value": "bely_grib",
+            "label": "Белые грибы"
+          },
+          {
+            "value": "yabloko",
+            "label": "Яблоко"
+          },
+          {
+            "value": "banan",
+            "label": "Банан"
+          },
+          {
+            "value": "apelsin",
+            "label": "Апельсин"
+          },
+          {
+            "value": "grusha",
+            "label": "Груша"
+          },
+          {
+            "value": "persik",
+            "label": "Персик"
+          },
+          {
+            "value": "vinograd",
+            "label": "Виноград"
+          },
+          {
+            "value": "sliva",
+            "label": "Слива"
+          },
+          {
+            "value": "klubnika",
+            "label": "Клубника"
+          },
+          {
+            "value": "malina",
+            "label": "Малина"
+          },
+          {
+            "value": "smorodina",
+            "label": "Смородина чёрная"
+          },
+          {
+            "value": "chernika",
+            "label": "Черника"
+          },
+          {
+            "value": "arbuz",
+            "label": "Арбуз"
+          },
+          {
+            "value": "dynya",
+            "label": "Дыня"
+          },
+          {
+            "value": "avokado",
+            "label": "Авокадо"
+          },
+          {
+            "value": "limon",
+            "label": "Лимон"
+          },
+          {
+            "value": "grech_oreh",
+            "label": "Грецкие орехи"
+          },
+          {
+            "value": "mindal",
+            "label": "Миндаль"
+          },
+          {
+            "value": "keshyu",
+            "label": "Кешью"
+          },
+          {
+            "value": "fistashki",
+            "label": "Фисташки"
+          },
+          {
+            "value": "izum",
+            "label": "Изюм"
+          },
+          {
+            "value": "kuraga",
+            "label": "Курага"
+          },
+          {
+            "value": "finiki",
+            "label": "Финики"
+          },
+          {
+            "value": "kofe",
+            "label": "Кофе чёрный"
+          },
+          {
+            "value": "kofe_mol",
+            "label": "Кофе с молоком"
+          },
+          {
+            "value": "chay",
+            "label": "Чай чёрный"
+          },
+          {
+            "value": "kakao",
+            "label": "Какао на молоке"
+          },
+          {
+            "value": "kompot",
+            "label": "Компот"
+          },
+          {
+            "value": "kissel",
+            "label": "Кисель"
+          },
+          {
+            "value": "mors",
+            "label": "Морс"
+          },
+          {
+            "value": "kvass",
+            "label": "Квас"
+          },
+          {
+            "value": "shokolad",
+            "label": "Шоколад молочный"
+          },
+          {
+            "value": "shok_gor",
+            "label": "Шоколад горький"
+          },
+          {
+            "value": "zefir",
+            "label": "Зефир"
+          },
+          {
+            "value": "pastila",
+            "label": "Пастила"
+          },
+          {
+            "value": "marmelad",
+            "label": "Мармелад"
+          },
+          {
+            "value": "varene",
+            "label": "Варенье"
+          },
+          {
+            "value": "med",
+            "label": "Мёд"
+          },
+          {
+            "value": "sahar",
+            "label": "Сахар"
+          },
+          {
+            "value": "sahar_raf",
+            "label": "Сахар рафинад"
+          },
+          {
+            "value": "vareniki",
+            "label": "Вареники с творогом"
+          },
+          {
+            "value": "vareniki_kar",
+            "label": "Вареники с картошкой"
+          },
+          {
+            "value": "pelmeni",
+            "label": "Пельмени"
+          },
+          {
+            "value": "bliny",
+            "label": "Блины"
+          },
+          {
+            "value": "sirniki",
+            "label": "Сырники"
+          },
+          {
+            "value": "vatrushka",
+            "label": "Ватрушка с творогом"
+          },
+          {
+            "value": "pizza",
+            "label": "Пицца пепперони"
+          },
+          {
+            "value": "burger",
+            "label": "Бургер"
+          },
+          {
+            "value": "kart_fr",
+            "label": "Картофель фри"
+          },
+          {
+            "value": "naggets",
+            "label": "Куриные наггетсы"
+          },
+          {
+            "value": "hot_dog",
+            "label": "Хот-дог"
+          }
+        ],
+        "defaultValue": "banan"
+      },
+      {
+        "name": "weight2",
+        "label": "Вес продукта 2 (г)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 1,
+        "max": 1000
+      },
+      {
+        "name": "food3",
+        "label": "Продукт 3",
+        "type": "select",
+        "options": [
+          {
+            "value": "grechka",
+            "label": "Гречневая каша"
+          },
+          {
+            "value": "ovsyanka",
+            "label": "Овсяная каша на воде"
+          },
+          {
+            "value": "pshenka",
+            "label": "Пшенная каша"
+          },
+          {
+            "value": "ris",
+            "label": "Рис отварной"
+          },
+          {
+            "value": "manka",
+            "label": "Манная каша"
+          },
+          {
+            "value": "rzhanye_hlebcy",
+            "label": "Ржаные хлебцы"
+          },
+          {
+            "value": "borodino",
+            "label": "Хлеб Бородинский"
+          },
+          {
+            "value": "baton",
+            "label": "Батон нарезной"
+          },
+          {
+            "value": "moloko_3_2",
+            "label": "Молоко 3.2%"
+          },
+          {
+            "value": "kefir_2_5",
+            "label": "Кефир 2.5%"
+          },
+          {
+            "value": "kefir_3_2",
+            "label": "Кефир 3.2%"
+          },
+          {
+            "value": "ryazhenka",
+            "label": "Ряженка 2.5%"
+          },
+          {
+            "value": "prostokvasha",
+            "label": "Простокваша"
+          },
+          {
+            "value": "tvorog_5",
+            "label": "Творог 5%"
+          },
+          {
+            "value": "tvorog_9",
+            "label": "Творог 9%"
+          },
+          {
+            "value": "tvorog_18",
+            "label": "Творог 18%"
+          },
+          {
+            "value": "smetana_15",
+            "label": "Сметана 15%"
+          },
+          {
+            "value": "smetana_20",
+            "label": "Сметана 20%"
+          },
+          {
+            "value": "syr_tv",
+            "label": "Сыр твёрдый"
+          },
+          {
+            "value": "syr_pl",
+            "label": "Сыр плавленый"
+          },
+          {
+            "value": "syr_tvor",
+            "label": "Сырок творожный"
+          },
+          {
+            "value": "maslo_sl",
+            "label": "Сливочное масло"
+          },
+          {
+            "value": "margarin",
+            "label": "Маргарин"
+          },
+          {
+            "value": "yogurt_grech",
+            "label": "Йогурт греческий"
+          },
+          {
+            "value": "govyadina_vr",
+            "label": "Говядина варёная"
+          },
+          {
+            "value": "govyadina_zh",
+            "label": "Говядина жареная"
+          },
+          {
+            "value": "svinina_vr",
+            "label": "Свинина варёная"
+          },
+          {
+            "value": "svinina_zh",
+            "label": "Свинина жареная"
+          },
+          {
+            "value": "kur_grud",
+            "label": "Куриная грудка"
+          },
+          {
+            "value": "kur_bedro",
+            "label": "Куриное бедро"
+          },
+          {
+            "value": "kur_jaico",
+            "label": "Яйцо куриное"
+          },
+          {
+            "value": "kur_jaico_vr",
+            "label": "Яйцо варёное"
+          },
+          {
+            "value": "kur_jaico_je",
+            "label": "Яичница"
+          },
+          {
+            "value": "ind_kur",
+            "label": "Индейка"
+          },
+          {
+            "value": "baran",
+            "label": "Баранина"
+          },
+          {
+            "value": "krolik",
+            "label": "Кролик"
+          },
+          {
+            "value": "vetchina",
+            "label": "Ветчина"
+          },
+          {
+            "value": "kolbasa_dok",
+            "label": "Колбаса докторская"
+          },
+          {
+            "value": "kolbasa_milk",
+            "label": "Молочная колбаса"
+          },
+          {
+            "value": "sosiska",
+            "label": "Сосиски молочные"
+          },
+          {
+            "value": "sardelki",
+            "label": "Сардельки"
+          },
+          {
+            "value": "treska",
+            "label": "Треска"
+          },
+          {
+            "value": "kambala",
+            "label": "Камбала"
+          },
+          {
+            "value": "mintay",
+            "label": "Минтай"
+          },
+          {
+            "value": "seledka",
+            "label": "Селёдка"
+          },
+          {
+            "value": "losos",
+            "label": "Лосось"
+          },
+          {
+            "value": "gorbusha",
+            "label": "Горбуша"
+          },
+          {
+            "value": "keta",
+            "label": "Кета"
+          },
+          {
+            "value": "semga",
+            "label": "Сёмга"
+          },
+          {
+            "value": "skumbria",
+            "label": "Скумбрия"
+          },
+          {
+            "value": "sardina",
+            "label": "Сардина"
+          },
+          {
+            "value": "tunec",
+            "label": "Тунец"
+          },
+          {
+            "value": "krevetki",
+            "label": "Креветки"
+          },
+          {
+            "value": "kalmar",
+            "label": "Кальмар"
+          },
+          {
+            "value": "mussels",
+            "label": "Мидии"
+          },
+          {
+            "value": "kartoshka_vr",
+            "label": "Картофель варёный"
+          },
+          {
+            "value": "kartoshka_zh",
+            "label": "Картофель жареный"
+          },
+          {
+            "value": "morkov",
+            "label": "Морковь"
+          },
+          {
+            "value": "svekla",
+            "label": "Свёкла"
+          },
+          {
+            "value": "kapusta",
+            "label": "Капуста белокочанная"
+          },
+          {
+            "value": "kapusta_cv",
+            "label": "Цветная капуста"
+          },
+          {
+            "value": "brokkoli",
+            "label": "Брокколи"
+          },
+          {
+            "value": "pomidor",
+            "label": "Помидор"
+          },
+          {
+            "value": "ogurec",
+            "label": "Огурец"
+          },
+          {
+            "value": "baklazhan",
+            "label": "Баклажан"
+          },
+          {
+            "value": "kabachok",
+            "label": "Кабачок"
+          },
+          {
+            "value": "perets",
+            "label": "Перец болгарский"
+          },
+          {
+            "value": "luk_rep",
+            "label": "Лук репчатый"
+          },
+          {
+            "value": "chesnok",
+            "label": "Чеснок"
+          },
+          {
+            "value": "ukrop",
+            "label": "Укроп"
+          },
+          {
+            "value": "petrushka",
+            "label": "Петрушка"
+          },
+          {
+            "value": "shampin",
+            "label": "Шампиньоны"
+          },
+          {
+            "value": "bely_grib",
+            "label": "Белые грибы"
+          },
+          {
+            "value": "yabloko",
+            "label": "Яблоко"
+          },
+          {
+            "value": "banan",
+            "label": "Банан"
+          },
+          {
+            "value": "apelsin",
+            "label": "Апельсин"
+          },
+          {
+            "value": "grusha",
+            "label": "Груша"
+          },
+          {
+            "value": "persik",
+            "label": "Персик"
+          },
+          {
+            "value": "vinograd",
+            "label": "Виноград"
+          },
+          {
+            "value": "sliva",
+            "label": "Слива"
+          },
+          {
+            "value": "klubnika",
+            "label": "Клубника"
+          },
+          {
+            "value": "malina",
+            "label": "Малина"
+          },
+          {
+            "value": "smorodina",
+            "label": "Смородина чёрная"
+          },
+          {
+            "value": "chernika",
+            "label": "Черника"
+          },
+          {
+            "value": "arbuz",
+            "label": "Арбуз"
+          },
+          {
+            "value": "dynya",
+            "label": "Дыня"
+          },
+          {
+            "value": "avokado",
+            "label": "Авокадо"
+          },
+          {
+            "value": "limon",
+            "label": "Лимон"
+          },
+          {
+            "value": "grech_oreh",
+            "label": "Грецкие орехи"
+          },
+          {
+            "value": "mindal",
+            "label": "Миндаль"
+          },
+          {
+            "value": "keshyu",
+            "label": "Кешью"
+          },
+          {
+            "value": "fistashki",
+            "label": "Фисташки"
+          },
+          {
+            "value": "izum",
+            "label": "Изюм"
+          },
+          {
+            "value": "kuraga",
+            "label": "Курага"
+          },
+          {
+            "value": "finiki",
+            "label": "Финики"
+          },
+          {
+            "value": "kofe",
+            "label": "Кофе чёрный"
+          },
+          {
+            "value": "kofe_mol",
+            "label": "Кофе с молоком"
+          },
+          {
+            "value": "chay",
+            "label": "Чай чёрный"
+          },
+          {
+            "value": "kakao",
+            "label": "Какао на молоке"
+          },
+          {
+            "value": "kompot",
+            "label": "Компот"
+          },
+          {
+            "value": "kissel",
+            "label": "Кисель"
+          },
+          {
+            "value": "mors",
+            "label": "Морс"
+          },
+          {
+            "value": "kvass",
+            "label": "Квас"
+          },
+          {
+            "value": "shokolad",
+            "label": "Шоколад молочный"
+          },
+          {
+            "value": "shok_gor",
+            "label": "Шоколад горький"
+          },
+          {
+            "value": "zefir",
+            "label": "Зефир"
+          },
+          {
+            "value": "pastila",
+            "label": "Пастила"
+          },
+          {
+            "value": "marmelad",
+            "label": "Мармелад"
+          },
+          {
+            "value": "varene",
+            "label": "Варенье"
+          },
+          {
+            "value": "med",
+            "label": "Мёд"
+          },
+          {
+            "value": "sahar",
+            "label": "Сахар"
+          },
+          {
+            "value": "sahar_raf",
+            "label": "Сахар рафинад"
+          },
+          {
+            "value": "vareniki",
+            "label": "Вареники с творогом"
+          },
+          {
+            "value": "vareniki_kar",
+            "label": "Вареники с картошкой"
+          },
+          {
+            "value": "pelmeni",
+            "label": "Пельмени"
+          },
+          {
+            "value": "bliny",
+            "label": "Блины"
+          },
+          {
+            "value": "sirniki",
+            "label": "Сырники"
+          },
+          {
+            "value": "vatrushka",
+            "label": "Ватрушка с творогом"
+          },
+          {
+            "value": "pizza",
+            "label": "Пицца пепперони"
+          },
+          {
+            "value": "burger",
+            "label": "Бургер"
+          },
+          {
+            "value": "kart_fr",
+            "label": "Картофель фри"
+          },
+          {
+            "value": "naggets",
+            "label": "Куриные наггетсы"
+          },
+          {
+            "value": "hot_dog",
+            "label": "Хот-дог"
+          }
+        ],
+        "defaultValue": "moloko_3_2"
+      },
+      {
+        "name": "weight3",
+        "label": "Вес продукта 3 (г)",
+        "type": "number",
+        "placeholder": "200",
+        "defaultValue": 200,
+        "min": 1,
+        "max": 1000
+      },
+      {
+        "name": "food4",
+        "label": "Продукт 4",
+        "type": "select",
+        "options": [
+          {
+            "value": "grechka",
+            "label": "Гречневая каша"
+          },
+          {
+            "value": "ovsyanka",
+            "label": "Овсяная каша на воде"
+          },
+          {
+            "value": "pshenka",
+            "label": "Пшенная каша"
+          },
+          {
+            "value": "ris",
+            "label": "Рис отварной"
+          },
+          {
+            "value": "manka",
+            "label": "Манная каша"
+          },
+          {
+            "value": "rzhanye_hlebcy",
+            "label": "Ржаные хлебцы"
+          },
+          {
+            "value": "borodino",
+            "label": "Хлеб Бородинский"
+          },
+          {
+            "value": "baton",
+            "label": "Батон нарезной"
+          },
+          {
+            "value": "moloko_3_2",
+            "label": "Молоко 3.2%"
+          },
+          {
+            "value": "kefir_2_5",
+            "label": "Кефир 2.5%"
+          },
+          {
+            "value": "kefir_3_2",
+            "label": "Кефир 3.2%"
+          },
+          {
+            "value": "ryazhenka",
+            "label": "Ряженка 2.5%"
+          },
+          {
+            "value": "prostokvasha",
+            "label": "Простокваша"
+          },
+          {
+            "value": "tvorog_5",
+            "label": "Творог 5%"
+          },
+          {
+            "value": "tvorog_9",
+            "label": "Творог 9%"
+          },
+          {
+            "value": "tvorog_18",
+            "label": "Творог 18%"
+          },
+          {
+            "value": "smetana_15",
+            "label": "Сметана 15%"
+          },
+          {
+            "value": "smetana_20",
+            "label": "Сметана 20%"
+          },
+          {
+            "value": "syr_tv",
+            "label": "Сыр твёрдый"
+          },
+          {
+            "value": "syr_pl",
+            "label": "Сыр плавленый"
+          },
+          {
+            "value": "syr_tvor",
+            "label": "Сырок творожный"
+          },
+          {
+            "value": "maslo_sl",
+            "label": "Сливочное масло"
+          },
+          {
+            "value": "margarin",
+            "label": "Маргарин"
+          },
+          {
+            "value": "yogurt_grech",
+            "label": "Йогурт греческий"
+          },
+          {
+            "value": "govyadina_vr",
+            "label": "Говядина варёная"
+          },
+          {
+            "value": "govyadina_zh",
+            "label": "Говядина жареная"
+          },
+          {
+            "value": "svinina_vr",
+            "label": "Свинина варёная"
+          },
+          {
+            "value": "svinina_zh",
+            "label": "Свинина жареная"
+          },
+          {
+            "value": "kur_grud",
+            "label": "Куриная грудка"
+          },
+          {
+            "value": "kur_bedro",
+            "label": "Куриное бедро"
+          },
+          {
+            "value": "kur_jaico",
+            "label": "Яйцо куриное"
+          },
+          {
+            "value": "kur_jaico_vr",
+            "label": "Яйцо варёное"
+          },
+          {
+            "value": "kur_jaico_je",
+            "label": "Яичница"
+          },
+          {
+            "value": "ind_kur",
+            "label": "Индейка"
+          },
+          {
+            "value": "baran",
+            "label": "Баранина"
+          },
+          {
+            "value": "krolik",
+            "label": "Кролик"
+          },
+          {
+            "value": "vetchina",
+            "label": "Ветчина"
+          },
+          {
+            "value": "kolbasa_dok",
+            "label": "Колбаса докторская"
+          },
+          {
+            "value": "kolbasa_milk",
+            "label": "Молочная колбаса"
+          },
+          {
+            "value": "sosiska",
+            "label": "Сосиски молочные"
+          },
+          {
+            "value": "sardelki",
+            "label": "Сардельки"
+          },
+          {
+            "value": "treska",
+            "label": "Треска"
+          },
+          {
+            "value": "kambala",
+            "label": "Камбала"
+          },
+          {
+            "value": "mintay",
+            "label": "Минтай"
+          },
+          {
+            "value": "seledka",
+            "label": "Селёдка"
+          },
+          {
+            "value": "losos",
+            "label": "Лосось"
+          },
+          {
+            "value": "gorbusha",
+            "label": "Горбуша"
+          },
+          {
+            "value": "keta",
+            "label": "Кета"
+          },
+          {
+            "value": "semga",
+            "label": "Сёмга"
+          },
+          {
+            "value": "skumbria",
+            "label": "Скумбрия"
+          },
+          {
+            "value": "sardina",
+            "label": "Сардина"
+          },
+          {
+            "value": "tunec",
+            "label": "Тунец"
+          },
+          {
+            "value": "krevetki",
+            "label": "Креветки"
+          },
+          {
+            "value": "kalmar",
+            "label": "Кальмар"
+          },
+          {
+            "value": "mussels",
+            "label": "Мидии"
+          },
+          {
+            "value": "kartoshka_vr",
+            "label": "Картофель варёный"
+          },
+          {
+            "value": "kartoshka_zh",
+            "label": "Картофель жареный"
+          },
+          {
+            "value": "morkov",
+            "label": "Морковь"
+          },
+          {
+            "value": "svekla",
+            "label": "Свёкла"
+          },
+          {
+            "value": "kapusta",
+            "label": "Капуста белокочанная"
+          },
+          {
+            "value": "kapusta_cv",
+            "label": "Цветная капуста"
+          },
+          {
+            "value": "brokkoli",
+            "label": "Брокколи"
+          },
+          {
+            "value": "pomidor",
+            "label": "Помидор"
+          },
+          {
+            "value": "ogurec",
+            "label": "Огурец"
+          },
+          {
+            "value": "baklazhan",
+            "label": "Баклажан"
+          },
+          {
+            "value": "kabachok",
+            "label": "Кабачок"
+          },
+          {
+            "value": "perets",
+            "label": "Перец болгарский"
+          },
+          {
+            "value": "luk_rep",
+            "label": "Лук репчатый"
+          },
+          {
+            "value": "chesnok",
+            "label": "Чеснок"
+          },
+          {
+            "value": "ukrop",
+            "label": "Укроп"
+          },
+          {
+            "value": "petrushka",
+            "label": "Петрушка"
+          },
+          {
+            "value": "shampin",
+            "label": "Шампиньоны"
+          },
+          {
+            "value": "bely_grib",
+            "label": "Белые грибы"
+          },
+          {
+            "value": "yabloko",
+            "label": "Яблоко"
+          },
+          {
+            "value": "banan",
+            "label": "Банан"
+          },
+          {
+            "value": "apelsin",
+            "label": "Апельсин"
+          },
+          {
+            "value": "grusha",
+            "label": "Груша"
+          },
+          {
+            "value": "persik",
+            "label": "Персик"
+          },
+          {
+            "value": "vinograd",
+            "label": "Виноград"
+          },
+          {
+            "value": "sliva",
+            "label": "Слива"
+          },
+          {
+            "value": "klubnika",
+            "label": "Клубника"
+          },
+          {
+            "value": "malina",
+            "label": "Малина"
+          },
+          {
+            "value": "smorodina",
+            "label": "Смородина чёрная"
+          },
+          {
+            "value": "chernika",
+            "label": "Черника"
+          },
+          {
+            "value": "arbuz",
+            "label": "Арбуз"
+          },
+          {
+            "value": "dynya",
+            "label": "Дыня"
+          },
+          {
+            "value": "avokado",
+            "label": "Авокадо"
+          },
+          {
+            "value": "limon",
+            "label": "Лимон"
+          },
+          {
+            "value": "grech_oreh",
+            "label": "Грецкие орехи"
+          },
+          {
+            "value": "mindal",
+            "label": "Миндаль"
+          },
+          {
+            "value": "keshyu",
+            "label": "Кешью"
+          },
+          {
+            "value": "fistashki",
+            "label": "Фисташки"
+          },
+          {
+            "value": "izum",
+            "label": "Изюм"
+          },
+          {
+            "value": "kuraga",
+            "label": "Курага"
+          },
+          {
+            "value": "finiki",
+            "label": "Финики"
+          },
+          {
+            "value": "kofe",
+            "label": "Кофе чёрный"
+          },
+          {
+            "value": "kofe_mol",
+            "label": "Кофе с молоком"
+          },
+          {
+            "value": "chay",
+            "label": "Чай чёрный"
+          },
+          {
+            "value": "kakao",
+            "label": "Какао на молоке"
+          },
+          {
+            "value": "kompot",
+            "label": "Компот"
+          },
+          {
+            "value": "kissel",
+            "label": "Кисель"
+          },
+          {
+            "value": "mors",
+            "label": "Морс"
+          },
+          {
+            "value": "kvass",
+            "label": "Квас"
+          },
+          {
+            "value": "shokolad",
+            "label": "Шоколад молочный"
+          },
+          {
+            "value": "shok_gor",
+            "label": "Шоколад горький"
+          },
+          {
+            "value": "zefir",
+            "label": "Зефир"
+          },
+          {
+            "value": "pastila",
+            "label": "Пастила"
+          },
+          {
+            "value": "marmelad",
+            "label": "Мармелад"
+          },
+          {
+            "value": "varene",
+            "label": "Варенье"
+          },
+          {
+            "value": "med",
+            "label": "Мёд"
+          },
+          {
+            "value": "sahar",
+            "label": "Сахар"
+          },
+          {
+            "value": "sahar_raf",
+            "label": "Сахар рафинад"
+          },
+          {
+            "value": "vareniki",
+            "label": "Вареники с творогом"
+          },
+          {
+            "value": "vareniki_kar",
+            "label": "Вареники с картошкой"
+          },
+          {
+            "value": "pelmeni",
+            "label": "Пельмени"
+          },
+          {
+            "value": "bliny",
+            "label": "Блины"
+          },
+          {
+            "value": "sirniki",
+            "label": "Сырники"
+          },
+          {
+            "value": "vatrushka",
+            "label": "Ватрушка с творогом"
+          },
+          {
+            "value": "pizza",
+            "label": "Пицца пепперони"
+          },
+          {
+            "value": "burger",
+            "label": "Бургер"
+          },
+          {
+            "value": "kart_fr",
+            "label": "Картофель фри"
+          },
+          {
+            "value": "naggets",
+            "label": "Куриные наггетсы"
+          },
+          {
+            "value": "hot_dog",
+            "label": "Хот-дог"
+          }
+        ],
+        "defaultValue": "none"
+      },
+      {
+        "name": "weight4",
+        "label": "Вес продукта 4 (г)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 1000
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalCalories",
+        "label": "Всего калорий",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "totalProtein",
+        "label": "Всего белков",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "totalFat",
+        "label": "Всего жиров",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "totalCarbs",
+        "label": "Всего углеводов",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "mealPercent",
+        "label": "% от суточной нормы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип приёма пищи, количество продуктов, затем укажите продукты и их вес.",
+      "about": "Калькулятор помогает рассчитать калорийность и БЖУ для любого приёма пищи: завтрака, обеда, ужина или перекуса. База содержит более 50 типичных русских продуктов.",
+      "usage": "Используйте для планирования меню, контроля калорийности рациона, составления диеты.",
+      "formula": "Калории = Σ (Калории на 100г × вес / 100) для всех продуктов",
+      "faq": [
+        {
+          "question": "Сколько должна составлять калорийность одного приёма пищи?",
+          "answer": "Завтрак — 25-30%, обед — 35-40%, ужин — 20-25%, перекусы — 10-15% от суточной нормы калорий."
+        },
+        {
+          "question": "Почему важен баланс БЖУ?",
+          "answer": "Для здорового питания рекомендуется соотношение: белки 15-20%, жиры 25-30%, углеводы 50-60% от общей калорийности."
+        },
+        {
+          "question": "Какое количество приёмов пищи оптимально?",
+          "answer": "Рекомендуется 3 основных приёма пищи + 1-2 перекуса с интервалом 3-4 часа."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Рекомендации Роспотребнадзора по питанию",
+          "url": "https://rospotrebnadzor.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kachestvo-sna",
+    "id": "sleep-quality",
+    "title": "Калькулятор качества сна",
+    "description": "Расчёт циклов сна и оценка качества отдыха",
+    "subcategory": "zdorove",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "bedtime",
+        "label": "Время отхода ко сну",
+        "type": "text",
+        "placeholder": "22:30",
+        "defaultValue": "22:30"
+      },
+      {
+        "name": "waketime",
+        "label": "Время пробуждения",
+        "type": "text",
+        "placeholder": "06:30",
+        "defaultValue": "06:30"
+      },
+      {
+        "name": "fallAsleepTime",
+        "label": "Время засыпания (мин)",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15,
+        "min": 0,
+        "max": 120
+      },
+      {
+        "name": "wakeCount",
+        "label": "Количество пробуждений за ночь",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 10
+      },
+      {
+        "name": "sleepQuality",
+        "label": "Субъективное качество сна",
+        "type": "select",
+        "options": [
+          {
+            "value": "excellent",
+            "label": "Отлично — выспался, бодрость"
+          },
+          {
+            "value": "good",
+            "label": "Хорошо — небольшая сонливость"
+          },
+          {
+            "value": "average",
+            "label": "Средне — чувствую усталость"
+          },
+          {
+            "value": "poor",
+            "label": "Плохо — сильная сонливость"
+          }
+        ],
+        "defaultValue": "good"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalSleep",
+        "label": "Общее время сна",
+        "type": "text"
+      },
+      {
+        "name": "sleepCycles",
+        "label": "Количество циклов сна",
+        "type": "number"
+      },
+      {
+        "name": "qualityScore",
+        "label": "Оценка качества сна",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите время отхода ко сну и пробуждения, время засыпания, количество пробуждений и оцените качество сна.",
+      "about": "Калькулятор оценивает качество сна на основе длительности, количества циклов (по 90 минут), пробуждений и субъективных ощущений. Оптимальная длительность сна для взрослых — 7-9 часов, 5-6 циклов.",
+      "usage": "Используйте для анализа режима сна, выявления проблем со сном, оптимизации времени отхода ко сну.",
+      "formula": "Циклы сна = Время сна / 90 мин\nКачество = 100 − штрафы за проблемы",
+      "faq": [
+        {
+          "question": "Что такое цикл сна?",
+          "answer": "Цикл сна — это период около 90 минут, включающий фазы медленного (глубокого) и быстрого (REM) сна. Оптимально завершать сон в конце цикла, а не посередине."
+        },
+        {
+          "question": "Почему важно время засыпания?",
+          "answer": "Время от ложения до фактического сна (сонная латентность) у здорового человека составляет 10-20 минут. Больше 30 минут может указывать на бессонницу."
+        },
+        {
+          "question": "Как улучшить качество сна?",
+          "answer": "Соблюдайте режим, избегайте кофеина после 14:00, не используйте гаджеты перед сном, поддерживайте комфортную температуру в спальне (18-20°C)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Sleep Cycles — National Sleep Foundation",
+          "url": "https://www.sleepfoundation.org/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "procent-zhira-vms-ssha",
+    "id": "body-fat-navy",
+    "title": "Калькулятор процента жира (метод ВМС США)",
+    "description": "Расчёт процента жира в организме по измерениям обхватов",
+    "subcategory": "pitanie-i-ves",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "male",
+            "label": "Мужской"
+          },
+          {
+            "value": "female",
+            "label": "Женский"
+          }
+        ],
+        "defaultValue": "male"
+      },
+      {
+        "name": "height",
+        "label": "Рост (см)",
+        "type": "number",
+        "placeholder": "175",
+        "defaultValue": 175,
+        "min": 100,
+        "max": 250
+      },
+      {
+        "name": "neck",
+        "label": "Обхват шеи (см)",
+        "type": "number",
+        "placeholder": "38",
+        "defaultValue": 38,
+        "min": 20,
+        "max": 60
+      },
+      {
+        "name": "waist",
+        "label": "Обхват талии (см)",
+        "type": "number",
+        "placeholder": "85",
+        "defaultValue": 85,
+        "min": 40,
+        "max": 200
+      },
+      {
+        "name": "hip",
+        "label": "Обхват бёдер (см)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 200
+      }
+    ],
+    "outputs": [
+      {
+        "name": "bodyFat",
+        "label": "Процент жира",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "fatMass",
+        "label": "Масса жира",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "leanMass",
+        "label": "Масса без жира",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "category",
+        "label": "Категория",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Измерьте обхват шеи (ниже Adam's apple), талии (на уровне пупка) и для женщин — бёдер (в широком месте). Введите данные в сантиметрах.",
+      "about": "Метод ВМС США (US Navy Method) использует измерения обхватов для оценки процента жира. Точность ±3-4% по сравнению с эталонными методами. Для женщин требуется измерение бёдер.",
+      "usage": "Используйте для оценки состава тела, отслеживания прогресса фитнеса, определения целей по снижению жира.",
+      "formula": "Мужчины: %жира = 495/(1.0324 − 0.19077×log(талия−шея) + 0.15456×log(рост)) − 450\nЖенщины: %жира = 495/(1.29579 − 0.35004×log(талия+бёдра−шея) + 0.221×log(рост)) − 450",
+      "faq": [
+        {
+          "question": "Как правильно измерять обхваты?",
+          "answer": "Измеряйте сантиметровой лентой, не втягивая живот, в конце выдоха. Шея — ниже адамового яблока, талия — на уровне пупка, бёдра — в самом широком месте."
+        },
+        {
+          "question": "Какой процент жира считается нормальным?",
+          "answer": "Для мужчин: 10-20% — норма, для женщин: 18-28% — норма. Эссенциальный жир (минимум для здоровья): 3-5% для мужчин, 10-13% для женщин."
+        },
+        {
+          "question": "Почему для женщин нужен обхват бёдер?",
+          "answer": "У женщин жир распределяется иначе из-за гормональных особенностей. Учёт бёдер улучшает точность расчёта."
+        }
+      ],
+      "sources": [
+        {
+          "title": "US Navy Body Fat Calculator — Military.com",
+          "url": "https://www.military.com/military-fitness/workouts/military-fitness-general/body-fat-calculator"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "maksimum-v-odnom-povtorenii",
+    "id": "one-rep-max",
+    "title": "Калькулятор 1RM (максимум в одном повторении)",
+    "description": "Расчёт максимального веса для одного повторения по нескольким формулам",
+    "subcategory": "sport-i-aktivnost",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес в подходе (кг)",
+        "type": "number",
+        "placeholder": "80",
+        "defaultValue": 80,
+        "min": 1,
+        "max": 500
+      },
+      {
+        "name": "reps",
+        "label": "Количество повторений",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8,
+        "min": 1,
+        "max": 30
+      },
+      {
+        "name": "exercise",
+        "label": "Упражнение",
+        "type": "select",
+        "options": [
+          {
+            "value": "squat",
+            "label": "Приседания"
+          },
+          {
+            "value": "bench",
+            "label": "Жим лёжа"
+          },
+          {
+            "value": "deadlift",
+            "label": "Становая тяга"
+          },
+          {
+            "value": "press",
+            "label": "Жим над головой"
+          },
+          {
+            "value": "other",
+            "label": "Другое упражнение"
+          }
+        ],
+        "defaultValue": "bench"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "brzycki",
+        "label": "Формула Бржицкого",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "epley",
+        "label": "Формула Эпли",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "lombardi",
+        "label": "Формула Ломбарди",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "average",
+        "label": "Среднее значение",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "percentages",
+        "label": "Проценты от 1RM",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес, который вы можете поднять указанное количество раз. Не используйте подходы ближе к отказу (менее 3 повторений).",
+      "about": "Калькулятор оценивает максимальный вес для одного повторения (1RM) по трём популярным формулам: Бржицкого, Эпли и Ломбарди. Среднее значение даёт наиболее точную оценку.",
+      "usage": "Используйте для планирования тренировок, определения рабочих весов, отслеживания прогресса силы.",
+      "formula": "Бржицкий: 1RM = вес / (1.0278 − 0.0278×пвт)\nЭпли: 1RM = вес × (1 + 0.0333×пвт)\nЛомбарди: 1RM = вес × пвт^0.10",
+      "faq": [
+        {
+          "question": "Какая формула самая точная?",
+          "answer": "Формула Бржицкого считается одной из наиболее точных для повторений от 1 до 10. Для более высоких повторений может занижать результат."
+        },
+        {
+          "question": "Можно ли использовать для определения рабочих весов?",
+          "answer": "Да! Для силовой гипертрофии используйте 70-80% от 1RM (6-12 повторений), для силы — 80-90% (1-5 повторений)."
+        },
+        {
+          "question": "Почему результаты формул различаются?",
+          "answer": "Разные формулы основаны на разных исследованиях и популяциях. Среднее значение даёт наиболее надёжную оценку."
+        }
+      ],
+      "sources": [
+        {
+          "title": "One Repetition Maximum — ExRx.net",
+          "url": "https://exrx.net/Calculators/OneRepMax"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "vo2-maksimum",
+    "id": "vo2max",
+    "title": "Калькулятор VO₂ max",
+    "description": "Расчёт максимального потребления кислорода по тестам Купера и Рокпорта",
+    "subcategory": "sport-i-aktivnost",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "testType",
+        "label": "Тип теста",
+        "type": "select",
+        "options": [
+          {
+            "value": "cooper",
+            "label": "Тест Купера (12 минут бег)"
+          },
+          {
+            "value": "rockport",
+            "label": "Тест Рокпорта (1.6 км ходьба)"
+          }
+        ],
+        "defaultValue": "cooper"
+      },
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "male",
+            "label": "Мужской"
+          },
+          {
+            "value": "female",
+            "label": "Женский"
+          }
+        ],
+        "defaultValue": "male"
+      },
+      {
+        "name": "age",
+        "label": "Возраст (лет)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 10,
+        "max": 90
+      },
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 30,
+        "max": 200
+      },
+      {
+        "name": "distance",
+        "label": "Дистанция (м)",
+        "type": "number",
+        "placeholder": "2500",
+        "defaultValue": 2500,
+        "min": 500,
+        "max": 5000
+      },
+      {
+        "name": "heartRate",
+        "label": "Пульс после теста (уд/мин) — только для Рокпорта",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 200
+      }
+    ],
+    "outputs": [
+      {
+        "name": "vo2max",
+        "label": "VO₂ max",
+        "type": "number",
+        "unit": "мл/кг/мин"
+      },
+      {
+        "name": "fitnessLevel",
+        "label": "Уровень физподготовки",
+        "type": "text"
+      },
+      {
+        "name": "percentile",
+        "label": "Процентиль",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тест. Для теста Купера — бегите 12 минут максимально быстро и измерьте дистанцию. Для теста Рокпорта — пройдите 1.6 км быстрым шагом и измерьте пульс.",
+      "about": "VO₂ max — максимальное количество кислорода, которое организм может использовать во время интенсивных упражнений. Важный показатель сердечно-лёгочной выносливости.",
+      "usage": "Используйте для оценки аэробной выносливости, планирования кардиотренировок, отслеживания прогресса физической формы.",
+      "formula": "Тест Купера: VO₂max = (дистанция − 504.9) / 44.73\nТест Рокпорта: VO₂max = 132.853 − 0.0769×вес − 0.3877×возраст + 6.315×пол − 3.2649×время − 0.1565×пульс",
+      "faq": [
+        {
+          "question": "Какой VO₂ max считается хорошим?",
+          "answer": "Для мужчин 20-29 лет: хороший — 38-43, отличный — 44-48. Для женщин: хороший — 32-37, отличный — 38-42. С возрастом нормы снижаются."
+        },
+        {
+          "question": "Можно ли улучшить VO₂ max?",
+          "answer": "Да! Регулярные аэробные тренировки (бег, плавание, велосипед) могут улучшить VO₂ max на 5-20% за несколько месяцев."
+        },
+        {
+          "question": "Что влияет на VO₂ max?",
+          "answer": "Генетика (50%), тренированность (30%), возраст, пол, масса тела. Максимальное значение достигается в 20-25 лет."
+        }
+      ],
+      "sources": [
+        {
+          "title": "VO2 Max Testing — American Council on Exercise",
+          "url": "https://www.acefitness.org/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "stoimost-kureniya",
+    "id": "smoking-cost",
+    "title": "Калькулятор стоимости курения",
+    "description": "Расчёт финансовых затрат и последствий курения",
+    "subcategory": "zdorove",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "packsPerDay",
+        "label": "Пачек в день",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0.1,
+        "max": 5,
+        "step": 0.5
+      },
+      {
+        "name": "packPrice",
+        "label": "Цена пачки (₽)",
+        "type": "number",
+        "placeholder": "150",
+        "defaultValue": 150,
+        "min": 50,
+        "max": 500
+      },
+      {
+        "name": "yearsSmoking",
+        "label": "Лет курения",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 60
+      },
+      {
+        "name": "cigarettesPerPack",
+        "label": "Сигарет в пачке",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 10,
+        "max": 25
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyCost",
+        "label": "Затраты в день",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "monthlyCost",
+        "label": "Затраты в месяц",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "yearlyCost",
+        "label": "Затраты в год",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalCost",
+        "label": "Общие затраты за всё время",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "cigarettesTotal",
+        "label": "Всего выкурено сигарет",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "lifeLost",
+        "label": "Сокращение жизни",
+        "type": "text"
+      },
+      {
+        "name": "potentialSavings",
+        "label": "Возможные накопления",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество пачек в день, цену пачки, количество лет курения и сигарет в пачке.",
+      "about": "Калькулятор показывает реальную стоимость курения: деньги, потраченные на сигареты, сокращение продолжительности жизни и упущенную выгоду от инвестирования сэкономленных средств.",
+      "usage": "Используйте для мотивации к отказу от курения, осознания масштаба затрат, планирования бюджета после отказа от курения.",
+      "formula": "Затраты = пачки/день × цена × дни\nСокращение жизни ≈ 11 минут на сигарету\nНакопления при инвестировании 5% годовых",
+      "faq": [
+        {
+          "question": "Насколько точно считается сокращение жизни?",
+          "answer": "Согласно исследованиям, каждая сигарета сокращает жизнь в среднем на 11 минут. Это усреднённая статистика."
+        },
+        {
+          "question": "Можно ли вернуть потраченные годы жизни, бросив курить?",
+          "answer": "Да! После отказа от курения риски постепенно снижаются. Через 10-15 лет риск заболеваний приближается к уровню некурящих."
+        },
+        {
+          "question": "Какие ещё косвенные расходы есть от курения?",
+          "answer": "Дополнительные расходы: медицинские услуги, более дорогая страховка, чистка одежды и квартиры, пониженная продуктивность на работе."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Cost of Smoking — American Lung Association",
+          "url": "https://www.lung.org/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "voda-s-uchetom-aktivnosti",
+    "id": "water-activity",
+    "title": "Калькулятор нормы воды с учётом активности",
+    "description": "Расчёт необходимого количества воды с учётом базовых потребностей, упражнений и климата",
+    "subcategory": "pitanie-i-ves",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 30,
+        "max": 200
+      },
+      {
+        "name": "exerciseMinutes",
+        "label": "Минут упражнений в день",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60,
+        "min": 0,
+        "max": 300
+      },
+      {
+        "name": "exerciseIntensity",
+        "label": "Интенсивность тренировок",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкая (йога, прогулки)"
+          },
+          {
+            "value": "moderate",
+            "label": "Средняя (бег, фитнес)"
+          },
+          {
+            "value": "high",
+            "label": "Высокая (HIIT, спорт)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "climate",
+        "label": "Климат",
+        "type": "select",
+        "options": [
+          {
+            "value": "cold",
+            "label": "Холодный (зима, кондиционер)"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный (весна/осень)"
+          },
+          {
+            "value": "hot",
+            "label": "Жаркий (лето, тропики)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "altitude",
+        "label": "Высота над уровнем моря (м)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 5000
+      }
+    ],
+    "outputs": [
+      {
+        "name": "baseWater",
+        "label": "Базовая потребность",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "exerciseWater",
+        "label": "Дополнительно для тренировок",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "climateWater",
+        "label": "Корректировка по климату",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "altitudeWater",
+        "label": "Корректировка по высоте",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "totalWater",
+        "label": "Итого воды в день",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "glasses",
+        "label": "Примерно стаканов (250 мл)",
+        "type": "number",
+        "unit": "стаканов"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ваш вес, количество минут упражнений, интенсивность тренировок, климат и высоту над уровнем моря.",
+      "about": "Калькулятор учитывает базовую потребность в воде (30-35 мл/кг), потери при физической активности, испарение в жарком климате и дополнительные потребности на высоте.",
+      "usage": "Используйте для определения дневной нормы воды, планирования гидратации при тренировках, подготовки к походам в горы или жаркому климату.",
+      "formula": "Базовая норма = Вес × 35 мл\nТренировки = Минуты/60 × (400-800 мл/час)\nКлимат: холод −200 мл, жара +500 мл\nВысота: +400 мл на каждые 1000 м выше 1500 м",
+      "faq": [
+        {
+          "question": "Можно ли пить слишком много воды?",
+          "answer": "Да, гипергидратация (более 1 литра в час) может привести к гипонатриемии — низкой концентрации натрия в крови. Пейте умеренно."
+        },
+        {
+          "question": "Считается ли чай и кофе?",
+          "answer": "Да, но в небольших количествах. Кофе и чай имеют мочегонный эффект. Рекомендуется основной объём получать из чистой воды."
+        },
+        {
+          "question": "Как понять, что пью достаточно?",
+          "answer": "Цвет мочи — хороший индикатор. Светло-жёлтый цвет означает хорошую гидратацию. Тёмный цвет сигнализирует о недостатке воды."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hydration — National Academy of Medicine",
+          "url": "https://www.nationalacademies.org/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "test-na-gibkost",
+    "id": "flexibility-test",
+    "title": "Калькулятор теста на гибкость (sit-and-reach)",
+    "description": "Оценка гибкости спины и задней поверхности бедра с нормативами по возрасту и полу",
+    "subcategory": "sport-i-aktivnost",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "male",
+            "label": "Мужской"
+          },
+          {
+            "value": "female",
+            "label": "Женский"
+          }
+        ],
+        "defaultValue": "male"
+      },
+      {
+        "name": "age",
+        "label": "Возраст (лет)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 10,
+        "max": 80
+      },
+      {
+        "name": "reachDistance",
+        "label": "Расстояние (см)",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15,
+        "min": -50,
+        "max": 50
+      },
+      {
+        "name": "testType",
+        "label": "Тип теста",
+        "type": "select",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Стандартный (ноги прямые)"
+          },
+          {
+            "value": "chair",
+            "label": "Стульчик (для пожилых)"
+          }
+        ],
+        "defaultValue": "standard"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "reachDistance",
+        "label": "Результат",
+        "type": "number",
+        "unit": "см"
+      },
+      {
+        "name": "rating",
+        "label": "Оценка",
+        "type": "text"
+      },
+      {
+        "name": "percentile",
+        "label": "Процентиль",
+        "type": "text"
+      },
+      {
+        "name": "target",
+        "label": "Целевой показатель",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Сядьте на пол, ноги прямые, стопы касаются стенки теста. Медленно тянитесь вперёд к носкам, измерьте расстояние от стенки до кончиков пальцев.",
+      "about": "Тест sit-and-reach — стандартный тест гибкости, оценивающий гибкость задней поверхности бедра и поясницы. Важный показатель общей физической подготовки и профилактики травм.",
+      "usage": "Используйте для оценки гибкости, планирования программы растяжки, отслеживания прогресса.",
+      "formula": "Оценка по сравнению с возрастными нормами\nОтлично/Хорошо/Средне/Ниже среднего",
+      "faq": [
+        {
+          "question": "Как правильно выполнять тест?",
+          "answer": "Ноги прямые, колени не сгибать. Тянуться медленно, не рывками. Зафиксировать максимальное положение на 2 секунды. Делать выдох при наклоне."
+        },
+        {
+          "question": "Почему уменьшается гибкость с возрастом?",
+          "answer": "С возрастом мышцы и связки теряют эластичность, уменьшается выработка коллагена. Регулярная растяжка помогает сохранить гибкость."
+        },
+        {
+          "question": "Как быстро можно улучшить гибкость?",
+          "answer": "При регулярной растяжке (ежедневно по 10-15 минут) заметное улучшение возможно за 4-8 недель. Ключ к успеху — регулярность."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Sit and Reach Test — Topend Sports",
+          "url": "https://www.topendsports.com/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-sahara-v-krovi",
+    "id": "blood-sugar-converter",
+    "title": "Конвертер сахара в крови",
+    "description": "Перевод mg/dL ↔ mmol/L и оценка HbA1c",
+    "subcategory": "zdorove",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "conversionType",
+        "label": "Тип конвертации",
+        "type": "select",
+        "options": [
+          {
+            "value": "mg_to_mmol",
+            "label": "mg/dL → mmol/L"
+          },
+          {
+            "value": "mmol_to_mg",
+            "label": "mmol/L → mg/dL"
+          },
+          {
+            "value": "hba1c_estimate",
+            "label": "Оценка HbA1c по глюкозе"
+          }
+        ],
+        "defaultValue": "mg_to_mmol"
+      },
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0,
+        "max": 600
+      },
+      {
+        "name": "measurementType",
+        "label": "Тип измерения (для оценки HbA1c)",
+        "type": "select",
+        "options": [
+          {
+            "value": "fasting",
+            "label": "Натощак"
+          },
+          {
+            "value": "random",
+            "label": "Случайное"
+          },
+          {
+            "value": "average",
+            "label": "Среднее значение"
+          }
+        ],
+        "defaultValue": "average"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "convertedValue",
+        "label": "Конвертированное значение",
+        "type": "text"
+      },
+      {
+        "name": "hba1cEstimated",
+        "label": "Оценка HbA1c",
+        "type": "text"
+      },
+      {
+        "name": "category",
+        "label": "Категория",
+        "type": "text"
+      },
+      {
+        "name": "referenceRange",
+        "label": "Референсные значения",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение сахара в крови и выберите тип конвертации. Для оценки HbA1c выберите соответствующий режим.",
+      "about": "Калькулятор переводит значения глюкозы из mg/dL (американская система) в mmol/L (европейская/российская) и наоборот. Также оценивает уровень HbA1c — важный показатель контроля диабета.",
+      "usage": "Используйте для перевода результатов анализов между системами измерения, оценки рисков диабета, мониторинга уровня сахара.",
+      "formula": "mmol/L = mg/dL / 18\nmg/dL = mmol/L × 18\nHbA1c ≈ (средняя глюкоза + 46.7) / 28.7",
+      "faq": [
+        {
+          "question": "Какая система измерения используется в России?",
+          "answer": "В России используется mmol/L (миллимоль на литр). США и некоторые другие страны используют mg/dL."
+        },
+        {
+          "question": "Что такое HbA1c?",
+          "answer": "HbA1c (гликированный гемоглобин) показывает средний уровень сахара в крови за последние 2-3 месяца. Норма < 5.7%, преддиабет 5.7-6.4%, диабет ≥ 6.5%."
+        },
+        {
+          "question": "Насколько точна оценка HbA1c по глюкозе?",
+          "answer": "Это приблизительная оценка. Точный HbA1c можно определить только лабораторным анализом крови. Оценка может отличаться на 0.3-0.5%."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Blood Glucose Conversion — Diabetes UK",
+          "url": "https://www.diabetes.org.uk/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "recept-dlya-ochkov",
+    "id": "eye-prescription",
+    "title": "Калькулятор офтальмологического рецепта",
+    "description": "Расчёт диоптрий, остроты зрения и конвертация рецептов",
+    "subcategory": "zdorove",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "sphereRight",
+        "label": "Сфера (OD/правый глаз) в диоптриях",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": -20,
+        "max": 20,
+        "step": 0.25
+      },
+      {
+        "name": "cylinderRight",
+        "label": "Цилиндр (OD/правый глаз)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": -6,
+        "max": 0,
+        "step": 0.25
+      },
+      {
+        "name": "axisRight",
+        "label": "Ось (OD/правый глаз) в градусах",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 180,
+        "step": 1
+      },
+      {
+        "name": "sphereLeft",
+        "label": "Сфера (OS/левый глаз) в диоптриях",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": -20,
+        "max": 20,
+        "step": 0.25
+      },
+      {
+        "name": "cylinderLeft",
+        "label": "Цилиндр (OS/левый глаз)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": -6,
+        "max": 0,
+        "step": 0.25
+      },
+      {
+        "name": "axisLeft",
+        "label": "Ось (OS/левый глаз) в градусах",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 180,
+        "step": 1
+      },
+      {
+        "name": "pd",
+        "label": "Межзрачковое расстояние (PD) в мм",
+        "type": "number",
+        "placeholder": "62",
+        "defaultValue": 62,
+        "min": 50,
+        "max": 80
+      }
+    ],
+    "outputs": [
+      {
+        "name": "sphericalEquivalentRight",
+        "label": "Сферический эквивалент (правый)",
+        "type": "number",
+        "unit": "D"
+      },
+      {
+        "name": "sphericalEquivalentLeft",
+        "label": "Сферический эквивалент (левый)",
+        "type": "number",
+        "unit": "D"
+      },
+      {
+        "name": "visualAcuityRight",
+        "label": "Примерная острота зрения (правый)",
+        "type": "text"
+      },
+      {
+        "name": "visualAcuityLeft",
+        "label": "Примерная острота зрения (левый)",
+        "type": "text"
+      },
+      {
+        "name": "myopiaHyperopia",
+        "label": "Тип коррекции",
+        "type": "text"
+      },
+      {
+        "name": "astigmatism",
+        "label": "Астигматизм",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите параметры рецепта: сферу, цилиндр и ось для каждого глаза. Сферический эквивалент помогает оценить общую силу коррекции.",
+      "about": "Калькулятор помогает понять офтальмологический рецепт: рассчитывает сферический эквивалент, оценивает тип аметропии (близорукость/дальнозоркость) и степень астигматизма.",
+      "usage": "Используйте для понимания своего рецепта, оценки изменений при новых очках, конвертации между форматами записи (минус/плюс цилиндр).",
+      "formula": "Сферический эквивалент = Сфера + Цилиндр/2\nОстрота зрения ≈ приблизительная оценка по силе коррекции",
+      "faq": [
+        {
+          "question": "Что означает «сфера», «цилиндр» и «ось»?",
+          "answer": "Сфера (Sphere) — сила линзы для коррекции близорукости (-) или дальнозоркости (+). Цилиндр (Cylinder) — коррекция астигматизма. Ось (Axis) — ориентация цилиндра в градусах (1-180°)."
+        },
+        {
+          "question": "Что такое сферический эквивалент?",
+          "answer": "Это усреднённая сила коррекции, которая учитывает и сферу, и астигматизм. Используется для оценки общей аметропии."
+        },
+        {
+          "question": "Почему цилиндр всегда отрицательный?",
+          "answer": "В некоторых странах (включая Россию) используется «минус-цилиндровая» запись. В США и некоторых европейских странах — «плюс-цилиндровая». Значения конвертируются: новая сфера = старая сфера + старый цилиндр, новый цилиндр = −старый цилиндр, ось меняется на 90°."
+        },
+        {
+          "question": "Можно ли использовать калькулятор для подбора очков онлайн?",
+          "answer": "Нет! Этот калькулятор только для справки. Для подбора очков необходима консультация офтальмолога или оптометриста с полным обследованием."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Understanding Your Eyeglass Prescription — AAO",
+          "url": "https://www.aao.org/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

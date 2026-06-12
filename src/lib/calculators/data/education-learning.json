@@ -1,0 +1,700 @@
+[
+  {
+    "slug": "gpa-kalkulyator",
+    "id": "gpa-calculator",
+    "title": "Калькулятор GPA",
+    "description": "Расчёт среднего балла GPA по шкалам 4.0, 5.0 и 100-балльной системе",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "vremya-chteniya",
+    "id": "reading-time-calculator",
+    "title": "Калькулятор времени чтения",
+    "description": "Расчёт времени, необходимого для прочтения текста или книги с учётом скорости чтения",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "wordCount",
+        "label": "Количество слов",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 1
+      },
+      {
+        "name": "readingSpeed",
+        "label": "Скорость чтения",
+        "type": "select",
+        "options": [
+          {
+            "value": "150",
+            "label": "150 слов/мин — медленно"
+          },
+          {
+            "value": "200",
+            "label": "200 слов/мин — средне"
+          },
+          {
+            "value": "250",
+            "label": "250 слов/мин — быстро"
+          },
+          {
+            "value": "300",
+            "label": "300 слов/мин — очень быстро"
+          }
+        ],
+        "defaultValue": "200"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "minutes",
+        "label": "Минут чтения",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "formatted",
+        "label": "Форматированное время",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество слов и выберите скорость чтения. Калькулятор покажет время чтения.",
+      "about": "Калькулятор времени чтения оценивает, сколько времени потребуется для чтения текста определённой длины.",
+      "usage": "Используется для указания времени чтения в статьях, планирования чтения, оценки сложности материала.",
+      "formula": "Время (мин) = количество слов / скорость чтения\nСредняя скорость: 200 слов/мин",
+      "faq": [
+        {
+          "question": "Какая средняя скорость чтения?",
+          "answer": "Взрослый человек читает в среднем 200-250 слов в минуту. Скорость можно улучшить тренировками до 400+."
+        },
+        {
+          "question": "От чего зависит скорость чтения?",
+          "answer": "От сложности текста, знакомства с темой, языка, форматирования, опыта читателя, концентрации."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Скорочтение — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Скорочтение"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "pomodoro-tekhnika",
+    "id": "pomodoro-calculator",
+    "title": "Калькулятор Pomodoro",
+    "description": "Планирование учёбы/работы по технике Pomodoro с перерывами и длинными паузами",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "plan-podgotovki-k-ekzamenu",
+    "id": "exam-prep-calculator",
+    "title": "План подготовки к экзамену",
+    "description": "Составление расписания подготовки к экзамену с учётом оставшегося времени и объёма материала",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "daysUntilExam",
+        "label": "Дней до экзамена",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "max": 365,
+        "defaultValue": 30
+      },
+      {
+        "name": "topicsCount",
+        "label": "Количество тем/разделов",
+        "type": "number",
+        "placeholder": "15",
+        "min": 1,
+        "max": 100,
+        "defaultValue": 15
+      },
+      {
+        "name": "availableHours",
+        "label": "Часов в день на подготовку",
+        "type": "number",
+        "placeholder": "3",
+        "min": 0.5,
+        "max": 12,
+        "step": 0.5,
+        "defaultValue": 3
+      },
+      {
+        "name": "examType",
+        "label": "Тип экзамена",
+        "type": "select",
+        "options": [
+          {
+            "value": "test",
+            "label": "Тест (множественный выбор)"
+          },
+          {
+            "value": "oral",
+            "label": "Устный экзамен"
+          },
+          {
+            "value": "written",
+            "label": "Письменный развёрнутый"
+          },
+          {
+            "value": "problem",
+            "label": "Решение задач"
+          }
+        ],
+        "defaultValue": "test"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyTopics",
+        "label": "Тем в день",
+        "type": "number",
+        "unit": "тем"
+      },
+      {
+        "name": "totalHours",
+        "label": "Всего часов доступно",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "hoursPerTopic",
+        "label": "На изучение темы",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "reviewDays",
+        "label": "Дней на повторение",
+        "type": "number",
+        "unit": "дн"
+      },
+      {
+        "name": "schedule",
+        "label": "Рекомендуемый план",
+        "type": "text"
+      },
+      {
+        "name": "intensity",
+        "label": "Интенсивность",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите дни до экзамена, количество тем и доступное время в день. Калькулятор составит план подготовки.",
+      "about": "Эффективная подготовка включает: 1) Изучение материала (80% времени), 2) Повторение (20% времени). Запоминание требует интервалов и сна для консолидации.",
+      "formula": "Тем в день = Всего тем / (Дней × 0.8)\n20% времени резервируется на повторение перед экзаменом",
+      "faq": [
+        {
+          "question": "Как лучше готовиться — постепенно или интенсивно?",
+          "answer": "Распределённые повторения (spaced repetition) эффективнее зубрёжки. Лучше 1 час в день 30 дней, чем 10 часов в последнюю ночь."
+        },
+        {
+          "question": "Когда начинать повторение?",
+          "answer": "Начинайте повторение за 3-5 дней до экзамена. Последний день — только лёгкое повторение формул/терминов, без нового материала."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Learning Scientists - Spaced Practice",
+          "url": "https://www.learningscientists.org/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "kalkulyator-stipendii",
+    "id": "scholarship-calculator",
+    "title": "Калькулятор стипендии",
+    "description": "Расчёт академической стипендии с учётом среднего балла и повышающих коэффициентов",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "baseScholarship",
+        "label": "Базовая стипендия (₽)",
+        "type": "number",
+        "placeholder": "3000",
+        "min": 1000,
+        "max": 20000,
+        "defaultValue": 3000
+      },
+      {
+        "name": "gpa",
+        "label": "Средний балл (GPA 5.0)",
+        "type": "number",
+        "placeholder": "4.5",
+        "min": 3,
+        "max": 5,
+        "step": 0.1,
+        "defaultValue": 4.5
+      },
+      {
+        "name": "meritBonus",
+        "label": "Повышающий коэффициент",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет (базовая)"
+          },
+          {
+            "value": "good",
+            "label": "Хорошая учёба (×1.4)"
+          },
+          {
+            "value": "excellent",
+            "label": "Отличная учёба (×1.8)"
+          },
+          {
+            "value": "increased",
+            "label": "Повышенная гос. (×2.0)"
+          },
+          {
+            "value": "president",
+            "label": "Президентская (×4.0+)"
+          }
+        ],
+        "defaultValue": "excellent"
+      },
+      {
+        "name": "achievements",
+        "label": "Достижения (дополнительно)",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "conference",
+            "label": "Участие в конференции (+500₽)"
+          },
+          {
+            "value": "olympiad",
+            "label": "Олимпиада (+1000₽)"
+          },
+          {
+            "value": "publication",
+            "label": "Публикация статьи (+2000₽)"
+          },
+          {
+            "value": "social",
+            "label": "Общественная работа (+500₽)"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalScholarship",
+        "label": "Итоговая стипендия",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "coefficient",
+        "label": "Коэффициент",
+        "type": "number"
+      },
+      {
+        "name": "bonus",
+        "label": "Бонус за достижения",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "annual",
+        "label": "В год",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "monthly",
+        "label": "Ежемесячно",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите базовую стипендию вашего ВУЗа, GPA и коэффициент. Калькулятор рассчитает итоговую сумму.",
+      "about": "Академическая стипендия в России: базовая обычно 2000-3000₽. При хорошей учёбе ×1.4, отличной ×1.8. Повышенная государственная достигает 6000-8000₽.",
+      "formula": "Стипендия = Базовая × Коэффициент + Бонусы\nКоэффициент: хорошо=1.4, отлично=1.8, повышенная=2.0",
+      "faq": [
+        {
+          "question": "Как получить повышенную стипендию?",
+          "answer": "Нужен средний балл 4.5-5.0, участие в НИР, публикации, олимпиады. Подача заявления в деканат."
+        },
+        {
+          "question": "Могут ли лишить стипендии?",
+          "answer": "Да, если средний балл упал ниже 4.0 (хорошо) или есть неудовлетворительные оценки. После сессии пересчитывается."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Минобрнауки — Стипендии",
+          "url": "https://www.gov.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "zatraty-na-obrazovanie",
+    "id": "education-cost-calculator",
+    "title": "Затраты на образование",
+    "description": "Расчёт полной стоимости обучения в ВУЗе или колледже с учётом всех расходов",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "tuitionPerYear",
+        "label": "Оплата за год (₽)",
+        "type": "number",
+        "placeholder": "150000",
+        "min": 0,
+        "max": 1000000,
+        "defaultValue": 150000
+      },
+      {
+        "name": "years",
+        "label": "Количество лет",
+        "type": "number",
+        "placeholder": "4",
+        "min": 1,
+        "max": 6,
+        "defaultValue": 4
+      },
+      {
+        "name": "accommodation",
+        "label": "Проживание в месяц (₽)",
+        "type": "number",
+        "placeholder": "15000",
+        "min": 0,
+        "max": 50000,
+        "defaultValue": 15000
+      },
+      {
+        "name": "food",
+        "label": "Питание в месяц (₽)",
+        "type": "number",
+        "placeholder": "12000",
+        "min": 0,
+        "max": 30000,
+        "defaultValue": 12000
+      },
+      {
+        "name": "books",
+        "label": "Книги/материалы в год (₽)",
+        "type": "number",
+        "placeholder": "10000",
+        "min": 0,
+        "max": 50000,
+        "defaultValue": 10000
+      },
+      {
+        "name": "transport",
+        "label": "Транспорт в месяц (₽)",
+        "type": "number",
+        "placeholder": "3000",
+        "min": 0,
+        "max": 10000,
+        "defaultValue": 3000
+      }
+    ],
+    "outputs": [
+      {
+        "name": "tuitionTotal",
+        "label": "Всего за обучение",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "livingTotal",
+        "label": "Проживание всего",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalCost",
+        "label": "Полная стоимость",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "perYear",
+        "label": "В год",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "perMonth",
+        "label": "В месяц (в среднем)",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "withScholarship",
+        "label": "С учётом стипендии 3000₽/мес",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите стоимость обучения, количество лет, расходы на проживание, питание, книги и транспорт. Калькулятор покажет полную стоимость образования.",
+      "about": "Полная стоимость образования включает не только оплату за обучение, но и проживание, питание, книги, транспорт. В России бюджетное образование бесплатно для поступивших на бюджет.",
+      "formula": "Полная стоимость = Обучение × Годы + (Проживание + Питание + Транспорт) × 12 × Годы + Книги × Годы",
+      "faq": [
+        {
+          "question": "Как снизить затраты на образование?",
+          "answer": "1) Поступить на бюджет (бесплатно). 2) Получать повышенную стипендию. 3) Жить в общежитии (дешевле аренды). 4) Покупать б/у учебники."
+        },
+        {
+          "question": "Сколько стоит образование в Москве?",
+          "answer": "Бюджет: только проживание ~15-20 тыс/мес. Платное: обучение 150-500 тыс/год + проживание. Всего ~400-800 тыс в год."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Стоимость образования в России",
+          "url": "https://www.edu.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "intervalnoe-povtorenie",
+    "id": "spaced-repetition-calculator",
+    "title": "Интервальное повторение",
+    "description": "Расчёт оптимальных интервалов повторения материала для лучшего запоминания",
+    "subcategory": "education",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "itemsCount",
+        "label": "Количество элементов для запоминания",
+        "type": "number",
+        "placeholder": "100",
+        "min": 10,
+        "max": 1000,
+        "defaultValue": 100
+      },
+      {
+        "name": "difficulty",
+        "label": "Сложность материала",
+        "type": "select",
+        "options": [
+          {
+            "value": "easy",
+            "label": "Лёгкий (факты, определения)"
+          },
+          {
+            "value": "medium",
+            "label": "Средний (формулы, даты)"
+          },
+          {
+            "value": "hard",
+            "label": "Сложный (языки, сложные концепции)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "daysUntilTest",
+        "label": "Дней до проверки знаний",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "max": 365,
+        "defaultValue": 30
+      }
+    ],
+    "outputs": [
+      {
+        "name": "newPerDay",
+        "label": "Новых элементов в день",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "reviewPerDay",
+        "label": "Повторений в день",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "interval1",
+        "label": "1-е повторение",
+        "type": "text"
+      },
+      {
+        "name": "interval2",
+        "label": "2-е повторение",
+        "type": "text"
+      },
+      {
+        "name": "interval3",
+        "label": "3-е повторение",
+        "type": "text"
+      },
+      {
+        "name": "interval4",
+        "label": "4-е повторение",
+        "type": "text"
+      },
+      {
+        "name": "method",
+        "label": "Методика",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество элементов для запоминания, сложность и срок до экзамена. Калькулятор рассчитает график интервальных повторений.",
+      "about": "Интервальное повторение (spaced repetition) — методика, при которой материал повторяется через увеличивающиеся интервалы. Основана на кривой забывания Эббингауза.",
+      "formula": "Интервалы: 1 → 2 → 4 → 8 → 16 → 32 дня\nКривая забывания: через 1 день забыто 50%, через интервальное повторение — 80-90% сохраняется",
+      "faq": [
+        {
+          "question": "Почему интервальное повторение работает?",
+          "answer": "Активное вспоминание в момент \"почти забыл\" укрепляет нейронные связи. Повторять слишком часто — неэффективно, слишком редко — забывается."
+        },
+        {
+          "question": "Какие программы использовать?",
+          "answer": "Anki (бесплатная, лучшая), Quizlet, Memrise, TinyCards. Для языков — особенно эффективно."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ebbinghaus Forgetting Curve",
+          "url": "https://en.wikipedia.org/wiki/Forgetting_curve"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-ocenok",
+    "id": "grade-converter",
+    "title": "Конвертер оценок",
+    "description": "Перевод оценок между российской 5-балльной, американской буквенной и 100-балльной системами",
+    "subcategory": "education",
+    "type": "converter",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "grade",
+        "label": "Оценка",
+        "type": "number",
+        "placeholder": "4",
+        "min": 1,
+        "max": 100,
+        "defaultValue": 4
+      },
+      {
+        "name": "fromSystem",
+        "label": "Из системы",
+        "type": "select",
+        "options": [
+          {
+            "value": "russian5",
+            "label": "Российская (5-балльная)"
+          },
+          {
+            "value": "russian100",
+            "label": "Российская (100-балльная)"
+          },
+          {
+            "value": "letter",
+            "label": "Американская (A-F)"
+          },
+          {
+            "value": "gpa4",
+            "label": "GPA (4.0)"
+          },
+          {
+            "value": "gpa5",
+            "label": "GPA (5.0)"
+          },
+          {
+            "value": "percent",
+            "label": "Проценты (0-100%)"
+          }
+        ],
+        "defaultValue": "russian5"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "russian5",
+        "label": "Российская (5)",
+        "type": "text"
+      },
+      {
+        "name": "russian100",
+        "label": "100-балльная",
+        "type": "text"
+      },
+      {
+        "name": "letter",
+        "label": "Буквенная (A-F)",
+        "type": "text"
+      },
+      {
+        "name": "gpa4",
+        "label": "GPA 4.0",
+        "type": "text"
+      },
+      {
+        "name": "gpa5",
+        "label": "GPA 5.0",
+        "type": "text"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите оценку в одной из систем и выберите исходную шкалу. Калькулятор переведёт во все основные системы оценивания.",
+      "about": "Разные страны используют разные системы оценивания. Россия — 5-балльная, США — буквенная (A-F) и GPA 4.0, многие европейские страны — 100-балльная или 10-балльная.",
+      "formula": "5 (РФ) = A (90-100%) = GPA 4.0\n4 (РФ) = B (80-89%) = GPA 3.0\n3 (РФ) = C/D (60-79%) = GPA 2.0",
+      "faq": [
+        {
+          "question": "Как перевести GPA 4.0 в российскую систему?",
+          "answer": "GPA 4.0 = 5 (отлично), GPA 3.5-3.9 = 4-5 (хорошо-отлично), GPA 3.0 = 4 (хорошо), GPA 2.0 = 3 (удовлетворительно)."
+        },
+        {
+          "question": "Что такое GPA 5.0?",
+          "answer": "GPA 5.0 используется в некоторых азиатских странах и России при переводе. Российская 5 = GPA 5.0, 4 = GPA 4.0 и т.д."
+        }
+      ],
+      "sources": [
+        {
+          "title": "World Education Services - Grade Conversion",
+          "url": "https://www.wes.org/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

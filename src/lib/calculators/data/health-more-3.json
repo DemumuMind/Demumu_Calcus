@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "imt-dlya-beremennih",
+    "id": "bmi-pregnancy",
+    "title": "ИМТ для беременных",
+    "description": "Расчёт ИМТ с учётом срока беременности и рекомендуемого набора веса",
+    "subcategory": "vesc-rost",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "data-rodov-rasshirennyj",
+    "id": "due-date-advanced",
+    "title": "Калькулятор даты родов (расширенный)",
+    "description": "Расчёт предполагаемой даты родов по нескольким методам",
+    "subcategory": "detyam",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "prikorm-dlya-malysha",
+    "id": "baby-food-intro",
+    "title": "Калькулятор прикорма",
+    "description": "Когда и какие продукты вводить при прикорме",
+    "subcategory": "detyam",
+    "type": "reference",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "razvitie-rebenka",
+    "id": "child-development",
+    "title": "Календарь развития ребёнка",
+    "description": "Основные этапы развития от рождения до 3 лет",
+    "subcategory": "detyam",
+    "type": "reference",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "menstrualnyj-cikl",
+    "id": "menstrual-cycle",
+    "title": "Калькулятор менструального цикла",
+    "description": "Отслеживание цикла, предсказание следующих месячных и овуляции",
+    "subcategory": "detyam",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "klimaks-kalkulyator",
+    "id": "menopause-calculator",
+    "title": "Калькулятор климакса",
+    "description": "Расчёт возраста наступления менопаузы и перименопаузы",
+    "subcategory": "detyam",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "norma-belka",
+    "id": "protein-calculator",
+    "title": "Калькулятор нормы белка",
+    "description": "Расчёт дневной потребности в белке по весу и активности",
+    "subcategory": "pitanie-diety",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "gidratacziya-rasshirennaya",
+    "id": "hydration-advanced",
+    "title": "Расчёт потребности в воде (расширенный)",
+    "description": "Дневная норма воды с учётом климата, активности и диеты",
+    "subcategory": "pitanie-diety",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "pishhevaya-allergiya",
+    "id": "allergy-calculator",
+    "title": "Калькулятор пищевой аллергии",
+    "description": "Симптомы и вероятность аллергической реакции на продукты",
+    "subcategory": "pitanie-diety",
+    "type": "reference",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "lekztva-dlya-zhivotnyh",
+    "id": "pet-medication",
+    "title": "Дозировка лекарств для животных",
+    "description": "Расчёт дозировки лекарств для собак и кошек по весу",
+    "subcategory": "pitanie-diety",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  }
+]

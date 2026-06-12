@@ -29,7 +29,6 @@ interface YandexAdBlockProps {
   size?: 'banner' | 'rectangle' | 'skyscraper' | 'leaderboard';
 }
 
-const YANDEX_PARTNER_ID = '99999999';
 
 export function YandexAdBlock({ blockId, renderTo, className, size = 'rectangle' }: YandexAdBlockProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,10 +38,10 @@ export function YandexAdBlock({ blockId, renderTo, className, size = 'rectangle'
     if (process.env.NODE_ENV === 'development') return;
 
     // Check if yandex Context API is available
-    const yaContextCb = (window as any).yaContextCb;
+    const yaContextCb = (window as Window & { yaContextCb?: Array<() => void> }).yaContextCb;
     if (yaContextCb) {
       yaContextCb.push(() => {
-        (window as any).Ya.Context.AdvManager.render({
+        (window as Window & { Ya?: { Context: { AdvManager: { render: (p: { blockId: string; renderTo: string }) => void } } } }).Ya?.Context.AdvManager.render({
           blockId,
           renderTo,
         });

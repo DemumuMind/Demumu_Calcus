@@ -1,0 +1,1333 @@
+[
+  {
+    "slug": "son-i-krasota",
+    "id": "sleep-beauty-calculator",
+    "title": "Калькулятор красоты сна",
+    "description": "Расчёт оптимальной продолжительности сна для красоты и здоровья кожи",
+    "subcategory": "wellness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "number",
+        "placeholder": "30",
+        "min": 18,
+        "max": 80,
+        "defaultValue": 30
+      },
+      {
+        "name": "stressLevel",
+        "label": "Уровень стресса",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий"
+          },
+          {
+            "value": "medium",
+            "label": "Средний"
+          },
+          {
+            "value": "high",
+            "label": "Высокий"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "exerciseFrequency",
+        "label": "Физическая активность",
+        "type": "select",
+        "options": [
+          {
+            "value": "sedentary",
+            "label": "Минимальная"
+          },
+          {
+            "value": "light",
+            "label": "Лёгкая (1-2 раза в неделю)"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренная (3-5 раз в неделю)"
+          },
+          {
+            "value": "intense",
+            "label": "Интенсивная (ежедневно)"
+          }
+        ],
+        "defaultValue": "light"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "optimalSleep",
+        "label": "Оптимальное время сна",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "beautySleep",
+        "label": "Красивый сон (22:00-02:00)",
+        "type": "text"
+      },
+      {
+        "name": "skinRecovery",
+        "label": "Время восстановления кожи",
+        "type": "text"
+      },
+      {
+        "name": "darkCircles",
+        "label": "Риск тёмных кругов",
+        "type": "text"
+      },
+      {
+        "name": "recommendations",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ваш возраст, уровень стресса и физическую активность. Калькулятор определит оптимальную продолжительность сна для красоты.",
+      "about": "Сон — это бесплатная косметика. В период с 22:00 до 02:00 вырабатывается до 70% суточного количества гормона роста, который отвечает за регенерацию кожи.",
+      "formula": "Оптимальный сон = Базовая норма (7-8.5 ч) + Поправка на стресс (0-1 ч) + Поправка на нагрузки (0-1 ч)",
+      "faq": [
+        {
+          "question": "Почему тёмные круги под глазами?",
+          "answer": "Недосыпание, стресс, плохая микроциркуляция. Во время сна усиливается кровоток, уменьшается застой. При недосыпании — отёки и тёмные круги."
+        },
+        {
+          "question": "Как улучшить качество сна для кожи?",
+          "answer": "Ложитесь до 23:00, спите на спине или на шёлковой наволочке, используйте ночной крем, вентилируйте комнату."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Sleep Foundation - Beauty Sleep",
+          "url": "https://www.sleepfoundation.org/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "voda-dlya-kozhi",
+    "id": "water-beauty-calculator",
+    "title": "Калькулятор воды для красоты",
+    "description": "Расчёт необходимого количества воды для увлажнённой и здоровой кожи",
+    "subcategory": "wellness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "65",
+        "min": 40,
+        "max": 150,
+        "defaultValue": 65
+      },
+      {
+        "name": "activity",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "sedentary",
+            "label": "Малоподвижный"
+          },
+          {
+            "value": "light",
+            "label": "Лёгкая активность"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренная активность"
+          },
+          {
+            "value": "active",
+            "label": "Высокая активность"
+          }
+        ],
+        "defaultValue": "light"
+      },
+      {
+        "name": "climate",
+        "label": "Климат",
+        "type": "select",
+        "options": [
+          {
+            "value": "cold",
+            "label": "Холодный"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный"
+          },
+          {
+            "value": "hot",
+            "label": "Жаркий/влажный"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "skinType",
+        "label": "Тип кожи",
+        "type": "select",
+        "options": [
+          {
+            "value": "dry",
+            "label": "Сухая"
+          },
+          {
+            "value": "normal",
+            "label": "Нормальная"
+          },
+          {
+            "value": "oily",
+            "label": "Жирная"
+          }
+        ],
+        "defaultValue": "normal"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyWater",
+        "label": "Воды в день",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "glasses",
+        "label": "Стаканов (250 мл)",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "skinHydration",
+        "label": "Уровень увлажнения",
+        "type": "text"
+      },
+      {
+        "name": "schedule",
+        "label": "График питья",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ваш вес, уровень активности, климат и тип кожи. Калькулятор рассчитает оптимальное количество воды для красоты и здоровья.",
+      "about": "Кожа на 64% состоит из воды. Обезвоженная кожа выглядит тусклой, мелкие морщины становятся заметнее. Внутреннее увлажнение работает лучше любого крема.",
+      "formula": "Норма воды = Вес × 33 мл × Коэффициент активности + Поправка на климат + Бонус для сухой кожи",
+      "faq": [
+        {
+          "question": "Сколько воды нужно для сухой кожи?",
+          "answer": "Сухой коже нужно на 300-500 мл больше базовой нормы. Минимум 2.5 литра для поддержания влажности."
+        },
+        {
+          "question": "Чай и кофе считаются?",
+          "answer": "Нет, кофе и чай имеют мочегонный эффект. Чистая вода, травяные чаи, свежие соки — да. Норму лучше покрывать чистой водой."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Healthline - Water and Skin Health",
+          "url": "https://www.healthline.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "faktory-star",
+    "id": "aging-risk-calculator",
+    "title": "Калькулятор факторов старения",
+    "description": "Оценка факторов, влияющих на преждевременное старение кожи",
+    "subcategory": "wellness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "sunExposure",
+        "label": "Время на солнце (часов в день)",
+        "type": "number",
+        "placeholder": "2",
+        "min": 0,
+        "max": 12,
+        "defaultValue": 2
+      },
+      {
+        "name": "smoking",
+        "label": "Курение",
+        "type": "select",
+        "options": [
+          {
+            "value": "no",
+            "label": "Не курю"
+          },
+          {
+            "value": "former",
+            "label": "Бросил(а)"
+          },
+          {
+            "value": "light",
+            "label": "До 5 сигарет в день"
+          },
+          {
+            "value": "heavy",
+            "label": "Больше пачки в день"
+          }
+        ],
+        "defaultValue": "no"
+      },
+      {
+        "name": "sleepHours",
+        "label": "Сон (часов)",
+        "type": "number",
+        "placeholder": "7",
+        "min": 4,
+        "max": 12,
+        "defaultValue": 7
+      },
+      {
+        "name": "stressLevel",
+        "label": "Уровень стресса",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий"
+          },
+          {
+            "value": "medium",
+            "label": "Средний"
+          },
+          {
+            "value": "high",
+            "label": "Высокий"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "dietQuality",
+        "label": "Качество питания",
+        "type": "select",
+        "options": [
+          {
+            "value": "healthy",
+            "label": "Сбалансированное"
+          },
+          {
+            "value": "average",
+            "label": "Среднее"
+          },
+          {
+            "value": "poor",
+            "label": "Неправильное (фастфуд, сахар)"
+          }
+        ],
+        "defaultValue": "average"
+      },
+      {
+        "name": "skincare",
+        "label": "Уход за кожей",
+        "type": "select",
+        "options": [
+          {
+            "value": "excellent",
+            "label": "Регулярный, качественный"
+          },
+          {
+            "value": "basic",
+            "label": "Базовый"
+          },
+          {
+            "value": "minimal",
+            "label": "Минимальный"
+          },
+          {
+            "value": "none",
+            "label": "Нет систематического ухода"
+          }
+        ],
+        "defaultValue": "basic"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "agingRisk",
+        "label": "Индекс старения",
+        "type": "number"
+      },
+      {
+        "name": "skinAge",
+        "label": "Биологический возраст кожи",
+        "type": "number",
+        "unit": "лет"
+      },
+      {
+        "name": "mainRisk",
+        "label": "Главный риск",
+        "type": "text"
+      },
+      {
+        "name": "priorityAction",
+        "label": "Приоритетное действие",
+        "type": "text"
+      },
+      {
+        "name": "antioxidants",
+        "label": "Рекомендуемые антиоксиданты",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Оцените свои факторы риска: время на солнце, курение, сон, стресс, питание и уход. Калькулятор даст рекомендации по замедлению старения.",
+      "about": "80% видимых признаков старения кожи — результат внешних факторов (фото- и хроностарение), а не генетики. УФ-излучение отвечает за 80% от фото старения.",
+      "formula": "Индекс старения = Сумма факторов риска (солнце, курение, сон, стресс, питание) - Защитные факторы (уход)",
+      "faq": [
+        {
+          "question": "Можно ли замедлить старение кожи?",
+          "answer": "Да! УФ-защита (SPF) — самое эффективное. Добавьте ретинол, витамин C, хороший сон и отказ от курения."
+        },
+        {
+          "question": "С какого возраста начинать антивозрастной уход?",
+          "answer": "Профилактику можно начинать с 25 лет. С 30+ — активные ингредиенты (ретинол, пептиды)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "American Academy of Dermatology - Skin Aging",
+          "url": "https://www.aad.org/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "uhod-po-tipu-kozhi",
+    "id": "skin-type-care",
+    "title": "Калькулятор ухода по типу кожи",
+    "description": "Подбор уходовых средств и рутины на основе типа кожи и возраста",
+    "subcategory": "beauty",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "skinType",
+        "label": "Тип кожи",
+        "type": "select",
+        "options": [
+          {
+            "value": "dry",
+            "label": "Сухая"
+          },
+          {
+            "value": "oily",
+            "label": "Жирная"
+          },
+          {
+            "value": "combination",
+            "label": "Комбинированная"
+          },
+          {
+            "value": "normal",
+            "label": "Нормальная"
+          },
+          {
+            "value": "sensitive",
+            "label": "Чувствительная"
+          }
+        ],
+        "defaultValue": "combination"
+      },
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "number",
+        "placeholder": "30",
+        "min": 15,
+        "max": 80,
+        "defaultValue": 30
+      },
+      {
+        "name": "concerns",
+        "label": "Основные проблемы",
+        "type": "select",
+        "options": [
+          {
+            "value": "acne",
+            "label": "Акне/высыпания"
+          },
+          {
+            "value": "wrinkles",
+            "label": "Морщины"
+          },
+          {
+            "value": "dullness",
+            "label": "Тусклость"
+          },
+          {
+            "value": "redness",
+            "label": "Покраснения/купероз"
+          },
+          {
+            "value": "pores",
+            "label": "Расширенные поры"
+          },
+          {
+            "value": "darkspots",
+            "label": "Пигментация"
+          }
+        ],
+        "defaultValue": "dullness"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cleanser",
+        "label": "Очищение",
+        "type": "text"
+      },
+      {
+        "name": "toner",
+        "label": "Тоник/эссенция",
+        "type": "text"
+      },
+      {
+        "name": "serum",
+        "label": "Сыворотка",
+        "type": "text"
+      },
+      {
+        "name": "moisturizer",
+        "label": "Увлажнение",
+        "type": "text"
+      },
+      {
+        "name": "sunscreen",
+        "label": "Защита от солнца",
+        "type": "text"
+      },
+      {
+        "name": "weekly",
+        "label": "Еженедельный уход",
+        "type": "text"
+      },
+      {
+        "name": "avoid",
+        "label": "Избегать",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип кожи, возраст и основные проблемы. Калькулятор составит базовую схему ухода с рекомендациями ингредиентов.",
+      "about": "Уход должен соответствовать типу кожи: сухой — направлен на восстановление барьера и увлажнение, жирной — на баланс и очищение пор, чувствительной — на успокоение и минимум раздражителей.",
+      "formula": "Уход = Очищение (соответствует типу) + Увлажнение (по потребностям) + Защита (SPF обязательно) + Специальный уход (по проблемам)",
+      "faq": [
+        {
+          "question": "Как определить тип кожи?",
+          "answer": "Умойтесь, подождите 1 час без крема. Если стянуто — сухая, блестит вся — жирная, только T-зона — комбинированная, нормально — нормальная, реагирует на всё — чувствительная."
+        },
+        {
+          "question": "Можно ли менять тип кожи?",
+          "answer": "Тип определяется генетически, но состояние можно улучшить. Сухую — восстанавливать барьер, жирную — регулировать салоотделение, чувствительную — укреплять."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Paula's Choice - Skin Care Basics",
+          "url": "https://www.paulaschoice.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "doza-kollagena",
+    "id": "collagen-calculator",
+    "title": "Калькулятор коллагена",
+    "description": "Расчёт оптимальной дозировки коллагена для кожи, волос и суставов",
+    "subcategory": "wellness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "number",
+        "placeholder": "35",
+        "min": 18,
+        "max": 80,
+        "defaultValue": 35
+      },
+      {
+        "name": "goal",
+        "label": "Цель приёма",
+        "type": "select",
+        "options": [
+          {
+            "value": "skin",
+            "label": "Кожа (эластичность, морщины)"
+          },
+          {
+            "value": "hair",
+            "label": "Волосы и ногти"
+          },
+          {
+            "value": "joints",
+            "label": "Суставы"
+          },
+          {
+            "value": "complex",
+            "label": "Комплексный эффект"
+          }
+        ],
+        "defaultValue": "skin"
+      },
+      {
+        "name": "type",
+        "label": "Тип коллагена",
+        "type": "select",
+        "options": [
+          {
+            "value": "hydrolyzed",
+            "label": "Гидролизованный (пептиды)"
+          },
+          {
+            "value": "marine",
+            "label": "Морской"
+          },
+          {
+            "value": "bovine",
+            "label": "Коллаген I и III типа (КРС)"
+          }
+        ],
+        "defaultValue": "hydrolyzed"
+      },
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "65",
+        "min": 40,
+        "max": 120,
+        "defaultValue": 65
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyDose",
+        "label": "Суточная доза",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "course",
+        "label": "Длительность курса",
+        "type": "text"
+      },
+      {
+        "name": "whenToTake",
+        "label": "Когда принимать",
+        "type": "text"
+      },
+      {
+        "name": "withWhat",
+        "label": "С чем принимать",
+        "type": "text"
+      },
+      {
+        "name": "expectedEffect",
+        "label": "Ожидаемый эффект",
+        "type": "text"
+      },
+      {
+        "name": "costPerMonth",
+        "label": "Стоимость курса",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите возраст, цель приёма коллагена, тип и ваш вес. Калькулятор рассчитает оптимальную дозировку и даст рекомендации.",
+      "about": "После 25 лет синтез коллагена снижается на 1-1.5% в год. Приём коллагена пептидов стимулирует фибробласты производить собственный коллаген типа I и III.",
+      "formula": "Доза = Базовая (5-10 г) × Коэффициент возраста × Коэффициент веса / Биодоступность типа",
+      "faq": [
+        {
+          "question": "Когда появляется эффект от коллагена?",
+          "answer": "На коже — через 4-8 недель, на волосах и ногтях — 2-3 месяца, на суставах — 4-6 недель. Эффект накапливается постепенно."
+        },
+        {
+          "question": "Какой коллаген лучше — морской или КРС?",
+          "answer": "Морской (рыбий) имеет лучшую биодоступность и ближе по структуре к человеческому. Но дороже. Коллаген КРС — хороший бюджетный вариант."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Healthline - Collagen Supplements",
+          "url": "https://www.healthline.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "spc-zashita",
+    "id": "spf-calculator",
+    "title": "Калькулятор солнцезащиты",
+    "description": "Расчёт SPF и безопасного времени пребывания на солнце для вашего типа кожи",
+    "subcategory": "wellness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "skinType",
+        "label": "Фототип кожи",
+        "type": "select",
+        "options": [
+          {
+            "value": "1",
+            "label": "I — Очень светлая (всегда обгорает)"
+          },
+          {
+            "value": "2",
+            "label": "II — Светлая (часто обгорает)"
+          },
+          {
+            "value": "3",
+            "label": "III — Светло-загорающаяся"
+          },
+          {
+            "value": "4",
+            "label": "IV — Загорающаяся (редко обгорает)"
+          },
+          {
+            "value": "5",
+            "label": "V — Тёмная (практически не обгорает)"
+          },
+          {
+            "value": "6",
+            "label": "VI — Чёрная (никогда не обгорает)"
+          }
+        ],
+        "defaultValue": "2"
+      },
+      {
+        "name": "uvIndex",
+        "label": "УФ-индекс",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий (1-2)"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный (3-5)"
+          },
+          {
+            "value": "high",
+            "label": "Высокий (6-7)"
+          },
+          {
+            "value": "veryhigh",
+            "label": "Очень высокий (8-10)"
+          },
+          {
+            "value": "extreme",
+            "label": "Экстремальный (11+)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "spfUsed",
+        "label": "Используемый SPF",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "max": 100,
+        "defaultValue": 30
+      },
+      {
+        "name": "activity",
+        "label": "Активность",
+        "type": "select",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Обычная (отдых)"
+          },
+          {
+            "value": "swimming",
+            "label": "Плавание/купание"
+          },
+          {
+            "value": "sports",
+            "label": "Спорт/пот"
+          }
+        ],
+        "defaultValue": "normal"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "burnTime",
+        "label": "Время до ожога (без SPF)",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "protectedTime",
+        "label": "Безопасное время (с SPF)",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "reapplyEvery",
+        "label": "Обновлять SPF каждые",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "recommendedSPF",
+        "label": "Рекомендуемый SPF",
+        "type": "number"
+      },
+      {
+        "name": "peakHours",
+        "label": "Опасные часы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите ваш фототип кожи, текущий УФ-индекс, используемый SPF и активность. Калькулятор рассчитает безопасное время на солнце.",
+      "about": "УФ-излучение ответственно за 80% внешних признаков старения кожи. Фототип I-II (светлая кожа) обгорает за 10-15 минут на умеренном солнце. SPF 30 блокирует ~97% UVB, SPF 50 — ~98%.",
+      "formula": "Время до ожога = Базовое время × Коэффициент УФ-индекса\nЗащищённое время = Время до ожога × SPF (максимум 2 часа практически)",
+      "faq": [
+        {
+          "question": "Нужен ли SPF зимой или в пасмурный день?",
+          "answer": "Да! 80% УФ проходит через облака, снег отражает до 80% УФ. Используйте SPF 15-30 ежедневно на открытых участках."
+        },
+        {
+          "question": "Почему нужно обновлять SPF?",
+          "answer": "SPF разрушается под воздействием света, пота, соприкосновения с одеждой. За 2 часа эффективность падает на 30-50%."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Skin Cancer Foundation - SPF",
+          "url": "https://www.skincancer.org/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "uhod-za-volosami",
+    "id": "hair-care-calculator",
+    "title": "Калькулятор ухода за волосами",
+    "description": "Подбор ухода для волос на основе типа, длины и проблем",
+    "subcategory": "beauty",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "hairType",
+        "label": "Тип волос",
+        "type": "select",
+        "options": [
+          {
+            "value": "straight",
+            "label": "Прямые"
+          },
+          {
+            "value": "wavy",
+            "label": "Волнистые"
+          },
+          {
+            "value": "curly",
+            "label": "Кудрявые"
+          },
+          {
+            "value": "coily",
+            "label": "Афро-кудри"
+          }
+        ],
+        "defaultValue": "straight"
+      },
+      {
+        "name": "hairTexture",
+        "label": "Толщина волоса",
+        "type": "select",
+        "options": [
+          {
+            "value": "fine",
+            "label": "Тонкие"
+          },
+          {
+            "value": "medium",
+            "label": "Средние"
+          },
+          {
+            "value": "thick",
+            "label": "Толстые"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "scalpType",
+        "label": "Состояние кожи головы",
+        "type": "select",
+        "options": [
+          {
+            "value": "oily",
+            "label": "Жирная"
+          },
+          {
+            "value": "normal",
+            "label": "Нормальная"
+          },
+          {
+            "value": "dry",
+            "label": "Сухая"
+          },
+          {
+            "value": "sensitive",
+            "label": "Чувствительная"
+          }
+        ],
+        "defaultValue": "normal"
+      },
+      {
+        "name": "hairLength",
+        "label": "Длина волос",
+        "type": "select",
+        "options": [
+          {
+            "value": "short",
+            "label": "Короткие (до плеч)"
+          },
+          {
+            "value": "medium",
+            "label": "Средние (плечи-лопатки)"
+          },
+          {
+            "value": "long",
+            "label": "Длинные (ниже лопаток)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "mainConcern",
+        "label": "Основная проблема",
+        "type": "select",
+        "options": [
+          {
+            "value": "volume",
+            "label": "Недостаток объёма"
+          },
+          {
+            "value": "frizz",
+            "label": "Пушистость/пушение"
+          },
+          {
+            "value": "dryness",
+            "label": "Сухость/ломкость"
+          },
+          {
+            "value": "damage",
+            "label": "Повреждённые/окрашенные"
+          },
+          {
+            "value": "dandruff",
+            "label": "Перхоть"
+          }
+        ],
+        "defaultValue": "dryness"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "shampoo",
+        "label": "Шампунь",
+        "type": "text"
+      },
+      {
+        "name": "conditioner",
+        "label": "Кондиционер/бальзам",
+        "type": "text"
+      },
+      {
+        "name": "treatment",
+        "label": "Уходовое средство",
+        "type": "text"
+      },
+      {
+        "name": "styling",
+        "label": "Стайлинг",
+        "type": "text"
+      },
+      {
+        "name": "washFrequency",
+        "label": "Частота мытья",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы по уходу",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите тип волос, их толщину, состояние кожи головы, длину и основную проблему. Калькулятор подберёт подходящий уход.",
+      "about": "Уход за волосами начинается с кожи головы: здоровая кожа = здоровые волосы. Тип волос (прямые/кудрявые) определяет методы укладки и текстуры средств.",
+      "formula": "Уход = Очищение (по типу кожи головы) + Увлажнение (по типу волос) + Специальный уход (по проблемам)",
+      "faq": [
+        {
+          "question": "Как часто мыть волосы?",
+          "answer": "Зависит от типа кожи головы: жирная — каждый день/через день, нормальная — 2-3 раза в неделю, сухая — 1-2 раза в неделю."
+        },
+        {
+          "question": "Помогает ли частая стрижка расти быстрее?",
+          "answer": "Нет, рост происходит из фолликула. Но стрижка предотвращает секущиеся концы и волосы выглядят здоровее."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Naturally Curly - Hair Care",
+          "url": "https://www.naturallycurly.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "stoimost-manikyura",
+    "id": "manicure-calculator",
+    "title": "Калькулятор маникюра",
+    "description": "Расчёт стоимости, времени и частоты маникюра в зависимости от типа",
+    "subcategory": "beauty",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "serviceType",
+        "label": "Тип маникюра",
+        "type": "select",
+        "options": [
+          {
+            "value": "classic",
+            "label": "Классический (обрезной)"
+          },
+          {
+            "value": "hardware",
+            "label": "Аппаратный"
+          },
+          {
+            "value": "european",
+            "label": "Европейский (необрезной)"
+          },
+          {
+            "value": "spa",
+            "label": "SPA-маникюр"
+          }
+        ],
+        "defaultValue": "hardware"
+      },
+      {
+        "name": "nailDesign",
+        "label": "Покрытие/дизайн",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Без покрытия"
+          },
+          {
+            "value": "regular",
+            "label": "Обычный лак"
+          },
+          {
+            "value": "gel",
+            "label": "Гель-лак"
+          },
+          {
+            "value": "acrylic",
+            "label": "Наращивание/акрил"
+          },
+          {
+            "value": "design",
+            "label": "Гель-лак + дизайн"
+          }
+        ],
+        "defaultValue": "gel"
+      },
+      {
+        "name": "cityTier",
+        "label": "Город",
+        "type": "select",
+        "options": [
+          {
+            "value": "small",
+            "label": "Малый город"
+          },
+          {
+            "value": "medium",
+            "label": "Город 500к-1млн"
+          },
+          {
+            "value": "large",
+            "label": "Крупный город (Мск, СПб)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "salonLevel",
+        "label": "Уровень салона",
+        "type": "select",
+        "options": [
+          {
+            "value": "economy",
+            "label": "Эконом"
+          },
+          {
+            "value": "standard",
+            "label": "Средний"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум"
+          }
+        ],
+        "defaultValue": "standard"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cost",
+        "label": "Стоимость",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "duration",
+        "label": "Длительность",
+        "type": "text"
+      },
+      {
+        "name": "frequency",
+        "label": "Частота коррекции",
+        "type": "text"
+      },
+      {
+        "name": "monthlyCost",
+        "label": "Затраты в месяц",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "annualCost",
+        "label": "Затраты в год",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип маникюра, покрытие, ваш город и уровень салона. Калькулятор оценит стоимость и затраты.",
+      "about": "Стоимость маникюра сильно зависит от региона и уровня мастера. Гель-лак держится 2-3 недели, обычный лак — 5-7 дней. Аппаратный маникюр более долговечен и безопасен для кожи.",
+      "formula": "Стоимость = Базовая цена города × Тип маникюра + Покрытие × Базовая цена × Уровень салона",
+      "faq": [
+        {
+          "question": "Как часто делать маникюр?",
+          "answer": "С лаком — еженедельно, с гель-лаком — каждые 2-3 недели. Длинные ногти наращиванием требуют коррекции каждые 2-3 недели."
+        },
+        {
+          "question": "Что лучше — обрезной или аппаратный?",
+          "answer": "Аппаратный безопаснее (меньше риска порезов), лучше для тонкой кожи, результат держится дольше. Обрезной быстрее и дешевле."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Professional Beauty - Nail Care",
+          "url": "https://professionalbeauty.co.uk/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "vitaminy-krasoty",
+    "id": "beauty-vitamins-calculator",
+    "title": "Калькулятор витаминов для красоты",
+    "description": "Подбор витаминов и добавок для кожи, волос и ногтей на основе потребностей",
+    "subcategory": "wellness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "number",
+        "placeholder": "30",
+        "min": 18,
+        "max": 80,
+        "defaultValue": 30
+      },
+      {
+        "name": "mainGoal",
+        "label": "Главная цель",
+        "type": "select",
+        "options": [
+          {
+            "value": "skin",
+            "label": "Здоровье кожи"
+          },
+          {
+            "value": "hair",
+            "label": "Волосы и ногти"
+          },
+          {
+            "value": "antiage",
+            "label": "Омоложение"
+          },
+          {
+            "value": "complex",
+            "label": "Комплексный эффект"
+          }
+        ],
+        "defaultValue": "complex"
+      },
+      {
+        "name": "specificConcern",
+        "label": "Специфическая проблема",
+        "type": "select",
+        "options": [
+          {
+            "value": "acne",
+            "label": "Акне/воспаления"
+          },
+          {
+            "value": "dullness",
+            "label": "Тусклость кожи"
+          },
+          {
+            "value": "wrinkles",
+            "label": "Морщины"
+          },
+          {
+            "value": "hairloss",
+            "label": "Выпадение волос"
+          },
+          {
+            "value": "brittle",
+            "label": "Ломкие ногти"
+          },
+          {
+            "value": "none",
+            "label": "Нет конкретной"
+          }
+        ],
+        "defaultValue": "dullness"
+      },
+      {
+        "name": "diet",
+        "label": "Особенности питания",
+        "type": "select",
+        "options": [
+          {
+            "value": "balanced",
+            "label": "Сбалансированное"
+          },
+          {
+            "value": "vegetarian",
+            "label": "Вегетарианское"
+          },
+          {
+            "value": "vegan",
+            "label": "Веганское"
+          },
+          {
+            "value": "lowdairy",
+            "label": "Мало молочных"
+          }
+        ],
+        "defaultValue": "balanced"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "vitaminA",
+        "label": "Витамин A (ретинол)",
+        "type": "text"
+      },
+      {
+        "name": "vitaminC",
+        "label": "Витамин C",
+        "type": "text"
+      },
+      {
+        "name": "vitaminE",
+        "label": "Витамин E",
+        "type": "text"
+      },
+      {
+        "name": "biotin",
+        "label": "Биотин (B7)",
+        "type": "text"
+      },
+      {
+        "name": "omega3",
+        "label": "Омега-3",
+        "type": "text"
+      },
+      {
+        "name": "zinc",
+        "label": "Цинк",
+        "type": "text"
+      },
+      {
+        "name": "collagen",
+        "label": "Коллаген",
+        "type": "text"
+      },
+      {
+        "name": "complexRecommendation",
+        "label": "Комплексная рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите возраст, цель приёма витаминов, специфическую проблему и особенности питания. Калькулятор подберёт рекомендуемые добавки.",
+      "about": "Красота изнутри требует правильного питания. Ключевые нутриенты для кожи: витамин C (коллаген), витамин E (антиоксидант), цинк (заживление), Омега-3 (барьер).",
+      "formula": "Подбор = Базовые потребности + Поправка на возраст + Целевые добавки (по проблемам) + Корректировки (по диете)",
+      "faq": [
+        {
+          "question": "Когда появляется эффект от витаминов?",
+          "answer": "На коже — 4-8 недель, на волосах — 2-3 месяца (время роста), на ногтях — 3-4 месяца."
+        },
+        {
+          "question": "Можно ли передозировать витамины?",
+          "answer": "Жирорастворимые (A, E) накапливаются — не превышайте дозы. Водорастворимые (C, B) выводятся, но большие дозы могут нагружать почки."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Office of Dietary Supplements - NIH",
+          "url": "https://ods.od.nih.gov/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

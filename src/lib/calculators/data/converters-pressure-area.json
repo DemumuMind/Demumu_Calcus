@@ -1,0 +1,551 @@
+[
+  {
+    "slug": "paskali-v-mm-rt-st",
+    "id": "pressure-pascal-mmhg",
+    "title": "Паскали в мм рт. ст.",
+    "description": "Конвертер давления: перевод Паскалей в миллиметры ртутного столба",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "101325",
+        "defaultValue": 101325,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "pa",
+            "label": "Па (Паскали)"
+          },
+          {
+            "value": "mmhg",
+            "label": "мм рт. ст."
+          },
+          {
+            "value": "atm",
+            "label": "атм (физические атмосферы)"
+          },
+          {
+            "value": "bar",
+            "label": "бар"
+          },
+          {
+            "value": "kpa",
+            "label": "кПа (килопаскали)"
+          },
+          {
+            "value": "mpa",
+            "label": "МПа (мегапаскали)"
+          },
+          {
+            "value": "psi",
+            "label": "psi (фунт на кв. дюйм)"
+          },
+          {
+            "value": "mwater",
+            "label": "м вод. ст. (метры водяного столба)"
+          }
+        ],
+        "defaultValue": "pa"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "pa",
+            "label": "Па (Паскали)"
+          },
+          {
+            "value": "mmhg",
+            "label": "мм рт. ст."
+          },
+          {
+            "value": "atm",
+            "label": "атм (физические атмосферы)"
+          },
+          {
+            "value": "bar",
+            "label": "бар"
+          },
+          {
+            "value": "kpa",
+            "label": "кПа (килопаскали)"
+          },
+          {
+            "value": "mpa",
+            "label": "МПа (мегапаскали)"
+          },
+          {
+            "value": "psi",
+            "label": "psi (фунт на кв. дюйм)"
+          },
+          {
+            "value": "mwater",
+            "label": "м вод. ст. (метры водяного столба)"
+          }
+        ],
+        "defaultValue": "mmhg"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение давления, выберите единицы \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Давление измеряется в различных единицах. Медицина использует мм рт. ст., физика — Паскали, техника — бар и атмосферы.",
+      "usage": "Используется в медицине (артериальное давление), метеорологии, технике, физике.",
+      "formula": "1 атм = 101325 Па = 760 мм рт. ст. = 1.01325 бар",
+      "faq": [
+        {
+          "question": "Что такое мм рт. ст.?",
+          "answer": "Миллиметр ртутного столба — единица давления, равная давлению столба ртути высотой 1 мм. Используется в медицине для измерения артериального давления."
+        },
+        {
+          "question": "Сколько Паскалей в атмосфере?",
+          "answer": "1 физическая атмосфера (атм) = 101325 Паскалей (Па) = 101.325 кПа."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Единицы давления — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Давление"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "sotki-v-kvadratnye-metry",
+    "id": "area-are-sqm",
+    "title": "Сотки в квадратные метры",
+    "description": "Конвертер площади: перевод соток (аров) в квадратные метры и другие единицы",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² (кв. метры)"
+          },
+          {
+            "value": "are",
+            "label": "сотки (ары)"
+          },
+          {
+            "value": "ha",
+            "label": "га (гектары)"
+          },
+          {
+            "value": "acre",
+            "label": "акры"
+          },
+          {
+            "value": "sqkm",
+            "label": "км² (кв. километры)"
+          },
+          {
+            "value": "sqcm",
+            "label": "см² (кв. сантиметры)"
+          },
+          {
+            "value": "sqmm",
+            "label": "мм² (кв. миллиметры)"
+          }
+        ],
+        "defaultValue": "are"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² (кв. метры)"
+          },
+          {
+            "value": "are",
+            "label": "сотки (ары)"
+          },
+          {
+            "value": "ha",
+            "label": "га (гектары)"
+          },
+          {
+            "value": "acre",
+            "label": "акры"
+          },
+          {
+            "value": "sqkm",
+            "label": "км² (кв. километры)"
+          },
+          {
+            "value": "sqcm",
+            "label": "см² (кв. сантиметры)"
+          },
+          {
+            "value": "sqmm",
+            "label": "мм² (кв. миллиметры)"
+          }
+        ],
+        "defaultValue": "sqm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь, выберите единицы \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Площадь измеряется в различных единицаx. Сотки (ары) и гектары используются в сельском хозяйстве, квадратные метры — в строительстве, акры — в англоязычных странах.",
+      "usage": "Используется при покупке земельных участков, планировании строительства, оформлении документов.",
+      "formula": "1 га = 100 соток = 10000 м² = 2.47 акра",
+      "faq": [
+        {
+          "question": "Сколько квадратных метров в сотке?",
+          "answer": "1 сотка (ар) = 100 квадратных метров. Это квадрат 10×10 метров."
+        },
+        {
+          "question": "Сколько соток в гектаре?",
+          "answer": "1 гектар (га) = 100 соток = 10000 кв. метров."
+        },
+        {
+          "question": "Что такое акр?",
+          "answer": "Акр — единица площади в англоязычных странах. 1 акр ≈ 4047 кв. метров ≈ 40.5 соток."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Единицы площади — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Площадь"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "bar-v-atm",
+    "id": "pressure-bar-atm",
+    "title": "Бар в атмосферы",
+    "description": "Конвертер давления: перевод баров в физические и технические атмосферы",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "bar",
+            "label": "бар"
+          },
+          {
+            "value": "atm",
+            "label": "атм (физ.)"
+          },
+          {
+            "value": "at",
+            "label": "ат (техн.)"
+          },
+          {
+            "value": "mmhg",
+            "label": "мм рт. ст."
+          },
+          {
+            "value": "kpa",
+            "label": "кПа"
+          }
+        ],
+        "defaultValue": "bar"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "bar",
+            "label": "бар"
+          },
+          {
+            "value": "atm",
+            "label": "атм (физ.)"
+          },
+          {
+            "value": "at",
+            "label": "ат (техн.)"
+          },
+          {
+            "value": "mmhg",
+            "label": "мм рт. ст."
+          },
+          {
+            "value": "kpa",
+            "label": "кПа"
+          }
+        ],
+        "defaultValue": "atm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение давления, выберите единицы \"из\" и \"в\".",
+      "about": "Бар и атмосфера — распространённые единицы давления в технике и физике. 1 бар приблизительно равен 1 атмосфере.",
+      "usage": "Используется в технике для измерения давления в системах, шинах, гидравлике.",
+      "formula": "1 бар ≈ 0.987 атм ≈ 750 мм рт. ст.",
+      "faq": [
+        {
+          "question": "В чём разница между атм и ат?",
+          "answer": "атм (физическая атмосфера) = 101325 Па. ат (техническая атмосфера) = 98066.5 Па = 1 кгс/см²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Бар (единица) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Бар_(единица)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "gektary-v-kvadratnye-kilometry",
+    "id": "area-ha-sqkm",
+    "title": "Гектары в квадратные километры",
+    "description": "Перевод площади из гектаров в квадратные километры и другие единицы",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ha",
+            "label": "га (гектары)"
+          },
+          {
+            "value": "sqkm",
+            "label": "км²"
+          },
+          {
+            "value": "sqm",
+            "label": "м²"
+          },
+          {
+            "value": "are",
+            "label": "сотки"
+          },
+          {
+            "value": "acre",
+            "label": "акры"
+          }
+        ],
+        "defaultValue": "ha"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ha",
+            "label": "га (гектары)"
+          },
+          {
+            "value": "sqkm",
+            "label": "км²"
+          },
+          {
+            "value": "sqm",
+            "label": "м²"
+          },
+          {
+            "value": "are",
+            "label": "сотки"
+          },
+          {
+            "value": "acre",
+            "label": "акры"
+          }
+        ],
+        "defaultValue": "sqkm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь, выберите единицы \"из\" и \"в\".",
+      "about": "Гектар и квадратный километр — крупные единицы площади, используемые для измерения земельных массивов, лесов, полей.",
+      "usage": "Используется в сельском хозяйстве, лесничестве, градостроительстве.",
+      "formula": "1 км² = 100 га = 10000 соток",
+      "faq": [
+        {
+          "question": "Сколько гектаров в квадратном километре?",
+          "answer": "1 квадратный километр = 100 гектаров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гектар — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Гектар"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "psi-v-bar",
+    "id": "pressure-psi-bar",
+    "title": "PSI в бар",
+    "description": "Конвертер давления: фунты на квадратный дюйм в бары",
+    "subcategory": "conv-davlenie",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "psi",
+            "label": "psi"
+          },
+          {
+            "value": "bar",
+            "label": "бар"
+          },
+          {
+            "value": "kpa",
+            "label": "кПа"
+          },
+          {
+            "value": "atm",
+            "label": "атм"
+          }
+        ],
+        "defaultValue": "psi"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "psi",
+            "label": "psi"
+          },
+          {
+            "value": "bar",
+            "label": "бар"
+          },
+          {
+            "value": "kpa",
+            "label": "кПа"
+          },
+          {
+            "value": "atm",
+            "label": "атм"
+          }
+        ],
+        "defaultValue": "bar"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите давление, выберите единицы \"из\" и \"в\".",
+      "about": "PSI (pounds per square inch) — единица давления в англоязычных странах. Часто используется для давления в шинах.",
+      "usage": "Используется для перевода давления шин из инструкций (обычно в psi) в привычные бары или атмосферы.",
+      "formula": "1 бар ≈ 14.5 psi, 1 атм ≈ 14.7 psi",
+      "faq": [
+        {
+          "question": "Сколько PSI в автомобильной шине?",
+          "answer": "Обычно 30-35 psi (≈2.0-2.4 бара) для легковых автомобилей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Фунт-сила на квадратный дюйм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Фунт-сила_на_квадратный_дюйм"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  }
+]

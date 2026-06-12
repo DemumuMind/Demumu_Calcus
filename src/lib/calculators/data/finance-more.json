@@ -1,0 +1,288 @@
+[
+  {
+    "slug": "kreditnyj-kalkulyator",
+    "id": "loan-calculator",
+    "title": "Кредитный калькулятор",
+    "description": "Расчёт ежемесячного платежа, переплаты, графика погашения кредита",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "amount",
+        "label": "Сумма кредита",
+        "type": "number",
+        "placeholder": "1000000",
+        "defaultValue": 1000000,
+        "min": 1000
+      },
+      {
+        "name": "rate",
+        "label": "Процентная ставка (% годовых)",
+        "type": "number",
+        "placeholder": "12",
+        "defaultValue": 12,
+        "min": 0.1,
+        "max": 100
+      },
+      {
+        "name": "term",
+        "label": "Срок (месяцев)",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60,
+        "min": 1,
+        "max": 360
+      },
+      {
+        "name": "paymentType",
+        "label": "Тип платежей",
+        "type": "select",
+        "options": [
+          {
+            "value": "annuity",
+            "label": "Аннуитетные (равные)"
+          },
+          {
+            "value": "differentiated",
+            "label": "Дифференцированные"
+          }
+        ],
+        "defaultValue": "annuity"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "monthlyPayment",
+        "label": "Ежемесячный платеж",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalPayment",
+        "label": "Общая сумма выплат",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "overpayment",
+        "label": "Переплата",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "overpaymentPercent",
+        "label": "Переплата (%)",
+        "type": "number",
+        "unit": "%"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму кредита, процентную ставку и срок. Выберите тип платежей. Калькулятор покажет ежемесячный платёж и переплату.",
+      "about": "Кредитный калькулятор помогает рассчитать параметры кредита: ежемесячный платёж, общую сумму выплат и переплату.",
+      "usage": "Используется для сравнения кредитных предложений и планирования бюджета.",
+      "formula": "Аннуитет: П = С × (i × (1+i)ⁿ) / ((1+i)ⁿ − 1)\nГде: П — платёж, С — сумма, i — месячная ставка, n — срок в месяцах",
+      "faq": [
+        {
+          "question": "Что лучше — аннуитетные или дифференцированные платежи?",
+          "answer": "Аннуитетные: равные платежи, но больше переплата. Дифференцированные: платежи уменьшаются, переплата меньше, но начальные платежи выше."
+        },
+        {
+          "question": "Как снизить переплату по кредиту?",
+          "answer": "Досрочное погашение, рефинансирование под меньший процент, выбор дифференцированных платежей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кредит — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кредит"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "depozitnyj-kalkulyator",
+    "id": "deposit-calculator",
+    "title": "Калькулятор вклада",
+    "description": "Расчёт дохода по банковскому депозиту с капитализацией",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "roi-okupaemost",
+    "id": "roi-calculator",
+    "title": "Калькулятор ROI (окупаемость)",
+    "description": "Расчёт возврата инвестиций и срока окупаемости",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "investment",
+        "label": "Первоначальные инвестиции (₽)",
+        "type": "number",
+        "placeholder": "100000",
+        "defaultValue": 100000,
+        "min": 0
+      },
+      {
+        "name": "income",
+        "label": "Годовой доход/прибыль (₽)",
+        "type": "number",
+        "placeholder": "25000",
+        "defaultValue": 25000
+      },
+      {
+        "name": "expenses",
+        "label": "Годовые расходы (₽)",
+        "type": "number",
+        "placeholder": "5000",
+        "defaultValue": 5000
+      },
+      {
+        "name": "years",
+        "label": "Период анализа (лет)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "roi",
+        "label": "ROI",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "payback",
+        "label": "Срок окупаемости",
+        "type": "text"
+      },
+      {
+        "name": "netProfit",
+        "label": "Чистая прибыль",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalReturn",
+        "label": "Общая доходность",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму инвестиций, годовой доход, расходы и период анализа. Калькулятор рассчитает ROI и срок окупаемости.",
+      "about": "ROI (Return on Investment) — коэффициент возврата инвестиций, показывающий эффективность вложений в процентах.",
+      "usage": "Используется для оценки инвестиций, сравнения проектов, бизнес-планирования, маркетинговых кампаний.",
+      "formula": "ROI = ((Доход - Инвестиции) / Инвестиции) × 100%\nСрок окупаемости = Инвестиции / Чистый годовой доход",
+      "faq": [
+        {
+          "question": "Что такое хороший ROI?",
+          "answer": "ROI > 0% — инвестиции окупаются. ROI > 100% — прибыль превышает инвестиции. Средняя доходность по рынку акций: ~7-10% годовых."
+        },
+        {
+          "question": "Какой срок окупаемости считается хорошим?",
+          "answer": "Зависит от отрасли. Для бизнеса: 2-5 лет — хорошо, 5-10 — нормально. Для IT-проектов: часто 1-2 года."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Return on Investment — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/ROI"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "npv-chistaya-stoimost",
+    "id": "npv-calculator",
+    "title": "Калькулятор NPV",
+    "description": "Чистая приведённая стоимость инвестиционного проекта",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "initial",
+        "label": "Первоначальные инвестиции (₽)",
+        "type": "number",
+        "placeholder": "1000000",
+        "defaultValue": 1000000,
+        "min": 0
+      },
+      {
+        "name": "cashflow",
+        "label": "Годовой денежный поток (₽)",
+        "type": "number",
+        "placeholder": "300000",
+        "defaultValue": 300000
+      },
+      {
+        "name": "rate",
+        "label": "Ставка дисконтирования (% годовых)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "years",
+        "label": "Срок проекта (лет)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "npv",
+        "label": "NPV",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "pi",
+        "label": "Индекс прибыльности (PI)",
+        "type": "number"
+      },
+      {
+        "name": "decision",
+        "label": "Решение",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите инвестиции, годовой поток, ставку дисконтирования и срок. NPV > 0 означает, что проект выгоден.",
+      "about": "NPV (Net Present Value) — разница между приведёнными денежными потоками и инвестициями. Основной показатель для оценки инвестиций.",
+      "usage": "Используется для оценки инвестиционных проектов, сравнения альтернатив, принятия финансовых решений.",
+      "formula": "NPV = Σ(CFₜ / (1+r)ᵗ) − Initial\nгде CFₜ — поток в период t, r — ставка дисконтирования",
+      "faq": [
+        {
+          "question": "Что такое ставка дисконтирования?",
+          "answer": "Процент, отражающий альтернативную стоимость капитала. Обычно: ставка по кредиту, требуемая доходность, WACC для компаний."
+        },
+        {
+          "question": "Какой NPV считается хорошим?",
+          "answer": "NPV > 0 — проект создаёт стоимость. Чем выше NPV, тем лучше. При выборе между проектами берём с максимальным NPV."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NPV — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Net_present_value"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

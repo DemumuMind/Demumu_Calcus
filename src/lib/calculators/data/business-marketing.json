@@ -1,0 +1,890 @@
+[
+  {
+    "slug": "roi-marketing",
+    "id": "marketing-roi",
+    "title": "ROI маркетинговых кампаний",
+    "description": "Расчёт возврата инвестиций в маркетинговые кампании (ROMI)",
+    "subcategory": "biznes-marketing",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "revenue",
+        "label": "Выручка от кампании (₽)",
+        "type": "number",
+        "placeholder": "100000",
+        "defaultValue": 100000
+      },
+      {
+        "name": "marketingCost",
+        "label": "Затраты на маркетинг (₽)",
+        "type": "number",
+        "placeholder": "20000",
+        "defaultValue": 20000
+      },
+      {
+        "name": "productCost",
+        "label": "Себестоимость товара (%)",
+        "type": "number",
+        "placeholder": "40",
+        "defaultValue": 40
+      }
+    ],
+    "outputs": [
+      {
+        "name": "roi",
+        "label": "ROMI (%)",
+        "type": "number"
+      },
+      {
+        "name": "profit",
+        "label": "Прибыль (₽)",
+        "type": "number"
+      },
+      {
+        "name": "cpa",
+        "label": "CPA (₽)",
+        "type": "number"
+      },
+      {
+        "name": "assessment",
+        "label": "Оценка",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите выручку от маркетинговой кампании, затраты на маркетинг и процент себестоимости товара.",
+      "about": "ROMI (Return on Marketing Investment) показывает, сколько прибыли принесла каждая вложенная рубль в маркетинг.",
+      "formula": "ROMI = ((Прибыль - Маркетинг) / Маркетинг) × 100%",
+      "usage": "Используется для оценки эффективности рекламных кампаний и каналов привлечения.",
+      "faq": [
+        {
+          "question": "Какой ROMI считается хорошим?",
+          "answer": "ROMI > 100% означает, что кампания окупается. ROMI > 300% - хороший результат для большинства отраслей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "ROMI — Википедия",
+          "url": "https://en.wikipedia.org/wiki/Return_on_marketing_investment"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konversiya",
+    "id": "conversion-rate",
+    "title": "Конверсия и воронка продаж",
+    "description": "Расчёт коэффициента конверсии на каждом этапе воронки продаж",
+    "subcategory": "biznes-marketing",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "visitors",
+        "label": "Посетители/Показы",
+        "type": "number",
+        "placeholder": "10000",
+        "defaultValue": 10000
+      },
+      {
+        "name": "leads",
+        "label": "Лиды (заявки)",
+        "type": "number",
+        "placeholder": "500",
+        "defaultValue": 500
+      },
+      {
+        "name": "qualified",
+        "label": "Квалифицированные лиды",
+        "type": "number",
+        "placeholder": "200",
+        "defaultValue": 200
+      },
+      {
+        "name": "customers",
+        "label": "Клиенты (продажи)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "visitorToLead",
+        "label": "Конверсия посетитель→лид (%)",
+        "type": "number"
+      },
+      {
+        "name": "leadToQualified",
+        "label": "Квалификация лидов (%)",
+        "type": "number"
+      },
+      {
+        "name": "qualifiedToCustomer",
+        "label": "Закрытие сделок (%)",
+        "type": "number"
+      },
+      {
+        "name": "totalConversion",
+        "label": "Общая конверсия (%)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество посетителей, лидов, квалифицированных лидов и клиентов на каждом этапе воронки.",
+      "about": "Воронка продаж показывает, сколько потенциальных клиентов проходит через каждый этап от знакомства до покупки.",
+      "usage": "Используется для анализа эффективности продаж и выявления \"узких мест\" в воронке.",
+      "faq": [
+        {
+          "question": "Какая конверсия считается нормальной?",
+          "answer": "Зависит от отрасли. Для e-commerce: 1-3%, для B2B: 5-20%, для landing pages: 10-30%."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Воронка продаж",
+          "url": "https://ru.wikipedia.org/wiki/Воронка_продаж"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "cac-stoimost",
+    "id": "customer-acquisition-cost",
+    "title": "Стоимость привлечения клиента (CAC)",
+    "description": "Расчёт CAC и LTV (Lifetime Value) для оценки экономики бизнеса",
+    "subcategory": "biznes-marketing",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "marketingSpend",
+        "label": "Маркетинговые расходы (₽/мес)",
+        "type": "number",
+        "placeholder": "50000",
+        "defaultValue": 50000
+      },
+      {
+        "name": "salesSpend",
+        "label": "Расходы на продажи (₽/мес)",
+        "type": "number",
+        "placeholder": "30000",
+        "defaultValue": 30000
+      },
+      {
+        "name": "newCustomers",
+        "label": "Новые клиенты (в мес)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "avgOrderValue",
+        "label": "Средний чек (₽)",
+        "type": "number",
+        "placeholder": "2000",
+        "defaultValue": 2000
+      },
+      {
+        "name": "purchaseFrequency",
+        "label": "Частота покупок (в год)",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4
+      },
+      {
+        "name": "customerLifetime",
+        "label": "Срок жизни клиента (лет)",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cac",
+        "label": "CAC (₽)",
+        "type": "number"
+      },
+      {
+        "name": "ltv",
+        "label": "LTV (₽)",
+        "type": "number"
+      },
+      {
+        "name": "ltvCacRatio",
+        "label": "LTV/CAC",
+        "type": "number"
+      },
+      {
+        "name": "payback",
+        "label": "Окупаемость (мес)",
+        "type": "number"
+      },
+      {
+        "name": "assessment",
+        "label": "Оценка бизнес-модели",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите маркетинговые расходы, расходы на продажи, количество новых клиентов и показатели среднего чека.",
+      "about": "CAC (Cost to Acquire a Customer) - сколько денег тратится на привлечение одного клиента. LTV (Lifetime Value) - сколько денег приносит клиент за всё время.",
+      "formula": "CAC = (Маркетинг + Продажи) / Новые клиенты. LTV = Средний чек × Частота × Срок жизни.",
+      "usage": "Ключевые метрики для SaaS, e-commerce и подписочных бизнесов. Здоровый бизнес имеет LTV/CAC > 3.",
+      "faq": [
+        {
+          "question": "Какое соотношение LTV/CAC считается хорошим?",
+          "answer": "LTV/CAC должно быть > 3 для устойчивого бизнеса. При < 1 бизнес убыточен на каждом клиенте."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Unit Economics",
+          "url": "https://en.wikipedia.org/wiki/Unit_economics"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konkurentnaya-cena",
+    "id": "competitive-pricing",
+    "title": "Конкурентный анализ цен",
+    "description": "Расчёт оптимальной цены на основе цен конкурентов и стратегии позиционирования",
+    "subcategory": "bizbi-tsenoobrazovanie",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "competitor1",
+        "label": "Цена конкурента 1 (₽)",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000
+      },
+      {
+        "name": "competitor2",
+        "label": "Цена конкурента 2 (₽)",
+        "type": "number",
+        "placeholder": "1200",
+        "defaultValue": 1200
+      },
+      {
+        "name": "competitor3",
+        "label": "Цена конкурента 3 (₽)",
+        "type": "number",
+        "placeholder": "1100",
+        "defaultValue": 1100
+      },
+      {
+        "name": "strategy",
+        "label": "Стратегия ценообразования",
+        "type": "select",
+        "options": [
+          {
+            "value": "lowest",
+            "label": "Ниже рынка (-10%)"
+          },
+          {
+            "value": "market",
+            "label": "Рыночная цена"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум (+20%)"
+          },
+          {
+            "value": "skimming",
+            "label": "Скimming (+30%)"
+          }
+        ],
+        "defaultValue": "market"
+      },
+      {
+        "name": "cost",
+        "label": "Себестоимость (₽)",
+        "type": "number",
+        "placeholder": "600",
+        "defaultValue": 600
+      }
+    ],
+    "outputs": [
+      {
+        "name": "avgCompetitorPrice",
+        "label": "Средняя цена конкурентов (₽)",
+        "type": "number"
+      },
+      {
+        "name": "recommendedPrice",
+        "label": "Рекомендуемая цена (₽)",
+        "type": "number"
+      },
+      {
+        "name": "margin",
+        "label": "Маржа (%)",
+        "type": "number"
+      },
+      {
+        "name": "profit",
+        "label": "Прибыль (₽)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите цены 2-3 конкурентов, выберите стратегию позиционирования и укажите свою себестоимость.",
+      "about": "Конкурентное ценообразование учитывает рыночные цены и позиционирование вашего продукта.",
+      "usage": "Используется для входа на рынок, пересмотра цен или запуска новых продуктов.",
+      "faq": [
+        {
+          "question": "Какую стратегию выбрать?",
+          "answer": "Ниже рынка - для захвата доли. Рыночная - для стабильного роста. Премиум - если у вас уникальные преимущества."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ценообразование",
+          "url": "https://ru.wikipedia.org/wiki/Ценообразование"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "komissiya-bonusy",
+    "id": "commission",
+    "title": "Расчёт комиссий и бонусов",
+    "description": "Расчёт комиссий продавцов, бонусов менеджеров по продажам",
+    "subcategory": "biznes-finance",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "revenue",
+        "label": "Выручка/Продажи (₽)",
+        "type": "number",
+        "placeholder": "500000",
+        "defaultValue": 500000
+      },
+      {
+        "name": "target",
+        "label": "Целевой план (₽)",
+        "type": "number",
+        "placeholder": "400000",
+        "defaultValue": 400000
+      },
+      {
+        "name": "baseRate",
+        "label": "Базовый процент (%)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5
+      },
+      {
+        "name": "bonusRate",
+        "label": "Бонусный процент (%)",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2
+      }
+    ],
+    "outputs": [
+      {
+        "name": "achievement",
+        "label": "Выполнение плана (%)",
+        "type": "number"
+      },
+      {
+        "name": "baseCommission",
+        "label": "Базовая комиссия (₽)",
+        "type": "number"
+      },
+      {
+        "name": "bonusCommission",
+        "label": "Бонусная комиссия (₽)",
+        "type": "number"
+      },
+      {
+        "name": "totalCommission",
+        "label": "Итого комиссия (₽)",
+        "type": "number"
+      },
+      {
+        "name": "effectiveRate",
+        "label": "Эффективный %",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите фактическую выручку, целевой план, базовый процент комиссии и бонусный процент за перевыполнение.",
+      "about": "Система мотивации продавцов с прогрессивной шкалой: базовый процент от всех продаж + бонус за перевыполнение плана.",
+      "usage": "Используется для расчёта зарплаты менеджеров по продажам, планирования фонда оплаты труда.",
+      "faq": [
+        {
+          "question": "Какой процент комиссии нормальный?",
+          "answer": "В B2B: 2-5% от выручки. В B2C: 5-15%. Бонус за перевыполнение: +1-3% на сумму превышения."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Комиссия",
+          "url": "https://ru.wikipedia.org/wiki/Комиссия"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "tochka-bezubytochnosti-rasshirennaya",
+    "id": "break-even-advanced",
+    "title": "Точка безубыточности (расширенная)",
+    "description": "Расчёт точки безубыточности с учётом нескольких продуктов, переменных затрат и анализ чувствительности",
+    "subcategory": "biznes-finance",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "fixedCosts",
+        "label": "Постоянные затраты (₽/мес)",
+        "type": "number",
+        "placeholder": "100000",
+        "defaultValue": 100000
+      },
+      {
+        "name": "price",
+        "label": "Цена единицы (₽)",
+        "type": "number",
+        "placeholder": "500",
+        "defaultValue": 500
+      },
+      {
+        "name": "variableCost",
+        "label": "Переменные затраты на ед. (₽)",
+        "type": "number",
+        "placeholder": "300",
+        "defaultValue": 300
+      },
+      {
+        "name": "targetProfit",
+        "label": "Целевая прибыль (₽/мес)",
+        "type": "number",
+        "placeholder": "50000",
+        "defaultValue": 50000
+      }
+    ],
+    "outputs": [
+      {
+        "name": "contributionMargin",
+        "label": "Маржинальный доход (₽)",
+        "type": "number"
+      },
+      {
+        "name": "breakEvenUnits",
+        "label": "Точка безубыточности (шт)",
+        "type": "number"
+      },
+      {
+        "name": "breakEvenRevenue",
+        "label": "Точка безубыточности (₽)",
+        "type": "number"
+      },
+      {
+        "name": "targetUnits",
+        "label": "Для целевой прибыли (шт)",
+        "type": "number"
+      },
+      {
+        "name": "marginPercent",
+        "label": "Коэффициент маржи (%)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите постоянные затраты, цену продажи, переменные затраты на единицу и желаемую прибыль.",
+      "about": "Точка безубыточности - объём продаж, при котором выручка равна затратам. Выше этой точки бизнес приносит прибыль.",
+      "formula": "Точка безубыточности = Постоянные затраты / (Цена - Переменные затраты)",
+      "usage": "Используется для планирования продаж, определения минимального объёма производства, анализа рисков.",
+      "faq": [
+        {
+          "question": "Что такое маржинальный доход?",
+          "answer": "Это разница между ценой продажи и переменными затратами. Показывает, сколько денег остаётся на покрытие постоянных затрат."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Точка безубыточности",
+          "url": "https://ru.wikipedia.org/wiki/Точка_безубыточности"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "prognoz-prodazh",
+    "id": "sales-forecast",
+    "title": "Прогноз продаж",
+    "description": "Простой прогноз продаж на основе исторических данных и темпов роста",
+    "subcategory": "biznes-planning",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "lastMonthSales",
+        "label": "Продажи прошлого месяца (₽)",
+        "type": "number",
+        "placeholder": "500000",
+        "defaultValue": 500000
+      },
+      {
+        "name": "growthRate",
+        "label": "Ожидаемый рост (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      },
+      {
+        "name": "seasonality",
+        "label": "Сезонный коэффициент",
+        "type": "select",
+        "options": [
+          {
+            "value": "1",
+            "label": "Без сезонности"
+          },
+          {
+            "value": "1.2",
+            "label": "Высокий сезон (+20%)"
+          },
+          {
+            "value": "0.8",
+            "label": "Низкий сезон (-20%)"
+          },
+          {
+            "value": "1.5",
+            "label": "Пик сезона (+50%)"
+          }
+        ],
+        "defaultValue": "1"
+      },
+      {
+        "name": "forecastMonths",
+        "label": "Прогноз на (месяцев)",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6
+      }
+    ],
+    "outputs": [
+      {
+        "name": "forecast1",
+        "label": "Месяц 1 (₽)",
+        "type": "number"
+      },
+      {
+        "name": "forecast3",
+        "label": "Месяц 3 (₽)",
+        "type": "number"
+      },
+      {
+        "name": "forecast6",
+        "label": "Месяц 6 (₽)",
+        "type": "number"
+      },
+      {
+        "name": "totalForecast",
+        "label": "Итого прогноз (₽)",
+        "type": "number"
+      },
+      {
+        "name": "avgGrowth",
+        "label": "Средний рост (%)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите продажи прошлого месяца, ожидаемый темп роста, сезонный коэффициент и срок прогноза.",
+      "about": "Простой метод прогнозирования на основе комплексного роста. Подходит для быстрой оценки будущих продаж.",
+      "formula": "Прогноз = Текущие продажи × (1 + Темп роста)^n × Сезонность",
+      "usage": "Используется для планирования закупок, определения целей продаж, бюджетирования.",
+      "faq": [
+        {
+          "question": "Как учесть сезонность?",
+          "answer": "Сезонный коэффициент показывает, насколько текущий месяц отличается от среднего. Декабрь = 1.5, январь = 0.6 для многих бизнесов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Прогнозирование продаж",
+          "url": "https://en.wikipedia.org/wiki/Sales_forecasting"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "abc-analiz",
+    "id": "abc-analysis",
+    "title": "ABC-анализ ассортимента",
+    "description": "Классификация товаров/клиентов по принципу Парето (80/20)",
+    "subcategory": "biznes-analitika",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "totalRevenue",
+        "label": "Общая выручка (₽)",
+        "type": "number",
+        "placeholder": "1000000",
+        "defaultValue": 1000000
+      },
+      {
+        "name": "itemRevenue",
+        "label": "Выручка от позиции (₽)",
+        "type": "number",
+        "placeholder": "150000",
+        "defaultValue": 150000
+      },
+      {
+        "name": "cumulativePercent",
+        "label": "Накопительный % выручки",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15
+      }
+    ],
+    "outputs": [
+      {
+        "name": "itemPercent",
+        "label": "Доля позиции (%)",
+        "type": "number"
+      },
+      {
+        "name": "category",
+        "label": "Категория ABC",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите общую выручку и выручку от конкретной позиции/клиента, а также накопительный процент.",
+      "about": "ABC-анализ разделяет ассортимент на 3 группы: A (80% выручки), B (15%), C (5%). Позволяет сфокусироваться на важном.",
+      "formula": "A = первые 80% накопительной выручки, B = 80-95%, C = 95-100%",
+      "usage": "Используется для управления запасами, приоритизации клиентов, оптимизации ассортимента.",
+      "faq": [
+        {
+          "question": "Как провести ABC-анализ?",
+          "answer": "Отсортируйте все позиции по убыванию выручки. Рассчитайте накопительный %. A = до 80%, B = до 95%, C = остальные."
+        }
+      ],
+      "sources": [
+        {
+          "title": "ABC-анализ",
+          "url": "https://ru.wikipedia.org/wiki/ABC-анализ"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "marzhinalnost-kanalov",
+    "id": "channel-margin",
+    "title": "Маржинальность каналов продаж",
+    "description": "Сравнение рентабельности разных каналов продаж (онлайн, офлайн, партнёры)",
+    "subcategory": "biznes-analitika",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "channel",
+        "label": "Канал продаж",
+        "type": "select",
+        "options": [
+          {
+            "value": "online",
+            "label": "Свой сайт"
+          },
+          {
+            "value": "marketplace",
+            "label": "Маркетплейсы"
+          },
+          {
+            "value": "retail",
+            "label": "Розница"
+          },
+          {
+            "value": "partners",
+            "label": "Партнёры"
+          }
+        ],
+        "defaultValue": "online"
+      },
+      {
+        "name": "revenue",
+        "label": "Выручка (₽)",
+        "type": "number",
+        "placeholder": "100000",
+        "defaultValue": 100000
+      },
+      {
+        "name": "productCost",
+        "label": "Себестоимость (%)",
+        "type": "number",
+        "placeholder": "40",
+        "defaultValue": 40
+      },
+      {
+        "name": "commission",
+        "label": "Комиссия канала (%)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0
+      },
+      {
+        "name": "delivery",
+        "label": "Доставка/логистика (₽)",
+        "type": "number",
+        "placeholder": "5000",
+        "defaultValue": 5000
+      }
+    ],
+    "outputs": [
+      {
+        "name": "grossMargin",
+        "label": "Валовая маржа (₽)",
+        "type": "number"
+      },
+      {
+        "name": "channelCosts",
+        "label": "Затраты канала (₽)",
+        "type": "number"
+      },
+      {
+        "name": "netMargin",
+        "label": "Чистая маржа (₽)",
+        "type": "number"
+      },
+      {
+        "name": "marginPercent",
+        "label": "Рентабельность (%)",
+        "type": "number"
+      },
+      {
+        "name": "assessment",
+        "label": "Оценка канала",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите канал продаж, введите выручку, себестоимость, комиссию канала и затраты на доставку.",
+      "about": "Разные каналы продаж имеют разную структуру затрат. Этот калькулятор помогает сравнить их рентабельность.",
+      "usage": "Используется для выбора каналов продаж, переговоров с партнёрами, оптимизации канальной стратегии.",
+      "faq": [
+        {
+          "question": "Какой канал самый выгодный?",
+          "answer": "Обычно собственный сайт (если есть трафик) или прямые продажи. Маркетплейсы дают объём, но снижают маржу комиссиями."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Каналы продаж",
+          "url": "https://ru.wikipedia.org/wiki/Канал_распределения"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "npv-proekta",
+    "id": "project-npv",
+    "title": "NPV инвестиционного проекта",
+    "description": "Расчёт чистой приведённой стоимости (NPV) для оценки инвестиций в проект",
+    "subcategory": "biznes-investicii",
+    "type": "formula",
+    "category": "biznes",
+    "inputs": [
+      {
+        "name": "initialInvestment",
+        "label": "Начальные инвестиции (₽)",
+        "type": "number",
+        "placeholder": "500000",
+        "defaultValue": 500000
+      },
+      {
+        "name": "discountRate",
+        "label": "Ставка дисконтирования (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      },
+      {
+        "name": "cashFlow1",
+        "label": "Денежный поток год 1 (₽)",
+        "type": "number",
+        "placeholder": "200000",
+        "defaultValue": 200000
+      },
+      {
+        "name": "cashFlow2",
+        "label": "Денежный поток год 2 (₽)",
+        "type": "number",
+        "placeholder": "250000",
+        "defaultValue": 250000
+      },
+      {
+        "name": "cashFlow3",
+        "label": "Денежный поток год 3 (₽)",
+        "type": "number",
+        "placeholder": "300000",
+        "defaultValue": 300000
+      }
+    ],
+    "outputs": [
+      {
+        "name": "npv",
+        "label": "NPV (₽)",
+        "type": "number"
+      },
+      {
+        "name": "payback",
+        "label": "Срок окупаемости (лет)",
+        "type": "number"
+      },
+      {
+        "name": "profitability",
+        "label": "Доходность (%)",
+        "type": "number"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите начальные инвестиции, ставку дисконтирования и ожидаемые денежные потоки на 3 года.",
+      "about": "NPV (Net Present Value) - чистая приведённая стоимость. Проект с NPV > 0 приносит прибыль с учётом временной стоимости денег.",
+      "formula": "NPV = Σ (CFt / (1+r)^t) - Initial, где CFt - денежный поток в год t, r - ставка дисконтирования",
+      "usage": "Используется для оценки инвестиционных проектов, сравнения альтернатив, принятия решений о капитальных затратах.",
+      "faq": [
+        {
+          "question": "Какую ставку дисконтирования использовать?",
+          "answer": "Обычно: стоимость капитала компании, альтернативная доходность (например, 10-15% для среднего бизнеса) или ставка по банковским кредитам."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NPV",
+          "url": "https://ru.wikipedia.org/wiki/Чистая_приведённая_стоимость"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

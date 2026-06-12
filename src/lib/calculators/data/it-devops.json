@@ -1,0 +1,968 @@
+[
+  {
+    "slug": "razmer-fayla",
+    "id": "file-size",
+    "title": "Калькулятор размера файла",
+    "description": "Перевод между битами, байтами, килобайтами, мегабайтами, гигабайтами и терабайтами",
+    "subcategory": "data-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1024",
+        "defaultValue": 1024
+      },
+      {
+        "name": "fromUnit",
+        "label": "Из единицы",
+        "type": "select",
+        "options": [
+          {
+            "value": "b",
+            "label": "Биты (b)"
+          },
+          {
+            "value": "B",
+            "label": "Байты (B)"
+          },
+          {
+            "value": "KB",
+            "label": "Килобайты (KB)"
+          },
+          {
+            "value": "MB",
+            "label": "Мегабайты (MB)"
+          },
+          {
+            "value": "GB",
+            "label": "Гигабайты (GB)"
+          },
+          {
+            "value": "TB",
+            "label": "Терабайты (TB)"
+          },
+          {
+            "value": "PB",
+            "label": "Петабайты (PB)"
+          }
+        ],
+        "defaultValue": "MB"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "bits",
+        "label": "Биты",
+        "type": "number",
+        "unit": "b"
+      },
+      {
+        "name": "bytes",
+        "label": "Байты",
+        "type": "number",
+        "unit": "B"
+      },
+      {
+        "name": "kilobytes",
+        "label": "Килобайты",
+        "type": "number",
+        "unit": "KB"
+      },
+      {
+        "name": "megabytes",
+        "label": "Мегабайты",
+        "type": "number",
+        "unit": "MB"
+      },
+      {
+        "name": "gigabytes",
+        "label": "Гигабайты",
+        "type": "number",
+        "unit": "GB"
+      },
+      {
+        "name": "terabytes",
+        "label": "Терабайты",
+        "type": "number",
+        "unit": "TB"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размер файла и выберите единицу измерения. Калькулятор переведёт во все основные единицы.",
+      "about": "В IT используется двоичная система: 1 KB = 1024 B (не 1000). Это важно для точных расчётов. Разница накапливается: \"500 GB\" на упаковке = 465 GiB фактически.",
+      "formula": "1 KB = 1024 B\n1 MB = 1024 KB = 1,048,576 B\n1 GB = 1024 MB = 1,073,741,824 B",
+      "faq": [
+        {
+          "question": "Почему 1 TB жёсткого диска = 931 GB?",
+          "answer": "Производители используют десятичную систему (1 TB = 10¹²), Windows — двоичную (1 TiB = 2⁴⁰). Разница ~7%."
+        },
+        {
+          "question": "Что больше — 1 Mb или 1 MB?",
+          "answer": "1 MB (мегабайт) = 8 Mb (мегабит). Провайдеры интернета указывают скорость в мегабитах."
+        }
+      ],
+      "sources": [
+        {
+          "title": "IEC - Binary Prefixes",
+          "url": "https://www.iec.ch/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "skorost-peredachi-dannyh",
+    "id": "data-transfer",
+    "title": "Калькулятор скорости передачи",
+    "description": "Расчёт времени передачи файла при заданной скорости соединения",
+    "subcategory": "it-tools",
+    "type": "formula",
+    "category": "tehnika",
+    "inputs": [
+      {
+        "name": "fileSize",
+        "label": "Размер файла",
+        "type": "number",
+        "placeholder": "1",
+        "min": 0.001,
+        "defaultValue": 1
+      },
+      {
+        "name": "fileUnit",
+        "label": "Единица файла",
+        "type": "select",
+        "options": [
+          {
+            "value": "MB",
+            "label": "MB"
+          },
+          {
+            "value": "GB",
+            "label": "GB"
+          },
+          {
+            "value": "TB",
+            "label": "TB"
+          }
+        ],
+        "defaultValue": "GB"
+      },
+      {
+        "name": "speed",
+        "label": "Скорость соединения",
+        "type": "number",
+        "placeholder": "100",
+        "min": 1,
+        "defaultValue": 100
+      },
+      {
+        "name": "speedUnit",
+        "label": "Единица скорости",
+        "type": "select",
+        "options": [
+          {
+            "value": "Mbps",
+            "label": "Мбит/с"
+          },
+          {
+            "value": "MBps",
+            "label": "Мбайт/с"
+          },
+          {
+            "value": "Gbps",
+            "label": "Гбит/с"
+          }
+        ],
+        "defaultValue": "Mbps"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "transferTime",
+        "label": "Время передачи",
+        "type": "text"
+      },
+      {
+        "name": "seconds",
+        "label": "В секундах",
+        "type": "number",
+        "unit": "сек"
+      },
+      {
+        "name": "minutes",
+        "label": "В минутах",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "hours",
+        "label": "В часах",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "realisticTime",
+        "label": "Реалистичное время",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размер файла, скорость соединения и их единицы. Калькулятор рассчитает время передачи.",
+      "about": "Теоретическая скорость отличается от реальной из-за накладных расходов протоколов (TCP/IP), контроля ошибок, задержек сети. Реальная эффективность — обычно 80-90%.",
+      "formula": "Время = (Размер файла × 8 для Мбит/с) / Скорость\nПример: 1 GB при 100 Мбит/с = (1024 × 8) / 100 = 82 сек",
+      "faq": [
+        {
+          "question": "Почему реальная скорость ниже заявленной?",
+          "answer": "Накладные расходы протоколов, расстояние, перегрузка сети, дисковая подсистема. 100 Мбит/с = ~10-12 МБ/с реально."
+        },
+        {
+          "question": "Какая скорость нужна для 4K видео?",
+          "answer": "Netflix рекомендует 25 Мбит/с для 4K. Для комфорта — минимум 50 Мбит/с с запасом."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Speedtest.net",
+          "url": "https://www.speedtest.net/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "koefficient-szhatiya",
+    "id": "compression",
+    "title": "Калькулятор сжатия данных",
+    "description": "Расчёт эффективности сжатия: коэффициента, экономии места и времени",
+    "subcategory": "it-tools",
+    "type": "formula",
+    "category": "tehnika",
+    "inputs": [
+      {
+        "name": "originalSize",
+        "label": "Исходный размер (MB)",
+        "type": "number",
+        "placeholder": "1000",
+        "min": 1,
+        "defaultValue": 1000
+      },
+      {
+        "name": "compressedSize",
+        "label": "Размер после сжатия (MB)",
+        "type": "number",
+        "placeholder": "400",
+        "min": 1,
+        "defaultValue": 400
+      },
+      {
+        "name": "compressionMethod",
+        "label": "Метод сжатия",
+        "type": "select",
+        "options": [
+          {
+            "value": "zip",
+            "label": "ZIP"
+          },
+          {
+            "value": "gzip",
+            "label": "GZIP"
+          },
+          {
+            "value": "bzip2",
+            "label": "BZIP2"
+          },
+          {
+            "value": "xz",
+            "label": "XZ"
+          },
+          {
+            "value": "zstd",
+            "label": "Zstandard"
+          },
+          {
+            "value": "lz4",
+            "label": "LZ4"
+          }
+        ],
+        "defaultValue": "zip"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "ratio",
+        "label": "Коэффициент сжатия",
+        "type": "number"
+      },
+      {
+        "name": "savingsPercent",
+        "label": "Экономия",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "savedSize",
+        "label": "Сэкономлено",
+        "type": "number",
+        "unit": "MB"
+      },
+      {
+        "name": "efficiency",
+        "label": "Эффективность",
+        "type": "text"
+      },
+      {
+        "name": "typicalFor",
+        "label": "Типично для",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите исходный и сжатый размер в МБ, выберите метод сжатия. Калькулятор покажет эффективность сжатия.",
+      "about": "Сжатие бывает без потерь (LZ77, Huffman) и с потерями (JPEG, MP3). Без потерь позволяет восстановить исходные данные точно. Разные алгоритмы дают разный баланс скорость/сжатие.",
+      "formula": "Коэффициент = Исходный / Сжатый\nЭкономия = (1 - Сжатый/Исходный) × 100%",
+      "faq": [
+        {
+          "question": "Почему MP3/ZIP уже не сжимаются?",
+          "answer": "Они уже сжаты. Повторное сжатие не даёт эффекта или увеличивает размер из-за накладных расходов."
+        },
+        {
+          "question": "Какой формат лучше для бэкапов?",
+          "answer": "Для долговременного хранения: bzip2 или xz (лучшее сжатие). Для скорости: zstd или lz4."
+        }
+      ],
+      "sources": [
+        {
+          "title": "zlib - Compression Library",
+          "url": "https://www.zlib.net/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "raid-kalkulyator",
+    "id": "raid-storage-calculator",
+    "title": "Калькулятор RAID-массивов",
+    "description": "Расчёт ёмкости, надёжности и производительности RAID-массивов",
+    "subcategory": "it-tools",
+    "type": "formula",
+    "category": "tehnologii",
+    "inputs": [
+      {
+        "name": "drives",
+        "label": "Количество дисков",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 2,
+        "max": 24
+      },
+      {
+        "name": "driveSize",
+        "label": "Объём одного диска (ТБ)",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4
+      },
+      {
+        "name": "raidLevel",
+        "label": "Уровень RAID",
+        "type": "select",
+        "options": [
+          {
+            "value": "0",
+            "label": "RAID 0 (stripe) — скорость, нет защиты"
+          },
+          {
+            "value": "1",
+            "label": "RAID 1 (mirror) — зеркало, 50% ёмкость"
+          },
+          {
+            "value": "5",
+            "label": "RAID 5 — распределённый XOR, 1 диск защита"
+          },
+          {
+            "value": "6",
+            "label": "RAID 6 — двойной XOR, 2 диска защита"
+          },
+          {
+            "value": "10",
+            "label": "RAID 10 — зеркало + страйп, быстрый и надёжный"
+          }
+        ],
+        "defaultValue": "5"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "capacity",
+        "label": "Полезная ёмкость",
+        "type": "text"
+      },
+      {
+        "name": "redundancy",
+        "label": "Избыточность",
+        "type": "text"
+      },
+      {
+        "name": "faultTolerance",
+        "label": "Отказоустойчивость",
+        "type": "text"
+      },
+      {
+        "name": "performance",
+        "label": "Характеристики",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество дисков, их объём и уровень RAID. Калькулятор покажет ёмкость и надёжность массива.",
+      "about": "RAID (Redundant Array of Independent Disks) — объединение дисков для повышения надёжности или скорости.",
+      "usage": "Используется системными администраторами, при проектировании хранилищ, выборе NAS/SAN, резервном копировании.",
+      "formula": "RAID 0: Все диски для скорости\nRAID 1: Зеркалирование\nRAID 5: N-1 дисков данных, 1 чётность\nRAID 6: N-2 дисков данных, 2 чётности",
+      "faq": [
+        {
+          "question": "Какой RAID выбрать?",
+          "answer": "RAID 0 — для скорости (игры, видеомонтаж). RAID 1 — для надёжности (2 диска). RAID 5 — баланс (4+ диска). RAID 6 — максимальная защита (6+ диска). RAID 10 — для баз данных (скорость + защита)."
+        },
+        {
+          "question": "Что такое XOR в RAID?",
+          "answer": "Операция \"исключающее ИЛИ\" используется для расчёта чётности. Позволяет восстановить данные при выходе диска из строя."
+        }
+      ],
+      "sources": [
+        {
+          "title": "RAID — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/RAID"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "podseti-ip",
+    "id": "subnet-calculator",
+    "title": "Калькулятор IP-подсетей",
+    "description": "Расчёт параметров IPv4 подсети: адреса, маски, broadcast, диапазона хостов",
+    "subcategory": "it-tools",
+    "type": "formula",
+    "category": "tehnika",
+    "inputs": [
+      {
+        "name": "ipAddress",
+        "label": "IP-адрес",
+        "type": "text",
+        "placeholder": "192.168.1.0",
+        "defaultValue": "192.168.1.0"
+      },
+      {
+        "name": "cidr",
+        "label": "CIDR (префикс)",
+        "type": "select",
+        "options": [
+          {
+            "value": "24",
+            "label": "/24 (255.255.255.0)"
+          },
+          {
+            "value": "16",
+            "label": "/16 (255.255.0.0)"
+          },
+          {
+            "value": "8",
+            "label": "/8 (255.0.0.0)"
+          },
+          {
+            "value": "30",
+            "label": "/30 (4 адреса)"
+          },
+          {
+            "value": "28",
+            "label": "/28 (16 адресов)"
+          },
+          {
+            "value": "26",
+            "label": "/26 (64 адреса)"
+          },
+          {
+            "value": "20",
+            "label": "/20 (4096 адресов)"
+          }
+        ],
+        "defaultValue": "24"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "networkAddress",
+        "label": "Сетевой адрес",
+        "type": "text"
+      },
+      {
+        "name": "subnetMask",
+        "label": "Маска подсети",
+        "type": "text"
+      },
+      {
+        "name": "broadcast",
+        "label": "Broadcast",
+        "type": "text"
+      },
+      {
+        "name": "firstHost",
+        "label": "Первый хост",
+        "type": "text"
+      },
+      {
+        "name": "lastHost",
+        "label": "Последний хост",
+        "type": "text"
+      },
+      {
+        "name": "totalHosts",
+        "label": "Всего хостов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "usableHosts",
+        "label": "Используемых",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите IP-адрес сети и CIDR префикс (например, /24). Калькулятор вычислит все параметры подсети.",
+      "about": "CIDR (Classless Inter-Domain Routing) обозначает размер подсети. /24 = 256 адресов (класс C), /16 = 65536 адресов (класс B). Сетевой адрес и broadcast не используются для хостов.",
+      "formula": "Сетевой адрес = IP AND Маска\nBroadcast = Сеть OR (NOT Маска)\nХостов = 2^(32-CIDR) - 2",
+      "faq": [
+        {
+          "question": "Что такое CIDR?",
+          "answer": "Classless Inter-Domain Routing — способ обозначать размер сети. /24 означает, что первые 24 бита — сеть, последние 8 — хосты."
+        },
+        {
+          "question": "Почему /30 имеет только 2 хоста?",
+          "answer": "/30 = 4 адреса. Минус сеть и broadcast = 2 для хостов. Используется для точка-точка соединений."
+        }
+      ],
+      "sources": [
+        {
+          "title": "RFC 1918 - Private Address Space",
+          "url": "https://tools.ietf.org/html/rfc1918"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "stoikost-parolya",
+    "id": "password-hash",
+    "title": "Калькулятор стойкости пароля",
+    "description": "Оценка времени взлома пароля методом перебора при разных алгоритмах хеширования",
+    "subcategory": "security",
+    "type": "formula",
+    "category": "bezopasnost",
+    "inputs": [
+      {
+        "name": "passwordLength",
+        "label": "Длина пароля",
+        "type": "number",
+        "placeholder": "12",
+        "min": 1,
+        "max": 128,
+        "defaultValue": 12
+      },
+      {
+        "name": "charset",
+        "label": "Набор символов",
+        "type": "select",
+        "options": [
+          {
+            "value": "lowercase",
+            "label": "Только строчные (a-z)"
+          },
+          {
+            "value": "alphanumeric",
+            "label": "Буквы и цифры (a-z, 0-9)"
+          },
+          {
+            "value": "alphanumeric-mixed",
+            "label": "Буквы обоих регистров + цифры"
+          },
+          {
+            "value": "full",
+            "label": "Все символы (~95)"
+          }
+        ],
+        "defaultValue": "alphanumeric-mixed"
+      },
+      {
+        "name": "hashType",
+        "label": "Алгоритм хеширования",
+        "type": "select",
+        "options": [
+          {
+            "value": "md5",
+            "label": "MD5 (слабый)"
+          },
+          {
+            "value": "sha256",
+            "label": "SHA-256"
+          },
+          {
+            "value": "bcrypt",
+            "label": "bcrypt (рекомендуется)"
+          },
+          {
+            "value": "argon2",
+            "label": "Argon2 (современный)"
+          },
+          {
+            "value": "pbkdf2",
+            "label": "PBKDF2"
+          }
+        ],
+        "defaultValue": "bcrypt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "combinations",
+        "label": "Вариантов комбинаций",
+        "type": "text"
+      },
+      {
+        "name": "crackTimeFast",
+        "label": "Время взлома (GPU)",
+        "type": "text"
+      },
+      {
+        "name": "crackTimeSlow",
+        "label": "Время взлома (bcrypt)",
+        "type": "text"
+      },
+      {
+        "name": "strength",
+        "label": "Оценка надёжности",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину пароля, набор используемых символов и алгоритм хеширования. Калькулятор оценит время взлома перебором.",
+      "about": "Современные GPU могут проверять миллиарды MD5/SHA-хешей в секунду. Поэтому используются \"медленные\" алгоритмы (bcrypt, Argon2, PBKDF2), которые специально замедлены.",
+      "formula": "Вариантов = (Размер алфавита)^(Длина)\nВремя = Вариантов / Скорость хеширования",
+      "faq": [
+        {
+          "question": "Почему bcrypt лучше MD5?",
+          "answer": "bcrypt специально медленный (~10k хешей/сек). MD5 на GPU — 200 миллиардов/сек. Медленный хеш защищает от перебора."
+        },
+        {
+          "question": "Какой длины должен быть пароль?",
+          "answer": "Минимум 12 символов для важных аккаунтов. Используйте менеджер паролей для генерации случайных паролей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "OWASP - Password Security",
+          "url": "https://owasp.org/www-project-cheat-sheets/cheatsheets/Password_Storage_Cheat_Sheet.html"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "base64-koder",
+    "id": "base64-converter",
+    "title": "Base64 кодирование",
+    "description": "Кодирование и декодирование текста в Base64 и обратно",
+    "subcategory": "it-tools",
+    "type": "converter",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "text",
+        "label": "Текст",
+        "type": "text",
+        "placeholder": "Введите текст для кодирования...",
+        "defaultValue": ""
+      },
+      {
+        "name": "mode",
+        "label": "Режим",
+        "type": "select",
+        "options": [
+          {
+            "value": "encode",
+            "label": "Кодировать (текст → Base64)"
+          },
+          {
+            "value": "decode",
+            "label": "Декодировать (Base64 → текст)"
+          }
+        ],
+        "defaultValue": "encode"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "originalLength",
+        "label": "Исходный размер",
+        "type": "number",
+        "unit": "байт"
+      },
+      {
+        "name": "resultLength",
+        "label": "Результат размер",
+        "type": "number",
+        "unit": "байт"
+      },
+      {
+        "name": "ratio",
+        "label": "Соотношение",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст или Base64-код, выберите режим кодирования/декодирования. Калькулятор покажет результат и соотношение размеров.",
+      "about": "Base64 — метод кодирования двоичных данных в ASCII-текст. Используется для передачи данных в текстовых форматах.",
+      "usage": "Используется для встраивания изображений в HTML/CSS, передачи данных через URL, email-вложений, JSON.",
+      "formula": "Каждые 3 байта (24 бит) → 4 символа Base64 (по 6 бит)\nПаддинг \"=\" для выравнивания",
+      "faq": [
+        {
+          "question": "Почему размер увеличивается на ~33%?",
+          "answer": "Base64 кодирует 3 байта в 4 символа (увеличение на 33%). Это плата за совместимость с текстовыми системами."
+        },
+        {
+          "question": "Поддерживает ли русский текст?",
+          "answer": "Да, используется UTF-8 кодировка. Кириллица поддерживается полностью."
+        },
+        {
+          "question": "Можно ли декодировать любой Base64?",
+          "answer": "Нет, только валидный Base64 (A-Z, a-z, 0-9, +, /, =). Данные могут быть бинарными, а не текстовыми."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base64 — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Base64"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "dostupnost-sistema",
+    "id": "uptime-calculator",
+    "title": "Калькулятор доступности системы",
+    "description": "Перевод SLA (99.9%, 99.99%) в допустимое время простоя и наоборот",
+    "subcategory": "it-tools",
+    "type": "converter",
+    "category": "tehnika",
+    "inputs": [
+      {
+        "name": "slaPercent",
+        "label": "SLA (процент доступности)",
+        "type": "number",
+        "placeholder": "99.9",
+        "min": 90,
+        "max": 99.9999,
+        "step": 0.0001,
+        "defaultValue": 99.9
+      },
+      {
+        "name": "period",
+        "label": "Период",
+        "type": "select",
+        "options": [
+          {
+            "value": "day",
+            "label": "Сутки"
+          },
+          {
+            "value": "week",
+            "label": "Неделя"
+          },
+          {
+            "value": "month",
+            "label": "Месяц"
+          },
+          {
+            "value": "year",
+            "label": "Год"
+          }
+        ],
+        "defaultValue": "year"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "uptimePercent",
+        "label": "Доступность",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "downtimeMinutes",
+        "label": "Максимальный простой",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "downtimeHours",
+        "label": "В часах",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "nines",
+        "label": "Количество девяток",
+        "type": "text"
+      },
+      {
+        "name": "classification",
+        "label": "Классификация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите SLA в процентах и выберите период. Калькулятор покажет допустимое время простоя и классификацию.",
+      "about": "SLA (Service Level Agreement) — соглашение об уровне обслуживания. 99.9% = \"три девятки\", допускает 8.76 часа простоя в год. 99.999% = \"пять девяток\" = 5 минут в год.",
+      "formula": "Простой = (100% - SLA%) × Период\n99.9% за год = 0.1% × 8760 ч = 8.76 ч простоя",
+      "faq": [
+        {
+          "question": "Что такое \"девятки\"?",
+          "answer": "Количество девяток после запятой в процентах. 99.9% = 3 девятки, 99.999% = 5 девяток."
+        },
+        {
+          "question": "Сколько стоит повысить SLA?",
+          "answer": "Экспоненциально. С 99.9% до 99.99% — в 10 раз дороже, до 99.999% — ещё в 10 раз."
+        }
+      ],
+      "sources": [
+        {
+          "title": "AWS - SLA Definitions",
+          "url": "https://aws.amazon.com/legal/service-level-agreements/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "cron-raspisanie",
+    "id": "cron-parser",
+    "title": "Калькулятор расписания cron",
+    "description": "Интерпретация cron-выражений и расчёт времени следующего запуска",
+    "subcategory": "it-tools",
+    "type": "reference",
+    "category": "tehnika",
+    "inputs": [
+      {
+        "name": "cronExpression",
+        "label": "Cron-выражение",
+        "type": "text",
+        "placeholder": "0 0 * * *",
+        "defaultValue": "0 0 * * *"
+      },
+      {
+        "name": "timezone",
+        "label": "Часовой пояс",
+        "type": "select",
+        "options": [
+          {
+            "value": "UTC",
+            "label": "UTC"
+          },
+          {
+            "value": "MSK",
+            "label": "Москва (MSK, UTC+3)"
+          },
+          {
+            "value": "Europe-London",
+            "label": "Лондон (GMT/BST)"
+          },
+          {
+            "value": "America-New_York",
+            "label": "Нью-Йорк (EST/EDT)"
+          },
+          {
+            "value": "Asia-Tokyo",
+            "label": "Токио (JST)"
+          }
+        ],
+        "defaultValue": "MSK"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "humanReadable",
+        "label": "Описание",
+        "type": "text"
+      },
+      {
+        "name": "minutes",
+        "label": "Минуты (0-59)",
+        "type": "text"
+      },
+      {
+        "name": "hours",
+        "label": "Часы (0-23)",
+        "type": "text"
+      },
+      {
+        "name": "days",
+        "label": "Дни месяца (1-31)",
+        "type": "text"
+      },
+      {
+        "name": "months",
+        "label": "Месяцы (1-12)",
+        "type": "text"
+      },
+      {
+        "name": "weekdays",
+        "label": "Дни недели (0-6)",
+        "type": "text"
+      },
+      {
+        "name": "examples",
+        "label": "Примеры частых задач",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите cron-выражение из 5 полей (минуты, часы, дни, месяцы, дни недели). Калькулятор интерпретирует расписание.",
+      "about": "Cron — планировщик задач в Unix/Linux. 5 полей: минуты (0-59), часы (0-23), дни месяца (1-31), месяцы (1-12), дни недели (0-6, где 0=воскресенье).",
+      "formula": "Формат: МИНУТЫ ЧАСЫ ДНИ МЕСЯЦЫ ДНИ_НЕДЕЛИ\nСпецсимволы: * — любое, */n — каждое n-е, , — список, - — диапазон",
+      "faq": [
+        {
+          "question": "Что означает */5?",
+          "answer": "Каждые 5 единиц. */5 в минутах = 0, 5, 10, 15... */6 в часах = 0, 6, 12, 18."
+        },
+        {
+          "question": "Как настроить еженедельную задачу?",
+          "answer": "0 0 * * 0 — каждое воскресенье в полночь. 0 9 * * 1 — каждый понедельник в 9:00."
+        }
+      ],
+      "sources": [
+        {
+          "title": "crontab.guru",
+          "url": "https://crontab.guru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

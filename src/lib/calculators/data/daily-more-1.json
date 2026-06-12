@@ -1,0 +1,811 @@
+[
+  {
+    "slug": "planirovshik-pitaniya",
+    "id": "meal-planner-calculator",
+    "title": "Планировщик питания",
+    "description": "Расчёт калорий и макронутриентов для разных типов диет",
+    "subcategory": "everyday-eda",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "dietType",
+        "label": "Тип диеты",
+        "type": "select",
+        "options": [
+          {
+            "value": "keto",
+            "label": "Кето (низкоуглеводная)"
+          },
+          {
+            "value": "paleo",
+            "label": "Палео (как у древних)"
+          },
+          {
+            "value": "vegan",
+            "label": "Веганская"
+          },
+          {
+            "value": "balanced",
+            "label": "Сбалансированная"
+          },
+          {
+            "value": "lowfat",
+            "label": "Низкожировая"
+          }
+        ],
+        "defaultValue": "balanced"
+      },
+      {
+        "name": "dailyCalories",
+        "label": "Калорий в день (ккал)",
+        "type": "number",
+        "placeholder": "2000",
+        "defaultValue": 2000,
+        "min": 800,
+        "max": 5000,
+        "step": 50
+      },
+      {
+        "name": "mealsPerDay",
+        "label": "Приёмов пищи в день",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 6
+      },
+      {
+        "name": "bodyWeight",
+        "label": "Вес тела (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 30,
+        "max": 200
+      }
+    ],
+    "outputs": [
+      {
+        "name": "caloriesPerMeal",
+        "label": "Калорий за приём",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "protein",
+        "label": "Белки",
+        "type": "number",
+        "unit": "г/день"
+      },
+      {
+        "name": "fat",
+        "label": "Жиры",
+        "type": "number",
+        "unit": "г/день"
+      },
+      {
+        "name": "carbs",
+        "label": "Углеводы",
+        "type": "number",
+        "unit": "г/день"
+      },
+      {
+        "name": "exampleFoods",
+        "label": "Примеры продуктов",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип диеты, укажите суточную калорийность, количество приёмов пищи и вес. Калькулятор рассчитает макронутриенты и даст примеры продуктов.",
+      "about": "Разные диеты требуют разного распределения макронутриентов: кето — высокие жиры, веганская — высокие углеводы, сбалансированная — равномерное распределение.",
+      "formula": "Белки = Калории × % белков / 4; Жиры = Калории × % жиров / 9; Углеводы = Калории × % углеводов / 4",
+      "faq": [
+        {
+          "question": "Сколько белка нужно в день?",
+          "answer": "Для поддержания мышц — 1.2-1.6 г на кг веса. Для роста мышц — 1.6-2.2 г. Калькулятор показывает базовое распределение по диете."
+        },
+        {
+          "question": "Что такое кето-диета?",
+          "answer": "Диета с минимумом углеводов (менее 50 г/день), заставляющая организм использовать жиры как топливо. Соотношение: 75% жиров, 20% белков, 5% углеводов."
+        },
+        {
+          "question": "Как рассчитать суточную калорийность?",
+          "answer": "Используйте калькулятор суточной нормы калорий (BMR + активность). Для похудения вычтите 300-500 ккал, для набора массы добавьте 300-500 ккал."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Макронутриенты — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Макронутриенты"
+        },
+        {
+          "title": "Кетогенная диета — Healthline",
+          "url": "https://www.healthline.com/nutrition/ketogenic-diet-101"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "produkty-na-kompaniyu",
+    "id": "party-food-calculator",
+    "title": "Расчёт продуктов на компанию",
+    "description": "Калькулятор количества еды и напитков для мероприятий и праздников",
+    "subcategory": "everyday-eda",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "guests",
+        "label": "Количество гостей",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 1,
+        "max": 200
+      },
+      {
+        "name": "duration",
+        "label": "Длительность (часов)",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 1,
+        "max": 12
+      },
+      {
+        "name": "mealType",
+        "label": "Тип мероприятия",
+        "type": "select",
+        "options": [
+          {
+            "value": "buffet",
+            "label": "Фуршет (самообслуживание)"
+          },
+          {
+            "value": "sitdown",
+            "label": "Банкет (за столом)"
+          },
+          {
+            "value": "finger",
+            "label": "Фуршет с фингер-фуд"
+          },
+          {
+            "value": "bbq",
+            "label": "Шашлыки/BBQ"
+          }
+        ],
+        "defaultValue": "buffet"
+      },
+      {
+        "name": "dietaryRestrictions",
+        "label": "Особенности питания",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет ограничений"
+          },
+          {
+            "value": "vegetarian",
+            "label": "Есть вегетарианцы"
+          },
+          {
+            "value": "vegan",
+            "label": "Есть веганы"
+          },
+          {
+            "value": "allergies",
+            "label": "Есть аллергики"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalFood",
+        "label": "Общий вес еды",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "meat",
+        "label": "Мяса/рыбы",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "salads",
+        "label": "Салатов/овощей",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "sides",
+        "label": "Гарниров",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "snacks",
+        "label": "Закусок",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "drinks",
+        "label": "Напитков",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "recommendations",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество гостей, длительность мероприятия, выберите тип и особенности питания. Калькулятор рассчитает необходимое количество продуктов по категориям.",
+      "about": "Планирование еды для мероприятий требует учёта типа события, длительности, диетических предпочтений гостей и соотношения категорий блюд.",
+      "formula": "Общий вес = Гости × Часы × Норма потребления; Нормы: фуршет 150 г/чел/ч, банкет 120 г/чел/ч, BBQ 200 г/чел/ч",
+      "faq": [
+        {
+          "question": "Как рассчитать напитки на свадьбу?",
+          "answer": "На 4-5 часов: вода 1.5 л на человека, алкоголь (если планируется) 0.5-1 л на человека, безалкогольные 0.5 л. Учтите детей и трезвенников."
+        },
+        {
+          "question": "Сколько мяса на шашлык на 10 человек?",
+          "answer": "На шашлык/BBQ норма выше: 300-400 г сырого мяса на человека. Для 10 человек — 3-4 кг мяса плюс овощи для гриля."
+        },
+        {
+          "question": "Какой процент запаса делать?",
+          "answer": "Делайте запас 10-15%. Лучше остаться с едой, чем оставить гостей голодными. Остатки можно раздать с собой или использовать в течение недели."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Планирование кейтеринга",
+          "url": "https://www.thekitchn.com/catering-planning-guide-231004"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "chaevye-po-stranam",
+    "id": "tip-by-country-calculator",
+    "title": "Калькулятор чаевых по странам",
+    "description": "Расчёт чаевых с учётом местных обычаев и традиций разных стран",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "country",
+        "label": "Страна",
+        "type": "select",
+        "options": [
+          {
+            "value": "usa",
+            "label": "США"
+          },
+          {
+            "value": "uk",
+            "label": "Великобритания"
+          },
+          {
+            "value": "germany",
+            "label": "Германия"
+          },
+          {
+            "value": "france",
+            "label": "Франция"
+          },
+          {
+            "value": "russia",
+            "label": "Россия"
+          },
+          {
+            "value": "japan",
+            "label": "Япония"
+          },
+          {
+            "value": "italy",
+            "label": "Италия"
+          },
+          {
+            "value": "spain",
+            "label": "Испания"
+          },
+          {
+            "value": "uae",
+            "label": "ОАЭ"
+          },
+          {
+            "value": "thailand",
+            "label": "Таиланд"
+          }
+        ],
+        "defaultValue": "usa"
+      },
+      {
+        "name": "billAmount",
+        "label": "Сумма чека",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50,
+        "min": 0,
+        "step": 0.01
+      },
+      {
+        "name": "serviceQuality",
+        "label": "Качество обслуживания",
+        "type": "select",
+        "options": [
+          {
+            "value": "poor",
+            "label": "Плохое"
+          },
+          {
+            "value": "average",
+            "label": "Среднее"
+          },
+          {
+            "value": "good",
+            "label": "Хорошее"
+          },
+          {
+            "value": "excellent",
+            "label": "Отличное"
+          }
+        ],
+        "defaultValue": "good"
+      },
+      {
+        "name": "serviceType",
+        "label": "Тип заведения",
+        "type": "select",
+        "options": [
+          {
+            "value": "restaurant",
+            "label": "Ресторан"
+          },
+          {
+            "value": "cafe",
+            "label": "Кафе"
+          },
+          {
+            "value": "bar",
+            "label": "Бар"
+          },
+          {
+            "value": "taxi",
+            "label": "Такси"
+          },
+          {
+            "value": "hotel",
+            "label": "Отель"
+          }
+        ],
+        "defaultValue": "restaurant"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "tipPercent",
+        "label": "Процент чаевых",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "tipAmount",
+        "label": "Сумма чаевых",
+        "type": "number",
+        "unit": "local"
+      },
+      {
+        "name": "totalAmount",
+        "label": "Итого с чаевыми",
+        "type": "number",
+        "unit": "local"
+      },
+      {
+        "name": "customsNote",
+        "label": "Местные обычаи",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите страну, введите сумму чека и оцените качество обслуживания. Калькулятор покажет рекомендуемые чаевые с учётом местных традиций.",
+      "about": "Традиции чаевых сильно различаются по странам: в США это почти обязательно, в Японии — не принято, в Европе — по желанию.",
+      "formula": "Чаевые = Сумма чека × Местный процент × Коэффициент качества",
+      "faq": [
+        {
+          "question": "Сколько чаевых в США?",
+          "answer": "В ресторанах — 15-20% от чека. В барах — $1-2 за напиток. В такси — 10-15%. В отелях — $1-2 за чемодан, $2-5 за уборку."
+        },
+        {
+          "question": "Почему в Японии не оставляют чаевые?",
+          "answer": "В японской культуре отличный сервис — это стандарт, включённый в цену. Чаевые могут вызвать неловкость или восприниматься как снисхождение."
+        },
+        {
+          "question": "Что такое service compris во Франции?",
+          "answer": "Это означает \"обслуживание включено\". Французский закон требует включать 15% на обслуживание в цену. Дополнительные чаевые не обязательны, но можно оставить мелочь за отличный сервис."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Tipping etiquette by country",
+          "url": "https://www.tripadvisor.com/TippingEtiquette"
+        },
+        {
+          "title": "Чаевые в разных странах",
+          "url": "https://www.theguardian.com/travel/2019/jun/17/tipping-etiquette-world-guide"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "razdelenie-po-poziciyam",
+    "id": "split-bill-with-items-calculator",
+    "title": "Разделение счёта с учётом позиций",
+    "description": "Точное разделение счёта с учётом того, кто что заказал",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "people",
+        "label": "Количество человек",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 2,
+        "max": 20
+      },
+      {
+        "name": "items",
+        "label": "Позиции (JSON формат)",
+        "type": "text",
+        "placeholder": "Пример: [{\"name\":\"Пицца\",\"price\":600,\"who\":[0,1]},{\"name\":\"Салат\",\"price\":400,\"who\":[2]},{\"name\":\"Напитки\",\"price\":300,\"who\":[0,1,2]}]",
+        "defaultValue": "[{\"name\":\"Пицца\",\"price\":600,\"who\":[0,1]},{\"name\":\"Салат\",\"price\":400,\"who\":[2]},{\"name\":\"Напитки\",\"price\":300,\"who\":[0,1,2]}]"
+      },
+      {
+        "name": "taxRate",
+        "label": "Налог (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 50
+      },
+      {
+        "name": "tipPercent",
+        "label": "Чаевые (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "subtotal",
+        "label": "Подытог",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "tax",
+        "label": "Налог",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "tip",
+        "label": "Чаевые",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "total",
+        "label": "Итого",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "perPerson",
+        "label": "С каждого",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите количество человек, введите позиции в формате JSON (название, цена, кто ел — индексы от 0). Калькулятор точно разделит счёт.",
+      "about": "Позволяет точно разделить счёт, когда кто-то заказал больше или меньше других. Учитывает налог и чаевые пропорционально заказу каждого.",
+      "formula": "Сумма человека = Сумма позиций / Кол-во евших + Пропорциональный налог и чаевые",
+      "faq": [
+        {
+          "question": "Как указать позиции?",
+          "answer": "Формат JSON: [{\"name\":\"Название\",\"price\":цена,\"who\":[индексы]}]. Индексы начинаются с 0. Например, для 3 человек: [0,1,2] — все ели, [0] — только первый."
+        },
+        {
+          "question": "А если делим поровну?",
+          "answer": "Для всех позиций укажите \"who\":[0,1,2,...] со всеми индексами. Тогда сумма разделится поровну между всеми."
+        },
+        {
+          "question": "Как учесть доставку или сервисный сбор?",
+          "answer": "Добавьте отдельную позицию с названием \"Доставка\" или \"Сервисный сбор\" и укажите цену."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Splitwise — Bill splitting app",
+          "url": "https://www.splitwise.com/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-skidok",
+    "id": "discount-calculator",
+    "title": "Калькулятор скидок",
+    "description": "Расчёт итоговой цены с учётом различных типов скидок и акций",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "originalPrice",
+        "label": "Начальная цена (₽)",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0,
+        "step": 0.01
+      },
+      {
+        "name": "discountType",
+        "label": "Тип скидки",
+        "type": "select",
+        "options": [
+          {
+            "value": "percent",
+            "label": "Процентная (%)"
+          },
+          {
+            "value": "fixed",
+            "label": "Фиксированная сумма"
+          },
+          {
+            "value": "bogo",
+            "label": "2 по цене 1 (BOGO)"
+          },
+          {
+            "value": "bundle",
+            "label": "3 за цену 2"
+          },
+          {
+            "value": "half",
+            "label": "Второй со скидкой 50%"
+          }
+        ],
+        "defaultValue": "percent"
+      },
+      {
+        "name": "discountValue",
+        "label": "Значение скидки",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 0,
+        "step": 0.01
+      },
+      {
+        "name": "quantity",
+        "label": "Количество товаров",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "additionalDiscount",
+        "label": "Дополнительная скидка (%)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "originalTotal",
+        "label": "Сумма без скидок",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "finalPrice",
+        "label": "Итоговая цена",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalSavings",
+        "label": "Общая экономия",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "effectiveDiscount",
+        "label": "Эффективная скидка",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "perItem",
+        "label": "Цена за штуку",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите начальную цену, выберите тип скидки, укажите значение и количество. Добавьте дополнительную скидку если есть. Калькулятор покажет итоговую цену и экономию.",
+      "about": "Магазины используют разные типы скидок: процентные, фиксированные, акции типа \"2 по цене 1\", комплексные скидки. Этот калькулятор учитывает все варианты.",
+      "formula": "Процент: Цена × (1 - %/100); BOGO: Платите за половину товаров; 3 за 2: Каждый 3-й бесплатно",
+      "faq": [
+        {
+          "question": "Что выгоднее: 30% скидка или 3 за цену 2?",
+          "answer": "При покупке 3 штук: 30% скидка = платите 70% от 3 = 2.1 цены. 3 за цену 2 = платите за 2. Выгоднее 3 за 2 (экономия 33% vs 30%)."
+        },
+        {
+          "question": "Как считается \"Второй товар со скидкой 50%\"?",
+          "answer": "При чётном количестве: половина по полной, половина по половине. Итого скидка 25%. При нечётном: округление вверх по полной цене."
+        },
+        {
+          "question": "Можно ли комбинировать скидки?",
+          "answer": "Зависит от правил магазина. Обычно процентные скидки не суммируются, но процент + фиксированная может работать. Читайте условия акций."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Как считать скидки — Lifehacker",
+          "url": "https://lifehacker.ru/discount-calculator"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-nalogov",
+    "id": "tax-calculator-price",
+    "title": "Калькулятор налогов",
+    "description": "Расчёт цены с налогом или выделение налога из общей суммы",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "amount",
+        "label": "Сумма (₽)",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0,
+        "step": 0.01
+      },
+      {
+        "name": "taxRate",
+        "label": "Ставка налога (%)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 0,
+        "max": 100,
+        "step": 0.01
+      },
+      {
+        "name": "taxIncluded",
+        "label": "Налог включён в сумму",
+        "type": "select",
+        "options": [
+          {
+            "value": "false",
+            "label": "Нет — добавить налог"
+          },
+          {
+            "value": "true",
+            "label": "Да — выделить налог"
+          }
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "name": "calculationMode",
+        "label": "Режим расчёта",
+        "type": "select",
+        "options": [
+          {
+            "value": "single",
+            "label": "Одна ставка"
+          },
+          {
+            "value": "vat20",
+            "label": "НДС 20% (РФ)"
+          },
+          {
+            "value": "vat10",
+            "label": "НДС 10% (РФ, льготный)"
+          },
+          {
+            "value": "us_sales",
+            "label": "Sales tax США (8%)"
+          }
+        ],
+        "defaultValue": "single"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "subtotal",
+        "label": "Сумма без налога",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "taxAmount",
+        "label": "Налог",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "total",
+        "label": "Итого",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "breakdown",
+        "label": "Разбивка",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму, выберите ставку налога или режим расчёта, укажите включён ли налог в сумму. Калькулятор покажет разбивку по сумме и налогу.",
+      "about": "Налоги могут включаться в цену (как в Европе и РФ) или добавляться сверху (как в США). Калькулятор работает в обоих режимах и поддерживает разные налоговые системы.",
+      "formula": "Налог добавляется: Итого = Сумма × (1 + Ставка/100); Налог включён: Без налога = Сумма / (1 + Ставка/100)",
+      "faq": [
+        {
+          "question": "Как выделить НДС 20% из суммы?",
+          "answer": "Используйте формулу: Сумма без НДС = Общая сумма / 1.20. Например, из 1200 ₽ НДС составляет 200 ₽ (1200/1.2 = 1000 без НДС, налог 200 ₽)."
+        },
+        {
+          "question": "Чем отличается НДС от sales tax?",
+          "answer": "НДС (Value Added Tax) — каскадный налог на каждом этапе производства, обычно включён в цену. Sales tax — конечный налог для потребителя, обычно добавляется к цене на кассе."
+        },
+        {
+          "question": "Какие ставки НДС в России?",
+          "answer": "20% — стандартная для большинства товаров. 10% — льготная для продуктов, детских товаров, лекарств, книг. 0% — для экспорта."
+        }
+      ],
+      "sources": [
+        {
+          "title": "НДС — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Налог_на_добавленную_стоимость"
+        },
+        {
+          "title": "Sales tax in the US",
+          "url": "https://en.wikipedia.org/wiki/Sales_taxes_in_the_United_States"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

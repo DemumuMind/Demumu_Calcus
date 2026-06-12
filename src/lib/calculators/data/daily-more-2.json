@@ -1,0 +1,1620 @@
+[
+  {
+    "slug": "odezhda-po-pogode",
+    "id": "weather-clothing-calculator",
+    "title": "Подбор одежды по погоде",
+    "description": "Рекомендации по слоям одежды в зависимости от температуры, ветра и активности",
+    "subcategory": "everyday-odezhda",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "temperature",
+        "label": "Температура (°C)",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15,
+        "min": -40,
+        "max": 50
+      },
+      {
+        "name": "windSpeed",
+        "label": "Скорость ветра (км/ч)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "activityLevel",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий (прогулка, ожидание)"
+          },
+          {
+            "value": "medium",
+            "label": "Средний (ходьба, лёгкая работа)"
+          },
+          {
+            "value": "high",
+            "label": "Высокий (спорт, бег, тяжёлая работа)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "precipitation",
+        "label": "Осадки",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "rain",
+            "label": "Дождь"
+          },
+          {
+            "value": "snow",
+            "label": "Снег"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "feelsLike",
+        "label": "Ощущаемая температура",
+        "type": "text"
+      },
+      {
+        "name": "baseLayer",
+        "label": "Базовый слой",
+        "type": "text"
+      },
+      {
+        "name": "midLayer",
+        "label": "Средний слой",
+        "type": "text"
+      },
+      {
+        "name": "outerLayer",
+        "label": "Верхний слой",
+        "type": "text"
+      },
+      {
+        "name": "accessories",
+        "label": "Аксессуары",
+        "type": "text"
+      },
+      {
+        "name": "recommendations",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру, скорость ветра, выберите уровень активности и наличие осадков. Калькулятор подберёт оптимальные слои одежды.",
+      "about": "Принцип многослойности позволяет адаптироваться к меняющимся условиям. Ветер усиливает ощущение холода, активность согревает — это учитывается в расчёте.",
+      "formula": "Ощущаемая температура = Температура - (Ветер × 0.7) при Т ≤ 10°C; Корректировка по активности: низкая -2°, высокая +5°",
+      "faq": [
+        {
+          "question": "Что такое принцип трёх слоёв?",
+          "answer": "Базовый слой — отводит влагу (термобельё). Средний — удерживает тепло (флис, шерсть). Верхний — защищает от ветра и осадков (мембрана)."
+        },
+        {
+          "question": "Почему нельзя просто надеть толстую куртку?",
+          "answer": "Один толстый слой не позволяет регулировать температуру. При нагреве вы вспотеете, потом замёрзнете. Слои можно снимать и надевать по мере необходимости."
+        },
+        {
+          "question": "Какая одежда лучше для активности?",
+          "answer": "Синтетика или шерсть — они отводят влагу и сохраняют тепло даже при поте. Избегайте хлопка — он намокает и быстро остывает."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Layering for cold weather — REI",
+          "url": "https://www.rei.com/learn/expert-advice/layering-basics.html"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "korm-dlya-pitomca",
+    "id": "pet-food-calculator",
+    "title": "Калькулятор корма для питомцев",
+    "description": "Расчёт суточной нормы корма для собак и кошек по весу, возрасту и активности",
+    "subcategory": "everyday-zhivotnye",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "petType",
+        "label": "Тип питомца",
+        "type": "select",
+        "options": [
+          {
+            "value": "dog",
+            "label": "Собака"
+          },
+          {
+            "value": "cat",
+            "label": "Кошка"
+          }
+        ],
+        "defaultValue": "dog"
+      },
+      {
+        "name": "weight",
+        "label": "Вес питомца (кг)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0.5,
+        "max": 100,
+        "step": 0.1
+      },
+      {
+        "name": "ageGroup",
+        "label": "Возрастная группа",
+        "type": "select",
+        "options": [
+          {
+            "value": "puppy",
+            "label": "Щенок/Котёнок (до 1 года)"
+          },
+          {
+            "value": "adult",
+            "label": "Взрослый (1-7 лет)"
+          },
+          {
+            "value": "senior",
+            "label": "Пожилой (7+ лет)"
+          }
+        ],
+        "defaultValue": "adult"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий (домашний, мало гуляет)"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный (прогулки 1-2 раза в день)"
+          },
+          {
+            "value": "high",
+            "label": "Высокий (активный, тренируется)"
+          },
+          {
+            "value": "very_high",
+            "label": "Очень высокий (рабочий, спортивный)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "foodType",
+        "label": "Тип корма",
+        "type": "select",
+        "options": [
+          {
+            "value": "dry",
+            "label": "Сухой корм"
+          },
+          {
+            "value": "wet",
+            "label": "Влажный корм (консервы)"
+          },
+          {
+            "value": "natural",
+            "label": "Натуральное питание"
+          },
+          {
+            "value": "mixed",
+            "label": "Смешанное (сухой + влажный)"
+          }
+        ],
+        "defaultValue": "dry"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyCalories",
+        "label": "Суточная норма калорий",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "dryFoodAmount",
+        "label": "Сухой корм",
+        "type": "number",
+        "unit": "г/день"
+      },
+      {
+        "name": "wetFoodAmount",
+        "label": "Влажный корм",
+        "type": "number",
+        "unit": "г/день"
+      },
+      {
+        "name": "mealsPerDay",
+        "label": "Приёмов пищи",
+        "type": "text"
+      },
+      {
+        "name": "monthlyCost",
+        "label": "Примерный месячный расход",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "notes",
+        "label": "Примечания",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип питомца, введите вес, выберите возрастную группу, уровень активности и тип корма. Калькулятор рассчитает суточную норму.",
+      "about": "Потребности животных в питании зависят от многих факторов: веса, возраста, активности, состояния здоровья. Этот калькулятор даёт базовые ориентиры.",
+      "formula": "RER = 70 × вес^0.75; MER (метаболизм) = RER × коэффициент активности и возраста; Корм = MER / калорийность корма",
+      "faq": [
+        {
+          "question": "Как понять, что питомец переедет или недоедает?",
+          "answer": "Оценивайте по весу: рёбра должны прощупываться без усилий, но не быть видны. Талия должна быть заметна с боков. При сомнениях — проконсультируйтесь с ветеринаром."
+        },
+        {
+          "question": "Сухой или влажный корм — что лучше?",
+          "answer": "Влажный корм ближе к натуральному питанию, содержит больше влаги (важно для почек). Сухой удобен и очищает зубы. Лучше всего — смешанный подход или корм премиум-класса."
+        },
+        {
+          "question": "Можно ли кормить питомца \"со стола\"?",
+          "answer": "Не рекомендуется — человеческая еда слишком солёная, жирная, часто содержит вредные для животных ингредиенты (лук, чеснок, шоколад, виноград)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nutrition for dogs — AKC",
+          "url": "https://www.akc.org/expert-advice/nutrition/"
+        },
+        {
+          "title": "Cat nutrition — Cornell Feline Health Center",
+          "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "byudzhet-na-podarki",
+    "id": "gift-budget-calculator",
+    "title": "Калькулятор бюджета на подарки",
+    "description": "Расчёт оптимальной суммы на подарок в зависимости от случая, близости отношений и дохода",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "occasion",
+        "label": "Случай",
+        "type": "select",
+        "options": [
+          {
+            "value": "birthday",
+            "label": "День рождения"
+          },
+          {
+            "value": "wedding",
+            "label": "Свадьба"
+          },
+          {
+            "value": "newyear",
+            "label": "Новый год"
+          },
+          {
+            "value": "anniversary",
+            "label": "Годовщина"
+          },
+          {
+            "value": "housewarming",
+            "label": "Новоселье"
+          },
+          {
+            "value": "babyshower",
+            "label": "Рождение ребёнка"
+          },
+          {
+            "value": "graduation",
+            "label": "Выпускной"
+          },
+          {
+            "value": "valentine",
+            "label": "День святого Валентина"
+          }
+        ],
+        "defaultValue": "birthday"
+      },
+      {
+        "name": "relationship",
+        "label": "Близость отношений",
+        "type": "select",
+        "options": [
+          {
+            "value": "close_family",
+            "label": "Близкие родственники (родители, дети, супруг)"
+          },
+          {
+            "value": "family",
+            "label": "Родственники (братья, сёстры, дяди, тёти)"
+          },
+          {
+            "value": "best_friend",
+            "label": "Лучший друг/подруга"
+          },
+          {
+            "value": "friend",
+            "label": "Друг/знакомый"
+          },
+          {
+            "value": "colleague",
+            "label": "Коллега"
+          },
+          {
+            "value": "acquaintance",
+            "label": "Приятель/знакомый"
+          }
+        ],
+        "defaultValue": "friend"
+      },
+      {
+        "name": "monthlyIncome",
+        "label": "Ваш месячный доход (₽)",
+        "type": "number",
+        "placeholder": "80000",
+        "defaultValue": 80000,
+        "min": 10000,
+        "max": 1000000
+      },
+      {
+        "name": "recipientAge",
+        "label": "Возраст получателя",
+        "type": "select",
+        "options": [
+          {
+            "value": "child",
+            "label": "Ребёнок (до 14)"
+          },
+          {
+            "value": "teen",
+            "label": "Подросток (14-18)"
+          },
+          {
+            "value": "adult",
+            "label": "Взрослый (19-60)"
+          },
+          {
+            "value": "senior",
+            "label": "Пожилой (60+)"
+          }
+        ],
+        "defaultValue": "adult"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "minBudget",
+        "label": "Минимальная сумма",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "recommendedBudget",
+        "label": "Рекомендуемая сумма",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "maxBudget",
+        "label": "Максимальная сумма",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "percentOfIncome",
+        "label": "Доля от дохода",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "giftIdeas",
+        "label": "Идеи подарков",
+        "type": "text"
+      },
+      {
+        "name": "etiquette",
+        "label": "Этикет",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите случай, близость отношений, укажите ваш доход и возраст получателя. Калькулятор предложит диапазон сумм и идеи подарков.",
+      "about": "Сумма подарка зависит от культурных норм, ваших возможностей и близости отношений. Важно не переборщить (неловко) и не скупиться (обидно).",
+      "formula": "Базовая сумма по случаю × Коэффициент отношений; Ограничение: не более 15-25% месячного дохода",
+      "faq": [
+        {
+          "question": "Сколько дарить на свадьбу?",
+          "answer": "Традиция: сумма должна покрыть ваш ужин (в среднем 3000-5000₽ на персону в ресторане) + поздравление. Для близких — 10000-50000₽, для дальних знакомых — от 3000₽."
+        },
+        {
+          "question": "Можно ли дарить деньги?",
+          "answer": "На свадьбу и новоселье — да, это норма. На день рождения — приемлемо для молодёжи и пожилых. Для коллег и друзей лучше подарок или сертификат."
+        },
+        {
+          "question": "Что если я не могу позволить дорогой подарок?",
+          "answer": "Сделайте подарок своими руками, подарите время (помощь, прогулку), или объединитесь с другими гостями для коллективного подарка."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gift giving etiquette",
+          "url": "https://www.etiquettescholar.com/gift_giving_etiquette.html"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "byudzhet-otpiska",
+    "id": "vacation-budget-calculator",
+    "title": "Калькулятор бюджета отпуска",
+    "description": "Расчёт затрат на путешествие: транспорт, проживание, питание, активности по стране и городу",
+    "subcategory": "everyday-puteshestviya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "destination",
+        "label": "Направление",
+        "type": "select",
+        "options": [
+          {
+            "value": "russia_moscow",
+            "label": "Россия — Москва"
+          },
+          {
+            "value": "russia_spb",
+            "label": "Россия — Санкт-Петербург"
+          },
+          {
+            "value": "russia_sochi",
+            "label": "Россия — Сочи"
+          },
+          {
+            "value": "turkey",
+            "label": "Турция (Анталья, Стамбул)"
+          },
+          {
+            "value": "egypt",
+            "label": "Египет (Шарм, Хургада)"
+          },
+          {
+            "value": "thailand",
+            "label": "Таиланд (Пхукет, Бангкок)"
+          },
+          {
+            "value": "uae",
+            "label": "ОАЭ (Дубай, Абу-Даби)"
+          },
+          {
+            "value": "europe_west",
+            "label": "Западная Европа (Париж, Рим)"
+          },
+          {
+            "value": "europe_east",
+            "label": "Восточная Европа (Прага, Будапешт)"
+          },
+          {
+            "value": "usa",
+            "label": "США (Нью-Йорк, Лос-Анджелес)"
+          },
+          {
+            "value": "asia",
+            "label": "Азия (Япония, Китай, Корея)"
+          },
+          {
+            "value": "custom",
+            "label": "Другой (ввести вручную)"
+          }
+        ],
+        "defaultValue": "turkey"
+      },
+      {
+        "name": "duration",
+        "label": "Длительность (дней)",
+        "type": "number",
+        "placeholder": "7",
+        "defaultValue": 7,
+        "min": 1,
+        "max": 30
+      },
+      {
+        "name": "travelers",
+        "label": "Количество путешественников",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 10
+      },
+      {
+        "name": "comfortLevel",
+        "label": "Уровень комфорта",
+        "type": "select",
+        "options": [
+          {
+            "value": "budget",
+            "label": "Эконом (хостелы, общий транспорт, уличная еда)"
+          },
+          {
+            "value": "standard",
+            "label": "Стандарт (3★ отели, такси, кафе)"
+          },
+          {
+            "value": "comfort",
+            "label": "Комфорт (4★ отели, аренда авто, рестораны)"
+          },
+          {
+            "value": "luxury",
+            "label": "Люкс (5★ отели, трансферы, люкс-рестораны)"
+          }
+        ],
+        "defaultValue": "standard"
+      },
+      {
+        "name": "transportType",
+        "label": "Тип транспорта",
+        "type": "select",
+        "options": [
+          {
+            "value": "flight",
+            "label": "Авиаперелёт"
+          },
+          {
+            "value": "train",
+            "label": "Поезд"
+          },
+          {
+            "value": "bus",
+            "label": "Автобус"
+          },
+          {
+            "value": "car",
+            "label": "Свой автомобиль"
+          }
+        ],
+        "defaultValue": "flight"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "transportCost",
+        "label": "Транспорт",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "accommodationCost",
+        "label": "Проживание",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "foodCost",
+        "label": "Питание",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "activitiesCost",
+        "label": "Активности",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "miscCost",
+        "label": "Прочее",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalCost",
+        "label": "ИТОГО",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "perPerson",
+        "label": "На человека",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите направление, укажите длительность и количество путешественников, выберите уровень комфорта и тип транспорта.",
+      "about": "Бюджет путешествия состоит из: транспорт (туда-обратно), проживание (×ночей), питание (×дней), активности (×дней), плюс запас 15% на непредвиденное.",
+      "formula": "Общий бюджет = (Транспорт + Отель×Ночи + Еда×Дни + Активности×Дни) × Коэффициент комфорта + 15% запас",
+      "faq": [
+        {
+          "question": "Как сэкономить на отпуске?",
+          "answer": "Бронируйте заранее (за 2-3 месяца), ешьте в супермаркетах/кафе вдали от туристических мест, пользуйтесь общественным транспортом, выбирайте shoulder season (май, сентябрь)."
+        },
+        {
+          "question": "Что такое shoulder season?",
+          "answer": "Пограничные месяцы между высоким и низким сезоном: май и сентябрь в Европе. Погода хорошая, цены ниже, туристов меньше."
+        },
+        {
+          "question": "Стоит ли брать all inclusive?",
+          "answer": "Выгодно при активном отдыхе (много едите и пьёте) или дорогом направлении (ОАЭ, Мальдивы). При экономном варианте — не всегда оправдано."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Travel budget planning — Nomadic Matt",
+          "url": "https://www.nomadicmatt.com/travel-blogs/how-to-create-a-travel-budget/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "stoimost-moyki",
+    "id": "car-wash-calculator",
+    "title": "Калькулятор стоимости мойки авто",
+    "description": "Сравнение стоимости разных типов мойки: самообслуживание, автоматическая, ручная",
+    "subcategory": "everyday-avto",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "washType",
+        "label": "Тип мойки",
+        "type": "select",
+        "options": [
+          {
+            "value": "self_service",
+            "label": "Самообслуживание (самостоятельная)"
+          },
+          {
+            "value": "automatic",
+            "label": "Автоматическая (портальная)"
+          },
+          {
+            "value": "touchless",
+            "label": "Бесконтактная автоматическая"
+          },
+          {
+            "value": "hand_wash",
+            "label": "Ручная мойка"
+          },
+          {
+            "value": "detailing",
+            "label": "Детейлинг (глубокая очистка)"
+          }
+        ],
+        "defaultValue": "self_service"
+      },
+      {
+        "name": "carSize",
+        "label": "Размер авто",
+        "type": "select",
+        "options": [
+          {
+            "value": "small",
+            "label": "Малолитражка (A, B класс)"
+          },
+          {
+            "value": "medium",
+            "label": "Средний (C класс, кроссовер)"
+          },
+          {
+            "value": "large",
+            "label": "Крупный (D, E класс, SUV)"
+          },
+          {
+            "value": "van",
+            "label": "Минивэн/внедорожник"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "washFrequency",
+        "label": "Частота мойки",
+        "type": "select",
+        "options": [
+          {
+            "value": "weekly",
+            "label": "Раз в неделю"
+          },
+          {
+            "value": "biweekly",
+            "label": "Раз в 2 недели"
+          },
+          {
+            "value": "monthly",
+            "label": "Раз в месяц"
+          },
+          {
+            "value": "as_needed",
+            "label": "По необходимости (~раз в месяц)"
+          }
+        ],
+        "defaultValue": "biweekly"
+      },
+      {
+        "name": "addServices",
+        "label": "Дополнительные услуги",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "wax",
+            "label": "Восковая обработка"
+          },
+          {
+            "value": "interior",
+            "label": "Уборка салона"
+          },
+          {
+            "value": "full",
+            "label": "Полный комплекс (воск + салон)"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "singleWashCost",
+        "label": "Стоимость одной мойки",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "monthlyCost",
+        "label": "В месяц",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "yearlyCost",
+        "label": "В год",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "timeSpent",
+        "label": "Время на мойку",
+        "type": "text"
+      },
+      {
+        "name": "quality",
+        "label": "Качество",
+        "type": "text"
+      },
+      {
+        "name": "recommendations",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип мойки, размер автомобиля, частоту и дополнительные услуги. Калькулятор сравнит затраты и даст рекомендации.",
+      "about": "Стоимость мойки зависит от метода: самообслуживание дёшево но требует времени, автоматическая быстрая но может царапать, ручная качественная но дороже.",
+      "formula": "Годовые затраты = Стоимость мойки × Частота × 12 месяцев + Дополнительные услуги",
+      "faq": [
+        {
+          "question": "Как часто нужно мыть машину?",
+          "answer": "Летом — раз в 1-2 недели (убирать пыль, насекомых, птичий помёт). Зимой — чаще, после каждой грязевой поездки (соль разъедает кузов)."
+        },
+        {
+          "question": "Чем опасны автоматические мойки?",
+          "answer": "Щётки со временем накапливают песок и грязь, которая царапает лакокрасочное покрытие. Для дорогих авто лучше бесконтактная или ручная мойка."
+        },
+        {
+          "question": "Что такое двухведёрная мойка?",
+          "answer": "Метод самообслуживания: одно ведро с мыльной водой, второе с чистой для полоскания губки. Предотвращает перенос грязи на кузов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Car wash types explained — Car and Driver",
+          "url": "https://www.caranddriver.com/features/a27169661/car-wash-types/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "himchistka-rashody",
+    "id": "dry-cleaning-calculator",
+    "title": "Калькулятор расходов на химчистку",
+    "description": "Расчёт затрат на химчистку одежды по видам вещей и частоте использования",
+    "subcategory": "everyday-odezhda",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "items",
+        "label": "Вещи в стирке (введите количество каждого типа в формате JSON)",
+        "type": "text",
+        "placeholder": "[{\"type\":\"suit\",\"count\":2},{\"type\":\"dress\",\"count\":1},{\"type\":\"coat\",\"count\":1}]",
+        "defaultValue": "[{\"type\":\"suit\",\"count\":1},{\"type\":\"shirt\",\"count\":3},{\"type\":\"dress\",\"count\":1}]"
+      },
+      {
+        "name": "frequency",
+        "label": "Как часто сдаёте",
+        "type": "select",
+        "options": [
+          {
+            "value": "weekly",
+            "label": "Каждую неделю"
+          },
+          {
+            "value": "biweekly",
+            "label": "Раз в 2 недели"
+          },
+          {
+            "value": "monthly",
+            "label": "Раз в месяц"
+          },
+          {
+            "value": "seasonal",
+            "label": "Сезонно (раз в 3 месяца)"
+          }
+        ],
+        "defaultValue": "monthly"
+      },
+      {
+        "name": "qualityLevel",
+        "label": "Уровень химчистки",
+        "type": "select",
+        "options": [
+          {
+            "value": "budget",
+            "label": "Эконом (от 150₽)"
+          },
+          {
+            "value": "standard",
+            "label": "Стандарт (от 250₽)"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум (от 400₽)"
+          }
+        ],
+        "defaultValue": "standard"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "singleVisitCost",
+        "label": "Стоимость одного похода",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "monthlyCost",
+        "label": "В месяц",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "yearlyCost",
+        "label": "В год",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "breakdown",
+        "label": "Разбивка по вещам",
+        "type": "text"
+      },
+      {
+        "name": "alternatives",
+        "label": "Альтернативы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите список вещей в формате JSON (тип и количество), выберите частоту и уровень химчистки. Калькулятор рассчитает расходы.",
+      "about": "Химчистка необходима для деликатных тканей (шерсть, шёлк, костюмные ткани) и крупных вещей (пальто, шубы). Стоимость зависит от материала и сложности обработки.",
+      "formula": "Общая стоимость = Σ (Цена вещи × Количество) × Коэффициент качества; Годовые = × Частота × 12",
+      "faq": [
+        {
+          "question": "Что можно почистить в химчистке?",
+          "answer": "Костюмы, платья, пальто, шубы, пуховики, шторы, постельное бельё. Некоторые вещи (рубашки, блузы) можно стирать дома в деликатном режиме."
+        },
+        {
+          "question": "Как часто нужно чистить пальто/шубу?",
+          "answer": "Пальто — 1-2 раза в сезон. Шубу из меха — 1 раз в год (весной). Пуховик — по мере загрязнения, 2-4 раза за зиму."
+        },
+        {
+          "question": "Чем отличается премиум химчистка?",
+          "answer": "Используются более дорогие и безопасные растворители, индивидуальный подход к каждой вещи, ручная работа, услуги по вывозу/доставке."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Dry cleaning guide — Consumer Reports",
+          "url": "https://www.consumerreports.org/cro/dry-cleaning.htm"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "vremya-uborki",
+    "id": "home-cleaning-time-calculator",
+    "title": "Калькулятор времени уборки",
+    "description": "Оценка времени на уборку дома в зависимости от количества комнат, размера и задач",
+    "subcategory": "everyday-dom",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "rooms",
+        "label": "Количество комнат",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 20
+      },
+      {
+        "name": "area",
+        "label": "Площадь (м²)",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60,
+        "min": 10,
+        "max": 500
+      },
+      {
+        "name": "cleaningType",
+        "label": "Тип уборки",
+        "type": "select",
+        "options": [
+          {
+            "value": "light",
+            "label": "Лёгкая (поддерживающая)"
+          },
+          {
+            "value": "regular",
+            "label": "Обычная (еженедельная)"
+          },
+          {
+            "value": "deep",
+            "label": "Генеральная (комплексная)"
+          },
+          {
+            "value": "moveout",
+            "label": "После ремонта/переезда"
+          }
+        ],
+        "defaultValue": "regular"
+      },
+      {
+        "name": "tasks",
+        "label": "Дополнительные задачи",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "windows",
+            "label": "Мытьё окон"
+          },
+          {
+            "value": "fridge",
+            "label": "Чистка холодильника"
+          },
+          {
+            "value": "oven",
+            "label": "Чистка духовки"
+          },
+          {
+            "value": "all",
+            "label": "Всё дополнительное"
+          }
+        ],
+        "defaultValue": "none"
+      },
+      {
+        "name": "cleaners",
+        "label": "Количество убирающихся",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 1,
+        "max": 5
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalTime",
+        "label": "Общее время",
+        "type": "text"
+      },
+      {
+        "name": "timePerPerson",
+        "label": "Время на человека",
+        "type": "text"
+      },
+      {
+        "name": "roomBreakdown",
+        "label": "Разбивка по комнатам",
+        "type": "text"
+      },
+      {
+        "name": "extraTasksTime",
+        "label": "Дополнительные задачи",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы по ускорению",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите количество комнат, площадь, тип уборки, дополнительные задачи и количество убирающихся. Калькулятор оценит время.",
+      "about": "Время уборки зависит от площади, типа уборки и количества людей. Лёгкая уборка — 0.5 мин/м², генеральная — 2.5 мин/м², после ремонта — 3.5 мин/м².",
+      "formula": "Время = Площадь × Норма времени + Комнаты × 10 мин + Дополнительные задачи; Итог = Время / Количество людей",
+      "faq": [
+        {
+          "question": "Сколько времени занимает уборка квартиры?",
+          "answer": "1-комнатная (30-40 м²) — 1-1.5 часа обычной уборки. 2-комнатная (50-60 м²) — 2-2.5 часа. 3-комнатная — 3-4 часа. Генеральная уборка в 2-3 раза дольше."
+        },
+        {
+          "question": "Как ускорить уборку?",
+          "answer": "1) Убирайтесь системно — сверху вниз, слева направо. 2) Используйте правильные инструменты (микрофибра, швабра с отжимом). 3) Убирайтесь вместе — делите зоны."
+        },
+        {
+          "question": "Что входит в лёгкую, обычную и генеральную уборку?",
+          "answer": "Лёгкая — протирка пыли, влажная уборка полов. Обычная — +чистка санузла, кухни, вынос мусора. Генеральная — +мытьё окон, стен, дезинфекция, чистка труднодоступных мест."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Cleaning time estimates — Molly Maid",
+          "url": "https://www.mollymaid.com/practical-tips/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "rashody-na-stirku",
+    "id": "laundry-calculator",
+    "title": "Калькулятор расходов на стирку",
+    "description": "Расчёт месячных затрат на стирку: порошок, вода, электричество",
+    "subcategory": "everyday-dom",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "loadsPerWeek",
+        "label": "Загрузок в неделю",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 14
+      },
+      {
+        "name": "loadSize",
+        "label": "Размер загрузки",
+        "type": "select",
+        "options": [
+          {
+            "value": "small",
+            "label": "Маленькая (до 3 кг)"
+          },
+          {
+            "value": "medium",
+            "label": "Средняя (4-5 кг)"
+          },
+          {
+            "value": "large",
+            "label": "Большая (6-8 кг)"
+          },
+          {
+            "value": "xlarge",
+            "label": "Очень большая (9+ кг)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "detergentCost",
+        "label": "Цена порошка/геля (₽ за кг)",
+        "type": "number",
+        "placeholder": "250",
+        "defaultValue": 250,
+        "min": 50,
+        "max": 1000
+      },
+      {
+        "name": "machineType",
+        "label": "Тип машины",
+        "type": "select",
+        "options": [
+          {
+            "value": "modern",
+            "label": "Современная (класс А+, инвертор)"
+          },
+          {
+            "value": "standard",
+            "label": "Обычная (класс А/В)"
+          },
+          {
+            "value": "old",
+            "label": "Старая (класс C и ниже)"
+          }
+        ],
+        "defaultValue": "standard"
+      },
+      {
+        "name": "waterCost",
+        "label": "Стоимость воды (₽/м³)",
+        "type": "number",
+        "placeholder": "45",
+        "defaultValue": 45,
+        "min": 10,
+        "max": 200
+      },
+      {
+        "name": "electricityCost",
+        "label": "Стоимость электроэнергии (₽/кВт⋅ч)",
+        "type": "number",
+        "placeholder": "5.5",
+        "defaultValue": 5.5,
+        "min": 1,
+        "max": 20,
+        "step": 0.1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "detergentCost",
+        "label": "Затраты на порошок",
+        "type": "number",
+        "unit": "₽/мес"
+      },
+      {
+        "name": "waterCost",
+        "label": "Затраты на воду",
+        "type": "number",
+        "unit": "₽/мес"
+      },
+      {
+        "name": "electricityCost",
+        "label": "Затраты на электричество",
+        "type": "number",
+        "unit": "₽/мес"
+      },
+      {
+        "name": "totalMonthly",
+        "label": "ИТОГО в месяц",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalYearly",
+        "label": "ИТОГО в год",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "costPerLoad",
+        "label": "Стоимость одной стирки",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "savingsTips",
+        "label": "Как сэкономить",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите количество стирок в неделю, размер загрузки, цену порошка, тип машины и тарифы на воду/электричество.",
+      "about": "Стоимость стирки складывается из: порошка (~30-40%), воды (~20%), электроэнергии (~40%). Современные машины экономят 30-40% ресурсов.",
+      "formula": "Стоимость стирки = Порошок + (Вода × Тариф) + (Электроэнергия × Тариф); Месячные = × Загрузок в месяц",
+      "faq": [
+        {
+          "question": "Сколько стоит одна стирка?",
+          "answer": "В среднем 15-30₽ за стирку при обычных тарифах. Современная машина, полная загрузка, экономичный режим — ~15₽. Старая машина, маленькая загрузка — ~35₽."
+        },
+        {
+          "question": "Как снизить расходы на стирку?",
+          "answer": "1) Копите бельё для полной загрузки. 2) Стирайте при 30-40°C вместо 60°C. 3) Используйте концентрированные гели (не переборщите!). 4) При покупке — выбирайте класс А+++"
+        },
+        {
+          "question": "Гель или порошок — что выгоднее?",
+          "answer": "Концентрированные гели обычно выгоднее: их нужно меньше, они лучше растворяются, не требуют дополнительных полосканий. Но сравнивайте цену за стирку, а не за кг."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Washing machine energy consumption — Energy Star",
+          "url": "https://www.energystar.gov/products/washers"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "shkolnye-prinadlezhnosti",
+    "id": "school-supplies-calculator",
+    "title": "Калькулятор школьных принадлежностей",
+    "description": "Расчёт бюджета на школьные принадлежности по классу и количеству предметов",
+    "subcategory": "everyday-obuchenie",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "grade",
+        "label": "Класс/курс",
+        "type": "select",
+        "options": [
+          {
+            "value": "grade1",
+            "label": "1 класс"
+          },
+          {
+            "value": "grade4",
+            "label": "4 класс (начальная школа)"
+          },
+          {
+            "value": "grade5",
+            "label": "5 класс (средняя школа)"
+          },
+          {
+            "value": "grade9",
+            "label": "9 класс"
+          },
+          {
+            "value": "grade11",
+            "label": "11 класс"
+          },
+          {
+            "value": "university1",
+            "label": "1 курс университета"
+          },
+          {
+            "value": "university3",
+            "label": "3+ курс университета"
+          }
+        ],
+        "defaultValue": "grade5"
+      },
+      {
+        "name": "quality",
+        "label": "Уровень качества",
+        "type": "select",
+        "options": [
+          {
+            "value": "budget",
+            "label": "Эконом (базовые товары)"
+          },
+          {
+            "value": "standard",
+            "label": "Стандарт (средний сегмент)"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум (фирменные товары)"
+          }
+        ],
+        "defaultValue": "standard"
+      },
+      {
+        "name": "includeTech",
+        "label": "Включить технику",
+        "type": "select",
+        "options": [
+          {
+            "value": "no",
+            "label": "Нет (только канцелярия)"
+          },
+          {
+            "value": "yes",
+            "label": "Да (калькулятор, планшет и др.)"
+          }
+        ],
+        "defaultValue": "no"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalCost",
+        "label": "Общая стоимость",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "backpack",
+        "label": "Рюкзак/портфель",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "stationery",
+        "label": "Канцелярия",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "notebooks",
+        "label": "Тетради и учебники",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "artSupplies",
+        "label": "Рисование/труд",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "tech",
+        "label": "Техника",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "list",
+        "label": "Список покупок",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите класс/курс, уровень качества и нужна ли техника. Калькулятор рассчитает бюджет и составит список покупок.",
+      "about": "Стоимость школьных принадлежностей растёт с классом: 1 класс — базовый набор, старшие классы — специализированные предметы, университет — техника.",
+      "formula": "Сумма = (Рюкзак + Канцелярия + Тетради + Рисование + Техника) × Коэффициент качества",
+      "faq": [
+        {
+          "question": "Сколько стоит собрать ребёнка в школу?",
+          "answer": "1 класс — от 2000₽ (эконом) до 8000₽ (премиум). 5-9 класс — от 4000₽ до 15000₽. 10-11 класс + университет — от 10000₽ до 50000₽ (с техникой)."
+        },
+        {
+          "question": "Что входит в базовый набор первоклассника?",
+          "answer": "Рюкзак (ортопедический!), 10 тетрадей, цветные карандаши, фломастеры, пластилин, кисти, ножницы безопасные, клей-карандаш, линейка 15 см, пенал, кошелёк для обедов."
+        },
+        {
+          "question": "Нужен ли первокласснику планшет/ноутбук?",
+          "answer": "В 1 класс — нет. В средней школе — может пригодиться для домашних заданий. В старшей школе и университете — практически необходим."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Back-to-school shopping guide",
+          "url": "https://www.parents.com/kids/education/back-to-school/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "novogodniy-dekor",
+    "id": "holiday-decoration-calculator",
+    "title": "Калькулятор новогоднего декора",
+    "description": "Расчёт бюджета на новогоднее украшение: ёлка, гирлянды, игрушки, декор",
+    "subcategory": "everyday-prazdniki",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "treeSize",
+        "label": "Размер ёлки",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет ёлки (только декор)"
+          },
+          {
+            "value": "small",
+            "label": "Маленькая (до 1 м, настольная)"
+          },
+          {
+            "value": "medium",
+            "label": "Средняя (1.5-1.8 м)"
+          },
+          {
+            "value": "large",
+            "label": "Большая (2-2.5 м)"
+          },
+          {
+            "value": "xlarge",
+            "label": "Огромная (3+ м)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "treeType",
+        "label": "Тип ёлки",
+        "type": "select",
+        "options": [
+          {
+            "value": "live",
+            "label": "Живая (срезанная)"
+          },
+          {
+            "value": "potted",
+            "label": "Живая в горшке"
+          },
+          {
+            "value": "artificial",
+            "label": "Искусственная ПВХ"
+          },
+          {
+            "value": "premium_artificial",
+            "label": "Искусственная литая (премиум)"
+          }
+        ],
+        "defaultValue": "artificial"
+      },
+      {
+        "name": "lightLength",
+        "label": "Длина гирлянд (метров)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "ornamentCount",
+        "label": "Количество игрушек/шаров",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 0,
+        "max": 200
+      },
+      {
+        "name": "additionalDecor",
+        "label": "Дополнительный декор",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "basic",
+            "label": "Базовый (мишура, дождик, верхушка)"
+          },
+          {
+            "value": "full",
+            "label": "Полный (всё + фигурки, свечи, венок на дверь)"
+          },
+          {
+            "value": "extreme",
+            "label": "Максимум (профессиональное освещение, лазерный проектор)"
+          }
+        ],
+        "defaultValue": "basic"
+      },
+      {
+        "name": "quality",
+        "label": "Уровень качества",
+        "type": "select",
+        "options": [
+          {
+            "value": "budget",
+            "label": "Эконом (бюджетный магазин)"
+          },
+          {
+            "value": "standard",
+            "label": "Стандарт (средний сегмент)"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум (фирменный магазин)"
+          }
+        ],
+        "defaultValue": "standard"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "treeCost",
+        "label": "Ёлка",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "lightsCost",
+        "label": "Гирлянды",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "ornamentsCost",
+        "label": "Игрушки/шары",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "additionalCost",
+        "label": "Доп. декор",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalCost",
+        "label": "ИТОГО",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "recommendations",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите размер и тип ёлки, укажите длину гирлянд и количество игрушек, выберите дополнительный декор и уровень качества.",
+      "about": "Новогодний декор включает: ёлку (живую или искусственную), гирлянды (LED безопаснее и экономнее), шары/игрушки, мишуру, возможно венок и уличное освещение.",
+      "formula": "Бюджет = Ёлка + (Гирлянды × Цена/м) + (Игрушки × Цена/шт) + Доп. декор; Всё × Коэффициент качества",
+      "faq": [
+        {
+          "question": "Живая или искусственная ёлка — что выгоднее?",
+          "answer": "Живая: 1500-5000₽/год, экологична при правильной утилизации. Искусственная: 3000-15000₽ разово, служит 5-10 лет. При 5+ годах использования искусственная выгоднее."
+        },
+        {
+          "question": "Какие гирлянды лучше?",
+          "answer": "LED-гирлянды: безопаснее (не греются), экономят электричество в 10 раз, служат дольше. Белый тёплый свет классический, RGB — для настроения."
+        },
+        {
+          "question": "Сколько игрушек нужно на ёлку?",
+          "answer": "На 1.5 м ёлку — 30-50 шаров. На 2 м — 60-80 шаров. Правило: шаров должно быть в 10 раз больше, чем высота ёлки в метрах. Микс размеров выглядит лучше."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Christmas tree decoration guide",
+          "url": "https://www.bhg.com/christmas/trees/"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

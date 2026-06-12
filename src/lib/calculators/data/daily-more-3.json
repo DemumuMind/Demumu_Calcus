@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "pereezd-raschet",
+    "id": "moving-calculator",
+    "title": "Калькулятор переезда",
+    "description": "Расчёт стоимости и объёма при переезде в новую квартиру",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "remont-telefona-stoimost",
+    "id": "phone-repair-cost",
+    "title": "Калькулятор ремонта телефона",
+    "description": "Ориентировочная стоимость ремонта смартфона",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "reference",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "domashnij-byudzhet",
+    "id": "household-budget",
+    "title": "Калькулятор домашнего бюджета",
+    "description": "Расчёт семейного бюджета и баланса доходов/расходов",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "rashody-na-pitomca",
+    "id": "pet-cost-calculator",
+    "title": "Калькулятор расходов на питомца",
+    "description": "Расчёт месячных и годовых расходов на содержание животного",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "podarki-na-svadbu",
+    "id": "wedding-gift-calculator",
+    "title": "Калькулятор подарков на свадьбу",
+    "description": "Сколько подарить денег или что подарить на свадьбу",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "vstrecha-novogo-goda",
+    "id": "new-year-party",
+    "title": "Калькулятор встречи Нового года",
+    "description": "Расчёт бюджета и продуктов на новогоднюю вечеринку",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "poezdka-na-mashine",
+    "id": "road-trip-calculator",
+    "title": "Калькулятор автопутешествия",
+    "description": "Расчёт расходов на поездку на автомобиле",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "sad-ogorod-raschet",
+    "id": "garden-calculator",
+    "title": "Калькулятор посадок в саду",
+    "description": "Расчёт количества семян и расстояний между растениями",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "rashody-na-otpusk",
+    "id": "vacation-cost",
+    "title": "Калькулятор расходов на отпуск",
+    "description": "Планирование бюджета отпуска с учётом всех статей расходов",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  },
+  {
+    "slug": "investiczii-v-sebya",
+    "id": "self-investment",
+    "title": "Калькулятор инвестиций в себя",
+    "description": "Окупаемость обучения и курсов повышения квалификации",
+    "subcategory": "povsednevnye-drugoe",
+    "type": "formula",
+    "category": "povsednevnye"
+  }
+]

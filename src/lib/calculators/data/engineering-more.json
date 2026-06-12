@@ -1,0 +1,1188 @@
+[
+  {
+    "slug": "truboprovod",
+    "id": "pipe-calculator",
+    "title": "Трубопровод",
+    "description": "Расчёт диаметра, расхода, скорости потока и потерь давления в трубопроводе",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "diameter",
+        "label": "Диаметр трубы D (мм)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50,
+        "min": 1
+      },
+      {
+        "name": "flowRate",
+        "label": "Расход Q (м³/ч)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      },
+      {
+        "name": "velocity",
+        "label": "Скорость v (м/с)",
+        "type": "number",
+        "placeholder": "1.4",
+        "defaultValue": 1.4,
+        "min": 0
+      },
+      {
+        "name": "length",
+        "label": "Длина трубы L (м)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "roughness",
+        "label": "Шероховатость",
+        "type": "select",
+        "options": [
+          {
+            "value": "0.0001",
+            "label": "Сталь новая (0.1 мм)"
+          },
+          {
+            "value": "0.0002",
+            "label": "Сталь после эксплуатации (0.2 мм)"
+          },
+          {
+            "value": "0.0005",
+            "label": "Чугун (0.5 мм)"
+          },
+          {
+            "value": "0.0015",
+            "label": "Асбестоцемент (1.5 мм)"
+          },
+          {
+            "value": "0.00001",
+            "label": "Медь/пластик (0.01 мм)"
+          }
+        ],
+        "defaultValue": "0.0002"
+      },
+      {
+        "name": "fluid",
+        "label": "Среда",
+        "type": "select",
+        "options": [
+          {
+            "value": "water",
+            "label": "Вода (20°C)"
+          },
+          {
+            "value": "oil",
+            "label": "Масло (40°C)"
+          },
+          {
+            "value": "air",
+            "label": "Воздух (20°C)"
+          }
+        ],
+        "defaultValue": "water"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "velocity",
+        "label": "Скорость потока",
+        "type": "number",
+        "unit": "м/с"
+      },
+      {
+        "name": "flowRate",
+        "label": "Расход",
+        "type": "number",
+        "unit": "м³/ч"
+      },
+      {
+        "name": "reynolds",
+        "label": "Число Рейнольдса",
+        "type": "number",
+        "unit": ""
+      },
+      {
+        "name": "pressureDrop",
+        "label": "Потеря давления",
+        "type": "number",
+        "unit": "Па"
+      }
+    ],
+    "content": {
+      "howTo": "Введите диаметр трубы, длину и расход (или скорость). Выберите материал трубы и среду. Калькулятор рассчитает гидравлические параметры.",
+      "about": "Калькулятор трубопровода использует формулы гидравлики для расчёта скорости потока, расхода, числа Рейнольдса и потерь давления по методу Дарси-Вейсбаха.",
+      "usage": "Используется при проектировании систем водоснабжения, отопления, пневматических и гидравлических систем.",
+      "formula": "Q = v * A, Re = (rho*v*D) / mu, deltaP = lambda * (L/D) * (rho*v²/2), где A = pi*D²/4, lambda - коэффициент сопротивления",
+      "faq": [
+        {
+          "question": "Что такое число Рейнольдса?",
+          "answer": "Число Re определяет режим течения: при Re < 2300 - ламинарное, при Re > 4000 - турбулентное течение."
+        },
+        {
+          "question": "Как влияет диаметр на потери давления?",
+          "answer": "Потери давления обратно пропорциональны диаметру в 5-й степени при постоянном расходе. Увеличение диаметра существенно снижает сопротивление."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Формула Дарси-Вейсбаха - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Формула_Дарси-Вейсбаха"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "remennaya-peredacha",
+    "id": "belt-pulley-calculator",
+    "title": "Ременная передача",
+    "description": "Расчёт передаточного отношения, длины ремня и центрального расстояния",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "drivingPulley",
+        "label": "Диаметр ведущего шкива d1 (мм)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 1
+      },
+      {
+        "name": "drivenPulley",
+        "label": "Диаметр ведомого шкива d2 (мм)",
+        "type": "number",
+        "placeholder": "200",
+        "defaultValue": 200,
+        "min": 1
+      },
+      {
+        "name": "centerDistance",
+        "label": "Центральное расстояние a (мм)",
+        "type": "number",
+        "placeholder": "500",
+        "defaultValue": 500,
+        "min": 1
+      },
+      {
+        "name": "drivingRpm",
+        "label": "Частота вращения ведущего n1 (об/мин)",
+        "type": "number",
+        "placeholder": "1500",
+        "defaultValue": 1500,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "ratio",
+        "label": "Передаточное отношение",
+        "type": "number",
+        "unit": ""
+      },
+      {
+        "name": "drivenRpm",
+        "label": "Частота ведомого",
+        "type": "number",
+        "unit": "об/мин"
+      },
+      {
+        "name": "beltLength",
+        "label": "Длина ремня",
+        "type": "number",
+        "unit": "мм"
+      }
+    ],
+    "content": {
+      "howTo": "Введите диаметры шкивов, центральное расстояние и частоту вращения. Калькулятор определит передаточное отношение и длину ремня.",
+      "about": "Ременная передача передаёт вращение между валами с помощью ремня и шкивов. Передаточное отношение обратно пропорционально диаметрам шкивов.",
+      "usage": "Применяется для снижения или повышения оборотов, передачи мощности между удалёнными валами, демпфирования колебаний.",
+      "formula": "i = d2/d1, n2 = n1/i, L = 2a + pi(d1+d2)/2 + (d2-d1)²/(4a)",
+      "faq": [
+        {
+          "question": "Как определить направление вращения?",
+          "answer": "При открытой передаче (схема с чертежа) шестерни вращаются в одном направлении. При перекрёстной - в противоположных."
+        },
+        {
+          "question": "Какое рекомендуется центральное расстояние?",
+          "answer": "Оптимальное центральное расстояние: a = (d1+d2)/2 до 2(d1+d2). Минимум - 0.7(d1+d2)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ременная передача - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Ремённая_передача"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "pruzhina",
+    "id": "spring-calculator",
+    "title": "Пружина",
+    "description": "Расчёт жёсткости, деформации и параметров сжатия, растяжения, кручения",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "springType",
+        "label": "Тип пружины",
+        "type": "select",
+        "options": [
+          {
+            "value": "compression",
+            "label": "Сжатие"
+          },
+          {
+            "value": "extension",
+            "label": "Растяжение"
+          },
+          {
+            "value": "torsion",
+            "label": "Кручение"
+          }
+        ],
+        "defaultValue": "compression"
+      },
+      {
+        "name": "wireDiameter",
+        "label": "Диаметр проволоки d (мм)",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 0.1
+      },
+      {
+        "name": "meanDiameter",
+        "label": "Средний диаметр пружины D (мм)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 1
+      },
+      {
+        "name": "coilCount",
+        "label": "Количество рабочих витков n",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 1
+      },
+      {
+        "name": "load",
+        "label": "Нагрузка F (Н)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "shearModulus",
+        "label": "Модуль сдвига G (МПа)",
+        "type": "select",
+        "options": [
+          {
+            "value": "80000",
+            "label": "Сталь пружинная (80000 МПа)"
+          },
+          {
+            "value": "45000",
+            "label": "Бронза (45000 МПа)"
+          },
+          {
+            "value": "44000",
+            "label": "Латунь (44000 МПа)"
+          },
+          {
+            "value": "78000",
+            "label": "Нержавеющая сталь (78000 МПа)"
+          }
+        ],
+        "defaultValue": "80000"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "springRate",
+        "label": "Жёсткость пружины",
+        "type": "number",
+        "unit": "Н/мм"
+      },
+      {
+        "name": "deflection",
+        "label": "Деформация",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "springIndex",
+        "label": "Показатель пружины",
+        "type": "number",
+        "unit": ""
+      },
+      {
+        "name": "maxShearStress",
+        "label": "Максимальное касательное напряжение",
+        "type": "number",
+        "unit": "МПа"
+      }
+    ],
+    "content": {
+      "howTo": "Введите тип пружины, диаметр проволоки, средний диаметр, количество витков и нагрузку. Калькулятор определит жёсткость и деформацию.",
+      "about": "Пружина - упругий элемент, накапливающий механическую энергию при деформации. Жёсткость пружины зависит от материала, размеров и количества витков.",
+      "usage": "Используется в механизмах для возврата деталей в исходное положение, амортизации, хранения энергии, создания усилий.",
+      "formula": "C = D/d - показатель пружины, k = (Gd⁴)/(8D³n) - жёсткость, s = F/k - деформация, tau = (8FDK)/(pi*d³) - напряжение, K - коэффициент Вала",
+      "faq": [
+        {
+          "question": "Что такое показатель пружины?",
+          "answer": "Показатель пружины C = D/d должен быть в диапазоне 4-16. При C < 4 пружина сложна в изготовлении, при C > 16 возможна потеря устойчивости."
+        },
+        {
+          "question": "Как влияет число витков на жёсткость?",
+          "answer": "Жёсткость обратно пропорциональна числу витков. Увеличение витков в 2 раза уменьшает жёсткость в 2 раза."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пружина - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пружина"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "rezba",
+    "id": "thread-calculator",
+    "title": "Резьба",
+    "description": "Параметры метрической, дюймовой резьбы: шаг, диаметры, сверло под резьбу",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "threadType",
+        "label": "Тип резьбы",
+        "type": "select",
+        "options": [
+          {
+            "value": "M6",
+            "label": "Метрическая M6"
+          },
+          {
+            "value": "M8",
+            "label": "Метрическая M8"
+          },
+          {
+            "value": "M10",
+            "label": "Метрическая M10"
+          },
+          {
+            "value": "M12",
+            "label": "Метрическая M12"
+          },
+          {
+            "value": "M16",
+            "label": "Метрическая M16"
+          },
+          {
+            "value": "M20",
+            "label": "Метрическая M20"
+          },
+          {
+            "value": "M24",
+            "label": "Метрическая M24"
+          },
+          {
+            "value": "1/4-20",
+            "label": "UNC 1/4-20"
+          },
+          {
+            "value": "3/8-16",
+            "label": "UNC 3/8-16"
+          },
+          {
+            "value": "1/2-13",
+            "label": "UNC 1/2-13"
+          },
+          {
+            "value": "1/4-28",
+            "label": "UNF 1/4-28"
+          },
+          {
+            "value": "3/8-24",
+            "label": "UNF 3/8-24"
+          }
+        ],
+        "defaultValue": "M10"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "nominalDiameter",
+        "label": "Номинальный диаметр",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "pitch",
+        "label": "Шаг резьбы",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "majorDiameter",
+        "label": "Наружный диаметр",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "minorDiameter",
+        "label": "Внутренний диаметр",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "tapDrill",
+        "label": "Сверло под резьбу",
+        "type": "number",
+        "unit": "мм"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип резьбы. Калькулятор покажет все параметры: шаг, диаметры, размер сверла для нарезания резьбы.",
+      "about": "Резьба - винтовая канавка на цилиндрической или конической поверхности. Метрическая резьба (M) имеет профиль треугольника с углом 60°, дюймовая - 55° (BSW) или 60° (UNC/UNF).",
+      "usage": "Используется при изготовлении деталей, подборе крепежа, выборе инструмента для нарезания резьбы.",
+      "formula": "H = 0.866P - высота профиля, D2 = D - 0.6495P - средний диаметр, D1 = D - 1.0825P - внутренний диаметр, Сверло = D - P (приближённо)",
+      "faq": [
+        {
+          "question": "Чем отличается метрическая резьба от дюймовой?",
+          "answer": "Метрическая (M) измеряется в мм с шагом в мм. Дюймовая (UNC/UNF) измеряется в дюймах с количеством витков на дюйм (TPI)."
+        },
+        {
+          "question": "Как подобрать сверло под резьбу?",
+          "answer": "Диаметр сверла приближённо равен номинальному диаметру минус шаг резьбы. Например, для M10 (шаг 1.5) сверло ≈ 8.5 мм."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Метрическая резьба - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Метрическая_резьба"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "zubchatoe-koleso",
+    "id": "gear-calculator",
+    "title": "Зубчатое колесо",
+    "description": "Расчёт модуля, числа зубьев, делительного диаметра, передаточного отношения",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "module",
+        "label": "Модуль m (мм)",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 0.1
+      },
+      {
+        "name": "teeth1",
+        "label": "Число зубьев колеса 1 z1",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 1
+      },
+      {
+        "name": "teeth2",
+        "label": "Число зубьев колеса 2 z2",
+        "type": "number",
+        "placeholder": "40",
+        "defaultValue": 40,
+        "min": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "pitchDiameter1",
+        "label": "Делительный диаметр d1",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "pitchDiameter2",
+        "label": "Делительный диаметр d2",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "gearRatio",
+        "label": "Передаточное отношение",
+        "type": "number",
+        "unit": ""
+      },
+      {
+        "name": "centerDistance",
+        "label": "Межосевое расстояние",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "outsideDiameter1",
+        "label": "Вершины зубьев колеса 1",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "outsideDiameter2",
+        "label": "Вершины зубьев колеса 2",
+        "type": "number",
+        "unit": "мм"
+      }
+    ],
+    "content": {
+      "howTo": "Введите модуль и число зубьев обоих колёс. Калькулятор рассчитает геометрические параметры зубчатой передачи.",
+      "about": "Модуль - отношение делительного диаметра к числу зубьев. Стандартные модули: 0.5, 0.8, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8 мм.",
+      "usage": "Используется при проектировании редукторов, коробок передач, зубчатых механизмов.",
+      "formula": "d = m * z - делительный диаметр, i = z2/z1 - передаточное отношение, a = m(z1+z2)/2 - межосевое расстояние, da = m(z+2) - диаметр вершин",
+      "faq": [
+        {
+          "question": "Что такое модуль зубчатого колеса?",
+          "answer": "Модуль - основной параметр зубчатого колеса, равный отношению делительного диаметра к числу зубьев или делённый на pi шагу по делительной окружности."
+        },
+        {
+          "question": "Как рассчитать расстояние между осями?",
+          "answer": "Межосевое расстояние a = m(z1+z2)/2 = (d1+d2)/2 - полусумма делительных диаметров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Зубчатое колесо - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Зубчатое_колесо"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "podshipnik",
+    "id": "bearing-calculator",
+    "title": "Подшипник качения",
+    "description": "Расчёт номинального ресурса L10 и срока службы подшипника",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "dynamicLoadRating",
+        "label": "Динамическая грузоподъёмность C (кН)",
+        "type": "number",
+        "placeholder": "19.5",
+        "defaultValue": 19.5,
+        "min": 0.1
+      },
+      {
+        "name": "equivalentLoad",
+        "label": "Эквивалентная нагрузка P (кН)",
+        "type": "number",
+        "placeholder": "6.5",
+        "defaultValue": 6.5,
+        "min": 0.1
+      },
+      {
+        "name": "rpm",
+        "label": "Частота вращения n (об/мин)",
+        "type": "number",
+        "placeholder": "1500",
+        "defaultValue": 1500,
+        "min": 0
+      },
+      {
+        "name": "bearingType",
+        "label": "Тип подшипника",
+        "type": "select",
+        "options": [
+          {
+            "value": "3",
+            "label": "Шариковый (показатель степени p=3)"
+          },
+          {
+            "value": "10/3",
+            "label": "Роликовый (показатель степени p=10/3)"
+          }
+        ],
+        "defaultValue": "3"
+      },
+      {
+        "name": "lifeFactor",
+        "label": "Коэффициент надёжности a1",
+        "type": "select",
+        "options": [
+          {
+            "value": "1",
+            "label": "90% надёжность (L10)"
+          },
+          {
+            "value": "0.62",
+            "label": "95% надёжность (L5)"
+          },
+          {
+            "value": "0.33",
+            "label": "99% надёжность (L1)"
+          }
+        ],
+        "defaultValue": "1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "l10Life",
+        "label": "Номинальный ресурс L10",
+        "type": "number",
+        "unit": "млн об."
+      },
+      {
+        "name": "lifeHours",
+        "label": "Ресурс в часах",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "lifeYears",
+        "label": "Ресурс в годах",
+        "type": "number",
+        "unit": "лет"
+      }
+    ],
+    "content": {
+      "howTo": "Введите динамическую грузоподъёмность, эквивалентную нагрузку, частоту вращения и тип подшипника. Калькулятор определит расчётный ресурс.",
+      "about": "Номинальный ресурс L10 - число миллионов оборотов, которое выдержит 90% подшипников до появления признаков усталости. Расчёт по стандарту ISO 281.",
+      "usage": "Применяется для выбора подшипника, оценки срока службы, планирования технического обслуживания.",
+      "formula": "L10 = (C/P)^p * a1 (млн оборотов), p = 3 для шариковых, p = 10/3 для роликовых, L10h = 10^6 * L10 / (60 * n) - в часах",
+      "faq": [
+        {
+          "question": "Что такое L10?",
+          "answer": "L10 - номинальный ресурс подшипника. 90% подшипников выдержат этот ресурс без признаков усталости."
+        },
+        {
+          "question": "Как рассчитать эквивалентную нагрузку?",
+          "answer": "P = X*Fr + Y*Fa, где Fr - радиальная нагрузка, Fa - осевая, X и Y - коэффициенты из каталога."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Подшипник качения - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Подшипник_качения"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "moment-bolta",
+    "id": "bolt-torque-calculator",
+    "title": "Момент затяжки болта",
+    "description": "Расчёт рекомендуемого момента затяжки для метрических болтов",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "boltSize",
+        "label": "Размер болта",
+        "type": "select",
+        "options": [
+          {
+            "value": "M6",
+            "label": "M6"
+          },
+          {
+            "value": "M8",
+            "label": "M8"
+          },
+          {
+            "value": "M10",
+            "label": "M10"
+          },
+          {
+            "value": "M12",
+            "label": "M12"
+          },
+          {
+            "value": "M16",
+            "label": "M16"
+          },
+          {
+            "value": "M20",
+            "label": "M20"
+          },
+          {
+            "value": "M24",
+            "label": "M24"
+          }
+        ],
+        "defaultValue": "M10"
+      },
+      {
+        "name": "boltGrade",
+        "label": "Класс прочности",
+        "type": "select",
+        "options": [
+          {
+            "value": "8.8",
+            "label": "8.8 (sigmaв=800 МПа, sigmaт=640 МПа)"
+          },
+          {
+            "value": "10.9",
+            "label": "10.9 (sigmaв=1000 МПа, sigmaт=900 МПа)"
+          },
+          {
+            "value": "12.9",
+            "label": "12.9 (sigmaв=1200 МПа, sigmaт=1080 МПа)"
+          }
+        ],
+        "defaultValue": "8.8"
+      },
+      {
+        "name": "lubrication",
+        "label": "Состояние резьбы",
+        "type": "select",
+        "options": [
+          {
+            "value": "0.2",
+            "label": "Сухая (K=0.2)"
+          },
+          {
+            "value": "0.15",
+            "label": "Смазанная маслом (K=0.15)"
+          },
+          {
+            "value": "0.12",
+            "label": "Смазанная MoS2 (K=0.12)"
+          }
+        ],
+        "defaultValue": "0.2"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "torque",
+        "label": "Момент затяжки",
+        "type": "number",
+        "unit": "Н*м"
+      },
+      {
+        "name": "preload",
+        "label": "Усилие предварительного затяжки",
+        "type": "number",
+        "unit": "кН"
+      },
+      {
+        "name": "stress",
+        "label": "Напряжение в болте",
+        "type": "number",
+        "unit": "МПа"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите размер болта, класс прочности и состояние резьбы. Калькулятор определит рекомендуемый момент затяжки.",
+      "about": "Момент затяжки обеспечивает необходимое предварительное напряжение в болте для надёжности соединения. Зависит от размера, класса прочности и коэффициента трения.",
+      "usage": "Используется при сборке узлов, составлении технологических карт, выборе динамометрических ключей.",
+      "formula": "T = K * Fp * d, Fp = 0.7-0.9 * Re * As, где K - коэффициент трения (0.12-0.2), As - расчётное напряжённое сечение",
+      "faq": [
+        {
+          "question": "Что означает класс прочности 8.8?",
+          "answer": "Первая цифра (8) - sigmaв в сотнях МПа (800 МПа). Вторая цифра (8) - соотношение sigmaт/sigmaв * 10 (sigmaт = 640 МПа)."
+        },
+        {
+          "question": "Почему важна смазка резьбы?",
+          "answer": "Смазка снижает коэффициент трения (K), при том же моменте создаётся большее усилие затяжки. Без смазки болт может быть недотянут."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Болт - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Болт"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "listovoj-metall",
+    "id": "sheet-metal-calculator",
+    "title": "Листовой металл",
+    "description": "Расчёт развёртки, поправки на изгиб и K-фактора",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "thickness",
+        "label": "Толщина листа S (мм)",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 0.1
+      },
+      {
+        "name": "bendAngle",
+        "label": "Угол изгиба alpha (град.)",
+        "type": "number",
+        "placeholder": "90",
+        "defaultValue": 90,
+        "min": 0,
+        "max": 180
+      },
+      {
+        "name": "innerRadius",
+        "label": "Внутренний радиус изгиба r (мм)",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 0
+      },
+      {
+        "name": "leg1",
+        "label": "Длина прямого участка L1 (мм)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50,
+        "min": 0
+      },
+      {
+        "name": "leg2",
+        "label": "Длина прямого участка L2 (мм)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 0
+      },
+      {
+        "name": "kFactor",
+        "label": "K-фактор",
+        "type": "number",
+        "placeholder": "0.45",
+        "defaultValue": 0.45,
+        "min": 0.3,
+        "max": 0.5,
+        "step": 0.01
+      }
+    ],
+    "outputs": [
+      {
+        "name": "bendAllowance",
+        "label": "Поправка на изгиб",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "flatPattern",
+        "label": "Развёртка (длина заготовки)",
+        "type": "number",
+        "unit": "мм"
+      },
+      {
+        "name": "neutralAxis",
+        "label": "Нейтральный слой",
+        "type": "number",
+        "unit": "мм"
+      }
+    ],
+    "content": {
+      "howTo": "Введите толщину листа, угол и радиус изгиба, длины прямых участков и K-фактор. Калькулятор определит развёртку заготовки.",
+      "about": "При изгибе листового металла наружные волокна растягиваются, внутренние - сжимаются. Нейтральный слой не меняет длины. K-фактор - положение нейтрального слоя (обычно 0.3-0.5).",
+      "usage": "Используется в производстве деталей из листового металла, приготовлении развёрток, программировании листогибочных станков.",
+      "formula": "BA = (pi/180) * alpha * (r + K*S) - поправка на изгиб, L = L1 + L2 + BA - развёртка, K = 0.45 для стали, 0.3-0.35 для алюминия",
+      "faq": [
+        {
+          "question": "Что такое K-фактор?",
+          "answer": "K-фактор - отношение расстояния от внутренней поверхности до нейтрального слоя к толщине листа. Для стали K=0.45, для алюминия K=0.3-0.35."
+        },
+        {
+          "question": "Как влияет радиус изгиба?",
+          "answer": "При большем радиусе (r > 5S) K-фактор приближается к 0.5. При остром изгибе (r < S) нейтральный слой смещается к внутренней стороне."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гибка металла - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Гибка_металла"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "teploobmennik",
+    "id": "heat-exchanger-calculator",
+    "title": "Теплообменник",
+    "description": "Расчёт тепловой мощности, температур и КПД теплообменника",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "hotInlet",
+        "label": "Температура горячей среды на входе T1h (°C)",
+        "type": "number",
+        "placeholder": "80",
+        "defaultValue": 80
+      },
+      {
+        "name": "hotOutlet",
+        "label": "Температура горячей среды на выходе T2h (°C)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50
+      },
+      {
+        "name": "coldInlet",
+        "label": "Температура холодной среды на входе T1c (°C)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20
+      },
+      {
+        "name": "coldOutlet",
+        "label": "Температура холодной среды на выходе T2c (°C)",
+        "type": "number",
+        "placeholder": "40",
+        "defaultValue": 40
+      },
+      {
+        "name": "hotFlowRate",
+        "label": "Расход горячей среды Gh (кг/с)",
+        "type": "number",
+        "placeholder": "0.5",
+        "defaultValue": 0.5,
+        "min": 0
+      },
+      {
+        "name": "heatCapacity",
+        "label": "Теплоёмкость среды cp (кДж/(кг*K))",
+        "type": "select",
+        "options": [
+          {
+            "value": "4.18",
+            "label": "Вода (4.18 кДж/(кг*K))"
+          },
+          {
+            "value": "2.0",
+            "label": "Масло (2.0 кДж/(кг*K))"
+          },
+          {
+            "value": "1.0",
+            "label": "Воздух (1.0 кДж/(кг*K))"
+          }
+        ],
+        "defaultValue": "4.18"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "heatPower",
+        "label": "Тепловая мощность",
+        "type": "number",
+        "unit": "кВт"
+      },
+      {
+        "name": "logMeanTemp",
+        "label": "Среднелогарифмическая разность температур",
+        "type": "number",
+        "unit": "°C"
+      },
+      {
+        "name": "effectiveness",
+        "label": "КПД теплообменника",
+        "type": "number",
+        "unit": "%"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуры на входе и выходе, расход и тип среды. Калькулятор определит тепловую мощность и эффективность.",
+      "about": "Теплообменник - устройство для передачи тепла между двумя средами. Мощность зависит от расхода, температурного напора и теплоёмкости.",
+      "usage": "Применяется при проектировании систем отопления, кондиционирования, охлаждения, тепловых пунктов.",
+      "formula": "Q = G * cp * (T1 - T2) - тепловая мощность, LMTD = (deltaT1 - deltaT2) / ln(deltaT1/deltaT2) - среднелогарифмический перепад, epsilon = (T2c - T1c) / (T1h - T1c) - КПД",
+      "faq": [
+        {
+          "question": "Что такое LMTD?",
+          "answer": "Log Mean Temperature Difference - среднелогарифмическая разность температур. Учитывает, что разность температур меняется по длине теплообменника."
+        },
+        {
+          "question": "Как повысить КПД теплообменника?",
+          "answer": "Увеличить площадь поверхности, повысить скорость потоков (увеличив коэффициент теплоотдачи), использовать противоток вместо прямотока."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Теплообменник - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Теплообменник"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "pnevmocilindr",
+    "id": "pneumatic-cylinder-calculator",
+    "title": "Пневмоцилиндр",
+    "description": "Расчёт усилия и расхода воздуха пневматического цилиндра",
+    "subcategory": "inzhenernye-raschety",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "boreDiameter",
+        "label": "Диаметр поршня D (мм)",
+        "type": "select",
+        "options": [
+          {
+            "value": "16",
+            "label": "16 мм"
+          },
+          {
+            "value": "20",
+            "label": "20 мм"
+          },
+          {
+            "value": "25",
+            "label": "25 мм"
+          },
+          {
+            "value": "32",
+            "label": "32 мм"
+          },
+          {
+            "value": "40",
+            "label": "40 мм"
+          },
+          {
+            "value": "50",
+            "label": "50 мм"
+          },
+          {
+            "value": "63",
+            "label": "63 мм"
+          },
+          {
+            "value": "80",
+            "label": "80 мм"
+          },
+          {
+            "value": "100",
+            "label": "100 мм"
+          },
+          {
+            "value": "125",
+            "label": "125 мм"
+          }
+        ],
+        "defaultValue": "50"
+      },
+      {
+        "name": "rodDiameter",
+        "label": "Диаметр штока d (мм)",
+        "type": "number",
+        "placeholder": "16",
+        "defaultValue": 16,
+        "min": 0
+      },
+      {
+        "name": "pressure",
+        "label": "Давление воздуха P (бар)",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 0,
+        "max": 10
+      },
+      {
+        "name": "stroke",
+        "label": "Ход поршня L (мм)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "cycles",
+        "label": "Число циклов в минуту",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "forwardForce",
+        "label": "Усилие при выдвижении",
+        "type": "number",
+        "unit": "Н"
+      },
+      {
+        "name": "returnForce",
+        "label": "Усилие при втягивании",
+        "type": "number",
+        "unit": "Н"
+      },
+      {
+        "name": "airConsumption",
+        "label": "Расход воздуха на цикл",
+        "type": "number",
+        "unit": "Л"
+      },
+      {
+        "name": "airConsumptionPerMin",
+        "label": "Расход воздуха в минуту",
+        "type": "number",
+        "unit": "Л/мин"
+      },
+      {
+        "name": "pistonArea",
+        "label": "Площадь поршня",
+        "type": "number",
+        "unit": "см²"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите диаметр поршня, введите диаметр штока, давление, ход и число циклов. Калькулятор определит усилие и расход воздуха.",
+      "about": "Пневмоцилиндр преобразует энергию сжатого воздуха в механическое движение. Усилие пропорционально давлению и площади поршня.",
+      "usage": "Применяется в пневматических приводах, автоматизации производства, упаковочных машинах, робототехнике.",
+      "formula": "F = P * A - усилие, A = pi*D²/4 - площадь поршня, V = A * L * (P + 1) - расход воздуха (приведённый), Усилие втягивания меньше из-за штока",
+      "faq": [
+        {
+          "question": "Почему усилие втягивания меньше?",
+          "answer": "При втягивании давление действует только на кольцевую площадь поршня за вычетом площади штока, поэтому усилие меньше."
+        },
+        {
+          "question": "Как рассчитать ресурс компрессора?",
+          "answer": "Суммируйте расходы всех пневмоцилиндров и других потребителей. Компрессор должен обеспечивать запас 20-30% по производительности."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пневмоцилиндр - Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пневмоцилиндр"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

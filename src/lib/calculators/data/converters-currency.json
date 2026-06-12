@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "usd-v-rub",
+    "id": "usd-to-rub",
+    "title": "USD в RUB",
+    "description": "Конвертер доллара США в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "eur-v-rub",
+    "id": "eur-to-rub",
+    "title": "EUR в RUB",
+    "description": "Конвертер евро в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "gbp-v-rub",
+    "id": "gbp-to-rub",
+    "title": "GBP в RUB",
+    "description": "Конвертер фунта стерлингов в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "cny-v-rub",
+    "id": "cny-to-rub",
+    "title": "CNY в RUB",
+    "description": "Конвертер китайского юаня в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "jpy-v-rub",
+    "id": "jpy-to-rub",
+    "title": "JPY в RUB",
+    "description": "Конвертер японской иены в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "chf-v-rub",
+    "id": "chf-to-rub",
+    "title": "CHF в RUB",
+    "description": "Конвертер швейцарского франка в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "btc-v-rub",
+    "id": "btc-to-rub",
+    "title": "BTC в RUB",
+    "description": "Конвертер биткоина в российский рубль",
+    "subcategory": "conv-kriptovalyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "eth-v-rub",
+    "id": "eth-to-rub",
+    "title": "ETH в RUB",
+    "description": "Конвертер эфириума в российский рубль",
+    "subcategory": "conv-kriptovalyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "usdt-v-rub",
+    "id": "usdt-to-rub",
+    "title": "USDT в RUB",
+    "description": "Конвертер Tether (USDT) в российский рубль",
+    "subcategory": "conv-kriptovalyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "usd-v-eur",
+    "id": "usd-to-eur",
+    "title": "USD в EUR",
+    "description": "Конвертер доллара в евро",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "usd-v-gbp",
+    "id": "usd-to-gbp",
+    "title": "USD в GBP",
+    "description": "Конвертер доллара в фунт стерлингов",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "try-v-rub",
+    "id": "try-to-rub",
+    "title": "TRY в RUB",
+    "description": "Конвертер турецкой лиры в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "kzt-v-rub",
+    "id": "kzt-to-rub",
+    "title": "KZT в RUB",
+    "description": "Конвертер казахстанского тенге в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "byn-v-rub",
+    "id": "byn-to-rub",
+    "title": "BYN в RUB",
+    "description": "Конвертер белорусского рубля в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "uah-v-rub",
+    "id": "uah-to-rub",
+    "title": "UAH в RUB",
+    "description": "Конвертер украинской гривны в российский рубль",
+    "subcategory": "conv-valyuty",
+    "type": "converter",
+    "category": "konvertery"
+  },
+  {
+    "slug": "zoloto-v-rub",
+    "id": "xau-to-rub",
+    "title": "Золото в RUB",
+    "description": "Конвертер цены золота в российские рубли за грамм и унцию",
+    "subcategory": "conv-dragocennye-metally",
+    "type": "converter",
+    "category": "konvertery"
+  }
+]

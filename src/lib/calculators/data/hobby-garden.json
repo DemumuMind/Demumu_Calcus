@@ -1,0 +1,1230 @@
+[
+  {
+    "slug": "raskhod-semyan",
+    "id": "seed-calculator",
+    "title": "Калькулятор семян",
+    "description": "Расчёт количества семян для посадки с учётом площади, густоты и всхожести",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь посадки (м²)",
+        "type": "number",
+        "placeholder": "10",
+        "min": 0.1,
+        "defaultValue": 10
+      },
+      {
+        "name": "spacing",
+        "label": "Расстояние между растениями (см)",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "defaultValue": 30
+      },
+      {
+        "name": "germinationRate",
+        "label": "Всхожесть семян (%)",
+        "type": "number",
+        "placeholder": "80",
+        "min": 1,
+        "max": 100,
+        "defaultValue": 80
+      },
+      {
+        "name": "plantType",
+        "label": "Тип растения",
+        "type": "select",
+        "options": [
+          {
+            "value": "tomato",
+            "label": "Помидоры"
+          },
+          {
+            "value": "cucumber",
+            "label": "Огурцы"
+          },
+          {
+            "value": "carrot",
+            "label": "Морковь"
+          },
+          {
+            "value": "beet",
+            "label": "Свёкла"
+          },
+          {
+            "value": "pepper",
+            "label": "Перец"
+          },
+          {
+            "value": "lettuce",
+            "label": "Салат"
+          }
+        ],
+        "defaultValue": "tomato"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "plantsNeeded",
+        "label": "Растений нужно",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "seedsNeeded",
+        "label": "Семян с запасом",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "rows",
+        "label": "Количество рядов",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "perRow",
+        "label": "Растений в ряду",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "packets",
+        "label": "Пакетиков семян",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь для посадки, расстояние между растениями, всхожесть семян и тип растения. Калькулятор рассчитает нужное количество семян.",
+      "about": "Всхожесть семян — процент семян, которые прорастут. Обычно 70-90% для свежих семян. Запас 20% компенсирует неудачные всходы.",
+      "formula": "Растений = Площадь / (Расстояние²)\nСемян = Растений × 1.2 / (Всхожесть / 100)",
+      "faq": [
+        {
+          "question": "Как долго хранятся семена?",
+          "answer": "Томаты и огурцы — 5-8 лет. Морковь и лук — 1-2 года. Храните в сухом прохладном месте."
+        },
+        {
+          "question": "Зачем запас семян?",
+          "answer": "Не все семена прорастают, некоторые растения могут погибнуть. Запас позволяет подсадить недостающие."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Seed Starting",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "udobreniya-dlya-sada",
+    "id": "fertilizer-calculator",
+    "title": "Калькулятор удобрений",
+    "description": "Расчёт количества удобрений для огорода с учётом площади и типа растений",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь (м²)",
+        "type": "number",
+        "placeholder": "50",
+        "min": 1,
+        "defaultValue": 50
+      },
+      {
+        "name": "fertilizerType",
+        "label": "Тип удобрения",
+        "type": "select",
+        "options": [
+          {
+            "value": "nitrogen",
+            "label": "Азотное (куриный помёт)"
+          },
+          {
+            "value": "phosphorus",
+            "label": "Фосфорное (костная мука)"
+          },
+          {
+            "value": "potassium",
+            "label": "Калийное (зола)"
+          },
+          {
+            "value": "complex",
+            "label": "Комплексное (NPK)"
+          },
+          {
+            "value": "organic",
+            "label": "Органическое (перегной)"
+          }
+        ],
+        "defaultValue": "complex"
+      },
+      {
+        "name": "plantGroup",
+        "label": "Группа растений",
+        "type": "select",
+        "options": [
+          {
+            "value": "vegetables",
+            "label": "Овощи"
+          },
+          {
+            "value": "fruits",
+            "label": "Плодовые"
+          },
+          {
+            "value": "root",
+            "label": "Корнеплоды"
+          },
+          {
+            "value": "leafy",
+            "label": "Листовые"
+          },
+          {
+            "value": "flowers",
+            "label": "Цветы"
+          }
+        ],
+        "defaultValue": "vegetables"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fertilizerAmount",
+        "label": "Удобрений нужно",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "perSquareMeter",
+        "label": "На квадратный метр",
+        "type": "number",
+        "unit": "г/м²"
+      },
+      {
+        "name": "application",
+        "label": "Способ внесения",
+        "type": "text"
+      },
+      {
+        "name": "timing",
+        "label": "Сроки внесения",
+        "type": "text"
+      },
+      {
+        "name": "warning",
+        "label": "Предупреждение",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь огорода, тип удобрения и группу растений. Калькулятор рассчитает нужное количество и даст рекомендации.",
+      "about": "Основные макроэлементы: Азот (N) — для роста листвы, Фосфор (P) — для корней и плодов, Калий (K) — для иммунитета и зрелости.",
+      "formula": "Удобрения (кг) = Площадь (м²) × Норма (г/м²) / 1000",
+      "faq": [
+        {
+          "question": "Можно ли смешивать удобрения?",
+          "answer": "Нельзя смешивать известь с аммиачной селитрой, золу с навозом. Лучше вносить раздельно."
+        },
+        {
+          "question": "Как часто подкармливать?",
+          "answer": "Овощи — каждые 2-3 недели в период роста. Плодовые — 3-4 раза за сезон."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Fertilizers",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "poliv-rasteniy",
+    "id": "watering-calculator",
+    "title": "Калькулятор полива",
+    "description": "Расчёт количества воды для полива растений с учётом площади и типа почвы",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь (м²)",
+        "type": "number",
+        "placeholder": "20",
+        "min": 0.1,
+        "defaultValue": 20
+      },
+      {
+        "name": "waterDepth",
+        "label": "Норма полива (см/м²)",
+        "type": "number",
+        "placeholder": "5",
+        "min": 0.1,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 5
+      },
+      {
+        "name": "soilType",
+        "label": "Тип почвы",
+        "type": "select",
+        "options": [
+          {
+            "value": "sandy",
+            "label": "Песчаная"
+          },
+          {
+            "value": "loamy",
+            "label": "Супесь"
+          },
+          {
+            "value": "clay",
+            "label": "Глинистая"
+          },
+          {
+            "value": "peat",
+            "label": "Торфяная"
+          }
+        ],
+        "defaultValue": "loamy"
+      },
+      {
+        "name": "method",
+        "label": "Способ полива",
+        "type": "select",
+        "options": [
+          {
+            "value": "manual",
+            "label": "Лейка/шланг"
+          },
+          {
+            "value": "sprinkler",
+            "label": "Дождевание"
+          },
+          {
+            "value": "drip",
+            "label": "Капельный"
+          }
+        ],
+        "defaultValue": "manual"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "waterVolume",
+        "label": "Объём воды",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "wateringTime",
+        "label": "Время полива",
+        "type": "text"
+      },
+      {
+        "name": "frequency",
+        "label": "Частота полива",
+        "type": "text"
+      },
+      {
+        "name": "efficiency",
+        "label": "Эффективность",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь для полива, норму воды, тип почвы и способ полива. Калькулятор рассчитает нужный объём воды.",
+      "about": "Норма полива — 5-10 литров на м² для овощей. Капельный полив самый эффективный (до 95%), но требует времени. Песчаная почва высыхает быстрее.",
+      "formula": "Вода (л) = Площадь (м²) × Норма (см) × 10 × Коэффициент почвы / Эффективность",
+      "faq": [
+        {
+          "question": "В какое время поливать?",
+          "answer": "Утром (6-9) или вечером (18-20). Днём вода испаряется, ночью может вызвать грибок."
+        },
+        {
+          "question": "Как проверить влажность почвы?",
+          "answer": "Воткните палец на 5 см. Если сухо — поливайте. Можно использовать влагомер."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Watering",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "urozhaynost",
+    "id": "yield-calculator",
+    "title": "Калькулятор урожайности",
+    "description": "Прогноз урожая с грядки или огорода на основе площади и типа культуры",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь (м²)",
+        "type": "number",
+        "placeholder": "50",
+        "min": 1,
+        "defaultValue": 50
+      },
+      {
+        "name": "crop",
+        "label": "Культура",
+        "type": "select",
+        "options": [
+          {
+            "value": "tomato",
+            "label": "Помидоры"
+          },
+          {
+            "value": "cucumber",
+            "label": "Огурцы"
+          },
+          {
+            "value": "potato",
+            "label": "Картофель"
+          },
+          {
+            "value": "carrot",
+            "label": "Морковь"
+          },
+          {
+            "value": "beet",
+            "label": "Свёкла"
+          },
+          {
+            "value": "cabbage",
+            "label": "Капуста"
+          },
+          {
+            "value": "onion",
+            "label": "Лук"
+          },
+          {
+            "value": "garlic",
+            "label": "Чеснок"
+          },
+          {
+            "value": "pumpkin",
+            "label": "Тыква"
+          },
+          {
+            "value": "zucchini",
+            "label": "Кабачки"
+          }
+        ],
+        "defaultValue": "tomato"
+      },
+      {
+        "name": "skill",
+        "label": "Уровень огородника",
+        "type": "select",
+        "options": [
+          {
+            "value": "beginner",
+            "label": "Начинающий"
+          },
+          {
+            "value": "intermediate",
+            "label": "Средний"
+          },
+          {
+            "value": "expert",
+            "label": "Опытный"
+          }
+        ],
+        "defaultValue": "intermediate"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "expectedYield",
+        "label": "Ожидаемый урожай",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "yieldPerMeter",
+        "label": "Урожайность",
+        "type": "number",
+        "unit": "кг/м²"
+      },
+      {
+        "name": "marketValue",
+        "label": "Рыночная стоимость",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "range",
+        "label": "Диапазон",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы по увеличению",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь, выберите культуру и уровень опыта. Калькулятор даст прогноз урожая и рекомендации.",
+      "about": "Урожайность зависит от климата, почвы, ухода и сорта. Начинающие получают 40-60% от потенциала, опытные — до 140%.",
+      "formula": "Урожай (кг) = Площадь (м²) × Базовая урожайность × Коэффициент мастерства",
+      "faq": [
+        {
+          "question": "Как увеличить урожай?",
+          "answer": "Правильная подготовка почвы, своевременный полив и подкормка, защита от вредителей, сорта с высокой урожайностью."
+        },
+        {
+          "question": "Что самое выгодное выращивать?",
+          "answer": "Зелень и пряности дают быстрый возврат. Томаты и огурцы — хороший баланс урожая и цены."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Crop Yields",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "kompostirovanie",
+    "id": "compost-garden-calculator",
+    "title": "Калькулятор компоста",
+    "description": "Расчёт соотношения \"зелёного\" и \"коричневого\" материала для компоста",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "greenMaterial",
+        "label": "Зелёный материал (кг)",
+        "type": "number",
+        "placeholder": "10",
+        "min": 0,
+        "defaultValue": 10
+      },
+      {
+        "name": "brownMaterial",
+        "label": "Коричневый материал (кг)",
+        "type": "number",
+        "placeholder": "20",
+        "min": 0,
+        "defaultValue": 20
+      },
+      {
+        "name": "pileSize",
+        "label": "Размер кучи (м³)",
+        "type": "number",
+        "placeholder": "1",
+        "min": 0.1,
+        "max": 10,
+        "defaultValue": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "carbonNitrogen",
+        "label": "Соотношение C:N",
+        "type": "number"
+      },
+      {
+        "name": "ratioStatus",
+        "label": "Статус соотношения",
+        "type": "text"
+      },
+      {
+        "name": "compostReady",
+        "label": "Компост готов через",
+        "type": "text"
+      },
+      {
+        "name": "yield",
+        "label": "Выход готового компоста",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество \"зелёного\" (свежие остатки) и \"коричневого\" (сухие) материала, размер кучи. Калькулятор проверит соотношение углерода и азота.",
+      "about": "Для компостирования нужно соотношение углерод:азот 25-30:1. Зелёный материал богат азотом (15:1), коричневый — углеродом (40:1).",
+      "formula": "C:N = (Зелёный×15 + Коричневый×40) / (Зелёный + Коричневый)\nОптимум: 25-30:1",
+      "faq": [
+        {
+          "question": "Что относится к зелёному материалу?",
+          "answer": "Свежескошенная трава, овощные очистки, кофейная гуща, чайные листья, свежий навоз."
+        },
+        {
+          "question": "Что относится к коричневому?",
+          "answer": "Опавшие листья, солома, картон, опилки, высохшая трава, ветки."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Composting",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "sroki-posadki",
+    "id": "planting-calendar",
+    "title": "Календарь посадки",
+    "description": "Расчёт сроков посадки семян и высаживания рассады с учётом региона",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "crop",
+        "label": "Культура",
+        "type": "select",
+        "options": [
+          {
+            "value": "tomato",
+            "label": "Помидоры (рассада)"
+          },
+          {
+            "value": "pepper",
+            "label": "Перец (рассада)"
+          },
+          {
+            "value": "cucumber",
+            "label": "Огурцы (семена/рассада)"
+          },
+          {
+            "value": "cabbage",
+            "label": "Капуста (рассада)"
+          },
+          {
+            "value": "carrot",
+            "label": "Морковь (семена в грунт)"
+          },
+          {
+            "value": "beet",
+            "label": "Свёкла (семена в грунт)"
+          },
+          {
+            "value": "potato",
+            "label": "Картофель (клубни)"
+          },
+          {
+            "value": "onion",
+            "label": "Лук (севок)"
+          }
+        ],
+        "defaultValue": "tomato"
+      },
+      {
+        "name": "frostDate",
+        "label": "Последние заморозки (дата)",
+        "type": "select",
+        "options": [
+          {
+            "value": "early-april",
+            "label": "Начало апреля"
+          },
+          {
+            "value": "mid-april",
+            "label": "Середина апреля"
+          },
+          {
+            "value": "late-april",
+            "label": "Конец апреля"
+          },
+          {
+            "value": "early-may",
+            "label": "Начало мая"
+          },
+          {
+            "value": "mid-may",
+            "label": "Середина мая"
+          },
+          {
+            "value": "late-may",
+            "label": "Конец мая"
+          }
+        ],
+        "defaultValue": "mid-may"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "seedlingStart",
+        "label": "Начать рассаду",
+        "type": "text"
+      },
+      {
+        "name": "transplantDate",
+        "label": "Высадка в грунт",
+        "type": "text"
+      },
+      {
+        "name": "directSow",
+        "label": "Посев в грунт",
+        "type": "text"
+      },
+      {
+        "name": "harvest",
+        "label": "Ожидаемый урожай",
+        "type": "text"
+      },
+      {
+        "name": "daysToHarvest",
+        "label": "Дней до урожая",
+        "type": "number",
+        "unit": "дн"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите культуру и примерную дату последних заморозков в вашем регионе. Калькулятор подскажет когда сеять и когда ждать урожай.",
+      "about": "Сроки посадки зависят от климата региона. Рассаду теплолюбивых культур (томаты, перцы) начинают за 2-2.5 месяца до высадки.",
+      "formula": "Дата рассады = Дата последних заморозков - Вегетация рассады\nДата высадки = Дата последних заморозков + 1-2 недели",
+      "faq": [
+        {
+          "question": "Когда сеять томаты на рассаду?",
+          "answer": "В средней полосе России — начало марта (за 60-65 дней до высадки)."
+        },
+        {
+          "question": "Можно ли посеять огурцы сразу в грунт?",
+          "answer": "Да, когда почва прогреется до +12-15°C и минует угроза заморозков."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Planting Calendar",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "ploshad-posadki",
+    "id": "planting-area",
+    "title": "Калькулятор площади посадки",
+    "description": "Расчёт площади под огород на основе потребностей семьи",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "people",
+        "label": "Количество человек",
+        "type": "number",
+        "placeholder": "4",
+        "min": 1,
+        "max": 20,
+        "defaultValue": 4
+      },
+      {
+        "name": "potato",
+        "label": "Картофель (кг/год на человека)",
+        "type": "number",
+        "placeholder": "100",
+        "min": 0,
+        "defaultValue": 100
+      },
+      {
+        "name": "vegetables",
+        "label": "Овощи (кг/год на человека)",
+        "type": "number",
+        "placeholder": "80",
+        "min": 0,
+        "defaultValue": 80
+      },
+      {
+        "name": "preservation",
+        "label": "Доля на консервацию (%)",
+        "type": "number",
+        "placeholder": "30",
+        "min": 0,
+        "max": 100,
+        "defaultValue": 30
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalPotato",
+        "label": "Картофеля всего",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "potatoArea",
+        "label": "Площадь под картофель",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "vegArea",
+        "label": "Площадь под овощи",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "totalArea",
+        "label": "Общая площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "inSotki",
+        "label": "В сотках",
+        "type": "number",
+        "unit": "соток"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество членов семьи, годовую потребность в картофеле и овощах на человека. Калькулятор рассчитает нужную площадь огорода.",
+      "about": "Среднестатистическая семья из 4 человек потребляет ~400 кг картофеля и ~300 кг овощей в год. Учитывайте запас на консервацию и возможные потери.",
+      "formula": "Площадь = Потребность / Урожайность\nУрожайность: картофель ~4 кг/м², овощи ~6 кг/м²",
+      "faq": [
+        {
+          "question": "Сколько нужно огорода на семью из 4 человек?",
+          "answer": "Минимум 2-3 сотки для базового набора. Для полного самообеспечения — 5-6 соток."
+        },
+        {
+          "question": "Можно ли всё вырастить на маленьком участке?",
+          "answer": "Да, с помощью интенсивных технологий: высокие грядки, многоуровневые посадки, теплицы."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Garden Planning Guide",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "temperatura-pochvy",
+    "id": "soil-temp",
+    "title": "Калькулятор температуры почвы",
+    "description": "Оценка прогрева почвы для посева семян разных культур",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "airTemp",
+        "label": "Температура воздуха (°C)",
+        "type": "number",
+        "placeholder": "15",
+        "min": -10,
+        "max": 40,
+        "defaultValue": 15
+      },
+      {
+        "name": "sunny",
+        "label": "Солнечно?",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да, солнечно"
+          },
+          {
+            "value": "no",
+            "label": "Нет, пасмурно"
+          }
+        ],
+        "defaultValue": "yes"
+      },
+      {
+        "name": "mulch",
+        "label": "Мульча на грядке",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "light",
+            "label": "Лёгкая (солома)"
+          },
+          {
+            "value": "heavy",
+            "label": "Толстый слой"
+          }
+        ],
+        "defaultValue": "none"
+      },
+      {
+        "name": "depth",
+        "label": "Глубина (см)",
+        "type": "number",
+        "placeholder": "5",
+        "min": 1,
+        "max": 30,
+        "defaultValue": 5
+      }
+    ],
+    "outputs": [
+      {
+        "name": "soilTemp",
+        "label": "Температура почвы",
+        "type": "number",
+        "unit": "°C"
+      },
+      {
+        "name": "readyFor",
+        "label": "Готово для посева",
+        "type": "text"
+      },
+      {
+        "name": "depthNote",
+        "label": "Примечание по глубине",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру воздуха, выберите погодные условия, наличие мульчи и глубину посева. Калькулятор оценит температуру почвы.",
+      "about": "Семена разных культур прорастают при разной температуре почвы. Холодостойкие (горох, редис) при +2-5°C, теплолюбивые (огурцы, тыквы) ждут +10-12°C.",
+      "formula": "Температура почвы ≈ Температура воздуха - 3°C\nПоправки: солнце +2°C, мульча -1...-3°C",
+      "faq": [
+        {
+          "question": "При какой температуре сажать картофель?",
+          "answer": "Когда почва прогреется до +5-8°C на глубине посадки (10 см). Обычно это середина-конец апреля в средней полосе."
+        },
+        {
+          "question": "Почему семена не всходят?",
+          "answer": "Возможно, почва ещё холодная. Проверьте температуру на глубине посева. Такая причина — слишком глубокая посадка или пересыхание."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gardening Know How - Soil Temperature",
+          "url": "https://www.gardeningknowhow.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "uhod-za-rasteniyami",
+    "id": "plant-care-calculator",
+    "title": "Калькулятор ухода за растениями",
+    "description": "Расчёт расписания полива, подкормки и обработки с учётом вида растения и сезона",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "plantType",
+        "label": "Тип растения",
+        "type": "select",
+        "options": [
+          {
+            "value": "cucumber",
+            "label": "Огурцы"
+          },
+          {
+            "value": "tomato",
+            "label": "Помидоры"
+          },
+          {
+            "value": "pepper",
+            "label": "Перец"
+          },
+          {
+            "value": "potato",
+            "label": "Картофель"
+          },
+          {
+            "value": "carrot",
+            "label": "Морковь"
+          },
+          {
+            "value": "onion",
+            "label": "Лук"
+          },
+          {
+            "value": "berry",
+            "label": "Ягодные кусты"
+          }
+        ],
+        "defaultValue": "cucumber"
+      },
+      {
+        "name": "plantCount",
+        "label": "Количество растений",
+        "type": "number",
+        "placeholder": "10",
+        "min": 1,
+        "defaultValue": 10
+      },
+      {
+        "name": "season",
+        "label": "Сезон",
+        "type": "select",
+        "options": [
+          {
+            "value": "spring",
+            "label": "Весна"
+          },
+          {
+            "value": "summer",
+            "label": "Лето"
+          },
+          {
+            "value": "autumn",
+            "label": "Осень"
+          }
+        ],
+        "defaultValue": "summer"
+      },
+      {
+        "name": "soilType",
+        "label": "Тип почвы",
+        "type": "select",
+        "options": [
+          {
+            "value": "sand",
+            "label": "Песчаная"
+          },
+          {
+            "value": "loam",
+            "label": "Суглинистая"
+          },
+          {
+            "value": "clay",
+            "label": "Глинистая"
+          },
+          {
+            "value": "peat",
+            "label": "Торфяная"
+          }
+        ],
+        "defaultValue": "loam"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "wateringFreq",
+        "label": "Частота полива",
+        "type": "text"
+      },
+      {
+        "name": "fertilizerFreq",
+        "label": "Частота подкормки",
+        "type": "text"
+      },
+      {
+        "name": "fertilizerAmount",
+        "label": "Удобрений за сезон",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "waterPerDay",
+        "label": "Воды в день",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "careNotes",
+        "label": "Рекомендации по уходу",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип и количество растений, сезон и тип почвы. Калькулятор составит график ухода с рекомендациями.",
+      "about": "Регулярный уход — залог хорошего урожая. Каждая культура имеет свои особенности: огурцы любят влагу, помидоры нуждаются в пасынковании, корнеплоды не переносят застоя воды.",
+      "formula": "Потребность в воде = Базовая норма × Количество растений × Коэффициент сезона × Коэффициент почвы",
+      "faq": [
+        {
+          "question": "Как часто поливать огурцы?",
+          "answer": "Огурцы — влаголюбивые культуры. Летом поливайте каждый день или через день, особенно в жару. Норма — 1-2 литра под куст."
+        },
+        {
+          "question": "Когда подкармливать помидоры?",
+          "answer": "Начинайте подкормку через 2 недели после высадки рассады. Используйте комплексные удобрения с калием и фосфором."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Огороднику на заметку — График ухода",
+          "url": "https://ogorod.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "urozhaynost-teplitsy",
+    "id": "greenhouse-calculator",
+    "title": "Калькулятор урожайности теплицы",
+    "description": "Расчёт ожидаемого урожая в теплице с учётом площади, культур и технологии выращивания",
+    "subcategory": "gardening",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "greenhouseLength",
+        "label": "Длина теплицы (м)",
+        "type": "number",
+        "placeholder": "6",
+        "min": 1,
+        "defaultValue": 6
+      },
+      {
+        "name": "greenhouseWidth",
+        "label": "Ширина теплицы (м)",
+        "type": "number",
+        "placeholder": "3",
+        "min": 1,
+        "defaultValue": 3
+      },
+      {
+        "name": "cropType",
+        "label": "Основная культура",
+        "type": "select",
+        "options": [
+          {
+            "value": "tomatoes",
+            "label": "Помидоры (высокорослые)"
+          },
+          {
+            "value": "cucumbers",
+            "label": "Огурцы"
+          },
+          {
+            "value": "peppers",
+            "label": "Перец сладкий"
+          },
+          {
+            "value": "eggplants",
+            "label": "Баклажаны"
+          },
+          {
+            "value": "mixed",
+            "label": "Смешанные посадки"
+          }
+        ],
+        "defaultValue": "tomatoes"
+      },
+      {
+        "name": "growingMethod",
+        "label": "Способ выращивания",
+        "type": "select",
+        "options": [
+          {
+            "value": "ground",
+            "label": "В грунт"
+          },
+          {
+            "value": "hydro",
+            "label": "Гидропоника"
+          },
+          {
+            "value": "dutch",
+            "label": "Голландский метод"
+          }
+        ],
+        "defaultValue": "ground"
+      },
+      {
+        "name": "heating",
+        "label": "Отопление",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Без отопления (лето)"
+          },
+          {
+            "value": "yes",
+            "label": "С отоплением (круглый год)"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "area",
+        "label": "Площадь теплицы",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "plants",
+        "label": "Растений поместится",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "yieldKg",
+        "label": "Ожидаемый урожай",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "revenue",
+        "label": "Примерная стоимость",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "seasons",
+        "label": "Сезонов выращивания",
+        "type": "number",
+        "unit": ""
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры теплицы, выберите культуру и способ выращивания. Калькулятор рассчитает урожайность и количество растений.",
+      "about": "Теплица позволяет получить урожай раньше и в большем объёме. На 1 м² теплицы можно вырастить 3-6 кустов помидоров или огурцов. Гидропоника и профессиональные методы увеличивают урожайность в 2-3 раза.",
+      "formula": "Урожай = Количество растений × Удельная урожайность × Количество сезонов\nРастений = Площадь × Плотность посадки",
+      "faq": [
+        {
+          "question": "Сколько помидоров в теплице 3×6?",
+          "answer": "В теплице 3×6 м (18 м²) поместится 54-90 кустов помидоров в зависимости от метода: в грунт — около 54, гидропоника — до 72, голландский метод — до 90."
+        },
+        {
+          "question": "Сколько можно заработать на теплице?",
+          "answer": "С теплицы 3×6 м можно получить 200-700 кг помидоров за сезон. По цене 100-150 руб/кг — 20-100 тыс рублей. При годовом выращивании с отоплением доход увеличивается в 3 раза, но и затраты выше."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Теплица.ру — Урожайность в теплице",
+          "url": "https://teplitsa.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

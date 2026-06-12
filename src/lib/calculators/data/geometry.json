@@ -1,0 +1,637 @@
+[
+  {
+    "slug": "ploshchad-kruga",
+    "id": "circle-area",
+    "title": "Площадь круга",
+    "description": "Расчёт площади круга по радиусу или диаметру",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "radius",
+        "label": "Радиус (r)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      },
+      {
+        "name": "diameter",
+        "label": "Диаметр (d)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "area",
+        "label": "Площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "circumference",
+        "label": "Длина окружности",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "diameter",
+        "label": "Диаметр",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Введите радиус или диаметр круга. Калькулятор вычислит площадь и длину окружности.",
+      "about": "Площадь круга — это количество пространства внутри окружности. Вычисляется по формуле S = πr².",
+      "usage": "Используется в строительстве, дизайне, инженерии для расчёта круглых элементов.",
+      "formula": "S = π × r²\nДлина окружности: C = 2 × π × r",
+      "faq": [
+        {
+          "question": "Что такое число π (пи)?",
+          "answer": "π ≈ 3.14159 — математическая константа, отношение длины окружности к диаметру."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Площадь круга — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Круг"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "ploshchad-treugolnika",
+    "id": "triangle-area",
+    "title": "Площадь треугольника",
+    "description": "Расчёт площади треугольника разными способами",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "method",
+        "label": "Способ расчёта",
+        "type": "select",
+        "options": [
+          {
+            "value": "base-height",
+            "label": "По основанию и высоте"
+          },
+          {
+            "value": "sides",
+            "label": "По трём сторонам (формула Герона)"
+          },
+          {
+            "value": "two-sides-angle",
+            "label": "По двум сторонам и углу"
+          }
+        ],
+        "defaultValue": "base-height"
+      },
+      {
+        "name": "base",
+        "label": "Основание (a)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      },
+      {
+        "name": "height",
+        "label": "Высота (h)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      },
+      {
+        "name": "sideA",
+        "label": "Сторона a",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      },
+      {
+        "name": "sideB",
+        "label": "Сторона b",
+        "type": "number",
+        "placeholder": "7",
+        "defaultValue": 7,
+        "min": 0
+      },
+      {
+        "name": "sideC",
+        "label": "Сторона c",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      },
+      {
+        "name": "angle",
+        "label": "Угол между сторонами (°)",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60,
+        "min": 0,
+        "max": 180
+      }
+    ],
+    "outputs": [
+      {
+        "name": "area",
+        "label": "Площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "perimeter",
+        "label": "Периметр",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите способ расчёта и введите известные значения. Можно использовать основание и высоту, три стороны или две стороны и угол.",
+      "about": "Треугольник — фигура с тремя сторонами. Площадь можно вычислить несколькими способами в зависимости от известных данных.",
+      "usage": "Используется в строительстве, геодезии, дизайне.",
+      "formula": "По основанию: S = ½ × a × h\nПо сторонам (Герон): S = √[s(s-a)(s-b)(s-c)]\nПо углу: S = ½ × a × b × sin(γ)",
+      "faq": [
+        {
+          "question": "Что такое формула Герона?",
+          "answer": "Формула позволяет найти площадь треугольника по трём сторонам. s — полупериметр: s = (a+b+c)/2."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Площадь треугольника — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Площадь_треугольника"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "ploshchad-pryamougolnika",
+    "id": "rectangle-area",
+    "title": "Площадь прямоугольника",
+    "description": "Расчёт площади и периметра прямоугольника",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина (a)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      },
+      {
+        "name": "width",
+        "label": "Ширина (b)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "area",
+        "label": "Площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "perimeter",
+        "label": "Периметр",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "diagonal",
+        "label": "Диагональ",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину и ширину прямоугольника.",
+      "about": "Прямоугольник — четырёхугольник с прямыми углами.",
+      "usage": "Самый распространённый расчёт в быту и строительстве.",
+      "formula": "S = a × b\nP = 2 × (a + b)\nДиагональ d = √(a² + b²)",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "ploshchad-shestiugolnika",
+    "id": "hexagon-area",
+    "title": "Площадь шестиугольника",
+    "description": "Расчёт площади правильного шестиугольника",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "side",
+        "label": "Длина стороны",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "area",
+        "label": "Площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "perimeter",
+        "label": "Периметр",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину стороны правильного шестиугольника.",
+      "about": "Правильный шестиугольник имеет шесть равных сторон и углов.",
+      "usage": "Используется при укладке плитки, сотовых конструкций.",
+      "formula": "S = (3√3 / 2) × a²",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "ploshchad-trapecii",
+    "id": "trapezoid-area",
+    "title": "Площадь трапеции",
+    "description": "Расчёт площади трапеции по основаниям и высоте",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "baseA",
+        "label": "Основание a",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      },
+      {
+        "name": "baseB",
+        "label": "Основание b",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 0
+      },
+      {
+        "name": "height",
+        "label": "Высота",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "area",
+        "label": "Площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "midline",
+        "label": "Средняя линия",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Введите два основания и высоту трапеции.",
+      "about": "Трапеция — четырёхугольник с двумя параллельными сторонами.",
+      "usage": "Строительство, геодезия.",
+      "formula": "S = (a + b) / 2 × h",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "obem-cilindra",
+    "id": "cylinder-volume",
+    "title": "Объём цилиндра",
+    "description": "Расчёт объёма и площади поверхности цилиндра",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "radius",
+        "label": "Радиус основания",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 0
+      },
+      {
+        "name": "height",
+        "label": "Высота цилиндра",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "lateralArea",
+        "label": "Боковая поверхность",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "totalArea",
+        "label": "Полная поверхность",
+        "type": "number",
+        "unit": "м²"
+      }
+    ],
+    "content": {
+      "howTo": "Введите радиус основания и высоту цилиндра.",
+      "about": "Цилиндр — геометрическое тело с круглым основанием.",
+      "usage": "Расчёт ёмкостей, баков, труб.",
+      "formula": "V = π × r² × h\nS боковой = 2πrh\nS полной = 2πr(r + h)",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "obem-konusa",
+    "id": "cone-volume",
+    "title": "Объём конуса",
+    "description": "Расчёт объёма и площади конуса",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "radius",
+        "label": "Радиус основания",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 0
+      },
+      {
+        "name": "height",
+        "label": "Высота конуса",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "slantHeight",
+        "label": "Образующая",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "surfaceArea",
+        "label": "Площадь поверхности",
+        "type": "number",
+        "unit": "м²"
+      }
+    ],
+    "content": {
+      "howTo": "Введите радиус основания и высоту конуса.",
+      "about": "Конус — тело с круглым основанием и вершиной.",
+      "usage": "Инженерия, архитектура.",
+      "formula": "V = (1/3) × π × r² × h",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "obem-kuba",
+    "id": "cube-volume",
+    "title": "Объём куба",
+    "description": "Расчёт объёма, площади поверхности и диагонали куба",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "side",
+        "label": "Длина ребра",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "surfaceArea",
+        "label": "Площадь поверхности",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "faceDiagonal",
+        "label": "Диагональ грани",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "spaceDiagonal",
+        "label": "Пространственная диагональ",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину ребра куба.",
+      "about": "Куб — правильный многогранник с шестью квадратными гранями.",
+      "usage": "Расчёт ёмкостей, упаковки.",
+      "formula": "V = a³\nS = 6a²",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "obem-shara",
+    "id": "sphere-volume",
+    "title": "Объём шара",
+    "description": "Расчёт объёма и площади сферы",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "radius",
+        "label": "Радиус",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "surfaceArea",
+        "label": "Площадь поверхности",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "diameter",
+        "label": "Диаметр",
+        "type": "number",
+        "unit": "м"
+      }
+    ],
+    "content": {
+      "howTo": "Введите радиус сферы.",
+      "about": "Сфера — поверхность всех точек, равноудалённых от центра.",
+      "usage": "Астрономия, физика, инженерия.",
+      "formula": "V = (4/3) × π × r³\nS = 4 × π × r²",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "ploshchad-sten",
+    "id": "room-walls-area",
+    "title": "Площадь стен комнаты",
+    "description": "Расчёт площади стен с учётом окон и дверей",
+    "subcategory": "geometriya",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина комнаты",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      },
+      {
+        "name": "width",
+        "label": "Ширина комнаты",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 0
+      },
+      {
+        "name": "height",
+        "label": "Высота потолков",
+        "type": "number",
+        "placeholder": "2.7",
+        "defaultValue": 2.7,
+        "min": 0
+      },
+      {
+        "name": "windowsArea",
+        "label": "Площадь окон",
+        "type": "number",
+        "placeholder": "2.5",
+        "defaultValue": 2.5,
+        "min": 0
+      },
+      {
+        "name": "doorsArea",
+        "label": "Площадь дверей",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalWalls",
+        "label": "Площадь стен (брутто)",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "openings",
+        "label": "Площадь проёмов",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "netWalls",
+        "label": "Площадь стен (нетто)",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "floorArea",
+        "label": "Площадь пола",
+        "type": "number",
+        "unit": "м²"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры комнаты и площади окон/дверей.",
+      "about": "Расчёт площади стен для покупки обоев или краски.",
+      "usage": "Ремонт, строительство.",
+      "formula": "Стены = Периметр × Высота − Проёмы",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

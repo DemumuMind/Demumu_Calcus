@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "konverter-cvetov",
+    "id": "color-converter",
+    "title": "Конвертер цветов",
+    "description": "RGB в HEX, HEX в RGB, RGB в HSL",
+    "subcategory": "tekhnologii-raznoe",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "r",
+        "label": "R (красный)",
+        "type": "number",
+        "placeholder": "255",
+        "defaultValue": 255,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "g",
+        "label": "G (зелёный)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "b",
+        "label": "B (синий)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50,
+        "min": 0,
+        "max": 255
+      }
+    ],
+    "outputs": [
+      {
+        "name": "hex",
+        "label": "HEX",
+        "type": "text"
+      },
+      {
+        "name": "hsl",
+        "label": "HSL",
+        "type": "text"
+      },
+      {
+        "name": "rgb",
+        "label": "CSS RGB",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения RGB (0-255). Калькулятор переведёт цвет в HEX и HSL форматы.",
+      "about": "Конвертер цветов переводит между RGB, HEX и HSL — основными форматами представления цветов в веб и дизайне.",
+      "usage": "Используется в веб-разработке, дизайне, графических редакторах для согласования цветов.",
+      "formula": "HEX: #RRGGBB\nHSL: Hue (0-360°), Saturation (0-100%), Lightness (0-100%)",
+      "faq": [
+        {
+          "question": "Что такое HEX цвет?",
+          "answer": "HEX — шестнадцатеричное представление RGB. #RRGGBB, где каждая пара символов — значение от 00 до FF."
+        },
+        {
+          "question": "Чем HSL лучше RGB?",
+          "answer": "HSL интуитивнее: H — оттенок (цвет), S — насыщенность, L — светлота. Удобнее для создания палитр."
+        }
+      ],
+      "sources": [
+        {
+          "title": "RGB — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/RGB"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kontrastnost-cveta",
+    "id": "contrast-calculator",
+    "title": "Контрастность цвета",
+    "description": "Проверка соотношения контраста по стандарту WCAG",
+    "subcategory": "tekhnologii-raznoe",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "bgR",
+        "label": "Фон R",
+        "type": "number",
+        "placeholder": "255",
+        "defaultValue": 255,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "bgG",
+        "label": "Фон G",
+        "type": "number",
+        "placeholder": "255",
+        "defaultValue": 255,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "bgB",
+        "label": "Фон B",
+        "type": "number",
+        "placeholder": "255",
+        "defaultValue": 255,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "textR",
+        "label": "Текст R",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "textG",
+        "label": "Текст G",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "textB",
+        "label": "Текст B",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0,
+        "min": 0,
+        "max": 255
+      }
+    ],
+    "outputs": [
+      {
+        "name": "contrastRatio",
+        "label": "Соотношение контраста",
+        "type": "number"
+      },
+      {
+        "name": "aaNormal",
+        "label": "WCAG AA (обычный текст)",
+        "type": "text"
+      },
+      {
+        "name": "aaaNormal",
+        "label": "WCAG AAA (обычный текст)",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите RGB значения фона и текста. Калькулятор проверит контрастность по стандарту WCAG для доступности.",
+      "about": "Контрастность цвета важна для читаемости текста. Стандарт WCAG требует минимум 4.5:1 для обычного текста.",
+      "usage": "Используется при разработке сайтов для обеспечения доступности (accessibility) для людей с плохим зрением.",
+      "formula": "L = 0.2126×R + 0.7152×G + 0.0722×B (относительная яркость)\nКонтраст = (L1 + 0.05) / (L2 + 0.05)",
+      "faq": [
+        {
+          "question": "Что такое WCAG?",
+          "answer": "Web Content Accessibility Guidelines — рекомендации по доступности веб-контента. Требования к контрасту: AA — 4.5:1, AAA — 7:1."
+        },
+        {
+          "question": "Как улучшить контрастность?",
+          "answer": "Увеличьте разницу в яркости между цветами. Тёмный текст на светлом фоне или наоборот."
+        }
+      ],
+      "sources": [
+        {
+          "title": "WCAG — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

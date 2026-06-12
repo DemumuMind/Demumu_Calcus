@@ -1,0 +1,704 @@
+[
+  {
+    "slug": "bpm-temp",
+    "id": "bpm",
+    "title": "BPM (удары в минуту)",
+    "description": "Определение темпа музыки и расчёт задержек/частот для эффектов",
+    "subcategory": "hobbi-music",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "bpm",
+        "label": "BPM (удары в минуту)",
+        "type": "number",
+        "placeholder": "120",
+        "defaultValue": 120
+      }
+    ],
+    "outputs": [
+      {
+        "name": "beatDuration",
+        "label": "Длительность четверти (мс)",
+        "type": "number"
+      },
+      {
+        "name": "eighthNote",
+        "label": "Восьмая нота (мс)",
+        "type": "number"
+      },
+      {
+        "name": "sixteenthNote",
+        "label": "Шестнадцатая (мс)",
+        "type": "number"
+      },
+      {
+        "name": "delayTime",
+        "label": "Delay 1/4 (мс)",
+        "type": "number"
+      },
+      {
+        "name": "frequency",
+        "label": "Частота (Hz)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите BPM (темп музыки). Калькулятор рассчитает длительности нот и рекомендуемые значения для эффектов.",
+      "about": "BPM (Beats Per Minute) - количество ударов в минуту. Стандартные темпы: 60-80 (медленно), 90-110 (средне), 120-140 (быстро), 160+ (очень быстро).",
+      "formula": "Длительность четверти (мс) = 60000 / BPM",
+      "usage": "Используется для настройки delay, reverb и других временных эффектов в музыкальных редакторах.",
+      "faq": [
+        {
+          "question": "Какой BPM для определенных жанров?",
+          "answer": "Ballad: 60-70, Pop: 100-130, House: 120-130, Techno: 130-150, Drum and Bass: 160-180."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BPM",
+          "url": "https://en.wikipedia.org/wiki/Beats_per_minute"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "nastrojka-gitary",
+    "id": "guitar-tuning",
+    "title": "Частоты струн гитары",
+    "description": "Частоты нот для стандартного и альтернативных строев гитары",
+    "subcategory": "hobbi-music",
+    "type": "reference",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "tuning",
+        "label": "Строй",
+        "type": "select",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Стандартный (E A D G B E)"
+          },
+          {
+            "value": "drop_d",
+            "label": "Drop D (D A D G B E)"
+          },
+          {
+            "value": "half_step",
+            "label": "Полтона вниз (D# G# C# F# A# D#)"
+          },
+          {
+            "value": "open_g",
+            "label": "Open G (D G D G B D)"
+          },
+          {
+            "value": "dadgad",
+            "label": "DADGAD (D A D G A D)"
+          },
+          {
+            "value": "open_e",
+            "label": "Open E (E B E G# B E)"
+          }
+        ],
+        "defaultValue": "standard"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "string1",
+        "label": "1-я струна (тонкая)",
+        "type": "text"
+      },
+      {
+        "name": "string2",
+        "label": "2-я струна",
+        "type": "text"
+      },
+      {
+        "name": "string3",
+        "label": "3-я струна",
+        "type": "text"
+      },
+      {
+        "name": "string4",
+        "label": "4-я струна",
+        "type": "text"
+      },
+      {
+        "name": "string5",
+        "label": "5-я струна",
+        "type": "text"
+      },
+      {
+        "name": "string6",
+        "label": "6-я струна (толстая)",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите строй гитары. Калькулятор покажет частоты для каждой струны.",
+      "about": "Стандартный строй E A D G B E - основа для большинства музыки. Альтернативные строи используются для специфических жанров (Drop D для метала, Open G для слайд-гитары).",
+      "usage": "Используйте для настройки гитары с помощью тюнера или приложения.",
+      "faq": [
+        {
+          "question": "Что такое Drop D?",
+          "answer": "Строй, где 6-я струна настраивается на D вместо E. Популярен в метале для создания тяжёлых риффов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гитарный строй",
+          "url": "https://ru.wikipedia.org/wiki/Строй_гитары"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "chastoty-not",
+    "id": "note-frequency",
+    "title": "Частоты нот",
+    "description": "Расчёт частоты любой ноты в равномерно темперированном строе",
+    "subcategory": "hobbi-music",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "note",
+        "label": "Нота",
+        "type": "select",
+        "options": [
+          {
+            "value": "C",
+            "label": "C (До)"
+          },
+          {
+            "value": "C#",
+            "label": "C# / Db"
+          },
+          {
+            "value": "D",
+            "label": "D (Ре)"
+          },
+          {
+            "value": "D#",
+            "label": "D# / Eb"
+          },
+          {
+            "value": "E",
+            "label": "E (Ми)"
+          },
+          {
+            "value": "F",
+            "label": "F (Фа)"
+          },
+          {
+            "value": "F#",
+            "label": "F# / Gb"
+          },
+          {
+            "value": "G",
+            "label": "G (Соль)"
+          },
+          {
+            "value": "G#",
+            "label": "G# / Ab"
+          },
+          {
+            "value": "A",
+            "label": "A (Ля)"
+          },
+          {
+            "value": "A#",
+            "label": "A# / Bb"
+          },
+          {
+            "value": "B",
+            "label": "B (Си)"
+          }
+        ],
+        "defaultValue": "A"
+      },
+      {
+        "name": "octave",
+        "label": "Октава",
+        "type": "select",
+        "options": [
+          {
+            "value": "0",
+            "label": "0 (субконтроктава)"
+          },
+          {
+            "value": "1",
+            "label": "1 (контроктава)"
+          },
+          {
+            "value": "2",
+            "label": "2 (большая октава)"
+          },
+          {
+            "value": "3",
+            "label": "3 (малая октава)"
+          },
+          {
+            "value": "4",
+            "label": "4 (первая октава)"
+          },
+          {
+            "value": "5",
+            "label": "5 (вторая октава)"
+          },
+          {
+            "value": "6",
+            "label": "6 (третья октава)"
+          },
+          {
+            "value": "7",
+            "label": "7 (четвёртая октава)"
+          },
+          {
+            "value": "8",
+            "label": "8 (пятая октава)"
+          }
+        ],
+        "defaultValue": "4"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "frequency",
+        "label": "Частота (Hz)",
+        "type": "number"
+      },
+      {
+        "name": "wavelength",
+        "label": "Длина волны (м)",
+        "type": "number"
+      },
+      {
+        "name": "period",
+        "label": "Период (мс)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите ноту и октаву. Калькулятор покажет её частоту в герцах.",
+      "about": "Равномерно темперированный строй - система, где октава разделена на 12 равных частей (полутонов). Частота удваивается каждую октаву.",
+      "formula": "f = 440 × 2^(n/12), где n - количество полутонов от A4",
+      "usage": "Используется для настройки инструментов, расчёта частот для эквалайзера, настройки репетиционных помещений.",
+      "faq": [
+        {
+          "question": "Почему A4 = 440 Hz?",
+          "answer": "Это международный стандарт, принятый в 1955 году. Раньше использовались другие стандарты (435, 442, 443 Hz)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Равномерно темперированный строй",
+          "url": "https://ru.wikipedia.org/wiki/Равномерно-темперированный_строй"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "razmer-audio",
+    "id": "audio-file-size",
+    "title": "Размер аудиофайла",
+    "description": "Расчёт размера аудиофайла в зависимости от битрейта и длительности",
+    "subcategory": "hobbi-music",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "duration",
+        "label": "Длительность (мин)",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4
+      },
+      {
+        "name": "bitrate",
+        "label": "Битрейт (kbps)",
+        "type": "select",
+        "options": [
+          {
+            "value": "64",
+            "label": "64 kbps (голос)"
+          },
+          {
+            "value": "128",
+            "label": "128 kbps (стандарт)"
+          },
+          {
+            "value": "192",
+            "label": "192 kbps (хорошее качество)"
+          },
+          {
+            "value": "256",
+            "label": "256 kbps (высокое качество)"
+          },
+          {
+            "value": "320",
+            "label": "320 kbps (максимальное)"
+          },
+          {
+            "value": "1411",
+            "label": "1411 kbps (CD качество, WAV)"
+          },
+          {
+            "value": "2304",
+            "label": "2304 kbps (24-bit/96kHz)"
+          }
+        ],
+        "defaultValue": "192"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fileSizeMB",
+        "label": "Размер файла (MB)",
+        "type": "number"
+      },
+      {
+        "name": "fileSizeKB",
+        "label": "Размер файла (KB)",
+        "type": "number"
+      },
+      {
+        "name": "perMinute",
+        "label": "MB за минуту",
+        "type": "number"
+      },
+      {
+        "name": "quality",
+        "label": "Качество звука",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длительность аудиозаписи в минутах и выберите битрейт.",
+      "about": "Битрейт - количество битов, используемых для передачи/хранения аудио в секунду. Выше битрейт = лучше качество, но больше размер файла.",
+      "formula": "Размер (KB) = (Битрейт × Длительность × 60) / 8",
+      "usage": "Используется для планирования дискового пространства, выбора оптимального битрейта для кодирования.",
+      "faq": [
+        {
+          "question": "Какой битрейт выбрать для MP3?",
+          "answer": "192-256 kbps - оптимально для большинства случаев. 320 kbps - если важно максимальное качество. 128 kbps - если критичен размер файла."
+        }
+      ],
+      "sources": [
+        {
+          "title": "MP3",
+          "url": "https://ru.wikipedia.org/wiki/MP3"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "detune-rastrojka",
+    "id": "detune",
+    "title": "Детюнинг (расстройка)",
+    "description": "Расчёт расстройки в центах для создания эффектов хоруса и даббинга",
+    "subcategory": "hobbi-music",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "baseFrequency",
+        "label": "Базовая частота (Hz)",
+        "type": "number",
+        "placeholder": "440",
+        "defaultValue": 440
+      },
+      {
+        "name": "cents",
+        "label": "Отклонение (центы)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      }
+    ],
+    "outputs": [
+      {
+        "name": "newFrequency",
+        "label": "Новая частота (Hz)",
+        "type": "number"
+      },
+      {
+        "name": "hzDifference",
+        "label": "Разница (Hz)",
+        "type": "number"
+      },
+      {
+        "name": "beatFrequency",
+        "label": "Частота биений (Hz)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите базовую частоту и отклонение в центах. Калькулятор покажет результирующую частоту.",
+      "about": "Цент - логарифмическая единица измерения интервалов. 100 центов = 1 полутон, 1200 центов = октава.",
+      "formula": "f₂ = f₁ × 2^(cents/1200)",
+      "usage": "Используется для настройки детюнеров, хорусов, питч-шифтеров. 5-15 центов типично для эффекта хоруса.",
+      "faq": [
+        {
+          "question": "Сколько центов в полутоне?",
+          "answer": "100 центов = 1 полутон (semitone), 1200 центов = октава (12 полутонов)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Цент (музыка)",
+          "url": "https://en.wikipedia.org/wiki/Cent_(music)"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "uroven-zvuka",
+    "id": "spl",
+    "title": "Уровень звукового давления (SPL)",
+    "description": "Расчёт громкости звука в децибелах и безопасного времени прослушивания",
+    "subcategory": "hobbi-music",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "spl",
+        "label": "Уровень звука (dB SPL)",
+        "type": "number",
+        "placeholder": "85",
+        "defaultValue": 85
+      }
+    ],
+    "outputs": [
+      {
+        "name": "safeTime",
+        "label": "Безопасное время (часов)",
+        "type": "number"
+      },
+      {
+        "name": "perception",
+        "label": "Восприятие",
+        "type": "text"
+      },
+      {
+        "name": "examples",
+        "label": "Примеры",
+        "type": "text"
+      },
+      {
+        "name": "warning",
+        "label": "Предупреждение",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите уровень звука в dB SPL. Калькулятор покажет безопасное время прослушивания.",
+      "about": "SPL (Sound Pressure Level) измеряется в децибелах. 85 dB - порог, выше которого начинается риск повреждения слуха при длительном воздействии.",
+      "formula": "Безопасное время = 8 / 2^((SPL-85)/3) часов",
+      "usage": "Используется для оценки риска для слуха на концертах, в наушниках, на производстве.",
+      "faq": [
+        {
+          "question": "Как долго можно слушать 85 dB?",
+          "answer": "По стандарту NIOSH: 8 часов в день. Каждые +3 dB уменьшают безопасное время вдвое."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Децибел",
+          "url": "https://ru.wikipedia.org/wiki/Децибел"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "miks-balanss",
+    "id": "mixing-balance",
+    "title": "Баланс микса",
+    "description": "Рекомендации по уровням громкости инструментов в миксе",
+    "subcategory": "hobbi-music",
+    "type": "reference",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "genre",
+        "label": "Жанр",
+        "type": "select",
+        "options": [
+          {
+            "value": "pop",
+            "label": "Pop"
+          },
+          {
+            "value": "rock",
+            "label": "Rock"
+          },
+          {
+            "value": "electronic",
+            "label": "Electronic"
+          },
+          {
+            "value": "jazz",
+            "label": "Jazz"
+          },
+          {
+            "value": "classical",
+            "label": "Classical"
+          }
+        ],
+        "defaultValue": "pop"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "kick",
+        "label": "Бочка (Kick)",
+        "type": "text"
+      },
+      {
+        "name": "snare",
+        "label": "Малый барабан",
+        "type": "text"
+      },
+      {
+        "name": "bass",
+        "label": "Бас-гитара",
+        "type": "text"
+      },
+      {
+        "name": "vocals",
+        "label": "Вокал",
+        "type": "text"
+      },
+      {
+        "name": "guitars",
+        "label": "Гитары",
+        "type": "text"
+      },
+      {
+        "name": "keyboards",
+        "label": "Клавишные",
+        "type": "text"
+      },
+      {
+        "name": "reverb",
+        "label": "Реверберация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите жанр музыки. Калькулятор покажет типичные уровни громкости для каждого инструмента.",
+      "about": "Баланс микса - искусство распределения громкости инструментов. Каждый жанр имеет свои традиции и ожидания слушателей.",
+      "usage": "Используется как отправная точка для микширования. Всегда применяйте на слух!",
+      "faq": [
+        {
+          "question": "Почему бочка на 0 dB?",
+          "answer": "Бочка часто служит референсом для микса. Остальные инструменты балансируются относительно неё."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Микширование музыки",
+          "url": "https://en.wikipedia.org/wiki/Audio_mixing_(recorded_music)"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "gromkost-lufs",
+    "id": "lufs",
+    "title": "Нормализация громкости (LUFS)",
+    "description": "Проверка соответствия стандартам громкости для стриминговых платформ",
+    "subcategory": "hobbi-music",
+    "type": "reference",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "platform",
+        "label": "Платформа",
+        "type": "select",
+        "options": [
+          {
+            "value": "spotify",
+            "label": "Spotify"
+          },
+          {
+            "value": "apple",
+            "label": "Apple Music"
+          },
+          {
+            "value": "youtube",
+            "label": "YouTube"
+          },
+          {
+            "value": "tidal",
+            "label": "Tidal"
+          },
+          {
+            "value": "amazon",
+            "label": "Amazon Music"
+          },
+          {
+            "value": "cd",
+            "label": "CD (Red Book)"
+          },
+          {
+            "value": "broadcast",
+            "label": "ТВ/Радио (EBU R128)"
+          }
+        ],
+        "defaultValue": "spotify"
+      },
+      {
+        "name": "currentLufs",
+        "label": "Текущая громкость (LUFS)",
+        "type": "number",
+        "placeholder": "-8",
+        "defaultValue": -8
+      }
+    ],
+    "outputs": [
+      {
+        "name": "target",
+        "label": "Целевой уровень (LUFS)",
+        "type": "text"
+      },
+      {
+        "name": "adjustment",
+        "label": "Корректировка",
+        "type": "text"
+      },
+      {
+        "name": "peakLevel",
+        "label": "True Peak (dBTP)",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите платформу для публикации и укажите текущую громкость вашего трека в LUFS.",
+      "about": "LUFS (Loudness Units Full Scale) - стандарт измерения громкости. Стриминговые платформы нормализуют треки к своему целевому уровню.",
+      "usage": "Используется для мастеринга. Мастерьте под целевой уровень платформы, чтобы избежать автоматической нормализации.",
+      "faq": [
+        {
+          "question": "Что такое True Peak?",
+          "answer": "True Peak - пиковый уровень сигнала после цифро-аналогового преобразования. Не должен превышать -1 dBTP для предотвращения клиппинга."
+        }
+      ],
+      "sources": [
+        {
+          "title": "LUFS",
+          "url": "https://en.wikipedia.org/wiki/LKFS"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

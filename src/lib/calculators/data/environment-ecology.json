@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "carbon-footprint-calculator",
+    "id": "carbon-footprint-calculator",
+    "title": "Калькулятор углеродного следа",
+    "description": "Рассчитайте свой годовой углеродный след",
+    "subcategory": "eco-lifestyle",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "waste-sorting-calculator",
+    "id": "waste-sorting-calculator",
+    "title": "Калькулятор раздельного сбора",
+    "description": "Рассчитайте, сколько отходов вы можете переработать",
+    "subcategory": "eco-lifestyle",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "water-footprint-calculator",
+    "id": "water-footprint-calculator",
+    "title": "Калькулятор водного следа",
+    "description": "Рассчитайте прямое и косвенное потребление воды",
+    "subcategory": "eco-lifestyle",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "solar-calculator",
+    "id": "solar-calculator",
+    "title": "Калькулятор солнечных панелей",
+    "description": "Рассчитайте мощность и окупаемость солнечной станции",
+    "subcategory": "energy",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "energy-efficiency-calculator",
+    "id": "energy-efficiency-calculator",
+    "title": "Калькулятор энергоэффективности",
+    "description": "Рассчитайте экономию от энергоэффективных решений",
+    "subcategory": "energy",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "compost-calculator",
+    "id": "compost-eco-calculator",
+    "title": "Калькулятор компостирования",
+    "description": "Рассчитайте, сколько удобрений вы получите из органики",
+    "subcategory": "garden-eco",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "electric-car-savings",
+    "id": "electric-car-savings",
+    "title": "Калькулятор экономии электромобиля",
+    "description": "Рассчитайте, сколько вы сэкономите на переходе на электромобиль",
+    "subcategory": "transport",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "eco-score-calculator",
+    "id": "eco-score-calculator",
+    "title": "Калькулятор эко-рейтинга",
+    "description": "Узнайте, насколько экологичен ваш образ жизни",
+    "subcategory": "eco-lifestyle",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "tree-impact-calculator",
+    "id": "tree-impact-calculator",
+    "title": "Калькулятор влияния деревьев",
+    "description": "Рассчитайте, сколько CO₂ поглощают деревья",
+    "subcategory": "nature",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "reusable-items-calculator",
+    "id": "reusable-items-calculator",
+    "title": "Калькулятор многоразовых вещей",
+    "description": "Рассчитайте экономию и снижение отходов от многоразовых предметов",
+    "subcategory": "eco-lifestyle",
+    "type": "formula",
+    "category": "environment"
+  },
+  {
+    "slug": "garden-water-calculator",
+    "id": "garden-water-calculator",
+    "title": "Калькулятор полива сада",
+    "description": "Рассчитайте оптимальное количество воды для огорода",
+    "subcategory": "garden-eco",
+    "type": "formula",
+    "category": "environment"
+  }
+]

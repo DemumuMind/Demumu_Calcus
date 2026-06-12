@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "skorost-zvuka",
+    "id": "sound-speed",
+    "title": "Скорость звука в разных средах",
+    "description": "Расчёт скорости звука в воздухе, воде, металлах и других средах при разной температуре",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "effekt-doplera",
+    "id": "doppler-effect",
+    "title": "Эффект Доплера",
+    "description": "Расчёт изменения частоты звука при движении источника или наблюдателя",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "radioaktivnyj-raspad",
+    "id": "radioactive-decay",
+    "title": "Радиоактивный распад",
+    "description": "Расчёт оставшегося количества вещества и периода полураспада",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "e-mc-kvadrat",
+    "id": "mass-energy",
+    "title": "Эквивалентность массы и энергии",
+    "description": "Расчёт энергии по формуле E=mc² Эйнштейна",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "zakon-snelliusa",
+    "id": "light-refraction",
+    "title": "Преломление света (Закон Снеллиуса)",
+    "description": "Расчёт угла преломления света при переходе между средами",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "moment-inertsii",
+    "id": "moment-of-inertia",
+    "title": "Момент инерции тел",
+    "description": "Расчёт момента инерции для различных форм тел",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "uglovaya-skorost",
+    "id": "angular-velocity",
+    "title": "Вращательное движение",
+    "description": "Расчёт угловой скорости, ускорения и связи с линейной скоростью",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "gidrostaticheskoe-davlenie",
+    "id": "hydrostatic-pressure",
+    "title": "Гидростатическое давление",
+    "description": "Расчёт давления жидкости на глубине",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "centrostremitelnaya-sila",
+    "id": "centripetal-force",
+    "title": "Центростремительная сила",
+    "description": "Расчёт силы, удерживающей тело на окружности",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "teploprovodnost",
+    "id": "heat-conduction",
+    "title": "Теплопроводность",
+    "description": "Расчёт теплового потока через стенку (закон Фурье)",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  }
+]

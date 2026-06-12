@@ -11,7 +11,7 @@ interface EngineeringCalculatorProps {
   initialParams?: Record<string, string>;
 }
 
-export function EngineeringCalculator({ calculator, initialParams }: EngineeringCalculatorProps) {
+export function EngineeringCalculator({ calculator: _calculator, initialParams }: EngineeringCalculatorProps) {
   const [display, setDisplay] = useState(() => {
     if (initialParams?.value && !isNaN(Number(initialParams.value))) {
       return initialParams.value;
@@ -71,7 +71,6 @@ export function EngineeringCalculator({ calculator, initialParams }: Engineering
         .replace(/e/g, String(Math.E))
         .replace(/\^/g, '**');
 
-      // Handle scientific functions
       const funcs: Record<string, (x: number) => number> = {
         'sin': Math.sin,
         'cos': Math.cos,
@@ -90,7 +89,6 @@ export function EngineeringCalculator({ calculator, initialParams }: Engineering
         });
       }
 
-      // Handle factorial postfix
       normalized = normalized.replace(/(\d+(?:\.\d+)?)!/g, (_match, n) => {
         return String(factorial(Number(n)));
       });
@@ -178,13 +176,13 @@ export function EngineeringCalculator({ calculator, initialParams }: Engineering
     }
   }, []);
 
-  const toggleSign = useCallback(() => {
+  const _toggleSign = useCallback(() => {
     const d = displayRef.current;
     const newValue = parseFloat(d) * -1;
     setDisplay(String(newValue));
   }, []);
 
-  const inputPercent = useCallback(() => {
+  const _inputPercent = useCallback(() => {
     const d = displayRef.current;
     const currentValue = parseFloat(d);
     if (currentValue === 0) return;
@@ -208,7 +206,7 @@ export function EngineeringCalculator({ calculator, initialParams }: Engineering
     setWaitingForOperand(true);
   }, []);
 
-  const inputE = useCallback(() => {
+  const _inputE = useCallback(() => {
     setDisplay(String(Math.E));
     setWaitingForOperand(true);
   }, []);

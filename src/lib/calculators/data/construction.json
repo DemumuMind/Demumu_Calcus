@@ -1,0 +1,619 @@
+[
+  {
+    "slug": "kalkulyator-plitki",
+    "id": "tile-floor-calculator",
+    "title": "Калькулятор плитки",
+    "description": "Расчёт количества плитки для пола и стен с учётом запаса",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont"
+  },
+  {
+    "slug": "kalkulyator-kraski",
+    "id": "paint-wall-calculator",
+    "title": "Калькулятор краски",
+    "description": "Расчёт количества краски для стен и потолка",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont"
+  },
+  {
+    "slug": "kalkulyator-betona",
+    "id": "concrete-foundation-calculator",
+    "title": "Калькулятор бетона",
+    "description": "Расчёт объёма бетона для фундамента и перекрытий",
+    "subcategory": "fundamenty",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина (м)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0.1
+      },
+      {
+        "name": "width",
+        "label": "Ширина (м)",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8,
+        "min": 0.1
+      },
+      {
+        "name": "height",
+        "label": "Высота/Толщина (м)",
+        "type": "number",
+        "placeholder": "0.3",
+        "defaultValue": 0.3,
+        "min": 0.01,
+        "step": 0.01
+      },
+      {
+        "name": "shrinkage",
+        "label": "Усадка/запас (%)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0,
+        "max": 20
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём бетона",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "mixRatio",
+        "label": "Состав на 1 м³",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры конструкции и процент запаса. Калькулятор рассчитает объём и состав бетона.",
+      "about": "Калькулятор бетона определяет объём бетона для фундаментов, плит, перекрытий и других конструкций.",
+      "usage": "Используется при строительстве для заказа бетона или расчёта материалов для самостоятельного приготовления.",
+      "formula": "Объём = длина × ширина × высота × (1 + запас/100)",
+      "faq": [
+        {
+          "question": "Какую марку бетона выбрать?",
+          "answer": "Фундамент: М300-М400, перекрытия: М350-М450, дорожки: М200-М250."
+        },
+        {
+          "question": "Какой запас нужен?",
+          "answer": "Для фундамента 5-7%, для сложных форм до 10%. Учитывает усадку и потери при транспортировке."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Бетон — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Бетон"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-oboev",
+    "id": "wallpaper-room-calculator",
+    "title": "Калькулятор обоев",
+    "description": "Расчёт количества рулонов обоев для комнаты",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont"
+  },
+  {
+    "slug": "kalkulyator-laminata",
+    "id": "flooring-basic-calculator",
+    "title": "Калькулятор напольного покрытия",
+    "description": "Расчёт ламината, паркета, линолеума для пола",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont"
+  },
+  {
+    "slug": "kalkulyator-kirpicha",
+    "id": "brick-wall-calculator",
+    "title": "Калькулятор кирпича",
+    "description": "Расчёт количества кирпича для стен и перегородок",
+    "subcategory": "stroitelnye-materialy",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина стены (м)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0.1
+      },
+      {
+        "name": "height",
+        "label": "Высота стены (м)",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 0.1
+      },
+      {
+        "name": "thickness",
+        "label": "Толщина стены",
+        "type": "select",
+        "options": [
+          {
+            "value": "0.12",
+            "label": "0.5 кирпича (120 мм)"
+          },
+          {
+            "value": "0.25",
+            "label": "1 кирпич (250 мм)"
+          },
+          {
+            "value": "0.38",
+            "label": "1.5 кирпича (380 мм)"
+          },
+          {
+            "value": "0.51",
+            "label": "2 кирпича (510 мм)"
+          }
+        ],
+        "defaultValue": "0.25"
+      },
+      {
+        "name": "brickType",
+        "label": "Тип кирпича",
+        "type": "select",
+        "options": [
+          {
+            "value": "250x120x65",
+            "label": "Одинарный (250×120×65)"
+          },
+          {
+            "value": "250x120x88",
+            "label": "Полуторный (250×120×88)"
+          },
+          {
+            "value": "250x120x138",
+            "label": "Двойной (250×120×138)"
+          }
+        ],
+        "defaultValue": "250x120x65"
+      },
+      {
+        "name": "joint",
+        "label": "Толщина шва (мм)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 5,
+        "max": 20
+      }
+    ],
+    "outputs": [
+      {
+        "name": "wallArea",
+        "label": "Площадь стены",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "brickCount",
+        "label": "Количество кирпича",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры стены, толщину кладки, тип кирпича и толщину шва. Калькулятор рассчитает количество.",
+      "about": "Калькулятор кирпича определяет количество материала для кладки стен с учётом толщины и типа кирпича.",
+      "usage": "Используется при строительстве домов, перегородок и других кирпичных конструкций.",
+      "formula": "Объём стены = длина × высота × толщина\nКирпичей = ⌈объём / (объём кирпича + шов)⌉",
+      "faq": [
+        {
+          "question": "Сколько кирпича в 1 м²?",
+          "answer": "Для одинарного: 0.5 кирпича — 51 шт, 1 кирпич — 102 шт, 2 кирпича — 204 шт."
+        },
+        {
+          "question": "Какой кирпич выбрать?",
+          "answer": "Одинарный — экономичный, полуторный — быстрее кладка, двойной — лучше теплоизоляция."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кирпич — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кирпич"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-gipsokartona",
+    "id": "drywall-basic-calculator",
+    "title": "Калькулятор гипсокартона",
+    "description": "Расчёт листов ГКЛ для стен и потолков",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "wallLength",
+        "label": "Длина стен (м)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 0.1
+      },
+      {
+        "name": "wallHeight",
+        "label": "Высота стен (м)",
+        "type": "number",
+        "placeholder": "2.7",
+        "defaultValue": 2.7,
+        "min": 1
+      },
+      {
+        "name": "ceilingArea",
+        "label": "Площадь потолка (м²)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 0
+      },
+      {
+        "name": "sheetSize",
+        "label": "Размер листа",
+        "type": "select",
+        "options": [
+          {
+            "value": "3",
+            "label": "1200×2500 мм (3 м²)"
+          },
+          {
+            "value": "3.6",
+            "label": "1200×3000 мм (3.6 м²)"
+          }
+        ],
+        "defaultValue": "3"
+      },
+      {
+        "name": "reserve",
+        "label": "Запас (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 30
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalArea",
+        "label": "Общая площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "sheetsNeeded",
+        "label": "Листов нужно",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину стен, высоту, площадь потолка, размер листа и запас. Калькулятор покажет количество листов.",
+      "about": "Калькулятор гипсокартона рассчитывает количество листов ГКЛ для обшивки стен и потолков.",
+      "usage": "Используется при планировании ремонта для покупки правильного количества материала.",
+      "formula": "Листов = ⌈(площадь стен + потолок) / площадь листа × (1 + запас)⌉",
+      "faq": [
+        {
+          "question": "Какой запас нужен для ГКЛ?",
+          "answer": "Стандартный запас — 10-15% на обрезку. Для сложных помещений — до 20%."
+        },
+        {
+          "question": "Какой гипсокартон выбрать?",
+          "answer": "Обычный — для сухих помещений, влагостойкий (ГКЛВ) — для ванных и кухонь, огнестойкий (ГКЛО) — для печей и каминов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гипсокартон — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Гипсокартон"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-pilomaterialov",
+    "id": "lumber-calculator",
+    "title": "Калькулятор пиломатериалов",
+    "description": "Расчёт объёма досок, бруса, бревен",
+    "subcategory": "pokrytiya",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "thickness",
+        "label": "Толщина (мм)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50,
+        "min": 10
+      },
+      {
+        "name": "width",
+        "label": "Ширина (мм)",
+        "type": "number",
+        "placeholder": "150",
+        "defaultValue": 150,
+        "min": 10
+      },
+      {
+        "name": "length",
+        "label": "Длина (м)",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 0.5
+      },
+      {
+        "name": "quantity",
+        "label": "Количество штук",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём одной доски",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "totalVolume",
+        "label": "Общий объём",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "area",
+        "label": "Площадь покрытия",
+        "type": "number",
+        "unit": "м²"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры доски (толщина, ширина, длина) и количество. Калькулятор рассчитает объём и площадь.",
+      "about": "Калькулятор пиломатериалов определяет объём досок, бруса, бревен и площадь их покрытия.",
+      "usage": "Используется при закупке пиломатериалов для строительства крыш, перекрытий, каркасов.",
+      "formula": "Объём = толщина × ширина × длина (в метрах)\nОбщий = объём × количество",
+      "faq": [
+        {
+          "question": "Как перевести мм в м?",
+          "answer": "Разделите миллиметры на 1000. Например, 50 мм = 0.05 м."
+        },
+        {
+          "question": "Сколько досок в кубе?",
+          "answer": "Для доски 50×150×6000 мм: 1 / (0.05 × 0.15 × 6) ≈ 22 штуки."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пиломатериалы — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пиломатериалы"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-uteplitelya",
+    "id": "insulation-basic-calculator",
+    "title": "Калькулятор утеплителя",
+    "description": "Расчёт минваты, пеноплекса, эковаты для утепления",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь утепления (м²)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 1
+      },
+      {
+        "name": "thickness",
+        "label": "Толщина утепления (см)",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15,
+        "min": 1,
+        "max": 50
+      },
+      {
+        "name": "packVolume",
+        "label": "Объём упаковки (м³)",
+        "type": "select",
+        "options": [
+          {
+            "value": "0.36",
+            "label": "Минвата 1000×600×50 мм (0.36 м³)"
+          },
+          {
+            "value": "0.288",
+            "label": "Минвата 1200×600×50 мм (0.288 м³)"
+          },
+          {
+            "value": "0.25",
+            "label": "Пеноплекс 1200×600×50 мм (0.25 м³)"
+          },
+          {
+            "value": "0.3",
+            "label": "Эковата мешок (0.3 м³)"
+          }
+        ],
+        "defaultValue": "0.36"
+      },
+      {
+        "name": "reserve",
+        "label": "Запас (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 30
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalVolume",
+        "label": "Объём утеплителя",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "packsNeeded",
+        "label": "Упаковок нужно",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь утепления, толщину, объём упаковки и запас. Калькулятор покажет количество материала.",
+      "about": "Калькулятор утеплителя рассчитывает количество минваты, пеноплекса, эковаты для утепления стен, крыш, полов.",
+      "usage": "Используется при планировании утепления дома для покупки правильного количества материала.",
+      "formula": "Объём = площадь × толщина (в метрах) × (1 + запас)\nУпаковок = ⌈объём / объём упаковки⌉",
+      "faq": [
+        {
+          "question": "Какая толщина утеплителя нужна?",
+          "answer": "Стены: 150-200 мм, перекрытие: 200-300 мм, фундамент: 50-100 мм, трубы: 30-100 мм."
+        },
+        {
+          "question": "Какой утеплитель выбрать?",
+          "answer": "Минвата — универсальная, пеноплекс — для фундамента и пола, эковата — для мансард и сложных форм."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Теплоизоляция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Теплоизоляция"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-krovli",
+    "id": "roofing-calculator",
+    "title": "Калькулятор кровли",
+    "description": "Расчёт черепицы, металлочерепицы, профнастила для крыши",
+    "subcategory": "pokrytiya",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "length",
+        "label": "Длина ската (м)",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8,
+        "min": 1
+      },
+      {
+        "name": "width",
+        "label": "Ширина ската (м)",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 1
+      },
+      {
+        "name": "slope",
+        "label": "Уклон крыши (°)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 5,
+        "max": 60
+      },
+      {
+        "name": "sheetWidth",
+        "label": "Ширина листа (м)",
+        "type": "select",
+        "options": [
+          {
+            "value": "1.05",
+            "label": "Металлочерепица (1.05 м)"
+          },
+          {
+            "value": "1.1",
+            "label": "Профнастил (1.1 м)"
+          },
+          {
+            "value": "0.33",
+            "label": "Гибкая черепица (0.33 м)"
+          }
+        ],
+        "defaultValue": "1.05"
+      },
+      {
+        "name": "reserve",
+        "label": "Запас (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 30
+      }
+    ],
+    "outputs": [
+      {
+        "name": "roofArea",
+        "label": "Площадь крыши",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "sheetsNeeded",
+        "label": "Листов нужно",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры ската, уклон крыши, ширину листа и запас. Калькулятор покажет количество материала.",
+      "about": "Калькулятор кровли рассчитывает количество металлочерепицы, профнастила или другого кровельного материала.",
+      "usage": "Используется при строительстве или ремонте крыши для закупки материалов.",
+      "formula": "Площадь = (длина × ширина) / cos(угол) × (1 + запас)\nЛистов = ⌈площадь / площадь листа⌉",
+      "faq": [
+        {
+          "question": "Какой уклон крыши лучше?",
+          "answer": "Плоская: 5-15°, скатная: 15-30°, мансардная: 30-60°. Чем больше снегопады — тем круче."
+        },
+        {
+          "question": "Какой запас нужен для кровли?",
+          "answer": "Для прямых скатов — 5-7%, для сложных форм с ендовами — 10-15%."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Крыша — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Крыша"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

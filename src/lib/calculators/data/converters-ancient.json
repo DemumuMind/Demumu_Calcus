@@ -1,0 +1,690 @@
+[
+  {
+    "slug": "drevnerusskie-mery-dliny",
+    "id": "ancient-russian-length",
+    "title": "Древнерусские меры длины",
+    "description": "Перевод аршин, вершков, саженей, локтей в современные метры и сантиметры",
+    "subcategory": "ancient-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "arshin",
+        "label": "Аршин",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "vershok",
+        "label": "Вершок",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "sazhen",
+        "label": "Сажень",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "lokot",
+        "label": "Локоть",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "meters",
+        "label": "Метры",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "centimeters",
+        "label": "Сантиметры",
+        "type": "number",
+        "unit": "см"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в древнерусских мерах: аршинах, вершках, саженях и локтях. Калькулятор переведёт в метры и сантиметры.",
+      "about": "Древнерусские меры длины использовались до введения метрической системы в 1899 году. Аршин — основная единица, равная примерно 71 см.",
+      "formula": "1 аршин = 71.12 см\n1 вершок = 4.45 см\n1 сажень = 2.13 м\n1 локоть = 53.34 см",
+      "faq": [
+        {
+          "question": "Сколько вершков в аршине?",
+          "answer": "16 вершков. Вершок — 1/16 часть аршина (примерно 4.4 см)."
+        },
+        {
+          "question": "Что такое \"косая сажень\"?",
+          "answer": "Косая сажень = 2.48 м — расстояние от пятки одной ноги до конца пальцев другой при разведённых ногах."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Вики - Русские меры длины",
+          "url": "https://ru.wikipedia.org/wiki/Аршин"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "drevnerusskie-mery-vesa",
+    "id": "ancient-russian-weight",
+    "title": "Древнерусские меры веса",
+    "description": "Перевод фунтов, пудов, золотников в килограммы и граммы",
+    "subcategory": "ancient-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "pud",
+        "label": "Пуд",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "funt",
+        "label": "Фунт",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "zolotnik",
+        "label": "Золотник",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "kilograms",
+        "label": "Килограммы",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "grams",
+        "label": "Граммы",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в пудах, фунтах и золотниках. Калькулятор переведёт в современные килограммы и граммы.",
+      "about": "Древнерусские меры веса: пуд — крупная торговая единица (16.38 кг), фунт — основная единица (~409 г), золотник — мелкая единица для драгоценностей (~4.27 г).",
+      "formula": "1 пуд = 16.3805 кг = 40 фунтов\n1 фунт = 409.512 г = 96 золотников\n1 золотник = 4.2658 г",
+      "faq": [
+        {
+          "question": "Сколько золотников в фунте?",
+          "answer": "96 золотников. Золотник использовался для взвешивания золота и драгоценных камней."
+        },
+        {
+          "question": "Что такое \"пудовщик\"?",
+          "answer": "Пудовщик — должностное лицо, отвечающее за проверку весов и мер на торговых рынках."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Вики - Русские меры веса",
+          "url": "https://ru.wikipedia.org/wiki/Пуд"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "drevnerusskie-mery-obema",
+    "id": "ancient-russian-volume",
+    "title": "Древнерусские меры объёма",
+    "description": "Перевод вёдер, гарнцев, четвериков, штофов в литры",
+    "subcategory": "ancient-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "vedro",
+        "label": "Ведро",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "chetverik",
+        "label": "Четверик",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "garnec",
+        "label": "Гарнец",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "shtof",
+        "label": "Штоф",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "liters",
+        "label": "Литры",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в вёдрах, четвериках, гарнцах и штофах. Калькулятор переведёт в литры.",
+      "about": "Древнерусские меры объёма использовались для измерения жидкостей и сыпучих тел. Ведро — основная мера для жидкостей, четверик — для зерна.",
+      "formula": "1 ведро = 12.299 л\n1 четверик = 26.24 л\n1 гарнец = 3.28 л\n1 штоф = 1.23 л",
+      "faq": [
+        {
+          "question": "Сколько штофов в ведре?",
+          "answer": "10 штофов. Штоф традиционно использовался для измерения водки (штоф водки)."
+        },
+        {
+          "question": "Что такое четверть?",
+          "answer": "Четверть = 209.95 л (мера для зерна, равная 8 четверикам)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Вики - Русские меры объёма",
+          "url": "https://ru.wikipedia.org/wiki/Ведро"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "antichnye-mery",
+    "id": "ancient-greek-roman",
+    "title": "Античные меры (Греция и Рим)",
+    "description": "Перевод стадий, римских миль, пасовов в метры и километры",
+    "subcategory": "ancient-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "stadium",
+        "label": "Стадии",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "romanMile",
+        "label": "Римские мили",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "pes",
+        "label": "Пассы (римские футы)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "cubit",
+        "label": "Локти (кубиты)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "meters",
+        "label": "Метры",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "kilometers",
+        "label": "Километры",
+        "type": "number",
+        "unit": "км"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в античных единицах: стадиях, римских милях, пассах и кубитах. Калькулятор переведёт в метры.",
+      "about": "Античные меры длины: стадий — длина беговой дорожки в Olympia (192 м), римская миля = 1000 двойных шагов (1482 м), кубит — длина предплечья (~44 см).",
+      "formula": "1 стадий = 192.27 м\n1 римская миля = 1482 м\n1 пасс = 0.296 м\n1 кубит = 0.444 м",
+      "faq": [
+        {
+          "question": "Сколько стадий в марафоне?",
+          "answer": "Марафонская дистанция (42.195 км) ≈ 219 стадий. Древний марафон был около 180 стадий."
+        },
+        {
+          "question": "Почему римская миля не равна современной?",
+          "answer": "Римская миля основана на 1000 двойных шагов (mille passus), а английская — на 8 фurlong."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ancient Measures",
+          "url": "https://en.wikipedia.org/wiki/Stadion_(unit)"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "angliyskie-mery-dliny",
+    "id": "imperial-length",
+    "title": "Английские меры длины",
+    "description": "Перевод дюймов, футов, ярдов, миль, рыболовных саженей в метры",
+    "subcategory": "imperial-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "inches",
+        "label": "Дюймы",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "feet",
+        "label": "Футы",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "yards",
+        "label": "Ярды",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "miles",
+        "label": "Мили",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "fathoms",
+        "label": "Сажени (fathoms)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "meters",
+        "label": "Метры",
+        "type": "number",
+        "unit": "м"
+      },
+      {
+        "name": "kilometers",
+        "label": "Километры",
+        "type": "number",
+        "unit": "км"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в дюймах, футах, ярдах, милях и рыболовных саженях. Калькулятор переведёт в метрическую систему.",
+      "about": "Английские меры длины (имперская система) основаны на эталонах 1824 года. До сих пор используются в США, Великобритании и некоторых других странах.",
+      "formula": "1 дюйм = 2.54 см\n1 фут = 12 дюймов = 30.48 см\n1 ярд = 3 фута = 91.44 см\n1 миля = 1760 ярдов = 1.609344 км\n1 сажень (fathom) = 6 футов = 1.852 м",
+      "faq": [
+        {
+          "question": "Почему в США до сих пор используют дюймы?",
+          "answer": "Исторические причины, стандартизация оборудования, сопротивление изменениям. Метрическая система принята только в науке."
+        },
+        {
+          "question": "Сколько футов в морской миле?",
+          "answer": "Морская миля = 1852 м = 6076.12 футов. Отличается от сухопутной (5280 футов)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Imperial Units",
+          "url": "https://en.wikipedia.org/wiki/Imperial_units"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "angliyskie-mery-vesa",
+    "id": "imperial-weight",
+    "title": "Английские меры веса",
+    "description": "Перевод унций, фунтов, стоунов, квартеров, центнеров в килограммы",
+    "subcategory": "imperial-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "ounces",
+        "label": "Унции (oz)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "pounds",
+        "label": "Фунты (lb)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "stones",
+        "label": "Стоуны",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "hundredweight",
+        "label": "Центнеры (cwt)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "kilograms",
+        "label": "Килограммы",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "grams",
+        "label": "Граммы",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "description",
+        "label": "Описание",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в унциях, фунтах, стоунах и центнерах. Калькулятор переведёт в килограммы.",
+      "about": "Английские меры веса: унция (28.35 г) — основная мера для мелких весов, фунт (453.59 г) — основная единица, стоун (6.35 кг) — для человеческого веса в UK.",
+      "formula": "1 унция = 28.3495 г\n1 фунт = 16 унций = 453.592 г\n1 стоун = 14 фунтов = 6.35029 кг\n1 центнер (UK) = 8 стоунов = 50.8023 кг",
+      "faq": [
+        {
+          "question": "Что такое стоун?",
+          "answer": "Традиционная британская единица для взвешивания людей. 1 стоун = 14 фунтов ≈ 6.35 кг."
+        },
+        {
+          "question": "Почему фунт называется \"pound\"?",
+          "answer": "От латинского pondus — вес. Символ lb — от libra (лат. весы)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Imperial Weight Units",
+          "url": "https://en.wikipedia.org/wiki/Pound_(mass)"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-karatov",
+    "id": "carat-converter",
+    "title": "Конвертер каратов",
+    "description": "Перевод между метрическими, тройскими и ювелирными каратами для драгоценных камней и золота",
+    "subcategory": "precious-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "metricCarats",
+        "label": "Метрические караты (камни)",
+        "type": "number",
+        "placeholder": "1",
+        "min": 0,
+        "defaultValue": 1
+      },
+      {
+        "name": "goldPurity",
+        "label": "Проба золота (чистота)",
+        "type": "select",
+        "options": [
+          {
+            "value": "24",
+            "label": "24K (999 проба, чистое)"
+          },
+          {
+            "value": "22",
+            "label": "22K (916 проба)"
+          },
+          {
+            "value": "18",
+            "label": "18K (750 проба)"
+          },
+          {
+            "value": "14",
+            "label": "14K (585 проба)"
+          },
+          {
+            "value": "9",
+            "label": "9K (375 проба)"
+          }
+        ],
+        "defaultValue": "18"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "milligrams",
+        "label": "Миллиграммы",
+        "type": "number",
+        "unit": "мг"
+      },
+      {
+        "name": "grams",
+        "label": "Граммы",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "troyOunce",
+        "label": "Тройские унции",
+        "type": "number",
+        "unit": "oz t"
+      },
+      {
+        "name": "goldPercent",
+        "label": "Содержание золота",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "sovietPurity",
+        "label": "Советская проба",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес в метрических каратах и выберите пробу золота. Калькулятор переведёт в различные единицы и покажет содержание золота.",
+      "about": "Метрический карат (200 мг) используется для драгоценных камней. Каратная проба золота (K) показывает содержание чистого золота: 24K = 100%, 18K = 75%.",
+      "formula": "1 карат (метрический) = 200 мг = 0.2 г\nЧистота золота = (Караты / 24) × 100%\n1 тройская унция = 31.1035 г",
+      "faq": [
+        {
+          "question": "В чём разница между каратом камней и золота?",
+          "answer": "Для камней карат — единица веса (200 мг). Для золота карат — единица чистоты (1/24 часть)."
+        },
+        {
+          "question": "Что такое 585 проба?",
+          "answer": "Советская/российская проба, соответствует 14K (58.5% золота). Самая популярная для украшений."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Carat (mass and purity)",
+          "url": "https://en.wikipedia.org/wiki/Carat"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "istoricheskie-mery-ploshadi",
+    "id": "historical-area",
+    "title": "Исторические меры площади",
+    "description": "Перевод десятин, акров, гектаров, аров в квадратные метры",
+    "subcategory": "ancient-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "dessiatin",
+        "label": "Десятины",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "acre",
+        "label": "Акры",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "hectare",
+        "label": "Гектары",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      },
+      {
+        "name": "are",
+        "label": "Ары (сотки)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "squareMeters",
+        "label": "Квадратные метры",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "squareKilometers",
+        "label": "Квадратные километры",
+        "type": "number",
+        "unit": "км²"
+      },
+      {
+        "name": "hectares",
+        "label": "В гектарах",
+        "type": "number",
+        "unit": "га"
+      },
+      {
+        "name": "comparison",
+        "label": "Сравнение",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значения в десятинах, акрах, гектарах и арах (сотках). Калькулятор переведёт в квадратные метры.",
+      "about": "Исторические меры площади: десятина — старорусская мера (~1.09 га), акр — английская/американская мера (~0.4 га), гектар — современная метрическая единица (1 га = 10000 м²).",
+      "formula": "1 десятина = 10925 м² ≈ 1.09 га\n1 акр = 4046.86 м² ≈ 0.405 га\n1 гектар = 10000 м²\n1 ар (сотка) = 100 м²",
+      "faq": [
+        {
+          "question": "Что такое \"сотка\"?",
+          "answer": "Разговорное название ара — 100 квадратных метров. Стандартный участок 6 соток = 600 м²."
+        },
+        {
+          "question": "Сколько гектаров в квадратном километре?",
+          "answer": "100 гектаров. 1 км² = 100 га = 10000 соток."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Acre (unit)",
+          "url": "https://en.wikipedia.org/wiki/Acre"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

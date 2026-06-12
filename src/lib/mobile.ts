@@ -1,5 +1,5 @@
 export function isCapacitor(): boolean {
-  return typeof window !== 'undefined' && !!(window as any).Capacitor?.isNativePlatform?.();
+  return typeof window !== 'undefined' && !!(window as Window & { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.();
 }
 
 export function isMobileWeb(): boolean {

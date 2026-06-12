@@ -12,10 +12,8 @@ import {
   Wallet,
   Flame,
   Lock,
-  FlaskConical,
   Search,
-  ChevronRight,
-} from 'lucide-react';
+  ChevronRight } from 'lucide-react';
 import { categories } from '@/lib/categories';
 import { calculators, getCalculatorsByCategory, getCalculatorsBySubcategory } from '@/lib/calculators';
 import { CategoryCard } from '@/components/category/category-card';
@@ -41,12 +39,9 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: 'Calcus',
     type: 'website',
-    locale: 'ru_RU',
-  },
+    locale: 'ru_RU' },
   alternates: {
-    canonical: SITE_URL,
-  },
-};
+    canonical: SITE_URL } };
 
 // Popular today calculators — hand-picked
 const POPULAR_CALCULATORS = [
@@ -66,20 +61,17 @@ const FEATURED_BLOCKS = [
     categorySlug: 'nauka-i-ucheba',
     title: 'Наука и Учёба',
     subcategorySlugs: ['matematicheskie', 'finansovye', 'geometriya', 'fizika'],
-    count: 4,
-  },
+    count: 4 },
   {
     categorySlug: 'zdorove-i-krasota',
     title: 'Здоровье и Красота',
     subcategorySlugs: ['pitanie-i-ves', 'sport-i-aktivnost', 'beremennost-i-deti', 'vneshnost'],
-    count: 4,
-  },
+    count: 4 },
   {
     categorySlug: 'nauka-i-ucheba',
     title: 'Финансы',
     subcategorySlugs: ['finansovye'],
-    count: 4,
-  },
+    count: 4 },
 ];
 
 function MiniCalcCard({ calc }: { calc: { slug: string; title: string; desc: string; icon: React.ElementType; color: string } }) {
@@ -109,8 +101,7 @@ function FeaturedBlock({
   categorySlug,
   title,
   subcategorySlugs,
-  count,
-}: {
+  count }: {
   categorySlug: string;
   title: string;
   subcategorySlugs: string[];

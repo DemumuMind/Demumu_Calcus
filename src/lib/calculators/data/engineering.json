@@ -1,0 +1,281 @@
+[
+  {
+    "slug": "zakon-oma",
+    "id": "ohms-law-calculator",
+    "title": "Закон Ома",
+    "description": "Расчёт напряжения, силы тока, сопротивления",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "known",
+        "label": "Что известно?",
+        "type": "select",
+        "options": [
+          {
+            "value": "ui",
+            "label": "Напряжение (U) и Ток (I)"
+          },
+          {
+            "value": "ur",
+            "label": "Напряжение (U) и Сопротивление (R)"
+          },
+          {
+            "value": "ir",
+            "label": "Ток (I) и Сопротивление (R)"
+          }
+        ],
+        "defaultValue": "ir"
+      },
+      {
+        "name": "value1",
+        "label": "Первое значение",
+        "type": "number",
+        "placeholder": "220",
+        "defaultValue": 220
+      },
+      {
+        "name": "value2",
+        "label": "Второе значение",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      }
+    ],
+    "outputs": [
+      {
+        "name": "u",
+        "label": "Напряжение",
+        "type": "number",
+        "unit": "В"
+      },
+      {
+        "name": "i",
+        "label": "Ток",
+        "type": "number",
+        "unit": "А"
+      },
+      {
+        "name": "r",
+        "label": "Сопротивление",
+        "type": "number",
+        "unit": "Ом"
+      },
+      {
+        "name": "p",
+        "label": "Мощность",
+        "type": "number",
+        "unit": "Вт"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите, какие два параметра известны (U и I, U и R, или I и R), введите значения. Калькулятор рассчитает остальные.",
+      "about": "Закон Ома — физический закон, устанавливающий соотношение между силой тока, напряжением и сопротивлением. Открыт Георгом Омом в 1826 году.",
+      "usage": "Используется в электротехнике для расчётов цепей, подбора компонентов, определения потребления.",
+      "formula": "U = I × R\nI = U / R\nR = U / I\nP = U × I = I² × R = U² / R",
+      "faq": [
+        {
+          "question": "Что такое закон Ома?",
+          "answer": "Сила тока прямо пропорциональна напряжению и обратно пропорциональна сопротивлению: I = U / R."
+        },
+        {
+          "question": "Как рассчитать мощность?",
+          "answer": "Мощность P = U × I. Также можно вычислить через сопротивление: P = I² × R или P = U² / R."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Закон Ома — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Закон_Ома"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "soprotivlenie-provodnika",
+    "id": "wire-resistance-calculator",
+    "title": "Сопротивление проводника",
+    "description": "Расчёт сопротивления провода по материалу и размеру",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "material",
+        "label": "Материал",
+        "type": "select",
+        "options": [
+          {
+            "value": "copper",
+            "label": "Медь"
+          },
+          {
+            "value": "aluminum",
+            "label": "Алюминий"
+          },
+          {
+            "value": "iron",
+            "label": "Железо"
+          },
+          {
+            "value": "gold",
+            "label": "Золото"
+          },
+          {
+            "value": "silver",
+            "label": "Серебро"
+          },
+          {
+            "value": "constantan",
+            "label": "Константан"
+          },
+          {
+            "value": "nichrome",
+            "label": "Нихром"
+          }
+        ],
+        "defaultValue": "copper"
+      },
+      {
+        "name": "length",
+        "label": "Длина (м)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0.001
+      },
+      {
+        "name": "area",
+        "label": "Площадь сечения (мм²)",
+        "type": "number",
+        "placeholder": "1.5",
+        "defaultValue": 1.5,
+        "min": 0.001
+      },
+      {
+        "name": "temp",
+        "label": "Температура (°C)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20
+      }
+    ],
+    "outputs": [
+      {
+        "name": "resistance",
+        "label": "Сопротивление",
+        "type": "number",
+        "unit": "Ом"
+      },
+      {
+        "name": "resistancePerKm",
+        "label": "Сопротивление на км",
+        "type": "number",
+        "unit": "Ом/км"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите материал провода, введите длину, площадь сечения и температуру. Калькулятор рассчитает сопротивление.",
+      "about": "Сопротивление проводника зависит от материала (удельное сопротивление), длины и площади поперечного сечения.",
+      "usage": "Используется для расчёта потерь в проводах, выбора сечения кабеля, проектирования электросетей.",
+      "formula": "R = ρ × (L / S)\nгде ρ — удельное сопротивление, L — длина, S — площадь сечения",
+      "faq": [
+        {
+          "question": "Почему медь лучше алюминия?",
+          "answer": "Медь имеет меньшее удельное сопротивление (0.0175 vs 0.028 Ом·мм²/м), лучше проводит ток, меньше греется."
+        },
+        {
+          "question": "Как температура влияет на сопротивление?",
+          "answer": "У металлов сопротивление растёт с температурой. Формула: R = R₂₀ × (1 + α × (t - 20)), где α — температурный коэффициент."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Электрическое сопротивление — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Электрическое_сопротивление"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "rc-cepy",
+    "id": "capacitor-calculator",
+    "title": "RC-цепь",
+    "description": "Расчёт постоянной времени RC-цепи (заряд/разряд)",
+    "subcategory": "fizika",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "resistance",
+        "label": "Сопротивление R (кОм)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0.001
+      },
+      {
+        "name": "capacitance",
+        "label": "Ёмкость C (мкФ)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0.001
+      },
+      {
+        "name": "voltage",
+        "label": "Напряжение питания (В)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "timeConstant",
+        "label": "Постоянная времени τ",
+        "type": "number",
+        "unit": "сек"
+      },
+      {
+        "name": "chargeTime",
+        "label": "Время заряда до 99%",
+        "type": "number",
+        "unit": "сек"
+      },
+      {
+        "name": "frequency",
+        "label": "Частота среза",
+        "type": "number",
+        "unit": "Гц"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сопротивление, ёмкость и напряжение. Калькулятор рассчитает постоянную времени и характеристики RC-цепи.",
+      "about": "RC-цепь — последовательное соединение резистора и конденсатора. Постоянная времени τ = R×C определяет скорость заряда/разряда.",
+      "usage": "Используется при проектировании фильтров, таймеров, сглаживающих цепей, генераторов.",
+      "formula": "τ = R × C\nВремя заряда до 63% = τ\nВремя заряда до 99% ≈ 5τ\nЧастота среза = 1/(2πRC)",
+      "faq": [
+        {
+          "question": "Что такое постоянная времени τ?",
+          "answer": "Время, за которое конденсатор заряжается примерно до 63% от максимального напряжения."
+        },
+        {
+          "question": "Как использовать RC-цепь как фильтр?",
+          "answer": "RC-цепь работает как фильтр низких частот. Частоты ниже частоты среза проходят, выше — ослабляются."
+        }
+      ],
+      "sources": [
+        {
+          "title": "RC-цепь — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/RC-цепь"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "cooking-measures-converter",
+    "id": "cooking-measures-extended",
+    "title": "Конвертер кулинарных мер",
+    "description": "Переводит кулинарные меры: стаканы, ложки, граммы, миллилитры",
+    "subcategory": "cooking",
+    "type": "converter",
+    "category": "converters"
+  },
+  {
+    "slug": "oven-temp-converter",
+    "id": "oven-temp-converter",
+    "title": "Конвертер температуры духовки",
+    "description": "Переводит температуру духовки между °C, °F и газовыми марками",
+    "subcategory": "cooking",
+    "type": "converter",
+    "category": "converters"
+  }
+]

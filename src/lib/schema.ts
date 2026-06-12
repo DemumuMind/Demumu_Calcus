@@ -7,6 +7,37 @@ import type { PercentageCalculation } from './percentages';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus-site.vercel.app';
 
+/** Helper to create a HowTo schema with steps */
+function makeHowToSchema(name: string, description: string, steps: Array<{ name: string; text: string; url?: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    totalTime: 'PT1M',
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      ...(s.url ? { url: s.url } : { position: i + 1 }),
+      name: s.name,
+      text: s.text,
+    })),
+  };
+}
+
+/** Helper to create a breadcrumb schema */
+function makeBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.url}`,
+    })),
+  };
+}
+
 export function generateHomePageSchema() {
   return {
     '@context': 'https://schema.org',
@@ -32,23 +63,10 @@ export function generateCategorySchema(categoryId: string) {
     name: category.title,
     description: category.description,
     url: `${SITE_URL}/${categoryId}`,
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Главная',
-          item: SITE_URL
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: category.title,
-          item: `${SITE_URL}/${categoryId}`
-        }
-      ]
-    }
+    breadcrumb: makeBreadcrumbSchema([
+      { name: 'Главная', url: '/' },
+      { name: category.title, url: `/${categoryId}` },
+    ]),
   };
 }
 
@@ -64,57 +82,27 @@ export function generateConverterSchema(
   
   if (!fromUnitData || !toUnitData) return null;
 
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: `Как конвертировать ${fromUnitData.name} в ${toUnitData.name}`,
-    description: `Конвертер ${category.name}: перевод ${fromUnitData.name} в ${toUnitData.name}.`,
-    totalTime: 'PT1M',
-    step: [
-      {
-        '@type': 'HowToStep',
-        name: `Введите значение в ${fromUnitData.name}`,
-        text: `Введите числовое значение в поле "Из" для ${fromUnitData.name}.`,
-        url: `${SITE_URL}/${category.id}/${fromUnit}-v-${toUnit}`
-      },
-      {
-        '@type': 'HowToStep',
-        name: 'Выберите единицы измерения',
-        text: `Убедитесь, что выбраны ${fromUnitData.name} для конвертации из и ${toUnitData.name} для конвертации в.`,
-        url: `${SITE_URL}/${category.id}/${fromUnit}-v-${toUnit}`
-      },
-      {
-        '@type': 'HowToStep',
-        name: 'Получите результат',
-        text: `Результат ${value} ${fromUnitData.shortName} = ${result} ${toUnitData.shortName} отображается автоматически.`,
-        url: `${SITE_URL}/${category.id}/${fromUnit}-v-${toUnit}`
-      }
-    ]
-  };
+  const stepUrl = `${SITE_URL}/${category.id}/${fromUnit}-v-${toUnit}`;
+  return makeHowToSchema(
+    `Как конвертировать ${fromUnitData.name} в ${toUnitData.name}`,
+    `Конвертер ${category.name}: перевод ${fromUnitData.name} в ${toUnitData.name}.`,
+    [
+      { name: `Введите значение в ${fromUnitData.name}`, text: `Введите числовое значение в поле "Из" для ${fromUnitData.name}.`, url: stepUrl },
+      { name: 'Выберите единицы измерения', text: `Убедитесь, что выбраны ${fromUnitData.name} для конвертации из и ${toUnitData.name} для конвертации в.`, url: stepUrl },
+      { name: 'Получите результат', text: `Результат ${value} ${fromUnitData.shortName} = ${result} ${toUnitData.shortName} отображается автоматически.`, url: stepUrl },
+    ],
+  );
 }
 
 export function generatePercentageSchema(type: PercentageCalculation) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: type.title,
-    description: type.description,
-    totalTime: 'PT1M',
-    step: [
-      {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'Введите значения',
-        text: 'Введите исходные числа в поля калькулятора.'
-      },
-      {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Получите результат',
-        text: `Результат вычисляется автоматически по формуле: ${type.formula}`
-      }
-    ]
-  };
+  return makeHowToSchema(
+    type.title,
+    type.description,
+    [
+      { name: 'Введите значения', text: 'Введите исходные числа в поля калькулятора.' },
+      { name: 'Получите результат', text: `Результат вычисляется автоматически по формуле: ${type.formula}` },
+    ],
+  );
 }
 
 export function generateCookingSchema(
@@ -122,7 +110,8 @@ export function generateCookingSchema(
   measure: { id: string; name: string; shortName: string; volumeMl: number }
 ) {
   const slug = `${measure.id}-${ingredient.id}`;
-  
+  const stepUrl = `${SITE_URL}/kulinarnye-mery/${slug}`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -138,46 +127,29 @@ export function generateCookingSchema(
         '@type': 'HowToStep',
         name: 'Введите количество',
         text: `Введите количество ${measure.name} ${ingredient.name} в поле ввода.`,
-        url: `${SITE_URL}/kulinarnye-mery/${slug}`
+        url: stepUrl,
       },
       {
         '@type': 'HowToStep',
         name: 'Получите результат в граммах',
         text: `Результат автоматически конвертируется в граммы.`,
-        url: `${SITE_URL}/kulinarnye-mery/${slug}`
-      }
-    ]
+        url: stepUrl,
+      },
+    ],
   };
 }
 
 export function generateTimerSchema(timer: TimerPreset) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: timer.name,
-    description: `Онлайн таймер на ${timer.name.toLowerCase()} с обратным отсчётом.`,
-    totalTime: `PT${Math.floor(timer.seconds / 3600)}H${Math.floor((timer.seconds % 3600) / 60)}M${timer.seconds % 60}S`,
-    step: [
-      {
-        '@type': 'HowToStep',
-        name: 'Запустите таймер',
-        text: `Нажмите кнопку "Старт" для начала отсчёта ${timer.name.toLowerCase()}.`,
-        url: `${SITE_URL}/tajmery/${timer.id}`
-      },
-      {
-        '@type': 'HowToStep',
-        name: 'Следите за временем',
-        text: 'Отслеживайте оставшееся время на экране таймера.',
-        url: `${SITE_URL}/tajmery/${timer.id}`
-      },
-      {
-        '@type': 'HowToStep',
-        name: 'Завершение',
-        text: 'Таймер оповестит вас звуковым сигналом по окончании.',
-        url: `${SITE_URL}/tajmery/${timer.id}`
-      }
-    ]
-  };
+  const stepUrl = `${SITE_URL}/tajmery/${timer.id}`;
+  return makeHowToSchema(
+    timer.name,
+    `Онлайн таймер на ${timer.name.toLowerCase()} с обратным отсчётом.`,
+    [
+      { name: 'Запустите таймер', text: `Нажмите кнопку "Старт" для начала отсчёта ${timer.name.toLowerCase()}.`, url: stepUrl },
+      { name: 'Следите за временем', text: 'Отслеживайте оставшееся время на экране таймера.', url: stepUrl },
+      { name: 'Завершение', text: 'Таймер оповестит вас звуковым сигналом по окончании.', url: stepUrl },
+    ],
+  );
 }
 
 export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
@@ -195,18 +167,7 @@ export function generateFAQSchema(faqs: Array<{ question: string; answer: string
   };
 }
 
-export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: `${SITE_URL}${item.url}`
-    }))
-  };
-}
+export const generateBreadcrumbSchema = makeBreadcrumbSchema;
 
 export function generateCalculatorSchema(
   name: string,
@@ -244,28 +205,10 @@ export function generateSubcategorySchema(
       name: 'Calcus',
       url: SITE_URL
     },
-    breadcrumb: {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Главная',
-          item: SITE_URL
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: category.title,
-          item: `${SITE_URL}/${category.slug}`
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: subcategory.title,
-          item: `${SITE_URL}/${category.slug}/podkat/${subcategory.id}`
-        }
-      ]
-    }
+    breadcrumb: makeBreadcrumbSchema([
+      { name: 'Главная', url: '/' },
+      { name: category.title, url: `/${category.slug}` },
+      { name: subcategory.title, url: `/${category.slug}/podkat/${subcategory.id}` },
+    ]),
   };
 }

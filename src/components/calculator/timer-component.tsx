@@ -51,7 +51,7 @@ export function TimerComponent({
 
   const getAudioContext = useCallback(() => {
     if (!audioContextRef.current) {
-      audioContextRef.current = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+      audioContextRef.current = new ((window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext || AudioContext)();
     }
     if (audioContextRef.current.state === 'suspended') {
       audioContextRef.current.resume();

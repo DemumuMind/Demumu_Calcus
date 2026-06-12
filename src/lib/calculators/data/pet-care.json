@@ -1,0 +1,869 @@
+[
+  {
+    "slug": "korm-sobaki",
+    "id": "dog-food",
+    "title": "Норма корма для собак",
+    "description": "Расчёт дневной нормы корма для собак на основе веса, возраста и активности",
+    "subcategory": "pets-dogs",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес собаки (кг)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20
+      },
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "select",
+        "options": [
+          {
+            "value": "puppy",
+            "label": "Щенок (до 1 года)"
+          },
+          {
+            "value": "adult",
+            "label": "Взрослая (1-7 лет)"
+          },
+          {
+            "value": "senior",
+            "label": "Пожилая (7+ лет)"
+          }
+        ],
+        "defaultValue": "adult"
+      },
+      {
+        "name": "activity",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкая (дома)"
+          },
+          {
+            "value": "moderate",
+            "label": "Средняя (прогулки)"
+          },
+          {
+            "value": "high",
+            "label": "Высокая (активные)"
+          },
+          {
+            "value": "veryhigh",
+            "label": "Очень высокая (рабочие)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "foodType",
+        "label": "Тип корма",
+        "type": "select",
+        "options": [
+          {
+            "value": "dry",
+            "label": "Сухой корм"
+          },
+          {
+            "value": "wet",
+            "label": "Влажный корм"
+          },
+          {
+            "value": "raw",
+            "label": "Натуральный (сырое мясо)"
+          },
+          {
+            "value": "homemade",
+            "label": "Домашняя еда"
+          }
+        ],
+        "defaultValue": "dry"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "calories",
+        "label": "Калории (ккал/день)",
+        "type": "number"
+      },
+      {
+        "name": "foodAmount",
+        "label": "Количество корма (г/день)",
+        "type": "number"
+      },
+      {
+        "name": "meals",
+        "label": "Количество приёмов пищи",
+        "type": "number"
+      },
+      {
+        "name": "water",
+        "label": "Воды (мл/день)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес собаки, выберите возраст, уровень активности и тип корма.",
+      "about": "Норма корма рассчитывается на основе метаболического веса (RER), уровня активности и возраста. Щенкам нужно больше калорий для роста.",
+      "formula": "Калории = 70 × вес^0.75 × активность × возрастной коэффициент",
+      "usage": "Используется для планирования питания, контроля веса, выбора упаковки корма.",
+      "faq": [
+        {
+          "question": "Почему моя собака набирает вес?",
+          "answer": "Возможно, вы кормите больше нормы или используете высококалорийный корм. Также учитывайте лакомства - они должны быть не более 10% от рациона."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Питание собак",
+          "url": "https://ru.wikipedia.org/wiki/Собака#Питание"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "korm-koshki",
+    "id": "cat-food",
+    "title": "Норма корма для кошек",
+    "description": "Расчёт дневной нормы корма для кошек на основе веса, возраста и состояния",
+    "subcategory": "pets-cats",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес кошки (кг)",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4
+      },
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "select",
+        "options": [
+          {
+            "value": "kitten",
+            "label": "Котёнок (до 1 года)"
+          },
+          {
+            "value": "adult",
+            "label": "Взрослая (1-7 лет)"
+          },
+          {
+            "value": "senior",
+            "label": "Пожилая (7+ лет)"
+          }
+        ],
+        "defaultValue": "adult"
+      },
+      {
+        "name": "condition",
+        "label": "Состояние",
+        "type": "select",
+        "options": [
+          {
+            "value": "neutered",
+            "label": "Стерилизованная/кастрированная"
+          },
+          {
+            "value": "active",
+            "label": "Активная"
+          },
+          {
+            "value": "inactive",
+            "label": "Малоактивная"
+          },
+          {
+            "value": "pregnant",
+            "label": "Беременная/кормящая"
+          }
+        ],
+        "defaultValue": "neutered"
+      },
+      {
+        "name": "foodType",
+        "label": "Тип корма",
+        "type": "select",
+        "options": [
+          {
+            "value": "dry",
+            "label": "Сухой корм"
+          },
+          {
+            "value": "wet",
+            "label": "Влажный корм"
+          },
+          {
+            "value": "mixed",
+            "label": "Смешанное питание"
+          }
+        ],
+        "defaultValue": "dry"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "calories",
+        "label": "Калории (ккал/день)",
+        "type": "number"
+      },
+      {
+        "name": "foodAmount",
+        "label": "Количество (г/день)",
+        "type": "number"
+      },
+      {
+        "name": "cansWet",
+        "label": "Банок влажного (85г)",
+        "type": "number"
+      },
+      {
+        "name": "water",
+        "label": "Воды (мл/день)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес кошки, выберите возраст, состояние и тип корма.",
+      "about": "Кошки - хищники с высокой потребностью в белке. Стерилизованным кошкам нужно меньше калорий, чем активным.",
+      "formula": "Калории = 70 × вес^0.75 × коэффициент состояния × возрастной коэффициент",
+      "usage": "Используется для предотвращения ожирения (особенно у стерилизованных кошек) и планирования рациона.",
+      "faq": [
+        {
+          "question": "Сухой или влажный корм?",
+          "answer": "Влажный корм лучше для почек и обеспечивает дополнительное увлажнение. Сухой удобнее для свободного доступа. Смешанное питание - оптимально."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Питание кошек",
+          "url": "https://ru.wikipedia.org/wiki/Кошка#Питание"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "vozrast-pitomca",
+    "id": "pet-age",
+    "title": "Возраст питомца в \"человеческих\" годах",
+    "description": "Перевод возраста собак и кошек в эквивалент человеческого возраста",
+    "subcategory": "pets-general",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "petType",
+        "label": "Тип питомца",
+        "type": "select",
+        "options": [
+          {
+            "value": "dog_small",
+            "label": "Собака мелкая (до 10 кг)"
+          },
+          {
+            "value": "dog_medium",
+            "label": "Собака средняя (10-25 кг)"
+          },
+          {
+            "value": "dog_large",
+            "label": "Собака крупная (25+ кг)"
+          },
+          {
+            "value": "cat",
+            "label": "Кошка"
+          }
+        ],
+        "defaultValue": "dog_medium"
+      },
+      {
+        "name": "years",
+        "label": "Лет",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5
+      },
+      {
+        "name": "months",
+        "label": "Месяцев",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "humanAge",
+        "label": "Человеческий возраст (лет)",
+        "type": "number"
+      },
+      {
+        "name": "lifeStage",
+        "label": "Жизненная стадия",
+        "type": "text"
+      },
+      {
+        "name": "careTips",
+        "label": "Рекомендации по уходу",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип питомца и укажите его возраст в годах и месяцах.",
+      "about": "Питомцы стареют быстрее людей, особенно в первые годы. Первый год жизни собаки ≈ 15 человеческих лет.",
+      "usage": "Помогает понять, в какой жизненной стадии находится питомец и какой уход ему нужен.",
+      "faq": [
+        {
+          "question": "Почему крупные собаки стареют быстрее?",
+          "answer": "Это парадокс: крупные породы созревают медленнее, но стареют быстрее. Маленькие собаки живут дольше."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Возраст собак",
+          "url": "https://ru.wikipedia.org/wiki/Собака#Возраст"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "doza-lekarstv",
+    "id": "pet-medication-dosage",
+    "title": "Дозировка лекарств для питомцев",
+    "description": "Расчёт дозировки лекарств на основе веса питомца (только для ориентира, консультируйтесь с ветеринаром)",
+    "subcategory": "pets-health",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "petType",
+        "label": "Питомец",
+        "type": "select",
+        "options": [
+          {
+            "value": "dog",
+            "label": "Собака"
+          },
+          {
+            "value": "cat",
+            "label": "Кошка"
+          }
+        ],
+        "defaultValue": "dog"
+      },
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      },
+      {
+        "name": "medication",
+        "label": "Тип лекарства",
+        "type": "select",
+        "options": [
+          {
+            "value": "general",
+            "label": "Общий расчёт"
+          },
+          {
+            "value": "flea",
+            "label": "Против блох/клещей"
+          },
+          {
+            "value": "worm",
+            "label": "От глистов"
+          },
+          {
+            "value": "pain",
+            "label": "Обезболивающее"
+          },
+          {
+            "value": "antibiotic",
+            "label": "Антибиотик"
+          }
+        ],
+        "defaultValue": "general"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dosageMg",
+        "label": "Дозировка (мг)",
+        "type": "number"
+      },
+      {
+        "name": "frequency",
+        "label": "Частота приёма",
+        "type": "text"
+      },
+      {
+        "name": "warning",
+        "label": "Важно!",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите тип питомца, вес и тип лекарства. Это даёт ОРИЕНТИРОВОЧНЫЙ расчёт.",
+      "about": "Дозировка лекарств для животных зависит от веса, возраста, состояния здоровья и многих других факторов.",
+      "formula": "Доза (мг) = Вес (кг) × Дозировка на кг (мг/кг)",
+      "usage": "Только для предварительной оценки! Всегда консультируйтесь с ветеринаром перед применением лекарств.",
+      "faq": [
+        {
+          "question": "Можно ли давать человеческие лекарства?",
+          "answer": "Некоторые лекарства опасны для животных (парацетамол для кошек!). Никогда не давайте без консультации ветеринара."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ветеринария",
+          "url": "https://ru.wikipedia.org/wiki/Ветеринария"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "stoimost-pitomca",
+    "id": "pet-cost",
+    "title": "Стоимость содержания питомца",
+    "description": "Расчёт месячных и годовых расходов на содержание собаки или кошки",
+    "subcategory": "pets-finance",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "petType",
+        "label": "Питомец",
+        "type": "select",
+        "options": [
+          {
+            "value": "dog_small",
+            "label": "Собака мелкая (до 10 кг)"
+          },
+          {
+            "value": "dog_medium",
+            "label": "Собака средняя (10-25 кг)"
+          },
+          {
+            "value": "dog_large",
+            "label": "Собака крупная (25+ кг)"
+          },
+          {
+            "value": "cat",
+            "label": "Кошка"
+          }
+        ],
+        "defaultValue": "dog_medium"
+      },
+      {
+        "name": "foodQuality",
+        "label": "Качество корма",
+        "type": "select",
+        "options": [
+          {
+            "value": "economy",
+            "label": "Эконом (500₽/мес)"
+          },
+          {
+            "value": "standard",
+            "label": "Стандарт (1500₽/мес)"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум (3000₽/мес)"
+          },
+          {
+            "value": "super_premium",
+            "label": "Супер-премиум (5000₽/мес)"
+          }
+        ],
+        "defaultValue": "standard"
+      },
+      {
+        "name": "vetCare",
+        "label": "Уровень ветеринарной помощи",
+        "type": "select",
+        "options": [
+          {
+            "value": "basic",
+            "label": "Базовая (плановые осмотры)"
+          },
+          {
+            "value": "extended",
+            "label": "Расширенная (+ страховка)"
+          },
+          {
+            "value": "full",
+            "label": "Полная (любые проблемы)"
+          }
+        ],
+        "defaultValue": "basic"
+      },
+      {
+        "name": "grooming",
+        "label": "Груминг/уход",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Самостоятельно"
+          },
+          {
+            "value": "occasional",
+            "label": "Иногда в салоне"
+          },
+          {
+            "value": "regular",
+            "label": "Регулярно в салоне"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "monthlyCost",
+        "label": "В месяц (₽)",
+        "type": "number"
+      },
+      {
+        "name": "yearlyCost",
+        "label": "В год (₽)",
+        "type": "number"
+      },
+      {
+        "name": "breakdown",
+        "label": "Распределение расходов",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип питомца, качество корма, уровень ветеринарной помощи и груминга.",
+      "about": "Содержание питомца - это не только корм, но и ветеринарная помощь, груминг, игрушки, аксессуары.",
+      "usage": "Используется для планирования бюджета перед заведением питомца или анализа текущих расходов.",
+      "faq": [
+        {
+          "question": "Сколько стоит собака в год?",
+          "answer": "В среднем 30 000 - 100 000 ₽ в год в зависимости от размера, породы (некоторые требуют профессионального груминга) и здоровья."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Содержание домашних животных",
+          "url": "https://ru.wikipedia.org/wiki/Домашнее_животное"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "idealnyj-ves-pitomca",
+    "id": "pet-ideal-weight",
+    "title": "Оценка веса питомца",
+    "description": "Определение, находится ли питомец в идеальном весе (по системе BCS)",
+    "subcategory": "pets-health",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "petType",
+        "label": "Питомец",
+        "type": "select",
+        "options": [
+          {
+            "value": "dog",
+            "label": "Собака"
+          },
+          {
+            "value": "cat",
+            "label": "Кошка"
+          }
+        ],
+        "defaultValue": "dog"
+      },
+      {
+        "name": "currentWeight",
+        "label": "Текущий вес (кг)",
+        "type": "number",
+        "placeholder": "15",
+        "defaultValue": 15
+      },
+      {
+        "name": "idealWeight",
+        "label": "Идеальный вес (кг)",
+        "type": "number",
+        "placeholder": "12",
+        "defaultValue": 12
+      }
+    ],
+    "outputs": [
+      {
+        "name": "weightDiff",
+        "label": "Отклонение (кг)",
+        "type": "number"
+      },
+      {
+        "name": "weightPercent",
+        "label": "Отклонение (%)",
+        "type": "number"
+      },
+      {
+        "name": "bcs",
+        "label": "Оценка по BCS",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текущий вес питомца и его идеальный вес (можно узнать у ветеринара или по стандартам породы).",
+      "about": "BCS (Body Condition Score) - система оценки состояния тела питомца по 9-балльной шкале. Идеал - 5/9.",
+      "usage": "Помогает контролировать вес питомца и предотвратить ожирение или недостаточный вес.",
+      "faq": [
+        {
+          "question": "Как определить идеальный вес?",
+          "answer": "У собак и кошек должны быть видны талия (сверху) и чувствоваться рёбра (легким надавливанием). Окружность живота < окружности грудной клетки."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ожирение у животных",
+          "url": "https://en.wikipedia.org/wiki/Obesity_in_pets"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "vremya-progulok",
+    "id": "pet-walk",
+    "title": "Норма прогулок для собак",
+    "description": "Расчёт необходимого времени прогулок на основе породы, возраста и энергии",
+    "subcategory": "pets-dogs",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "breedType",
+        "label": "Тип породы",
+        "type": "select",
+        "options": [
+          {
+            "value": "toy",
+            "label": "Той/миниатюрная (до 5 кг)"
+          },
+          {
+            "value": "companion",
+            "label": "Компаньон (спаниель, пудель)"
+          },
+          {
+            "value": "working",
+            "label": "Рабочая (овчарка, ретривер)"
+          },
+          {
+            "value": "sighthound",
+            "label": "Борзая (хортая, грейхаунд)"
+          },
+          {
+            "value": "giant",
+            "label": "Гигант (мастиф, дог)"
+          }
+        ],
+        "defaultValue": "companion"
+      },
+      {
+        "name": "age",
+        "label": "Возраст",
+        "type": "select",
+        "options": [
+          {
+            "value": "puppy",
+            "label": "Щенок (до 1 года)"
+          },
+          {
+            "value": "adult",
+            "label": "Взрослая (1-7 лет)"
+          },
+          {
+            "value": "senior",
+            "label": "Пожилая (7+ лет)"
+          }
+        ],
+        "defaultValue": "adult"
+      },
+      {
+        "name": "energy",
+        "label": "Уровень энергии",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий (флегматик)"
+          },
+          {
+            "value": "medium",
+            "label": "Средний"
+          },
+          {
+            "value": "high",
+            "label": "Высокий (энерджайзер)"
+          }
+        ],
+        "defaultValue": "medium"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "walksPerDay",
+        "label": "Прогулок в день",
+        "type": "number"
+      },
+      {
+        "name": "walkDuration",
+        "label": "Длительность (мин)",
+        "type": "number"
+      },
+      {
+        "name": "totalTime",
+        "label": "Всего в день (мин)",
+        "type": "number"
+      },
+      {
+        "name": "intensity",
+        "label": "Интенсивность",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип породы, возраст и уровень энергии собаки.",
+      "about": "Разные породы имеют разные потребности в активности. Рабочие породы требуют больше физической и умственной нагрузки.",
+      "usage": "Используется для планирования распорядка дня с собакой, выбора породы по образу жизни.",
+      "faq": [
+        {
+          "question": "Можно ли выгуливать щенка долго?",
+          "answer": "Нет! Правило: 5 минут прогулки на каждый месяц жизни (2 раза в день). Перегрузка опасна для развивающихся суставов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Выгул собак",
+          "url": "https://ru.wikipedia.org/wiki/Собака#Уход"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "ploshchad-dlya-pitomca",
+    "id": "pet-space",
+    "title": "Пространство для питомца",
+    "description": "Оценка достаточности жилого пространства для разных типов питомцев",
+    "subcategory": "pets-general",
+    "type": "formula",
+    "category": "dlya-zhivotnyh",
+    "inputs": [
+      {
+        "name": "petType",
+        "label": "Питомец",
+        "type": "select",
+        "options": [
+          {
+            "value": "cat",
+            "label": "Кошка"
+          },
+          {
+            "value": "dog_small",
+            "label": "Собака мелкая"
+          },
+          {
+            "value": "dog_medium",
+            "label": "Собака средняя"
+          },
+          {
+            "value": "dog_large",
+            "label": "Собака крупная"
+          },
+          {
+            "value": "bird",
+            "label": "Птица"
+          },
+          {
+            "value": "rodent",
+            "label": "Грызун"
+          }
+        ],
+        "defaultValue": "cat"
+      },
+      {
+        "name": "livingSpace",
+        "label": "Жилая площадь (м²)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50
+      },
+      {
+        "name": "outdoorAccess",
+        "label": "Доступ на улицу/балкон",
+        "type": "select",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Да"
+          },
+          {
+            "value": "no",
+            "label": "Нет"
+          }
+        ],
+        "defaultValue": "no"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "spaceRating",
+        "label": "Оценка пространства",
+        "type": "text"
+      },
+      {
+        "name": "recommendations",
+        "label": "Рекомендации",
+        "type": "text"
+      },
+      {
+        "name": "minSpace",
+        "label": "Минимум (м²)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип питомца, введите жилую площадь и укажите наличие доступа на улицу/балкон.",
+      "about": "Разные питомцы требуют разного пространства. Крупным собакам нужно больше места для комфортной жизни.",
+      "usage": "Используется перед заведением питомца для оценки готовности жилья.",
+      "faq": [
+        {
+          "question": "Можно ли держать крупную собаку в квартире?",
+          "answer": "Можно, но нужна регулярная активность на улице (2-3 часа в день). В квартире собака в основном спит."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Содержание животных",
+          "url": "https://ru.wikipedia.org/wiki/Домашнее_животное"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

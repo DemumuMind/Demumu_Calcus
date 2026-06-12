@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Percent, ArrowRight, Calculator } from 'lucide-react';
+import { Percent, Calculator } from 'lucide-react';
 import { percentageTypes } from '@/lib/percentages';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Калькулятор процентов — онлайн расчёт',
   description: 'Онлайн калькулятор процентов. 7 типов расчётов: процент от числа, прибавить процент, вычесть процент, изменение в процентах и другие.',
-  keywords: 'проценты, калькулятор процентов, процент от числа, прибавить процент, вычесть процент',
-};
+  keywords: 'проценты, калькулятор процентов, процент от числа, прибавить процент, вычесть процент' };
 
 export default function PercentagesPage() {
   return (

@@ -17,7 +17,6 @@ export function CalculatorRenderer({ calculator, calculate }: CalculatorRenderer
     calculate,
   };
 
-  // Render appropriate calculator component
   switch (fullCalculator.type) {
     case 'arithmetic':
       return <ArithmeticCalculator calculator={fullCalculator} />;

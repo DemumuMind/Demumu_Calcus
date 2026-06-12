@@ -1,0 +1,835 @@
+[
+  {
+    "slug": "vyderzhka",
+    "id": "exposure",
+    "title": "Выдержка и экспозиция",
+    "description": "Расчёт выдержки, диафрагмы и ISO для правильной экспозиции фотографии",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "baseShutter",
+        "label": "Базовая выдержка (сек)",
+        "type": "number",
+        "placeholder": "1/125",
+        "defaultValue": 0.008
+      },
+      {
+        "name": "baseAperture",
+        "label": "Базовая диафрагма (f/)",
+        "type": "number",
+        "placeholder": "5.6",
+        "defaultValue": 5.6
+      },
+      {
+        "name": "baseISO",
+        "label": "Базовое ISO",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "newAperture",
+        "label": "Новая диафрагма (f/)",
+        "type": "number",
+        "placeholder": "2.8",
+        "defaultValue": 2.8
+      },
+      {
+        "name": "newISO",
+        "label": "Новое ISO",
+        "type": "number",
+        "placeholder": "400",
+        "defaultValue": 400
+      }
+    ],
+    "outputs": [
+      {
+        "name": "newShutter",
+        "label": "Новая выдержка",
+        "type": "text"
+      },
+      {
+        "name": "exposureValue",
+        "label": "Изменение экспозиции (EV)",
+        "type": "number"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите базовые параметры экспозиции (выдержку, диафрагму, ISO) и новые значения диафрагмы и ISO. Калькулятор рассчитает необходимую выдержку.",
+      "about": "Правило экспозиции: при закрытии диафрагмы на одно значение (например, f/2.8 → f/4) нужно удвоить выдержку или ISO для сохранения экспозиции.",
+      "formula": "EV = log₂(f²/t) - log₂(ISO/100), где f - диафрагма, t - выдержка",
+      "usage": "Используется для расчёта настроек камеры при изменении условий съёмки.",
+      "faq": [
+        {
+          "question": "Что такое EV (Exposure Value)?",
+          "answer": "EV - число, характеризующее экспозицию. Каждое изменение на 1 EV соответствует удвоению или уменьшению вдвое количества света."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Экспозиция в фотографии",
+          "url": "https://ru.wikipedia.org/wiki/Экспозиция_(фотография)"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "glubina-rezkosti",
+    "id": "depth-of-field",
+    "title": "Глубина резкости",
+    "description": "Расчёт глубины резкости (DOF) на основе фокусного расстояния, диафрагмы и расстояния до объекта",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "focalLength",
+        "label": "Фокусное расстояние (мм)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50
+      },
+      {
+        "name": "aperture",
+        "label": "Диафрагма (f/)",
+        "type": "number",
+        "placeholder": "2.8",
+        "defaultValue": 2.8
+      },
+      {
+        "name": "distance",
+        "label": "Расстояние до объекта (м)",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3
+      },
+      {
+        "name": "sensorSize",
+        "label": "Размер сенсора",
+        "type": "select",
+        "options": [
+          {
+            "value": "fullframe",
+            "label": "Full Frame (35mm)"
+          },
+          {
+            "value": "apsc",
+            "label": "APS-C (1.5x/1.6x)"
+          },
+          {
+            "value": "m43",
+            "label": "Micro 4/3 (2x)"
+          },
+          {
+            "value": "1inch",
+            "label": "1\" (2.7x)"
+          }
+        ],
+        "defaultValue": "fullframe"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "nearLimit",
+        "label": "Ближняя граница (м)",
+        "type": "number"
+      },
+      {
+        "name": "farLimit",
+        "label": "Дальняя граница (м)",
+        "type": "number"
+      },
+      {
+        "name": "totalDOF",
+        "label": "Глубина резкости (м)",
+        "type": "number"
+      },
+      {
+        "name": "hyperfocal",
+        "label": "Гиперфокальное расстояние (м)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите фокусное расстояние объектива, диафрагму, расстояние до объекта и выберите размер сенсора камеры.",
+      "about": "Глубина резкости (DOF) - диапазон расстояний, в пределах которого объекты выглядят резкими на фотографии.",
+      "formula": "H = (f² / N×c) + f, где H - гиперфокальное расстояние, f - фокусное расстояние, N - диафрагма, c - кружок нерезкости",
+      "usage": "Помогает контролировать размытие фона (боке) и определять, какая часть сцены будет резкой.",
+      "faq": [
+        {
+          "question": "Как получить размытый фон (боке)?",
+          "answer": "Используйте большую диафрагму (f/1.4-f/2.8), длинное фокусное расстояние (85mm+), и снимайте на близком расстоянии."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Глубина резкости",
+          "url": "https://ru.wikipedia.org/wiki/Глубина_резкости"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "ugol-obzora",
+    "id": "field-of-view",
+    "title": "Угол обзора объектива",
+    "description": "Расчёт горизонтального, вертикального и диагонального угла обзора объектива",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "focalLength",
+        "label": "Фокусное расстояние (мм)",
+        "type": "number",
+        "placeholder": "50",
+        "defaultValue": 50
+      },
+      {
+        "name": "sensorSize",
+        "label": "Размер сенсора",
+        "type": "select",
+        "options": [
+          {
+            "value": "fullframe",
+            "label": "Full Frame (36×24mm)"
+          },
+          {
+            "value": "apsc_canon",
+            "label": "APS-C Canon (22.2×14.8mm)"
+          },
+          {
+            "value": "apsc_nikon",
+            "label": "APS-C Nikon/Sony (23.5×15.6mm)"
+          },
+          {
+            "value": "m43",
+            "label": "Micro 4/3 (17.3×13mm)"
+          }
+        ],
+        "defaultValue": "fullframe"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "horizontalFOV",
+        "label": "Горизонтальный угол (°)",
+        "type": "number"
+      },
+      {
+        "name": "verticalFOV",
+        "label": "Вертикальный угол (°)",
+        "type": "number"
+      },
+      {
+        "name": "diagonalFOV",
+        "label": "Диагональный угол (°)",
+        "type": "number"
+      },
+      {
+        "name": "equivalent35mm",
+        "label": "Эквивалент на FF (мм)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите фокусное расстояние объектива и выберите размер сенсора камеры.",
+      "about": "Угол обзора показывает, какую часть сцены захватывает объектив. Широкоугольные объективы (10-35mm) имеют большой угол, телеобъективы (85mm+) - маленький.",
+      "formula": "Угол = 2 × arctan(размер сенсора / (2 × фокусное расстояние))",
+      "usage": "Помогает выбрать подходящий объектив для съёмки пейзажей (широкий угол) или портретов (узкий угол).",
+      "faq": [
+        {
+          "question": "Что такое эквивалентное фокусное расстояние?",
+          "answer": "Это фокусное расстояние, которое дало бы такой же угол обзора на полнокадровой камере (Full Frame). Например, 35mm на APS-C ≈ 50mm на FF."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Угол обзора",
+          "url": "https://ru.wikipedia.org/wiki/Угол_обзора"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "zvezdy-vyderzhka",
+    "id": "star-trails",
+    "title": "Выдержка для звёзд",
+    "description": "Расчёт максимальной выдержки для съёмки звёзд без смазывания (правило 500, 600, NPF)",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "focalLength",
+        "label": "Фокусное расстояние (мм)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20
+      },
+      {
+        "name": "sensorSize",
+        "label": "Размер сенсора",
+        "type": "select",
+        "options": [
+          {
+            "value": "fullframe",
+            "label": "Full Frame"
+          },
+          {
+            "value": "apsc",
+            "label": "APS-C"
+          },
+          {
+            "value": "m43",
+            "label": "Micro 4/3"
+          }
+        ],
+        "defaultValue": "fullframe"
+      },
+      {
+        "name": "method",
+        "label": "Метод расчёта",
+        "type": "select",
+        "options": [
+          {
+            "value": "500",
+            "label": "Правило 500 (классика)"
+          },
+          {
+            "value": "600",
+            "label": "Правило 600 (поправка)"
+          },
+          {
+            "value": "npf",
+            "label": "NPF (точный)"
+          }
+        ],
+        "defaultValue": "500"
+      },
+      {
+        "name": "aperture",
+        "label": "Диафрагма (f/) для NPF",
+        "type": "number",
+        "placeholder": "2.8",
+        "defaultValue": 2.8
+      },
+      {
+        "name": "pixelSize",
+        "label": "Размер пикселя (мкм) для NPF",
+        "type": "number",
+        "placeholder": "5.9",
+        "defaultValue": 5.9
+      }
+    ],
+    "outputs": [
+      {
+        "name": "maxShutter",
+        "label": "Максимальная выдержка (сек)",
+        "type": "text"
+      },
+      {
+        "name": "shutterText",
+        "label": "Рекомендуемая выдержка",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите фокусное расстояние, размер сенсора и выберите метод расчёта. Для метода NPF также укажите диафрагму и размер пикселя.",
+      "about": "При съёмке звёзд Земля вращается, и при длинных выдержках звёзды превращаются в полосы. Эти правила помогают рассчитать максимальную выдержку.",
+      "formula": "Правило 500: выдержка = 500 / (фокусное × кроп-фактор). NPF: более точная формула с учётом диафрагмы и размера пикселя.",
+      "usage": "Используется для астрофотографии, съёмки Млечного Пути, звёздного неба.",
+      "faq": [
+        {
+          "question": "Какое правило точнее?",
+          "answer": "NPF - самое точное, учитывает характеристики камеры. Правило 500 - консервативное (безопасное). Правило 600 - позволяет более длинные выдержки."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Астрофотография",
+          "url": "https://ru.wikipedia.org/wiki/Астрофотография"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "macrosyomka",
+    "id": "macro",
+    "title": "Макросъёмка (увеличение)",
+    "description": "Расчёт увеличения макрообъектива, рабочего расстояния и размера объекта в кадре",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "focalLength",
+        "label": "Фокусное расстояние (мм)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "minFocus",
+        "label": "Минимальная дистанция фокусировки (см)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30
+      },
+      {
+        "name": "sensorWidth",
+        "label": "Ширина сенсора (мм)",
+        "type": "number",
+        "placeholder": "36",
+        "defaultValue": 36
+      }
+    ],
+    "outputs": [
+      {
+        "name": "magnification",
+        "label": "Увеличение (×)",
+        "type": "number"
+      },
+      {
+        "name": "subjectSize",
+        "label": "Размер объекта в кадре (мм)",
+        "type": "number"
+      },
+      {
+        "name": "workingDistance",
+        "label": "Рабочее расстояние (см)",
+        "type": "number"
+      },
+      {
+        "name": "classification",
+        "label": "Классификация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите фокусное расстояние макрообъектива, минимальную дистанцию фокусировки и ширину сенсора.",
+      "about": "Макрообъективы позволяют снимать мелкие объекты крупным планом. Настоящий макро - это увеличение 1:1 (объект на сенсоре того же размера, что и в реальности).",
+      "formula": "Увеличение = фокусное расстояние / (расстояние до объекта - фокусное расстояние)",
+      "usage": "Используется для съёмки насекомых, цветов, деталей, ювелирных изделий.",
+      "faq": [
+        {
+          "question": "Что означает увеличение 1:1?",
+          "answer": "Это означает, что объект проецируется на сенсор в натуральную величину. Например, жук длиной 10 мм займёт 10 мм на сенсоре."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Макросъёмка",
+          "url": "https://ru.wikipedia.org/wiki/Макросъёмка"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "razmer-pechati",
+    "id": "print-size",
+    "title": "Размеры печати фото",
+    "description": "Расчёт оптимальных размеров печати на основе разрешения файла и требуемого PPI",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "width",
+        "label": "Ширина изображения (пиксели)",
+        "type": "number",
+        "placeholder": "6000",
+        "defaultValue": 6000
+      },
+      {
+        "name": "height",
+        "label": "Высота изображения (пиксели)",
+        "type": "number",
+        "placeholder": "4000",
+        "defaultValue": 4000
+      },
+      {
+        "name": "targetPPI",
+        "label": "Целевой PPI",
+        "type": "select",
+        "options": [
+          {
+            "value": "300",
+            "label": "300 PPI (фотокачество)"
+          },
+          {
+            "value": "200",
+            "label": "200 PPI (хорошее качество)"
+          },
+          {
+            "value": "150",
+            "label": "150 PPI (постеры)"
+          },
+          {
+            "value": "100",
+            "label": "100 PPI (баннеры)"
+          }
+        ],
+        "defaultValue": "300"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "maxWidth",
+        "label": "Макс. ширина (см)",
+        "type": "number"
+      },
+      {
+        "name": "maxHeight",
+        "label": "Макс. высота (см)",
+        "type": "number"
+      },
+      {
+        "name": "maxWidthInch",
+        "label": "Макс. ширина (дюймы)",
+        "type": "number"
+      },
+      {
+        "name": "maxHeightInch",
+        "label": "Макс. высота (дюймы)",
+        "type": "number"
+      },
+      {
+        "name": "megapixels",
+        "label": "Мегапиксели",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите разрешение вашего изображения в пикселях и выберите целевое качество печати (PPI).",
+      "about": "Для фотокачественной печати требуется 300 PPI. Для постеров и баннеров, которые смотрят издалека, достаточно 100-150 PPI.",
+      "formula": "Размер печати (дюймы) = разрешение (пиксели) / PPI",
+      "usage": "Используется для определения, можно ли напечатать фото нужного размера без потери качества.",
+      "faq": [
+        {
+          "question": "Сколько мегапикселей нужно для печати А4?",
+          "answer": "Для А4 (21×30 см) при 300 PPI нужно примерно 8-9 мегапикселей (около 3500×2500 пикселей)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Цифровая печать",
+          "url": "https://ru.wikipedia.org/wiki/Цифровая_печать"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "svetosila",
+    "id": "aperture",
+    "title": "Светосила (f-stop)",
+    "description": "Расчёт изменения светосилы при разных значениях диафрагмы",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "baseAperture",
+        "label": "Базовая диафрагма (f/)",
+        "type": "select",
+        "options": [
+          {
+            "value": "1.4",
+            "label": "f/1.4"
+          },
+          {
+            "value": "2",
+            "label": "f/2"
+          },
+          {
+            "value": "2.8",
+            "label": "f/2.8"
+          },
+          {
+            "value": "4",
+            "label": "f/4"
+          },
+          {
+            "value": "5.6",
+            "label": "f/5.6"
+          },
+          {
+            "value": "8",
+            "label": "f/8"
+          },
+          {
+            "value": "11",
+            "label": "f/11"
+          },
+          {
+            "value": "16",
+            "label": "f/16"
+          },
+          {
+            "value": "22",
+            "label": "f/22"
+          }
+        ],
+        "defaultValue": "2.8"
+      },
+      {
+        "name": "newAperture",
+        "label": "Новая диафрагма (f/)",
+        "type": "select",
+        "options": [
+          {
+            "value": "1.4",
+            "label": "f/1.4"
+          },
+          {
+            "value": "2",
+            "label": "f/2"
+          },
+          {
+            "value": "2.8",
+            "label": "f/2.8"
+          },
+          {
+            "value": "4",
+            "label": "f/4"
+          },
+          {
+            "value": "5.6",
+            "label": "f/5.6"
+          },
+          {
+            "value": "8",
+            "label": "f/8"
+          },
+          {
+            "value": "11",
+            "label": "f/11"
+          },
+          {
+            "value": "16",
+            "label": "f/16"
+          },
+          {
+            "value": "22",
+            "label": "f/22"
+          }
+        ],
+        "defaultValue": "8"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "stops",
+        "label": "Разница в стопах (EV)",
+        "type": "number"
+      },
+      {
+        "name": "lightFactor",
+        "label": "Множитель света",
+        "type": "text"
+      },
+      {
+        "name": "exposureChange",
+        "label": "Изменение экспозиции",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите базовую и новую диафрагму. Калькулятор покажет разницу в светосиле.",
+      "about": "Каждое значение диафрагмы (f-stop) отличается от соседнего в 2 раза по количеству света. Ряд: f/1.4 → f/2 → f/2.8 → f/4 → f/5.6 → f/8...",
+      "formula": "Разница в стопах = 2 × log₂(f₂/f₁)",
+      "usage": "Помогает понять, насколько нужно изменить ISO или выдержку при смене диафрагмы.",
+      "faq": [
+        {
+          "question": "Почему числа диафрагмы такие странные?",
+          "answer": "Ряд f-stop построен так, что каждое следующее число уменьшает площадь отверстия в 2 раза. Это основано на √2 ≈ 1.414."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Диафрагма",
+          "url": "https://ru.wikipedia.org/wiki/Диафрагма_(оптика)"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "hdr-breketing",
+    "id": "hdr-bracketing",
+    "title": "HDR брекетинг",
+    "description": "Расчёт настроек для съёмки HDR (High Dynamic Range) с брекетингом экспозиции",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "evRange",
+        "label": "Диапазон сцены (EV)",
+        "type": "number",
+        "placeholder": "12",
+        "defaultValue": 12
+      },
+      {
+        "name": "evStep",
+        "label": "Шаг брекетинга (EV)",
+        "type": "select",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 EV"
+          },
+          {
+            "value": "2",
+            "label": "2 EV"
+          },
+          {
+            "value": "3",
+            "label": "3 EV"
+          }
+        ],
+        "defaultValue": "2"
+      },
+      {
+        "name": "baseISO",
+        "label": "Базовое ISO",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "numFrames",
+        "label": "Количество кадров",
+        "type": "number"
+      },
+      {
+        "name": "settings",
+        "label": "Рекомендуемые настройки",
+        "type": "text"
+      },
+      {
+        "name": "isoRange",
+        "label": "Диапазон ISO",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите примерный динамический диапазон сцены в EV (например, от теней до неба), выберите шаг брекетинга.",
+      "about": "HDR (High Dynamic Range) - техника объединения нескольких кадров с разной экспозицией для получения деталей и в тенях, и в светах.",
+      "usage": "Используется для съёмки контрастных сцен: пейзажи с ярким небом, интерьеры с окнами, ночные города.",
+      "faq": [
+        {
+          "question": "Сколько кадров нужно для HDR?",
+          "answer": "Обычно 3-5 кадров с шагом 2 EV достаточно для большинства сцен. Для очень контрастных сцен может понадобиться 7+ кадров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "High Dynamic Range Imaging",
+          "url": "https://en.wikipedia.org/wiki/High-dynamic-range_imaging"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "bokeh-razmytie",
+    "id": "bokeh",
+    "title": "Размытие фона (боке)",
+    "description": "Оценка силы размытия фона на основе диафрагмы, фокусного расстояния и расстояния до объекта",
+    "subcategory": "hobbi-photo",
+    "type": "formula",
+    "category": "hobbi",
+    "inputs": [
+      {
+        "name": "focalLength",
+        "label": "Фокусное расстояние (мм)",
+        "type": "number",
+        "placeholder": "85",
+        "defaultValue": 85
+      },
+      {
+        "name": "aperture",
+        "label": "Диафрагма (f/)",
+        "type": "number",
+        "placeholder": "1.8",
+        "defaultValue": 1.8
+      },
+      {
+        "name": "subjectDistance",
+        "label": "Расстояние до объекта (м)",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2
+      },
+      {
+        "name": "backgroundDistance",
+        "label": "Расстояние до фона (м)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      }
+    ],
+    "outputs": [
+      {
+        "name": "blurAmount",
+        "label": "Сила размытия (мм)",
+        "type": "number"
+      },
+      {
+        "name": "blurRating",
+        "label": "Оценка боке",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите параметры съёмки: фокусное расстояние, диафрагму, расстояние до объекта и фона.",
+      "about": "Боке (bokeh) - художественное качество размытия фона. Сильное боке достигается большой диафрагмой, длинным фокусным расстоянием и близким расстоянием до объекта.",
+      "formula": "Сила размытия ∝ (focal_length²) / (aperture × distance)",
+      "usage": "Используется для портретной съёмки, когда нужно отделить объект от фона.",
+      "faq": [
+        {
+          "question": "Как получить \"кремовое\" боке?",
+          "answer": "Используйте объектив 85mm f/1.4 или 135mm f/2, снимайте на минимальном расстоянии фокусировки с удалённым фоном."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Боке",
+          "url": "https://ru.wikipedia.org/wiki/Боке"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

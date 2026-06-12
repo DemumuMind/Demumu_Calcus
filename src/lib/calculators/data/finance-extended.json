@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "opcziony-bazovyj",
+    "id": "options-basic",
+    "title": "Расчёт опционов (базовый)",
+    "description": "Расчёт прибыли/убытка по опционам call и put",
+    "subcategory": "investiczii",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "obligaczii-dokhodnost",
+    "id": "bond-yield",
+    "title": "Доходность облигаций",
+    "description": "Расчёт текущей доходности и доходности к погашению",
+    "subcategory": "investiczii",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "pensionnyj-kalkulyator",
+    "id": "pension-calculator",
+    "title": "Пенсионный калькулятор",
+    "description": "Расчёт накоплений к выходу на пенсию и ежемесячных выплат",
+    "subcategory": "lichnye-finansy",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "nalog-na-pribyl",
+    "id": "capital-gains-tax",
+    "title": "Налог на капитальную прибыль",
+    "description": "Расчёт налога на прибыль от продажи активов",
+    "subcategory": "nalogi",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "realnyj-dokhod",
+    "id": "real-return",
+    "title": "Реальный доход с учётом инфляции",
+    "description": "Расчёт реальной доходности инвестиций после вычета инфляции",
+    "subcategory": "investiczii",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "lizing-raschet",
+    "id": "lease-calculator",
+    "title": "Расчёт лизинговых платежей",
+    "description": "Расчёт ежемесячных платежей по лизингу автомобиля или оборудования",
+    "subcategory": "kreditovanie",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "komissii-brokera",
+    "id": "broker-fees",
+    "title": "Расчёт комиссий брокера",
+    "description": "Сравнение комиссий разных брокеров для разных стратегий торговли",
+    "subcategory": "investiczii",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "reinvestirovanie-dividendov",
+    "id": "dividend-reinvestment",
+    "title": "Расчёт реинвестирования дивидендов",
+    "description": "Сравнение доходности с реинвестированием и без него",
+    "subcategory": "investiczii",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "valyutnyj-kalkulyator",
+    "id": "forex-calculator",
+    "title": "Валютный калькулятор",
+    "description": "Расчёт обмена валют с учётом спреда и комиссии обменника",
+    "subcategory": "valyuty",
+    "type": "formula",
+    "category": "finansy"
+  },
+  {
+    "slug": "vliyanie-inflyaczii",
+    "id": "inflation-impact",
+    "title": "Влияние инфляции на сбережения",
+    "description": "Расчёт потери покупательной способности денег со временем",
+    "subcategory": "investiczii",
+    "type": "formula",
+    "category": "finansy"
+  }
+]

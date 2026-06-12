@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ChefHat, ArrowRight } from 'lucide-react';
+import { ChefHat } from 'lucide-react';
 import { 
   cookingIngredients, 
   standardMeasures,
@@ -12,12 +12,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export const metadata: Metadata = {
   title: 'Кулинарные меры — таблица перевода в граммы',
   description: 'Таблица перевода кулинарных мер в граммы. Сколько граммов в ложке, стакане, рюмке для разных продуктов.',
-  keywords: 'кулинарные меры, сколько грамм в ложке, перевод мер, граммы в стакане',
-};
+  keywords: 'кулинарные меры, сколько грамм в ложке, перевод мер, граммы в стакане' };
 
 export default function CookingPage() {
   const categories = getIngredientCategories();
-  const measures = Object.values(standardMeasures).slice(0, 4); // Show main measures
+  const _measures = Object.values(standardMeasures).slice(0, 4); // Show main measures
 
   return (
     <div className="flex flex-col min-h-full">

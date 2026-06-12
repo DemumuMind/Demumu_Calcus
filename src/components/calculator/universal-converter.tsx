@@ -22,6 +22,37 @@ interface UniversalConverterProps {
   initialValue?: number;
 }
 
+/** Extracted unit selector sub-component to reduce duplication */
+function UnitSelect({
+  label,
+  units,
+  value,
+  onChange,
+}: {
+  label: string;
+  units: Array<{ id: string; name: string; shortName: string }>;
+  value: string;
+  onChange: (v: string | null) => void;
+}) {
+  return (
+    <div className="space-y-2">
+      <Label>{label}</Label>
+      <Select value={value} onValueChange={onChange}>
+        <SelectTrigger>
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {units.map((unit) => (
+            <SelectItem key={unit.id} value={unit.id}>
+              {unit.name} ({unit.shortName})
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
+  );
+}
+
 export function UniversalConverter({
   category,
   initialFrom,
@@ -36,14 +67,12 @@ export function UniversalConverter({
   const [result, setResult] = useState<number | null>(null);
   const [copied, setCopied] = useState(false);
   
-  // Вычисление результата
   const calculate = useCallback(() => {
     const numValue = parseFloat(value);
     if (isNaN(numValue) || !fromUnit || !toUnit) {
       setResult(null);
       return;
     }
-    
     try {
       const converted = convert(numValue, fromUnit, toUnit, category);
       setResult(converted);
@@ -52,27 +81,23 @@ export function UniversalConverter({
     }
   }, [value, fromUnit, toUnit, category]);
   
-  // Автоматический пересчёт при изменении
   useEffect(() => {
     calculate();
   }, [calculate]);
   
-  // Обменять единицы местами
   const handleSwap = () => {
     setFromUnit(toUnit);
     setToUnit(fromUnit);
   };
   
-  // Обёртки для Select onValueChange
-  const handleFromUnitChange = (value: string | null) => {
-    if (value) setFromUnit(value);
+  const handleFromUnitChange = (v: string | null) => {
+    if (v) setFromUnit(v);
   };
   
-  const handleToUnitChange = (value: string | null) => {
-    if (value) setToUnit(value);
+  const handleToUnitChange = (v: string | null) => {
+    if (v) setToUnit(v);
   };
   
-  // Копировать результат
   const handleCopy = () => {
     if (result !== null) {
       navigator.clipboard.writeText(result.toLocaleString('ru-RU'));
@@ -81,10 +106,8 @@ export function UniversalConverter({
     }
   };
   
-  // Популярные значения для быстрого доступа
   const popularValues = [1, 10, 50, 100, 1000];
   
-  // Форматирование числа
   const formatNumber = (num: number): string => {
     if (num === 0) return '0';
     if (Math.abs(num) < 0.001 || Math.abs(num) > 1e6) {
@@ -103,7 +126,6 @@ export function UniversalConverter({
   
   return (
     <div className="space-y-6">
-      {/* Основной конвертер */}
       <Card className="mb-8">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
@@ -112,7 +134,6 @@ export function UniversalConverter({
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* Ввод значения */}
           <div className="space-y-2">
             <Label htmlFor="value">Введите значение</Label>
             <Input
@@ -125,73 +146,25 @@ export function UniversalConverter({
               min="0"
               step="any"
             />
-            
-            {/* Быстрые значения */}
             <div className="flex gap-2 flex-wrap">
               {popularValues.map((val) => (
-                <Button
-                  key={val}
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setValue(val.toString())}
-                  className="text-xs"
-                >
+                <Button key={val} variant="outline" size="sm" onClick={() => setValue(val.toString())} className="text-xs">
                   {val}
                 </Button>
               ))}
             </div>
           </div>
           
-          {/* Выбор единиц */}
           <div className="grid gap-4 sm:grid-cols-[1fr,auto,1fr]">
-            {/* Откуда */}
-            <div className="space-y-2">
-              <Label>Из</Label>
-              <Select value={fromUnit} onValueChange={handleFromUnitChange}>
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {units.map((unit) => (
-                    <SelectItem key={unit.id} value={unit.id}>
-                      {unit.name} ({unit.shortName})
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            
-            {/* Кнопка обмена */}
+            <UnitSelect label="Из" units={units} value={fromUnit} onChange={handleFromUnitChange} />
             <div className="flex items-end justify-center">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={handleSwap}
-                className="mb-0"
-              >
+              <Button variant="outline" size="icon" onClick={handleSwap} className="mb-0">
                 <ArrowRightLeft className="h-4 w-4" />
               </Button>
             </div>
-            
-            {/* Куда */}
-            <div className="space-y-2">
-              <Label>В</Label>
-              <Select value={toUnit} onValueChange={handleToUnitChange}>
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {units.map((unit) => (
-                    <SelectItem key={unit.id} value={unit.id}>
-                      {unit.name} ({unit.shortName})
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+            <UnitSelect label="В" units={units} value={toUnit} onChange={handleToUnitChange} />
           </div>
           
-          {/* Результат */}
           {result !== null && (
             <div className="rounded-lg bg-primary/5 border border-primary/20 p-4">
               <div className="text-center">
@@ -204,12 +177,7 @@ export function UniversalConverter({
                 <p className="text-xs text-muted-foreground">
                   {fromUnitName} → {toUnitName}
                 </p>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleCopy}
-                  className="mt-2"
-                >
+                <Button variant="ghost" size="sm" onClick={handleCopy} className="mt-2">
                   {copied ? (
                     <><Check className="h-4 w-4 mr-1" /> Скопировано</>
                   ) : (
@@ -222,7 +190,6 @@ export function UniversalConverter({
         </CardContent>
       </Card>
       
-      {/* Таблица соответствий */}
       {result !== null && parseFloat(value) === 1 && (
         <Card>
           <CardHeader>

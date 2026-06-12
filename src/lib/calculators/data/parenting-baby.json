@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "due-date-calculator",
+    "id": "due-date-calculator",
+    "title": "Калькулятор даты родов",
+    "description": "Рассчитайте предполагаемую дату родов по дате последней менструации",
+    "subcategory": "pregnancy",
+    "type": "arithmetic",
+    "category": "parenting"
+  },
+  {
+    "slug": "baby-growth-calculator",
+    "id": "baby-growth-calculator",
+    "title": "Калькулятор роста ребёнка",
+    "description": "Отслеживайте рост и вес ребёнка по процентилям ВОЗ",
+    "subcategory": "baby-health",
+    "type": "formula",
+    "category": "parenting"
+  },
+  {
+    "slug": "feeding-amount-calculator",
+    "id": "feeding-amount-calculator",
+    "title": "Калькулятор объёма кормления",
+    "description": "Рассчитайте сколько молока или смеси нужно ребёнку",
+    "subcategory": "feeding",
+    "type": "arithmetic",
+    "category": "parenting"
+  },
+  {
+    "slug": "diaper-calculator",
+    "id": "diaper-calculator",
+    "title": "Калькулятор подгузников",
+    "description": "Рассчитайте сколько подгузников нужно и во сколько это обойдётся",
+    "subcategory": "supplies",
+    "type": "formula",
+    "category": "parenting"
+  },
+  {
+    "slug": "sleep-calculator",
+    "id": "sleep-calculator",
+    "title": "Калькулятор сна ребёнка",
+    "description": "Рассчитайте оптимальное время сна по возрасту",
+    "subcategory": "sleep",
+    "type": "arithmetic",
+    "category": "parenting"
+  },
+  {
+    "slug": "vaccination-calendar",
+    "id": "vaccination-calendar",
+    "title": "Калькулятор календаря прививок",
+    "description": "Рассчитайте график вакцинации для вашего ребёнка",
+    "subcategory": "health",
+    "type": "arithmetic",
+    "category": "parenting"
+  },
+  {
+    "slug": "maternity-benefit-calculator",
+    "id": "maternity-benefit-calculator",
+    "title": "Калькулятор декретных выплат",
+    "description": "Рассчитайте пособия по беременности и родам",
+    "subcategory": "benefits",
+    "type": "arithmetic",
+    "category": "parenting"
+  },
+  {
+    "slug": "toy-age-calculator",
+    "id": "toy-age-calculator",
+    "title": "Калькулятор игрушек по возрасту",
+    "description": "Подберите подходящие игрушки для развития ребёнка",
+    "subcategory": "development",
+    "type": "arithmetic",
+    "category": "parenting"
+  },
+  {
+    "slug": "baby-clothes-calculator",
+    "id": "baby-clothes-calculator",
+    "title": "Калькулятор детской одежды",
+    "description": "Рассчитайте необходимый гардероб для ребёнка",
+    "subcategory": "shopping",
+    "type": "formula",
+    "category": "parenting"
+  }
+]

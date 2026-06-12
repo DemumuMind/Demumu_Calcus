@@ -1,0 +1,849 @@
+[
+  {
+    "slug": "kalkulyator-nabora-massy",
+    "id": "bulking-calculator",
+    "title": "Калькулятор набора массы",
+    "description": "Расчёт калорий и БЖУ для чистого набора мышечной массы без жира",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "min": 40,
+        "max": 150,
+        "defaultValue": 70
+      },
+      {
+        "name": "bodyfat",
+        "label": "Процент жира (%)",
+        "type": "number",
+        "placeholder": "15",
+        "min": 5,
+        "max": 40,
+        "defaultValue": 15
+      },
+      {
+        "name": "activity",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "sedentary",
+            "label": "Малоподвижный"
+          },
+          {
+            "value": "light",
+            "label": "Лёгкая активность"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренная (3 тренировки)"
+          },
+          {
+            "value": "active",
+            "label": "Активный (5 тренировок)"
+          },
+          {
+            "value": "very_active",
+            "label": "Очень активный (6+ тренировок)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "surplus",
+        "label": "Профицит калорий",
+        "type": "select",
+        "options": [
+          {
+            "value": "conservative",
+            "label": "Консервативный (+10%) — минимум жира"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный (+15%) — оптимальный баланс"
+          },
+          {
+            "value": "aggressive",
+            "label": "Агрессивный (+20%) — быстрый набор"
+          }
+        ],
+        "defaultValue": "moderate"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "calories",
+        "label": "Калорий в день",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "protein",
+        "label": "Белков",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "fats",
+        "label": "Жиров",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "carbs",
+        "label": "Углеводов",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "leanMass",
+        "label": "Сухая мышечная масса",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "expectedGain",
+        "label": "Ожидаемый прирост",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ваш вес, процент жира, уровень активности и желаемый профицит. Калькулятор рассчитает калории и БЖУ для набора массы.",
+      "about": "Для набора мышечной массы нужен профицит калорий 10-20% над расходом. Белок должен быть высоким (2-2.5г на кг сухой массы).",
+      "formula": "Калории = BMR × Активность × (1 + Профицит)\nБелок = 2.2г × сухая масса\nЖиры = 25% калорий\nУглеводы = Остальное",
+      "faq": [
+        {
+          "question": "Как быстро набирать мышечную массу?",
+          "answer": "Оптимум — 0.5-1% от веса тела в неделю. Быстрее = больше жира. Набор 2-4 кг чистых мышц в месяц — хороший результат для новичка."
+        },
+        {
+          "question": "Нужен ли профицит на тренировочный день?",
+          "answer": "Можно сделать циклирование калорий: +300-500 ккал в тренировочные дни, поддержание в выходные."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Muscle & Strength - Bulking Guide",
+          "url": "https://www.muscleandstrength.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "kalkulyator-sushki",
+    "id": "cutting-calculator",
+    "title": "Калькулятор сушки тела",
+    "description": "Расчёт калорий и БЖУ для снижения жировой массы с сохранением мышц",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "80",
+        "min": 50,
+        "max": 150,
+        "defaultValue": 80
+      },
+      {
+        "name": "bodyfat",
+        "label": "Текущий % жира",
+        "type": "number",
+        "placeholder": "20",
+        "min": 8,
+        "max": 40,
+        "defaultValue": 20
+      },
+      {
+        "name": "targetBodyfat",
+        "label": "Целевой % жира",
+        "type": "number",
+        "placeholder": "12",
+        "min": 6,
+        "max": 25,
+        "defaultValue": 12
+      },
+      {
+        "name": "activity",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "sedentary",
+            "label": "Малоподвижный"
+          },
+          {
+            "value": "light",
+            "label": "Лёгкая активность"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренная"
+          },
+          {
+            "value": "active",
+            "label": "Активный"
+          }
+        ],
+        "defaultValue": "moderate"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "calories",
+        "label": "Калорий для сушки",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "protein",
+        "label": "Белков",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "fats",
+        "label": "Жиров",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "carbs",
+        "label": "Углеводов",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "deficit",
+        "label": "Дефицит",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "weeks",
+        "label": "Время сушки",
+        "type": "number",
+        "unit": "нед"
+      },
+      {
+        "name": "finalWeight",
+        "label": "Итоговый вес",
+        "type": "number",
+        "unit": "кг"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текущий вес, процент жира, целевой процент жира и активность. Калькулятор рассчитает план сушки.",
+      "about": "Сушка (cutting) — процесс снижения жировой массы с сохранением мышц. Безопасная скорость потери — 0.5-1% веса в неделю. Высокий белок (2.5г/кг) сохраняет мышцы.",
+      "formula": "Калории = TDEE × 0.75 (25% дефицит)\nБелок = 2.5г × сухая масса\nВремя = (Жир для сжигания) / (0.7% веса в неделю)",
+      "faq": [
+        {
+          "question": "Как сохранить мышцы при сушке?",
+          "answer": "Высокий белок (2.5г/кг), силовые тренировки (не бег!), медленная сушка (не более 1% веса в неделю)."
+        },
+        {
+          "question": "Можно ли убрать жир только с живота?",
+          "answer": "Нет, локальное сжигание жира невозможно. Жир уходит равномерно со всего тела. Пресс виден при 10-12% жира у мужчин, 18-20% у женщин."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Bodybuilding.com - Cutting Guide",
+          "url": "https://www.bodybuilding.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "odnopovtornyj-maksimum",
+    "id": "one-rep-max-calculator",
+    "title": "Калькулятор 1RM",
+    "description": "Расчёт одноповторного максимума (1RM) по формулам Бриzycki, Эпли и Ломбарди",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove"
+  },
+  {
+    "slug": "obyom-trenirovki",
+    "id": "training-volume-calculator",
+    "title": "Калькулятор объёма тренировки",
+    "description": "Расчёт общего объёма тренировки (вес × повторы × подходы) для отслеживания прогресса",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "exercises",
+        "label": "Количество упражнений",
+        "type": "number",
+        "placeholder": "5",
+        "min": 1,
+        "max": 15,
+        "defaultValue": 5
+      },
+      {
+        "name": "setsPerExercise",
+        "label": "Подходов на упражнение",
+        "type": "number",
+        "placeholder": "4",
+        "min": 1,
+        "max": 10,
+        "defaultValue": 4
+      },
+      {
+        "name": "repsPerSet",
+        "label": "Повторов в подходе",
+        "type": "number",
+        "placeholder": "10",
+        "min": 1,
+        "max": 30,
+        "defaultValue": 10
+      },
+      {
+        "name": "avgWeight",
+        "label": "Средний вес (кг)",
+        "type": "number",
+        "placeholder": "50",
+        "min": 5,
+        "max": 300,
+        "defaultValue": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalSets",
+        "label": "Всего подходов",
+        "type": "number",
+        "unit": "подх"
+      },
+      {
+        "name": "totalReps",
+        "label": "Всего повторов",
+        "type": "number",
+        "unit": "раз"
+      },
+      {
+        "name": "volume",
+        "label": "Объём тренировки",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "intensity",
+        "label": "Интенсивность",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество упражнений, подходов, повторов и средний вес. Калькулятор рассчитает общий объём.",
+      "about": "Объём тренировки — ключевой показатель для гипертрофии. Meta-анализы показывают: 10-20 подходов на мышечную группу в неделю оптимальны для роста.",
+      "formula": "Объём = Вес × Повторы × Подходы\nИли: Общий вес поднятый за тренировку",
+      "faq": [
+        {
+          "question": "Какой объём лучше для массы?",
+          "answer": "Оптимум — 10-20 подходов на мышечную группу в неделю. Больше 20 — перетренированность, меньше 10 — недостаточный стимул."
+        },
+        {
+          "question": "Что важнее — объём или интенсивность?",
+          "answer": "Для новичков — интенсивность (учим технику). Для опытных — объём (нужен больший стимул для роста)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Schoenfeld - Training Volume Meta-Analysis",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4836564/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "razgruzochnaya-nedelya",
+    "id": "deload-calculator",
+    "title": "Калькулятор deload",
+    "description": "Планирование разгрузочной недели для восстановления и предотвращения перетренированности",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "currentVolume",
+        "label": "Текущий объём (кг/неделю)",
+        "type": "number",
+        "placeholder": "15000",
+        "min": 1000,
+        "max": 100000,
+        "defaultValue": 15000
+      },
+      {
+        "name": "currentIntensity",
+        "label": "Текущая интенсивность (% от 1RM)",
+        "type": "number",
+        "placeholder": "80",
+        "min": 60,
+        "max": 95,
+        "defaultValue": 80
+      },
+      {
+        "name": "deloadType",
+        "label": "Тип deload",
+        "type": "select",
+        "options": [
+          {
+            "value": "volume",
+            "label": "Снижение объёма (-40%)"
+          },
+          {
+            "value": "intensity",
+            "label": "Снижение интенсивности (-20%)"
+          },
+          {
+            "value": "full",
+            "label": "Полный deload (-40% объёма, -15% интенсивности)"
+          },
+          {
+            "value": "frequency",
+            "label": "Снижение частоты (-50% тренировок)"
+          }
+        ],
+        "defaultValue": "full"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "newVolume",
+        "label": "Объём на deload",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "newIntensity",
+        "label": "Интенсивность на deload",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "sets",
+        "label": "Подходов на упражнение",
+        "type": "number",
+        "unit": "подх"
+      },
+      {
+        "name": "reps",
+        "label": "Рекомендуемые повторы",
+        "type": "text"
+      },
+      {
+        "name": "rpe",
+        "label": "Целевой RPE",
+        "type": "text"
+      },
+      {
+        "name": "duration",
+        "label": "Длительность deload",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текущий объём и интенсивность, выберите тип deload. Калькулятор составит план разгрузки.",
+      "about": "Deload (разгрузочная неделя) проводится каждые 4-8 недель для восстановления нервной системы и суставов. Снижение объёма/интенсивности позволяет организму адаптироваться.",
+      "formula": "Deload = Текущий объём × 0.6 или Текущая интенсивность × 0.85\nНе тренироваться до отказа, оставлять запас в 3-5 повторов",
+      "faq": [
+        {
+          "question": "Когда нужен deload?",
+          "answer": "Признаки: упадок сил, боли в суставах, нарушение сна, потеря аппетита, падение настроения. Обычно каждые 4-8 недель тяжёлого тренинга."
+        },
+        {
+          "question": "Можно ли пропустить deload?",
+          "answer": "Новичкам (до 1 года) часто не нужен deload — прогресс быстрый. Опытным атлетам deload обязателен для профилактики перетренированности."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Renaissance Periodization - Fatigue Management",
+          "url": "https://renaissanceperiodization.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "progressivnaya-nagruzka",
+    "id": "progressive-overload-calculator",
+    "title": "Калькулятор прогрессии",
+    "description": "Планирование увеличения весов для прогрессивной перегрузки по методам линейной и периодизации",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "currentWeight",
+        "label": "Текущий рабочий вес (кг)",
+        "type": "number",
+        "placeholder": "80",
+        "min": 20,
+        "max": 300,
+        "defaultValue": 80
+      },
+      {
+        "name": "weeks",
+        "label": "На сколько недель план",
+        "type": "number",
+        "placeholder": "4",
+        "min": 2,
+        "max": 12,
+        "defaultValue": 4
+      },
+      {
+        "name": "progressionType",
+        "label": "Тип прогрессии",
+        "type": "select",
+        "options": [
+          {
+            "value": "linear",
+            "label": "Линейная (+2.5 кг/неделю)"
+          },
+          {
+            "value": "double",
+            "label": "Двойная прогрессия (вес/повторы)"
+          },
+          {
+            "value": "wave",
+            "label": "Волновая (3 недели вверх, 1 вниз)"
+          },
+          {
+            "value": "percentage",
+            "label": "Процентная (от 1RM)"
+          }
+        ],
+        "defaultValue": "linear"
+      },
+      {
+        "name": "exerciseType",
+        "label": "Тип упражнения",
+        "type": "select",
+        "options": [
+          {
+            "value": "compound",
+            "label": "Базовое (присед, жим, тяга)"
+          },
+          {
+            "value": "isolation",
+            "label": "Изолирующее (бицепс, трицепс)"
+          }
+        ],
+        "defaultValue": "compound"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "week1",
+        "label": "Неделя 1",
+        "type": "text"
+      },
+      {
+        "name": "week2",
+        "label": "Неделя 2",
+        "type": "text"
+      },
+      {
+        "name": "week3",
+        "label": "Неделя 3",
+        "type": "text"
+      },
+      {
+        "name": "week4",
+        "label": "Неделя 4",
+        "type": "text"
+      },
+      {
+        "name": "finalWeight",
+        "label": "Итоговый вес",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "tips",
+        "label": "Советы по прогрессии",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текущий вес, количество недель и тип прогрессии. Калькулятор составит план увеличения нагрузки.",
+      "about": "Прогрессивная перегрузка — главный принцип роста силы и мышц. Нужно постоянно увеличивать вес, повторы или объём, чтобы давать организму стимул к адаптации.",
+      "formula": "Линейная: +2.5 кг базовые, +1.25 кг изолирующие\nДвойная: вес фиксированный → повторы ↑ → вес ↑ → повторы ↓",
+      "faq": [
+        {
+          "question": "Что делать когда прогресс остановился?",
+          "answer": "Смените тип прогрессии (линейная → волновая), увеличьте калории, проверьте сон, сделайте deload."
+        },
+        {
+          "question": "Какой тип прогрессии лучше для новичка?",
+          "answer": "Линейная прогрессия — самая простая и эффективная. Добавляете вес каждую тренировку пока позволяет техника."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Stronger by Science - Progression Methods",
+          "url": "https://www.strongerbyscience.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "shkala-rpe",
+    "id": "rpe-calculator",
+    "title": "Калькулятор RPE",
+    "description": "Расчёт веса по шкале воспринимаемой нагрузки (RPE) и определение запаса повторов (RIR)",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "oneRM",
+        "label": "Ваш 1RM (кг)",
+        "type": "number",
+        "placeholder": "100",
+        "min": 20,
+        "max": 500,
+        "defaultValue": 100
+      },
+      {
+        "name": "targetRPE",
+        "label": "Целевой RPE",
+        "type": "select",
+        "options": [
+          {
+            "value": "10",
+            "label": "RPE 10 — максимум, до отказа"
+          },
+          {
+            "value": "9.5",
+            "label": "RPE 9.5 — возможно 1 повтор"
+          },
+          {
+            "value": "9",
+            "label": "RPE 9 — 1 повтор в запасе"
+          },
+          {
+            "value": "8.5",
+            "label": "RPE 8.5 — 1-2 повтора в запасе"
+          },
+          {
+            "value": "8",
+            "label": "RPE 8 — 2 повтора в запасе"
+          },
+          {
+            "value": "7",
+            "label": "RPE 7 — 3 повтора в запасе (лёгко)"
+          },
+          {
+            "value": "6",
+            "label": "RPE 6 — 4 повтора в запасе (очень легко)"
+          }
+        ],
+        "defaultValue": "8"
+      },
+      {
+        "name": "targetReps",
+        "label": "Целевое число повторов",
+        "type": "number",
+        "placeholder": "5",
+        "min": 1,
+        "max": 15,
+        "defaultValue": 5
+      }
+    ],
+    "outputs": [
+      {
+        "name": "recommendedWeight",
+        "label": "Рекомендуемый вес",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "rir",
+        "label": "RIR (повторов в запасе)",
+        "type": "number",
+        "unit": "повт"
+      },
+      {
+        "name": "percentage",
+        "label": "% от 1RM",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "description",
+        "label": "Описание усилий",
+        "type": "text"
+      },
+      {
+        "name": "usage",
+        "label": "Когда использовать",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ваш 1RM, целевой RPE и число повторов. Калькулятор рассчитает вес для подхода.",
+      "about": "RPE (Rate of Perceived Exertion) — шкала воспринимаемой нагрузки от 1 до 10. RIR (Reps in Reserve) — сколько повторов вы могли бы сделать ещё. Связь: RPE = 10 - RIR.",
+      "formula": "RPE 10 = до отказа\nRPE 9 = 1 повтор в запасе\nRPE 8 = 2 повтора в запасе\nВес = 1RM × (1.0278 - 0.0278 × (повторы + RIR))",
+      "faq": [
+        {
+          "question": "Как научиться оценивать RPE?",
+          "answer": "Практика! Сначала тренируйтесь до отказа (RPE 10) чтобы понять максимум. Потом останавливайтесь на 1-2 повтора раньше."
+        },
+        {
+          "question": "Какой RPE лучше для набора массы?",
+          "answer": "RPE 8-9 (1-2 повтора в запасе). Достаточно тяжело для роста, но не вызывает перетренированности."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mike Tuchscherer - RPE Manual",
+          "url": "https://www.reactivestrength.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "vremya-otdyha",
+    "id": "rest-time-calculator",
+    "title": "Время отдыха между подходами",
+    "description": "Расчёт оптимального времени восстановления между подходами в зависимости от целей и интенсивности",
+    "subcategory": "fitness",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "intensity",
+        "label": "Интенсивность (% от 1RM)",
+        "type": "number",
+        "placeholder": "80",
+        "min": 50,
+        "max": 100,
+        "defaultValue": 80
+      },
+      {
+        "name": "reps",
+        "label": "Повторов в подходе",
+        "type": "number",
+        "placeholder": "8",
+        "min": 1,
+        "max": 30,
+        "defaultValue": 8
+      },
+      {
+        "name": "goal",
+        "label": "Цель тренировки",
+        "type": "select",
+        "options": [
+          {
+            "value": "strength",
+            "label": "Сила (1-5 повторов)"
+          },
+          {
+            "value": "hypertrophy",
+            "label": "Гипертрофия (6-12 повторов)"
+          },
+          {
+            "value": "endurance",
+            "label": "Выносливость (15+ повторов)"
+          },
+          {
+            "value": "conditioning",
+            "label": "Кондиционирование/сжигание жира"
+          }
+        ],
+        "defaultValue": "hypertrophy"
+      },
+      {
+        "name": "exerciseType",
+        "label": "Тип упражнения",
+        "type": "select",
+        "options": [
+          {
+            "value": "compound",
+            "label": "Базовое (многосуставное)"
+          },
+          {
+            "value": "isolation",
+            "label": "Изолирующее"
+          },
+          {
+            "value": "machine",
+            "label": "В тренажёре"
+          }
+        ],
+        "defaultValue": "compound"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "restTime",
+        "label": "Время отдыха",
+        "type": "text"
+      },
+      {
+        "name": "minTime",
+        "label": "Минимум",
+        "type": "number",
+        "unit": "сек"
+      },
+      {
+        "name": "maxTime",
+        "label": "Максимум",
+        "type": "number",
+        "unit": "сек"
+      },
+      {
+        "name": "heartRate",
+        "label": "Целевой пульс",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите цель тренировки, интенсивность и тип упражнения. Калькулятор подскажет оптимальное время отдыха.",
+      "about": "Время отдыха критично для результатов. Сила требует полного восстановления (3-5 мин), гипертрофия — баланс (1-2 мин), кондиционирование — минимум (30-45 сек).",
+      "formula": "Сила: 3-5 мин (90-100% 1RM)\nГипертрофия: 1.5-2 мин (70-85% 1RM)\nВыносливость: 45-60 сек (60-70% 1RM)",
+      "faq": [
+        {
+          "question": "Почему нельзя отдыхать слишком долго?",
+          "answer": "При гипертрофии долгий отдых снижает метаболический стресс и гормональный отклик. Мышцы \"остывают\"."
+        },
+        {
+          "question": "Что если пульс не снижается?",
+          "answer": "Если после 5 минут пульс всё ещё высокий — возможно вы переутомлены или dehydrated. Выпейте воды, сделайте передышку."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Journal of Strength and Conditioning Research - Rest Intervals",
+          "url": "https://journals.lww.com/nsca-jscr/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

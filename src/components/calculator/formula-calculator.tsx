@@ -11,9 +11,10 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { Calculator, Share2, Copy, Check, Send } from 'lucide-react';
+  SelectValue } from '@/components/ui/select';
+import { Calculator, Copy, Check, Send } from 'lucide-react';
+
+const TELEGRAM_SHARE_BASE_URL = process.env.NEXT_PUBLIC_TELEGRAM_SHARE_URL || 'https://t.me/share/url';
 
 interface FormulaCalculatorProps {
   calculator: CalcType;
@@ -73,7 +74,7 @@ export function FormulaCalculator({ calculator, initialParams }: FormulaCalculat
   const handleShareTelegram = useCallback(() => {
     const url = buildShareUrl();
     const text = `Результат расчёта в ${calculator.title}`;
-    const tgUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+    const tgUrl = `${TELEGRAM_SHARE_BASE_URL}?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
     window.open(tgUrl, '_blank', 'width=600,height=400');
   }, [buildShareUrl, calculator.title]);
 

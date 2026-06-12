@@ -1,0 +1,672 @@
+[
+  {
+    "slug": "raskhod-kraski",
+    "id": "paint-renovation-calculator",
+    "title": "Калькулятор краски",
+    "description": "Расчёт количества краски для стен и потолка с учётом площади, пористости и количества слоёв",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "raskhod-laminata",
+    "id": "flooring-calculator",
+    "title": "Калькулятор напольного покрытия",
+    "description": "Расчёт количества ламината, паркета, плитки или линолеума с учётом укладки и запаса",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "roomLength",
+        "label": "Длина комнаты (м)",
+        "type": "number",
+        "placeholder": "5",
+        "min": 1,
+        "defaultValue": 5
+      },
+      {
+        "name": "roomWidth",
+        "label": "Ширина комнаты (м)",
+        "type": "number",
+        "placeholder": "4",
+        "min": 1,
+        "defaultValue": 4
+      },
+      {
+        "name": "flooringType",
+        "label": "Тип покрытия",
+        "type": "select",
+        "options": [
+          {
+            "value": "laminate",
+            "label": "Ламинат"
+          },
+          {
+            "value": "parquet",
+            "label": "Паркетная доска"
+          },
+          {
+            "value": "tile",
+            "label": "Керамическая плитка"
+          },
+          {
+            "value": "linoleum",
+            "label": "Линолеум"
+          },
+          {
+            "value": "vinyl",
+            "label": "Виниловая плитка SPC"
+          }
+        ],
+        "defaultValue": "laminate"
+      },
+      {
+        "name": "wastePercent",
+        "label": "Процент запаса",
+        "type": "number",
+        "placeholder": "10",
+        "min": 5,
+        "max": 30,
+        "defaultValue": 10
+      },
+      {
+        "name": "packageSize",
+        "label": "Площадь упаковки (м²)",
+        "type": "number",
+        "placeholder": "2.5",
+        "min": 0.5,
+        "defaultValue": 2.5
+      }
+    ],
+    "outputs": [
+      {
+        "name": "roomArea",
+        "label": "Площадь комнаты",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "totalArea",
+        "label": "С учётом запаса",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "packages",
+        "label": "Количество упаковок",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "extraArea",
+        "label": "Запас",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "estimatedCost",
+        "label": "Ориентировочная стоимость",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры комнаты, тип покрытия, размер упаковки и желаемый запас. Калькулятор рассчитает количество материала и даст ориентировочную стоимость.",
+      "about": "При укладке напольного покрытия всегда нужен запас на обрезку, подгонку и возможный брак. Для простых комнат — 5-7%, для сложных с колоннами — 15-20%.",
+      "formula": "Упаковки = ⌈(Длина × Ширина × (1 + Запас%)) / Размер упаковки⌉",
+      "faq": [
+        {
+          "question": "Почему так много запаса?",
+          "answer": "На раскрой планок, подгонку к стенам, запас на будущий ремонт. Остатки пригодятся при повреждении."
+        },
+        {
+          "question": "Линолеум тоже нужно с запасом?",
+          "answer": "Да, особенно если ширина рулона меньше ширины комнаты — нужен запас на стыки и подгонку."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Tarkett - Flooring Guide",
+          "url": "https://www.tarkett.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "raskhod-oboev",
+    "id": "wallpaper-renovation-calculator",
+    "title": "Калькулятор обоев",
+    "description": "Расчёт количества рулонов обоев с учётом площади, рисунка и высоты потолков",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "raskhod-shtukaturki",
+    "id": "plaster-calculator",
+    "title": "Калькулятор штукатурки",
+    "description": "Расчёт количества штукатурной смеси с учётом площади и толщины слоя",
+    "subcategory": "construction-materials",
+    "type": "formula",
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь стен (м²)",
+        "type": "number",
+        "placeholder": "50",
+        "min": 1,
+        "defaultValue": 50
+      },
+      {
+        "name": "thickness",
+        "label": "Средняя толщина слоя (мм)",
+        "type": "number",
+        "placeholder": "15",
+        "min": 5,
+        "max": 50,
+        "defaultValue": 15
+      },
+      {
+        "name": "mixType",
+        "label": "Тип смеси",
+        "type": "select",
+        "options": [
+          {
+            "value": "cement",
+            "label": "Цементная"
+          },
+          {
+            "value": "gypsum",
+            "label": "Гипсовая"
+          },
+          {
+            "value": "polymer",
+            "label": "Полимерная"
+          },
+          {
+            "value": "lime",
+            "label": "Известковая"
+          }
+        ],
+        "defaultValue": "gypsum"
+      },
+      {
+        "name": "bagWeight",
+        "label": "Вес мешка (кг)",
+        "type": "number",
+        "placeholder": "30",
+        "min": 5,
+        "defaultValue": 30
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём штукатурки",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "dryWeight",
+        "label": "Вес сухой смеси",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "bags",
+        "label": "Количество мешков",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "waterNeeded",
+        "label": "Воды понадобится",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "coverage",
+        "label": "Расход на м²",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь стен, толщину слоя штукатурки, тип смеси и вес мешка. Калькулятор рассчитает количество материала и воды для замешивания.",
+      "about": "Расход штукатурки зависит от типа смеси: гипсовая легче (~9 кг/м²/10мм), цементная тяжелее (~16 кг/м²/10мм). Реальная толщина может варьироваться от 5 до 50 мм в зависимости от кривизны стен.",
+      "formula": "Сухая смесь (кг) = Площадь × Норма расхода × (Толщина / 10)\nНормы: гипс 9, цемент 16, полимер 10, известь 14 кг/м²/10мм",
+      "faq": [
+        {
+          "question": "Какая штукатурка лучше для ванной?",
+          "answer": "Цементная или полимерная — водостойкие. Гипсовая бояться влаги."
+        },
+        {
+          "question": "Сколько слоёв наносить?",
+          "answer": "Один слой до 30 мм или два по 15 мм с промежуточным высыханием."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Knauf - Plaster Guide",
+          "url": "https://www.knauf.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "raskhod-plitki",
+    "id": "tile-renovation-calculator",
+    "title": "Калькулятор керамической плитки",
+    "description": "Расчёт количества плитки для стен и пола с учётом способа укладки и запаса",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "raschet-otopleniya",
+    "id": "heating-calculator",
+    "title": "Калькулятор мощности отопления",
+    "description": "Расчёт тепловой мощности для обогрева помещения с учётом климата и утепления",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь помещения (м²)",
+        "type": "number",
+        "placeholder": "20",
+        "min": 1,
+        "defaultValue": 20
+      },
+      {
+        "name": "ceilingHeight",
+        "label": "Высота потолков (м)",
+        "type": "number",
+        "placeholder": "2.7",
+        "min": 2,
+        "max": 5,
+        "step": 0.1,
+        "defaultValue": 2.7
+      },
+      {
+        "name": "climateZone",
+        "label": "Климатическая зона",
+        "type": "select",
+        "options": [
+          {
+            "value": "mild",
+            "label": "Мягкий климат (юг)"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный климат"
+          },
+          {
+            "value": "cold",
+            "label": "Холодный климат (север)"
+          },
+          {
+            "value": "severe",
+            "label": "Суровый климат (крайний север)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "insulation",
+        "label": "Утепление",
+        "type": "select",
+        "options": [
+          {
+            "value": "poor",
+            "label": "Плохое (старый дом)"
+          },
+          {
+            "value": "average",
+            "label": "Среднее"
+          },
+          {
+            "value": "good",
+            "label": "Хорошее (современный дом)"
+          }
+        ],
+        "defaultValue": "average"
+      },
+      {
+        "name": "windows",
+        "label": "Тип окон",
+        "type": "select",
+        "options": [
+          {
+            "value": "single",
+            "label": "Одинарные"
+          },
+          {
+            "value": "double",
+            "label": "Двойные"
+          },
+          {
+            "value": "triple",
+            "label": "Стеклопакет"
+          }
+        ],
+        "defaultValue": "double"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "roomVolume",
+        "label": "Объём помещения",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "basePower",
+        "label": "Базовая мощность",
+        "type": "number",
+        "unit": "Вт"
+      },
+      {
+        "name": "totalPower",
+        "label": "Требуемая мощность",
+        "type": "number",
+        "unit": "Вт"
+      },
+      {
+        "name": "radiators",
+        "label": "Радиаторов (2000 Вт)",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "powerPerSqM",
+        "label": "Мощность на м²",
+        "type": "number",
+        "unit": "Вт/м²"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь и высоту помещения, климатическую зону, качество утепления и тип окон. Калькулятор рассчитает требуемую мощность отопления.",
+      "about": "Норма мощности: 40 Вт/м³ для умеренного климата. Холоднее климат — больше мощности. Плохое утепление и старые окна увеличивают потребность в 1.2-1.3 раза.",
+      "formula": "Мощность = Объём × Норма климата × Коэффициент утепления × Коэффициент окон\nНормы: юг 30, средний 40, север 50, крайний север 60 Вт/м³",
+      "faq": [
+        {
+          "question": "Сколько секций радиатора нужно?",
+          "answer": "Средняя секция алюминиевого радиатора — 150-200 Вт. Делите общую мощность на 150-200."
+        },
+        {
+          "question": "Хватит ли электрообогревателя?",
+          "answer": "Обычно электрообогреватель 1-2 кВт хватит для 15-20 м² при хорошем утеплении."
+        }
+      ],
+      "sources": [
+        {
+          "title": "SNiP - Heating Standards",
+          "url": "https://docs.cntd.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "raschet-kondicionera",
+    "id": "ac-calculator",
+    "title": "Подбор мощности кондиционера",
+    "description": "Расчёт требуемой мощности кондиционера для охлаждения помещения",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь (м²)",
+        "type": "number",
+        "placeholder": "25",
+        "min": 1,
+        "defaultValue": 25
+      },
+      {
+        "name": "ceilingHeight",
+        "label": "Высота потолков (м)",
+        "type": "number",
+        "placeholder": "2.7",
+        "min": 2,
+        "max": 5,
+        "step": 0.1,
+        "defaultValue": 2.7
+      },
+      {
+        "name": "sunExposure",
+        "label": "Ориентация окна",
+        "type": "select",
+        "options": [
+          {
+            "value": "north",
+            "label": "Север (тенёк)"
+          },
+          {
+            "value": "east",
+            "label": "Восток"
+          },
+          {
+            "value": "south",
+            "label": "Юг (солнечная)"
+          },
+          {
+            "value": "west",
+            "label": "Запад (жаркая)"
+          }
+        ],
+        "defaultValue": "south"
+      },
+      {
+        "name": "occupants",
+        "label": "Количество людей",
+        "type": "number",
+        "placeholder": "2",
+        "min": 1,
+        "max": 20,
+        "defaultValue": 2
+      },
+      {
+        "name": "equipmentHeat",
+        "label": "Тепловыделение техники (Вт)",
+        "type": "number",
+        "placeholder": "300",
+        "min": 0,
+        "defaultValue": 300
+      }
+    ],
+    "outputs": [
+      {
+        "name": "coolingPower",
+        "label": "Мощность охлаждения",
+        "type": "number",
+        "unit": "кВт"
+      },
+      {
+        "name": "btuPerHour",
+        "label": "Мощность в BTU/ч",
+        "type": "number",
+        "unit": "BTU"
+      },
+      {
+        "name": "recommendedModel",
+        "label": "Рекомендуемая модель",
+        "type": "text"
+      },
+      {
+        "name": "areaCovered",
+        "label": "Рекомендуемая площадь",
+        "type": "text"
+      },
+      {
+        "name": "notes",
+        "label": "Примечания",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь помещения, высоту потолков, ориентацию окон, количество людей и тепловыделение техники. Калькулятор подберёт подходящую мощность кондиционера.",
+      "about": "Мощность кондиционеров обычно указывается в BTU/ч (British Thermal Units). Стандартные модели: 07 (7000 BTU ~ 2 кВт), 09 (9000 BTU ~ 2.5 кВт), 12 (12000 BTU ~ 3.5 кВт).",
+      "formula": "Мощность = (Объём × 35 Вт/м³ × Коэффициент солнца) + Тепло людей + Тепло техники\nКоэффициенты: север 0.9, восток 1.0, юг 1.15, запад 1.2",
+      "faq": [
+        {
+          "question": "Что означает \"09\" в названии кондиционера?",
+          "answer": "Это мощность в тысячах BTU/ч. 09 = 9000 BTU/ч ≈ 2.5 кВт, подходит для ~25 м²."
+        },
+        {
+          "question": "Можно ли взять мощнее, чем нужно?",
+          "answer": "Да, с запасом 10-20%. Слишком мощный будет часто включаться/выключаться, что снижает ресурс."
+        }
+      ],
+      "sources": [
+        {
+          "title": "LG - AC Sizing Guide",
+          "url": "https://www.lg.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "raskhod-gruntovki",
+    "id": "primer-renovation-calculator",
+    "title": "Калькулятор грунтовки",
+    "description": "Расчёт количества грунтовочной смеси для подготовки стен и пола",
+    "subcategory": "home-improvement",
+    "type": "formula",
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "wallArea",
+        "label": "Площадь стен (м²)",
+        "type": "number",
+        "placeholder": "50",
+        "min": 1,
+        "defaultValue": 50
+      },
+      {
+        "name": "floorArea",
+        "label": "Площадь пола (м²)",
+        "type": "number",
+        "placeholder": "20",
+        "min": 0,
+        "defaultValue": 20
+      },
+      {
+        "name": "surfaceType",
+        "label": "Тип поверхности",
+        "type": "select",
+        "options": [
+          {
+            "value": "concrete",
+            "label": "Бетон"
+          },
+          {
+            "value": "plaster",
+            "label": "Штукатурка"
+          },
+          {
+            "value": "drywall",
+            "label": "Гипсокартон"
+          },
+          {
+            "value": "wood",
+            "label": "Дерево"
+          }
+        ],
+        "defaultValue": "plaster"
+      },
+      {
+        "name": "primerType",
+        "label": "Тип грунтовки",
+        "type": "select",
+        "options": [
+          {
+            "value": "universal",
+            "label": "Универсальная"
+          },
+          {
+            "value": "deep",
+            "label": "Глубокого проникновения"
+          },
+          {
+            "value": "acrylic",
+            "label": "Акриловая"
+          },
+          {
+            "value": "betoncontact",
+            "label": "Бетонконтакт"
+          }
+        ],
+        "defaultValue": "deep"
+      },
+      {
+        "name": "coats",
+        "label": "Количество слоёв",
+        "type": "number",
+        "placeholder": "1",
+        "min": 1,
+        "max": 3,
+        "defaultValue": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalArea",
+        "label": "Общая площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "consumption",
+        "label": "Расход на м²",
+        "type": "number",
+        "unit": "л/м²"
+      },
+      {
+        "name": "totalLiters",
+        "label": "Всего грунтовки",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "cans",
+        "label": "Канистр (5л)",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "dilution",
+        "label": "Разведение водой",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь стен и пола, тип поверхности, вид грунтовки и количество слоёв. Калькулятор рассчитает нужный объём и даст рекомендации по разведению.",
+      "about": "Грунтовка подготавливает поверхность к отделке, укрепляет, уменьшает расход краски/штукатурки. Бетонконтакт нужен для гладких поверхностей, глубокого проникновения — для пористых.",
+      "formula": "Объём = Площадь × Расход × Слои\nРасход: бетон 0.35, штукатурка 0.25, ГКЛ 0.15, дерево 0.12 л/м²",
+      "faq": [
+        {
+          "question": "Сколько сохнет грунтовка?",
+          "answer": "Обычно 2-4 часа до полного высыхания. Можно наносить краску через 1-2 часа."
+        },
+        {
+          "question": "Нужна ли грунтовка под обои?",
+          "answer": "Да, особенно на гипсокартоне и пористых поверхностях. Улучшает сцепление и экономит клей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ceresit - Primer Guide",
+          "url": "https://www.ceresit.ru/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

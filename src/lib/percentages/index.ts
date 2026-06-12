@@ -1,7 +1,3 @@
-// ============================================
-// ПРОЦЕНТНЫЕ КАЛЬКУЛЯТОРЫ
-// Различные типы процентных расчётов
-// ============================================
 
 export interface PercentageCalculation {
   id: string;
@@ -72,10 +68,6 @@ export const percentageTypes: PercentageCalculation[] = [
   },
 ];
 
-// ============================================
-// УТИЛИТЫ ДЛЯ РАСЧЁТОВ
-// ============================================
-
 /**
  * Сколько составляет percent% от number
  */
@@ -132,10 +124,6 @@ export function calculateCompoundInterest(
   return principal * Math.pow(1 + rate / 100, periods);
 }
 
-// ============================================
-// ГЕНЕРАЦИЯ СТАТИЧЕСКИХ ПАРАМЕТРОВ
-// ============================================
-
 /**
  * Генерирует параметры для страниц процентных калькуляторов
  */
@@ -163,7 +151,6 @@ export function generateAllPercentageParams(): Array<{
     }
   });
   
-  console.log(`Generated ${params.length} percentage calculator pages`);
   return params;
 }
 

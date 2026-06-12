@@ -1,0 +1,1 @@
+{"timestamp":"2026-06-12T17:36:00.170Z","score":46,"errors":162,"warnings":930,"info":572,"suggestions":310,"filesScanned":145,"engines":["ast-slop","import-intelligence","dead-flow","type-safety","syntax-deep","security-deep","arch-constraints","dup-detect","perf-hints","i18n-lint","config-lint","meta-quality","knip"],"durationMs":18213.043987999998}

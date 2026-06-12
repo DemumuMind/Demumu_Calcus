@@ -1,0 +1,501 @@
+[
+  {
+    "slug": "konverter-valyut",
+    "id": "currency-converter",
+    "title": "Конвертер валют",
+    "description": "Онлайн конвертер валют: доллары, евро, рубли, гривны и другие",
+    "subcategory": "finansovye",
+    "type": "converter",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "amount",
+        "label": "Сумма",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из валюты",
+        "type": "select",
+        "options": [
+          {
+            "value": "USD",
+            "label": "USD ($) — Доллар США"
+          },
+          {
+            "value": "EUR",
+            "label": "EUR (€) — Евро"
+          },
+          {
+            "value": "RUB",
+            "label": "RUB (₽) — Российский рубль"
+          },
+          {
+            "value": "GBP",
+            "label": "GBP (£) — Фунт стерлингов"
+          },
+          {
+            "value": "JPY",
+            "label": "JPY (¥) — Японская йена"
+          },
+          {
+            "value": "CNY",
+            "label": "CNY (元) — Китайский юань"
+          },
+          {
+            "value": "UAH",
+            "label": "UAH (₴) — Украинская гривна"
+          },
+          {
+            "value": "KZT",
+            "label": "KZT (₸) — Казахстанский тенге"
+          },
+          {
+            "value": "BYN",
+            "label": "BYN (Br) — Белорусский рубль"
+          }
+        ],
+        "defaultValue": "USD"
+      },
+      {
+        "name": "to",
+        "label": "В валюту",
+        "type": "select",
+        "options": [
+          {
+            "value": "USD",
+            "label": "USD ($) — Доллар США"
+          },
+          {
+            "value": "EUR",
+            "label": "EUR (€) — Евро"
+          },
+          {
+            "value": "RUB",
+            "label": "RUB (₽) — Российский рубль"
+          },
+          {
+            "value": "GBP",
+            "label": "GBP (£) — Фунт стерлингов"
+          },
+          {
+            "value": "JPY",
+            "label": "JPY (¥) — Японская йена"
+          },
+          {
+            "value": "CNY",
+            "label": "CNY (元) — Китайский юань"
+          },
+          {
+            "value": "UAH",
+            "label": "UAH (₴) — Украинская гривна"
+          },
+          {
+            "value": "KZT",
+            "label": "KZT (₸) — Казахстанский тенге"
+          },
+          {
+            "value": "BYN",
+            "label": "BYN (Br) — Белорусский рубль"
+          }
+        ],
+        "defaultValue": "RUB"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат конвертации",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму, выберите валюту \"из\" и валюту \"в\". Калькулятор покажет эквивалентную сумму по текущему курсу.",
+      "about": "Конвертер валют переводит денежные суммы из одной валюты в другую по актуальному обменному курсу.",
+      "usage": "Используется для планирования путешествий, международных переводов, покупок в иностранных магазинах.",
+      "formula": "Сумма в валюте В = Сумма в валюте А × (Курс В / Курс А)",
+      "faq": [
+        {
+          "question": "Насколько точны курсы?",
+          "answer": "Курсы обновляются ежедневно, но могут отличаться от банковских из-за комиссий и спредов."
+        },
+        {
+          "question": "Почему нет всех валют?",
+          "answer": "В конвертере представлены основные мировые валюты. Редкие валюты могут быть добавлены по запросу."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Валюта — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Валюта"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-dlina",
+    "id": "length-converter",
+    "title": "Конвертер длины",
+    "description": "Перевод метров, километров, сантиметров, дюймов, футов, миль",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м — метры"
+          },
+          {
+            "value": "km",
+            "label": "км — километры"
+          },
+          {
+            "value": "cm",
+            "label": "см — сантиметры"
+          },
+          {
+            "value": "mm",
+            "label": "мм — миллиметры"
+          },
+          {
+            "value": "inch",
+            "label": "дюймы"
+          },
+          {
+            "value": "ft",
+            "label": "футы"
+          },
+          {
+            "value": "yd",
+            "label": "ярды"
+          },
+          {
+            "value": "mi",
+            "label": "мили"
+          },
+          {
+            "value": "nm",
+            "label": "нм — нанометры"
+          },
+          {
+            "value": "um",
+            "label": "мкм — микрометры"
+          }
+        ],
+        "defaultValue": "m"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м — метры"
+          },
+          {
+            "value": "km",
+            "label": "км — километры"
+          },
+          {
+            "value": "cm",
+            "label": "см — сантиметры"
+          },
+          {
+            "value": "mm",
+            "label": "мм — миллиметры"
+          },
+          {
+            "value": "inch",
+            "label": "дюймы"
+          },
+          {
+            "value": "ft",
+            "label": "футы"
+          },
+          {
+            "value": "yd",
+            "label": "ярды"
+          },
+          {
+            "value": "mi",
+            "label": "мили"
+          },
+          {
+            "value": "nm",
+            "label": "нм — нанометры"
+          },
+          {
+            "value": "um",
+            "label": "мкм — микрометры"
+          }
+        ],
+        "defaultValue": "cm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение длины, выберите единицы измерения \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Длина — физическая величина, характеризующая протяжённость объектов. Основная единица в СИ — метр (м).",
+      "usage": "Используется в строительстве, производстве, науке, повседневной жизни для измерения расстояний.",
+      "formula": "1 км = 1000 м = 100 000 см\n1 дюйм = 2.54 см\n1 фут = 12 дюймов = 30.48 см\n1 миля = 1.609 км",
+      "faq": [
+        {
+          "question": "Сколько сантиметров в дюйме?",
+          "answer": "1 дюйм = 2.54 сантиметра (точное значение)."
+        },
+        {
+          "question": "Как перевести метры в футы?",
+          "answer": "Умножьте метры на 3.28084. Например, 2 м ≈ 6.56 футов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Метр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Метр"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-massa",
+    "id": "weight-converter",
+    "title": "Конвертер массы",
+    "description": "Перевод килограммов, граммов, тонн, фунтов, унций",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг — килограммы"
+          },
+          {
+            "value": "g",
+            "label": "г — граммы"
+          },
+          {
+            "value": "mg",
+            "label": "мг — миллиграммы"
+          },
+          {
+            "value": "t",
+            "label": "т — тонны"
+          },
+          {
+            "value": "lb",
+            "label": "фунты (pounds)"
+          },
+          {
+            "value": "oz",
+            "label": "унции (ounces)"
+          },
+          {
+            "value": "ct",
+            "label": "караты"
+          }
+        ],
+        "defaultValue": "kg"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг — килограммы"
+          },
+          {
+            "value": "g",
+            "label": "г — граммы"
+          },
+          {
+            "value": "mg",
+            "label": "мг — миллиграммы"
+          },
+          {
+            "value": "t",
+            "label": "т — тонны"
+          },
+          {
+            "value": "lb",
+            "label": "фунты (pounds)"
+          },
+          {
+            "value": "oz",
+            "label": "унции (ounces)"
+          },
+          {
+            "value": "ct",
+            "label": "караты"
+          }
+        ],
+        "defaultValue": "g"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу, выберите единицы измерения \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Масса — физическая величина, определяющая инертность и гравитационные свойства объекта. Основная единица в СИ — килограмм (кг).",
+      "usage": "Используется в торговле, кулинарии, медицине, спорте, науке.",
+      "formula": "1 кг = 1000 г = 1 000 000 мг\n1 т = 1000 кг\n1 фунт ≈ 453.6 г\n1 унция ≈ 28.35 г",
+      "faq": [
+        {
+          "question": "Сколько граммов в фунте?",
+          "answer": "1 фунт (pound) = 453.592 грамма (точное значение)."
+        },
+        {
+          "question": "Что такое карат?",
+          "answer": "Карат — единица массы драгоценных камней. 1 карат = 200 мг = 0.2 г."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Килограмм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Килограмм"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-temperatury",
+    "id": "temperature-converter",
+    "title": "Конвертер температуры",
+    "description": "Перевод Цельсия, Фаренгейта, Кельвина, Реомюра",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "25",
+        "defaultValue": 25
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          },
+          {
+            "value": "f",
+            "label": "°F — Фаренгейт"
+          },
+          {
+            "value": "k",
+            "label": "K — Кельвин"
+          },
+          {
+            "value": "r",
+            "label": "°Re — Реомюр"
+          }
+        ],
+        "defaultValue": "c"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          },
+          {
+            "value": "f",
+            "label": "°F — Фаренгейт"
+          },
+          {
+            "value": "k",
+            "label": "K — Кельвин"
+          },
+          {
+            "value": "r",
+            "label": "°Re — Реомюр"
+          }
+        ],
+        "defaultValue": "f"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру, выберите шкалу \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Температура — мера теплоты тела. Основные шкалы: Цельсий (°C), Фаренгейт (°F), Кельвин (K — абсолютная шкала).",
+      "usage": "Используется в метеорологии, медицине, кулинарии, науке, технике.",
+      "formula": "°F = °C × 9/5 + 32\nK = °C + 273.15\n°Re = °C × 4/5",
+      "faq": [
+        {
+          "question": "Как перевести Цельсий в Фаренгейт?",
+          "answer": "Умножьте градусы Цельсия на 9/5 и прибавьте 32. Например, 25°C = 25 × 9/5 + 32 = 77°F."
+        },
+        {
+          "question": "Что такое абсолютный ноль?",
+          "answer": "Абсолютный ноль — теоретически минимальная температура (−273.15°C или 0 K), при которой прекращается тепловое движение."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Температура — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Температура"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

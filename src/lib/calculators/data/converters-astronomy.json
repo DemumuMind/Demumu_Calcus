@@ -1,0 +1,784 @@
+[
+  {
+    "slug": "konverter-svetovyh-let",
+    "id": "light-year-converter",
+    "title": "Конвертер световых лет",
+    "description": "Перевод световых лет в километры, астрономические единицы, парсеки и другие единицы расстояния",
+    "subcategory": "space-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "fromUnit",
+        "label": "Из единицы",
+        "type": "select",
+        "options": [
+          {
+            "value": "ly",
+            "label": "Световые года (ly)"
+          },
+          {
+            "value": "au",
+            "label": "Астрономические единицы (AU)"
+          },
+          {
+            "value": "pc",
+            "label": "Парсеки (pc)"
+          },
+          {
+            "value": "km",
+            "label": "Километры (км)"
+          },
+          {
+            "value": "mi",
+            "label": "Мили"
+          }
+        ],
+        "defaultValue": "ly"
+      },
+      {
+        "name": "toUnit",
+        "label": "В единицу",
+        "type": "select",
+        "options": [
+          {
+            "value": "ly",
+            "label": "Световые года (ly)"
+          },
+          {
+            "value": "au",
+            "label": "Астрономические единицы (AU)"
+          },
+          {
+            "value": "pc",
+            "label": "Парсеки (pc)"
+          },
+          {
+            "value": "km",
+            "label": "Километры (км)"
+          },
+          {
+            "value": "mi",
+            "label": "Мили"
+          }
+        ],
+        "defaultValue": "km"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      },
+      {
+        "name": "inLightYears",
+        "label": "В световых годах",
+        "type": "number"
+      },
+      {
+        "name": "inParsecs",
+        "label": "В парсеках",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение расстояния, выберите исходную и целевую единицы измерения. Калькулятор переведёт расстояние между различными астрономическими единицами.",
+      "about": "Световой год — расстояние, которое свет проходит за один год в вакууме (около 9.46 триллиона километров). Парсек — расстояние, с которого радиус земной орбиты виден под углом 1 угловая секунда. Астрономическая единица — среднее расстояние от Земли до Солнца.",
+      "usage": "Используйте для перевода расстояний между звёздами и галактиками.",
+      "formula": "1 световой год = 63,241 AU = 0.3066 парсека = 9.461 × 10¹² км",
+      "faq": [
+        {
+          "question": "Что больше — световой год или парсек?",
+          "answer": "Парсек больше. 1 парсек ≈ 3.26 световых года."
+        },
+        {
+          "question": "Зачем нужны разные единицы?",
+          "answer": "Для удобства: AU для расстояний в Солнечной системе, световые годы для звёзд, парсеки для галактик."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NASA - Cosmic Distances",
+          "url": "https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-astronomicheskih-edinic",
+    "id": "au-converter",
+    "title": "Конвертер астрономических единиц",
+    "description": "Перевод между астрономическими единицами AU, километрами, световыми минутами и часами",
+    "subcategory": "space-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "au",
+        "label": "Астрономические единицы (AU)",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "km",
+        "label": "Километры",
+        "type": "number",
+        "unit": "км"
+      },
+      {
+        "name": "lightMinutes",
+        "label": "Световые минуты",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "lightHours",
+        "label": "Световые часы",
+        "type": "number",
+        "unit": "ч"
+      },
+      {
+        "name": "lightDays",
+        "label": "Световые сутки",
+        "type": "number",
+        "unit": "дн"
+      },
+      {
+        "name": "miles",
+        "label": "Мили",
+        "type": "number",
+        "unit": "mi"
+      }
+    ],
+    "content": {
+      "howTo": "Введите значение в астрономических единицах (AU). Калькулятор покажет это расстояние в различных единицах, включая время, за которое свет преодолеет его.",
+      "about": "Астрономическая единица (AU) — среднее расстояние от Земли до Солнца (149.6 млн км). Свет проходит это расстояние за 8 минут 20 секунд.",
+      "formula": "1 AU = 149,597,870.7 км ≈ 8.32 световых минут",
+      "faq": [
+        {
+          "question": "Сколько AU до Марса?",
+          "answer": "От 0.37 AU (в противостоянии) до 2.67 AU (в соединении). Среднее — около 1.52 AU."
+        },
+        {
+          "question": "Почему используют AU?",
+          "answer": "Для удобства описания расстояний в Солнечной системе. AU даёт понятные числа для планетных орбит."
+        }
+      ],
+      "sources": [
+        {
+          "title": "IAU - Astronomical Units",
+          "url": "https://www.iau.org/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-parsekov",
+    "id": "parsec-converter",
+    "title": "Конвертер парсеков",
+    "description": "Перевод парсеков в световые годы, килопарсеки и мегапарсеки для космических расстояний",
+    "subcategory": "space-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "unit",
+        "label": "Единица",
+        "type": "select",
+        "options": [
+          {
+            "value": "pc",
+            "label": "Парсеки (pc)"
+          },
+          {
+            "value": "kpc",
+            "label": "Килопарсеки (kpc)"
+          },
+          {
+            "value": "mpc",
+            "label": "Мегапарсеки (Mpc)"
+          },
+          {
+            "value": "gpc",
+            "label": "Гигапарсеки (Gpc)"
+          }
+        ],
+        "defaultValue": "pc"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "pc",
+        "label": "Парсеки",
+        "type": "number",
+        "unit": "pc"
+      },
+      {
+        "name": "kpc",
+        "label": "Килопарсеки",
+        "type": "number",
+        "unit": "kpc"
+      },
+      {
+        "name": "mpc",
+        "label": "Мегапарсеки",
+        "type": "number",
+        "unit": "Mpc"
+      },
+      {
+        "name": "ly",
+        "label": "Световые года",
+        "type": "number",
+        "unit": "ly"
+      },
+      {
+        "name": "au",
+        "label": "Астрономические единицы",
+        "type": "number",
+        "unit": "AU"
+      }
+    ],
+    "content": {
+      "howTo": "Введите космическое расстояние в парсеках, килопарсеках или мегапарсеках. Калькулятор переведёт его во все основные астрономические единицы.",
+      "about": "Парсек (пк) — расстояние, с которого радиус земной орбиты (1 AU) виден под углом 1 угловая секунда. Равен примерно 3.26 световым годам. Килопарсек (кпк) используется для галактик, мегапарсек (Мпк) — для кластеров галактик.",
+      "formula": "1 pc = 3.26156 ly = 206,265 AU = 3.08568 × 10¹³ км",
+      "faq": [
+        {
+          "question": "Сколько парсеков до ближайшей звезды?",
+          "answer": "До Проксимы Центавра — 1.301 пк (4.24 световых года)."
+        },
+        {
+          "question": "Каков размер Млечного Пути в кпк?",
+          "answer": "Диаметр галактики — около 30 кпк (100,000 световых лет)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia - Parsec",
+          "url": "https://en.wikipedia.org/wiki/Parsec"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-zvezdnoy-velichiny",
+    "id": "magnitude-converter",
+    "title": "Конвертер звёздной величины",
+    "description": "Перевод между кажущейся и абсолютной звёздной величиной, расчёт яркости",
+    "subcategory": "space-units",
+    "type": "formula",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "apparentMag",
+        "label": "Кажущаяся звёздная величина (m)",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0
+      },
+      {
+        "name": "distance",
+        "label": "Расстояние (парсеки)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      }
+    ],
+    "outputs": [
+      {
+        "name": "absoluteMag",
+        "label": "Абсолютная звёздная величина (M)",
+        "type": "number"
+      },
+      {
+        "name": "brightnessRatio",
+        "label": "Отношение яркости (относительно Солнца)",
+        "type": "number"
+      },
+      {
+        "name": "luminosity",
+        "label": "Светимость (L☉)",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите кажущуюся звёздную величину и расстояние до объекта в парсеках. Калькулятор рассчитает абсолютную звёздную величину и светимость.",
+      "about": "Звёздная величина — логарифмическая шкала яркости. Кажущаяся (m) — как ярко объект виден с Земли. Абсолютная (M) — как ярко объект был бы на расстоянии 10 пк. Разница в 5 величин = изменение яркости в 100 раз.",
+      "formula": "M = m - 5 × log₁₀(d) + 5\nЯркость = 2.512^(m₁ - m₂)",
+      "faq": [
+        {
+          "question": "Почему у ярких звёзд отрицательная величина?",
+          "answer": "Исторически: яркие звёзды — 1-я величина, тусклые — 6-я. Сириус (-1.46) ярче, чем звёзды 1-й величины."
+        },
+        {
+          "question": "Какая абсолютная величина у Солнца?",
+          "answer": "4.83. Это средняя звезда. Сверхгиганты имеют M до -10 (в 10⁶ раз ярче)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia - Apparent magnitude",
+          "url": "https://en.wikipedia.org/wiki/Apparent_magnitude"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-kosmicheskogo-vremeni",
+    "id": "space-time-converter",
+    "title": "Конвертер космического времени",
+    "description": "Перевод времени света в расстояние, расчёт времени пути для разных скоростей",
+    "subcategory": "space-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "timeValue",
+        "label": "Время",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "timeUnit",
+        "label": "Единица времени",
+        "type": "select",
+        "options": [
+          {
+            "value": "seconds",
+            "label": "Секунды"
+          },
+          {
+            "value": "minutes",
+            "label": "Минуты"
+          },
+          {
+            "value": "hours",
+            "label": "Часы"
+          },
+          {
+            "value": "days",
+            "label": "Сутки"
+          },
+          {
+            "value": "years",
+            "label": "Годы"
+          }
+        ],
+        "defaultValue": "minutes"
+      },
+      {
+        "name": "speed",
+        "label": "Скорость (% от скорости света)",
+        "type": "number",
+        "min": 0,
+        "max": 100,
+        "defaultValue": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "distanceKm",
+        "label": "Расстояние (км)",
+        "type": "number",
+        "unit": "км"
+      },
+      {
+        "name": "distanceAu",
+        "label": "Расстояние (AU)",
+        "type": "number",
+        "unit": "AU"
+      },
+      {
+        "name": "distanceLy",
+        "label": "Расстояние (св. г.)",
+        "type": "number",
+        "unit": "ly"
+      },
+      {
+        "name": "actualTime",
+        "label": "Фактическое время в пути",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите время, за которое свет проходит расстояние. Укажите скорость (по умолчанию 100% — скорость света). Калькулятор покажет расстояние и реальное время пути для заданной скорости.",
+      "about": "Скорость света — предельная скорость распространения информации в пространстве-времени (299,792 км/с). Время света — время, за которое свет преодолевает расстояние.",
+      "formula": "Расстояние = скорость света × время\nВремя пути = время света × (100% / скорость %)",
+      "faq": [
+        {
+          "question": "Сколько времени свет идёт от Солнца до Земли?",
+          "answer": "8 минут 20 секунд (8.32 световые минуты или ~1 AU)."
+        },
+        {
+          "question": "Зачем нужна настройка скорости?",
+          "answer": "Для расчёта времени пути космических аппаратов (обычно 0.001-0.01% от c) или учёта релятивистских эффектов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NASA - Speed of Light",
+          "url": "https://science.nasa.gov/light/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-krasnogo-smeshcheniya",
+    "id": "redshift-converter",
+    "title": "Конвертер красного смещения",
+    "description": "Перевод красного смещения z в скорость отдаления, расстояние и возраст Вселенной",
+    "subcategory": "space-units",
+    "type": "formula",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "redshift",
+        "label": "Красное смещение (z)",
+        "type": "number",
+        "placeholder": "0.1",
+        "min": 0,
+        "step": 0.01,
+        "defaultValue": 0.1
+      },
+      {
+        "name": "calculationType",
+        "label": "Тип расчёта",
+        "type": "select",
+        "options": [
+          {
+            "value": "approximate",
+            "label": "Приближённый (v << c)"
+          },
+          {
+            "value": "relativistic",
+            "label": "Релятивистский (точный)"
+          }
+        ],
+        "defaultValue": "relativistic"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "velocity",
+        "label": "Скорость отдаления",
+        "type": "number",
+        "unit": "км/с"
+      },
+      {
+        "name": "velocityPercent",
+        "label": "% от скорости света",
+        "type": "number",
+        "unit": "% c"
+      },
+      {
+        "name": "distance",
+        "label": "Примерное расстояние",
+        "type": "number",
+        "unit": "Мпк"
+      },
+      {
+        "name": "lookbackTime",
+        "label": "Время в прошлое",
+        "type": "number",
+        "unit": "млрд лет"
+      }
+    ],
+    "content": {
+      "howTo": "Введите красное смещение z объекта. Выберите метод расчёта. Калькулятор оценит скорость отдаления, расстояние и \"время в прошлое\" — когда мы видим объект таким, каким он был.",
+      "about": "Красное смещение (z) — увеличение длины волны света от далёких объектов из-за расширения Вселенной. z = (λ_наблюдаемая - λ_исходная) / λ_исходная. Открыто Эдвином Хабблом.",
+      "formula": "Релятивистическая: v = c × ((1+z)² - 1) / ((1+z)² + 1)\nПриближённая: v ≈ c × z (для z << 1)",
+      "faq": [
+        {
+          "question": "Что означает z = 1?",
+          "answer": "Длина волны увеличена в 2 раза. Объект удаляется со скоростью ~60% c. Расстояние ~4 млрд световых лет."
+        },
+        {
+          "question": "Какое z у самых далёких галактик?",
+          "answer": "Самые далёкие известные галактики имеют z > 10 (видимы как они были 13+ млрд лет назад)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NASA - Redshift",
+          "url": "https://imagine.gsfc.nasa.gov/features/cosmic/redshift.html"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-zvezdnoy-temperatury",
+    "id": "stellar-temperature-converter",
+    "title": "Конвертер температуры звёзд",
+    "description": "Перевод между температурой звезды, её спектральным классом и цветом",
+    "subcategory": "space-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "temperature",
+        "label": "Температура поверхности (K)",
+        "type": "number",
+        "placeholder": "5778",
+        "min": 2000,
+        "max": 50000,
+        "defaultValue": 5778
+      }
+    ],
+    "outputs": [
+      {
+        "name": "spectralClass",
+        "label": "Спектральный класс",
+        "type": "text"
+      },
+      {
+        "name": "color",
+        "label": "Цвет",
+        "type": "text"
+      },
+      {
+        "name": "wienPeak",
+        "label": "Пик излучения (Вена)",
+        "type": "number",
+        "unit": "нм"
+      },
+      {
+        "name": "bolometricCorrection",
+        "label": "Болометрическая поправка",
+        "type": "number",
+        "unit": "mag"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру поверхности звезды в кельвинах. Калькулятор определит спектральный класс, цвет, длину волны пика излучения по закону Вена.",
+      "about": "Закон смещения Вена связывает температуру тела с длиной волны максимума излучения. Звёздные спектральные классы (O-B-A-F-G-K-M) основаны на температуре поверхности.",
+      "formula": "λ_max = b / T, где b = 2.898 × 10⁻³ м·К",
+      "faq": [
+        {
+          "question": "Какая температура у Солнца?",
+          "answer": "5778 К — спектральный класс G2V (жёлтая карликовая звезда). Пик излучения в видимом диапазоне (~502 нм — зелёный)."
+        },
+        {
+          "question": "Почему звёзды разных цветов?",
+          "answer": "Температура определяет цвет: горячие (>10000 К) — голубые, холодные (<4000 К) — красные."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipedia - Stellar classification",
+          "url": "https://en.wikipedia.org/wiki/Stellar_classification"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-massy-i-radiusa-zvezd",
+    "id": "stellar-size-converter",
+    "title": "Конвертер массы и радиуса звёзд",
+    "description": "Перевод массы и радиуса звёзд в солнечные единицы, расчёт гравитации и плотности",
+    "subcategory": "space-units",
+    "type": "formula",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "mass",
+        "label": "Масса (M☉)",
+        "type": "number",
+        "placeholder": "1",
+        "min": 0.01,
+        "max": 1000,
+        "step": 0.01,
+        "defaultValue": 1
+      },
+      {
+        "name": "radius",
+        "label": "Радиус (R☉)",
+        "type": "number",
+        "placeholder": "1",
+        "min": 0.001,
+        "max": 2000,
+        "step": 0.01,
+        "defaultValue": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "massKg",
+        "label": "Масса (кг)",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "radiusKm",
+        "label": "Радиус (км)",
+        "type": "number",
+        "unit": "км"
+      },
+      {
+        "name": "surfaceGravity",
+        "label": "Поверхностная гравитация",
+        "type": "number",
+        "unit": "g"
+      },
+      {
+        "name": "avgDensity",
+        "label": "Средняя плотность",
+        "type": "number",
+        "unit": "кг/м³"
+      },
+      {
+        "name": "escapeVelocity",
+        "label": "Вторая космическая",
+        "type": "number",
+        "unit": "км/с"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу и радиус звезды в солнечных единицах (M☉ и R☉). Калькулятор переведёт в абсолютные единицы и рассчитает гравитацию, плотность и скорость убегания.",
+      "about": "Солнечная масса (M☉) = 1.989 × 10³⁰ кг. Солнечный радиус (R☉) = 696,340 км. Эти единицы позволяют удобно описывать звёзды разных типов: от карликов до сверхгигантов.",
+      "formula": "g = GM/R²\nρ = M / (4/3 πR³)\nv_escape = √(2GM/R)",
+      "faq": [
+        {
+          "question": "Сколько массивнее Бетельгейзе?",
+          "answer": "Бетельгейзе имеет массу ~12 M☉ и радиус ~900 R☉. Плотность меньше миллиона раз по сравнению с Солнцем."
+        },
+        {
+          "question": "Какая плотность у белых карликов?",
+          "answer": "~10⁹ кг/м³ (в миллион раз плотнее воды). Нейтронные звёзды — ещё в миллиард раз плотнее."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NASA - Star Size Comparison",
+          "url": "https://www.nasa.gov/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "konverter-orbitalnyh-periodov",
+    "id": "orbital-period-converter",
+    "title": "Конвертер орбитальных периодов",
+    "description": "Перевод между периодами обращения планет: земные дни, местные годы, земные годы",
+    "subcategory": "space-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "fromUnit",
+        "label": "Из единицы",
+        "type": "select",
+        "options": [
+          {
+            "value": "earthDays",
+            "label": "Земные сутки"
+          },
+          {
+            "value": "earthYears",
+            "label": "Земные года"
+          },
+          {
+            "value": "mercuryYears",
+            "label": "Меркурианские года"
+          },
+          {
+            "value": "martianYears",
+            "label": "Марсианские года"
+          },
+          {
+            "value": "jupiterYears",
+            "label": "Юпитерианские года"
+          }
+        ],
+        "defaultValue": "earthDays"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "earthDays",
+        "label": "Земные сутки",
+        "type": "number",
+        "unit": "дн"
+      },
+      {
+        "name": "earthYears",
+        "label": "Земные года",
+        "type": "number",
+        "unit": "лет"
+      },
+      {
+        "name": "mercuryYears",
+        "label": "Меркурианские года",
+        "type": "number",
+        "unit": "мерк. лет"
+      },
+      {
+        "name": "martianYears",
+        "label": "Марсианские года",
+        "type": "number",
+        "unit": "марс. лет"
+      },
+      {
+        "name": "jupiterYears",
+        "label": "Юпитерианские года",
+        "type": "number",
+        "unit": "юп. лет"
+      }
+    ],
+    "content": {
+      "howTo": "Введите период времени и выберите планету отсчёта. Калькулятор покажет, сколько это составит в годах других планет.",
+      "about": "Орбитальный период — время полного оборота вокруг Солнца. На разных планетах \"год\" разной длины: Меркурий — 88 земных дней, Юпитер — почти 12 земных лет.",
+      "formula": "Период зависит от расстояния по 3-му закону Кеплера: T² ∝ a³",
+      "faq": [
+        {
+          "question": "Сколько земных лет в марсианском?",
+          "answer": "1 марсианский год = 1.88 земных года ≈ 687 земных суток."
+        },
+        {
+          "question": "Какой самый длинный год в Солнечной системе?",
+          "answer": "У Нептуна — 164.8 земных года (60,190 суток)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NASA - Planetary Fact Sheet",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

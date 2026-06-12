@@ -1,0 +1,451 @@
+[
+  {
+    "slug": "calculyator-chaevyh",
+    "id": "tip-split-calculator",
+    "title": "Калькулятор чаевых",
+    "description": "Расчёт чаевых в ресторане, кафе, такси — процент от суммы чека",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe"
+  },
+  {
+    "slug": "razdelenie-cheka",
+    "id": "split-bill-calculator",
+    "title": "Калькулятор разделения счёта",
+    "description": "Разделите счёт между друзьями поровну или по позициям",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "total",
+        "label": "Общая сумма (₽)",
+        "type": "number",
+        "placeholder": "3000",
+        "defaultValue": 3000,
+        "min": 0
+      },
+      {
+        "name": "people",
+        "label": "Количество человек",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "tipPercent",
+        "label": "Чаевые (%)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "roundUp",
+        "label": "Округлить до удобной суммы",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Не округлять"
+          },
+          {
+            "value": "10",
+            "label": "До 10 ₽"
+          },
+          {
+            "value": "50",
+            "label": "До 50 ₽"
+          },
+          {
+            "value": "100",
+            "label": "До 100 ₽"
+          }
+        ],
+        "defaultValue": "none"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "perPerson",
+        "label": "С каждого",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "tipAmount",
+        "label": "Чаевые",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalWithTip",
+        "label": "Итого с чаевыми",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите общую сумму, количество человек, процент чаевых. Калькулятор рассчитает сколько должен заплатить каждый.",
+      "about": "Удобный инструмент для разделения счёта в компании друзей, коллег или семьи.",
+      "usage": "Используется после ужина в ресторане, совместных покупок, поездок.",
+      "formula": "С каждого = (Сумма + Чаевые) / Количество человек",
+      "faq": [
+        {
+          "question": "Как округлить сумму?",
+          "answer": "Выберите \"До 50 ₽\" или \"До 100 ₽\", и сумма будет округлена вверх до ближайшего удобного числа."
+        },
+        {
+          "question": "А если кто-то заказал дороже?",
+          "answer": "Этот калькулятор делит поровну. Для разделения по позициям используйте расширенный калькулятор или считайте вручную."
+        }
+      ],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "komplektaciya-posudy",
+    "id": "dish-set-calculator",
+    "title": "Калькулятор комплектации посуды",
+    "description": "Сколько тарелок, стаканов, приборов нужно для застолья",
+    "subcategory": "everyday-eda",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "guests",
+        "label": "Количество гостей",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8,
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "courses",
+        "label": "Количество блюд (подач)",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 1,
+        "max": 10
+      },
+      {
+        "name": "beverages",
+        "label": "Видов напитков",
+        "type": "number",
+        "placeholder": "2",
+        "defaultValue": 2,
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "extraPercent",
+        "label": "Запас (%)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 0,
+        "max": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "plates",
+        "label": "Тарелок",
+        "type": "number",
+        "unit": "шт."
+      },
+      {
+        "name": "glasses",
+        "label": "Стаканов/бокалов",
+        "type": "number",
+        "unit": "шт."
+      },
+      {
+        "name": "cutlery",
+        "label": "Наборов приборов",
+        "type": "number",
+        "unit": "шт."
+      },
+      {
+        "name": "napkins",
+        "label": "Салфеток",
+        "type": "number",
+        "unit": "шт."
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество гостей, количество подач блюд, видов напитков и процент запаса. Калькулятор рассчитает необходимое количество посуды.",
+      "about": "Помогает рассчитать, хватит ли посуды для приёма гостей или нужно докупить/взять в аренду.",
+      "usage": "Используется при подготовке к праздникам, банкетам, свадьбам, корпоративам.",
+      "formula": "Тарелки = Гости × Блюда × (1 + Запас)\nСтаканы = Гости × Напитки × (1 + Запас)",
+      "faq": [
+        {
+          "question": "Сколько салфеток нужно на человека?",
+          "answer": "Рекомендуется 2 салфетки на каждую подачу: одна на колени, одна в руках. Калькулятор добавляет запас."
+        },
+        {
+          "question": "Что если у меня не хватает?",
+          "answer": "Докупите одноразовую посуду или возьмите в аренду. Для неформальных вечеринок одноразовая посуда — норма."
+        }
+      ],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "vremya-sna",
+    "id": "sleep-calculator",
+    "title": "Калькулятор времени сна",
+    "description": "Расчёт оптимального времени отхода ко сну или пробуждения по циклам сна",
+    "subcategory": "everyday-vremya",
+    "type": "formula",
+    "category": "povsednevnoe"
+  },
+  {
+    "slug": "poliv-rastenij",
+    "id": "plant-watering-calculator",
+    "title": "Калькулятор полива растений",
+    "description": "Расчёт частоты полива комнатных растений по сезону и условиям",
+    "subcategory": "everyday-dom",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "plantType",
+        "label": "Тип растения",
+        "type": "select",
+        "options": [
+          {
+            "value": "succulent",
+            "label": "Суккуленты (кактусы, алоэ)"
+          },
+          {
+            "value": "leafy",
+            "label": "Лиственные (фикус, монстера)"
+          },
+          {
+            "value": "flowering",
+            "label": "Цветущие (фиалки, орхидеи)"
+          },
+          {
+            "value": "palm",
+            "label": "Пальмы и драцены"
+          },
+          {
+            "value": "fern",
+            "label": "Папоротники"
+          },
+          {
+            "value": "herb",
+            "label": "Пряности (базилик, мята)"
+          }
+        ],
+        "defaultValue": "leafy"
+      },
+      {
+        "name": "potSize",
+        "label": "Размер горшка",
+        "type": "select",
+        "options": [
+          {
+            "value": "small",
+            "label": "Малый (до 12 см)"
+          },
+          {
+            "value": "medium",
+            "label": "Средний (12-20 см)"
+          },
+          {
+            "value": "large",
+            "label": "Крупный (20+ см)"
+          }
+        ],
+        "defaultValue": "medium"
+      },
+      {
+        "name": "season",
+        "label": "Сезон",
+        "type": "select",
+        "options": [
+          {
+            "value": "summer",
+            "label": "Лето (активный рост)"
+          },
+          {
+            "value": "winter",
+            "label": "Зима (покой)"
+          },
+          {
+            "value": "transition",
+            "label": "Весна/Осень"
+          }
+        ],
+        "defaultValue": "summer"
+      },
+      {
+        "name": "conditions",
+        "label": "Условия",
+        "type": "select",
+        "options": [
+          {
+            "value": "bright",
+            "label": "Яркий свет, тепло"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный свет"
+          },
+          {
+            "value": "shady",
+            "label": "Тень, прохладно"
+          }
+        ],
+        "defaultValue": "moderate"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "frequency",
+        "label": "Частота полива",
+        "type": "text"
+      },
+      {
+        "name": "amount",
+        "label": "Количество воды",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип растения, размер горшка, сезон и условия. Калькулятор даст рекомендации по поливу.",
+      "about": "Частота полива зависит от вида растения, размера горшка, сезона, температуры и влажности.",
+      "usage": "Используется для составления графика полива домашних растений.",
+      "formula": "Суккуленты: 1 раз в 2 недели\nЛиственные: 1 раз в неделю\nЦветущие: 2 раза в неделю",
+      "faq": [
+        {
+          "question": "Как понять, что растение нуждается в поливе?",
+          "answer": "Проверьте землю на глубине 2-3 см: если сухая — поливайте. Или поднимите горшок: лёгкий = нужен полив."
+        },
+        {
+          "question": "Почему растение желтеет?",
+          "answer": "Причины: переувлажнение (чаще), недостаток света, нехватка питательных веществ, вредители."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Комнатные растения — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Комнатные_растения"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "nalogovyj-vychet",
+    "id": "tax-deduction-calculator",
+    "title": "Калькулятор налогового вычета",
+    "description": "Расчёт суммы возврата налога на имущество, лечение, обучение",
+    "subcategory": "everyday-dengi",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "income",
+        "label": "Годовой доход (₽)",
+        "type": "number",
+        "placeholder": "600000",
+        "defaultValue": 600000,
+        "min": 0
+      },
+      {
+        "name": "deductionType",
+        "label": "Тип вычета",
+        "type": "select",
+        "options": [
+          {
+            "value": "property",
+            "label": "Имущественный (квартира, дом)"
+          },
+          {
+            "value": "medical",
+            "label": "Лечение"
+          },
+          {
+            "value": "education",
+            "label": "Обучение"
+          },
+          {
+            "value": "investment",
+            "label": "ИИС (инвестиции)"
+          },
+          {
+            "value": "charity",
+            "label": "Благотворительность"
+          }
+        ],
+        "defaultValue": "property"
+      },
+      {
+        "name": "expenses",
+        "label": "Расходы (₽)",
+        "type": "number",
+        "placeholder": "2000000",
+        "defaultValue": 2000000,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "maxDeduction",
+        "label": "Максимальный вычет",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "taxReturn",
+        "label": "Возврат налога",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "paidTax",
+        "label": "Уплаченный налог",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите годовой доход, выберите тип вычета и укажите расходы. Калькулятор покажет сумму возврата налога.",
+      "about": "Налоговый вычет — сумма, на которую уменьшается налогооблагаемая база. Возвращается 13% от фактических расходов.",
+      "usage": "Используется для планирования налоговых вычетов: имущественные, социальные, инвестиционные.",
+      "formula": "Возврат = Минимум(Расходы, Лимит) × 13%\nНе более уплаченного НДФЛ",
+      "faq": [
+        {
+          "question": "Сколько можно вернуть за квартиру?",
+          "answer": "Максимум 260 000 ₽ (13% от 2 млн ₽). Если квартира дороже 2 млн — всё равно 260 000 ₽ максимум."
+        },
+        {
+          "question": "Можно ли получить вычет за обучение?",
+          "answer": "Да, до 15 600 ₽ в год (13% от 120 000 ₽). Распространяется на своё обучение и детей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Налоговый вычет — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Налоговый_вычет"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

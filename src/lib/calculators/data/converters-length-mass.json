@@ -1,0 +1,2090 @@
+[
+  {
+    "slug": "dyujmy-v-santimetry",
+    "id": "length-inches-cm",
+    "title": "Дюймы в сантиметры",
+    "description": "Конвертер длины: перевод дюймов в сантиметры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "in",
+            "label": "дюймы"
+          }
+        ],
+        "defaultValue": "in"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "cm",
+            "label": "см"
+          }
+        ],
+        "defaultValue": "cm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в дюймах, результат в сантиметрах появится автоматически.",
+      "about": "Дюйм — единица длины в англоязычных странах. 1 дюйм равен 2.54 сантиметра. Широко используется в технике, строительстве и повседневной жизни.",
+      "formula": "1 дюйм = 2.54 см",
+      "faq": [
+        {
+          "question": "Сколько сантиметров в дюйме?",
+          "answer": "1 дюйм = 2.54 сантиметра точно (международное соглашение 1959 года)."
+        },
+        {
+          "question": "Где используются дюймы?",
+          "answer": "В США, Великобритании, Канаде. Диагонали экранов, размеры шин, дюймовые гаечные ключи."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Дюйм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Дюйм"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "santimetry-v-dyujmy",
+    "id": "length-cm-inches",
+    "title": "Сантиметры в дюймы",
+    "description": "Конвертер длины: перевод сантиметров в дюймы",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "2.54",
+        "defaultValue": 2.54,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "cm",
+            "label": "см"
+          }
+        ],
+        "defaultValue": "cm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "in",
+            "label": "дюймы"
+          }
+        ],
+        "defaultValue": "in"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в сантиметрах, результат в дюймах появится автоматически.",
+      "about": "Сантиметр — метрическая единица длины, равная 0.01 метра. Дюйм — английская единица. Перевод часто нужен при работе с импортной техникой.",
+      "formula": "1 см = 0.3937 дюйма",
+      "faq": [
+        {
+          "question": "Сколько дюймов в сантиметре?",
+          "answer": "1 см ≈ 0.3937 дюйма (1/2.54)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Дюйм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Дюйм"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "futy-v-metry",
+    "id": "length-feet-m",
+    "title": "Футы в метры",
+    "description": "Конвертер длины: перевод футов в метры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ft",
+            "label": "футы"
+          }
+        ],
+        "defaultValue": "ft"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в футах, результат в метрах появится автоматически.",
+      "about": "Фут — английская единица длины, равная 12 дюймам или 0.3048 метра. Используется в авиации (высота полёта), морском деле и строительстве.",
+      "formula": "1 фут = 0.3048 м",
+      "faq": [
+        {
+          "question": "Сколько метров в футе?",
+          "answer": "1 фут = 0.3048 метра (12 дюймов)."
+        },
+        {
+          "question": "Где используется фут?",
+          "answer": "В авиации (высота в футах), морском деле (футы для глубины), строительстве в США и Великобритании."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Фут — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Фут"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "metry-v-futy",
+    "id": "length-m-feet",
+    "title": "Метры в футы",
+    "description": "Конвертер длины: перевод метров в футы",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ft",
+            "label": "футы"
+          }
+        ],
+        "defaultValue": "ft"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в метрах, результат в футах появится автоматически.",
+      "about": "Метр — основная единица длины в СИ. Фут — английская единица, распространённая в авиации и морском деле.",
+      "formula": "1 м = 3.28084 фута",
+      "faq": [
+        {
+          "question": "Сколько футов в метре?",
+          "answer": "1 метр ≈ 3.28084 фута."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Фут — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Фут"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "mili-v-kilometry",
+    "id": "length-miles-km",
+    "title": "Мили в километры",
+    "description": "Конвертер длины: перевод миль в километры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "mi",
+            "label": "мили"
+          }
+        ],
+        "defaultValue": "mi"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "km",
+            "label": "км"
+          }
+        ],
+        "defaultValue": "km"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите расстояние в милях, результат в километрах появится автоматически.",
+      "about": "Миля — единица расстояния в англоязычных странах. Существуют разные виды миль (статутная, морская), здесь используется статутная миля (1609.344 м).",
+      "formula": "1 миля = 1.609344 км",
+      "faq": [
+        {
+          "question": "Сколько километров в миле?",
+          "answer": "1 статутная миля = 1.609344 км."
+        },
+        {
+          "question": "В чём разница между статутной и морской милей?",
+          "answer": "Статутная миля = 1609.344 м. Морская миля (морская) = 1852 м."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Миля — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Миля"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilometry-v-mili",
+    "id": "length-km-miles",
+    "title": "Километры в мили",
+    "description": "Конвертер длины: перевод километров в мили",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "km",
+            "label": "км"
+          }
+        ],
+        "defaultValue": "km"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "mi",
+            "label": "мили"
+          }
+        ],
+        "defaultValue": "mi"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите расстояние в километрах, результат в милях появится автоматически.",
+      "about": "Километр — единица длины в СИ, равная 1000 метров. Часто нужен перевод в мили при чтении зарубежных источников или путешествии.",
+      "formula": "1 км = 0.621371 мили",
+      "faq": [
+        {
+          "question": "Сколько миль в километре?",
+          "answer": "1 км ≈ 0.621371 мили."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Миля — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Миля"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "metry-v-kilometry",
+    "id": "length-m-km",
+    "title": "Метры в километры",
+    "description": "Конвертер длины: перевод метров в километры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "km",
+            "label": "км"
+          }
+        ],
+        "defaultValue": "km"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в метрах, результат в километрах появится автоматически.",
+      "about": "Метр и километр — основные единицы длины в метрической системе. 1 километр = 1000 метров.",
+      "formula": "1 км = 1000 м",
+      "faq": [
+        {
+          "question": "Сколько метров в километре?",
+          "answer": "1 километр = 1000 метров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Метр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Метр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilometry-v-metry",
+    "id": "length-km-m",
+    "title": "Километры в метры",
+    "description": "Конвертер длины: перевод километров в метры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "km",
+            "label": "км"
+          }
+        ],
+        "defaultValue": "km"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите расстояние в километрах, результат в метрах появится автоматически.",
+      "about": "Перевод километров в метры — базовая операция в метрической системе. Полезен при планировании маршрутов и расчётах расстояний.",
+      "formula": "1 км = 1000 м",
+      "faq": [
+        {
+          "question": "Сколько метров в 5 километрах?",
+          "answer": "5 км = 5000 м."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Километр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Километр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "santimetry-v-metry",
+    "id": "length-cm-m",
+    "title": "Сантиметры в метры",
+    "description": "Конвертер длины: перевод сантиметров в метры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "cm",
+            "label": "см"
+          }
+        ],
+        "defaultValue": "cm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в сантиметрах, результат в метрах появится автоматически.",
+      "about": "Сантиметр — единица длины, равная 0.01 метра. Широко используется в повседневной жизни, медицине, швейном деле.",
+      "formula": "1 м = 100 см",
+      "faq": [
+        {
+          "question": "Сколько сантиметров в метре?",
+          "answer": "1 метр = 100 сантиметров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Сантиметр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Сантиметр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "metry-v-santimetry",
+    "id": "length-m-cm",
+    "title": "Метры в сантиметры",
+    "description": "Конвертер длины: перевод метров в сантиметры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "cm",
+            "label": "см"
+          }
+        ],
+        "defaultValue": "cm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в метрах, результат в сантиметрах появится автоматически.",
+      "about": "Перевод метров в сантиметры — частая операция при измерении роста, длины ткани, размеров предметов.",
+      "formula": "1 м = 100 см",
+      "faq": [
+        {
+          "question": "Сколько сантиметров в 1.75 метрах?",
+          "answer": "1.75 м = 175 см."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Сантиметр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Сантиметр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "millimetry-v-santimetry",
+    "id": "length-mm-cm",
+    "title": "Миллиметры в сантиметры",
+    "description": "Конвертер длины: перевод миллиметров в сантиметры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "mm",
+            "label": "мм"
+          }
+        ],
+        "defaultValue": "mm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "cm",
+            "label": "см"
+          }
+        ],
+        "defaultValue": "cm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в миллиметрах, результат в сантиметрах появится автоматически.",
+      "about": "Миллиметр — единица длины, равная 0.1 сантиметра. Используется в инженерии, медицине, точных измерениях.",
+      "formula": "1 см = 10 мм",
+      "faq": [
+        {
+          "question": "Сколько миллиметров в сантиметре?",
+          "answer": "1 сантиметр = 10 миллиметров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Миллиметр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Миллиметр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "santimetry-v-millimetry",
+    "id": "length-cm-mm",
+    "title": "Сантиметры в миллиметры",
+    "description": "Конвертер длины: перевод сантиметров в миллиметры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "cm",
+            "label": "см"
+          }
+        ],
+        "defaultValue": "cm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "mm",
+            "label": "мм"
+          }
+        ],
+        "defaultValue": "mm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в сантиметрах, результат в миллиметрах появится автоматически.",
+      "about": "Перевод сантиметров в миллиметры часто нужен в технических чертежах, медицине и ювелирном деле.",
+      "formula": "1 см = 10 мм",
+      "faq": [
+        {
+          "question": "Сколько миллиметров в 2.5 см?",
+          "answer": "2.5 см = 25 мм."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Миллиметр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Миллиметр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "yardy-v-metry",
+    "id": "length-yards-m",
+    "title": "Ярды в метры",
+    "description": "Конвертер длины: перевод ярдов в метры",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "yd",
+            "label": "ярды"
+          }
+        ],
+        "defaultValue": "yd"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в ярдах, результат в метрах появится автоматически.",
+      "about": "Ярд — английская единица длины, равная 3 футам или 0.9144 метра. Используется в текстильной промышленности, спорте (футбол, американский футбол).",
+      "formula": "1 ярд = 0.9144 м",
+      "faq": [
+        {
+          "question": "Сколько метров в ярде?",
+          "answer": "1 ярд = 0.9144 метра."
+        },
+        {
+          "question": "Где используется ярд?",
+          "answer": "В текстильной промышленности (длина ткани), американском футболе (ярды на поле), гольфе (расстояние до лунки)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ярд — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Ярд"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "metry-v-yardy",
+    "id": "length-m-yards",
+    "title": "Метры в ярды",
+    "description": "Конвертер длины: перевод метров в ярды",
+    "subcategory": "conv-dlina",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m",
+            "label": "м"
+          }
+        ],
+        "defaultValue": "m"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "yd",
+            "label": "ярды"
+          }
+        ],
+        "defaultValue": "yd"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите длину в метрах, результат в ярдах появится автоматически.",
+      "about": "Перевод метров в ярды полезен при работе с тканями, измерении спортивных полей и чтении англоязычных спецификаций.",
+      "formula": "1 м = 1.09361 ярда",
+      "faq": [
+        {
+          "question": "Сколько ярдов в метре?",
+          "answer": "1 метр ≈ 1.09361 ярда."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ярд — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Ярд"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "grammy-v-kilogrammy",
+    "id": "mass-g-kg",
+    "title": "Граммы в килограммы",
+    "description": "Конвертер массы: перевод граммов в килограммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в граммах, результат в килограммах появится автоматически.",
+      "about": "Грамм — единица массы в метрической системе, равная 0.001 килограмма. Используется в кулинарии, медицине, торговле.",
+      "formula": "1 кг = 1000 г",
+      "faq": [
+        {
+          "question": "Сколько граммов в килограмме?",
+          "answer": "1 килограмм = 1000 граммов."
+        },
+        {
+          "question": "Сколько граммов в 500 г?",
+          "answer": "500 г = 0.5 кг."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Грамм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Грамм"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilogrammy-v-grammy",
+    "id": "mass-kg-g",
+    "title": "Килограммы в граммы",
+    "description": "Конвертер массы: перевод килограммов в граммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в килограммах, результат в граммах появится автоматически.",
+      "about": "Килограмм — основная единица массы в СИ. Перевод в граммы нужен при точных измерениях в кулинарии и медицине.",
+      "formula": "1 кг = 1000 г",
+      "faq": [
+        {
+          "question": "Сколько граммов в 2.5 кг?",
+          "answer": "2.5 кг = 2500 г."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Килограмм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Килограмм"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "tonny-v-kilogrammy",
+    "id": "mass-t-kg",
+    "title": "Тонны в килограммы",
+    "description": "Конвертер массы: перевод тонн в килограммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "t",
+            "label": "т"
+          }
+        ],
+        "defaultValue": "t"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в тоннах, результат в килограммах появится автоматически.",
+      "about": "Тонна — единица массы, равная 1000 килограммов. Используется в грузоперевозках, торговле, промышленности.",
+      "formula": "1 т = 1000 кг",
+      "faq": [
+        {
+          "question": "Сколько килограммов в тонне?",
+          "answer": "1 тонна = 1000 килограммов."
+        },
+        {
+          "question": "В чём разница между метрической и английской тонной?",
+          "answer": "Метрическая тонна = 1000 кг. Английская (long) тонна = 1016 кг. Американская (short) тонна = 907 кг."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Тонна — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Тонна"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilogrammy-v-tonny",
+    "id": "mass-kg-t",
+    "title": "Килограммы в тонны",
+    "description": "Конвертер массы: перевод килограммов в тонны",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "t",
+            "label": "т"
+          }
+        ],
+        "defaultValue": "t"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в килограммах, результат в тоннах появится автоматически.",
+      "about": "Перевод килограммов в тонны используется для крупных масс — грузов, сыпучих материалов, транспортных средств.",
+      "formula": "1 т = 1000 кг",
+      "faq": [
+        {
+          "question": "Сколько тонн в 5000 кг?",
+          "answer": "5000 кг = 5 тонн."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Тонна — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Тонна"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "funti-v-kilogrammy",
+    "id": "mass-lb-kg",
+    "title": "Фунты в килограммы",
+    "description": "Конвертер массы: перевод фунтов в килограммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "lb",
+            "label": "фунты"
+          }
+        ],
+        "defaultValue": "lb"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в фунтах, результат в килограммах появится автоматически.",
+      "about": "Фунт — единица массы в англоязычных странах. Авиационный фунт (lb avdp) = 0.45359237 кг. Используется в США, Великобритании.",
+      "formula": "1 фунт = 0.45359237 кг",
+      "faq": [
+        {
+          "question": "Сколько килограммов в фунте?",
+          "answer": "1 фунт (международный авоирдюпуа) = 0.45359237 кг."
+        },
+        {
+          "question": "Сколько фунтов в килограмме?",
+          "answer": "1 кг ≈ 2.20462 фунта."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Фунт (единица массы) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Фунт_(единица_массы)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilogrammy-v-funti",
+    "id": "mass-kg-lb",
+    "title": "Килограммы в фунты",
+    "description": "Конвертер массы: перевод килограммов в фунты",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "lb",
+            "label": "фунты"
+          }
+        ],
+        "defaultValue": "lb"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в килограммах, результат в фунтах появится автоматически.",
+      "about": "Перевод килограммов в фунты часто нужен при чтении американских рецептов, спортивных данных (вес боксёров), веса багажа.",
+      "formula": "1 кг = 2.20462 фунта",
+      "faq": [
+        {
+          "question": "Сколько фунтов в 70 кг?",
+          "answer": "70 кг ≈ 154.32 фунта."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Фунт (единица массы) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Фунт_(единица_массы)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "uncii-v-grammy",
+    "id": "mass-oz-g",
+    "title": "Унции в граммы",
+    "description": "Конвертер массы: перевод унций в граммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "oz",
+            "label": "унции"
+          }
+        ],
+        "defaultValue": "oz"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в унциях, результат в граммах появится автоматически.",
+      "about": "Унция (oz) — единица массы в англоязычных странах. 1 унция = 1/16 фунта = 28.3495 г. Используется в кулинарии, ювелирном деле, фармацевтике.",
+      "formula": "1 унция = 28.3495 г",
+      "faq": [
+        {
+          "question": "Сколько граммов в унции?",
+          "answer": "1 унция (международная) = 28.3495 граммов."
+        },
+        {
+          "question": "В чём разница между унцией и тройской унцией?",
+          "answer": "Обычная (авоирдюпуа) унция = 28.3495 г. Тройская унция = 31.1035 г. Тройская используется для драгоценных металлов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Унция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Унция"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "grammy-v-uncii",
+    "id": "mass-g-oz",
+    "title": "Граммы в унции",
+    "description": "Конвертер массы: перевод граммов в унции",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "28.35",
+        "defaultValue": 28.35,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "oz",
+            "label": "унции"
+          }
+        ],
+        "defaultValue": "oz"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в граммах, результат в унциях появится автоматически.",
+      "about": "Перевод граммов в унции нужен при работе с американскими рецептами, спортивным питанием и инструкциями на английском языке.",
+      "formula": "1 г = 0.035274 унции",
+      "faq": [
+        {
+          "question": "Сколько унций в 100 г?",
+          "answer": "100 г ≈ 3.527 унций."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Унция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Унция"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "troyjskie-uncii-v-grammy",
+    "id": "mass-troyoz-g",
+    "title": "Тройские унции в граммы",
+    "description": "Конвертер массы: перевод тройских унций в граммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "troyoz",
+            "label": "тройские унции"
+          }
+        ],
+        "defaultValue": "troyoz"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в тройских унциях, результат в граммах появится автоматически.",
+      "about": "Тройская унция — единица массы для драгоценных металлов и камней. 1 тройская унция = 31.1035 г. Отличается от обычной (авоирдюпуа) унции (28.3495 г).",
+      "formula": "1 тройская унция = 31.1035 г",
+      "faq": [
+        {
+          "question": "Сколько граммов в тройской унции?",
+          "answer": "1 тройская унция = 31.1035 граммов."
+        },
+        {
+          "question": "Зачем нужна тройская унция?",
+          "answer": "Используется для взвешивания золота, серебра, платины и драгоценных камней. Курс золота традиционно указывается за тройскую унцию."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Тройская унция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Тройская_унция"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "grammy-v-troyjskie-uncii",
+    "id": "mass-g-troyoz",
+    "title": "Граммы в тройские унции",
+    "description": "Конвертер массы: перевод граммов в тройские унции",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "31.1035",
+        "defaultValue": 31.1035,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "troyoz",
+            "label": "тройские унции"
+          }
+        ],
+        "defaultValue": "troyoz"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в граммах, результат в тройских унциях появится автоматически.",
+      "about": "Перевод граммов в тройские унции важен для инвесторов в драгоценные металлы и ювелиров. Цена золота мировом рынке указывается за тройскую унцию.",
+      "formula": "1 г = 0.03215 тройской унции",
+      "faq": [
+        {
+          "question": "Сколько тройских унций в 100 г золота?",
+          "answer": "100 г ≈ 3.215 тройских унции."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Тройская унция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Тройская_унция"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "pudi-v-kilogrammy",
+    "id": "mass-pud-kg",
+    "title": "Пуды в килограммы",
+    "description": "Конвертер массы: перевод пудов в килограммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "pud",
+            "label": "пуды"
+          }
+        ],
+        "defaultValue": "pud"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в пудах, результат в килограммах появится автоматически.",
+      "about": "Пуд — русская единица массы, равная 40 фунтам ≈ 16.38 кг. Исторически использовалась в торговле, сельском хозяйстве, быту. Сейчас сохраняется в культурном контексте.",
+      "formula": "1 пуд = 16.3805 кг",
+      "faq": [
+        {
+          "question": "Сколько килограммов в пуде?",
+          "answer": "1 пуд = 16.3805 килограммов (40 фунтов)."
+        },
+        {
+          "question": "Что такое «пуд соли»?",
+          "answer": "«Съесть пуд соли вместе» — русская пословица о длительном совместном опыте. Пуд соли ≈ 16.38 кг."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пуд — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пуд"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilogrammy-v-pudi",
+    "id": "mass-kg-pud",
+    "title": "Килограммы в пуды",
+    "description": "Конвертер массы: перевод килограммов в пуды",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "16.38",
+        "defaultValue": 16.38,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "pud",
+            "label": "пуды"
+          }
+        ],
+        "defaultValue": "pud"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в килограммах, результат в пудах появится автоматически.",
+      "about": "Перевод килограммов в пуды интересен с исторической и культурной точки зрения — пуд был основной единицей массы в дореволюционной России.",
+      "formula": "1 пуд = 16.3805 кг",
+      "faq": [
+        {
+          "question": "Сколько пудов в 100 кг?",
+          "answer": "100 кг ≈ 6.105 пудов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пуд — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пуд"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "karati-v-grammy",
+    "id": "mass-ct-g",
+    "title": "Караты в граммы",
+    "description": "Конвертер массы: перевод каратов в граммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ct",
+            "label": "караты"
+          }
+        ],
+        "defaultValue": "ct"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в каратах, результат в граммах появится автоматически.",
+      "about": "Карат — единица массы для драгоценных камней и жемчуга. 1 карат = 0.2 грамма = 200 миллиграммов. Метрический карат стандартизирован в 1907 году.",
+      "formula": "1 карат = 0.2 г",
+      "faq": [
+        {
+          "question": "Сколько граммов в карате?",
+          "answer": "1 карат = 0.2 грамма (200 мг)."
+        },
+        {
+          "question": "Сколько каратов в 1 грамме?",
+          "answer": "1 грамм = 5 каратов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Карат (единица массы) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Карат_(единица_массы)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "grammy-v-karati",
+    "id": "mass-g-ct",
+    "title": "Граммы в караты",
+    "description": "Конвертер массы: перевод граммов в караты",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "g",
+            "label": "г"
+          }
+        ],
+        "defaultValue": "g"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ct",
+            "label": "караты"
+          }
+        ],
+        "defaultValue": "ct"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в граммах, результат в каратах появится автоматически.",
+      "about": "Перевод граммов в караты нужен ювелирам, геммологам и покупателям драгоценных камней. Масса бриллиантов и других камней всегда указывается в каратах.",
+      "formula": "1 г = 5 карат",
+      "faq": [
+        {
+          "question": "Сколько карат в 2 г бриллианта?",
+          "answer": "2 г = 10 карат."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Карат (единица массы) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Карат_(единица_массы)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "tsentneri-v-kilogrammy",
+    "id": "mass-q-kg",
+    "title": "Центнеры в килограммы",
+    "description": "Конвертер массы: перевод центнеров в килограммы",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "q",
+            "label": "центнеры"
+          }
+        ],
+        "defaultValue": "q"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в центнерах, результат в килограммах появится автоматически.",
+      "about": "Центнер — метрическая единица массы, равная 100 килограммам. Используется в сельском хозяйстве для измерения урожайности, веса скота и грузов.",
+      "formula": "1 центнер = 100 кг",
+      "faq": [
+        {
+          "question": "Сколько килограммов в центнере?",
+          "answer": "1 центнер = 100 килограммов."
+        },
+        {
+          "question": "Сколько центнеров в тонне?",
+          "answer": "1 тонна = 10 центнеров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Центнер — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Центнер"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kilogrammy-v-tsentneri",
+    "id": "mass-kg-q",
+    "title": "Килограммы в центнеры",
+    "description": "Конвертер массы: перевод килограммов в центнеры",
+    "subcategory": "conv-massa",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kg",
+            "label": "кг"
+          }
+        ],
+        "defaultValue": "kg"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "q",
+            "label": "центнеры"
+          }
+        ],
+        "defaultValue": "q"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите массу в килограммах, результат в центнерах появится автоматически.",
+      "about": "Перевод килограммов в центнеры используется в сельском хозяйстве для расчёта урожайности с гектара, веса животных и грузов.",
+      "formula": "1 центнер = 100 кг",
+      "faq": [
+        {
+          "question": "Сколько центнеров в 500 кг?",
+          "answer": "500 кг = 5 центнеров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Центнер — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Центнер"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  }
+]

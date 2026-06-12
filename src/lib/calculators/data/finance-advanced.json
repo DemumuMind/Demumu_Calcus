@@ -1,0 +1,240 @@
+[
+  {
+    "slug": "slozhnye-procenty",
+    "id": "compound-interest",
+    "title": "Калькулятор сложного процента",
+    "description": "Рассчитайте рост инвестиций с учетом сложного процента и капитализации.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "dohodnost-investicij",
+    "id": "investment-return",
+    "title": "Калькулятор доходности инвестиций (ROI)",
+    "description": "Рассчитайте общую доходность инвестиций за любой период.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "tochka-bezubytochnosti",
+    "id": "break-even",
+    "title": "Калькулятор точки безубыточности",
+    "description": "Определите объем продаж, при котором бизнес выйдет на нулевую прибыль.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "fixed",
+        "label": "Постоянные издержки (₽/мес)",
+        "type": "number",
+        "placeholder": "50000",
+        "defaultValue": 50000,
+        "min": 0
+      },
+      {
+        "name": "price",
+        "label": "Цена за единицу (₽)",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0
+      },
+      {
+        "name": "variable",
+        "label": "Переменные издержки на единицу (₽)",
+        "type": "number",
+        "placeholder": "600",
+        "defaultValue": 600,
+        "min": 0
+      },
+      {
+        "name": "target",
+        "label": "Целевая прибыль (₽/мес)",
+        "type": "number",
+        "placeholder": "20000",
+        "defaultValue": 20000,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "breakEven",
+        "label": "Точка безубыточности",
+        "type": "number",
+        "unit": "шт."
+      },
+      {
+        "name": "forTarget",
+        "label": "Для целевой прибыли",
+        "type": "number",
+        "unit": "шт."
+      },
+      {
+        "name": "revenue",
+        "label": "Выручка на точке безубыточности",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "margin",
+        "label": "Маржинальная прибыль на ед.",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите постоянные издержки, цену, переменные издержки и целевую прибыль. Калькулятор покажет точку безубыточности.",
+      "about": "Точка безубыточности — объём продаж, при котором выручка равна издержкам. Важнейший показатель для бизнеса.",
+      "usage": "Используется для планирования бизнеса, оценки рисков, установления цен, планирования производства.",
+      "formula": "Точка безубыточности = Постоянные издержки / (Цена − Переменные издержки)\nМаржинальная прибыль = Цена − Переменные издержки",
+      "faq": [
+        {
+          "question": "Что такое точка безубыточности?",
+          "answer": "Объём продаж, при котором доходы равны расходам. При меньшем объёме — убытки, при большем — прибыль."
+        },
+        {
+          "question": "Как снизить точку безубыточности?",
+          "answer": "1) Снизить постоянные издержки\n2) Снизить переменные издержки\n3) Увеличить цену\n4) Увеличить маржинальную прибыль"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Точка безубыточности — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Точка_безубыточности"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "ipotechnyj-kalkulyator",
+    "id": "mortgage",
+    "title": "Ипотечный калькулятор",
+    "description": "Рассчитайте платежи по ипотеке, график погашения и переплату.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "arenda-ili-pokupka",
+    "id": "rent-vs-buy",
+    "title": "Аренда или покупка",
+    "description": "Сравните финансовые выгоды аренды жилья и покупки собственного.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "inflyaciya",
+    "id": "inflation",
+    "title": "Калькулятор инфляции",
+    "description": "Узнайте, как инфляция влияет на покупательную способность денег со временем.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "amount",
+        "label": "Начальная сумма (₽)",
+        "type": "number",
+        "placeholder": "100000",
+        "defaultValue": 100000
+      },
+      {
+        "name": "inflation",
+        "label": "Уровень инфляции (% в год)",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8,
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "rate",
+        "label": "Ставка доходности (% в год)",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      },
+      {
+        "name": "years",
+        "label": "Срок (лет)",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5,
+        "min": 1,
+        "max": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "nominal",
+        "label": "Номинальная сумма",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "real",
+        "label": "Реальная покупательная способность",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "realRate",
+        "label": "Реальная доходность",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "loss",
+        "label": "Потеря от инфляции",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму, ожидаемую инфляцию, ставку доходности и срок. Калькулятор покажет реальную покупательную способность.",
+      "about": "Инфляция — обесценивание денег, рост цен. Реальная доходность = номинальная доходность − инфляция.",
+      "usage": "Используется для долгосрочного планирования, оценки инвестиций, расчёта реальной зарплаты, пенсионного планирования.",
+      "formula": "Реальная доходность ≈ Номинальная − Инфляция\nТочнее: (1 + r)/(1 + i) − 1\nгде r — ставка, i — инфляция",
+      "faq": [
+        {
+          "question": "Как инфляция влияет на сбережения?",
+          "answer": "Если ставка депозита ниже инфляции — реальная стоимость сбережений падает. Например, при инфляции 8% и ставке 5% теряете ~3% в год."
+        },
+        {
+          "question": "Что такое реальная доходность?",
+          "answer": "Доходность с учётом инфляции. Показывает, реально ли обогатились или только номинально. Формула Фишера: (1+r)/(1+i) − 1."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Инфляция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Инфляция"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-zarplaty",
+    "id": "salary-converter",
+    "title": "Конвертер заработной платы",
+    "description": "Переведите зарплату между разными периодами: час, день, неделя, месяц, год.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  },
+  {
+    "slug": "cel-nakopleniya",
+    "id": "savings-goal",
+    "title": "Калькулятор цели накопления",
+    "description": "Рассчитайте, сколько нужно откладывать для достижения финансовой цели.",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba"
+  }
+]

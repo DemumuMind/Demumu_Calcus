@@ -13,26 +13,22 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Percent, Copy, Check, Calculator } from 'lucide-react';
-import { 
-  percentageTypes, 
-  calculateByType,
-  type PercentageCalculation,
-} from '@/lib/percentages';
+import { percentageTypes, calculateByType } from "@/lib/percentages";
 
 interface PercentageCalculatorProps {
   initialType?: string;
-  initialValue1?: number;
-  initialValue2?: number;
+  initialFirstVal?: number;
+  initialSecondVal?: number;
 }
 
 export function PercentageCalculator({
   initialType = 'procentov-ot-chisla',
-  initialValue1 = 10,
-  initialValue2 = 100,
+  initialFirstVal = 10,
+  initialSecondVal = 100,
 }: PercentageCalculatorProps) {
   const [selectedType, setSelectedType] = useState<string>(initialType);
-  const [value1, setValue1] = useState<string>(initialValue1.toString());
-  const [value2, setValue2] = useState<string>(initialValue2.toString());
+  const [firstVal, setFirstVal] = useState<string>(initialFirstVal.toString());
+  const [secondVal, setSecondVal] = useState<string>(initialSecondVal.toString());
   const [result, setResult] = useState<{ result: number; explanation: string } | null>(null);
   const [copied, setCopied] = useState(false);
   
@@ -45,17 +41,17 @@ export function PercentageCalculator({
   
   // Вычисление результата
   const calculate = useCallback(() => {
-    const num1 = parseFloat(value1);
-    const num2 = parseFloat(value2);
+    const firstNumber = parseFloat(firstVal);
+    const secondNumber = parseFloat(secondVal);
     
-    if (isNaN(num1) || isNaN(num2)) {
+    if (isNaN(firstNumber) || isNaN(secondNumber)) {
       setResult(null);
       return;
     }
     
-    const calcResult = calculateByType(calcType.id, num1, num2);
+    const calcResult = calculateByType(calcType.id, firstNumber, secondNumber);
     setResult(calcResult);
-  }, [value1, value2, calcType.id]);
+  }, [firstVal, secondVal, calcType.id]);
   
   // Автоматический пересчёт
   useEffect(() => {
@@ -72,10 +68,10 @@ export function PercentageCalculator({
   };
   
   // Популярные значения
-  const popularValues1 = calcType.id === 'percent-of-number' 
+  const popularFirstVals = calcType.id === 'percent-of-number' 
     ? [1, 5, 10, 15, 20, 25, 50, 75, 100]
     : [10, 25, 50, 100, 200, 500];
-  const popularValues2 = [100, 200, 500, 1000];
+  const popularSecondVals = [100, 200, 500, 1000];
   
   // Форматирование числа
   const formatNumber = (num: number): string => {
@@ -89,24 +85,24 @@ export function PercentageCalculator({
   };
   
   // Получить подписи полей в зависимости от типа
-  const getFieldLabels = (typeId: string): { label1: string; label2: string; unit1: string; unit2: string } => {
+  const getFieldLabels = (typeId: string): { firstLabel: string; secondLabel: string; firstUnit: string; secondUnit: string } => {
     switch (typeId) {
       case 'percent-of-number':
-        return { label1: 'Процент', label2: 'Число', unit1: '%', unit2: '' };
+        return { firstLabel: 'Процент', secondLabel: 'Число', firstUnit: '%', secondUnit: '' };
       case 'number-is-percent-of':
-        return { label1: 'Число', label2: 'От общего', unit1: '', unit2: '' };
+        return { firstLabel: 'Число', secondLabel: 'От общего', firstUnit: '', secondUnit: '' };
       case 'percent-change':
-        return { label1: 'Старое значение', label2: 'Новое значение', unit1: '', unit2: '' };
+        return { firstLabel: 'Старое значение', secondLabel: 'Новое значение', firstUnit: '', secondUnit: '' };
       case 'percent-difference':
-        return { label1: 'Число 1', label2: 'Число 2', unit1: '', unit2: '' };
+        return { firstLabel: 'Число 1', secondLabel: 'Число 2', firstUnit: '', secondUnit: '' };
       case 'add-percent':
-        return { label1: 'Процент', label2: 'Число', unit1: '%', unit2: '' };
+        return { firstLabel: 'Процент', secondLabel: 'Число', firstUnit: '%', secondUnit: '' };
       case 'subtract-percent':
-        return { label1: 'Процент', label2: 'Число', unit1: '%', unit2: '' };
+        return { firstLabel: 'Процент', secondLabel: 'Число', firstUnit: '%', secondUnit: '' };
       case 'compound-percent':
-        return { label1: 'Процент', label2: 'Сумма', unit1: '%', unit2: '₽' };
+        return { firstLabel: 'Процент', secondLabel: 'Сумма', firstUnit: '%', secondUnit: '₽' };
       default:
-        return { label1: 'Значение 1', label2: 'Значение 2', unit1: '', unit2: '' };
+        return { firstLabel: 'Значение 1', secondLabel: 'Значение 2', firstUnit: '', secondUnit: '' };
     }
   };
   
@@ -145,34 +141,34 @@ export function PercentageCalculator({
           <div className="grid gap-4 sm:grid-cols-2">
             {/* Поле 1 */}
             <div className="space-y-2">
-              <Label htmlFor="value1">{labels.label1}</Label>
+              <Label htmlFor="firstVal">{labels.firstLabel}</Label>
               <div className="relative">
                 <Input
-                  id="value1"
+                  id="firstVal"
                   type="number"
-                  value={value1}
-                  onChange={(e) => setValue1(e.target.value)}
+                  value={firstVal}
+                  onChange={(e) => setFirstVal(e.target.value)}
                   className="text-lg pr-8"
                   placeholder="Введите число"
                 />
-                {labels.unit1 && (
+                {labels.firstUnit && (
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm">
-                    {labels.unit1}
+                    {labels.firstUnit}
                   </span>
                 )}
               </div>
               
               {/* Быстрые значения 1 */}
               <div className="flex gap-2 flex-wrap">
-                {popularValues1.slice(0, 5).map((val) => (
+                {popularFirstVals.slice(0, 5).map((val) => (
                   <Button
                     key={val}
                     variant="outline"
                     size="sm"
-                    onClick={() => setValue1(val.toString())}
+                    onClick={() => setFirstVal(val.toString())}
                     className="text-xs"
                   >
-                    {val}{labels.unit1}
+                    {val}{labels.firstUnit}
                   </Button>
                 ))}
               </div>
@@ -180,31 +176,31 @@ export function PercentageCalculator({
             
             {/* Поле 2 */}
             <div className="space-y-2">
-              <Label htmlFor="value2">{labels.label2}</Label>
+              <Label htmlFor="secondVal">{labels.secondLabel}</Label>
               <div className="relative">
                 <Input
-                  id="value2"
+                  id="secondVal"
                   type="number"
-                  value={value2}
-                  onChange={(e) => setValue2(e.target.value)}
+                  value={secondVal}
+                  onChange={(e) => setSecondVal(e.target.value)}
                   className="text-lg pr-8"
                   placeholder="Введите число"
                 />
-                {labels.unit2 && (
+                {labels.secondUnit && (
                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm">
-                    {labels.unit2}
+                    {labels.secondUnit}
                   </span>
                 )}
               </div>
               
               {/* Быстрые значения 2 */}
               <div className="flex gap-2 flex-wrap">
-                {popularValues2.map((val) => (
+                {popularSecondVals.map((val) => (
                   <Button
                     key={val}
                     variant="outline"
                     size="sm"
-                    onClick={() => setValue2(val.toString())}
+                    onClick={() => setSecondVal(val.toString())}
                     className="text-xs"
                   >
                     {val}
@@ -257,24 +253,24 @@ export function PercentageCalculator({
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b">
-                  <th className="text-left py-2">{labels.label1}</th>
-                  <th className="text-left py-2">{labels.label2}</th>
+                  <th className="text-left py-2">{labels.firstLabel}</th>
+                  <th className="text-left py-2">{labels.secondLabel}</th>
                   <th className="text-left py-2">Результат</th>
                 </tr>
               </thead>
               <tbody>
-                {popularValues1.slice(0, 5).map((v1) => {
-                  const popularResult = calculateByType(calcType.id, v1, 100);
+                {popularFirstVals.slice(0, 5).map((fv) => {
+                  const popularResult = calculateByType(calcType.id, fv, 100);
                   return (
                     <tr 
-                      key={v1} 
+                      key={fv} 
                       className="border-b last:border-0 hover:bg-muted/50 cursor-pointer"
                       onClick={() => {
-                        setValue1(v1.toString());
-                        setValue2('100');
+                        setFirstVal(fv.toString());
+                        setSecondVal('100');
                       }}
                     >
-                      <td className="py-2">{v1}{labels.unit1}</td>
+                      <td className="py-2">{fv}{labels.firstUnit}</td>
                       <td className="py-2">100</td>
                       <td className="py-2 font-medium text-primary">
                         {formatNumber(popularResult.result)}

@@ -1,7 +1,3 @@
-// ============================================
-// КУЛИНАРНЫЕ МЕРЫ
-// Для конвертации объёма в вес для разных продуктов
-// ============================================
 
 export interface CookingIngredient {
   id: string;
@@ -405,10 +401,6 @@ export const cookingIngredients: Record<string, CookingIngredient> = {
   },
 };
 
-// ============================================
-// УТИЛИТЫ ДЛЯ КУЛИНАРНЫХ КОНВЕРТЕРОВ
-// ============================================
-
 /**
  * Конвертирует меру в граммы для указанного продукта
  */
@@ -540,7 +532,6 @@ function _buildCookingSlugMap(): void {
   }
 }
 
-// Build once on module load
 _buildCookingSlugMap();
 
 /**
@@ -572,10 +563,6 @@ export function generateAllCookingConverters(): Array<{
 
   return converters;
 }
-
-// ============================================
-// ОБРАТНЫЕ КУЛИНАРНЫЕ КОНВЕРТЕРЫ (граммы → мера)
-// ============================================
 
 const GRAMM_VALUES = [50, 100, 150, 200, 250, 300, 500];
 
@@ -652,7 +639,6 @@ function _buildReverseCookingSlugMap(): void {
   }
 }
 
-// Build once on module load
 _buildReverseCookingSlugMap();
 
 /**

@@ -1,7 +1,3 @@
-// ============================================
-// БАЗА ДАННЫХ ЕДИНИЦ ИЗМЕРЕНИЯ
-// Универсальная система для всех конвертеров calcus.su
-// ============================================
 
 export interface UnitDefinition {
   id: string;           // Идентификатор (например, 'km', 'mile')
@@ -20,9 +16,6 @@ export interface UnitCategory {
   units: Record<string, UnitDefinition>;
 }
 
-// ============================================
-// 1. ДЛИНА
-// ============================================
 export const lengthCategory: UnitCategory = {
   id: 'length',
   slug: 'dlina',
@@ -59,9 +52,6 @@ export const lengthCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 2. МАССА / ВЕС
-// ============================================
 export const massCategory: UnitCategory = {
   id: 'mass',
   slug: 'massa',
@@ -93,9 +83,6 @@ export const massCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 3. ТЕМПЕРАТУРА
-// ============================================
 export const temperatureCategory: UnitCategory = {
   id: 'temperature',
   slug: 'temperatura',
@@ -110,9 +97,6 @@ export const temperatureCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 4. СКОРОСТЬ
-// ============================================
 export const speedCategory: UnitCategory = {
   id: 'speed',
   slug: 'skorost',
@@ -132,9 +116,6 @@ export const speedCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 5. ВРЕМЯ
-// ============================================
 export const timeCategory: UnitCategory = {
   id: 'time',
   slug: 'vremya',
@@ -157,9 +138,6 @@ export const timeCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 6. ОБЪЁМ
-// ============================================
 export const volumeCategory: UnitCategory = {
   id: 'volume',
   slug: 'obem',
@@ -190,9 +168,6 @@ export const volumeCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 7. ПЛОЩАДЬ
-// ============================================
 export const areaCategory: UnitCategory = {
   id: 'area',
   slug: 'ploshchad',
@@ -217,9 +192,6 @@ export const areaCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 8. ИНФОРМАЦИЯ / ДАННЫЕ
-// ============================================
 export const dataCategory: UnitCategory = {
   id: 'data',
   slug: 'informaciya',
@@ -243,9 +215,6 @@ export const dataCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 9. ЭНЕРГИЯ
-// ============================================
 export const energyCategory: UnitCategory = {
   id: 'energy',
   slug: 'energiya',
@@ -266,9 +235,6 @@ export const energyCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 10. МОЩНОСТЬ
-// ============================================
 export const powerCategory: UnitCategory = {
   id: 'power',
   slug: 'moshchnost',
@@ -287,9 +253,6 @@ export const powerCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 11. ДАВЛЕНИЕ
-// ============================================
 export const pressureCategory: UnitCategory = {
   id: 'pressure',
   slug: 'davlenie',
@@ -313,9 +276,6 @@ export const pressureCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 12. УГЛЫ
-// ============================================
 export const angleCategory: UnitCategory = {
   id: 'angle',
   slug: 'ugly',
@@ -331,9 +291,6 @@ export const angleCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 13. ЧАСТОТА
-// ============================================
 export const frequencyCategory: UnitCategory = {
   id: 'frequency',
   slug: 'chastota',
@@ -350,9 +307,6 @@ export const frequencyCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// 14. СИЛА
-// ============================================
 export const forceCategory: UnitCategory = {
   id: 'force',
   slug: 'sila',
@@ -372,9 +326,6 @@ export const forceCategory: UnitCategory = {
   }
 };
 
-// ============================================
-// ЭКСПОРТ ВСЕХ КАТЕГОРИЙ
-// ============================================
 export const allUnitCategories: Record<string, UnitCategory> = {
   length: lengthCategory,
   mass: massCategory,
@@ -391,10 +342,6 @@ export const allUnitCategories: Record<string, UnitCategory> = {
   frequency: frequencyCategory,
   force: forceCategory,
 };
-
-// ============================================
-// УТИЛИТЫ ДЛЯ КОНВЕРТАЦИЙ
-// ============================================
 
 /**
  * Конвертирует значение из одной единицы в другую

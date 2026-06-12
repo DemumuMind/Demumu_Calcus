@@ -59,7 +59,7 @@ export default async function SubcategoryPage({ params }: SubcategoryPageProps) 
 
   const calculators = getCalculatorsBySubcategory(subcategorySlug);
   const style = getCategoryStyle(categorySlug);
-  const CategoryIcon = style.icon;
+  const _CategoryIcon = style.icon;
   const SubIcon = getSubcategoryIcon(subcategorySlug);
 
   return (
@@ -161,7 +161,6 @@ export function generateStaticParams() {
     }
   }
   
-  console.log(`Generated ${params.length} subcategory pages`);
   return params;
 }
 

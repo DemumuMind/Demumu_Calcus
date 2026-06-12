@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "discount-calculator",
+    "id": "discount-shopping-calculator",
+    "title": "Калькулятор скидок",
+    "description": "Рассчитайте финальную цену с учётом всех скидок",
+    "subcategory": "deals",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "bulk-discount-calculator",
+    "id": "bulk-discount-calculator",
+    "title": "Калькулятор оптовой скидки",
+    "description": "Рассчитайте выгоду от покупки оптом или в большом количестве",
+    "subcategory": "deals",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "loyalty-cashback-calculator",
+    "id": "loyalty-cashback-calculator",
+    "title": "Калькулятор кешбэка и бонусов",
+    "description": "Рассчитайте выгоду от программ лояльности",
+    "subcategory": "deals",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "compare-price-calculator",
+    "id": "compare-price-calculator",
+    "title": "Калькулятор сравнения цен",
+    "description": "Сравните цены в разных магазинах с учётом доставки",
+    "subcategory": "deals",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "unit-price-calculator",
+    "id": "unit-price-calculator",
+    "title": "Калькулятор цены за единицу",
+    "description": "Сравните, где выгоднее: большая упаковка или маленькая",
+    "subcategory": "deals",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "installment-calculator",
+    "id": "installment-calculator",
+    "title": "Калькулятор рассрочки",
+    "description": "Рассчитайте переплату и ежемесячный платёж при покупке в рассрочку",
+    "subcategory": "deals",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "shopping-budget-calculator",
+    "id": "shopping-budget-calculator",
+    "title": "Калькулятор бюджета покупок",
+    "description": "Распределите бюджет между категориями одежды",
+    "subcategory": "budget",
+    "type": "arithmetic",
+    "category": "shopping"
+  },
+  {
+    "slug": "wishlist-priority-calculator",
+    "id": "wishlist-priority-calculator",
+    "title": "Калькулятор приоритетов wishlist",
+    "description": "Расставьте приоритеты покупкам по полезности и цене",
+    "subcategory": "planning",
+    "type": "formula",
+    "category": "shopping"
+  },
+  {
+    "slug": "sales-calendar",
+    "id": "sales-calendar",
+    "title": "Календарь распродаж",
+    "description": "Узнайте когда лучше всего покупать разные категории товаров",
+    "subcategory": "planning",
+    "type": "arithmetic",
+    "category": "shopping"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "konverter-skorosti-peredachi",
+    "id": "data-speed-converter",
+    "title": "Скорость передачи данных",
+    "description": "Конвертер bps, Kbps, Mbps, Gbps, Tbps",
+    "subcategory": "conv-informaciya",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "bps",
+            "label": "bps — бит/сек"
+          },
+          {
+            "value": "kbps",
+            "label": "Kbps — килобит/сек"
+          },
+          {
+            "value": "mbps",
+            "label": "Mbps — мегабит/сек"
+          },
+          {
+            "value": "gbps",
+            "label": "Gbps — гигабит/сек"
+          },
+          {
+            "value": "tbps",
+            "label": "Tbps — терабит/сек"
+          }
+        ],
+        "defaultValue": "mbps"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "bps",
+            "label": "bps — бит/сек"
+          },
+          {
+            "value": "kbps",
+            "label": "Kbps — килобит/сек"
+          },
+          {
+            "value": "mbps",
+            "label": "Mbps — мегабит/сек"
+          },
+          {
+            "value": "gbps",
+            "label": "Gbps — гигабит/сек"
+          },
+          {
+            "value": "tbps",
+            "label": "Tbps — терабит/сек"
+          },
+          {
+            "value": "mb_s",
+            "label": "MB/s — мегабайт/сек"
+          },
+          {
+            "value": "gb_s",
+            "label": "GB/s — гигабайт/сек"
+          }
+        ],
+        "defaultValue": "mb_s"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость, выберите единицы \"из\" и \"в\". Можно переводить между битами и байтами.",
+      "about": "Конвертер скорости передачи данных переводит между бит/сек и байт/сек. 1 байт = 8 бит.",
+      "usage": "Используется для сравнения скоростей интернета, оценки времени загрузки файлов.",
+      "formula": "1 Mbps = 1000 Kbps = 1 000 000 bps\n1 MB/s = 8 Mbps = 8 000 000 bps",
+      "faq": [
+        {
+          "question": "Сколько мегабит в мегабайте?",
+          "answer": "1 мегабайт (MB) = 8 мегабит (Mb). Провайдеры обычно указывают скорость в мегабитах."
+        },
+        {
+          "question": "Как рассчитать время загрузки файла?",
+          "answer": "Время (сек) = размер файла (биты) / скорость (бит/сек). Например, 100 MB на 100 Mbps = 100×8/100 = 8 секунд."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Бит в секунду — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Бит_в_секунду"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-dpi",
+    "id": "dpi-calculator",
+    "title": "Калькулятор DPI",
+    "description": "Расчёт плотности пикселей экрана или изображения",
+    "subcategory": "tekhnologii-raznoe",
+    "type": "formula",
+    "category": "tekhnologii"
+  },
+  {
+    "slug": "sootnoshenie-storon",
+    "id": "aspect-ratio-calculator",
+    "title": "Соотношение сторон",
+    "description": "Расчёт пропорций изображения, видео, экрана",
+    "subcategory": "tekhnologii-raznoe",
+    "type": "formula",
+    "category": "tekhnologii",
+    "inputs": [
+      {
+        "name": "width",
+        "label": "Ширина (пикселей)",
+        "type": "number",
+        "placeholder": "1920",
+        "defaultValue": 1920,
+        "min": 1
+      },
+      {
+        "name": "height",
+        "label": "Высота (пикселей)",
+        "type": "number",
+        "placeholder": "1080",
+        "defaultValue": 1080,
+        "min": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "ratio",
+        "label": "Соотношение сторон",
+        "type": "text"
+      },
+      {
+        "name": "ratioValue",
+        "label": "Десятичное значение",
+        "type": "number"
+      },
+      {
+        "name": "orientation",
+        "label": "Ориентация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ширину и высоту изображения или экрана. Калькулятор определит соотношение сторон.",
+      "about": "Соотношение сторон (aspect ratio) — отношение ширины к высоте прямоугольника. Стандартные: 16:9, 4:3, 21:9.",
+      "usage": "Используется для определения пропорций видео, выбора монитора, масштабирования изображений.",
+      "formula": "Соотношение = ширина : высота (после сокращения на НОД)",
+      "faq": [
+        {
+          "question": "Какое соотношение сторон выбрать?",
+          "answer": "Для фильмов — 21:9, для работы и игр — 16:9 или 16:10, для мобильных — 9:19.5 или подобные."
+        },
+        {
+          "question": "Что делать если видео не подходит под экран?",
+          "answer": "Используйте letterbox (чёрные полосы сверху/снизу) или растягивание с сохранением пропорций."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Соотношение сторон — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Соотношение_сторон"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

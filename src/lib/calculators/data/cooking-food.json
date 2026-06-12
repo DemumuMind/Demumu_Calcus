@@ -1,0 +1,1010 @@
+[
+  {
+    "slug": "mashtabirovanie-recepta",
+    "id": "recipe-scaler",
+    "title": "Масштабирование рецепта",
+    "description": "Пересчёт ингредиентов при изменении количества порций или формы для выпечки",
+    "subcategory": "cooking",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "originalServings",
+        "label": "Порций в оригинальном рецепте",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4,
+        "min": 1,
+        "max": 50
+      },
+      {
+        "name": "targetServings",
+        "label": "Нужно порций",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "ingredients",
+        "label": "Ингредиенты (JSON формат)",
+        "type": "text",
+        "placeholder": "Пример: [{\"name\":\"Мука\",\"amount\":200,\"unit\":\"г\"},{\"name\":\"Молоко\",\"amount\":500,\"unit\":\"мл\"},{\"name\":\"Яйца\",\"amount\":2,\"unit\":\"шт\"}]",
+        "defaultValue": "[{\"name\":\"Мука\",\"amount\":200,\"unit\":\"г\"},{\"name\":\"Молоко\",\"amount\":500,\"unit\":\"мл\"},{\"name\":\"Яйца\",\"amount\":2,\"unit\":\"шт\"}]"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "scaleFactor",
+        "label": "Коэффициент масштабирования",
+        "type": "number",
+        "unit": "×"
+      },
+      {
+        "name": "scaledIngredients",
+        "label": "Новые количества",
+        "type": "text"
+      },
+      {
+        "name": "notes",
+        "label": "Примечания",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Укажите порций в оригинальном рецепте, нужное количество порций и список ингредиентов с количествами. Калькулятор пересчитает пропорции.",
+      "about": "При масштабировании рецептов важно сохранять пропорции, но также учитывать особенности: яйца округлять, время готовки может меняться при больших изменениях.",
+      "formula": "Новое количество = Оригинал × (Нужно порций / Было порций)",
+      "faq": [
+        {
+          "question": "Как масштабировать время выпечки?",
+          "answer": "Маленькие изменения (×1.5): время то же. Большие (×2+): увеличьте время на 10-20% или используйте несколько форм. Для пирогов проверяйте готовность зубочисткой."
+        },
+        {
+          "question": "Что если ингредиент не делится?",
+          "answer": "Яйца, луковицы, зубчики чеснока округляйте до целых чисел. Для дрожжевого теста используйте вес — можно добавить половинку яйца (взбить и отмерить половину)."
+        },
+        {
+          "question": "Как масштабировать специи?",
+          "answer": "Специи масштабируйте осторожно — не всегда линейно. Для больших объёмов добавляйте специи постепенно и пробуйте. Соль и перец — с осторожностью, лучше недосолить и досолить."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Recipe scaling guide — King Arthur Baking",
+          "url": "https://www.kingarthurbaking.com/pro/recipe-scaling"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "zamena-ingredientov",
+    "id": "ingredient-substitution",
+    "title": "Калькулятор замены ингредиентов",
+    "description": "Расчёт количества альтернативных ингредиентов при замене в рецептах",
+    "subcategory": "cooking",
+    "type": "converter",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "originalIngredient",
+        "label": "Исходный ингредиент",
+        "type": "select",
+        "options": [
+          {
+            "value": "butter",
+            "label": "Сливочное масло"
+          },
+          {
+            "value": "sugar",
+            "label": "Сахар белый"
+          },
+          {
+            "value": "flour",
+            "label": "Пшеничная мука"
+          },
+          {
+            "value": "milk",
+            "label": "Молоко"
+          },
+          {
+            "value": "egg",
+            "label": "Яйцо"
+          },
+          {
+            "value": "honey",
+            "label": "Мёд"
+          }
+        ],
+        "defaultValue": "butter"
+      },
+      {
+        "name": "originalAmount",
+        "label": "Исходное количество",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "substituteIngredient",
+        "label": "Заменитель",
+        "type": "select",
+        "options": [
+          {
+            "value": "oil",
+            "label": "Растительное масло"
+          },
+          {
+            "value": "applesauce",
+            "label": "Яблочное пюре"
+          },
+          {
+            "value": "banana",
+            "label": "Банан"
+          },
+          {
+            "value": "coconut_oil",
+            "label": "Кокосовое масло"
+          },
+          {
+            "value": "syrup",
+            "label": "Сироп"
+          }
+        ],
+        "defaultValue": "oil"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "substituteAmount",
+        "label": "Количество заменителя",
+        "type": "number",
+        "unit": "г/мл"
+      },
+      {
+        "name": "adjustments",
+        "label": "Необходимые корректировки",
+        "type": "text"
+      },
+      {
+        "name": "notes",
+        "label": "Важные замечания",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите ингредиент, который нужно заменить, его количество и желаемый заменитель. Калькулятор подскажет пропорции и необходимые корректировки рецепта.",
+      "about": "Замена ингредиентов полезна при аллергиях, веганстве или отсутствии продуктов. Не все замены идеальны — некоторые меняют текстуру и вкус блюда.",
+      "faq": [
+        {
+          "question": "Можно ли заменить яйца в безе?",
+          "answer": "Нет, безе без яиц невозможен. Аквафаба (жидкость из нута) работает для меренги."
+        },
+        {
+          "question": "Какую муку использовать для безглютеновой выпечки?",
+          "answer": "Смесь рисовой, миндальной и кукурузной муки (1:1:1) + загуститель (ксантановая камедь)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "The Spruce Eats - Ingredient Substitutions",
+          "url": "https://www.thespruceeats.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "kaloriynost-recepta",
+    "id": "recipe-calorie",
+    "title": "Калькулятор калорийности блюда",
+    "description": "Расчёт калорий, белков, жиров и углеводов готового блюда на 100 г и на порцию",
+    "subcategory": "nutrition",
+    "type": "formula",
+    "category": "zdorove",
+    "inputs": [
+      {
+        "name": "totalWeight",
+        "label": "Общий вес готового блюда (г)",
+        "type": "number",
+        "placeholder": "800",
+        "defaultValue": 800
+      },
+      {
+        "name": "servings",
+        "label": "Количество порций",
+        "type": "number",
+        "placeholder": "4",
+        "defaultValue": 4
+      },
+      {
+        "name": "calories",
+        "label": "Общая калорийность ингредиентов (ккал)",
+        "type": "number",
+        "placeholder": "1200",
+        "defaultValue": 1200
+      },
+      {
+        "name": "protein",
+        "label": "Общие белки (г)",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60
+      },
+      {
+        "name": "fat",
+        "label": "Общие жиры (г)",
+        "type": "number",
+        "placeholder": "45",
+        "defaultValue": 45
+      },
+      {
+        "name": "carbs",
+        "label": "Общие углеводы (г)",
+        "type": "number",
+        "placeholder": "120",
+        "defaultValue": 120
+      }
+    ],
+    "outputs": [
+      {
+        "name": "caloriesPer100g",
+        "label": "Калории на 100 г",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "caloriesPerServing",
+        "label": "Калории на порцию",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "pfcPer100g",
+        "label": "Б/Ж/У на 100 г",
+        "type": "text"
+      },
+      {
+        "name": "pfcPerServing",
+        "label": "Б/Ж/У на порцию",
+        "type": "text"
+      },
+      {
+        "name": "servingWeight",
+        "label": "Вес порции",
+        "type": "number",
+        "unit": "г"
+      }
+    ],
+    "content": {
+      "howTo": "Введите общий вес готового блюда, количество порций и суммарную калорийность всех ингредиентов (можно взять из приложений типа FatSecret). Калькулятор разобьёт на порции.",
+      "about": "Расчёт КБЖУ помогает контролировать питание, следить за диетой и составлять сбалансированное меню. Вес готового блюда обычно меньше сырого из-за потери влаги при готовке.",
+      "formula": "Калории на 100 г = Общие калории / Общий вес × 100\nКалории на порцию = Калории на 100 г × Вес порции / 100",
+      "faq": [
+        {
+          "question": "Учитывать ли вес жидкости в супе?",
+          "answer": "Да, если это часть блюда. Но чистая вода без калорий не влияет на КБЖУ (кроме веса порции)."
+        },
+        {
+          "question": "Как посчитать калории сложного блюда?",
+          "answer": "Сложите калорийность всех ингредиентов (по сырому весу), разделите на количество порций."
+        }
+      ],
+      "sources": [
+        {
+          "title": "FatSecret - Calorie Calculator",
+          "url": "https://www.fatsecret.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "temperatura-duhovki",
+    "id": "oven-temperature",
+    "title": "Конвертер температуры духовки",
+    "description": "Перевод между градусами Цельсия, Фаренгейта, Газовой шкалой и уровнями мощности",
+    "subcategory": "cooking",
+    "type": "converter",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "celsius",
+        "label": "Температура (°C)",
+        "type": "number",
+        "placeholder": "180",
+        "min": 50,
+        "max": 300,
+        "defaultValue": 180
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fahrenheit",
+        "label": "Фаренгейт",
+        "type": "number",
+        "unit": "°F"
+      },
+      {
+        "name": "gasMark",
+        "label": "Газовая шкала",
+        "type": "text"
+      },
+      {
+        "name": "description",
+        "label": "Описание режима",
+        "type": "text"
+      },
+      {
+        "name": "suitableFor",
+        "label": "Подходит для",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Цельсия. Калькулятор переведёт в другие системы и подскажет, для какой выпечки подходит данная температура.",
+      "about": "Разные страны используют разные системы: Европа — Цельсий (°C), США — Фаренгейт (°F), Великобритания — Газовая шкала. Важно знать эквиваленты для точной выпечки.",
+      "formula": "°F = °C × 9/5 + 32",
+      "faq": [
+        {
+          "question": "Что такое газовая шкала?",
+          "answer": "Традиционная британская система для газовых духовок. Mark 4 ≈ 180°C (средняя температура)."
+        },
+        {
+          "question": "Можно ли выпекать при другой температуре?",
+          "answer": "Да, с корректировкой времени. На каждые ±10°C меняйте время на ~10% (выше темп = меньше времени)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BBC Good Food - Oven Temperature Guide",
+          "url": "https://www.bbcgoodfood.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "mernye-vesy-kuhnya",
+    "id": "kitchen-measurements",
+    "title": "Калькулятор мер и весов",
+    "description": "Перевод между кухонными мерами: стаканы, ложки, граммы, миллилитры для разных продуктов",
+    "subcategory": "cooking-units",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "product",
+        "label": "Продукт",
+        "type": "select",
+        "options": [
+          {
+            "value": "water",
+            "label": "Вода"
+          },
+          {
+            "value": "flour",
+            "label": "Пшеничная мука"
+          },
+          {
+            "value": "sugar",
+            "label": "Сахар"
+          },
+          {
+            "value": "salt",
+            "label": "Соль"
+          },
+          {
+            "value": "butter",
+            "label": "Сливочное масло"
+          },
+          {
+            "value": "milk",
+            "label": "Молоко"
+          },
+          {
+            "value": "honey",
+            "label": "Мёд"
+          },
+          {
+            "value": "rice",
+            "label": "Рис"
+          },
+          {
+            "value": "oats",
+            "label": "Овсянка"
+          },
+          {
+            "value": "oil",
+            "label": "Растительное масло"
+          }
+        ],
+        "defaultValue": "flour"
+      },
+      {
+        "name": "amount",
+        "label": "Количество",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "unit",
+        "label": "Мера",
+        "type": "select",
+        "options": [
+          {
+            "value": "cup",
+            "label": "Стакан (250 мл)"
+          },
+          {
+            "value": "tbsp",
+            "label": "Столовая ложка (15 мл)"
+          },
+          {
+            "value": "tsp",
+            "label": "Чайная ложка (5 мл)"
+          },
+          {
+            "value": "g",
+            "label": "Грамм"
+          },
+          {
+            "value": "ml",
+            "label": "Миллилитр"
+          }
+        ],
+        "defaultValue": "cup"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "grams",
+        "label": "Граммы",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "milliliters",
+        "label": "Миллилитры",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "cups",
+        "label": "Стаканы",
+        "type": "number",
+        "unit": "стак."
+      },
+      {
+        "name": "tablespoons",
+        "label": "Столовые ложки",
+        "type": "number",
+        "unit": "ст.л."
+      },
+      {
+        "name": "teaspoons",
+        "label": "Чайные ложки",
+        "type": "number",
+        "unit": "ч.л."
+      }
+    ],
+    "content": {
+      "howTo": "Выберите продукт, введите количество и выберите меру. Калькулятор переведёт в граммы, миллилитры и другие кухонные меры с учётом плотности продукта.",
+      "about": "Разные продукты имеют разную плотность: мука плотнее воздуха, масло плотнее воды. Поэтому 1 стакан муки ≠ 1 стакану воды по весу. Калькулятор учитывает плотность продуктов.",
+      "formula": "Граммы = Миллилитры × Плотность\nСтакан = 250 мл = 16 ст.л. = 48 ч.л.",
+      "faq": [
+        {
+          "question": "Сколько граммов муки в стакане?",
+          "answer": "Примерно 150 г (мука плотностью ~0.6 г/мл). Но зависит от сорта и уплотнения."
+        },
+        {
+          "question": "Почему вес и объём различаются?",
+          "answer": "Плотность продуктов разная. Мёд в 1.4 раза плотнее воды, мука на 40% легче воды того же объёма."
+        }
+      ],
+      "sources": [
+        {
+          "title": "King Arthur Baking - Measuring",
+          "url": "https://www.kingarthurbaking.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "vremya-gotovki",
+    "id": "cooking-time",
+    "title": "Калькулятор времени готовки",
+    "description": "Расчёт времени приготовления мяса, овощей, выпечки в зависимости от веса и температуры",
+    "subcategory": "cooking",
+    "type": "formula",
+    "category": "povsednevnoe"
+  },
+  {
+    "slug": "brozhenie-testa",
+    "id": "dough-fermentation",
+    "title": "Калькулятор брожения теста",
+    "description": "Расчёт времени брожения дрожжевого теста в зависимости от температуры и количества дрожжей",
+    "subcategory": "cooking",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "yeastType",
+        "label": "Тип дрожжей",
+        "type": "select",
+        "options": [
+          {
+            "value": "fresh",
+            "label": "Свежие (живые)"
+          },
+          {
+            "value": "dry",
+            "label": "Сухие активные"
+          },
+          {
+            "value": "instant",
+            "label": "Сухие мгновенные"
+          }
+        ],
+        "defaultValue": "dry"
+      },
+      {
+        "name": "yeastAmount",
+        "label": "Количество дрожжей (г на 500 г муки)",
+        "type": "number",
+        "placeholder": "7",
+        "min": 1,
+        "max": 50,
+        "defaultValue": 7
+      },
+      {
+        "name": "temperature",
+        "label": "Температура брожения (°C)",
+        "type": "number",
+        "placeholder": "25",
+        "min": 5,
+        "max": 40,
+        "defaultValue": 25
+      },
+      {
+        "name": "doughType",
+        "label": "Тип теста",
+        "type": "select",
+        "options": [
+          {
+            "value": "bread",
+            "label": "Хлеб"
+          },
+          {
+            "value": "pizza",
+            "label": "Пицца (тонкая)"
+          },
+          {
+            "value": "rich",
+            "label": "Сдобное (с маслом/яйцами)"
+          }
+        ],
+        "defaultValue": "bread"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "firstRise",
+        "label": "Первая расстойка",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "secondRise",
+        "label": "Вторая расстойка",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "totalTime",
+        "label": "Общее время",
+        "type": "text"
+      },
+      {
+        "name": "doublingTime",
+        "label": "Время удвоения",
+        "type": "number",
+        "unit": "мин"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип дрожжей, их количество (в пересчёте на 500 г муки), температуру брожения и тип теста. Калькулятор рассчитает время расстойки.",
+      "about": "Скорость брожения зависит от активности дрожжей (свежие требуют в 2 раза больше), их количества (больше дрожжей = быстрее) и температуры (выше = быстрее, но есть предел).",
+      "formula": "Время удвоения ∝ 1 / (Количество дрожжей × Активность × Коэффициент температуры)",
+      "faq": [
+        {
+          "question": "Почему тесто не поднимается?",
+          "answer": "Проверьте срок годности дрожжей, температуру жидкости (не горячая!), наличие сахара как пищи."
+        },
+        {
+          "question": "Что такое холодное брожение?",
+          "answer": "Брожение при 4-12°C в течение 8-24 часов. Даёт лучший вкус, структуру и хранение."
+        }
+      ],
+      "sources": [
+        {
+          "title": "King Arthur Baking - Yeast Guide",
+          "url": "https://www.kingarthurbaking.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "sootnoshenie-ingredientov",
+    "id": "baking-ratio",
+    "title": "Калькулятор соотношений выпечки",
+    "description": "Расчёт классических соотношений (рецептуры) для хлеба, пирогов, бисквитов и соусов",
+    "subcategory": "cooking",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "ratioType",
+        "label": "Тип соотношения",
+        "type": "select",
+        "options": [
+          {
+            "value": "pate_brisee",
+            "label": "Песочное тесто (3:2:1)"
+          },
+          {
+            "value": "pate_a_choux",
+            "label": "Заварное тесто (1:1:1:2)"
+          },
+          {
+            "value": "genoise",
+            "label": "Бисквит (1:1:1:1)"
+          },
+          {
+            "value": "creme_patissiere",
+            "label": "Заварной крем (10:10:2:1)"
+          },
+          {
+            "value": "savory_tart",
+            "label": "Солёный тарт (3:1:1)"
+          },
+          {
+            "value": "shortbread",
+            "label": "Печенье шортбред (3:2:1)"
+          },
+          {
+            "value": "pancake",
+            "label": "Блины (2:2:1:0.5)"
+          },
+          {
+            "value": "pasta",
+            "label": "Паста (3:2)"
+          },
+          {
+            "value": "pie_crust",
+            "label": "Пироговое тесто (3:1:1)"
+          }
+        ],
+        "defaultValue": "pate_brisee"
+      },
+      {
+        "name": "baseAmount",
+        "label": "Базовое количество (основной ингредиент)",
+        "type": "number",
+        "placeholder": "300",
+        "min": 50,
+        "defaultValue": 300
+      }
+    ],
+    "outputs": [
+      {
+        "name": "ingredients",
+        "label": "Состав",
+        "type": "text"
+      },
+      {
+        "name": "recipe",
+        "label": "Рецептура",
+        "type": "text"
+      },
+      {
+        "name": "yield",
+        "label": "Выход",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы по приготовлению",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите тип классического соотношения (рецептуры) и введите количество основного ингредиента. Калькулятор пересчитает все компоненты.",
+      "about": "Профессиональные кондитеры часто работают по соотношениям (бакинг-рейшо), а не по фиксированным рецептам. Например, песочное тесто — классика 3:2:1 (мука:масло:вода).",
+      "faq": [
+        {
+          "question": "Что означает соотношение 3:2:1?",
+          "answer": "На 3 части муки берётся 2 части масла и 1 часть жидкости. Части могут быть любыми единицами (граммы, стаканы)."
+        },
+        {
+          "question": "Можно ли изменять соотношения?",
+          "answer": "Можно в небольших пределах. Больше масла = рассыпчатее, больше жидкости = эластичнее."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ratio by Michael Ruhlman",
+          "url": "https://www.michaelruhlman.com/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  },
+  {
+    "slug": "varka-yaic",
+    "id": "egg-cooking",
+    "title": "Калькулятор варки яиц",
+    "description": "Расчёт времени варки яиц для разной степени готовности желтка и белка",
+    "subcategory": "cooking",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "size",
+        "label": "Размер яйца",
+        "type": "select",
+        "options": [
+          {
+            "value": "S",
+            "label": "S — маленькое (45-53 г)"
+          },
+          {
+            "value": "M",
+            "label": "M — среднее (53-63 г)"
+          },
+          {
+            "value": "L",
+            "label": "L — крупное (63-73 г)"
+          },
+          {
+            "value": "XL",
+            "label": "XL — очень крупное (73+ г)"
+          }
+        ],
+        "defaultValue": "M"
+      },
+      {
+        "name": "temp",
+        "label": "Начальная температура",
+        "type": "select",
+        "options": [
+          {
+            "value": "fridge",
+            "label": "Из холодильника (4°C)"
+          },
+          {
+            "value": "room",
+            "label": "Комнатная (20°C)"
+          }
+        ],
+        "defaultValue": "fridge"
+      },
+      {
+        "name": "doneness",
+        "label": "Степень готовности",
+        "type": "select",
+        "options": [
+          {
+            "value": "3",
+            "label": "Всмятку (жидкий желток)"
+          },
+          {
+            "value": "4.5",
+            "label": "В мешочек (полужидкий желток)"
+          },
+          {
+            "value": "6",
+            "label": "Вкрутую (твёрдый желток)"
+          }
+        ],
+        "defaultValue": "4.5"
+      },
+      {
+        "name": "altitude",
+        "label": "Высота над уровнем моря",
+        "type": "select",
+        "options": [
+          {
+            "value": "0",
+            "label": "0-500 м"
+          },
+          {
+            "value": "1000",
+            "label": "1000 м"
+          },
+          {
+            "value": "2000",
+            "label": "2000 м"
+          },
+          {
+            "value": "3000",
+            "label": "3000 м"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "time",
+        "label": "Время варки",
+        "type": "text"
+      },
+      {
+        "name": "tips",
+        "label": "Советы",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите размер яйца, начальную температуру и желаемую степень готовности. Калькулятор даст точное время варки.",
+      "about": "Время варки яиц зависит от размера, начальной температуры и высоты над уровнем моря (температуры кипения воды).",
+      "usage": "Используется для приготовления яиц точно по вашему вкусу: всмятку, в мешочек или вкрутую.",
+      "formula": "S (45г): -20% времени\nM (58г): базовое время\nL (68г): +20% времени\nXL (73г+): +40% времени",
+      "faq": [
+        {
+          "question": "Как варить яйца всмятку?",
+          "answer": "Маленькие: 3 мин, Средние: 4 мин, Крупные: 5 мин после закипания воды. Охладите в ледяной воде."
+        },
+        {
+          "question": "Почему желток становится серым?",
+          "answer": "Это происходит при перепекании. Желток начинает темнеть при температуре выше 70°C и длительном нагревании."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Яйцо (пищевой продукт) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Яйцо_(пищевой_продукт)"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kofeynoe-sootnoshenie",
+    "id": "coffee-ratio",
+    "title": "Калькулятор кофейного соотношения",
+    "description": "Расчёт пропорций кофе и воды для разных методов заваривания: эспрессо, пуровер, френч-пресс",
+    "subcategory": "cooking",
+    "type": "formula",
+    "category": "dlya-doma",
+    "inputs": [
+      {
+        "name": "method",
+        "label": "Метод заваривания",
+        "type": "select",
+        "options": [
+          {
+            "value": "espresso",
+            "label": "Эспрессо"
+          },
+          {
+            "value": "pourover",
+            "label": "Пуровер (V60/Chemex)"
+          },
+          {
+            "value": "french",
+            "label": "Френч-пресс"
+          },
+          {
+            "value": "aeropress",
+            "label": "Аэропресс"
+          },
+          {
+            "value": "moka",
+            "label": "Гейзерная кофеварка (Мока)"
+          },
+          {
+            "value": "cold_brew",
+            "label": "Холодный завар"
+          },
+          {
+            "value": "turkish",
+            "label": "Турецкий кофе"
+          }
+        ],
+        "defaultValue": "pourover"
+      },
+      {
+        "name": "coffeeAmount",
+        "label": "Количество кофе (г)",
+        "type": "number",
+        "placeholder": "15",
+        "min": 5,
+        "max": 100,
+        "defaultValue": 15
+      },
+      {
+        "name": "strength",
+        "label": "Крепость",
+        "type": "select",
+        "options": [
+          {
+            "value": "light",
+            "label": "Лёгкая"
+          },
+          {
+            "value": "medium",
+            "label": "Средняя"
+          },
+          {
+            "value": "strong",
+            "label": "Крепкая"
+          }
+        ],
+        "defaultValue": "medium"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "waterAmount",
+        "label": "Количество воды",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "ratio",
+        "label": "Соотношение",
+        "type": "text"
+      },
+      {
+        "name": "grindSize",
+        "label": "Помол",
+        "type": "text"
+      },
+      {
+        "name": "brewTime",
+        "label": "Время заваривания",
+        "type": "text"
+      },
+      {
+        "name": "temperature",
+        "label": "Температура воды",
+        "type": "number",
+        "unit": "°C"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите метод заваривания, введите количество кофе в граммах и желаемую крепость. Калькулятор рассчитает количество воды и подскажет параметры заваривания.",
+      "about": "Соотношение кофе и воды (brew ratio) — ключевой параметр вкуса. Классика: 1:15 для френч-пресса, 1:2 для эспрессо, 1:16 для пуровера. Помол и температура также критичны.",
+      "formula": "Вода (мл) = Кофе (г) × Соотношение\nЭспрессо: 1:2, Пуровер: 1:16, Френч-пресс: 1:15",
+      "faq": [
+        {
+          "question": "Почему эспрессо 1:2, а не 1:16?",
+          "answer": "Эспрессо — концентрированный метод с давлением. 1:2 даёт 60-65% экстракции за 30 секунд."
+        },
+        {
+          "question": "Что важнее — точный вес или соотношение?",
+          "answer": "Соотношение важнее для воспроизводимости. Весите кофе и воду для консистентности."
+        }
+      ],
+      "sources": [
+        {
+          "title": "SCA - Coffee Brewing Handbook",
+          "url": "https://sca.coffee/"
+        }
+      ],
+      "updatedAt": "2026-04-08"
+    }
+  }
+]

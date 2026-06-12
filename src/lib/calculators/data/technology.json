@@ -1,0 +1,497 @@
+[
+  {
+    "slug": "ip-kalkulyator",
+    "id": "ip-calculator",
+    "title": "Калькулятор IP-адреса и подсети",
+    "description": "Расчёт сетевых параметров: маска, широковещательный адрес, количество хостов",
+    "subcategory": "tech-set",
+    "type": "formula",
+    "category": "tehnologii",
+    "inputs": [
+      {
+        "name": "ip",
+        "label": "IP-адрес",
+        "type": "text",
+        "placeholder": "192.168.1.0",
+        "defaultValue": "192.168.1.0"
+      },
+      {
+        "name": "prefix",
+        "label": "Префикс (CIDR)",
+        "type": "select",
+        "options": [
+          {
+            "value": "24",
+            "label": "/24 (255.255.255.0) — 254 хоста"
+          },
+          {
+            "value": "16",
+            "label": "/16 (255.255.0.0) — 65,534 хоста"
+          },
+          {
+            "value": "8",
+            "label": "/8 (255.0.0.0) — 16,777,214 хостов"
+          },
+          {
+            "value": "30",
+            "label": "/30 (255.255.255.252) — 2 хоста"
+          },
+          {
+            "value": "28",
+            "label": "/28 (255.255.255.240) — 14 хостов"
+          },
+          {
+            "value": "26",
+            "label": "/26 (255.255.255.192) — 62 хоста"
+          }
+        ],
+        "defaultValue": "24"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "network",
+        "label": "Сетевой адрес",
+        "type": "text"
+      },
+      {
+        "name": "mask",
+        "label": "Маска подсети",
+        "type": "text"
+      },
+      {
+        "name": "broadcast",
+        "label": "Broadcast",
+        "type": "text"
+      },
+      {
+        "name": "hosts",
+        "label": "Доступно хостов",
+        "type": "text"
+      },
+      {
+        "name": "range",
+        "label": "Диапазон",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите IP-адрес и выберите CIDR-префикс. Калькулятор рассчитает все сетевые параметры.",
+      "about": "IP-адрес — уникальный идентификатор устройства в сети. Маска определяет размер подсети. CIDR — Classless Inter-Domain Routing.",
+      "usage": "Используется сетевыми администраторами, для настройки роутеров, планирования сетей, DevOps.",
+      "formula": "Маска = 32 − log₂(количество адресов)\nХостов = 2^(32−prefix) − 2\n(за вычетом сети и broadcast)",
+      "faq": [
+        {
+          "question": "Что такое /24?",
+          "answer": "CIDR-префикс /24 означает, что первые 24 бита — адрес сети, последние 8 — хосты. Маска: 255.255.255.0. Хостов: 254."
+        },
+        {
+          "question": "Зачем нужен broadcast?",
+          "answer": "Broadcast-адрес используется для отправки данных всем устройствам в сети одновременно. Например, ARP-запросы."
+        }
+      ],
+      "sources": [
+        {
+          "title": "CIDR — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Бесклассовая_адресация"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "dpi-ppi-razreshenie",
+    "id": "dpi-display-calculator",
+    "title": "Калькулятор DPI/PPI",
+    "description": "Расчёт плотности пикселей экрана, размеров элементов",
+    "subcategory": "tech-ekrany",
+    "type": "formula",
+    "category": "tehnologii",
+    "inputs": [
+      {
+        "name": "width",
+        "label": "Ширина (пикселей)",
+        "type": "number",
+        "placeholder": "1920",
+        "defaultValue": 1920
+      },
+      {
+        "name": "height",
+        "label": "Высота (пикселей)",
+        "type": "number",
+        "placeholder": "1080",
+        "defaultValue": 1080
+      },
+      {
+        "name": "diagonal",
+        "label": "Диагональ экрана (дюймов)",
+        "type": "number",
+        "placeholder": "24",
+        "defaultValue": 24
+      },
+      {
+        "name": "viewingDistance",
+        "label": "Расстояние просмотра (см)",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60
+      }
+    ],
+    "outputs": [
+      {
+        "name": "ppi",
+        "label": "PPI (пикселей на дюйм)",
+        "type": "number"
+      },
+      {
+        "name": "totalPixels",
+        "label": "Всего пикселей",
+        "type": "text"
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Соотношение сторон",
+        "type": "text"
+      },
+      {
+        "name": "retina",
+        "label": "Retina-стандарт",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите разрешение экрана в пикселях, диагональ в дюймах и расстояние просмотра.",
+      "about": "PPI (pixels per inch) — плотность пикселей. Чем выше, тем чётче картинка. Retina — маркетинговый термин Apple для высокой плотности.",
+      "usage": "Используется при выборе монитора, смартфона, расчёте качества изображения, веб-дизайне.",
+      "formula": "PPI = √(W² + H²) / Диагональ\nгде W, H — ширина и высота в пикселях",
+      "faq": [
+        {
+          "question": "Какой PPI считается хорошим?",
+          "answer": "Для смартфонов: 300+ PPI. Для мониторов: 100-150 PPI. Для печати: 300 PPI. Чем ближе глаза, тем выше нужен PPI."
+        },
+        {
+          "question": "В чём разница DPI и PPI?",
+          "answer": "DPI (dots per inch) — для печати, количество точек краски. PPI (pixels per inch) — для экранов, количество пикселей. Часто путают."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Pixel density — Википедия",
+          "url": "https://en.wikipedia.org/wiki/Pixel_density"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "bitrate-video",
+    "id": "bitrate-calculator",
+    "title": "Калькулятор битрейта видео",
+    "description": "Расчёт размера файла по параметрам видео",
+    "subcategory": "tech-video",
+    "type": "formula",
+    "category": "tehnologii",
+    "inputs": [
+      {
+        "name": "resolution",
+        "label": "Разрешение",
+        "type": "select",
+        "options": [
+          {
+            "value": "sd",
+            "label": "SD (720×480) — DVD качество"
+          },
+          {
+            "value": "hd",
+            "label": "HD (1280×720) — 720p"
+          },
+          {
+            "value": "fhd",
+            "label": "Full HD (1920×1080) — 1080p"
+          },
+          {
+            "value": "4k",
+            "label": "4K UHD (3840×2160)"
+          },
+          {
+            "value": "8k",
+            "label": "8K UHD (7680×4320)"
+          }
+        ],
+        "defaultValue": "fhd"
+      },
+      {
+        "name": "fps",
+        "label": "Частота кадров (FPS)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30
+      },
+      {
+        "name": "bitrate",
+        "label": "Битрейт (Мбит/с)",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8
+      },
+      {
+        "name": "duration",
+        "label": "Длительность (минут)",
+        "type": "number",
+        "placeholder": "90",
+        "defaultValue": 90
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fileSize",
+        "label": "Размер файла",
+        "type": "text"
+      },
+      {
+        "name": "perMinute",
+        "label": "В минуту",
+        "type": "text"
+      },
+      {
+        "name": "pixels",
+        "label": "Пикселей в кадре",
+        "type": "text"
+      },
+      {
+        "name": "dataRate",
+        "label": "Скорость данных",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите разрешение, введите FPS, битрейт и длительность. Калькулятор рассчитает размер файла.",
+      "about": "Битрейт — количество данных, обрабатываемых за единицу времени. Влияет на качество и размер видео.",
+      "usage": "Используется видеомонтажёрами, стримерами, для планирования хранилищ, настройки кодеков.",
+      "formula": "Размер (МБ) = Битрейт (Мбит/с) × Время (с) / 8\n1 байт = 8 бит",
+      "faq": [
+        {
+          "question": "Какой битрейт выбрать?",
+          "answer": "YouTube 1080p: 8 Мбит/с. Профессиональное видео: 25-50 Мбит/с. 4K: 35-100 Мбит/с. Стрим: 4-6 Мбит/с для 1080p."
+        },
+        {
+          "question": "Почему 4K занимает так много места?",
+          "answer": "4K содержит в 4 раза больше пикселей, чем 1080p. При том же битрейте качество было бы хуже, поэтому нужен более высокий битрейт."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Битрейт — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Битрейт"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "skorost-interneta",
+    "id": "internet-speed-calculator",
+    "title": "Калькулятор скорости интернета",
+    "description": "Расчёт времени загрузки и скачивания файлов",
+    "subcategory": "tech-set",
+    "type": "formula",
+    "category": "tehnologii",
+    "inputs": [
+      {
+        "name": "speed",
+        "label": "Скорость интернета",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "speedUnit",
+        "label": "Единица скорости",
+        "type": "select",
+        "options": [
+          {
+            "value": "mbps",
+            "label": "Мбит/с (Mbps) — обычно указывается провайдерами"
+          },
+          {
+            "value": "mb",
+            "label": "МБ/с (MB/s) — реальная скорость"
+          }
+        ],
+        "defaultValue": "mbps"
+      },
+      {
+        "name": "fileSize",
+        "label": "Размер файла",
+        "type": "number",
+        "placeholder": "5",
+        "defaultValue": 5
+      },
+      {
+        "name": "fileUnit",
+        "label": "Единица размера",
+        "type": "select",
+        "options": [
+          {
+            "value": "mb",
+            "label": "МБ"
+          },
+          {
+            "value": "gb",
+            "label": "ГБ"
+          },
+          {
+            "value": "tb",
+            "label": "ТБ"
+          }
+        ],
+        "defaultValue": "gb"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "downloadTime",
+        "label": "Время скачивания",
+        "type": "text"
+      },
+      {
+        "name": "realSpeed",
+        "label": "Реальная скорость",
+        "type": "text"
+      },
+      {
+        "name": "perHour",
+        "label": "В час",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость интернета, выберите единицы, введите размер файла. Калькулятор покажет время загрузки.",
+      "about": "Провайдеры указывают скорость в Мбит/с (Mbps), но браузеры показывают в МБ/с (MB/s). 1 МБ/с = 8 Мбит/с.",
+      "usage": "Используется для планирования загрузок, выбора тарифа интернета, оценки времени скачивания.",
+      "formula": "Время = Размер / Скорость\n1 байт = 8 бит\n1 ГБ = 1024 МБ",
+      "faq": [
+        {
+          "question": "Почему я не получаю заявленную скорость?",
+          "answer": "Провайдер указывает максимальную скорость. Реальная зависит от: загруженности сети, сервера, Wi-Fi, дальности от роутера."
+        },
+        {
+          "question": "Сколько нужно для 4K видео?",
+          "answer": "Для одного 4K-потока: 25-50 Мбит/с. Для комфортной работы дома: 100+ Мбит/с. Для большой семьи: 300+ Мбит/с."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Скорость передачи данных — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Скорость_передачи_данных"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kontrolnaya-summa",
+    "id": "hash-calculator",
+    "title": "Калькулятор хешей (контрольных сумм)",
+    "description": "Расчёт CRC32 и информация о хеш-функциях",
+    "subcategory": "tech-hranenie",
+    "type": "formula",
+    "category": "tehnologii",
+    "inputs": [
+      {
+        "name": "input",
+        "label": "Текст для хеширования",
+        "type": "text",
+        "placeholder": "Hello, World!",
+        "defaultValue": "Hello, World!"
+      },
+      {
+        "name": "algorithm",
+        "label": "Алгоритм",
+        "type": "select",
+        "options": [
+          {
+            "value": "length",
+            "label": "Длина строки"
+          },
+          {
+            "value": "simple",
+            "label": "Простая сумма (для демонстрации)"
+          },
+          {
+            "value": "info",
+            "label": "Информация об алгоритмах"
+          }
+        ],
+        "defaultValue": "length"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "info",
+        "label": "Информация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите текст и выберите алгоритм. Калькулятор покажет информацию о хешировании.",
+      "about": "Хеш-функция преобразует данные произвольного размера в фиксированную строку (хеш). Используется для проверки целостности и хранения паролей.",
+      "usage": "Используется для проверки целостности файлов, хранения паролей, цифровых подписей, блокчейна.",
+      "formula": "Хеш: произвольные данные → фиксированная строка\nОдносторонняя функция: невозможно восстановить данные из хеша",
+      "faq": [
+        {
+          "question": "Что такое MD5 и SHA?",
+          "answer": "MD5 — устаревший алгоритм (128 бит), небезопасен. SHA-256 — современный стандарт (256 бит), используется везде."
+        },
+        {
+          "question": "Как проверить целостность файла?",
+          "answer": "Скачайте файл, вычислите его хеш (например, SHA-256), сравните с опубликованным на сайте. Если совпадают — файл не повреждён."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Хеш-функция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Хеш-функция"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "sekundomer",
+    "id": "stopwatch-calculator",
+    "title": "Секундомер",
+    "description": "Онлайн-секундомер с отметками времени (круги)",
+    "subcategory": "data-i-vremya",
+    "type": "timer",
+    "category": "tekhnologii",
+    "content": {
+      "howTo": "Нажмите кнопку \"Старт\" для запуска секундомера, \"Стоп\" — для паузы, \"Круг\" — для фиксации промежуточного времени, \"Сброс\" — для обнуления.",
+      "about": "Секундомер измеряет время с точностью до миллисекунды. Использует системные часы устройства.",
+      "usage": "Для спортивных тренировок, измерения длительности задач, кулинарии, экспериментов.",
+      "formula": "Время измеряется через performance.now() или Date.now() в браузере.",
+      "faq": [
+        {
+          "question": "Насколько точен секундомер?",
+          "answer": "Браузерный таймер обычно точен до 1-15 мс. Для спортивных соревнований используйте профессиональное оборудование."
+        },
+        {
+          "question": "Сохраняются ли данные при обновлении страницы?",
+          "answer": "Нет, при обновлении страницы секундомер сбрасывается."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Секундомер — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Секундомер"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  }
+]

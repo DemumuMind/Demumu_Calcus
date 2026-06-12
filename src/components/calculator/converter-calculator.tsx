@@ -66,7 +66,7 @@ export function ConverterCalculator({ calculator, initialParams }: ConverterCalc
   // Detect swappable pair once — works for any naming convention
   const swappablePair = useMemo(() => findSwappablePair(calculator.inputs), [calculator.inputs]);
 
-  const [hasCalculated, setHasCalculated] = useState(false);
+  const [_hasCalculated, setHasCalculated] = useState(false);
 
   const handleCalculate = useCallback(() => {
     try {

@@ -1,0 +1,772 @@
+[
+  {
+    "slug": "kalkulyator-logarifmov",
+    "id": "logarithm-calculator",
+    "title": "Калькулятор логарифмов",
+    "description": "Вычисление натурального, десятичного и логарифма по произвольному основанию",
+    "subcategory": "matematicheskie",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Число (аргумент)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0.0001,
+        "step": 0.01
+      },
+      {
+        "name": "base",
+        "label": "Основание логарифма",
+        "type": "select",
+        "options": [
+          {
+            "value": "e",
+            "label": "e — натуральный (ln)"
+          },
+          {
+            "value": "10",
+            "label": "10 — десятичный (lg)"
+          },
+          {
+            "value": "2",
+            "label": "2 — двоичный"
+          },
+          {
+            "value": "custom",
+            "label": "Произвольное основание"
+          }
+        ],
+        "defaultValue": "e"
+      },
+      {
+        "name": "customBase",
+        "label": "Произвольное основание",
+        "type": "number",
+        "placeholder": "3",
+        "defaultValue": 3,
+        "min": 0.0001,
+        "step": 0.01
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "number"
+      },
+      {
+        "name": "formula",
+        "label": "Формула",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите число и выберите основание логарифма. Для произвольного основания введите его значение.",
+      "about": "Логарифм — это показатель степени, в которую нужно возвести основание, чтобы получить аргумент.",
+      "usage": "Используется в математике, физике, информатике, финансах.",
+      "formula": "logₐ(b) = ln(b) / ln(a)",
+      "faq": [
+        {
+          "question": "Что такое натуральный логарифм?",
+          "answer": "Логарифм по основанию e ≈ 2.71828. Обозначается ln(x)."
+        },
+        {
+          "question": "Почему аргумент должен быть положительным?",
+          "answer": "Логарифм отрицательного числа не определён в действительных числах."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Логарифм — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Логарифм"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "rimskie-cifry",
+    "id": "roman-numerals-calculator",
+    "title": "Римские цифры",
+    "description": "Перевод арабских чисел в римские и обратно",
+    "subcategory": "matematicheskie",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "mode",
+        "label": "Направление перевода",
+        "type": "select",
+        "options": [
+          {
+            "value": "arabic_to_roman",
+            "label": "Арабские → Римские"
+          },
+          {
+            "value": "roman_to_arabic",
+            "label": "Римские → Арабские"
+          }
+        ],
+        "defaultValue": "arabic_to_roman"
+      },
+      {
+        "name": "arabicNumber",
+        "label": "Арабское число",
+        "type": "number",
+        "placeholder": "2024",
+        "defaultValue": 2024,
+        "min": 1,
+        "max": 3999
+      },
+      {
+        "name": "romanNumber",
+        "label": "Римское число",
+        "type": "text",
+        "placeholder": "MMXXIV",
+        "defaultValue": "MMXXIV"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите направление перевода и введите число.",
+      "about": "Римские цифры — система записи чисел, использовавшаяся в Древнем Риме.",
+      "usage": "Используется в нумерологии, истории, оформлении документов.",
+      "formula": "I=1, V=5, X=10, L=50, C=100, D=500, M=1000",
+      "faq": [
+        {
+          "question": "Как записать 4?",
+          "answer": "IV — вычитание: 5 - 1 = 4. Это принцип субтрактивной записи."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Римские цифры — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Римские_цифры"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "summa-propisyu",
+    "id": "sum-in-words-calculator",
+    "title": "Сумма прописью",
+    "description": "Перевод числа в текстовую форму для документов",
+    "subcategory": "nalogi",
+    "type": "formula",
+    "category": "finansy",
+    "inputs": [
+      {
+        "name": "amount",
+        "label": "Сумма",
+        "type": "number",
+        "placeholder": "12345.67",
+        "defaultValue": 12345.67,
+        "min": 0,
+        "step": 0.01
+      },
+      {
+        "name": "currency",
+        "label": "Валюта",
+        "type": "select",
+        "options": [
+          {
+            "value": "rub",
+            "label": "Рубли"
+          },
+          {
+            "value": "usd",
+            "label": "Доллары"
+          },
+          {
+            "value": "eur",
+            "label": "Евро"
+          }
+        ],
+        "defaultValue": "rub"
+      },
+      {
+        "name": "format",
+        "label": "Формат",
+        "type": "select",
+        "options": [
+          {
+            "value": "lowercase",
+            "label": "строчными буквами"
+          },
+          {
+            "value": "uppercase",
+            "label": "ЗАГЛАВНЫМИ БУКВАМИ"
+          },
+          {
+            "value": "capitalize",
+            "label": "С Заглавной Буквы"
+          }
+        ],
+        "defaultValue": "lowercase"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "text",
+        "label": "Прописью",
+        "type": "text"
+      },
+      {
+        "name": "withNumber",
+        "label": "С цифрами",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму, выберите валюту и формат.",
+      "about": "Сумма прописью — обязательный элемент финансовых и юридических документов.",
+      "usage": "Используется при заполнении договоров, чеков, бухгалтерских документов.",
+      "formula": "Перевод числа в текстовую форму с учётом склонения единиц измерения.",
+      "faq": [
+        {
+          "question": "Зачем писать сумму прописью?",
+          "answer": "Это защита от подделки документов — сложнее изменить текст, чем цифру."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Сумма прописью",
+          "url": "https://ru.wikipedia.org/wiki/Числительные"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "na-skolko-procentov-bolshe-menshe",
+    "id": "percentage-difference-calculator",
+    "title": "На сколько процентов больше/меньше",
+    "description": "Расчёт разницы между двумя числами в процентах",
+    "subcategory": "procenty-izmenenie",
+    "type": "formula",
+    "category": "procenty",
+    "inputs": [
+      {
+        "name": "originalValue",
+        "label": "Исходное значение",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0.01,
+        "step": 0.01
+      },
+      {
+        "name": "newValue",
+        "label": "Новое значение",
+        "type": "number",
+        "placeholder": "150",
+        "defaultValue": 150,
+        "min": 0,
+        "step": 0.01
+      }
+    ],
+    "outputs": [
+      {
+        "name": "difference",
+        "label": "Разница",
+        "type": "number",
+        "unit": "%"
+      },
+      {
+        "name": "absDifference",
+        "label": "Абсолютная разница",
+        "type": "number"
+      },
+      {
+        "name": "multiplier",
+        "label": "Во сколько раз",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите исходное и новое значение.",
+      "about": "Показывает, на сколько процентов изменилось значение по сравнению с исходным.",
+      "usage": "Используется для анализа роста, снижения цен, изменения показателей.",
+      "formula": "Разница (%) = ((Новое - Исходное) / Исходное) × 100",
+      "faq": [
+        {
+          "question": "Что означает отрицательный результат?",
+          "answer": "Значение уменьшилось по сравнению с исходным."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Процент",
+          "url": "https://ru.wikipedia.org/wiki/Процент"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "summa-chisel-do-n",
+    "id": "sum-to-n-calculator",
+    "title": "Сумма чисел от 1 до N",
+    "description": "Быстрый расчёт суммы арифметической прогрессии",
+    "subcategory": "matematicheskie",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "n",
+        "label": "Число N",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 1,
+        "max": 1000000000
+      },
+      {
+        "name": "start",
+        "label": "Начальное число (опционально)",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "formula",
+        "label": "Формула",
+        "type": "text"
+      },
+      {
+        "name": "result",
+        "label": "Сумма",
+        "type": "number"
+      },
+      {
+        "name": "count",
+        "label": "Количество чисел",
+        "type": "number"
+      }
+    ],
+    "content": {
+      "howTo": "Введите N (конечное число) и, если нужно, начальное число.",
+      "about": "Формула Гаусса: сумма чисел от 1 до N = N × (N + 1) / 2.",
+      "usage": "Используется в математике, программировании, статистике.",
+      "formula": "S = n × (n + 1) / 2",
+      "faq": [
+        {
+          "question": "Как посчитать сумму от 50 до 100?",
+          "answer": "Введите N=100, начальное число=50. Сумма = (100-50+1) × (50+100) / 2 = 51 × 150 / 2 = 3825."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Арифметическая прогрессия",
+          "url": "https://ru.wikipedia.org/wiki/Арифметическая_прогрессия"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "dni-mezhdu-datami",
+    "id": "days-between-dates-calculator",
+    "title": "Дни между датами",
+    "description": "Расчёт количества дней, рабочих дней, недель между двумя датами",
+    "subcategory": "data-i-vremya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "startDate",
+        "label": "Начальная дата",
+        "type": "date",
+        "placeholder": "2024-01-01"
+      },
+      {
+        "name": "endDate",
+        "label": "Конечная дата",
+        "type": "date",
+        "placeholder": "2024-12-31"
+      },
+      {
+        "name": "includeEnd",
+        "label": "Включать конечную дату",
+        "type": "boolean",
+        "defaultValue": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalDays",
+        "label": "Всего дней",
+        "type": "number",
+        "unit": "дн."
+      },
+      {
+        "name": "weeks",
+        "label": "Полных недель",
+        "type": "number",
+        "unit": "нед."
+      },
+      {
+        "name": "workDays",
+        "label": "Рабочих дней (пн-пт)",
+        "type": "number",
+        "unit": "дн."
+      },
+      {
+        "name": "months",
+        "label": "Полных месяцев",
+        "type": "number",
+        "unit": "мес."
+      }
+    ],
+    "content": {
+      "howTo": "Выберите начальную и конечную даты.",
+      "about": "Показывает количество дней, недель, рабочих дней и месяцев между датами.",
+      "usage": "Используется для планирования отпусков, сроков, проектов.",
+      "formula": "Дни = (Дата2 - Дата1) в миллисекундах / 86400000",
+      "faq": [
+        {
+          "question": "Учитываются ли выходные?",
+          "answer": "Нет, рабочие дни считаются только с понедельника по пятницу."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Календарь",
+          "url": "https://ru.wikipedia.org/wiki/Календарь"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "den-nedeli",
+    "id": "day-of-week-calculator",
+    "title": "День недели по дате",
+    "description": "Определение дня недели для любой даты",
+    "subcategory": "data-i-vremya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "date",
+        "label": "Дата",
+        "type": "date",
+        "placeholder": "2024-06-15"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dayOfWeek",
+        "label": "День недели",
+        "type": "text"
+      },
+      {
+        "name": "dayOfYear",
+        "label": "День года",
+        "type": "number",
+        "unit": "дн."
+      },
+      {
+        "name": "weekOfYear",
+        "label": "Неделя года",
+        "type": "number",
+        "unit": "нед."
+      }
+    ],
+    "content": {
+      "howTo": "Выберите дату из календаря.",
+      "about": "Определяет день недели, номер дня и недели в году.",
+      "usage": "Используется для планирования, исторических расчётов.",
+      "formula": "Используется алгоритм определения дня недели по дате.",
+      "faq": [
+        {
+          "question": "Работает ли для прошлых веков?",
+          "answer": "Да, для дат по григорианскому календарю (с 1582 года)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "День недели",
+          "url": "https://ru.wikipedia.org/wiki/День_недели"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "visokosnye-gody",
+    "id": "leap-year-calculator",
+    "title": "Високосные годы",
+    "description": "Проверка года и список високосных годов в диапазоне",
+    "subcategory": "data-i-vremya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "mode",
+        "label": "Режим",
+        "type": "select",
+        "options": [
+          {
+            "value": "check",
+            "label": "Проверить один год"
+          },
+          {
+            "value": "list",
+            "label": "Список годов в диапазоне"
+          }
+        ],
+        "defaultValue": "check"
+      },
+      {
+        "name": "year",
+        "label": "Год",
+        "type": "number",
+        "placeholder": "2024",
+        "defaultValue": 2024,
+        "min": 1,
+        "max": 9999
+      },
+      {
+        "name": "startYear",
+        "label": "Начальный год",
+        "type": "number",
+        "placeholder": "2000",
+        "defaultValue": 2000,
+        "min": 1,
+        "max": 9999
+      },
+      {
+        "name": "endYear",
+        "label": "Конечный год",
+        "type": "number",
+        "placeholder": "2030",
+        "defaultValue": 2030,
+        "min": 1,
+        "max": 9999
+      }
+    ],
+    "outputs": [
+      {
+        "name": "isLeap",
+        "label": "Результат",
+        "type": "text"
+      },
+      {
+        "name": "daysInYear",
+        "label": "Дней в году",
+        "type": "number",
+        "unit": "дн."
+      }
+    ],
+    "content": {
+      "howTo": "Выберите режим: проверить один год или получить список за период.",
+      "about": "Високосный год содержит 366 дней вместо 365. Дополнительный день — 29 февраля.",
+      "usage": "Используется для планирования, проверки календарей.",
+      "formula": "Високосный, если делится на 4, но не на 100, или делится на 400.",
+      "faq": [
+        {
+          "question": "Почему високосный год?",
+          "answer": "Для компенсации разницы между календарным годом (365 дней) и тропическим годом (~365.25 дней)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Високосный год",
+          "url": "https://ru.wikipedia.org/wiki/Високосный_год"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "obratnyj-otschet-do-daty",
+    "id": "countdown-calculator",
+    "title": "Обратный отсчёт до даты",
+    "description": "Сколько осталось дней, часов, минут до важной даты",
+    "subcategory": "data-i-vremya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "targetDate",
+        "label": "Целевая дата",
+        "type": "date",
+        "placeholder": "2025-01-01"
+      },
+      {
+        "name": "targetTime",
+        "label": "Время (опционально)",
+        "type": "text",
+        "placeholder": "00:00",
+        "defaultValue": "00:00"
+      },
+      {
+        "name": "eventName",
+        "label": "Название события",
+        "type": "text",
+        "placeholder": "Новый год",
+        "defaultValue": "Новый год"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalDays",
+        "label": "Всего дней",
+        "type": "number",
+        "unit": "дн."
+      },
+      {
+        "name": "detailed",
+        "label": "Детально",
+        "type": "text"
+      },
+      {
+        "name": "weeks",
+        "label": "Недель",
+        "type": "number",
+        "unit": "нед."
+      }
+    ],
+    "content": {
+      "howTo": "Выберите дату события, укажите время и название.",
+      "about": "Показывает, сколько времени осталось до важной даты.",
+      "usage": "Используется для отсчёта до отпуска, дня рождения, свадьбы, экзаменов.",
+      "formula": "Осталось = Целевая дата - Текущая дата",
+      "faq": [
+        {
+          "question": "Учитывается ли текущее время?",
+          "answer": "Да, расчёт ведётся от текущего момента до указанной даты и времени."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Обратный отсчёт",
+          "url": "https://ru.wikipedia.org/wiki/Таймер"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "norma-uglevodov",
+    "id": "carbs-calculator",
+    "title": "Норма углеводов",
+    "description": "Расчёт суточной нормы углеводов по весу и активности",
+    "subcategory": "pitanie-i-ves",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 20,
+        "max": 300,
+        "unit": "кг"
+      },
+      {
+        "name": "activityLevel",
+        "label": "Уровень активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "low",
+            "label": "Низкий (сидячий образ)"
+          },
+          {
+            "value": "moderate",
+            "label": "Умеренный (1-3 тренировки/неделю)"
+          },
+          {
+            "value": "high",
+            "label": "Высокий (4-5 тренировок/неделю)"
+          },
+          {
+            "value": "very_high",
+            "label": "Очень высокий (ежедневные тренировки)"
+          }
+        ],
+        "defaultValue": "moderate"
+      },
+      {
+        "name": "goal",
+        "label": "Цель",
+        "type": "select",
+        "options": [
+          {
+            "value": "lose",
+            "label": "Похудение"
+          },
+          {
+            "value": "maintain",
+            "label": "Поддержание веса"
+          },
+          {
+            "value": "gain",
+            "label": "Набор массы"
+          }
+        ],
+        "defaultValue": "maintain"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyCarbs",
+        "label": "Углеводов в день",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "carbsPerMeal",
+        "label": "В среднем за приём пищи",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "percentage",
+        "label": "% от калорий",
+        "type": "number",
+        "unit": "%"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес, выберите уровень активности и цель.",
+      "about": "Углеводы — основной источник энергии. Рекомендуемая норма зависит от веса, активности и целей.",
+      "usage": "Используется для составления диеты, контроля питания.",
+      "formula": "Углеводы = Вес × коэффициент активности × корректировка цели",
+      "faq": [
+        {
+          "question": "Сколько углеводов нужно для похудения?",
+          "answer": "Обычно 2-3 г/кг веса. Резкое снижение может вызвать слабость."
+        },
+        {
+          "question": "Какие углеводы полезнее?",
+          "answer": "Сложные (крупы, овощи, фрукты) лучше простых (сахар, сладости) — дают длительную энергию."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Углеводы — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Углеводы"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  }
+]

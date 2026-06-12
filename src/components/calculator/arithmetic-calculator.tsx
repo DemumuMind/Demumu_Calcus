@@ -4,14 +4,14 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import { Calculator as CalcType } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calculator as CalculatorIcon, Delete, Equal } from 'lucide-react';
+import { Calculator as CalculatorIcon } from 'lucide-react';
 
 interface ArithmeticCalculatorProps {
   calculator: CalcType;
   initialParams?: Record<string, string>;
 }
 
-export function ArithmeticCalculator({ calculator, initialParams }: ArithmeticCalculatorProps) {
+export function ArithmeticCalculator({ calculator: _calculator, initialParams }: ArithmeticCalculatorProps) {
   const [display, setDisplay] = useState(() => {
     // Pre-fill display from URL param if provided
     if (initialParams?.value && !isNaN(Number(initialParams.value))) {

@@ -1,0 +1,3010 @@
+[
+  {
+    "slug": "c-v-f",
+    "id": "temperature-celsius-fahrenheit",
+    "title": "Цельсий в Фаренгейт",
+    "description": "Конвертер температуры: перевод градусов Цельсия в градусы Фаренгейта",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          }
+        ],
+        "defaultValue": "c"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "f",
+            "label": "°F — Фаренгейт"
+          }
+        ],
+        "defaultValue": "f"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Цельсия. Результат в Фаренгейтах появится автоматически.",
+      "about": "Шкала Цельсия (°C) и Фаренгейта (°F) — две наиболее распространённые температурные шкалы, используемые в быту, медицине и технике.",
+      "formula": "°F = °C × 9/5 + 32",
+      "faq": [
+        {
+          "question": "При какой температуре вода замерзает?",
+          "answer": "0°C = 32°F."
+        },
+        {
+          "question": "При какой температуре вода кипит?",
+          "answer": "100°C = 212°F (при нормальном атмосферном давлении)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Температура — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Температура"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "f-v-c",
+    "id": "temperature-fahrenheit-celsius",
+    "title": "Фаренгейт в Цельсий",
+    "description": "Конвертер температуры: перевод градусов Фаренгейта в градусы Цельсия",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "32",
+        "defaultValue": 32
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "f",
+            "label": "°F — Фаренгейт"
+          }
+        ],
+        "defaultValue": "f"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          }
+        ],
+        "defaultValue": "c"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Фаренгейта. Результат в Цельсиях появится автоматически.",
+      "about": "Перевод температуры из шкалы Фаренгейта в шкалу Цельсия. Шкала Фаренгейта распространена в США и некоторых других странах.",
+      "formula": "°C = (°F − 32) × 5/9",
+      "faq": [
+        {
+          "question": "Сколько градусов Цельсия в 98.6°F?",
+          "answer": "98.6°F = 37°C — нормальная температура человеческого тела."
+        },
+        {
+          "question": "При какой температуре по Фаренгейту вода замерзает?",
+          "answer": "32°F = 0°C."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Температура — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Температура"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "c-v-k",
+    "id": "temperature-celsius-kelvin",
+    "title": "Цельсий в Кельвины",
+    "description": "Конвертер температуры: перевод градусов Цельсия в Кельвины",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "0",
+        "defaultValue": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          }
+        ],
+        "defaultValue": "c"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "k",
+            "label": "K — Кельвин"
+          }
+        ],
+        "defaultValue": "k"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Цельсия. Результат в Кельвинах появится автоматически.",
+      "about": "Кельвин (K) — единица термодинамической температуры в Международной системе единиц (СИ). Абсолютный ноль равен 0 K.",
+      "formula": "K = °C + 273.15",
+      "faq": [
+        {
+          "question": "Что такое абсолютный ноль?",
+          "answer": "Абсолютный ноль — минимально возможная температура, равная −273.15°C или 0 K."
+        },
+        {
+          "question": "Как перевести Цельсий в Кельвины?",
+          "answer": "Прибавьте 273.15 к значению в градусах Цельсия."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кельвин — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кельвин"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "k-v-c",
+    "id": "temperature-kelvin-celsius",
+    "title": "Кельвины в Цельсий",
+    "description": "Конвертер температуры: перевод Кельвинов в градусы Цельсия",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "273.15",
+        "defaultValue": 273.15
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "k",
+            "label": "K — Кельвин"
+          }
+        ],
+        "defaultValue": "k"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          }
+        ],
+        "defaultValue": "c"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в Кельвинах. Результат в Цельсиях появится автоматически.",
+      "about": "Перевод из абсолютной шкалы Кельвина в привычную шкалу Цельсия.",
+      "formula": "°C = K − 273.15",
+      "faq": [
+        {
+          "question": "Сколько градусов Цельсия в 300 K?",
+          "answer": "300 K = 26.85°C."
+        },
+        {
+          "question": "Какая температура комнатная в Кельвинах?",
+          "answer": "Примерно 293–298 K (20–25°C)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кельвин — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кельвин"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "f-v-k",
+    "id": "temperature-fahrenheit-kelvin",
+    "title": "Фаренгейт в Кельвины",
+    "description": "Конвертер температуры: перевод градусов Фаренгейта в Кельвины",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "32",
+        "defaultValue": 32
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "f",
+            "label": "°F — Фаренгейт"
+          }
+        ],
+        "defaultValue": "f"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "k",
+            "label": "K — Кельвин"
+          }
+        ],
+        "defaultValue": "k"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Фаренгейта. Результат в Кельвинах появится автоматически.",
+      "about": "Перевод из англоязычной шкалы Фаренгейта в абсолютную шкалу Кельвина.",
+      "formula": "K = (°F − 32) × 5/9 + 273.15",
+      "faq": [
+        {
+          "question": "Сколько Кельвинов в 32°F?",
+          "answer": "32°F = 273.15 K."
+        },
+        {
+          "question": "Какая формула перевода Фаренгейта в Кельвины?",
+          "answer": "Вычтите 32, умножьте на 5/9, затем прибавьте 273.15."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Температура — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Температура"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "k-v-f",
+    "id": "temperature-kelvin-fahrenheit",
+    "title": "Кельвины в Фаренгейт",
+    "description": "Конвертер температуры: перевод Кельвинов в градусы Фаренгейта",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "273.15",
+        "defaultValue": 273.15
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "k",
+            "label": "K — Кельвин"
+          }
+        ],
+        "defaultValue": "k"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "f",
+            "label": "°F — Фаренгейт"
+          }
+        ],
+        "defaultValue": "f"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в Кельвинах. Результат в Фаренгейтах появится автоматически.",
+      "about": "Перевод из абсолютной шкалы Кельвина в шкалу Фаренгейта.",
+      "formula": "°F = (K − 273.15) × 9/5 + 32",
+      "faq": [
+        {
+          "question": "Сколько Фаренгейтов в 300 K?",
+          "answer": "300 K ≈ 80.33°F."
+        },
+        {
+          "question": "При какой температуре по Кельвину вода замерзает?",
+          "answer": "273.15 K = 32°F = 0°C."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Температура — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Температура"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "re-v-c",
+    "id": "temperature-reaumur-celsius",
+    "title": "Реомюр в Цельсий",
+    "description": "Конвертер температуры: перевод градусов Реомюра в градусы Цельсия",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "80",
+        "defaultValue": 80
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "re",
+            "label": "°Re — Реомюр"
+          }
+        ],
+        "defaultValue": "re"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          }
+        ],
+        "defaultValue": "c"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Реомюра. Результат в Цельсиях появится автоматически.",
+      "about": "Градус Реомюра (°Re) — устаревшая единица температуры, при которой 0° соответствует точке замерзания воды, а 80° — точке кипения.",
+      "formula": "°C = °Re × 5/4",
+      "faq": [
+        {
+          "question": "Сколько градусов Цельсия в 80°Re?",
+          "answer": "80°Re = 100°C."
+        },
+        {
+          "question": "Где использовалась шкала Реомюра?",
+          "answer": "Шкала Реомюра применялась в Европе до XX века, преимущественно в пивоварении и быту."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Реомюр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Реомюр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "c-v-re",
+    "id": "temperature-celsius-reaumur",
+    "title": "Цельсий в Реомюр",
+    "description": "Конвертер температуры: перевод градусов Цельсия в градусы Реомюра",
+    "subcategory": "conv-temperatura",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Температура",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "c",
+            "label": "°C — Цельсий"
+          }
+        ],
+        "defaultValue": "c"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "re",
+            "label": "°Re — Реомюр"
+          }
+        ],
+        "defaultValue": "re"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите температуру в градусах Цельсия. Результат в Реомюрах появится автоматически.",
+      "about": "Перевод из шкалы Цельсия в устаревшую шкалу Реомюра.",
+      "formula": "°Re = °C × 4/5",
+      "faq": [
+        {
+          "question": "Сколько градусов Реомюра в 100°C?",
+          "answer": "100°C = 80°Re."
+        },
+        {
+          "question": "Чем отличается шкала Реомюра от Цельсия?",
+          "answer": "В шкале Реомюра интервал между точками замерзания и кипения воды разбит на 80 делений, а не на 100."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Реомюр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Реомюр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "km-ch-v-m-s",
+    "id": "speed-kmh-ms",
+    "title": "Км/ч в м/с",
+    "description": "Конвертер скорости: перевод километров в час в метры в секунду",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ms",
+            "label": "м/с"
+          }
+        ],
+        "defaultValue": "ms"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в км/ч. Результат в м/с появится автоматически.",
+      "about": "Километры в час (км/ч) — распространённая единица скорости на дорогах, а метры в секунду (м/с) — в физике и технике.",
+      "formula": "м/с = км/ч ÷ 3.6",
+      "faq": [
+        {
+          "question": "Сколько м/с в 1 км/ч?",
+          "answer": "1 км/ч ≈ 0.2778 м/с."
+        },
+        {
+          "question": "Как быстро перевести км/ч в м/с?",
+          "answer": "Разделите значение на 3.6 (или умножьте на 5/18)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Единицы скорости — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Скорость"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "m-s-v-km-ch",
+    "id": "speed-ms-kmh",
+    "title": "М/с в км/ч",
+    "description": "Конвертер скорости: перевод метров в секунду в километры в час",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ms",
+            "label": "м/с"
+          }
+        ],
+        "defaultValue": "ms"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в м/с. Результат в км/ч появится автоматически.",
+      "about": "Метры в секунду (м/с) — единица скорости в СИ, часто используется в физике, технике и спорте.",
+      "formula": "км/ч = м/с × 3.6",
+      "faq": [
+        {
+          "question": "Сколько км/ч в 1 м/с?",
+          "answer": "1 м/с = 3.6 км/ч."
+        },
+        {
+          "question": "Как перевести м/с в км/ч?",
+          "answer": "Умножьте значение на 3.6 (или на 18/5)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Скорость — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Скорость"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "km-ch-v-mil-ch",
+    "id": "speed-kmh-mph",
+    "title": "Км/ч в миль/ч",
+    "description": "Конвертер скорости: перевод километров в час в мили в час",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "mph",
+            "label": "миль/ч"
+          }
+        ],
+        "defaultValue": "mph"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в км/ч. Результат в милях/ч появится автоматически.",
+      "about": "Мили в час (mph) — единица скорости, распространённая в англоязычных странах (США, Великобритания).",
+      "formula": "миль/ч = км/ч × 0.621371",
+      "faq": [
+        {
+          "question": "Сколько миль/ч в 100 км/ч?",
+          "answer": "100 км/ч ≈ 62.14 миль/ч."
+        },
+        {
+          "question": "Какая скорость 60 миль/ч в км/ч?",
+          "answer": "60 миль/ч ≈ 96.56 км/ч."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Миля в час — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Миля_в_час"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "mil-ch-v-km-ch",
+    "id": "speed-mph-kmh",
+    "title": "Миль/ч в км/ч",
+    "description": "Конвертер скорости: перевод миль в час в километры в час",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "60",
+        "defaultValue": 60
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "mph",
+            "label": "миль/ч"
+          }
+        ],
+        "defaultValue": "mph"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в милях/ч. Результат в км/ч появится автоматически.",
+      "about": "Перевод скорости из англоязычной системы измерения в метрическую.",
+      "formula": "км/ч = миль/ч × 1.60934",
+      "faq": [
+        {
+          "question": "Сколько км/ч в 60 миль/ч?",
+          "answer": "60 миль/ч ≈ 96.56 км/ч."
+        },
+        {
+          "question": "Сколько км/ч в 1 миле/ч?",
+          "answer": "1 миля/ч ≈ 1.609 км/ч."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Миля в час — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Миля_в_час"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "uzel-v-km-ch",
+    "id": "speed-knot-kmh",
+    "title": "Узлы в км/ч",
+    "description": "Конвертер скорости: перевод узлов в километры в час",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "knot",
+            "label": "узлы"
+          }
+        ],
+        "defaultValue": "knot"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в узлах. Результат в км/ч появится автоматически.",
+      "about": "Узел (kn) — единица скорости, используемая в мореплавании и авиации. 1 узел равен одной морской миле в час.",
+      "formula": "км/ч = узлы × 1.852",
+      "faq": [
+        {
+          "question": "Сколько км/ч в 1 узле?",
+          "answer": "1 узел = 1.852 км/ч."
+        },
+        {
+          "question": "Что такое морская миля?",
+          "answer": "Морская миля = 1852 метра. Используется в мореплавании и авиации."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Узел (единица скорости) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Узел_(единица_скорости)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "km-ch-v-uzel",
+    "id": "speed-kmh-knot",
+    "title": "Км/ч в узлы",
+    "description": "Конвертер скорости: перевод километров в час в узлы",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "knot",
+            "label": "узлы"
+          }
+        ],
+        "defaultValue": "knot"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в км/ч. Результат в узлах появится автоматически.",
+      "about": "Перевод сухопутной скорости в морскую, удобный для моряков и яхтсменов.",
+      "formula": "узлы = км/ч ÷ 1.852",
+      "faq": [
+        {
+          "question": "Сколько узлов в 10 км/ч?",
+          "answer": "10 км/ч ≈ 5.40 узлов."
+        },
+        {
+          "question": "Какая скорость 50 км/ч в узлах?",
+          "answer": "50 км/ч ≈ 27.0 узлов."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Узел (единица скорости) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Узел_(единица_скорости)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "mah-v-km-ch",
+    "id": "speed-mach-kmh",
+    "title": "Махи в км/ч",
+    "description": "Конвертер скорости: перевод чисел Маха в километры в час",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Число Маха",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "mach",
+            "label": "Махи"
+          }
+        ],
+        "defaultValue": "mach"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите число Маха. Результат в км/ч появится автоматически (при стандартных условиях).",
+      "about": "Число Маха — отношение скорости объекта к скорости звука. При стандартных условиях (15°C, уровень моря) 1 Мах ≈ 1225 км/ч.",
+      "formula": "км/ч = Маха × 1225 (при стандартных условиях)",
+      "faq": [
+        {
+          "question": "Сколько км/ч в 1 Махе?",
+          "answer": "При стандартных условиях 1 Мах ≈ 1225 км/ч ≈ 340.3 м/с."
+        },
+        {
+          "question": "Меняется ли скорость звука?",
+          "answer": "Да, скорость звука зависит от температуры, давления и плотности среды. На большей высоте она ниже."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Число Маха — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Число_Маха"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "km-ch-v-mah",
+    "id": "speed-kmh-mach",
+    "title": "Км/ч в махи",
+    "description": "Конвертер скорости: перевод километров в час в числа Маха",
+    "subcategory": "conv-skorost",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Скорость",
+        "type": "number",
+        "placeholder": "1225",
+        "defaultValue": 1225
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "kmh",
+            "label": "км/ч"
+          }
+        ],
+        "defaultValue": "kmh"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "mach",
+            "label": "Махи"
+          }
+        ],
+        "defaultValue": "mach"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите скорость в км/ч. Результат в числах Маха появится автоматически (при стандартных условиях).",
+      "about": "Перевод скорости в числа Маха, удобный для авиации и аэродинамики.",
+      "formula": "Маха = км/ч ÷ 1225 (при стандартных условиях)",
+      "faq": [
+        {
+          "question": "Сколько Махов в 1225 км/ч?",
+          "answer": "1225 км/ч ≈ 1 Мах (при стандартных условиях)."
+        },
+        {
+          "question": "Что означает сверхзвуковая скорость?",
+          "answer": "Сверхзвуковая скорость — это скорость выше 1 Маха (быстрее скорости звука)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Число Маха — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Число_Маха"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "litr-v-ml",
+    "id": "volume-l-ml",
+    "title": "Литры в миллилитры",
+    "description": "Конвертер объёма: перевод литров в миллилитры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ml",
+            "label": "мл — миллилитры"
+          }
+        ],
+        "defaultValue": "ml"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в литрах. Результат в миллилитрах появится автоматически.",
+      "about": "Литр и миллилитр — метрические единицы объёма, широко используемые в кулинарии, медицине и торговле.",
+      "formula": "мл = л × 1000",
+      "faq": [
+        {
+          "question": "Сколько миллилитров в 1 литре?",
+          "answer": "1 литр = 1000 миллилитров."
+        },
+        {
+          "question": "Сколько мл в стакане?",
+          "answer": "Стандартный гранёный стакан = 250 мл."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Литр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Литр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "ml-v-litr",
+    "id": "volume-ml-l",
+    "title": "Миллилитры в литры",
+    "description": "Конвертер объёма: перевод миллилитров в литры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ml",
+            "label": "мл — миллилитры"
+          }
+        ],
+        "defaultValue": "ml"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в миллилитрах. Результат в литрах появится автоматически.",
+      "about": "Перевод небольших объёмов (миллилитры) в более крупные (литры).",
+      "formula": "л = мл ÷ 1000",
+      "faq": [
+        {
+          "question": "Сколько литров в 500 мл?",
+          "answer": "500 мл = 0.5 литра."
+        },
+        {
+          "question": "Сколько литров в 250 мл?",
+          "answer": "250 мл = 0.25 литра."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Литр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Литр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "litr-v-gallon",
+    "id": "volume-l-gal-us",
+    "title": "Литры в галлоны (US)",
+    "description": "Конвертер объёма: перевод литров в американские галлоны",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "gal_us",
+            "label": "гал (US) — галлоны США"
+          }
+        ],
+        "defaultValue": "gal_us"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в литрах. Результат в галлонах (US) появится автоматически.",
+      "about": "Американский галлон (US gallon) — единица объёма в США. 1 US галлон ≈ 3.785 литра.",
+      "formula": "гал (US) = л ÷ 3.78541",
+      "faq": [
+        {
+          "question": "Сколько литров в 1 галлоне (US)?",
+          "answer": "1 US галлон ≈ 3.785 литра."
+        },
+        {
+          "question": "Чем US галлон отличается от UK галлона?",
+          "answer": "US галлон ≈ 3.785 л, а британский (UK) галлон ≈ 4.546 л."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Галлон — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Галлон"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "gallon-v-litr",
+    "id": "volume-gal-us-l",
+    "title": "Галлоны (US) в литры",
+    "description": "Конвертер объёма: перевод американских галлонов в литры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "gal_us",
+            "label": "гал (US) — галлоны США"
+          }
+        ],
+        "defaultValue": "gal_us"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в галлонах (US). Результат в литрах появится автоматически.",
+      "about": "Перевод американских галлонов в литры. Полезно при покупке товаров в США или импорте жидкостей.",
+      "formula": "л = гал (US) × 3.78541",
+      "faq": [
+        {
+          "question": "Сколько литров в 5 галлонах (US)?",
+          "answer": "5 US галлонов ≈ 18.927 литров."
+        },
+        {
+          "question": "Сколько литров в 10 галлонах (US)?",
+          "answer": "10 US галлонов ≈ 37.854 литра."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Галлон — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Галлон"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kub-metr-v-litr",
+    "id": "volume-m3-l",
+    "title": "Куб. метры в литры",
+    "description": "Конвертер объёма: перевод кубических метров в литры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m3",
+            "label": "м³ — кубические метры"
+          }
+        ],
+        "defaultValue": "m3"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в кубических метрах. Результат в литрах появится автоматически.",
+      "about": "Кубический метр — единица объёма в СИ. 1 м³ = 1000 литров. Используется в строительстве, логистике и водоснабжении.",
+      "formula": "л = м³ × 1000",
+      "faq": [
+        {
+          "question": "Сколько литров в 1 кубическом метре?",
+          "answer": "1 м³ = 1000 литров."
+        },
+        {
+          "question": "Сколько литров в 0.1 м³?",
+          "answer": "0.1 м³ = 100 литров."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кубический метр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кубический_метр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "litr-v-kub-metr",
+    "id": "volume-l-m3",
+    "title": "Литры в куб. метры",
+    "description": "Конвертер объёма: перевод литров в кубические метры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1000",
+        "defaultValue": 1000,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m3",
+            "label": "м³ — кубические метры"
+          }
+        ],
+        "defaultValue": "m3"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в литрах. Результат в кубических метрах появится автоматически.",
+      "about": "Перевод литров в кубические метры, удобный для расчёта объёмов бассейнов, цистерн и помещений.",
+      "formula": "м³ = л ÷ 1000",
+      "faq": [
+        {
+          "question": "Сколько м³ в 1000 литрах?",
+          "answer": "1000 литров = 1 м³."
+        },
+        {
+          "question": "Сколько м³ в 500 литрах?",
+          "answer": "500 литров = 0.5 м³."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кубический метр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кубический_метр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "barrel-v-litr",
+    "id": "volume-bbl-l",
+    "title": "Баррели (нефть) в литры",
+    "description": "Конвертер объёма: перевод нефтяных баррелей в литры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "bbl",
+            "label": "баррели (нефть)"
+          }
+        ],
+        "defaultValue": "bbl"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в нефтяных баррелях. Результат в литрах появится автоматически.",
+      "about": "Нефтяной баррель (bbl) — стандартная единица объёма в нефтегазовой промышленности. 1 баррель ≈ 158.987 литров.",
+      "formula": "л = баррели × 158.987",
+      "faq": [
+        {
+          "question": "Сколько литров в 1 нефтяном барреле?",
+          "answer": "1 нефтяной баррель ≈ 158.987 литров (42 US галлона)."
+        },
+        {
+          "question": "Сколько баррелей в 1 тонне нефти?",
+          "answer": "Зависит от плотности нефти. Для плотности ~850 кг/м³ 1 тонна ≈ 7.3 барреля."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Баррель (нефтяной) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Баррель_(нефтяной)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "litr-v-barrel",
+    "id": "volume-l-bbl",
+    "title": "Литры в баррели (нефть)",
+    "description": "Конвертер объёма: перевод литров в нефтяные баррели",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "159",
+        "defaultValue": 159,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "bbl",
+            "label": "баррели (нефть)"
+          }
+        ],
+        "defaultValue": "bbl"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в литрах. Результат в нефтяных баррелях появится автоматически.",
+      "about": "Перевод литров в нефтяные баррели. Используется в энергетике, логистике и финансовых расчётах.",
+      "formula": "баррели = л ÷ 158.987",
+      "faq": [
+        {
+          "question": "Сколько баррелей в 159 литрах?",
+          "answer": "159 литров ≈ 1 баррель."
+        },
+        {
+          "question": "Сколько баррелей в 1000 литрах?",
+          "answer": "1000 литров ≈ 6.29 баррелей."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Баррель (нефтяной) — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Баррель_(нефтяной)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "pinta-v-litr",
+    "id": "volume-pt-l",
+    "title": "Пинты в литры",
+    "description": "Конвертер объёма: перевод пинт в литры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "pt",
+            "label": "пт — пинты (US)"
+          }
+        ],
+        "defaultValue": "pt"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в пинтах. Результат в литрах появится автоматически.",
+      "about": "Пинта (pint) — единица объёма в англоязычных странах. 1 US пинта ≈ 0.473 литра. Используется в кулинарии и торговле.",
+      "formula": "л = пинты × 0.473176",
+      "faq": [
+        {
+          "question": "Сколько литров в 1 пинте (US)?",
+          "answer": "1 US пинта ≈ 0.473 литра."
+        },
+        {
+          "question": "Сколько литров в 2 пинтах?",
+          "answer": "2 пинты ≈ 0.946 литра (примерно 1 литр)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пинта — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пинта"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "litr-v-pinta",
+    "id": "volume-l-pt",
+    "title": "Литры в пинты",
+    "description": "Конвертер объёма: перевод литров в пинты",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "pt",
+            "label": "пт — пинты (US)"
+          }
+        ],
+        "defaultValue": "pt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в литрах. Результат в пинтах появится автоматически.",
+      "about": "Перевод литров в пинты (US). Удобен для работы с американскими рецептами из англоязычных стран.",
+      "formula": "пинты = л ÷ 0.473176",
+      "faq": [
+        {
+          "question": "Сколько пинт в 1 литре?",
+          "answer": "1 литр ≈ 2.113 пинты."
+        },
+        {
+          "question": "Сколько пинт в 0.5 литра?",
+          "answer": "0.5 литра ≈ 1.057 пинты."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пинта — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пинта"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kvart-v-litr",
+    "id": "volume-qt-l",
+    "title": "Кварты в литры",
+    "description": "Конвертер объёма: перевод кварт в литры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "qt",
+            "label": "кварт — кварты (US)"
+          }
+        ],
+        "defaultValue": "qt"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в квартах. Результат в литрах появится автоматически.",
+      "about": "Кварта (quart) — единица объёма, равная 2 пинтам или 1/4 галлона. 1 US кварта ≈ 0.946 литра.",
+      "formula": "л = кварты × 0.946353",
+      "faq": [
+        {
+          "question": "Сколько литров в 1 кварте (US)?",
+          "answer": "1 US кварта ≈ 0.946 литра."
+        },
+        {
+          "question": "Сколько литров в 4 квартах?",
+          "answer": "4 кварты ≈ 3.785 литра (1 US галлон)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кварта — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кварта"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "litr-v-kvart",
+    "id": "volume-l-qt",
+    "title": "Литры в кварты",
+    "description": "Конвертер объёма: перевод литров в кварты",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "qt",
+            "label": "кварт — кварты (US)"
+          }
+        ],
+        "defaultValue": "qt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в литрах. Результат в квартах появится автоматически.",
+      "about": "Перевод литров в кварты (US). Удобен для работы с американскими рецептами и инструкциями.",
+      "formula": "кварты = л ÷ 0.946353",
+      "faq": [
+        {
+          "question": "Сколько кварт в 1 литре?",
+          "answer": "1 литр ≈ 1.057 кварт."
+        },
+        {
+          "question": "Сколько кварт в 4 литрах?",
+          "answer": "4 литра ≈ 4.227 кварт."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Кварта — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Кварта"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "zhidk-unciya-v-ml",
+    "id": "volume-floz-ml",
+    "title": "Жидкие унции в миллилитры",
+    "description": "Конвертер объёма: перевод жидких унций в миллилитры",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "floz",
+            "label": "fl oz — жидкие унции (US)"
+          }
+        ],
+        "defaultValue": "floz"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ml",
+            "label": "мл — миллилитры"
+          }
+        ],
+        "defaultValue": "ml"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в жидких унциях. Результат в миллилитрах появится автоматически.",
+      "about": "Жидкая унция (fluid ounce) — единица объёма, используемая в США и Великобритании. 1 US fl oz ≈ 29.57 мл.",
+      "formula": "мл = fl oz × 29.5735",
+      "faq": [
+        {
+          "question": "Сколько мл в 1 жидкой унции (US)?",
+          "answer": "1 US fl oz ≈ 29.57 мл."
+        },
+        {
+          "question": "Сколько мл в 8 жидких унциях?",
+          "answer": "8 US fl oz ≈ 236.59 мл."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Жидкая унция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Жидкая_унция"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "ml-v-zhidk-unciya",
+    "id": "volume-ml-floz",
+    "title": "Миллилитры в жидкие унции",
+    "description": "Конвертер объёма: перевод миллилитров в жидкие унции",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Объём",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ml",
+            "label": "мл — миллилитры"
+          }
+        ],
+        "defaultValue": "ml"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "floz",
+            "label": "fl oz — жидкие унции (US)"
+          }
+        ],
+        "defaultValue": "floz"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём в миллилитрах. Результат в жидких унциях появится автоматически.",
+      "about": "Перевод миллилитров в жидкие унции (US). Полезен для работы с американскими рецептами и косметикой.",
+      "formula": "fl oz = мл ÷ 29.5735",
+      "faq": [
+        {
+          "question": "Сколько жидких унций в 30 мл?",
+          "answer": "30 мл ≈ 1.014 fl oz."
+        },
+        {
+          "question": "Сколько жидких унций в 250 мл?",
+          "answer": "250 мл ≈ 8.454 fl oz."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Жидкая унция — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Жидкая_унция"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-metr-v-sotka",
+    "id": "area-sqm-are",
+    "title": "М² в сотки",
+    "description": "Конвертер площади: перевод квадратных метров в сотки (ары)",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² — квадратные метры"
+          }
+        ],
+        "defaultValue": "sqm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "are",
+            "label": "сотки — ары"
+          }
+        ],
+        "defaultValue": "are"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных метрах. Результат в сотках появится автоматически.",
+      "about": "Сотка (ар) — единица площади, равная 100 квадратным метрам (10×10 м). Широко используется при продаже земельных участков.",
+      "formula": "сотки = м² ÷ 100",
+      "faq": [
+        {
+          "question": "Сколько соток в 100 м²?",
+          "answer": "100 м² = 1 сотка."
+        },
+        {
+          "question": "Сколько соток в 1000 м²?",
+          "answer": "1000 м² = 10 соток."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Сотка — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Ар_(единица_измерения)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "sotka-v-kv-metr",
+    "id": "area-are-sqm",
+    "title": "Сотки в м²",
+    "description": "Конвертер площади: перевод соток (аров) в квадратные метры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "are",
+            "label": "сотки — ары"
+          }
+        ],
+        "defaultValue": "are"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² — квадратные метры"
+          }
+        ],
+        "defaultValue": "sqm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в сотках. Результат в квадратных метрах появится автоматически.",
+      "about": "Сотка — популярная единица для измерения дачных и сельскохозяйственных участков в России и СНГ.",
+      "formula": "м² = сотки × 100",
+      "faq": [
+        {
+          "question": "Сколько м² в 1 сотке?",
+          "answer": "1 сотка = 100 м² (квадрат 10×10 м)."
+        },
+        {
+          "question": "Сколько м² в 6 сотках?",
+          "answer": "6 соток = 600 м²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Сотка — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Ар_(единица_измерения)"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "gektar-v-sotka",
+    "id": "area-ha-are",
+    "title": "Гектары в сотки",
+    "description": "Конвертер площади: перевод гектаров в сотки (ары)",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ha",
+            "label": "га — гектары"
+          }
+        ],
+        "defaultValue": "ha"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "are",
+            "label": "сотки — ары"
+          }
+        ],
+        "defaultValue": "are"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в гектарах. Результат в сотках появится автоматически.",
+      "about": "Гектар — крупная единица площади, равная 100 соткам или 10 000 м². Используется в сельском хозяйстве и кадастре.",
+      "formula": "сотки = га × 100",
+      "faq": [
+        {
+          "question": "Сколько соток в 1 гектаре?",
+          "answer": "1 га = 100 соток."
+        },
+        {
+          "question": "Сколько соток в 5 гектарах?",
+          "answer": "5 га = 500 соток."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гектар — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Гектар"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "sotka-v-gektar",
+    "id": "area-are-ha",
+    "title": "Сотки в гектары",
+    "description": "Конвертер площади: перевод соток (аров) в гектары",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "are",
+            "label": "сотки — ары"
+          }
+        ],
+        "defaultValue": "are"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ha",
+            "label": "га — гектары"
+          }
+        ],
+        "defaultValue": "ha"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в сотках. Результат в гектарах появится автоматически.",
+      "about": "Перевод соток в гектары. Удобен для оформления земельных документов и сельскохозяйственных расчётов.",
+      "formula": "га = сотки ÷ 100",
+      "faq": [
+        {
+          "question": "Сколько гектаров в 100 сотках?",
+          "answer": "100 соток = 1 га."
+        },
+        {
+          "question": "Сколько гектаров в 500 сотках?",
+          "answer": "500 соток = 5 га."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гектар — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Гектар"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "gektar-v-kv-km",
+    "id": "area-ha-sqkm",
+    "title": "Гектары в кв. км",
+    "description": "Конвертер площади: перевод гектаров в квадратные километры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "ha",
+            "label": "га — гектары"
+          }
+        ],
+        "defaultValue": "ha"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqkm",
+            "label": "км² — квадратные километры"
+          }
+        ],
+        "defaultValue": "sqkm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в гектарах. Результат в квадратных километрах появится автоматически.",
+      "about": "Квадратный километр — крупная единица площади, используемая для измерения территорий городов, лесов и полей.",
+      "formula": "км² = га ÷ 100",
+      "faq": [
+        {
+          "question": "Сколько км² в 100 гектарах?",
+          "answer": "100 га = 1 км²."
+        },
+        {
+          "question": "Сколько км² в 1 гектаре?",
+          "answer": "1 га = 0.01 км²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Квадратный километр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Квадратный_километр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-km-v-gektar",
+    "id": "area-sqkm-ha",
+    "title": "Кв. км в гектары",
+    "description": "Конвертер площади: перевод квадратных километров в гектары",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqkm",
+            "label": "км² — квадратные километры"
+          }
+        ],
+        "defaultValue": "sqkm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "ha",
+            "label": "га — гектары"
+          }
+        ],
+        "defaultValue": "ha"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных километрах. Результат в гектарах появится автоматически.",
+      "about": "Перевод крупных площадей (км²) в гектары. Удобен для агрономических и лесничих расчётов.",
+      "formula": "га = км² × 100",
+      "faq": [
+        {
+          "question": "Сколько гектаров в 1 км²?",
+          "answer": "1 км² = 100 га = 10 000 соток."
+        },
+        {
+          "question": "Сколько гектаров в 2 км²?",
+          "answer": "2 км² = 200 га."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Квадратный километр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Квадратный_километр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-metr-v-akr",
+    "id": "area-sqm-acre",
+    "title": "М² в акры",
+    "description": "Конвертер площади: перевод квадратных метров в акры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "4047",
+        "defaultValue": 4047,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² — квадратные метры"
+          }
+        ],
+        "defaultValue": "sqm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "acre",
+            "label": "акры"
+          }
+        ],
+        "defaultValue": "acre"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных метрах. Результат в акрах появится автоматически.",
+      "about": "Акр — единица площади в англоязычных странах. 1 акр ≈ 4046.86 м² ≈ 40.47 соток. Используется в сельском хозяйстве и недвижимости.",
+      "formula": "акры = м² ÷ 4046.86",
+      "faq": [
+        {
+          "question": "Сколько м² в 1 акре?",
+          "answer": "1 акр ≈ 4046.86 м²."
+        },
+        {
+          "question": "Сколько соток в 1 акре?",
+          "answer": "1 акр ≈ 40.47 соток."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Акр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Акр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "akr-v-kv-metr",
+    "id": "area-acre-sqm",
+    "title": "Акры в м²",
+    "description": "Конвертер площади: перевод акров в квадратные метры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "acre",
+            "label": "акры"
+          }
+        ],
+        "defaultValue": "acre"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² — квадратные метры"
+          }
+        ],
+        "defaultValue": "sqm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в акрах. Результат в квадратных метрах появится автоматически.",
+      "about": "Перевод акров в квадратные метры. Полезен при работе с зарубежной недвижимостью и сельскохозяйственными данными.",
+      "formula": "м² = акры × 4046.86",
+      "faq": [
+        {
+          "question": "Сколько м² в 2 акрах?",
+          "answer": "2 акра ≈ 8093.71 м²."
+        },
+        {
+          "question": "Сколько м² в 5 акрах?",
+          "answer": "5 акров ≈ 20 234.28 м²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Акр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Акр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-sm-v-kv-metr",
+    "id": "area-sqcm-sqm",
+    "title": "Кв. см в м²",
+    "description": "Конвертер площади: перевод квадратных сантиметров в квадратные метры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "10000",
+        "defaultValue": 10000,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqcm",
+            "label": "см² — квадратные сантиметры"
+          }
+        ],
+        "defaultValue": "sqcm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² — квадратные метры"
+          }
+        ],
+        "defaultValue": "sqm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных сантиметрах. Результат в квадратных метрах появится автоматически.",
+      "about": "Квадратный сантиметр — мелкая единица площади. 1 м² = 10 000 см². Используется для измерения небольших поверхностей.",
+      "formula": "м² = см² ÷ 10 000",
+      "faq": [
+        {
+          "question": "Сколько м² в 10 000 см²?",
+          "answer": "10 000 см² = 1 м²."
+        },
+        {
+          "question": "Сколько м² в 5000 см²?",
+          "answer": "5000 см² = 0.5 м²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Квадратный метр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Квадратный_метр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-metr-v-kv-sm",
+    "id": "area-sqm-sqcm",
+    "title": "М² в кв. см",
+    "description": "Конвертер площади: перевод квадратных метров в квадратные сантиметры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqm",
+            "label": "м² — квадратные метры"
+          }
+        ],
+        "defaultValue": "sqm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqcm",
+            "label": "см² — квадратные сантиметры"
+          }
+        ],
+        "defaultValue": "sqcm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных метрах. Результат в квадратных сантиметрах появится автоматически.",
+      "about": "Перевод м² в см². Удобен для расчётов площади материалов, кожи, бумаги и мелких поверхностей.",
+      "formula": "см² = м² × 10 000",
+      "faq": [
+        {
+          "question": "Сколько см² в 1 м²?",
+          "answer": "1 м² = 10 000 см²."
+        },
+        {
+          "question": "Сколько см² в 0.5 м²?",
+          "answer": "0.5 м² = 5000 см²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Квадратный метр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Квадратный_метр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-mm-v-kv-sm",
+    "id": "area-sqmm-sqcm",
+    "title": "Кв. мм в кв. см",
+    "description": "Конвертер площади: перевод квадратных миллиметров в квадратные сантиметры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqmm",
+            "label": "мм² — квадратные миллиметры"
+          }
+        ],
+        "defaultValue": "sqmm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqcm",
+            "label": "см² — квадратные сантиметры"
+          }
+        ],
+        "defaultValue": "sqcm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных миллиметрах. Результат в квадратных сантиметрах появится автоматически.",
+      "about": "Квадратный миллиметр — очень маленькая единица площади. 1 см² = 100 мм². Используется в инженерии, медицине и микроэлектронике.",
+      "formula": "см² = мм² ÷ 100",
+      "faq": [
+        {
+          "question": "Сколько см² в 100 мм²?",
+          "answer": "100 мм² = 1 см²."
+        },
+        {
+          "question": "Сколько см² в 50 мм²?",
+          "answer": "50 мм² = 0.5 см²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Квадратный сантиметр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Квадратный_сантиметр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  },
+  {
+    "slug": "kv-sm-v-kv-mm",
+    "id": "area-sqcm-sqmm",
+    "title": "Кв. см в кв. мм",
+    "description": "Конвертер площади: перевод квадратных сантиметров в квадратные миллиметры",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Площадь",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqcm",
+            "label": "см² — квадратные сантиметры"
+          }
+        ],
+        "defaultValue": "sqcm"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "sqmm",
+            "label": "мм² — квадратные миллиметры"
+          }
+        ],
+        "defaultValue": "sqmm"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь в квадратных сантиметрах. Результат в квадратных миллиметрах появится автоматически.",
+      "about": "Перевод см² в мм². Применяется в точных инженерных расчётах, печатных платах и медицинских измерениях.",
+      "formula": "мм² = см² × 100",
+      "faq": [
+        {
+          "question": "Сколько мм² в 1 см²?",
+          "answer": "1 см² = 100 мм²."
+        },
+        {
+          "question": "Сколько мм² в 0.5 см²?",
+          "answer": "0.5 см² = 50 мм²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Квадратный сантиметр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Квадратный_сантиметр"
+        }
+      ],
+      "updatedAt": "2026-04-27"
+    }
+  }
+]

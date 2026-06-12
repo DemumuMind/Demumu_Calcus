@@ -111,49 +111,60 @@ const POPULAR_VALUES = ['1', '10', '100'];
 const POPULAR_SIX = ['dlina', 'massa', 'temperatura', 'skorost', 'obem', 'informaciya'];
 const OTHER_SIX = ['ploshchad', 'energiya', 'davlenie', 'moshchnost', 'vremya', 'ugly'];
 
+function addPopularPairParams(
+  categorySlug: string,
+  units: string[],
+  values: string[],
+  add: (category: string, slug: string[]) => void
+) {
+  const priorityUnits = units.slice(0, 3);
+  for (const from of priorityUnits) {
+    for (const to of priorityUnits) {
+      if (from === to) continue;
+      add(categorySlug, [from, 'v', to]);
+      for (const val of values) {
+        add(categorySlug, [val, from, 'v', to]);
+      }
+    }
+  }
+}
+
+function addOtherPairParams(
+  categorySlug: string,
+  units: string[],
+  add: (category: string, slug: string[]) => void
+) {
+  const priorityUnits = units.slice(0, 2);
+  for (const from of priorityUnits) {
+    for (const to of priorityUnits) {
+      if (from === to) continue;
+      add(categorySlug, [from, 'v', to]);
+    }
+  }
+}
+
 export function generateStaticParams() {
   const seen = new Set<string>();
   const params: Array<{ category: string; slug: string[] }> = [];
 
   function add(category: string, slug: string[]) {
     const key = `${category}/${slug.join('/')}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      params.push({ category, slug });
-    }
+    if (seen.has(key)) return;
+    seen.add(key);
+    params.push({ category, slug });
   }
 
-  Object.values(allUnitCategories).forEach((category) => {
-    if (!POPULAR_CATEGORIES.includes(category.slug)) return;
+  for (const category of Object.values(allUnitCategories)) {
+    if (!POPULAR_CATEGORIES.includes(category.slug)) continue;
     const units = Object.keys(category.units);
 
     if (POPULAR_SIX.includes(category.slug)) {
-      // 3 priority units, 3 values → ~36 pages per category
-      const priorityUnits = units.slice(0, 3);
-      for (let i = 0; i < priorityUnits.length; i++) {
-        for (let j = 0; j < priorityUnits.length; j++) {
-          if (i !== j) {
-            add(category.slug, [priorityUnits[i], 'v', priorityUnits[j]]);
-            for (const val of POPULAR_VALUES) {
-              add(category.slug, [val, priorityUnits[i], 'v', priorityUnits[j]]);
-            }
-          }
-        }
-      }
+      addPopularPairParams(category.slug, units, POPULAR_VALUES, add);
     } else if (OTHER_SIX.includes(category.slug)) {
-      // base pairs only — no specific-value pages to save build time
-      const priorityUnits = units.slice(0, 2);
-      for (let i = 0; i < priorityUnits.length; i++) {
-        for (let j = 0; j < priorityUnits.length; j++) {
-          if (i !== j) {
-            add(category.slug, [priorityUnits[i], 'v', priorityUnits[j]]);
-          }
-        }
-      }
+      addOtherPairParams(category.slug, units, add);
     }
-  });
+  }
 
-  console.log(`Generated ${params.length} static converter pages`);
   return params;
 }
 

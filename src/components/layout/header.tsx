@@ -16,7 +16,25 @@ import {
 import { categories } from '@/lib/categories';
 import { useState } from 'react';
 
-function CategoryItem({ category, isMobile = false }: { category: typeof categories[0]; isMobile?: boolean }) {
+/** Reusable subcategory list */
+function SubcategoryList({ categorySlug, subs }: { categorySlug: string; subs: typeof categories[0]['subcategories'] }) {
+  return (
+    <div className="ml-4 flex flex-col border-l pl-2 animate-in slide-in-from-top-2 duration-200">
+      {subs.map((sub) => (
+        <Link
+          key={sub.id}
+          href={`/${categorySlug}/${sub.slug}`}
+          className="rounded-lg px-4 py-2 text-xs text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+        >
+          {sub.title}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+/** Reusable navigation item with expandable subcategories */
+function NavItem({ category, isMobile = false }: { category: typeof categories[0]; isMobile?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
@@ -32,25 +50,15 @@ function CategoryItem({ category, isMobile = false }: { category: typeof categor
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium hover:bg-accent transition-colors text-left"
         >
-          <span onClick={(e) => handleClick(e, `/${category.slug}`)} className="flex-1 cursor-pointer">
+          <button type="button" onClick={(e) => handleClick(e, `/${category.slug}`)} className="flex-1 cursor-pointer text-left">
             {category.title}
-          </span>
+          </button>
           {category.subcategories.length > 0 && (
             isOpen ? <ChevronDown className="h-4 w-4 shrink-0" /> : <ChevronRight className="h-4 w-4 shrink-0" />
           )}
         </button>
         {isOpen && category.subcategories.length > 0 && (
-          <div className="ml-4 flex flex-col border-l pl-2 animate-in slide-in-from-top-2 duration-200">
-            {category.subcategories.map((sub) => (
-              <Link
-                key={sub.id}
-                href={`/${category.slug}/${sub.slug}`}
-                className="rounded-lg px-4 py-2 text-xs text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
-              >
-                {sub.title}
-              </Link>
-            ))}
-          </div>
+          <SubcategoryList categorySlug={category.slug} subs={category.subcategories} />
         )}
       </div>
     );
@@ -75,19 +83,52 @@ function CategoryItem({ category, isMobile = false }: { category: typeof categor
         )}
       </div>
       {isOpen && category.subcategories.length > 0 && (
-        <div className="ml-4 flex flex-col border-l pl-2 animate-in slide-in-from-top-2 duration-200">
-          {category.subcategories.map((sub) => (
-            <Link
-              key={sub.id}
-              href={`/${category.slug}/${sub.slug}`}
-              className="rounded-lg px-4 py-2 text-xs text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
-            >
-              {sub.title}
-            </Link>
-          ))}
-        </div>
+        <SubcategoryList categorySlug={category.slug} subs={category.subcategories} />
       )}
     </div>
+  );
+}
+
+/** Shared menu sheet content for desktop and mobile */
+function MenuSheet({
+  label,
+  isMobile,
+  sheetTitle,
+  testId,
+}: {
+  label: string;
+  isMobile: boolean;
+  sheetTitle: string;
+  testId: string;
+}) {
+  return (
+    <Sheet>
+      <SheetTrigger
+        data-testid={testId}
+        render={
+          <Button variant="outline" size="sm" className="gap-2">
+            {label}
+            <Menu className="h-4 w-4" />
+          </Button>
+        }
+      />
+      <SheetContent side="right" className="w-80 overflow-y-auto">
+        <SheetHeader>
+          <SheetTitle>{sheetTitle}</SheetTitle>
+        </SheetHeader>
+        <nav className={`mt-6 flex flex-col gap-2 ${isMobile ? 'pb-20' : 'pb-8'}`}>
+          <Link
+            href="/"
+            className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-accent transition-colors"
+          >
+            Главная
+          </Link>
+          {categories.map((category) => (
+            <NavItem key={category.id} category={category} isMobile={isMobile} />
+          ))}
+        </nav>
+      </SheetContent>
+    </Sheet>
   );
 }
 
@@ -105,66 +146,13 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-4">
           <SearchBox variant="icon" />
           <ThemeToggle />
-
-          <Sheet>
-            <SheetTrigger
-              data-testid="desktop-menu-toggle"
-              render={
-                <Button variant="outline" size="sm" className="gap-2">
-                  Меню
-                  <Menu className="h-4 w-4" />
-                </Button>
-              }
-            />
-            <SheetContent side="right" className="w-80 overflow-y-auto">
-              <SheetHeader>
-                <SheetTitle>Категории</SheetTitle>
-              </SheetHeader>
-              <nav className="mt-6 flex flex-col gap-2 pb-8">
-                <Link
-                  href="/"
-                  className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-accent transition-colors"
-                >
-                  Главная
-                </Link>
-                {categories.map((category) => (
-                  <CategoryItem key={category.id} category={category} />
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <MenuSheet label="Меню" isMobile={false} sheetTitle="Категории" testId="desktop-menu-toggle" />
         </nav>
 
         <div className="flex md:hidden items-center gap-2">
           <SearchBox variant="icon" />
           <ThemeToggle />
-          <Sheet>
-            <SheetTrigger
-              data-testid="mobile-menu-toggle"
-              render={
-                <Button variant="outline" size="sm" className="gap-2">
-                  Меню
-                  <Menu className="h-4 w-4" />
-                </Button>
-              }
-            />
-            <SheetContent side="right" className="w-80 overflow-y-auto">
-              <SheetHeader>
-                <SheetTitle>Меню</SheetTitle>
-              </SheetHeader>
-              <nav className="mt-6 flex flex-col gap-2 pb-20">
-                <Link
-                  href="/"
-                  className="rounded-lg px-4 py-3 text-sm font-medium hover:bg-accent transition-colors"
-                >
-                  Главная
-                </Link>
-                {categories.map((category) => (
-                  <CategoryItem key={category.id} category={category} isMobile />
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <MenuSheet label="Меню" isMobile={true} sheetTitle="Меню" testId="mobile-menu-toggle" />
         </div>
       </div>
     </header>

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "size-converter",
+    "id": "size-converter",
+    "title": "Конвертер размеров одежды",
+    "description": "Переводите размеры одежды между разными системами",
+    "subcategory": "shopping",
+    "type": "converter",
+    "category": "fashion"
+  },
+  {
+    "slug": "shoe-size-converter",
+    "id": "shoe-size-fashion",
+    "title": "Конвертер размеров обуви",
+    "description": "Переводите размеры обуви между разными странами",
+    "subcategory": "shopping",
+    "type": "converter",
+    "category": "fashion"
+  },
+  {
+    "slug": "body-shape-calculator",
+    "id": "body-shape-calculator",
+    "title": "Калькулятор типа фигуры",
+    "description": "Определите свой тип фигуры по обхватам",
+    "subcategory": "style",
+    "type": "formula",
+    "category": "fashion"
+  },
+  {
+    "slug": "color-season-calculator",
+    "id": "color-season-calculator",
+    "title": "Калькулятор цветотипа",
+    "description": "Определите свой цветовой тип (весна, лето, осень, зима)",
+    "subcategory": "style",
+    "type": "formula",
+    "category": "fashion"
+  },
+  {
+    "slug": "bra-size-calculator",
+    "id": "bra-size-calculator",
+    "title": "Калькулятор размера бюстгальтера",
+    "description": "Определите правильный размер бюстгальтера",
+    "subcategory": "shopping",
+    "type": "arithmetic",
+    "category": "fashion"
+  },
+  {
+    "slug": "outfit-cost-calculator",
+    "id": "outfit-cost-calculator",
+    "title": "Калькулятор стоимости образа",
+    "description": "Рассчитайте стоимость комплекта одежды и cost-per-wear",
+    "subcategory": "budget",
+    "type": "arithmetic",
+    "category": "fashion"
+  },
+  {
+    "slug": "capsule-wardrobe-calculator",
+    "id": "capsule-wardrobe-calculator",
+    "title": "Калькулятор капсульного гардероба",
+    "description": "Рассчитайте минимальный набор одежды для разных образов",
+    "subcategory": "style",
+    "type": "formula",
+    "category": "fashion"
+  },
+  {
+    "slug": "jewelry-calculator",
+    "id": "jewelry-calculator",
+    "title": "Калькулятор украшений",
+    "description": "Подберите украшения по типу лица и образу",
+    "subcategory": "style",
+    "type": "arithmetic",
+    "category": "fashion"
+  }
+]

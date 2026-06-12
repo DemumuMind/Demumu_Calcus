@@ -60,7 +60,7 @@ export interface Calculator {
   inputs: InputField[];
   outputs: OutputField[];
   calculate: (inputs: Record<string, any>) => CalculationResult[] | any;
-  content: CalculatorContent;
+  content?: CalculatorContent;
   popularCalculations?: { value: number | string; url: string }[];
 }
 

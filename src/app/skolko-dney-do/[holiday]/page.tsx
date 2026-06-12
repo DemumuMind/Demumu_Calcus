@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Calendar, HelpCircle, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, HelpCircle, Clock } from "lucide-react";
 import {
   holidays,
   getHolidayBySlug,

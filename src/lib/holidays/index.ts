@@ -33,14 +33,7 @@ export function getSimilarHolidaysSorted(currentSlug: string, count: number = 4)
     .slice(0, count);
 }
 
-function isLeapYear(year: number): boolean {
-  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-}
 
-function daysInMonth(year: number, month: number): number {
-  const daysPerMonth = [31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  return daysPerMonth[month - 1];
-}
 
 function daysBetween(start: Date, end: Date): number {
   const oneDay = 24 * 60 * 60 * 1000;

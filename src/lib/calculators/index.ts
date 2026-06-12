@@ -1,343 +1,263 @@
-import { Calculator } from '../types';
-import { mathematicalCalculators } from './math';
-import { converterCalculators } from './converters';
-import { extendedConverters } from './converters-extended';
-import { advancedConverters } from './converters-advanced';
-import { healthCalculators } from './health';
-import { financeCalculators } from './finance';
-import { constructionCalculators } from './construction';
-import { constructionMoreCalculators } from './construction-more';
-import { areaVolumeCalculators } from './area-volume';
-import { timeDateCalculators } from './time-date';
-import { digitalCalculators } from './digital';
-import { dailyCalculators } from './daily';
-import { engineeringCalculators } from './engineering';
-import { engineeringMoreCalculators } from './engineering-more';
-import { generatorsMoreCalculators } from './generators-more';
-import { textCalculators } from './text';
-import { colorCalculators } from './color';
-import { colorToolsCalculators } from './color-tools';
-import { generatorCalculators, passwordGenerator } from './generators';
-import { financeAdvancedCalculators } from './finance-advanced';
-import { financeMoreCalculators } from './finance-more';
-import { transportCalculators } from './transport';
-import { geometryCalculators } from './geometry';
-import { healthExtendedCalculators } from './health-extended';
-import { healthExtendedMoreCalculators } from './health-extended-more';
-import { dailyExtendedCalculators } from './daily-extended';
-import { mathAdvancedCalculators } from './math-advanced';
-import { physicsCalculators } from './physics';
-import { technologyCalculators } from './technology';
+import type { Calculator } from '../types';
+import type { ComputeFn } from './compute-helpers';
+import { computeMap_construction_a_1 } from './compute-construction_a_1';
+import { computeMap_construction_a_2 } from './compute-construction_a_2';
+import { computeMap_construction_b_1 } from './compute-construction_b_1';
+import { computeMap_construction_b_2 } from './compute-construction_b_2';
+import { computeMap_clothing_sizes } from './compute-conv-clothing-sizes';
+import { computeMap_currency } from './compute-conv-currency';
+import { computeMap_length_mass } from './compute-conv-length-mass';
+import { computeMap_temp_speed_a } from './compute-conv-temp-speed_a';
+import { computeMap_temp_speed_b } from './compute-conv-temp-speed_b';
+import { computeMap_conv_energy_power_1 } from './compute-conv_energy_power_1';
+import { computeMap_conv_energy_power_2 } from './compute-conv_energy_power_2';
+import { computeMap_conv_pressure_area_1 } from './compute-conv_pressure_area_1';
+import { computeMap_conv_pressure_area_2 } from './compute-conv_pressure_area_2';
+import { computeMap_daily_daily_a_1 } from './compute-daily_daily_a_1';
+import { computeMap_daily_daily_a_2 } from './compute-daily_daily_a_2';
+import { computeMap_daily_daily_a_3 } from './compute-daily_daily_a_3';
+import { computeMap_daily_daily_a_4 } from './compute-daily_daily_a_4';
+import { computeMap_daily_daily_a_5 } from './compute-daily_daily_a_5';
+import { computeMap_daily_daily_b_1 } from './compute-daily_daily_b_1';
+import { computeMap_daily_daily_b_2 } from './compute-daily_daily_b_2';
+import { computeMap_daily_daily_b_3 } from './compute-daily_daily_b_3';
+import { computeMap_daily_daily_b_4 } from './compute-daily_daily_b_4';
+import { computeMap_daily_daily_b_5 } from './compute-daily_daily_b_5';
+import { computeMap_finance_a_1 } from './compute-finance_a_1';
+import { computeMap_finance_a_2 } from './compute-finance_a_2';
+import { computeMap_finance_b_1 } from './compute-finance_b_1';
+import { computeMap_finance_b_2 } from './compute-finance_b_2';
+import { computeMap_health_beauty } from './compute-health-beauty';
+import { computeMap_health_health2_a_1 } from './compute-health_health2_a_1';
+import { computeMap_health_health2_a_2 } from './compute-health_health2_a_2';
+import { computeMap_health_health2_a_3 } from './compute-health_health2_a_3';
+import { computeMap_health_health2_a_4 } from './compute-health_health2_a_4';
+import { computeMap_health_health2_b_1 } from './compute-health_health2_b_1';
+import { computeMap_health_health2_b_2 } from './compute-health_health2_b_2';
+import { computeMap_health_health2_b_3 } from './compute-health_health2_b_3';
+import { computeMap_health_health2_b_4 } from './compute-health_health2_b_4';
+import { computeMap_hobby_a } from './compute-hobby_a';
+import { computeMap_hobby_b_1 } from './compute-hobby_b_1';
+import { computeMap_hobby_b_2 } from './compute-hobby_b_2';
+import { computeMap_other_other2_a_1 } from './compute-other_other2_a_1';
+import { computeMap_other_other2_a_2 } from './compute-other_other2_a_2';
+import { computeMap_other_other2_a_3 } from './compute-other_other2_a_3';
+import { computeMap_other_other2_a_4 } from './compute-other_other2_a_4';
+import { computeMap_other_other2_a_5 } from './compute-other_other2_a_5';
+import { computeMap_other_other2_b_1 } from './compute-other_other2_b_1';
+import { computeMap_other_other2_b_2 } from './compute-other_other2_b_2';
+import { computeMap_other_other2_b_3 } from './compute-other_other2_b_3';
+import { computeMap_other_other2_b_4 } from './compute-other_other2_b_4';
+import { computeMap_other_other2_b_5 } from './compute-other_other2_b_5';
+import { computeMap_science_science_a_1 } from './compute-science_science_a_1';
+import { computeMap_science_science_a_2 } from './compute-science_science_a_2';
+import { computeMap_science_science_a_3 } from './compute-science_science_a_3';
+import { computeMap_science_science_a_4 } from './compute-science_science_a_4';
+import { computeMap_science_science_a_5 } from './compute-science_science_a_5';
+import { computeMap_science_science_b_1 } from './compute-science_science_b_1';
+import { computeMap_science_science_b_2 } from './compute-science_science_b_2';
+import { computeMap_science_science_b_3 } from './compute-science_science_b_3';
+import { computeMap_science_science_b_4 } from './compute-science_science_b_4';
+import { computeMap_tech_it_a_1 } from './compute-tech_it_a_1';
+import { computeMap_tech_it_a_2 } from './compute-tech_it_a_2';
+import { computeMap_tech_it_a_3 } from './compute-tech_it_a_3';
+import { computeMap_tech_it_a_4 } from './compute-tech_it_a_4';
+import { computeMap_tech_it_b_1 } from './compute-tech_it_b_1';
+import { computeMap_tech_it_b_2 } from './compute-tech_it_b_2';
 
-import { datetimeCalculators } from './datetime';
+// JSON data
+import additional_calculators from './data/additional-calculators.json';
+import area_volume from './data/area-volume.json';
+import baking_form_calculator from './data/baking-form-calculator.json';
+import beauty_care from './data/beauty-care.json';
+import business_marketing from './data/business-marketing.json';
+import color_tools from './data/color-tools.json';
+import color from './data/color.json';
+import construction_additional from './data/construction-additional.json';
+import construction_extended from './data/construction-extended.json';
+import construction_final from './data/construction-final.json';
+import construction_more from './data/construction-more.json';
+import construction from './data/construction.json';
+import converters_advanced from './data/converters-advanced.json';
+import converters_ancient from './data/converters-ancient.json';
+import converters_astronomy from './data/converters-astronomy.json';
+import converters_cooking from './data/converters-cooking.json';
+import converters_currency from './data/converters-currency.json';
+import converters_extended from './data/converters-extended.json';
+import converters_length_mass from './data/converters-length-mass.json';
+import converters_more from './data/converters-more.json';
+import converters_pressure_area from './data/converters-pressure-area.json';
+import converters_pressure_energy_power_time_angles_data from './data/converters-pressure-energy-power-time-angles-data.json';
+import converters_sizes_travel_pairs from './data/converters-sizes-travel-pairs.json';
+import converters_special_more from './data/converters-special-more.json';
+import converters_special_pairs from './data/converters-special-pairs.json';
+import converters_special from './data/converters-special.json';
+import converters_temp_speed_volume_area from './data/converters-temp-speed-volume-area.json';
+import converters_travel from './data/converters-travel.json';
+import converters from './data/converters.json';
+import cooking_food from './data/cooking-food.json';
+import daily_extended from './data/daily-extended.json';
+import daily_more_1 from './data/daily-more-1.json';
+import daily_more_2 from './data/daily-more-2.json';
+import daily_more_3 from './data/daily-more-3.json';
+import daily from './data/daily.json';
+import datetime from './data/datetime.json';
+import digital from './data/digital.json';
+import diy_crafts from './data/diy-crafts.json';
+import education_learning from './data/education-learning.json';
+import engineering_more from './data/engineering-more.json';
+import engineering from './data/engineering.json';
+import environment_ecology from './data/environment-ecology.json';
+import fashion_style from './data/fashion-style.json';
+import finance_advanced from './data/finance-advanced.json';
+import finance_extended from './data/finance-extended.json';
+import finance_more from './data/finance-more.json';
+import finance_russian from './data/finance-russian.json';
+import finance from './data/finance.json';
+import fitness_bodybuilding from './data/fitness-bodybuilding.json';
+import generators_more from './data/generators-more.json';
+import generators from './data/generators.json';
+import geometry from './data/geometry.json';
+import health_extended_more from './data/health-extended-more.json';
+import health_extended from './data/health-extended.json';
+import health_more_1 from './data/health-more-1.json';
+import health_more_2 from './data/health-more-2.json';
+import health_more_3 from './data/health-more-3.json';
+import health from './data/health.json';
+import hobbies_photography from './data/hobbies-photography.json';
+import hobby_garden from './data/hobby-garden.json';
+import home_maintenance from './data/home-maintenance.json';
+import it_devops from './data/it-devops.json';
+import math_advanced from './data/math-advanced.json';
+import math from './data/math.json';
+import missing_calculators from './data/missing-calculators.json';
+import music_audio from './data/music-audio.json';
+import niche_calculators from './data/niche-calculators.json';
+import parenting_baby from './data/parenting-baby.json';
+import percentage_calculators from './data/percentage-calculators.json';
+import pet_care from './data/pet-care.json';
+import physics_more from './data/physics-more.json';
+import physics from './data/physics.json';
+import pomodoro_calculator from './data/pomodoro-calculator.json';
+import remaining_calculators from './data/remaining-calculators.json';
+import shopping_deals from './data/shopping-deals.json';
+import sports_fitness from './data/sports-fitness.json';
+import technology from './data/technology.json';
+import text_tools from './data/text-tools.json';
+import text from './data/text.json';
+import time_date from './data/time-date.json';
+import tips_calculator from './data/tips-calculator.json';
+import transport from './data/transport.json';
 
-import { specialConverters } from './converters-special';
-import { specialConvertersMore } from './converters-special-more';
-import { currencyConverters } from './converters-currency';
-import { currencyFrequencyForceConverters } from './converters-currency-frequency-force';
-import { constructionFinalCalculators } from './construction-final';
-import { constructionExtendedCalculators } from './construction-extended';
-import { healthMore1Calculators } from './health-more-1';
-import { healthMore2Calculators } from './health-more-2';
-import { healthMore3Calculators } from './health-more-3';
-import { dailyMore1Calculators } from './daily-more-1';
-import { dailyMore2Calculators } from './daily-more-2';
-import { dailyMore3Calculators } from './daily-more-3';
-import { textToolsCalculators } from './text-tools';
-import { physicsMoreCalculators } from './physics-more';
-import { financeExtendedCalculators } from './finance-extended';
-import { sportsFitnessCalculators } from './sports-fitness';
-import { moreConvertersCalculators } from './converters-more';
-import { hobbiesPhotographyCalculators } from './hobbies-photography';
-import { businessMarketingCalculators } from './business-marketing';
-import { musicAudioCalculators } from './music-audio';
-import { petCareCalculators } from './pet-care';
-import { astronomyCalculators } from './converters-astronomy';
-import { cookingFoodCalculators } from './cooking-food';
-import { homeMaintenanceCalculators } from './home-maintenance';
-import { itDevopsCalculators } from './it-devops';
-import { ancientConvertersCalculators } from './converters-ancient';
-import { travelConvertersCalculators } from './converters-travel';
-import { gardeningCalculators } from './hobby-garden';
-import { beautyCareCalculators } from './beauty-care';
-import { convertersCookingCalculators } from './converters-cooking';
-import { fitnessBodybuildingCalculators } from './fitness-bodybuilding';
-import { educationLearningCalculators } from './education-learning';
-import { diyCraftsCalculators } from './diy-crafts';
-import { environmentEcologyCalculators } from './environment-ecology';
-import { parentingBabyCalculators } from './parenting-baby';
-import { fashionStyleCalculators } from './fashion-style';
-import { shoppingDealsCalculators } from './shopping-deals';
-import { bmiCalculator, calorieCalculator, mortgageCalculator } from './additional-calculators';
-import { tipsCalculators } from './tips-calculator';
-import { pomodoroCalculators } from './pomodoro-calculator';
-import { bakingFormCalculators } from './baking-form-calculator';
-import { remainingCalculators } from './remaining-calculators';
-import { nicheCalculators } from './niche-calculators';
-import { percentageCalculators } from './percentage-calculators';
-import { timerCalculators } from './timer-calculators';
-import { cookingCalculators } from './cooking-calculators';
-import { russianFinanceCalculators } from './finance-russian';
-import { additionalConstructionCalculators } from './construction-additional';
-import { pressureAreaConverters } from './converters-pressure-area';
-import { lengthMassConverters } from './converters-length-mass';
-import { missingCalculators } from './missing-calculators';
-import { allConverters as pressureEnergyPowerTimeAnglesConverters } from './converters-pressure-energy-power-time-angles-data';
-import { tempSpeedVolumeAreaConverters } from './converters-temp-speed-volume-area';
-import { specialPairConverters } from './converters-special-pairs';
-import { sizeTravelPairConverters } from './converters-sizes-travel-pairs';
-
-export const simpleCalculator: Calculator = {
-  id: 'simple-calculator',
-  slug: 'prostoj-kalkulyator',
-  title: 'Простой калькулятор',
-  description: 'Базовые арифметические операции: сложение, вычитание, умножение, деление',
-  category: 'nauka-i-ucheba',
-  subcategory: 'matematicheskie',
-  type: 'arithmetic',
-  inputs: [],
-  outputs: [],
-  calculate: () => [],
-  content: {
-    howTo: 'Используйте кнопки калькулятора для ввода чисел и операций. Нажмите C для сброса, = для получения результата.',
-    about: 'Простой калькулятор для базовых арифметических операций: сложение (+), вычитание (-), умножение (×), деление (÷).',
-    usage: 'Подходит для быстрых расчётов в повседневной жизни, учёбе и работе.',
-    formula: 'Следуйте стандартным правилам арифметики: сначала умножение и деление, затем сложение и вычитание.',
-    faq: [
-      {
-        question: 'Как сбросить результат?',
-        answer: 'Нажмите кнопку C для полного сброса калькулятора.'
-      },
-      {
-        question: 'Можно ли использовать клавиатуру?',
-        answer: 'Да, вы можете вводить цифры и операции с клавиатуры.'
-      },
-      {
-        question: 'Какое максимальное число?',
-        answer: 'Калькулятор поддерживает числа до 15 значащих цифр.'
-      }
-    ],
-    sources: [
-      { title: 'Арифметика — Википедия', url: 'https://ru.wikipedia.org/wiki/Арифметика' }
-    ],
-    updatedAt: '2026-04-07'
-  }
+const computeMap: Record<string, ComputeFn> = {
+  ...computeMap_construction_a_1, ...computeMap_construction_a_2, ...computeMap_construction_b_1, ...computeMap_construction_b_2, ...computeMap_clothing_sizes, ...computeMap_currency, ...computeMap_length_mass, ...computeMap_temp_speed_a, ...computeMap_temp_speed_b, ...computeMap_conv_energy_power_1, ...computeMap_conv_energy_power_2, ...computeMap_conv_pressure_area_1, ...computeMap_conv_pressure_area_2, ...computeMap_daily_daily_a_1, ...computeMap_daily_daily_a_2, ...computeMap_daily_daily_a_3, ...computeMap_daily_daily_a_4, ...computeMap_daily_daily_a_5, ...computeMap_daily_daily_b_1, ...computeMap_daily_daily_b_2, ...computeMap_daily_daily_b_3, ...computeMap_daily_daily_b_4, ...computeMap_daily_daily_b_5, ...computeMap_finance_a_1, ...computeMap_finance_a_2, ...computeMap_finance_b_1, ...computeMap_finance_b_2, ...computeMap_health_beauty, ...computeMap_health_health2_a_1, ...computeMap_health_health2_a_2, ...computeMap_health_health2_a_3, ...computeMap_health_health2_a_4, ...computeMap_health_health2_b_1, ...computeMap_health_health2_b_2, ...computeMap_health_health2_b_3, ...computeMap_health_health2_b_4, ...computeMap_hobby_a, ...computeMap_hobby_b_1, ...computeMap_hobby_b_2, ...computeMap_other_other2_a_1, ...computeMap_other_other2_a_2, ...computeMap_other_other2_a_3, ...computeMap_other_other2_a_4, ...computeMap_other_other2_a_5, ...computeMap_other_other2_b_1, ...computeMap_other_other2_b_2, ...computeMap_other_other2_b_3, ...computeMap_other_other2_b_4, ...computeMap_other_other2_b_5, ...computeMap_science_science_a_1, ...computeMap_science_science_a_2, ...computeMap_science_science_a_3, ...computeMap_science_science_a_4, ...computeMap_science_science_a_5, ...computeMap_science_science_b_1, ...computeMap_science_science_b_2, ...computeMap_science_science_b_3, ...computeMap_science_science_b_4, ...computeMap_tech_it_a_1, ...computeMap_tech_it_a_2, ...computeMap_tech_it_a_3, ...computeMap_tech_it_a_4, ...computeMap_tech_it_b_1, ...computeMap_tech_it_b_2
 };
 
-export const kmhToMsConverter: Calculator = {
-  id: 'kmh-to-ms',
-  slug: 'km-ch-v-m-s',
-  title: 'Км/ч в м/с',
-  description: 'Онлайн конвертер: км/ч в м/с. Быстрый и точный перевод единиц.',
-  category: 'konvertery',
-  subcategory: 'conv-skorost',
-  type: 'converter',
-  inputs: [
-    {
-      name: 'value',
-      label: 'Значение',
-      type: 'number',
-      placeholder: '1',
-      defaultValue: 1
-    },
-    {
-      name: 'from',
-      label: 'Из',
-      type: 'select',
-      options: [
-        { value: 'kmh', label: 'км/ч' },
-        { value: 'ms', label: 'м/с' },
-        { value: 'mph', label: 'миль/ч' },
-        { value: 'knot', label: 'узлы' }
-      ],
-      defaultValue: 'kmh'
-    },
-    {
-      name: 'to',
-      label: 'В',
-      type: 'select',
-      options: [
-        { value: 'kmh', label: 'км/ч' },
-        { value: 'ms', label: 'м/с' },
-        { value: 'mph', label: 'миль/ч' },
-        { value: 'knot', label: 'узлы' }
-      ],
-      defaultValue: 'ms'
-    }
-  ],
-  outputs: [
-    { name: 'result', label: 'Результат', type: 'text' }
-  ],
-  calculate: (inputs) => {
-    const value = Number(inputs.value);
-    const from = String(inputs.from);
-    const to = String(inputs.to);
-    
-    if (!value) return [{ value: '—', label: 'Результат' }];
-    
-    let ms = 0;
-    switch (from) {
-      case 'kmh': ms = value / 3.6; break;
-      case 'ms': ms = value; break;
-      case 'mph': ms = value * 0.44704; break;
-      case 'knot': ms = value * 0.514444; break;
-    }
-    
-    let result = 0;
-    switch (to) {
-      case 'kmh': result = ms * 3.6; break;
-      case 'ms': result = ms; break;
-      case 'mph': result = ms / 0.44704; break;
-      case 'knot': result = ms / 0.514444; break;
-    }
-    
-    const fromLabel = from === 'kmh' ? 'км/ч' : from === 'ms' ? 'м/с' : from === 'mph' ? 'миль/ч' : 'узлов';
-    const toLabel = to === 'kmh' ? 'км/ч' : to === 'ms' ? 'м/с' : to === 'mph' ? 'миль/ч' : 'узлов';
-    
-    return [{
-      value: `${value} ${fromLabel} = ${Math.round(result * 100000) / 100000} ${toLabel}`,
-      label: 'Результат'
-    }];
-  },
-  content: {
-    howTo: 'Введите значение скорости, выберите единицы измерения "из" и "в". Результат появится автоматически.',
-    about: 'Конвертер скорости для перевода между различными единицами измерения: км/ч, м/с, мили/ч, узлы.',
-    usage: 'Используется для перевода скорости в физике, спорте, навигации и повседневной жизни.',
-    formula: '1 км/ч = 0.277778 м/с = 0.621371 миль/ч = 0.539957 узлов',
-    faq: [
-      {
-        question: 'Как перевести км/ч в м/с?',
-        answer: 'Умножьте значение в км/ч на 0.277778 или разделите на 3.6.'
-      },
-      {
-        question: 'Сколько м/с в 1 км/ч?',
-        answer: 'В 1 км/ч содержится примерно 0.278 м/с.'
-      }
-    ],
-    sources: [
-      { title: 'Единицы измерения скорости — Википедия', url: 'https://ru.wikipedia.org/wiki/Единицы_и_эталоны_скорости' }
-    ],
-    updatedAt: '2026-04-07'
-  },
-  popularCalculations: [
-    { value: '1 км/ч в м/с', url: '/km-ch-v-m-s?value=1&from=kmh&to=ms' },
-    { value: '60 км/ч в м/с', url: '/km-ch-v-m-s?value=60&from=kmh&to=ms' },
-    { value: '100 км/ч в м/с', url: '/km-ch-v-m-s?value=100&from=kmh&to=ms' }
-  ]
-};
-
-export const calculators: Calculator[] = [
-  simpleCalculator,
-  kmhToMsConverter,
-  ...mathematicalCalculators,
-  ...mathAdvancedCalculators,
-  ...physicsCalculators,
-  ...physicsMoreCalculators,
-  ...technologyCalculators,
-  ...geometryCalculators,
-  ...converterCalculators,
-  ...extendedConverters,
-  ...advancedConverters,
-  ...specialConverters,
-  ...specialConvertersMore,
-  ...currencyConverters,
-  ...currencyFrequencyForceConverters,
-  ...moreConvertersCalculators,
-  ...healthCalculators,
-  ...healthExtendedCalculators,
-  ...healthExtendedMoreCalculators,
-  ...healthMore1Calculators,
-  ...healthMore2Calculators,
-  ...healthMore3Calculators,
-  ...financeCalculators,
-  ...financeAdvancedCalculators,
-  ...financeMoreCalculators,
-  ...financeExtendedCalculators,
-  ...constructionCalculators,
-  ...constructionMoreCalculators,
-  ...constructionFinalCalculators,
-  ...constructionExtendedCalculators,
-  ...areaVolumeCalculators,
-  ...timeDateCalculators,
-  ...datetimeCalculators,
-  ...digitalCalculators,
-  ...dailyCalculators,
-  ...dailyExtendedCalculators,
-  ...dailyMore1Calculators,
-  ...dailyMore2Calculators,
-  ...dailyMore3Calculators,
-  ...textToolsCalculators,
-  ...engineeringCalculators,
-  ...engineeringMoreCalculators,
-  ...textCalculators,
-  ...colorCalculators,
-  ...colorToolsCalculators,
-  ...generatorCalculators,
-  ...generatorsMoreCalculators,
-  ...transportCalculators,
-  ...sportsFitnessCalculators,
-  ...hobbiesPhotographyCalculators,
-  ...businessMarketingCalculators,
-  ...musicAudioCalculators,
-  ...petCareCalculators,
-  ...astronomyCalculators,
-  ...cookingFoodCalculators,
-  ...homeMaintenanceCalculators,
-  ...itDevopsCalculators,
-  ...ancientConvertersCalculators,
-  ...travelConvertersCalculators,
-  ...gardeningCalculators,
-  ...beautyCareCalculators,
-  ...convertersCookingCalculators,
-  ...fitnessBodybuildingCalculators,
-  ...educationLearningCalculators,
-  ...diyCraftsCalculators,
-  ...environmentEcologyCalculators,
-  ...parentingBabyCalculators,
-  ...fashionStyleCalculators,
-  ...shoppingDealsCalculators,
-  ...tipsCalculators,
-  ...pomodoroCalculators,
-  ...bakingFormCalculators,
-  ...nicheCalculators,
-  bmiCalculator,
-  calorieCalculator,
-  mortgageCalculator,
-  ...remainingCalculators,
-  ...percentageCalculators,
-  ...timerCalculators,
-  ...cookingCalculators,
-  ...russianFinanceCalculators,
-  ...additionalConstructionCalculators,
-  ...pressureAreaConverters,
-  ...lengthMassConverters,
-  ...missingCalculators,
-  ...pressureEnergyPowerTimeAnglesConverters,
-  ...tempSpeedVolumeAreaConverters,
-  ...currencyFrequencyForceConverters,
-  ...specialPairConverters,
-  ...sizeTravelPairConverters,
+const allJsonData: any[] = [
+  ...additional_calculators,
+  ...area_volume,
+  ...baking_form_calculator,
+  ...beauty_care,
+  ...business_marketing,
+  ...color_tools,
+  ...color,
+  ...construction_additional,
+  ...construction_extended,
+  ...construction_final,
+  ...construction_more,
+  ...construction,
+  ...converters_advanced,
+  ...converters_ancient,
+  ...converters_astronomy,
+  ...converters_cooking,
+  ...converters_currency,
+  ...converters_extended,
+  ...converters_length_mass,
+  ...converters_more,
+  ...converters_pressure_area,
+  ...converters_pressure_energy_power_time_angles_data,
+  ...converters_sizes_travel_pairs,
+  ...converters_special_more,
+  ...converters_special_pairs,
+  ...converters_special,
+  ...converters_temp_speed_volume_area,
+  ...converters_travel,
+  ...converters,
+  ...cooking_food,
+  ...daily_extended,
+  ...daily_more_1,
+  ...daily_more_2,
+  ...daily_more_3,
+  ...daily,
+  ...datetime,
+  ...digital,
+  ...diy_crafts,
+  ...education_learning,
+  ...engineering_more,
+  ...engineering,
+  ...environment_ecology,
+  ...fashion_style,
+  ...finance_advanced,
+  ...finance_extended,
+  ...finance_more,
+  ...finance_russian,
+  ...finance,
+  ...fitness_bodybuilding,
+  ...generators_more,
+  ...generators,
+  ...geometry,
+  ...health_extended_more,
+  ...health_extended,
+  ...health_more_1,
+  ...health_more_2,
+  ...health_more_3,
+  ...health,
+  ...hobbies_photography,
+  ...hobby_garden,
+  ...home_maintenance,
+  ...it_devops,
+  ...math_advanced,
+  ...math,
+  ...missing_calculators,
+  ...music_audio,
+  ...niche_calculators,
+  ...parenting_baby,
+  ...percentage_calculators,
+  ...pet_care,
+  ...physics_more,
+  ...physics,
+  ...pomodoro_calculator,
+  ...remaining_calculators,
+  ...shopping_deals,
+  ...sports_fitness,
+  ...technology,
+  ...text_tools,
+  ...text,
+  ...time_date,
+  ...tips_calculator,
+  ...transport,
 ];
 
-const calculatorSlugMap = new Map<string, Calculator>(calculators.map(calc => [calc.slug, calc]));
+export function getCalculators(): Calculator[] {
+  return allJsonData.map((calc: any) => ({
+    ...calc,
+    inputs: calc.inputs || [],
+    outputs: calc.outputs || [],
+    content: calc.content || { howTo: '', about: '', faq: [], sources: [], updatedAt: '' },
+    compute: computeMap[calc.slug] || (() => [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }])
+  }));
+}
+
+export const calculators = getCalculators();
 
 export function getCalculatorBySlug(slug: string): Calculator | undefined {
-  return calculatorSlugMap.get(slug);
+  return calculators.find((c: Calculator) => c.slug === slug);
 }
 
-export function getCalculatorsByCategory(categorySlug: string): Calculator[] {
-  return calculators.filter(calc => calc.category === categorySlug);
+export function getCalculatorsByCategory(category: string): Calculator[] {
+  return calculators.filter((c: Calculator) => c.category === category);
 }
 
-export function getCalculatorsBySubcategory(subcategorySlug: string): Calculator[] {
-  return calculators.filter(calc => calc.subcategory === subcategorySlug);
-}
-
-export function searchCalculators(query: string): Calculator[] {
-  const lowerQuery = query.toLowerCase();
-  return calculators.filter(calc => 
-    calc.title.toLowerCase().includes(lowerQuery) ||
-    calc.description.toLowerCase().includes(lowerQuery) ||
-    calc.category.toLowerCase().includes(lowerQuery)
-  );
+export function getCalculatorsBySubcategory(subcategory: string): Calculator[] {
+  return calculators.filter((c: Calculator) => c.subcategory === subcategory);
 }

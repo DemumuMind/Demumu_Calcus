@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Calculator } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { categories } from '@/lib/categories';
 import { getCategoryStyle } from '@/lib/category-styles';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Категории калькуляторов — Calcus',
-  description: 'Все категории онлайн-калькуляторов: математика, финансы, здоровье, конвертеры и многое другое.',
-};
+  description: 'Все категории онлайн-калькуляторов: математика, финансы, здоровье, конвертеры и многое другое.' };
 
 export default function CategoriesPage() {
   return (

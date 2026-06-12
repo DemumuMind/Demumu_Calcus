@@ -10,19 +10,15 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { ChefHat, ArrowRightLeft, Copy, Check } from 'lucide-react';
-import { 
-  cookingIngredients, 
+  SelectValue } from '@/components/ui/select';
+import { ChefHat, Copy, Check } from 'lucide-react';
+import {
+  cookingIngredients,
   standardMeasures,
   measureToGrams,
   gramsToMeasure,
   getIngredientCategories,
-  getIngredientsByCategory,
-  type CookingIngredient,
-  type CookingMeasure,
-} from '@/lib/cooking';
+  getIngredientsByCategory } from "@/lib/cooking";
 
 interface CookingConverterProps {
   initialIngredient?: string;
@@ -33,8 +29,7 @@ interface CookingConverterProps {
 export function CookingConverter({
   initialIngredient,
   initialMeasure,
-  initialValue = 1,
-}: CookingConverterProps) {
+  initialValue = 1 }: CookingConverterProps) {
   const ingredients = Object.values(cookingIngredients);
   const measures = Object.values(standardMeasures);
   const categories = getIngredientCategories();

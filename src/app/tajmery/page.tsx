@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Timer, Clock, ArrowRight } from 'lucide-react';
-import { timerPresets, getTimersByCategory } from '@/lib/timers';
+import { Clock } from "lucide-react";
+import { getTimersByCategory } from "@/lib/timers";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Онлайн таймеры — обратный отсчёт',
   description: 'Бесплатные онлайн таймеры обратного отсчёта. 5 секунд до 24 часов. С звуковым сигналом. Не требует установки.',
-  keywords: 'таймер онлайн, таймер обратного отсчёта, онлайн секундомер',
-};
+  keywords: 'таймер онлайн, таймер обратного отсчёта, онлайн секундомер' };
 
 export default function TimersPage() {
   const categories = getTimersByCategory();

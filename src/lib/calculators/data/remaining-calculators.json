@@ -1,0 +1,1411 @@
+[
+  {
+    "slug": "shagi-v-kilometry",
+    "id": "steps-to-distance",
+    "title": "Калькулятор шагов и расстояния",
+    "description": "Переводит количество шагов в километры и мили с учётом роста и длины шага",
+    "subcategory": "sport-i-aktivnost",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "steps",
+        "label": "Количество шагов",
+        "type": "number",
+        "placeholder": "10000",
+        "min": 1,
+        "defaultValue": 10000
+      },
+      {
+        "name": "height",
+        "label": "Рост (см)",
+        "type": "number",
+        "placeholder": "170",
+        "min": 100,
+        "max": 220,
+        "defaultValue": 170
+      },
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "male",
+            "label": "Мужской"
+          },
+          {
+            "value": "female",
+            "label": "Женский"
+          }
+        ],
+        "defaultValue": "male"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "stepLength",
+        "label": "Длина шага",
+        "type": "number",
+        "unit": "см"
+      },
+      {
+        "name": "distanceKm",
+        "label": "Расстояние",
+        "type": "number",
+        "unit": "км"
+      },
+      {
+        "name": "distanceMiles",
+        "label": "Расстояние",
+        "type": "number",
+        "unit": "миль"
+      },
+      {
+        "name": "calories",
+        "label": "Примерные калории",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "timeMinutes",
+        "label": "Примерное время",
+        "type": "number",
+        "unit": "мин"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество шагов, свой рост и пол. Калькулятор рассчитает длину шага, пройденное расстояние в километрах и милях, а также примерные затраты калорий и время ходьбы.",
+      "about": "Длина шага зависит от роста и пола: у мужчин обычно чуть длиннее. Средний шаг взрослого человека — 60–80 см. 10 000 шагов ≈ 6–8 км.",
+      "formula": "Длина шага = Рост × 0,415 (муж) / 0,413 (жен)\nРасстояние = Шаги × Длина шага / 100 000 (км)",
+      "faq": [
+        {
+          "question": "Сколько шагов в 1 км?",
+          "answer": "При росте 170 см ≈ 1400–1500 шагов. Чем выше рост, тем меньше шагов на километр."
+        },
+        {
+          "question": "Сколько калорий сжигается при ходьбе?",
+          "answer": "Примерно 0,04 ккал на шаг или 250–400 ккал на 10 000 шагов, в зависимости от веса и скорости."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Шагомер — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Шагомер"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "tsikly-sna",
+    "id": "sleep-cycles",
+    "title": "Калькулятор циклов сна",
+    "description": "Рассчитывает оптимальное время пробуждения от заданного времени засыпания по 90-минутным циклам",
+    "subcategory": "zdorove-raznoe",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "bedtime",
+        "label": "Время засыпания",
+        "type": "text",
+        "placeholder": "23:00",
+        "defaultValue": "23:00"
+      },
+      {
+        "name": "fallAsleepMinutes",
+        "label": "Время на засыпание (мин)",
+        "type": "number",
+        "placeholder": "15",
+        "min": 0,
+        "max": 60,
+        "defaultValue": 15
+      }
+    ],
+    "outputs": [
+      {
+        "name": "wakeTime4",
+        "label": "4 цикла (6 ч) — минимум",
+        "type": "text"
+      },
+      {
+        "name": "wakeTime5",
+        "label": "5 циклов (7,5 ч) — норма",
+        "type": "text"
+      },
+      {
+        "name": "wakeTime6",
+        "label": "6 циклов (9 ч) — оптимум",
+        "type": "text"
+      },
+      {
+        "name": "wakeTime7",
+        "label": "7 циклов (10,5 ч) — много",
+        "type": "text"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите время, когда вы планируете лечь спать, и сколько минут обычно требуется на засыпание. Калькулятор покажет лучшие время пробуждения по циклам сна.",
+      "about": "Человеческий сон состоит из циклов по ~90 минут. Пробуждение в середине цикла вызывает сонливость. Пробуждение между циклами — бодрость.",
+      "formula": "Время пробуждения = Время засыпания + Время на засыпание + N × 90 мин",
+      "faq": [
+        {
+          "question": "Почему именно 90 минут?",
+          "answer": "Средний цикл сна включает фазы: засыпание, поверхностный сон, глубокий сон и БДС (быстрый). Полный цикл занимает 80–100 минут, среднее — 90."
+        },
+        {
+          "question": "Что делать, если проснулся посреди цикла?",
+          "answer": "Лучше встать сразу, если осталось менее 20 минут до конца цикла. Иначе попытайтесь уснуть заново."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Сон — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Сон"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "rassol-sol",
+    "id": "brine-salt",
+    "title": "Калькулятор рассола и солёности",
+    "description": "Расчёт количества соли и воды для рассола любой концентрации",
+    "subcategory": "specii",
+    "type": "formula",
+    "category": "kulinarnye-mery",
+    "inputs": [
+      {
+        "name": "totalWeight",
+        "label": "Общий вес рассола (г)",
+        "type": "number",
+        "placeholder": "1000",
+        "min": 100,
+        "defaultValue": 1000
+      },
+      {
+        "name": "salinity",
+        "label": "Желаемая солёность (%)",
+        "type": "number",
+        "placeholder": "3",
+        "min": 0.5,
+        "max": 20,
+        "step": 0.5,
+        "defaultValue": 3
+      }
+    ],
+    "outputs": [
+      {
+        "name": "saltNeeded",
+        "label": "Соли нужно",
+        "type": "number",
+        "unit": "г"
+      },
+      {
+        "name": "waterNeeded",
+        "label": "Воды нужно",
+        "type": "number",
+        "unit": "мл"
+      },
+      {
+        "name": "perLiter",
+        "label": "На 1 литр рассола",
+        "type": "text"
+      },
+      {
+        "name": "usage",
+        "label": "Применение",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите нужный общий вес рассола и желаемую солёность в процентах. Калькулятор рассчитает, сколько соли и воды смешать.",
+      "about": "Солёность рассола измеряется в процентах массы соли от общей массы раствора. Классический рассол для огурцов — 3–4%, для рыбы — 5–8%.",
+      "formula": "Соль = Общий вес × Солёность / 100\nВода = Общий вес − Соль",
+      "faq": [
+        {
+          "question": "Сколько соли на литр воды для 3% рассола?",
+          "answer": "На 1 литр рассола 3% = 30 г соли + 970 мл воды. Важно: процент от общей массы, не от массы воды."
+        },
+        {
+          "question": "Можно ли использовать йодированную соль?",
+          "answer": "Не рекомендуется для консервации — йод может дать неприятный привкус и ускорить помутнение."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Рассол — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Рассол"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "srednij-ball-gpa",
+    "id": "gpa-calculator",
+    "title": "Калькулятор GPA",
+    "description": "Расчёт среднего балла по шкалам 5, 10, 12 и 100 баллов с переводом между ними",
+    "subcategory": "matematicheskie",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "scale",
+        "label": "Шкала оценок",
+        "type": "select",
+        "options": [
+          {
+            "value": "5",
+            "label": "5-балльная"
+          },
+          {
+            "value": "10",
+            "label": "10-балльная"
+          },
+          {
+            "value": "12",
+            "label": "12-балльная"
+          },
+          {
+            "value": "100",
+            "label": "100-балльная"
+          }
+        ],
+        "defaultValue": "5"
+      },
+      {
+        "name": "grades",
+        "label": "Оценки (через запятую)",
+        "type": "text",
+        "placeholder": "4,5,5,3,4",
+        "defaultValue": "4,5,5,3,4"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "average",
+        "label": "Средний балл",
+        "type": "number"
+      },
+      {
+        "name": "scale5",
+        "label": "Перевод в 5-балльную",
+        "type": "number"
+      },
+      {
+        "name": "scale10",
+        "label": "Перевод в 10-балльную",
+        "type": "number"
+      },
+      {
+        "name": "scale12",
+        "label": "Перевод в 12-балльную",
+        "type": "number"
+      },
+      {
+        "name": "scale100",
+        "label": "Перевод в 100-балльную",
+        "type": "number"
+      },
+      {
+        "name": "letterGrade",
+        "label": "Буквенная оценка",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите шкалу оценок и введите оценки через запятую. Калькулятор рассчитает средний балл и переведёт его в другие шкалы.",
+      "about": "GPA (Grade Point Average) — средний балл, важный для поступления в зарубежные вузы и некоторые российские программы.",
+      "formula": "Средний балл = Сумма оценок / Количество оценок\nНормализованный = Средний / Макс шкалы\nПеревод = Нормализованный × Целевая шкала",
+      "faq": [
+        {
+          "question": "Как перевести 5-балльную в 100-балльную?",
+          "answer": "Средний балл делится на 5 и умножается на 100. Например, 4,5 по 5-балльной = 90 по 100-балльной."
+        },
+        {
+          "question": "Что такое GPA 4.0?",
+          "answer": "Американская шкала: A=4, B=3, C=2, D=1, F=0. GPA 4.0 — максимум, все оценки A."
+        }
+      ],
+      "sources": [
+        {
+          "title": "GPA — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Grade_Point_Average"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "oboi-kalkulyator",
+    "id": "wallpaper-calculator",
+    "title": "Калькулятор обоев",
+    "description": "Расчёт количества рулонов обоев по площади стен с учётом рисунка и запаса",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "perimeter",
+        "label": "Периметр комнаты (м)",
+        "type": "number",
+        "placeholder": "16",
+        "min": 1,
+        "defaultValue": 16
+      },
+      {
+        "name": "height",
+        "label": "Высота потолков (м)",
+        "type": "number",
+        "placeholder": "2.7",
+        "min": 1,
+        "max": 5,
+        "step": 0.1,
+        "defaultValue": 2.7
+      },
+      {
+        "name": "rollWidth",
+        "label": "Ширина рулона (м)",
+        "type": "select",
+        "options": [
+          {
+            "value": "0.53",
+            "label": "53 см (стандарт)"
+          },
+          {
+            "value": "1.06",
+            "label": "106 см (флизелин)"
+          }
+        ],
+        "defaultValue": "0.53"
+      },
+      {
+        "name": "rollLength",
+        "label": "Длина рулона (м)",
+        "type": "select",
+        "options": [
+          {
+            "value": "10",
+            "label": "10 м"
+          },
+          {
+            "value": "15",
+            "label": "15 м"
+          },
+          {
+            "value": "25",
+            "label": "25 м"
+          }
+        ],
+        "defaultValue": "10"
+      },
+      {
+        "name": "patternRepeat",
+        "label": "Раппорт рисунка (см)",
+        "type": "number",
+        "placeholder": "0",
+        "min": 0,
+        "max": 100,
+        "defaultValue": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "wallArea",
+        "label": "Площадь стен",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "stripsPerRoll",
+        "label": "Полос из рулона",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "totalStrips",
+        "label": "Всего полос",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "rollsNeeded",
+        "label": "Рулонов нужно",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "reserve",
+        "label": "С запасом (+10%)",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите периметр комнаты, высоту потолков, параметры рулонов и раппорт рисунка (если есть). Калькулятор подсчитает нужное количество рулонов.",
+      "about": "При покупке обоев важно учитывать раппорт — расстояние между повторяющимися элементами рисунка. Он увеличивает расход на 5–15%.",
+      "formula": "Полос = Периметр / Ширина рулона\nПолос из рулона = Длина рулона / (Высота + Раппорт)\nРулоны = Полос / Полос из рулона",
+      "faq": [
+        {
+          "question": "Сколько рулонов на комнату 16 м²?",
+          "answer": "Зависит от периметра и высоты. Для комнаты 4×4 м с потолком 2,7 м — около 5–6 рулонов шириной 53 см."
+        },
+        {
+          "question": "Что такое раппорт?",
+          "answer": "Раппорт — расстояние между повторяющимися элементами рисунка. Требует сдвига полос, что увеличивает расход обоев."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Обои — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Обои"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "plitka-kalkulyator",
+    "id": "tile-calculator",
+    "title": "Калькулятор плитки",
+    "description": "Расчёт количества плитки для пола и стен с учётом запаса и раскладки",
+    "subcategory": "pokrytiya",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "area",
+        "label": "Площадь поверхности (м²)",
+        "type": "number",
+        "placeholder": "12",
+        "min": 0.1,
+        "step": 0.1,
+        "defaultValue": 12
+      },
+      {
+        "name": "tileWidth",
+        "label": "Ширина плитки (см)",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "defaultValue": 30
+      },
+      {
+        "name": "tileHeight",
+        "label": "Высота плитки (см)",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "defaultValue": 30
+      },
+      {
+        "name": "reservePercent",
+        "label": "Запас (%)",
+        "type": "select",
+        "options": [
+          {
+            "value": "5",
+            "label": "5% — прямая укладка"
+          },
+          {
+            "value": "10",
+            "label": "10% — диагональ"
+          },
+          {
+            "value": "15",
+            "label": "15% — сложная раскладка"
+          }
+        ],
+        "defaultValue": "10"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "tileArea",
+        "label": "Площадь одной плитки",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "tilesNeeded",
+        "label": "Плиток без запаса",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "tilesWithReserve",
+        "label": "Плиток с запасом",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "squareMeters",
+        "label": "Квадратных метров с запасом",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "packages",
+        "label": "Упаковок (если по 1,5 м²)",
+        "type": "number",
+        "unit": "шт"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь поверхности, размеры плитки и выберите запас. Калькулятор рассчитает количество плиток с учётом раскладки.",
+      "about": "Запас 10–15% необходим для подрезки, брака и будущих ремонтов. Диагональная укладка требует больше обрезков.",
+      "formula": "Плиток = Площадь / (Ширина × Высота / 10 000)\nС запасом = Плиток × (1 + Запас / 100)",
+      "faq": [
+        {
+          "question": "Почему запас 10%, а не 5%?",
+          "answer": "При диагональной или сложной раскладке обрезков больше. 10% — стандарт для большинства работ."
+        },
+        {
+          "question": "Сколько плитки на 1 м²?",
+          "answer": "Плитка 30×30 см: ~11,1 шт/м². Плитка 20×20 см: 25 шт/м²."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Керамическая плитка — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Керамическая_плитка"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "kraska-raskhod",
+    "id": "paint-calculator",
+    "title": "Калькулятор расхода краски",
+    "description": "Расчёт количества краски для стен и потолка по площади и расходу",
+    "subcategory": "otdelka",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "wallArea",
+        "label": "Площадь стен (м²)",
+        "type": "number",
+        "placeholder": "40",
+        "min": 0,
+        "defaultValue": 40
+      },
+      {
+        "name": "ceilingArea",
+        "label": "Площадь потолка (м²)",
+        "type": "number",
+        "placeholder": "16",
+        "min": 0,
+        "defaultValue": 16
+      },
+      {
+        "name": "consumption",
+        "label": "Расход краски (м²/л)",
+        "type": "select",
+        "options": [
+          {
+            "value": "8",
+            "label": "8 м²/л — густая (эмульсия)"
+          },
+          {
+            "value": "10",
+            "label": "10 м²/л — стандарт"
+          },
+          {
+            "value": "12",
+            "label": "12 м²/л — жидкая"
+          },
+          {
+            "value": "14",
+            "label": "14 м²/л — краска-грунт"
+          }
+        ],
+        "defaultValue": "10"
+      },
+      {
+        "name": "coats",
+        "label": "Количество слоёв",
+        "type": "number",
+        "placeholder": "2",
+        "min": 1,
+        "max": 5,
+        "defaultValue": 2
+      },
+      {
+        "name": "canVolume",
+        "label": "Объём банки (л)",
+        "type": "select",
+        "options": [
+          {
+            "value": "0.9",
+            "label": "0,9 л"
+          },
+          {
+            "value": "2.5",
+            "label": "2,5 л"
+          },
+          {
+            "value": "5",
+            "label": "5 л"
+          },
+          {
+            "value": "10",
+            "label": "10 л"
+          }
+        ],
+        "defaultValue": "2.5"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalArea",
+        "label": "Общая площадь",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "litersNeeded",
+        "label": "Литров краски",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "cansNeeded",
+        "label": "Банок нужно",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "wallPaint",
+        "label": "На стены",
+        "type": "number",
+        "unit": "л"
+      },
+      {
+        "name": "ceilingPaint",
+        "label": "На потолок",
+        "type": "number",
+        "unit": "л"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь стен и потолка, выберите расход краски и количество слоёв. Калькулятор рассчитает необходимый объём и количество банок.",
+      "about": "Расход краски зависит от типа поверхности, впитываемости и качества краски. Потолок обычно требует меньше краски, чем стены.",
+      "formula": "Литры = (Площадь стен + Площадь потолка) × Слои / Расход\nБанки = Литры / Объём банки (с округлением вверх)",
+      "faq": [
+        {
+          "question": "Сколько краски на 1 м² стены?",
+          "answer": "При расходе 10 м²/л на 1 м² уйдёт 0,1 л (100 мл) краски на один слой."
+        },
+        {
+          "question": "Нужен ли грунт перед покраской?",
+          "answer": "Да, грунтовка снижает расход краски на 10–20% и улучшает сцепление. Особенно важна на сухой штукатурке."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Краска — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Краска"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "laminat-kalkulyator",
+    "id": "laminate-calculator",
+    "title": "Калькулятор ламината",
+    "description": "Расчёт количества упаковок ламината с учётом запаса на подрезку",
+    "subcategory": "pokrytiya",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "roomLength",
+        "label": "Длина комнаты (м)",
+        "type": "number",
+        "placeholder": "5",
+        "min": 0.5,
+        "step": 0.1,
+        "defaultValue": 5
+      },
+      {
+        "name": "roomWidth",
+        "label": "Ширина комнаты (м)",
+        "type": "number",
+        "placeholder": "4",
+        "min": 0.5,
+        "step": 0.1,
+        "defaultValue": 4
+      },
+      {
+        "name": "packageArea",
+        "label": "Площадь в упаковке (м²)",
+        "type": "number",
+        "placeholder": "2.4",
+        "min": 0.5,
+        "step": 0.1,
+        "defaultValue": 2.4
+      },
+      {
+        "name": "reservePercent",
+        "label": "Запас (%)",
+        "type": "select",
+        "options": [
+          {
+            "value": "5",
+            "label": "5% — прямая укладка"
+          },
+          {
+            "value": "10",
+            "label": "10% — стандарт"
+          },
+          {
+            "value": "15",
+            "label": "15% — диагональ"
+          }
+        ],
+        "defaultValue": "10"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "roomArea",
+        "label": "Площадь комнаты",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "areaWithReserve",
+        "label": "С запасом",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "packagesNeeded",
+        "label": "Упаковок нужно",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "totalAreaPackages",
+        "label": "Площадь купленных упаковок",
+        "type": "number",
+        "unit": "м²"
+      },
+      {
+        "name": "extraArea",
+        "label": "Остаток",
+        "type": "number",
+        "unit": "м²"
+      }
+    ],
+    "content": {
+      "howTo": "Введите размеры комнаты, площадь ламината в одной упаковке и выберите запас. Калькулятор рассчитает количество упаковок.",
+      "about": "Ламинат продаётся в упаковках. Запас нужен для подрезки у стен и на случай брака. Диагональная укладка увеличивает расход на 10–15%.",
+      "formula": "Площадь = Длина × Ширина\nУпаковок = Площадь × (1 + Запас) / Площадь упаковки (округление вверх)",
+      "faq": [
+        {
+          "question": "Сколько ламината на комнату 20 м²?",
+          "answer": "При упаковке 2,4 м² и запасе 10%: 20 × 1,1 / 2,4 ≈ 9–10 упаковок."
+        },
+        {
+          "question": "Можно ли вернуть лишние упаковки?",
+          "answer": "В большинстве магазинов — да, если упаковка не вскрыта. Уточняйте при покупке."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ламинат — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Ламинат"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "pereezd-kalkulyator",
+    "id": "moving-calculator",
+    "title": "Калькулятор грузоперевозки",
+    "description": "Расчёт объёма вещей и количества машин для переезда",
+    "subcategory": "stoimost-poezdki",
+    "type": "formula",
+    "category": "transport",
+    "inputs": [
+      {
+        "name": "rooms",
+        "label": "Количество комнат",
+        "type": "select",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 комната (студия)"
+          },
+          {
+            "value": "2",
+            "label": "2 комнаты"
+          },
+          {
+            "value": "3",
+            "label": "3 комнаты"
+          },
+          {
+            "value": "4",
+            "label": "4 комнаты"
+          },
+          {
+            "value": "5",
+            "label": "5+ комнат"
+          }
+        ],
+        "defaultValue": "2"
+      },
+      {
+        "name": "extraItems",
+        "label": "Дополнительно",
+        "type": "select",
+        "options": [
+          {
+            "value": "none",
+            "label": "Нет"
+          },
+          {
+            "value": "fridge",
+            "label": "Холодильник + стиралка"
+          },
+          {
+            "value": "furniture",
+            "label": "Много мебели"
+          },
+          {
+            "value": "all",
+            "label": "Всё крупное + мебель"
+          }
+        ],
+        "defaultValue": "fridge"
+      },
+      {
+        "name": "distance",
+        "label": "Расстояние (км)",
+        "type": "number",
+        "placeholder": "50",
+        "min": 1,
+        "defaultValue": 50
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём вещей",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "gazelCount",
+        "label": "Газелей (1,5 т, 9 м³)",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "truckCount",
+        "label": "Фургонов (5 т, 20 м³)",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "estimatedCost",
+        "label": "Примерная стоимость",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "recommendation",
+        "label": "Рекомендация",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Выберите количество комнат, дополнительные крупные предметы и расстояние переезда. Калькулятор оценит объём вещей и подберёт транспорт.",
+      "about": "Объём типичной квартиры: студия ~8 м³, 2-комнатная ~15 м³, 3-комнатная ~25 м³. Газель вмещает ~9 м³, фургон ~20 м³.",
+      "formula": "Объём = Базовый объём комнат + Дополнительно\nГазелей = Объём / 9 (округление вверх)\nФургонов = Объём / 20 (округление вверх)",
+      "faq": [
+        {
+          "question": "Сколько стоит переезд?",
+          "answer": "Примерно 1500 ₽/м³ + 30 ₽/км. Грузчики — от 500 ₽/час каждый. Точную цену уточняйте у перевозчиков."
+        },
+        {
+          "question": "Что вмещает газель?",
+          "answer": "Газель (9 м³): мебель 1-комнатной квартиры, холодильник, коробки. Для 2-комнатной — возможно 2 рейса или фургон."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Переезд — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Переезд"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "svadebnyj-byudzhet",
+    "id": "wedding-budget",
+    "title": "Калькулятор свадебного бюджета",
+    "description": "Планировщик расходов на свадьбу с распределением по категориям",
+    "subcategory": "razvlecheniya",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "guests",
+        "label": "Количество гостей",
+        "type": "number",
+        "placeholder": "50",
+        "min": 2,
+        "max": 500,
+        "defaultValue": 50
+      },
+      {
+        "name": "budgetLevel",
+        "label": "Уровень бюджета",
+        "type": "select",
+        "options": [
+          {
+            "value": "economy",
+            "label": "Эконом (до 1500 ₽/чел на банкет)"
+          },
+          {
+            "value": "standard",
+            "label": "Стандарт (3000 ₽/чел)"
+          },
+          {
+            "value": "premium",
+            "label": "Премиум (6000 ₽/чел)"
+          },
+          {
+            "value": "luxury",
+            "label": "Люкс (12000 ₽/чел)"
+          }
+        ],
+        "defaultValue": "standard"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "totalBudget",
+        "label": "Общий бюджет",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "banquet",
+        "label": "Банкет",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "venue",
+        "label": "Площадка",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "photoVideo",
+        "label": "Фото и видео",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "decor",
+        "label": "Декор и цветы",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "other",
+        "label": "Прочее (транспорт, тамада, наряды)",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите количество гостей и выберите уровень бюджета. Калькулятор распределит расходы по основным статьям свадебного бюджета.",
+      "about": "Средний бюджет свадьбы в России: банкет — 40–50%, площадка — 15–20%, фото/видео — 10–15%, декор — 10%, остальное — наряды, транспорт, ведущий.",
+      "formula": "Банкет = Гости × Цена за человека\nПлощадка = Банкет × 0,3\nФото/видео = Банкет × 0,2\nДекор = Банкет × 0,15\nПрочее = Банкет × 0,35",
+      "faq": [
+        {
+          "question": "Как сократить бюджет свадьбы?",
+          "answer": "Уменьшите число гостей, выберите будний день, откажитесь от декора в пользу готовой площадки, наймите начинающего фотографа."
+        },
+        {
+          "question": "На чём не стоит экономить?",
+          "answer": "На фотографе и видеографе — это единственное, что остаётся после свадьбы. На ведущем — от него зависит атмосфера."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Свадьба — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Свадьба"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "otpusknye-kalkulyator",
+    "id": "vacation-calculator",
+    "title": "Калькулятор отпускных",
+    "description": "Расчёт суммы отпускных по средней зарплате за 12 месяцев",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "salary",
+        "label": "Среднемесячная зарплата (₽)",
+        "type": "number",
+        "placeholder": "80000",
+        "min": 0,
+        "defaultValue": 80000
+      },
+      {
+        "name": "vacationDays",
+        "label": "Дней отпуска",
+        "type": "number",
+        "placeholder": "14",
+        "min": 1,
+        "max": 56,
+        "defaultValue": 14
+      },
+      {
+        "name": "workedMonths",
+        "label": "Отработано месяцев",
+        "type": "number",
+        "placeholder": "12",
+        "min": 1,
+        "max": 12,
+        "defaultValue": 12
+      }
+    ],
+    "outputs": [
+      {
+        "name": "avgDaily",
+        "label": "Среднедневной заработок",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "vacationPay",
+        "label": "Сумма отпускных",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "vacationPayNet",
+        "label": "Отпускные за вычетом НДФЛ",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "monthlyEquivalent",
+        "label": "Эквивалент за месяц",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "difference",
+        "label": "Разница с зарплатой",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите среднемесячную зарплату, количество дней отпуска и отработанных месяцев. Калькулятор рассчитает отпускные по ТК РФ.",
+      "about": "Отпускные рассчитываются по среднему заработку за 12 месяцев. НДФЛ 13% удерживается автоматически. При неполном году расчётный период сокращается.",
+      "formula": "Среднедневной = Зарплата × Месяцев / (29,3 × Месяцев)\nОтпускные = Среднедневной × Дни отпуска",
+      "faq": [
+        {
+          "question": "Почему отпускные меньше зарплаты?",
+          "answer": "Зарплата считается за рабочие дни (~21), а отпускные — за календарные (29,3). При 14 днях отпуска обычно выгодно взять отпуск с субботы."
+        },
+        {
+          "question": "Как увеличить отпускные?",
+          "answer": "Возьмите отпуск в месяц с максимальным количеством рабочих дней (август, октябрь). Избегайте января и мая."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Отпуск — Трудовой кодекс РФ",
+          "url": "https://ru.wikipedia.org/wiki/Ежегодный_отпуск"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "dekretnye-kalkulyator",
+    "id": "maternity-calculator",
+    "title": "Калькулятор декретных пособий",
+    "description": "Расчёт пособия по беременности и родам в России",
+    "subcategory": "beremennost-i-deti",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "salary2Years",
+        "label": "Зарплата за 2 года (₽)",
+        "type": "number",
+        "placeholder": "1800000",
+        "min": 0,
+        "defaultValue": 1800000
+      },
+      {
+        "name": "excludedDays",
+        "label": "Исключённые дни (больничные и т.д.)",
+        "type": "number",
+        "placeholder": "30",
+        "min": 0,
+        "max": 730,
+        "defaultValue": 30
+      },
+      {
+        "name": "leaveDays",
+        "label": "Длительность отпуска (дней)",
+        "type": "select",
+        "options": [
+          {
+            "value": "140",
+            "label": "140 дней — обычные роды"
+          },
+          {
+            "value": "156",
+            "label": "156 дней — осложнённые"
+          },
+          {
+            "value": "194",
+            "label": "194 дня — двойня и более"
+          }
+        ],
+        "defaultValue": "140"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "avgDaily",
+        "label": "Среднедневной заработок",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "maxAvgDaily",
+        "label": "Максимальный среднедневной",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "usedAvgDaily",
+        "label": "Применённый среднедневной",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalBenefit",
+        "label": "Общая сумма пособия",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "monthlyEquivalent",
+        "label": "В месяц",
+        "type": "number",
+        "unit": "₽"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму заработка за 2 календарных года, количество исключённых дней и длительность отпуска. Калькулятор рассчитает пособие с учётом лимитов ФСС.",
+      "about": "Пособие по беременности равно среднедневному заработку × дни отпуска. Есть максимум по взносам в ФСС. Минимум — МРОТ.",
+      "formula": "Среднедневной = Зарплата 2 лет / (730 − Исключённые дни)\nПособие = min(Среднедневной, Макс) × Дни отпуска",
+      "faq": [
+        {
+          "question": "Какой максимум декретных в 2025 году?",
+          "answer": "Максимальный среднедневной ~5300 ₽. За 140 дней — до ~742 000 ₽."
+        },
+        {
+          "question": "Можно ли заменить года?",
+          "answer": "Да, если в расчётном периоде был декрет или больничный, можно заменить года на предыдущие. Нужно заявление в бухгалтерию."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пособие по беременности — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пособие_по_беременности_и_родам"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "neustojka-395-gk",
+    "id": "penalty-calculator",
+    "title": "Калькулятор неустойки по 395 ГК РФ",
+    "description": "Расчёт процентов за просрочку платежа по ключевой ставке ЦБ (1/300 ставки за каждый день)",
+    "subcategory": "finansovye",
+    "type": "formula",
+    "category": "nauka-i-ucheba",
+    "inputs": [
+      {
+        "name": "debt",
+        "label": "Сумма долга (₽)",
+        "type": "number",
+        "placeholder": "100000",
+        "min": 1,
+        "defaultValue": 100000
+      },
+      {
+        "name": "days",
+        "label": "Дней просрочки",
+        "type": "number",
+        "placeholder": "30",
+        "min": 1,
+        "defaultValue": 30
+      },
+      {
+        "name": "rate",
+        "label": "Ставка ЦБ (%)",
+        "type": "number",
+        "placeholder": "21",
+        "min": 0.1,
+        "max": 50,
+        "step": 0.25,
+        "defaultValue": 21
+      }
+    ],
+    "outputs": [
+      {
+        "name": "dailyPenalty",
+        "label": "Неустойка за день",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "totalPenalty",
+        "label": "Общая неустойка",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "debtWithPenalty",
+        "label": "Долг + неустойка",
+        "type": "number",
+        "unit": "₽"
+      },
+      {
+        "name": "annualRate",
+        "label": "Годовой эквивалент",
+        "type": "number",
+        "unit": "%"
+      }
+    ],
+    "content": {
+      "howTo": "Введите сумму долга, количество дней просрочки и действующую ключевую ставку ЦБ. Калькулятор рассчитает неустойку по статье 395 ГК РФ.",
+      "about": "По ст. 395 ГК РФ неустойка = Сумма долга × Ставка ЦБ / 300 × Количество дней. Применяется при нарушении денежных обязательств.",
+      "formula": "Неустойка = Долг × Ставка ЦБ / 300 × Дни\nГодовой эквивалент = Ставка ЦБ / 300 × 365",
+      "faq": [
+        {
+          "question": "Что такое 1/300 ключевой ставки?",
+          "answer": "Это законный размер процентов за просрочку платежа по ст. 395 ГК РФ. За каждый день просрочки начисляется 1/300 текущей ставки ЦБ."
+        },
+        {
+          "question": "Можно ли требовать больше?",
+          "answer": "Если в договоре предусмотрена неустойка выше законной — да. Иначе применяется только законная (1/300 ставки)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Статья 395 ГК РФ",
+          "url": "https://ru.wikipedia.org/wiki/Гражданский_кодекс_Российской_Федерации"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  },
+  {
+    "slug": "razmer-obuvi-konverter",
+    "id": "shoe-size-converter",
+    "title": "Калькулятор размера обуви",
+    "description": "Перевод размеров обуви между российской, европейской, американской и британской системами",
+    "subcategory": "razmery",
+    "type": "formula",
+    "category": "povsednevnoe",
+    "inputs": [
+      {
+        "name": "ruSize",
+        "label": "Российский размер",
+        "type": "number",
+        "placeholder": "40",
+        "min": 20,
+        "max": 50,
+        "defaultValue": 40
+      }
+    ],
+    "outputs": [
+      {
+        "name": "euSize",
+        "label": "Европейский (EU)",
+        "type": "number"
+      },
+      {
+        "name": "usMenSize",
+        "label": "Американский мужской (US)",
+        "type": "number"
+      },
+      {
+        "name": "usWomenSize",
+        "label": "Американский женский (US)",
+        "type": "number"
+      },
+      {
+        "name": "ukSize",
+        "label": "Британский (UK)",
+        "type": "number"
+      },
+      {
+        "name": "footLength",
+        "label": "Длина стопы",
+        "type": "number",
+        "unit": "см"
+      }
+    ],
+    "content": {
+      "howTo": "Введите российский размер обуви. Калькулятор переведёт его в европейский, американский (мужской и женский), британский размеры и покажет длину стопы.",
+      "about": "Размеры обуви: российский = европейский. Американский мужской = RU − 32,5, женский = RU − 31,5, британский = RU − 33,5. Длина стопы = RU/2 + 10 см.",
+      "formula": "EU = RU\nUS (муж) = RU − 32,5\nUS (жен) = RU − 31,5\nUK = RU − 33,5\nДлина стопы = RU / 2 + 10 см",
+      "faq": [
+        {
+          "question": "Российский размер равен европейскому?",
+          "answer": "Да, российская и европейская шкалы совпадают. Но размеры могут варьироваться у разных производителей."
+        },
+        {
+          "question": "Как измерить размер обуви?",
+          "answer": "Поставьте стопу на лист бумаги, обведите карандашом и измерьте расстояние от пятки до большого пальца."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Размер обуви — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Размер_обуви"
+        }
+      ],
+      "updatedAt": "2026-04-26"
+    }
+  }
+]

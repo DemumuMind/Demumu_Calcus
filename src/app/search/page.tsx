@@ -1,13 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Search, ArrowRight, Calculator } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { SearchBox } from '@/components/search/search-box';
 import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Поиск калькуляторов — Calcus',
-  description: 'Найдите нужный калькулятор или конвертер среди сотен инструментов.',
-};
+  description: 'Найдите нужный калькулятор или конвертер среди сотен инструментов.' };
 
 export default function SearchPage() {
   return (

@@ -1,0 +1,514 @@
+[
+  {
+    "slug": "index-massy-tela-imt",
+    "id": "bmi-calculator-extended",
+    "title": "Калькулятор ИМТ (BMI)",
+    "description": "Расчёт индекса массы тела с категориями: недовес, норма, избыточный вес, ожирение",
+    "subcategory": "health-vse",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 1,
+        "max": 500
+      },
+      {
+        "name": "height",
+        "label": "Рост (см)",
+        "type": "number",
+        "placeholder": "170",
+        "defaultValue": 170,
+        "min": 50,
+        "max": 300
+      },
+      {
+        "name": "age",
+        "label": "Возраст (лет)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 2,
+        "max": 120
+      },
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "male",
+            "label": "Мужской"
+          },
+          {
+            "value": "female",
+            "label": "Женский"
+          }
+        ],
+        "defaultValue": "male"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "bmi",
+        "label": "ИМТ",
+        "type": "number",
+        "unit": "кг/м²"
+      },
+      {
+        "name": "category",
+        "label": "Категория",
+        "type": "text"
+      },
+      {
+        "name": "idealWeight",
+        "label": "Идеальный вес",
+        "type": "number",
+        "unit": "кг"
+      }
+    ],
+    "content": {
+      "howTo": "Введите ваш вес в килограммах, рост в сантиметрах, возраст и пол. Калькулятор рассчитает ИМТ и покажет категорию.",
+      "about": "Индекс массы тела (ИМТ, BMI) — показатель, позволяющий оценить соотношение массы тела к росту. Разработан бельгийским статистиком Адольфом Кетле в 1869 году.",
+      "usage": "Используется для предварительной оценки веса: недостаточный, нормальный или избыточный. Не учитывает соотношение мышц и жира.",
+      "formula": "ИМТ = масса (кг) / рост² (м)\nНорма: 18.5–24.9 кг/м²",
+      "faq": [
+        {
+          "question": "Что означает мой ИМТ?",
+          "answer": "< 18.5 — недостаточный вес, 18.5–24.9 — норма, 25–29.9 — избыточный вес, ≥30 — ожирение."
+        },
+        {
+          "question": "ИМТ точный показатель?",
+          "answer": "ИМТ даёт общую оценку. Для спортсменов с большой мышечной массой показатель может быть завышен. Рекомендуется также измерять процент жира и окружность талии."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Индекс массы тела — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Индекс_массы_тела"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "bazovyj-metabolizm-bmr",
+    "id": "bmr-detailed-calculator",
+    "title": "Калькулятор базального метаболизма (BMR)",
+    "description": "Расчёт суточной нормы калорий в состоянии покоя по формуле Миффлина-Сан Жеора",
+    "subcategory": "health-vse",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "sutochnaya-norma-kalorij",
+    "id": "tdee-detailed-calculator",
+    "title": "Калькулятор суточной нормы калорий (TDEE)",
+    "description": "Расчёт полной суточной нормы калорий с учётом уровня активности",
+    "subcategory": "health-pitanie",
+    "type": "formula",
+    "category": "zdorove-i-krasota"
+  },
+  {
+    "slug": "raschet-bzhu",
+    "id": "bju-calculator",
+    "title": "Калькулятор БЖУ",
+    "description": "Расчёт нормы белков, жиров и углеводов для вашей цели",
+    "subcategory": "health-pitanie",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "calories",
+        "label": "Суточная норма калорий (ккал)",
+        "type": "number",
+        "placeholder": "2000",
+        "defaultValue": 2000,
+        "min": 500,
+        "max": 10000
+      },
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 1,
+        "max": 500
+      },
+      {
+        "name": "goal",
+        "label": "Цель",
+        "type": "select",
+        "options": [
+          {
+            "value": "balanced",
+            "label": "Сбалансированное питание (30/30/40)"
+          },
+          {
+            "value": "lowcarb",
+            "label": "Низкоуглеводная диета (40/40/20)"
+          },
+          {
+            "value": "keto",
+            "label": "Кето-диета (25/70/5)"
+          },
+          {
+            "value": "highprot",
+            "label": "Высокобелковая (50/20/30)"
+          }
+        ],
+        "defaultValue": "balanced"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "protein",
+        "label": "Белки",
+        "type": "number",
+        "unit": "г/сутки"
+      },
+      {
+        "name": "fat",
+        "label": "Жиры",
+        "type": "number",
+        "unit": "г/сутки"
+      },
+      {
+        "name": "carbs",
+        "label": "Углеводы",
+        "type": "number",
+        "unit": "г/сутки"
+      },
+      {
+        "name": "proteinPerKg",
+        "label": "Белок на кг веса",
+        "type": "number",
+        "unit": "г/кг"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вашу суточную норму калорий, вес и выберите тип питания. Калькулятор рассчитает оптимальное соотношение БЖУ.",
+      "about": "БЖУ — соотношение белков, жиров и углеводов в рационе. Ключевой показатель для составления сбалансированного питания.",
+      "usage": "Используется для планирования рациона, составления меню, подбора спортивного питания, контроля диеты.",
+      "formula": "Белки: 4 ккал/г\nЖиры: 9 ккал/г\nУглеводы: 4 ккал/г",
+      "faq": [
+        {
+          "question": "Сколько белков нужно в день?",
+          "answer": "Для здорового человека: 0.8-1 г на кг веса. Для спортсменов: 1.6-2.2 г/кг. Для похудения: 1.2-1.6 г/кг (сохранение мышц)."
+        },
+        {
+          "question": "Что такое кето-диета?",
+          "answer": "Кетогенная диета — высокое содержание жиров (70%), умеренное белка (25%), минимум углеводов (5%). Переводит организм в состояние кетоза."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Белки, жиры и углеводы — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Питание"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "idealnyj-ves",
+    "id": "ideal-weight-calculator",
+    "title": "Калькулятор идеального веса",
+    "description": "Расчёт идеального веса по формулам Брока, Хамви и Девайна",
+    "subcategory": "health-vse",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "height",
+        "label": "Рост (см)",
+        "type": "number",
+        "placeholder": "170",
+        "defaultValue": 170,
+        "min": 100,
+        "max": 250
+      },
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "male",
+            "label": "Мужской"
+          },
+          {
+            "value": "female",
+            "label": "Женский"
+          }
+        ],
+        "defaultValue": "male"
+      },
+      {
+        "name": "age",
+        "label": "Возраст (лет)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 18,
+        "max": 100
+      }
+    ],
+    "outputs": [
+      {
+        "name": "broca",
+        "label": "Формула Брока",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "devine",
+        "label": "Формула Девайна",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "robinson",
+        "label": "Формула Робинсона",
+        "type": "number",
+        "unit": "кг"
+      },
+      {
+        "name": "range",
+        "label": "Нормальный диапазон",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите рост, пол и возраст.",
+      "about": "Идеальный вес рассчитывается по разным формулам. Результаты приблизительные и индивидуальны.",
+      "usage": "Ориентир для оценки веса. Консультируйтесь с врачом.",
+      "formula": "Брока: мужчины − 100 × 0.9, женщины − 100 × 0.85",
+      "faq": [],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "skolko-kalorij-szhigayetsya",
+    "id": "calorie-burn-calculator",
+    "title": "Калькулятор сжигания калорий",
+    "description": "Расчёт калорий, сжигаемых при различных видах активности",
+    "subcategory": "health-fitnes",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "70",
+        "defaultValue": 70,
+        "min": 1,
+        "max": 500
+      },
+      {
+        "name": "activity",
+        "label": "Вид активности",
+        "type": "select",
+        "options": [
+          {
+            "value": "sleep",
+            "label": "Сон"
+          },
+          {
+            "value": "sit",
+            "label": "Сидячая работа"
+          },
+          {
+            "value": "walk_slow",
+            "label": "Ходьба медленная (3 км/ч)"
+          },
+          {
+            "value": "walk_fast",
+            "label": "Ходьба быстрая (6 км/ч)"
+          },
+          {
+            "value": "jog",
+            "label": "Бег трусцой (8 км/ч)"
+          },
+          {
+            "value": "run",
+            "label": "Бег (10 км/ч)"
+          },
+          {
+            "value": "cycling",
+            "label": "Велосипед (15 км/ч)"
+          },
+          {
+            "value": "swimming",
+            "label": "Плавание"
+          },
+          {
+            "value": "gym",
+            "label": "Тренажёрный зал"
+          },
+          {
+            "value": "hiit",
+            "label": "HIIT / Кроссфит"
+          },
+          {
+            "value": "yoga",
+            "label": "Йога"
+          },
+          {
+            "value": "dance",
+            "label": "Танцы"
+          }
+        ],
+        "defaultValue": "walk_fast"
+      },
+      {
+        "name": "duration",
+        "label": "Длительность (минут)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 1,
+        "max": 1440
+      }
+    ],
+    "outputs": [
+      {
+        "name": "burned",
+        "label": "Сожжено калорий",
+        "type": "number",
+        "unit": "ккал"
+      },
+      {
+        "name": "perHour",
+        "label": "В час",
+        "type": "number",
+        "unit": "ккал/ч"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес, выберите вид активности и длительность. Калькулятор покажет количество сожжённых калорий.",
+      "about": "MET (Metabolic Equivalent of Task) — единица измерения интенсивности физической активности. 1 MET = энергозатраты в состоянии покоя.",
+      "usage": "Используется для планирования тренировок, оценки эффективности упражнений, составления программ похудения.",
+      "formula": "Калории = MET × вес(кг) × время(часы)\nГде MET — интенсивность активности",
+      "faq": [
+        {
+          "question": "Сколько калорий сжигается при ходьбе?",
+          "answer": "При ходьбе со скоростью 6 км/ч (быстрый шаг) человек весом 70 кг сжигает около 300 ккал/час."
+        },
+        {
+          "question": "Какая активность сжигает больше всего калорий?",
+          "answer": "HIIT (высокоинтенсивный интервальный тренинг), бег, плавание и прыжки со скакалкой — самые энергозатратные виды активности."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Физическая активность — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Физическая_активность"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "index-massy-rebenka",
+    "id": "child-bmi-calculator",
+    "title": "Калькулятор ИМТ для детей",
+    "description": "Расчёт индекса массы тела для детей и подростков с учётом возраста",
+    "subcategory": "health-vse",
+    "type": "formula",
+    "category": "zdorove-i-krasota",
+    "inputs": [
+      {
+        "name": "weight",
+        "label": "Вес (кг)",
+        "type": "number",
+        "placeholder": "30",
+        "defaultValue": 30,
+        "min": 1,
+        "max": 150
+      },
+      {
+        "name": "height",
+        "label": "Рост (см)",
+        "type": "number",
+        "placeholder": "130",
+        "defaultValue": 130,
+        "min": 50,
+        "max": 200
+      },
+      {
+        "name": "age",
+        "label": "Возраст (лет)",
+        "type": "number",
+        "placeholder": "8",
+        "defaultValue": 8,
+        "min": 2,
+        "max": 18
+      },
+      {
+        "name": "gender",
+        "label": "Пол",
+        "type": "select",
+        "options": [
+          {
+            "value": "boy",
+            "label": "Мальчик"
+          },
+          {
+            "value": "girl",
+            "label": "Девочка"
+          }
+        ],
+        "defaultValue": "boy"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "bmi",
+        "label": "ИМТ ребёнка",
+        "type": "number",
+        "unit": "кг/м²"
+      },
+      {
+        "name": "percentile",
+        "label": "Перцентиль",
+        "type": "text"
+      },
+      {
+        "name": "category",
+        "label": "Оценка",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите вес, рост, возраст и пол ребёнка. Калькулятор рассчитает ИМТ и даст ориентировочную оценку по возрастным нормам.",
+      "about": "Для детей и подростков используются специальные возрастные и половые нормы ИМТ (перцентильные карты CDC).",
+      "usage": "Используется родителями и педиатрами для оценки физического развития ребёнка.",
+      "formula": "ИМТ рассчитывается как у взрослых, но оценка производится по перцентильным картам с учётом возраста и пола.",
+      "faq": [
+        {
+          "question": "Почему для детей другие нормы ИМТ?",
+          "answer": "У детей соотношение массы и роста меняется с возрастом. Используются перцентильные карты, которые показывают, какой процент детей того же возраста имеет меньший ИМТ."
+        },
+        {
+          "question": "Когда нужно беспокоиться?",
+          "answer": "Если ИМТ ребёнка ниже 5-го или выше 85-го перцентиля для его возраста и пола — рекомендуется консультация педиатра."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Перцентиль — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Перцентиль"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

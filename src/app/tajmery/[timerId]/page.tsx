@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Timer, Clock, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Clock, ArrowRight } from 'lucide-react';
 import { 
   getTimerBySlug,
   generateTimerTitle,
   generateTimerDescription,
   getRelatedTimers,
-  formatTimeText,
-} from '@/lib/timers';
+  formatTimeText } from '@/lib/timers';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TimerComponent } from '@/components/calculator/timer-component';
 
@@ -80,7 +79,6 @@ export function generateStaticParams() {
     { timerId: '24-chasa' },
   ];
 
-  console.log(`Generated ${mainTimers.length} timer pages`);
   return mainTimers;
 }
 
@@ -101,16 +99,13 @@ export async function generateMetadata({ params }: TimerPageProps): Promise<Meta
     description,
     keywords: `${timer.name}, таймер онлайн, обратный отсчёт`,
     alternates: {
-      canonical: url,
-    },
+      canonical: url },
     openGraph: {
       title,
       description,
       url,
       type: 'website',
-      siteName: 'Calcus',
-    },
-  };
+      siteName: 'Calcus' } };
 }
 
 export default async function TimerPage({ params }: TimerPageProps) {

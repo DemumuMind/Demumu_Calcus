@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "konverter-ploshchadi",
+    "id": "area-converter",
+    "title": "Конвертер площади",
+    "description": "Перевод квадратных метров, гектаров, акров, квадратных футов",
+    "subcategory": "conv-ploshchad",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "m2",
+            "label": "м² — квадратные метры"
+          },
+          {
+            "value": "km2",
+            "label": "км² — квадратные километры"
+          },
+          {
+            "value": "ha",
+            "label": "га — гектары"
+          },
+          {
+            "value": "sotka",
+            "label": "соток — сотки"
+          },
+          {
+            "value": "acre",
+            "label": "акров — акры"
+          },
+          {
+            "value": "ft2",
+            "label": "ft² — квадратные футы"
+          },
+          {
+            "value": "inch2",
+            "label": "in² — квадратные дюймы"
+          },
+          {
+            "value": "cm2",
+            "label": "см² — квадратные сантиметры"
+          }
+        ],
+        "defaultValue": "m2"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "m2",
+            "label": "м² — квадратные метры"
+          },
+          {
+            "value": "km2",
+            "label": "км² — квадратные километры"
+          },
+          {
+            "value": "ha",
+            "label": "га — гектары"
+          },
+          {
+            "value": "sotka",
+            "label": "соток — сотки"
+          },
+          {
+            "value": "acre",
+            "label": "акров — акры"
+          },
+          {
+            "value": "ft2",
+            "label": "ft² — квадратные футы"
+          },
+          {
+            "value": "inch2",
+            "label": "in² — квадратные дюймы"
+          },
+          {
+            "value": "cm2",
+            "label": "см² — квадратные сантиметры"
+          }
+        ],
+        "defaultValue": "sotka"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите площадь, выберите единицы измерения \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Площадь — величина, характеризующая размер поверхности. Основная единица в СИ — квадратный метр (м²).",
+      "usage": "Используется в недвижимости, строительстве, сельском хозяйстве, картографии.",
+      "formula": "1 км² = 100 га = 10 000 соток\n1 га = 100 соток = 10 000 м²\n1 акр = 4046.86 м² ≈ 40 соток",
+      "faq": [
+        {
+          "question": "Сколько соток в гектаре?",
+          "answer": "1 гектар = 100 соток."
+        },
+        {
+          "question": "Сколько квадратных метров в сотке?",
+          "answer": "1 сотка = 100 м² (10 × 10 метров)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Гектар — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Гектар"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "konverter-obyoma",
+    "id": "volume-converter",
+    "title": "Конвертер объёма",
+    "description": "Перевод литров, галлонов, кубических метров, баррелей",
+    "subcategory": "conv-obem",
+    "type": "converter",
+    "category": "konvertery",
+    "inputs": [
+      {
+        "name": "value",
+        "label": "Значение",
+        "type": "number",
+        "placeholder": "1",
+        "defaultValue": 1,
+        "min": 0
+      },
+      {
+        "name": "from",
+        "label": "Из",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          },
+          {
+            "value": "ml",
+            "label": "мл — миллилитры"
+          },
+          {
+            "value": "m3",
+            "label": "м³ — кубометры"
+          },
+          {
+            "value": "cm3",
+            "label": "см³ — кубические сантиметры"
+          },
+          {
+            "value": "gal_us",
+            "label": "гал (US) — галлоны США"
+          },
+          {
+            "value": "gal_uk",
+            "label": "гал (UK) — галлоны UK"
+          },
+          {
+            "value": "fl_oz",
+            "label": "fl oz — жидкие унции"
+          },
+          {
+            "value": "pt",
+            "label": "пт — пинты"
+          },
+          {
+            "value": "qt",
+            "label": "кварт — кварты"
+          }
+        ],
+        "defaultValue": "l"
+      },
+      {
+        "name": "to",
+        "label": "В",
+        "type": "select",
+        "options": [
+          {
+            "value": "l",
+            "label": "л — литры"
+          },
+          {
+            "value": "ml",
+            "label": "мл — миллилитры"
+          },
+          {
+            "value": "m3",
+            "label": "м³ — кубометры"
+          },
+          {
+            "value": "cm3",
+            "label": "см³ — кубические сантиметры"
+          },
+          {
+            "value": "gal_us",
+            "label": "гал (US) — галлоны США"
+          },
+          {
+            "value": "gal_uk",
+            "label": "гал (UK) — галлоны UK"
+          },
+          {
+            "value": "fl_oz",
+            "label": "fl oz — жидкие унции"
+          },
+          {
+            "value": "pt",
+            "label": "пт — пинты"
+          },
+          {
+            "value": "qt",
+            "label": "кварт — кварты"
+          }
+        ],
+        "defaultValue": "ml"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "label": "Результат",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите объём, выберите единицы измерения \"из\" и \"в\". Результат появится автоматически.",
+      "about": "Объём — мера трёхмерного пространства, занимаемого телом или веществом. Основная единица в СИ — кубический метр (м³).",
+      "usage": "Используется в кулинарии, медицине, химии, строительстве, топливной промышленности.",
+      "formula": "1 л = 1000 мл = 1 дм³ = 0.001 м³\n1 галлон (US) = 3.785 л\n1 галлон (UK) = 4.546 л",
+      "faq": [
+        {
+          "question": "Сколько литров в галлоне?",
+          "answer": "1 галлон США = 3.785 литра. 1 британский галлон = 4.546 литра."
+        },
+        {
+          "question": "Сколько миллилитров в стакане?",
+          "answer": "Стандартный стакан = 250 мл (стакан гранёный)."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Литр — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Литр"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-kubatury-brevna",
+    "id": "log-volume-calculator",
+    "title": "Калькулятор кубатуры бревна",
+    "description": "Расчёт объёма круглого леса по диаметру и длине",
+    "subcategory": "stroitelnye-materialy",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "diameter",
+        "label": "Диаметр верхнего обреза (см)",
+        "type": "number",
+        "placeholder": "20",
+        "defaultValue": 20,
+        "min": 5,
+        "max": 100
+      },
+      {
+        "name": "length",
+        "label": "Длина бревна (м)",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 1,
+        "max": 12
+      },
+      {
+        "name": "quantity",
+        "label": "Количество брёвен",
+        "type": "number",
+        "placeholder": "10",
+        "defaultValue": 10,
+        "min": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "singleVolume",
+        "label": "Объём одного бревна",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "totalVolume",
+        "label": "Общий объём",
+        "type": "number",
+        "unit": "м³"
+      }
+    ],
+    "content": {
+      "howTo": "Введите диаметр верхнего обреза, длину и количество брёвен. Калькулятор рассчитает объём.",
+      "about": "Кубатура бревна — объём круглого лесоматериала, вычисляемый по формуле объёма цилиндра.",
+      "usage": "Используется при закупке и продаже круглого леса, строительстве домов из бревна.",
+      "formula": "V = π × (d/2)² × L\nГде d — диаметр в метрах, L — длина в метрах",
+      "faq": [
+        {
+          "question": "Как правильно измерить диаметр бревна?",
+          "answer": "Измеряется диаметр верхнего обреза (тонкого конца) без коры, через центр."
+        },
+        {
+          "question": "Почему используется диаметр верхнего обреза?",
+          "answer": "По ГОСТ диаметр отсчитывается у верхнего обреза, так как бревно коническое."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Лесоматериалы круглые — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Лесоматериалы_круглые"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  },
+  {
+    "slug": "kalkulyator-kubatury-doski",
+    "id": "board-volume-calculator",
+    "title": "Калькулятор кубатуры доски",
+    "description": "Сколько досок в кубе и куб в досках",
+    "subcategory": "stroitelnye-materialy",
+    "type": "formula",
+    "category": "stroitelstvo-i-remont",
+    "inputs": [
+      {
+        "name": "thickness",
+        "label": "Толщина (мм)",
+        "type": "number",
+        "placeholder": "25",
+        "defaultValue": 25,
+        "min": 5,
+        "max": 100
+      },
+      {
+        "name": "width",
+        "label": "Ширина (мм)",
+        "type": "number",
+        "placeholder": "100",
+        "defaultValue": 100,
+        "min": 10,
+        "max": 300
+      },
+      {
+        "name": "length",
+        "label": "Длина (м)",
+        "type": "number",
+        "placeholder": "6",
+        "defaultValue": 6,
+        "min": 0.5,
+        "max": 12
+      }
+    ],
+    "outputs": [
+      {
+        "name": "volume",
+        "label": "Объём одной доски",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "boardsInCube",
+        "label": "Досок в кубе",
+        "type": "number",
+        "unit": "шт"
+      },
+      {
+        "name": "cubePrice",
+        "label": "Цена за доску",
+        "type": "text"
+      }
+    ],
+    "content": {
+      "howTo": "Введите толщину, ширину и длину доски. Калькулятор покажет объём и количество в кубе.",
+      "about": "Кубатура доски помогает рассчитать сколько досок в кубическом метре и объём одной доски.",
+      "usage": "Используется при закупке пиломатериалов для расчёта количества и стоимости.",
+      "formula": "Объём = толщина × ширина × длина (в метрах)\nДосок в кубе = ⌊1 / объём⌋",
+      "faq": [
+        {
+          "question": "Сколько досок 50×150×6000 мм в кубе?",
+          "answer": "Объём = 0.05 × 0.15 × 6 = 0.045 м³. Досок в кубе = 1 / 0.045 ≈ 22 штуки."
+        },
+        {
+          "question": "Как рассчитать стоимость досок?",
+          "answer": "Умножьте объём одной доски на цену за куб. Или разделите цену куба на количество досок в кубе."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Пиломатериалы — Википедия",
+          "url": "https://ru.wikipedia.org/wiki/Пиломатериалы"
+        }
+      ],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

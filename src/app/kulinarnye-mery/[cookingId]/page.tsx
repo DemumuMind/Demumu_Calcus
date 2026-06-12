@@ -1,14 +1,13 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ChefHat, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { 
   cookingIngredients, 
   standardMeasures,
   measureToGrams,
   generateCookingSlug,
-  resolveCookingSlug,
-} from '@/lib/cooking';
+  resolveCookingSlug } from '@/lib/cooking';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CookingConverter } from '@/components/calculator/cooking-converter';
 
@@ -63,16 +62,13 @@ export async function generateMetadata({ params }: CookingConverterPageProps): P
     description,
     keywords: `${measure.name}, ${ingredient.name}, сколько грамм, кулинарные меры, перевод`,
     alternates: {
-      canonical: url,
-    },
+      canonical: url },
     openGraph: {
       title,
       description,
       url,
       type: 'website',
-      siteName: 'Calcus',
-    },
-  };
+      siteName: 'Calcus' } };
 }
 
 export function generateStaticParams() {
@@ -87,7 +83,6 @@ export function generateStaticParams() {
     });
   });
 
-  console.log(`Generated ${params.length} cooking converter pages`);
   return params;
 }
 

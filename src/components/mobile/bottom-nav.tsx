@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { Home, Calculator, ArrowRightLeft, Heart, Timer, ChefHat, Percent, Wallet, Home as HomeIcon, Car, Cpu, Coffee, Menu } from 'lucide-react';
+import { Home, Calculator, ArrowRightLeft, Heart, Timer, ChefHat, Percent, Wallet, Home as HomeIcon, Car, Cpu, Coffee } from 'lucide-react';
 
 const navItems = [
   { href: '/', icon: Home, label: 'Главная' },

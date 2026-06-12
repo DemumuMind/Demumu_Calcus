@@ -1,0 +1,141 @@
+[
+  {
+    "slug": "rashod-kraski",
+    "id": "paint-room-calculator",
+    "title": "Калькулятор краски",
+    "description": "Расчёт количества краски для стен и потолка",
+    "subcategory": "build-materialy",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "shtukaturka",
+    "id": "plaster-ceiling-calculator",
+    "title": "Калькулятор штукатурки",
+    "description": "Расчёт количества штукатурки для стен",
+    "subcategory": "build-materialy",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "plitka-na-pol-steny",
+    "id": "tile-wall-calculator",
+    "title": "Калькулятор плитки",
+    "description": "Расчёт количества плитки для пола или стен",
+    "subcategory": "build-materialy",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "laminat",
+    "id": "laminate-calculator",
+    "title": "Калькулятор ламината",
+    "description": "Расчёт количества досок ламината для пола",
+    "subcategory": "build-materialy",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "kirpich",
+    "id": "brick-calculator",
+    "title": "Калькулятор кирпича",
+    "description": "Расчёт количества кирпича для стен с учётом толщины шва",
+    "subcategory": "build-steny",
+    "type": "formula",
+    "category": "stroitelstvo"
+  },
+  {
+    "slug": "fundament",
+    "id": "foundation-calculator",
+    "title": "Калькулятор ленточного фундамента",
+    "description": "Расчёт объёма бетона и арматуры для фундамента",
+    "subcategory": "build-fundament",
+    "type": "formula",
+    "category": "stroitelstvo",
+    "inputs": [
+      {
+        "name": "perimeter",
+        "label": "Периметр (м)",
+        "type": "number",
+        "placeholder": "40",
+        "defaultValue": 40
+      },
+      {
+        "name": "width",
+        "label": "Ширина ленты (м)",
+        "type": "number",
+        "placeholder": "0.4",
+        "defaultValue": 0.4
+      },
+      {
+        "name": "height",
+        "label": "Высота ленты (м)",
+        "type": "number",
+        "placeholder": "0.5",
+        "defaultValue": 0.5
+      },
+      {
+        "name": "reinforcement",
+        "label": "Арматура (продольная)",
+        "type": "select",
+        "options": [
+          {
+            "value": "4x12",
+            "label": "4 стержня Ø12 мм"
+          },
+          {
+            "value": "4x14",
+            "label": "4 стержня Ø14 мм"
+          },
+          {
+            "value": "6x12",
+            "label": "6 стержней Ø12 мм"
+          },
+          {
+            "value": "6x14",
+            "label": "6 стержней Ø14 мм"
+          }
+        ],
+        "defaultValue": "4x12"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "concrete",
+        "label": "Объём бетона",
+        "type": "number",
+        "unit": "м³"
+      },
+      {
+        "name": "rebarLength",
+        "label": "Арматуры (длина)",
+        "type": "number",
+        "unit": "п.м."
+      },
+      {
+        "name": "rebarWeight",
+        "label": "Арматуры (вес)",
+        "type": "number",
+        "unit": "кг"
+      }
+    ],
+    "content": {
+      "howTo": "Введите периметр фундамента, ширину и высоту ленты, тип арматуры.",
+      "about": "Ленточный фундамент — непрерывная бетонная лента под несущими стенами. Самый популярный тип для частных домов.",
+      "usage": "Используется при строительстве фундаментов, закупке бетона и арматуры.",
+      "formula": "Объём бетона = Периметр × Ширина × Высота\nАрматура: 4-6 стержней Ø12-14 мм продольно",
+      "faq": [
+        {
+          "question": "Какая марка бетона нужна?",
+          "answer": "Для фундамента используют М200-М400. Для домов до 2 этажей достаточно М200-М250."
+        },
+        {
+          "question": "Какую арматуру использовать?",
+          "answer": "Продольная: 4-6 стержней Ø12-16 мм класса А400. Поперечная (хомуты): Ø6-8 мм с шагом 300-500 мм."
+        }
+      ],
+      "sources": [],
+      "updatedAt": "2026-04-07"
+    }
+  }
+]

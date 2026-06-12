@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: CalculatorPageProps): Promise
   const calculator = getCalculatorBySlug(slug);
   if (!calculator) return {};
 
-  const category = categories.find((c) => c.slug === calculator.category);
+  const _category = categories.find((c) => c.slug === calculator.category);
 
   return {
     title: `${calculator.title} — онлайн калькулятор | Calcus`,
@@ -89,11 +89,11 @@ function generateCalculatorSchema(calculator: CalculatorType, slug: string, cate
     },
   ];
 
-  if (calculator.content.faq && calculator.content.faq.length > 0) {
+  if (calculator.content?.faq && calculator.content?.faq.length > 0) {
     schemas.push({
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: calculator.content.faq.map((faq) => ({
+      mainEntity: calculator.content?.faq.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {
@@ -228,7 +228,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           </div>
           <Card className="p-6">
             <p className="text-muted-foreground leading-relaxed">
-              {calculator.content.howTo}
+              {calculator.content?.howTo}
             </p>
           </Card>
         </div>
@@ -240,15 +240,15 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           </div>
           <Card className="p-6">
             <p className="text-muted-foreground leading-relaxed mb-4">
-              {calculator.content.about}
+              {calculator.content?.about}
             </p>
-            {calculator.content.formula && (
+            {calculator.content?.formula && (
               <>
                 <Separator className="my-4" />
                 <div id="formula">
                   <h3 className="font-semibold mb-2">Формула</h3>
                   <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                    {calculator.content.formula}
+                    {calculator.content?.formula}
                   </p>
                 </div>
               </>
@@ -256,14 +256,14 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           </Card>
         </div>
 
-        {calculator.content.faq && calculator.content.faq.length > 0 && (
+        {calculator.content?.faq && calculator.content?.faq.length > 0 && (
           <div id="faq" className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <HelpCircle className="h-5 w-5 text-primary" />
               <h2 className="text-xl font-bold">Часто задаваемые вопросы</h2>
             </div>
             <Accordion className="space-y-2">
-              {calculator.content.faq.map((faq, index) => (
+              {calculator.content?.faq.map((faq, index) => (
                 <AccordionItem key={index} value={`faq-${index}`} className="border rounded-lg px-4">
                   <AccordionTrigger className="text-left hover:no-underline py-4">
                     {faq.question}
@@ -303,7 +303,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           <RelatedCalculatorsSection currentCalculator={calculator} style={style} />
         </div>
 
-        {calculator.content.sources && calculator.content.sources.length > 0 && (
+        {calculator.content?.sources && calculator.content?.sources.length > 0 && (
           <div id="sources" className="mb-8">
             <div className="flex items-center gap-2 mb-4">
               <FileText className="h-5 w-5 text-primary" />
@@ -311,7 +311,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
             </div>
             <Card className="p-6">
               <ul className="space-y-2">
-                {calculator.content.sources.map((source, index) => (
+                {calculator.content?.sources.map((source, index) => (
                   <li key={index}>
                     <a 
                       href={source.url} 
@@ -331,7 +331,7 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
 
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Clock className="h-4 w-4" />
-          <span>Обновлено: {calculator.content.updatedAt}</span>
+          <span>Обновлено: {calculator.content?.updatedAt}</span>
         </div>
       </article>
     </div>
@@ -345,11 +345,11 @@ function getTocItems(calculator: CalculatorType): { id: string; label: string }[
     { id: 'about', label: 'О калькуляторе' },
   ];
   
-  if (calculator.content.formula) {
+  if (calculator.content?.formula) {
     items.push({ id: 'formula', label: 'Формула' });
   }
   
-  if (calculator.content.faq && calculator.content.faq.length > 0) {
+  if (calculator.content?.faq && calculator.content?.faq.length > 0) {
     items.push({ id: 'faq', label: 'Часто задаваемые вопросы' });
   }
   
@@ -359,7 +359,7 @@ function getTocItems(calculator: CalculatorType): { id: string; label: string }[
   
   items.push({ id: 'related', label: 'Похожие калькуляторы' });
   
-  if (calculator.content.sources && calculator.content.sources.length > 0) {
+  if (calculator.content?.sources && calculator.content?.sources.length > 0) {
     items.push({ id: 'sources', label: 'Источники' });
   }
   

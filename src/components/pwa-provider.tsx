@@ -22,10 +22,7 @@ export function PwaProvider() {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register("/sw.js")
-        .then((reg) => {
-          // eslint-disable-next-line no-console
-          console.log("SW registered:", reg.scope);
-        })
+        .then(() => {})
         .catch((err) => {
           // eslint-disable-next-line no-console
           console.error("SW registration failed:", err);
