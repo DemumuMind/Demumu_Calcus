@@ -1,277 +1,131 @@
-# End-to-End Testing Suite for Calcus.su
+# E2E-тесты Demumu Calcus
 
-Comprehensive Playwright E2E tests covering all major functionality of the calcus.su website.
+Комплексные Playwright E2E-тесты для проекта Demumu Calcus (759 калькуляторов).
 
-## 📁 Test Files
+## Тестовые файлы
 
-| File | Description | Tests Count |
-|------|-------------|-------------|
-| `all-calculators.spec.ts` | Tests all calculators load, render, and function | 20+ |
-| `error-handling.spec.ts` | Tests validation, errors, and edge cases | 25+ |
-| `mobile-menu.spec.ts` | Tests mobile navigation and responsive design | 30+ |
-| `dark-mode.spec.ts` | Tests theme switching and persistence | 25+ |
+| Файл | Описание | Тестов |
+|------|----------|--------|
+| `all-calculators.spec.ts` | Загрузка, рендер, работа калькуляторов | 20+ |
+| `error-handling.spec.ts` | Валидация, ошибки, краевые случаи | 25+ |
+| `mobile-menu.spec.ts` | Мобильная навигация, адаптивность | 30+ |
+| `dark-mode.spec.ts` | Переключение темы, сохранение | 25+ |
 
-## 🚀 Quick Start
-
-### Installation
+## Быстрый старт
 
 ```bash
 npm install
 npx playwright install
+npx playwright test
 ```
 
-### Run All Tests
+## Запуск тестов
 
 ```bash
-# Run all tests
+# Все тесты
 npx playwright test
 
-# Run specific test file
+# Конкретный файл
 npx playwright test all-calculators.spec.ts
 
-# Run with UI mode for debugging
+# UI-режим для отладки
 npx playwright test --ui
 
-# Run in headed mode (visible browser)
+# С видимым браузером
 npx playwright test --headed
 ```
 
-### Run by Tags
+### Фильтрация по тегам
 
 ```bash
-# Run only calculator tests
 npx playwright test --grep "@calculator"
-
-# Run mobile tests
 npx playwright test --grep "@mobile"
-
-# Run error handling tests
 npx playwright test --grep "@error-handling"
-
-# Run dark mode tests
 npx playwright test --grep "@dark-mode"
 ```
 
-### Run on Specific Browsers
+### Запуск на конкретных браузерах
 
 ```bash
-# Chromium only
 npx playwright test --project=chromium
-
-# Mobile Chrome
 npx playwright test --project="Mobile Chrome"
-
-# All mobile browsers
 npx playwright test --project="Mobile Chrome" --project="Mobile Safari"
 ```
 
-## 📝 Test Organization
+## Теги
 
-### Tags
+- `@calculator` — тесты калькуляторов
+- `@mobile` — мобильные/адаптивные тесты
+- `@dark-mode` — переключение темы
+- `@error-handling` — ошибки и валидация
+- `@404` — страница не найдена
+- `@validation` — валидация ввода
+- `@performance` — производительность
+- `@visual` — визуальная регрессия
+- `@accessibility` / `@a11y` — доступность
 
-- `@calculator` - Calculator-related tests
-- `@mobile` - Mobile/responsive tests
-- `@dark-mode` - Theme switching tests
-- `@error-handling` - Error and validation tests
-- `@404` - Not found page tests
-- `@validation` - Input validation tests
-- `@performance` - Performance tests
-- `@visual` - Visual regression tests
-- `@accessibility` / `@a11y` - Accessibility tests
+## Конфигурация
 
-### Test Suites
-
-#### 1. All Calculators Test Suite
-
-Tests every calculator for:
-- Page loading
-- Input fields presence
-- Calculate button functionality
-- Result display
-- Screenshot capture
-
-**Key tests:**
-- Sample calculators from each category
-- Performance testing (page load times)
-- Visual regression
-- Popular calculators with real data
-
-#### 2. Error Handling Test Suite
-
-Tests error scenarios:
-- Empty input validation
-- Invalid data types (letters, special chars)
-- Negative numbers where not allowed
-- Missing required fields
-- Network errors (offline mode)
-- 404 pages
-- Boundary value testing
-- URL parameter handling
-
-#### 3. Mobile Menu Test Suite
-
-Tests mobile navigation:
-- Menu button visibility on mobile
-- Menu open/close functionality
-- Touch interactions
-- Responsive breakpoints
-- Footer navigation on mobile
-- Search in mobile menu
-- Performance (menu open speed)
-
-#### 4. Dark Mode Test Suite
-
-Tests theme switching:
-- Theme toggle functionality
-- Theme persistence across pages
-- Component styling in dark mode
-- System preference detection
-- Theme transitions
-- Accessibility in dark mode
-- Edge cases (corrupted storage, rapid toggles)
-
-## 📊 Test Reports
-
-After running tests, reports are available:
+### Переменные окружения
 
 ```bash
-# Open HTML report
-npx playwright show-report
-
-# View JSON results
-cat playwright-results.json
+BASE_URL=http://localhost:3000 npx playwright test   # Локально
+BASE_URL=https://calcus-site.vercel.app npx playwright test  # Production
+CI=true npx playwright test                          # CI-режим
 ```
 
-Reports include:
-- Test results summary
-- Screenshots (on failure)
-- Traces (on failure)
-- Videos (on failure)
-- Performance metrics
+### playwright.config.ts
 
-## 📸 Screenshots
-
-Screenshots are saved to `e2e/screenshots/`:
-- Calculator pages: `calculator-{slug}.png`
-- Error states: `error-{type}.png`
-- Mobile views: `mobile-{device}.png`
-- Dark mode: `dark-mode-{page}.png`
-
-## 🔧 Configuration
-
-### Environment Variables
-
-```bash
-# Use local development server
-BASE_URL=http://localhost:3000 npx playwright test
-
-# Use staging
-BASE_URL=https://staging.calcus.su npx playwright test
-
-# Use production
-BASE_URL=https://calcus.su npx playwright test
-
-# CI mode (reduced parallelism, more retries)
-CI=true npx playwright test
-```
-
-### Playwright Config
-
-Configuration in `playwright.config.ts`:
 - Desktop: Chrome, Firefox, Safari
 - Mobile: Pixel 5, iPhone 12
 - Tablet: iPad Pro 11
-- Parallel execution (4 workers locally, 1 in CI)
-- Retries: 2 in CI, 0 locally
+- Параллельное выполнение (4 workers локально, 1 в CI)
+- Попытки: 2 в CI, 0 локально
 
-## 🧪 Writing New Tests
+## Отчёты
 
-### Page Object Pattern
-
-```typescript
-class MyPage {
-  readonly page: Page;
-  readonly element: Locator;
-
-  constructor(page: Page) {
-    this.page = page;
-    this.element = page.locator('[data-testid="my-element"]');
-  }
-
-  async goto() {
-    await this.page.goto('/my-page');
-  }
-}
+```bash
+npx playwright show-report           # HTML-отчёт
 ```
 
-### Test Structure
+Отчёты включают: результаты, скриншоты (при ошибке), трейсы, видео, метрики.
+
+## Скриншоты
+
+Сохраняются в `e2e/screenshots/`:
+- Калькуляторы: `calculator-{slug}.png`
+- Ошибки: `error-{type}.png`
+- Мобильные: `mobile-{device}.png`
+- Тёмная тема: `dark-mode-{page}.png`
+
+## Отладка
+
+```bash
+npx playwright test --debug          # Playwright Inspector
+npx playwright test --slow-mo 100    # Замедление
+npx playwright test --headed --retries=0  # Браузер открыт после ошибки
+npx playwright show-trace playwright-report/trace.zip  # Трейс
+```
+
+## Написание новых тестов
 
 ```typescript
-test.describe('Feature Name @tag', () => {
-  let page: MyPage;
-
-  test.beforeEach(async ({ page }) => {
-    page = new MyPage(page);
-  });
-
-  test('should do something @specific-tag', async ({ page }) => {
-    // Test implementation
+test.describe('Функция @tag', () => {
+  test('должен работать @specific-tag', async ({ page }) => {
+    await page.goto('/calc/kalkulyator-imt');
+    // ...
   });
 });
 ```
 
-## 🐛 Debugging
-
-### Debug Mode
-
-```bash
-# Run with Playwright Inspector
-npx playwright test --debug
-
-# Slow motion (100ms between actions)
-npx playwright test --slow-mo 100
-
-# Keep browser open after failure
-npx playwright test --headed --retries=0
-```
-
-### Viewing Traces
-
-```bash
-# Traces are saved on failure
-npx playwright show-trace playwright-report/trace.zip
-```
-
-## 📦 Maintenance
-
-### Updating Selectors
-
-If UI changes break tests:
-
-1. Check `data-testid` attributes first
-2. Update locators in Page Objects
-3. Re-run tests with `--update-snapshots` for visual tests
-
-### Adding Data Attributes
-
-Add to components for more stable selectors:
+Используйте `data-testid` для стабильных селекторов:
 
 ```tsx
 <button data-testid="calculate-button">Рассчитать</button>
 <div data-testid="result-container">...</div>
 ```
 
-## 🎯 Best Practices
-
-1. **Use Page Objects** - Encapsulate page logic
-2. **Add Tags** - Makes filtering tests easier
-3. **Take Screenshots** - Visual verification
-4. **Use Locators** - Prefer semantic selectors
-5. **Test Edge Cases** - Empty inputs, invalid data
-6. **Mobile First** - Test responsive design
-7. **Performance** - Check load times
-
-## 📚 Resources
+## Ресурсы
 
 - [Playwright Docs](https://playwright.dev)
 - [Best Practices](https://playwright.dev/docs/best-practices)
