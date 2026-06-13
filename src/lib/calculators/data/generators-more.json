@@ -533,9 +533,9 @@
     "id": "random-name-generator",
     "title": "Генератор случайных имён",
     "description": "Генератор имён: русские, английские, фэнтези (эльфы, дварфы, орки), случайные комбинации",
-    "subcategory": "generatory",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "razvlecheniya",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "culture",
@@ -663,9 +663,9 @@
     "id": "lottery-generator",
     "title": "Генератор лотерейных чисел",
     "description": "Генерация чисел для лотерей: 6 из 49, 5 из 36, Powerball, EuroMillions",
-    "subcategory": "generatory",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "razvlecheniya",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "game",
@@ -776,9 +776,9 @@
     "id": "coin-dice-generator",
     "title": "Монеты и кости с вероятностями",
     "description": "Бросок монеты, многогранных костей (d4-d20) с расчётом вероятностей и статистики",
-    "subcategory": "generatory",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "razvlecheniya",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "mode",
@@ -1001,9 +1001,9 @@
     "id": "meme-text-generator",
     "title": "Генератор MEME-текстов",
     "description": "Создание классических мем-форматов: Impact font, верхний/нижний текст, популярные шаблоны",
-    "subcategory": "generatory",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "razvlecheniya",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "template",

@@ -5,7 +5,7 @@ import { Search, X, ArrowRight, Calculator } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { calculators } from '@/lib/calculators';
+import { calculators } from '@/lib/calculators/metadata';
 import { categories } from '@/lib/categories';
 import { getCategoryStyle } from '@/lib/category-styles';
 import {

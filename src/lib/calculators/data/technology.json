@@ -4,9 +4,9 @@
     "id": "ip-calculator",
     "title": "Калькулятор IP-адреса и подсети",
     "description": "Расчёт сетевых параметров: маска, широковещательный адрес, количество хостов",
-    "subcategory": "tech-set",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnologii",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "ip",
@@ -104,9 +104,9 @@
     "id": "dpi-display-calculator",
     "title": "Калькулятор DPI/PPI",
     "description": "Расчёт плотности пикселей экрана, размеров элементов",
-    "subcategory": "tech-ekrany",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnologii",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "width",
@@ -188,9 +188,9 @@
     "id": "bitrate-calculator",
     "title": "Калькулятор битрейта видео",
     "description": "Расчёт размера файла по параметрам видео",
-    "subcategory": "tech-video",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnologii",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "resolution",
@@ -293,9 +293,9 @@
     "id": "internet-speed-calculator",
     "title": "Калькулятор скорости интернета",
     "description": "Расчёт времени загрузки и скачивания файлов",
-    "subcategory": "tech-set",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnologii",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "speed",
@@ -394,9 +394,9 @@
     "id": "hash-calculator",
     "title": "Калькулятор хешей (контрольных сумм)",
     "description": "Расчёт CRC32 и информация о хеш-функциях",
-    "subcategory": "tech-hranenie",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnologii",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "input",

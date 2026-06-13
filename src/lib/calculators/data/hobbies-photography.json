@@ -4,9 +4,9 @@
     "id": "exposure",
     "title": "Выдержка и экспозиция",
     "description": "Расчёт выдержки, диафрагмы и ISO для правильной экспозиции фотографии",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "baseShutter",
@@ -86,9 +86,9 @@
     "id": "depth-of-field",
     "title": "Глубина резкости",
     "description": "Расчёт глубины резкости (DOF) на основе фокусного расстояния, диафрагмы и расстояния до объекта",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "focalLength",
@@ -183,9 +183,9 @@
     "id": "field-of-view",
     "title": "Угол обзора объектива",
     "description": "Расчёт горизонтального, вертикального и диагонального угла обзора объектива",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "focalLength",
@@ -266,9 +266,9 @@
     "id": "star-trails",
     "title": "Выдержка для звёзд",
     "description": "Расчёт максимальной выдержки для съёмки звёзд без смазывания (правило 500, 600, NPF)",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "focalLength",
@@ -374,9 +374,9 @@
     "id": "macro",
     "title": "Макросъёмка (увеличение)",
     "description": "Расчёт увеличения макрообъектива, рабочего расстояния и размера объекта в кадре",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "focalLength",
@@ -447,9 +447,9 @@
     "id": "print-size",
     "title": "Размеры печати фото",
     "description": "Расчёт оптимальных размеров печати на основе разрешения файла и требуемого PPI",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "width",
@@ -542,9 +542,9 @@
     "id": "aperture",
     "title": "Светосила (f-stop)",
     "description": "Расчёт изменения светосилы при разных значениях диафрагмы",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "baseAperture",
@@ -677,9 +677,9 @@
     "id": "hdr-bracketing",
     "title": "HDR брекетинг",
     "description": "Расчёт настроек для съёмки HDR (High Dynamic Range) с брекетингом экспозиции",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "evRange",
@@ -762,9 +762,9 @@
     "id": "bokeh",
     "title": "Размытие фона (боке)",
     "description": "Оценка силы размытия фона на основе диафрагмы, фокусного расстояния и расстояния до объекта",
-    "subcategory": "hobbi-photo",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "focalLength",

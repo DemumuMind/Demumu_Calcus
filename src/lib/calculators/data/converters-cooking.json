@@ -4,9 +4,9 @@
     "id": "cooking-measures-extended",
     "title": "Конвертер кулинарных мер",
     "description": "Переводит кулинарные меры: стаканы, ложки, граммы, миллилитры",
-    "subcategory": "cooking",
+    "subcategory": "conv-massa",
     "type": "converter",
-    "category": "converters",
+    "category": "konvertery",
     "inputs": [
       {
         "name": "fromValue",
@@ -28,9 +28,9 @@
     "id": "oven-temp-converter",
     "title": "Конвертер температуры духовки",
     "description": "Переводит температуру духовки между °C, °F и газовыми марками",
-    "subcategory": "cooking",
+    "subcategory": "conv-massa",
     "type": "converter",
-    "category": "converters",
+    "category": "konvertery",
     "inputs": [
       {
         "name": "fromValue",

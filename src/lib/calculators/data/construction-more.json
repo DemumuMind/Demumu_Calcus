@@ -4,9 +4,9 @@
     "id": "paint-room-calculator",
     "title": "Калькулятор краски",
     "description": "Расчёт количества краски для стен и потолка",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "plaster-ceiling-calculator",
     "title": "Калькулятор штукатурки",
     "description": "Расчёт количества штукатурки для стен",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -54,9 +54,9 @@
     "id": "tile-wall-calculator",
     "title": "Калькулятор плитки",
     "description": "Расчёт количества плитки для пола или стен",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -79,9 +79,9 @@
     "id": "laminate-calculator",
     "title": "Калькулятор ламината",
     "description": "Расчёт количества досок ламината для пола",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -104,9 +104,9 @@
     "id": "brick-calculator",
     "title": "Калькулятор кирпича",
     "description": "Расчёт количества кирпича для стен с учётом толщины шва",
-    "subcategory": "build-steny",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -129,9 +129,9 @@
     "id": "foundation-calculator",
     "title": "Калькулятор ленточного фундамента",
     "description": "Расчёт объёма бетона и арматуры для фундамента",
-    "subcategory": "build-fundament",
+    "subcategory": "fundamenty",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "perimeter",

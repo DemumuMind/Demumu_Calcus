@@ -1,4 +1,4 @@
-const CACHE_NAME = 'calcus-v2';
+const CACHE_NAME = 'calcus-v3';
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',

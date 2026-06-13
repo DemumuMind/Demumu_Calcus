@@ -4,9 +4,9 @@
     "id": "sleep-beauty-calculator",
     "title": "Калькулятор красоты сна",
     "description": "Расчёт оптимальной продолжительности сна для красоты и здоровья кожи",
-    "subcategory": "wellness",
+    "subcategory": "zdorove-raznoe",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "age",
@@ -118,9 +118,9 @@
     "id": "water-beauty-calculator",
     "title": "Калькулятор воды для красоты",
     "description": "Расчёт необходимого количества воды для увлажнённой и здоровой кожи",
-    "subcategory": "wellness",
+    "subcategory": "zdorove-raznoe",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "weight",
@@ -248,9 +248,9 @@
     "id": "aging-risk-calculator",
     "title": "Калькулятор факторов старения",
     "description": "Оценка факторов, влияющих на преждевременное старение кожи",
-    "subcategory": "wellness",
+    "subcategory": "zdorove-raznoe",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "sunExposure",
@@ -415,9 +415,9 @@
     "id": "skin-type-care",
     "title": "Калькулятор ухода по типу кожи",
     "description": "Подбор уходовых средств и рутины на основе типа кожи и возраста",
-    "subcategory": "beauty",
+    "subcategory": "razmery",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "skinType",
@@ -554,9 +554,9 @@
     "id": "collagen-calculator",
     "title": "Калькулятор коллагена",
     "description": "Расчёт оптимальной дозировки коллагена для кожи, волос и суставов",
-    "subcategory": "wellness",
+    "subcategory": "zdorove-raznoe",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "age",
@@ -683,9 +683,9 @@
     "id": "spf-calculator",
     "title": "Калькулятор солнцезащиты",
     "description": "Расчёт SPF и безопасного времени пребывания на солнце для вашего типа кожи",
-    "subcategory": "wellness",
+    "subcategory": "zdorove-raznoe",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "skinType",
@@ -835,9 +835,9 @@
     "id": "hair-care-calculator",
     "title": "Калькулятор ухода за волосами",
     "description": "Подбор ухода для волос на основе типа, длины и проблем",
-    "subcategory": "beauty",
+    "subcategory": "razmery",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "hairType",
@@ -1016,9 +1016,9 @@
     "id": "manicure-calculator",
     "title": "Калькулятор маникюра",
     "description": "Расчёт стоимости, времени и частоты маникюра в зависимости от типа",
-    "subcategory": "beauty",
+    "subcategory": "razmery",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "serviceType",
@@ -1171,9 +1171,9 @@
     "id": "beauty-vitamins-calculator",
     "title": "Калькулятор витаминов для красоты",
     "description": "Подбор витаминов и добавок для кожи, волос и ногтей на основе потребностей",
-    "subcategory": "wellness",
+    "subcategory": "zdorove-raznoe",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "age",

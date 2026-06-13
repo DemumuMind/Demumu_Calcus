@@ -181,18 +181,6 @@ export const computeMap_other_other2_b_3: Record<string, ComputeFn> = {
         { value: data.count, label: 'Количество снов', unit: 'раз' }
     ];
 },
-  'složnye-procenty': (inputs) => {
-    const amount = Number(inputs.amount) || 0;
-    const rate = Number(inputs.rate) || 0;
-    const periods = Number(inputs.periods) || 0;
-    const result = amount * Math.pow(1 + rate / 100, periods);
-    const profit = result - amount;
-    return [
-        { value: result.toFixed(2), label: 'Итоговая сумма' },
-        { value: profit.toFixed(2), label: 'Прибыль' },
-        { value: `${amount} × (1 + ${rate}/100)^${periods} = ${result.toFixed(2)}`, label: 'Формула' },
-    ];
-},
   'stoikost-parolya': (inputs) => {
     const passwordLength = Number(inputs.passwordLength);
     const charset = String(inputs.charset);

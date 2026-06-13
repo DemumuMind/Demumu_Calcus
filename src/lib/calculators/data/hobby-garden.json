@@ -4,9 +4,9 @@
     "id": "seed-calculator",
     "title": "Калькулятор семян",
     "description": "Расчёт количества семян для посадки с учётом площади, густоты и всхожести",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "area",
@@ -126,9 +126,9 @@
     "id": "fertilizer-calculator",
     "title": "Калькулятор удобрений",
     "description": "Расчёт количества удобрений для огорода с учётом площади и типа растений",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "area",
@@ -252,9 +252,9 @@
     "id": "watering-calculator",
     "title": "Калькулятор полива",
     "description": "Расчёт количества воды для полива растений с учётом площади и типа почвы",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "area",
@@ -375,9 +375,9 @@
     "id": "yield-calculator",
     "title": "Калькулятор урожайности",
     "description": "Прогноз урожая с грядки или огорода на основе площади и типа культуры",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "area",
@@ -514,9 +514,9 @@
     "id": "compost-garden-calculator",
     "title": "Калькулятор компоста",
     "description": "Расчёт соотношения \"зелёного\" и \"коричневого\" материала для компоста",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "greenMaterial",
@@ -600,9 +600,9 @@
     "id": "planting-calendar",
     "title": "Календарь посадки",
     "description": "Расчёт сроков посадки семян и высаживания рассады с учётом региона",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "crop",
@@ -733,9 +733,9 @@
     "id": "planting-area",
     "title": "Калькулятор площади посадки",
     "description": "Расчёт площади под огород на основе потребностей семьи",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "people",
@@ -832,9 +832,9 @@
     "id": "soil-temp",
     "title": "Калькулятор температуры почвы",
     "description": "Оценка прогрева почвы для посева семян разных культур",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "airTemp",
@@ -937,9 +937,9 @@
     "id": "plant-care-calculator",
     "title": "Калькулятор ухода за растениями",
     "description": "Расчёт расписания полива, подкормки и обработки с учётом вида растения и сезона",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "plantType",
@@ -1087,9 +1087,9 @@
     "id": "greenhouse-calculator",
     "title": "Калькулятор урожайности теплицы",
     "description": "Расчёт ожидаемого урожая в теплице с учётом площади, культур и технологии выращивания",
-    "subcategory": "gardening",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "greenhouseLength",

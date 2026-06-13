@@ -2,7 +2,7 @@ import type { ComputeFn } from './compute-helpers';
 
 export const computeMap_missing_1: Record<string, ComputeFn> = {
   'kilometry-v-metry': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -13,7 +13,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'metry-v-santimetry': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -24,7 +24,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'santimetry-v-millimetry': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -35,7 +35,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'kilogrammy-v-grammy': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -46,7 +46,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'tonny-v-kilogrammy': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -57,7 +57,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'karati-v-grammy': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -68,7 +68,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'kg-bagazha-v-funty': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }, { value: '\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442: 23 \u043a\u0433 (50.7 \u0444\u0443\u043d\u0442\u043e\u0432) \u2014 \u0431\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e \u0430\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439', label: 'airlineInfo' }];
@@ -82,7 +82,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     ];
   },
   'funty-bagazha-v-kg': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }, { value: '\u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442: 50.7 \u0444\u0443\u043d\u0442\u043e\u0432 (23 \u043a\u0433) \u2014 \u0431\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e \u0430\u0432\u0438\u0430\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439', label: 'airlineInfo' }];
@@ -96,7 +96,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     ];
   },
   'ppi-v-dpi': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -105,7 +105,7 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${value} ${toLabel}. \u041f\u0440\u0438\u043c\u0435\u0447\u0430\u043d\u0438\u0435: \u0447\u0430\u0441\u0442\u043e \u043e\u0431\u043e\u0437\u043d\u0430\u0447\u0430\u044e\u0442 \u043e\u0434\u043d\u043e \u0438 \u0442\u043e \u0436\u0435 (1:1)`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'sm-v-dyujmy-diagonal': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const from = String(inputs.from);
     const to = String(inputs.to);
     if (isNaN(value)) return [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
@@ -116,14 +116,14 @@ export const computeMap_missing_1: Record<string, ComputeFn> = {
     return [{ value: `${value} ${fromLabel} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${toLabel}`, label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }];
   },
   'sootnoshenie-storon-v-degrees': (inputs) => {
-    const width = Number(inputs.width);
-    const height = Number(inputs.height);
+    const width = Number(inputs.width) || 0;
+    const height = Number(inputs.height) || 0;
     if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) return [{ value: '\u2014', label: '\u0423\u0433\u043e\u043b \u0434\u0438\u0430\u0433\u043e\u043d\u0430\u043b\u0438' }];
     const angle = Math.atan2(height, width) * 180 / Math.PI;
     return [{ value: `${angle.toFixed(2)}\u00b0`, label: '\u0423\u0433\u043e\u043b \u0434\u0438\u0430\u0433\u043e\u043d\u0430\u043b\u0438' }];
   },
   'razmer-fayla': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const fromUnit = String(inputs.fromUnit);
     if (isNaN(value)) {
       return [

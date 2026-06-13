@@ -4,9 +4,9 @@
     "id": "putty-calculator",
     "title": "Калькулятор шпаклёвки",
     "description": "Расчёт количества шпаклёвки для выравнивания стен",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "area",
@@ -100,9 +100,9 @@
     "id": "primer-calculator",
     "title": "Калькулятор грунтовки",
     "description": "Расчёт расхода грунтовки для стен и потолков",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -125,9 +125,9 @@
     "id": "insulation-calculator",
     "title": "Калькулятор утеплителя",
     "description": "Расчёт количества утеплителя для стен, полов и крыш",
-    "subcategory": "build-materialy",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",

@@ -17,13 +17,21 @@ export function CalculatorRenderer({ calculator, calculate }: CalculatorRenderer
     calculate,
   };
 
-  switch (fullCalculator.type) {
-    case 'arithmetic':
-      return <ArithmeticCalculator calculator={fullCalculator} />;
-    case 'converter':
-      return <ConverterCalculator calculator={fullCalculator} />;
-    case 'formula':
-    default:
-      return <FormulaCalculator calculator={fullCalculator} />;
-  }
+  const calculatorNode = (() => {
+    switch (fullCalculator.type) {
+      case 'arithmetic':
+        return <ArithmeticCalculator calculator={fullCalculator} />;
+      case 'converter':
+        return <ConverterCalculator calculator={fullCalculator} />;
+      case 'formula':
+      default:
+        return <FormulaCalculator calculator={fullCalculator} />;
+    }
+  })();
+
+  return (
+    <div role="form" aria-label={`Калькулятор ${fullCalculator.title}`}>
+      {calculatorNode}
+    </div>
+  );
 }

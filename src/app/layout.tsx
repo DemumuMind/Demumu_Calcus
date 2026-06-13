@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { BottomNav } from "@/components/mobile/bottom-nav";
 import { AnalyticsProvider } from "@/components/analytics-provider";
 import { PwaProvider } from "@/components/pwa-provider";
+import { CryptoRatesUpdater } from "@/components/crypto-rates-updater";
 import { calculators } from "@/lib/calculators";
 
 export const viewport: Viewport = {
@@ -70,6 +71,7 @@ export default function RootLayout({
         </ThemeProvider>
         <AnalyticsProvider />
         <PwaProvider />
+        <CryptoRatesUpdater />
         {process.env.NODE_ENV !== 'development' && (
           <Script
             id="yandex-rtb"

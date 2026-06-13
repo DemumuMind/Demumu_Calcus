@@ -4,9 +4,9 @@
     "id": "due-date-calculator",
     "title": "Калькулятор даты родов",
     "description": "Рассчитайте предполагаемую дату родов по дате последней менструации",
-    "subcategory": "pregnancy",
+    "subcategory": "razvlecheniya",
     "type": "arithmetic",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -28,9 +28,9 @@
     "id": "baby-growth-calculator",
     "title": "Калькулятор роста ребёнка",
     "description": "Отслеживайте рост и вес ребёнка по процентилям ВОЗ",
-    "subcategory": "baby-health",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -53,9 +53,9 @@
     "id": "feeding-amount-calculator",
     "title": "Калькулятор объёма кормления",
     "description": "Рассчитайте сколько молока или смеси нужно ребёнку",
-    "subcategory": "feeding",
+    "subcategory": "eda-i-napitki",
     "type": "arithmetic",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -77,9 +77,9 @@
     "id": "diaper-calculator",
     "title": "Калькулятор подгузников",
     "description": "Рассчитайте сколько подгузников нужно и во сколько это обойдётся",
-    "subcategory": "supplies",
+    "subcategory": "razmery",
     "type": "formula",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -102,9 +102,9 @@
     "id": "sleep-calculator",
     "title": "Калькулятор сна ребёнка",
     "description": "Рассчитайте оптимальное время сна по возрасту",
-    "subcategory": "sleep",
+    "subcategory": "razvlecheniya",
     "type": "arithmetic",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -126,9 +126,9 @@
     "id": "vaccination-calendar",
     "title": "Калькулятор календаря прививок",
     "description": "Рассчитайте график вакцинации для вашего ребёнка",
-    "subcategory": "health",
+    "subcategory": "razvlecheniya",
     "type": "arithmetic",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -150,9 +150,9 @@
     "id": "maternity-benefit-calculator",
     "title": "Калькулятор декретных выплат",
     "description": "Рассчитайте пособия по беременности и родам",
-    "subcategory": "benefits",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -174,9 +174,9 @@
     "id": "toy-age-calculator",
     "title": "Калькулятор игрушек по возрасту",
     "description": "Подберите подходящие игрушки для развития ребёнка",
-    "subcategory": "development",
+    "subcategory": "razvlecheniya",
     "type": "arithmetic",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -198,9 +198,9 @@
     "id": "baby-clothes-calculator",
     "title": "Калькулятор детской одежды",
     "description": "Рассчитайте необходимый гардероб для ребёнка",
-    "subcategory": "shopping",
+    "subcategory": "razmery",
     "type": "formula",
-    "category": "parenting",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",

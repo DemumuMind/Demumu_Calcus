@@ -42,22 +42,6 @@ export const computeMap_other_other2_b_5: Record<string, ComputeFn> = {
         { value: arrivalTime, label: 'Время прибытия' }
     ];
 },
-  'vyčest-procent': (inputs) => {
-    const number = Number(inputs.number) || 0;
-    const percent = Number(inputs.percent) || 0;
-    const result = number - (number * percent) / 100;
-    return [
-        { value: result, label: 'Результат' },
-        { value: `${number} − ${percent}% = ${result}`, label: 'Формула' },
-    ];
-},
-  'wishlist-_priority-calculator': (inputs): any => {
-    const n = inputs as Record<string, number>;
-    const firstVal = Math.round((inputs.utility1 / inputs.price1) * 10000) / 10;
-    const secondVal = Math.round((inputs.utility2 / inputs.price2) * 10000) / 10;
-    const _priority = firstVal > secondVal ? 'Товар 1 (лучшее соотношение)' : 'Товар 2 (лучшее соотношение)';
-    return [];
-},
   'zabor-raschet': (inputs) => {
     const perimeter = Number(inputs.perimeter);
     const spacing = Number(inputs.postSpacing);

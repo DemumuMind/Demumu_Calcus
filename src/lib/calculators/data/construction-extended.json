@@ -4,9 +4,9 @@
     "id": "roof-materials",
     "title": "Расчёт материалов для крыши",
     "description": "Расчёт количества черепицы, профнастила или металлочерепицы для крыши",
-    "subcategory": "stroitelstvo-drugoe",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "stairs-calculator",
     "title": "Расчёт лестницы",
     "description": "Расчёт количества ступеней, их высоты и глубины для удобной лестницы",
-    "subcategory": "stroitelstvo-drugoe",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -54,9 +54,9 @@
     "id": "fence-calculator",
     "title": "Расчёт материалов для забора",
     "description": "Расчёт количества столбов, планок и других материалов для забора",
-    "subcategory": "stroitelstvo-drugoe",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -79,9 +79,9 @@
     "id": "floor-screed",
     "title": "Расчёт стяжки пола",
     "description": "Расчёт объёма и количества материалов для стяжки пола",
-    "subcategory": "otdelka-pola",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -104,9 +104,9 @@
     "id": "drywall-calculator",
     "title": "Расчёт гипсокартона",
     "description": "Расчёт количества листов ГКЛ, профилей и крепежа",
-    "subcategory": "otdelka-sten",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -129,9 +129,9 @@
     "id": "heating-radiators",
     "title": "Расчёт радиаторов отопления",
     "description": "Расчёт количества секций радиаторов по площади или объёму помещения",
-    "subcategory": "otoplenie",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -154,9 +154,9 @@
     "id": "wall-tiles",
     "title": "Расчёт плитки для стен",
     "description": "Расчёт количества плитки для облицовки стен в ванной, кухне и других помещениях",
-    "subcategory": "otdelka-sten",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -179,9 +179,9 @@
     "id": "concrete-m300",
     "title": "Расчёт бетона М300",
     "description": "Расчёт состава бетона М300 (ПВ20) для фундаментов и перекрытий",
-    "subcategory": "stroitelstvo-drugoe",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo-remont",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",

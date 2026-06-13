@@ -4,9 +4,9 @@
     "id": "ftp-calculator",
     "title": "FTP калькулятор (велоспорт)",
     "description": "Расчёт функционального порога мощности для велосипедистов",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "heart-rate-zones-karvonen",
     "title": "Зоны пульса по Каравонену",
     "description": "Расчёт тренировочных зон по методу Каравонена (HRR)",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -54,9 +54,9 @@
     "id": "running-pace",
     "title": "Калькулятор темпа бега",
     "description": "Расчёт темпа (мин/км) из скорости или времени дистанции",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -79,9 +79,9 @@
     "id": "marathon-predictor",
     "title": "Прогноз времени марафона",
     "description": "Предсказание времени на марафоне по времени на коротких дистанциях",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -104,9 +104,9 @@
     "id": "swimming-pace",
     "title": "Калькулятор скорости плавания",
     "description": "Расчёт темпа на 100м и скорости для разных бассейнов",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -129,9 +129,9 @@
     "id": "vdot-calculator",
     "title": "Калькулятор VDOT Джека Дэниэлса",
     "description": "Расчёт VO2max и тренировочных темпов по таблицам Дэниэлса",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -154,9 +154,9 @@
     "id": "training-load",
     "title": "Калькулятор тренировочной нагрузки",
     "description": "Расчёт TSS (Training Stress Score) для планирования формы",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -179,9 +179,9 @@
     "id": "athlete-hydration",
     "title": "Гидратация во время тренировки",
     "description": "Сколько пить во время длительных тренировок и гонок",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -204,9 +204,9 @@
     "id": "training-nutrition",
     "title": "Питание во время длительных тренировок",
     "description": "Сколько углеводов нужно во время тренировки разной длительности",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -229,9 +229,9 @@
     "id": "recovery-calculator",
     "title": "Калькулятор восстановления",
     "description": "Оценка времени восстановления после разных типов тренировок",
-    "subcategory": "sport-drugoe",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "sport",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",

@@ -158,9 +158,9 @@
     "id": "tip-travel-calculator",
     "title": "Калькулятор чаевых",
     "description": "Расчёт чаевых в ресторане с учётом процента, количества людей и качества обслуживания",
-    "subcategory": "travel-tools",
+    "subcategory": "stoimost-poezdki",
     "type": "formula",
-    "category": "puteshestviya",
+    "category": "transport",
     "inputs": [
       {
         "name": "value",
@@ -183,9 +183,9 @@
     "id": "luggage-calculator",
     "title": "Калькулятор багажа",
     "description": "Проверка веса и размеров багажа на соответствие требованиям авиакомпаний",
-    "subcategory": "travel-tools",
+    "subcategory": "stoimost-poezdki",
     "type": "formula",
-    "category": "puteshestviya",
+    "category": "transport",
     "inputs": [
       {
         "name": "weight",
@@ -403,9 +403,9 @@
     "id": "altitude-pressure",
     "title": "Калькулятор давления в горах",
     "description": "Расчёт атмосферного давления, температуры кипения и содержания кислорода на высоте",
-    "subcategory": "mountain",
+    "subcategory": "stoimost-poezdki",
     "type": "formula",
-    "category": "puteshestviya",
+    "category": "transport",
     "inputs": [
       {
         "name": "altitude",

@@ -40,7 +40,15 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: 'Calcus',
     type: 'website',
-    locale: 'ru_RU' },
+    locale: 'ru_RU',
+    images: [`${SITE_URL}/api/og?title=${encodeURIComponent('Calcus')}&description=${encodeURIComponent('759+ бесплатных онлайн калькуляторов')}&category=home`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Calcus — бесплатные онлайн калькуляторы',
+    description: `${calculators.length}+ калькуляторов для любых расчётов.`,
+    images: [`${SITE_URL}/api/og?title=${encodeURIComponent('Calcus')}&description=${encodeURIComponent('759+ бесплатных онлайн калькуляторов')}&category=home`],
+  },
   alternates: {
     canonical: SITE_URL } };
 

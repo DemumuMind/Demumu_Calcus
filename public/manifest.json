@@ -36,11 +36,18 @@
   ],
   "screenshots": [
     {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Главная страница Calcus"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Главная страница Calcus на мобильном"
     }
   ],
   "shortcuts": [

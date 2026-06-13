@@ -4,9 +4,9 @@
     "id": "paint-renovation-calculator",
     "title": "Калькулятор краски",
     "description": "Расчёт количества краски для стен и потолка с учётом площади, пористости и количества слоёв",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "flooring-calculator",
     "title": "Калькулятор напольного покрытия",
     "description": "Расчёт количества ламината, паркета, плитки или линолеума с учётом укладки и запаса",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "roomLength",
@@ -154,9 +154,9 @@
     "id": "wallpaper-renovation-calculator",
     "title": "Калькулятор обоев",
     "description": "Расчёт количества рулонов обоев с учётом площади, рисунка и высоты потолков",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -179,9 +179,9 @@
     "id": "plaster-calculator",
     "title": "Калькулятор штукатурки",
     "description": "Расчёт количества штукатурной смеси с учётом площади и толщины слоя",
-    "subcategory": "construction-materials",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "area",
@@ -292,9 +292,9 @@
     "id": "tile-renovation-calculator",
     "title": "Калькулятор керамической плитки",
     "description": "Расчёт количества плитки для стен и пола с учётом способа укладки и запаса",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -317,9 +317,9 @@
     "id": "heating-calculator",
     "title": "Калькулятор мощности отопления",
     "description": "Расчёт тепловой мощности для обогрева помещения с учётом климата и утепления",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "area",
@@ -464,9 +464,9 @@
     "id": "ac-calculator",
     "title": "Подбор мощности кондиционера",
     "description": "Расчёт требуемой мощности кондиционера для охлаждения помещения",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "area",
@@ -585,9 +585,9 @@
     "id": "primer-renovation-calculator",
     "title": "Калькулятор грунтовки",
     "description": "Расчёт количества грунтовочной смеси для подготовки стен и пола",
-    "subcategory": "home-improvement",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "stroitelstvo",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "wallArea",

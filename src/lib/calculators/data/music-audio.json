@@ -4,9 +4,9 @@
     "id": "bpm",
     "title": "BPM (удары в минуту)",
     "description": "Определение темпа музыки и расчёт задержек/частот для эффектов",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "bpm",
@@ -68,9 +68,9 @@
     "id": "guitar-tuning",
     "title": "Частоты струн гитары",
     "description": "Частоты нот для стандартного и альтернативных строев гитары",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "reference",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "tuning",
@@ -161,9 +161,9 @@
     "id": "note-frequency",
     "title": "Частоты нот",
     "description": "Расчёт частоты любой ноты в равномерно темперированном строе",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "note",
@@ -308,9 +308,9 @@
     "id": "audio-file-size",
     "title": "Размер аудиофайла",
     "description": "Расчёт размера аудиофайла в зависимости от битрейта и длительности",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "duration",
@@ -403,9 +403,9 @@
     "id": "detune",
     "title": "Детюнинг (расстройка)",
     "description": "Расчёт расстройки в центах для создания эффектов хоруса и даббинга",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "baseFrequency",
@@ -464,9 +464,9 @@
     "id": "spl",
     "title": "Уровень звукового давления (SPL)",
     "description": "Расчёт громкости звука в децибелах и безопасного времени прослушивания",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "spl",
@@ -523,9 +523,9 @@
     "id": "mixing-balance",
     "title": "Баланс микса",
     "description": "Рекомендации по уровням громкости инструментов в миксе",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "reference",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "genre",
@@ -617,9 +617,9 @@
     "id": "lufs",
     "title": "Нормализация громкости (LUFS)",
     "description": "Проверка соответствия стандартам громкости для стриминговых платформ",
-    "subcategory": "hobbi-music",
+    "subcategory": "razvlecheniya",
     "type": "reference",
-    "category": "hobbi",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "platform",

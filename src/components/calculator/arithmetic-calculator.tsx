@@ -162,30 +162,30 @@ export function ArithmeticCalculator({ calculator: _calculator, initialParams }:
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [inputNumber, inputDecimal, performCalculation, clear, inputOperation]);
 
-  const buttons = [
-    { label: 'C', onClick: clear, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '±', onClick: toggleSign, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '%', onClick: inputPercent, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '÷', onClick: () => inputOperation('÷'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+  const buttons: { label: string; onClick: () => void; ariaLabel?: string; className?: string }[] = [
+    { label: 'C', onClick: clear, ariaLabel: 'Очистить', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '±', onClick: toggleSign, ariaLabel: 'Сменить знак', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '%', onClick: inputPercent, ariaLabel: 'Процент', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '÷', onClick: () => inputOperation('÷'), ariaLabel: 'Разделить', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '7', onClick: () => inputNumber('7'), className: 'bg-background hover:bg-accent' },
     { label: '8', onClick: () => inputNumber('8'), className: 'bg-background hover:bg-accent' },
     { label: '9', onClick: () => inputNumber('9'), className: 'bg-background hover:bg-accent' },
-    { label: '×', onClick: () => inputOperation('×'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '×', onClick: () => inputOperation('×'), ariaLabel: 'Умножить', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '4', onClick: () => inputNumber('4'), className: 'bg-background hover:bg-accent' },
     { label: '5', onClick: () => inputNumber('5'), className: 'bg-background hover:bg-accent' },
     { label: '6', onClick: () => inputNumber('6'), className: 'bg-background hover:bg-accent' },
-    { label: '-', onClick: () => inputOperation('-'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '-', onClick: () => inputOperation('-'), ariaLabel: 'Вычесть', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '1', onClick: () => inputNumber('1'), className: 'bg-background hover:bg-accent' },
     { label: '2', onClick: () => inputNumber('2'), className: 'bg-background hover:bg-accent' },
     { label: '3', onClick: () => inputNumber('3'), className: 'bg-background hover:bg-accent' },
-    { label: '+', onClick: () => inputOperation('+'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '+', onClick: () => inputOperation('+'), ariaLabel: 'Сложить', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '0', onClick: () => inputNumber('0'), className: 'col-span-2 bg-background hover:bg-accent' },
-    { label: '.', onClick: inputDecimal, className: 'bg-background hover:bg-accent' },
-    { label: '=', onClick: performCalculation, className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '.', onClick: inputDecimal, ariaLabel: 'Десятичная точка', className: 'bg-background hover:bg-accent' },
+    { label: '=', onClick: performCalculation, ariaLabel: 'Рассчитать', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
   ];
 
   return (
-    <Card className="mb-8">
+    <Card className="mb-8" role="form" aria-label="Калькулятор арифметический">
       <CardHeader>
         <CardTitle className="text-lg flex items-center gap-2">
           <CalculatorIcon className="h-5 w-5 text-primary" />
@@ -194,7 +194,7 @@ export function ArithmeticCalculator({ calculator: _calculator, initialParams }:
       </CardHeader>
       <CardContent className="space-y-3">
         {/* Display */}
-        <div className="rounded-lg bg-muted p-4 text-right">
+        <div className="rounded-lg bg-muted p-4 text-right" role="status" aria-live="polite" aria-atomic="true" aria-label="Результат">
           {history && (
             <p className="text-sm text-muted-foreground mb-1">{history}</p>
           )}
@@ -211,6 +211,7 @@ export function ArithmeticCalculator({ calculator: _calculator, initialParams }:
               onClick={button.onClick}
               className={`h-14 text-lg font-medium ${button.className} ${button.label === '0' ? 'col-span-2' : ''}`}
               variant={button.label.match(/[C±%]/) ? 'secondary' : button.label.match(/[÷×\-+=]/) ? 'default' : 'outline'}
+              aria-label={button.ariaLabel}
             >
               {button.label}
             </Button>

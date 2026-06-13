@@ -168,9 +168,25 @@ export const computeMap_daily_daily_a_2: Record<string, ComputeFn> = {
     ];
 },
   'kalkulyator-chaevyh': (inputs) => {
-    const amount = Number(inputs.amount);
+    const amount = Number(inputs.billAmount);
     const tipPercent = Number(inputs.tipPercent);
-    const people = Number(inputs.people);
+    const people = Number(inputs.peopleCount);
+    if (!amount || !people) {
+        return [{ value: '—', label: 'Результат' }];
+    }
+    const tipAmount = amount * (tipPercent / 100);
+    const totalAmount = amount + tipAmount;
+    const perPerson = totalAmount / people;
+    return [
+        { value: tipAmount.toFixed(2), label: 'Сумма чаевых', unit: '₽' },
+        { value: totalAmount.toFixed(2), label: 'Итого с чаевыми', unit: '₽' },
+        { value: perPerson.toFixed(2), label: 'С каждого', unit: '₽' }
+    ];
+},
+  'kalkulyator-chaevyh-dopolnitelnyj': (inputs) => {
+    const amount = Number(inputs.billAmount);
+    const tipPercent = Number(inputs.tipPercent);
+    const people = Number(inputs.peopleCount);
     if (!amount || !people) {
         return [{ value: '—', label: 'Результат' }];
     }

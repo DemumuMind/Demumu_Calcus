@@ -118,9 +118,9 @@
     "id": "data-transfer",
     "title": "Калькулятор скорости передачи",
     "description": "Расчёт времени передачи файла при заданной скорости соединения",
-    "subcategory": "it-tools",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnika",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "fileSize",
@@ -237,9 +237,9 @@
     "id": "compression",
     "title": "Калькулятор сжатия данных",
     "description": "Расчёт эффективности сжатия: коэффициента, экономии места и времени",
-    "subcategory": "it-tools",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnika",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "originalSize",
@@ -347,9 +347,9 @@
     "id": "raid-storage-calculator",
     "title": "Калькулятор RAID-массивов",
     "description": "Расчёт ёмкости, надёжности и производительности RAID-массивов",
-    "subcategory": "it-tools",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnologii",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "drives",
@@ -447,9 +447,9 @@
     "id": "subnet-calculator",
     "title": "Калькулятор IP-подсетей",
     "description": "Расчёт параметров IPv4 подсети: адреса, маски, broadcast, диапазона хостов",
-    "subcategory": "it-tools",
+    "subcategory": "internet-i-fajly",
     "type": "formula",
-    "category": "tehnika",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "ipAddress",
@@ -562,9 +562,9 @@
     "id": "password-hash",
     "title": "Калькулятор стойкости пароля",
     "description": "Оценка времени взлома пароля методом перебора при разных алгоритмах хеширования",
-    "subcategory": "security",
+    "subcategory": "tekhnologii-raznoe",
     "type": "formula",
-    "category": "bezopasnost",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "passwordLength",
@@ -768,9 +768,9 @@
     "id": "uptime-calculator",
     "title": "Калькулятор доступности системы",
     "description": "Перевод SLA (99.9%, 99.99%) в допустимое время простоя и наоборот",
-    "subcategory": "it-tools",
+    "subcategory": "internet-i-fajly",
     "type": "converter",
-    "category": "tehnika",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "slaPercent",
@@ -865,9 +865,9 @@
     "id": "cron-parser",
     "title": "Калькулятор расписания cron",
     "description": "Интерпретация cron-выражений и расчёт времени следующего запуска",
-    "subcategory": "it-tools",
+    "subcategory": "internet-i-fajly",
     "type": "reference",
-    "category": "tehnika",
+    "category": "tekhnologii",
     "inputs": [
       {
         "name": "cronExpression",

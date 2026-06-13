@@ -4,9 +4,9 @@
     "id": "moving-calculator",
     "title": "Калькулятор переезда",
     "description": "Расчёт стоимости и объёма при переезде в новую квартиру",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "phone-repair-cost",
     "title": "Калькулятор ремонта телефона",
     "description": "Ориентировочная стоимость ремонта смартфона",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "reference",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -53,9 +53,9 @@
     "id": "household-budget",
     "title": "Калькулятор домашнего бюджета",
     "description": "Расчёт семейного бюджета и баланса доходов/расходов",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -78,9 +78,9 @@
     "id": "pet-cost-calculator",
     "title": "Калькулятор расходов на питомца",
     "description": "Расчёт месячных и годовых расходов на содержание животного",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -103,9 +103,9 @@
     "id": "wedding-gift-calculator",
     "title": "Калькулятор подарков на свадьбу",
     "description": "Сколько подарить денег или что подарить на свадьбу",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -128,9 +128,9 @@
     "id": "new-year-party",
     "title": "Калькулятор встречи Нового года",
     "description": "Расчёт бюджета и продуктов на новогоднюю вечеринку",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -153,9 +153,9 @@
     "id": "road-trip-calculator",
     "title": "Калькулятор автопутешествия",
     "description": "Расчёт расходов на поездку на автомобиле",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -178,9 +178,9 @@
     "id": "garden-calculator",
     "title": "Калькулятор посадок в саду",
     "description": "Расчёт количества семян и расстояний между растениями",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -203,9 +203,9 @@
     "id": "vacation-cost",
     "title": "Калькулятор расходов на отпуск",
     "description": "Планирование бюджета отпуска с учётом всех статей расходов",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -228,9 +228,9 @@
     "id": "self-investment",
     "title": "Калькулятор инвестиций в себя",
     "description": "Окупаемость обучения и курсов повышения квалификации",
-    "subcategory": "povsednevnye-drugoe",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "povsednevnye",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",

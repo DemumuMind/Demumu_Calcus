@@ -1,5 +1,6 @@
 import type { ComputeFn } from './compute-helpers';
 import { awg2mm, fmtResult } from './compute-helpers';
+import { getCryptoRateInfo } from '@/lib/cryptoRates';
 
 const cityOffsets: Record<string, number> = {
   moscow: 3, москва: 3, 'moscow-utc': 3,
@@ -209,23 +210,26 @@ export const computeMap_missing_6: Record<string, ComputeFn> = {
   'btc-v-rub': (inputs) => {
     const value = Number(inputs.fromValue);
     if (!value && value !== 0) return [{ value: '—', label: 'Результат' }];
-    const rate = 6500000;
+    const { rate, fallback } = getCryptoRateInfo('bitcoin');
     const result = value * rate;
-    return [{ value: `${value} BTC ≈ ${fmtResult(result)} ₽ (курс приблизительный)`, label: 'Результат' }];
+    const note = fallback ? ' (курс приблизительный, API недоступен)' : ' (курс приблизительный)';
+    return [{ value: `${value} BTC ≈ ${fmtResult(result)} ₽${note}`, label: 'Результат' }];
   },
   'eth-v-rub': (inputs) => {
     const value = Number(inputs.fromValue);
     if (!value && value !== 0) return [{ value: '—', label: 'Результат' }];
-    const rate = 260000;
+    const { rate, fallback } = getCryptoRateInfo('ethereum');
     const result = value * rate;
-    return [{ value: `${value} ETH ≈ ${fmtResult(result)} ₽ (курс приблизительный)`, label: 'Результат' }];
+    const note = fallback ? ' (курс приблизительный, API недоступен)' : ' (курс приблизительный)';
+    return [{ value: `${value} ETH ≈ ${fmtResult(result)} ₽${note}`, label: 'Результат' }];
   },
   'usdt-v-rub': (inputs) => {
     const value = Number(inputs.fromValue);
     if (!value && value !== 0) return [{ value: '—', label: 'Результат' }];
-    const rate = 92;
+    const { rate, fallback } = getCryptoRateInfo('tether');
     const result = value * rate;
-    return [{ value: `${value} USDT ≈ ${fmtResult(result)} ₽ (курс приблизительный)`, label: 'Результат' }];
+    const note = fallback ? ' (курс приблизительный, API недоступен)' : ' (курс приблизительный)';
+    return [{ value: `${value} USDT ≈ ${fmtResult(result)} ₽${note}`, label: 'Результат' }];
   },
   'zoloto-v-rub': (inputs) => {
     const value = Number(inputs.fromValue);

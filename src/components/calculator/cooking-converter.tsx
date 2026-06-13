@@ -108,7 +108,7 @@ export function CookingConverter({
   return (
     <div className="space-y-6">
       {/* Основной конвертер */}
-      <Card className="mb-8">
+      <Card className="mb-8" role="form" aria-label="Калькулятор кулинарный конвертер">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <ChefHat className="h-5 w-5 text-primary" />
@@ -118,9 +118,9 @@ export function CookingConverter({
         <CardContent className="space-y-6">
           {/* Категория продукта */}
           <div className="space-y-2">
-            <Label>Категория</Label>
+            <Label htmlFor="category">Категория</Label>
             <Select value={selectedCategory} onValueChange={handleCategoryChange}>
-              <SelectTrigger>
+              <SelectTrigger id="category">
                 <SelectValue placeholder="Выберите категорию" />
               </SelectTrigger>
               <SelectContent>
@@ -136,9 +136,9 @@ export function CookingConverter({
           
           {/* Выбор продукта */}
           <div className="space-y-2">
-            <Label>Продукт</Label>
+            <Label htmlFor="product">Продукт</Label>
             <Select value={selectedIngredient} onValueChange={handleIngredientChange}>
-              <SelectTrigger>
+              <SelectTrigger id="product">
                 <SelectValue placeholder="Выберите продукт" />
               </SelectTrigger>
               <SelectContent className="max-h-[300px]">
@@ -183,9 +183,9 @@ export function CookingConverter({
           
           {/* Выбор меры */}
           <div className="space-y-2">
-            <Label>Мера</Label>
+            <Label htmlFor="measure">Мера</Label>
             <Select value={selectedMeasure} onValueChange={handleMeasureChange}>
-              <SelectTrigger>
+              <SelectTrigger id="measure">
                 <SelectValue placeholder="Выберите меру" />
               </SelectTrigger>
               <SelectContent>
@@ -200,7 +200,7 @@ export function CookingConverter({
           
           {/* Результат */}
           {result !== null && ingredient && (
-            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4">
+            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4" aria-live="polite" aria-atomic="true" role="status" aria-label="Результат">
               <div className="text-center">
                 <p className="text-sm text-muted-foreground mb-2">
                   {parseFloat(value).toLocaleString('ru-RU')} {measure?.shortName} {ingredient.name} =

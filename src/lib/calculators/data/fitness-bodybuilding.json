@@ -4,9 +4,9 @@
     "id": "bulking-calculator",
     "title": "Калькулятор набора массы",
     "description": "Расчёт калорий и БЖУ для чистого набора мышечной массы без жира",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "weight",
@@ -140,9 +140,9 @@
     "id": "cutting-calculator",
     "title": "Калькулятор сушки тела",
     "description": "Расчёт калорий и БЖУ для снижения жировой массы с сохранением мышц",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "weight",
@@ -268,9 +268,9 @@
     "id": "one-rep-max-calculator",
     "title": "Калькулятор 1RM",
     "description": "Расчёт одноповторного максимума (1RM) по формулам Бриzycki, Эпли и Ломбарди",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -293,9 +293,9 @@
     "id": "training-volume-calculator",
     "title": "Калькулятор объёма тренировки",
     "description": "Расчёт общего объёма тренировки (вес × повторы × подходы) для отслеживания прогресса",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "exercises",
@@ -392,9 +392,9 @@
     "id": "deload-calculator",
     "title": "Калькулятор deload",
     "description": "Планирование разгрузочной недели для восстановления и предотвращения перетренированности",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "currentVolume",
@@ -502,9 +502,9 @@
     "id": "progressive-overload-calculator",
     "title": "Калькулятор прогрессии",
     "description": "Планирование увеличения весов для прогрессивной перегрузки по методам линейной и периодизации",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "currentWeight",
@@ -626,9 +626,9 @@
     "id": "rpe-calculator",
     "title": "Калькулятор RPE",
     "description": "Расчёт веса по шкале воспринимаемой нагрузки (RPE) и определение запаса повторов (RIR)",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "oneRM",
@@ -743,9 +743,9 @@
     "id": "rest-time-calculator",
     "title": "Время отдыха между подходами",
     "description": "Расчёт оптимального времени восстановления между подходами в зависимости от целей и интенсивности",
-    "subcategory": "fitness",
+    "subcategory": "sport-i-aktivnost",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "intensity",

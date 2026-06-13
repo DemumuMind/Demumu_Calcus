@@ -179,7 +179,7 @@ export function TimerComponent({
 
   return (
     <div className="space-y-6">
-      <Card className="mb-8">
+      <Card className="mb-8" role="form" aria-label="Калькулятор таймер">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <Timer className="h-5 w-5 text-primary" />
@@ -188,9 +188,9 @@ export function TimerComponent({
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-2">
-            <Label>Готовые таймеры</Label>
+            <Label htmlFor="timerPreset">Готовые таймеры</Label>
             <Select value={selectedTimerId} onValueChange={handleTimerSelect}>
-              <SelectTrigger>
+              <SelectTrigger id="timerPreset">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="max-h-[300px]">
@@ -222,8 +222,9 @@ export function TimerComponent({
               <Label>Произвольное время</Label>
               <div className="grid grid-cols-3 gap-2">
                 <div>
-                  <Label className="text-xs">Часы</Label>
+                  <Label className="text-xs" htmlFor="customHours">Часы</Label>
                   <Input
+                    id="customHours"
                     type="number"
                     min="0"
                     max="24"
@@ -232,8 +233,9 @@ export function TimerComponent({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs">Минуты</Label>
+                  <Label className="text-xs" htmlFor="customMinutes">Минуты</Label>
                   <Input
+                    id="customMinutes"
                     type="number"
                     min="0"
                     max="59"
@@ -242,8 +244,9 @@ export function TimerComponent({
                   />
                 </div>
                 <div>
-                  <Label className="text-xs">Секунды</Label>
+                  <Label className="text-xs" htmlFor="customSeconds">Секунды</Label>
                   <Input
+                    id="customSeconds"
                     type="number"
                     min="0"
                     max="59"
@@ -268,7 +271,7 @@ export function TimerComponent({
 
             <div className={`text-6xl md:text-7xl font-mono font-bold ${
               timeLeft <= 10 && timeLeft > 0 ? 'text-red-500 animate-pulse' : 'text-primary'
-            }`}>
+            }`} role="status" aria-live="polite" aria-atomic="true" aria-label="Оставшееся время">
               {timeDisplay}
             </div>
 
@@ -300,6 +303,8 @@ export function TimerComponent({
               size="lg"
               variant="outline"
               onClick={() => setIsSoundEnabled(!isSoundEnabled)}
+              aria-label={isSoundEnabled ? 'Выключить звук' : 'Включить звук'}
+              aria-pressed={isSoundEnabled}
             >
               {isSoundEnabled ? (
                 <Volume2 className="h-5 w-5" />

@@ -1,7 +1,10 @@
 'use client';
 
+import { useEffect, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { getCalculatorBySlug } from '@/lib/calculators';
+import { getCalculatorBySlug } from '@/lib/calculators/metadata';
+import { getComputeFn } from '@/lib/calculators/client-compute';
+import type { ComputeFn } from '@/lib/calculators/compute-helpers';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calculator as CalculatorIcon } from 'lucide-react';
 
@@ -50,14 +53,41 @@ interface CalculatorClientWrapperProps {
 }
 
 export function CalculatorClientWrapper({ slug, type, searchParams }: CalculatorClientWrapperProps) {
-  const calculator = getCalculatorBySlug(slug);
+  const baseCalculator = getCalculatorBySlug(slug);
+  const [computeFn, setComputeFn] = useState<ComputeFn | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  if (!calculator) {
+  useEffect(() => {
+    let mounted = true;
+    setLoading(true);
+    getComputeFn(slug).then((fn) => {
+      if (!mounted) return;
+      setComputeFn(fn);
+      setLoading(false);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, [slug]);
+
+  const calculator = useMemo(() => {
+    if (!baseCalculator) return null;
+    return {
+      ...baseCalculator,
+      calculate: computeFn ?? (() => [{ value: '\u2014', label: '\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442' }]),
+    };
+  }, [baseCalculator, computeFn]);
+
+  if (!baseCalculator || !calculator) {
     return (
       <div className="rounded-xl border p-8 text-center text-muted-foreground">
         Калькулятор не найден
       </div>
     );
+  }
+
+  if (loading) {
+    return <CalculatorSkeleton />;
   }
 
   // Normalize searchParams to simple string values

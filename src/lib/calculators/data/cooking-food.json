@@ -84,9 +84,9 @@
     "id": "ingredient-substitution",
     "title": "Калькулятор замены ингредиентов",
     "description": "Расчёт количества альтернативных ингредиентов при замене в рецептах",
-    "subcategory": "cooking",
+    "subcategory": "eda-i-napitki",
     "type": "converter",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "originalIngredient",
@@ -201,9 +201,9 @@
     "id": "recipe-calorie",
     "title": "Калькулятор калорийности блюда",
     "description": "Расчёт калорий, белков, жиров и углеводов готового блюда на 100 г и на порцию",
-    "subcategory": "nutrition",
+    "subcategory": "pitanie-i-ves",
     "type": "formula",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "totalWeight",
@@ -306,9 +306,9 @@
     "id": "oven-temperature",
     "title": "Конвертер температуры духовки",
     "description": "Перевод между градусами Цельсия, Фаренгейта, Газовой шкалой и уровнями мощности",
-    "subcategory": "cooking",
+    "subcategory": "eda-i-napitki",
     "type": "converter",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "celsius",
@@ -544,9 +544,9 @@
     "id": "dough-fermentation",
     "title": "Калькулятор брожения теста",
     "description": "Расчёт времени брожения дрожжевого теста в зависимости от температуры и количества дрожжей",
-    "subcategory": "cooking",
+    "subcategory": "eda-i-napitki",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "yeastType",
@@ -665,9 +665,9 @@
     "id": "baking-ratio",
     "title": "Калькулятор соотношений выпечки",
     "description": "Расчёт классических соотношений (рецептуры) для хлеба, пирогов, бисквитов и соусов",
-    "subcategory": "cooking",
+    "subcategory": "eda-i-napitki",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "ratioType",
@@ -901,9 +901,9 @@
     "id": "coffee-ratio",
     "title": "Калькулятор кофейного соотношения",
     "description": "Расчёт пропорций кофе и воды для разных методов заваривания: эспрессо, пуровер, френч-пресс",
-    "subcategory": "cooking",
+    "subcategory": "eda-i-napitki",
     "type": "formula",
-    "category": "dlya-doma",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "method",

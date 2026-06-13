@@ -4,9 +4,9 @@
     "id": "chess-clock",
     "title": "Шахматные часы",
     "description": "Режимы блиц, рапид и классика с инкрементом времени",
-    "subcategory": "igry-i-hobbi",
+    "subcategory": "razvlecheniya",
     "type": "calculator",
-    "category": "razvlecheniya",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "mode",
@@ -426,9 +426,9 @@
     "id": "child-growth",
     "title": "Калькулятор роста ребёнка",
     "description": "Перцентили роста и веса по возрасту и полу по данным ВОЗ",
-    "subcategory": "zdorove-mama-i-rebyonok",
+    "subcategory": "beremennost-i-deti",
     "type": "assessment",
-    "category": "zdorove",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "ageMonths",

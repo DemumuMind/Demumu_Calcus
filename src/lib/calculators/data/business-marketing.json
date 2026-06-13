@@ -4,9 +4,9 @@
     "id": "marketing-roi",
     "title": "ROI маркетинговых кампаний",
     "description": "Расчёт возврата инвестиций в маркетинговые кампании (ROMI)",
-    "subcategory": "biznes-marketing",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "revenue",
@@ -77,9 +77,9 @@
     "id": "conversion-rate",
     "title": "Конверсия и воронка продаж",
     "description": "Расчёт коэффициента конверсии на каждом этапе воронки продаж",
-    "subcategory": "biznes-marketing",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "visitors",
@@ -156,9 +156,9 @@
     "id": "customer-acquisition-cost",
     "title": "Стоимость привлечения клиента (CAC)",
     "description": "Расчёт CAC и LTV (Lifetime Value) для оценки экономики бизнеса",
-    "subcategory": "biznes-marketing",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "marketingSpend",
@@ -255,9 +255,9 @@
     "id": "competitive-pricing",
     "title": "Конкурентный анализ цен",
     "description": "Расчёт оптимальной цены на основе цен конкурентов и стратегии позиционирования",
-    "subcategory": "bizbi-tsenoobrazovanie",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "competitor1",
@@ -358,9 +358,9 @@
     "id": "commission",
     "title": "Расчёт комиссий и бонусов",
     "description": "Расчёт комиссий продавцов, бонусов менеджеров по продажам",
-    "subcategory": "biznes-finance",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "revenue",
@@ -442,9 +442,9 @@
     "id": "break-even-advanced",
     "title": "Точка безубыточности (расширенная)",
     "description": "Расчёт точки безубыточности с учётом нескольких продуктов, переменных затрат и анализ чувствительности",
-    "subcategory": "biznes-finance",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "fixedCosts",
@@ -527,9 +527,9 @@
     "id": "sales-forecast",
     "title": "Прогноз продаж",
     "description": "Простой прогноз продаж на основе исторических данных и темпов роста",
-    "subcategory": "biznes-planning",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "lastMonthSales",
@@ -629,9 +629,9 @@
     "id": "abc-analysis",
     "title": "ABC-анализ ассортимента",
     "description": "Классификация товаров/клиентов по принципу Парето (80/20)",
-    "subcategory": "biznes-analitika",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "totalRevenue",
@@ -697,9 +697,9 @@
     "id": "channel-margin",
     "title": "Маржинальность каналов продаж",
     "description": "Сравнение рентабельности разных каналов продаж (онлайн, офлайн, партнёры)",
-    "subcategory": "biznes-analitika",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "channel",
@@ -805,9 +805,9 @@
     "id": "project-npv",
     "title": "NPV инвестиционного проекта",
     "description": "Расчёт чистой приведённой стоимости (NPV) для оценки инвестиций в проект",
-    "subcategory": "biznes-investicii",
+    "subcategory": "kredity",
     "type": "formula",
-    "category": "biznes",
+    "category": "finansy",
     "inputs": [
       {
         "name": "initialInvestment",

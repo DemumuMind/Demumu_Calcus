@@ -4,9 +4,9 @@
     "id": "discount-shopping-calculator",
     "title": "Калькулятор скидок",
     "description": "Рассчитайте финальную цену с учётом всех скидок",
-    "subcategory": "deals",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -28,9 +28,9 @@
     "id": "bulk-discount-calculator",
     "title": "Калькулятор оптовой скидки",
     "description": "Рассчитайте выгоду от покупки оптом или в большом количестве",
-    "subcategory": "deals",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -52,9 +52,9 @@
     "id": "loyalty-cashback-calculator",
     "title": "Калькулятор кешбэка и бонусов",
     "description": "Рассчитайте выгоду от программ лояльности",
-    "subcategory": "deals",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -76,9 +76,9 @@
     "id": "compare-price-calculator",
     "title": "Калькулятор сравнения цен",
     "description": "Сравните цены в разных магазинах с учётом доставки",
-    "subcategory": "deals",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -100,9 +100,9 @@
     "id": "unit-price-calculator",
     "title": "Калькулятор цены за единицу",
     "description": "Сравните, где выгоднее: большая упаковка или маленькая",
-    "subcategory": "deals",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -124,9 +124,9 @@
     "id": "installment-calculator",
     "title": "Калькулятор рассрочки",
     "description": "Рассчитайте переплату и ежемесячный платёж при покупке в рассрочку",
-    "subcategory": "deals",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -148,9 +148,9 @@
     "id": "shopping-budget-calculator",
     "title": "Калькулятор бюджета покупок",
     "description": "Распределите бюджет между категориями одежды",
-    "subcategory": "budget",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -172,9 +172,9 @@
     "id": "wishlist-priority-calculator",
     "title": "Калькулятор приоритетов wishlist",
     "description": "Расставьте приоритеты покупкам по полезности и цене",
-    "subcategory": "planning",
+    "subcategory": "razmery",
     "type": "formula",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -197,9 +197,9 @@
     "id": "sales-calendar",
     "title": "Календарь распродаж",
     "description": "Узнайте когда лучше всего покупать разные категории товаров",
-    "subcategory": "planning",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "shopping",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",

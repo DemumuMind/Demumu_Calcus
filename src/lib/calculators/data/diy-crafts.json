@@ -4,9 +4,9 @@
     "id": "paint-diy-calculator",
     "title": "Калькулятор краски",
     "description": "Рассчитайте количество краски для стен и потолка",
-    "subcategory": "home-repair",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "diy",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "tile-diy-calculator",
     "title": "Калькулятор плитки",
     "description": "Рассчитайте количество плитки с учётом запаса",
-    "subcategory": "home-repair",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "diy",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -54,9 +54,9 @@
     "id": "wallpaper-diy-calculator",
     "title": "Калькулятор обоев",
     "description": "Рассчитайте количество рулонов обоев для комнаты",
-    "subcategory": "home-repair",
+    "subcategory": "otdelka",
     "type": "formula",
-    "category": "diy",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -79,9 +79,9 @@
     "id": "concrete-diy-calculator",
     "title": "Калькулятор бетона",
     "description": "Рассчитайте объём бетона для фундамента и заливки",
-    "subcategory": "construction",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "diy",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -104,9 +104,9 @@
     "id": "wood-calculator",
     "title": "Калькулятор досок и бруса",
     "description": "Рассчитайте количество пиломатериалов для строительства",
-    "subcategory": "construction",
+    "subcategory": "stroitelnye-materialy",
     "type": "formula",
-    "category": "diy",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -129,9 +129,9 @@
     "id": "knitting-calculator",
     "title": "Калькулятор вязания",
     "description": "Рассчитайте количество пряжи и петель для вязания",
-    "subcategory": "crafts",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -154,9 +154,9 @@
     "id": "fabric-calculator",
     "title": "Калькулятор ткани",
     "description": "Рассчитайте расход ткани для пошива одежды",
-    "subcategory": "crafts",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -179,9 +179,9 @@
     "id": "bead-calculator",
     "title": "Калькулятор бисера",
     "description": "Рассчитайте количество бисера для украшений",
-    "subcategory": "crafts",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -204,9 +204,9 @@
     "id": "crochet-calculator",
     "title": "Калькулятор вязания крючком",
     "description": "Рассчитайте размеры и количество петель для вязания крючком",
-    "subcategory": "crafts",
+    "subcategory": "razvlecheniya",
     "type": "arithmetic",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -228,9 +228,9 @@
     "id": "embroidery-calculator",
     "title": "Калькулятор вышивки",
     "description": "Рассчитайте количество ниток и размер канвы для вышивки",
-    "subcategory": "crafts",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -253,9 +253,9 @@
     "id": "garden-soil-calculator",
     "title": "Калькулятор грунта для грядок",
     "description": "Рассчитайте количество земли и компоста для грядок",
-    "subcategory": "garden",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -278,9 +278,9 @@
     "id": "wallpaper-pattern-match",
     "title": "Калькулятор подбора рисунка обоев",
     "description": "Рассчитайте расход обоев с учётом подбора рисунка",
-    "subcategory": "home-repair",
+    "subcategory": "otdelka",
     "type": "arithmetic",
-    "category": "diy",
+    "category": "stroitelstvo-i-remont",
     "inputs": [
       {
         "name": "value",
@@ -302,9 +302,9 @@
     "id": "quilt-calculator",
     "title": "Калькулятор для пэчворка",
     "description": "Рассчитайте ткань и время для одеяла в технике пэчворк",
-    "subcategory": "crafts",
+    "subcategory": "razvlecheniya",
     "type": "formula",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",
@@ -327,9 +327,9 @@
     "id": "diy-cost-calculator",
     "title": "Калькулятор стоимости DIY",
     "description": "Сравните стоимость самоделки с покупкой готового",
-    "subcategory": "budget",
+    "subcategory": "razmery",
     "type": "arithmetic",
-    "category": "diy",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "value",

@@ -201,9 +201,9 @@ export const computeMap_missing_2: Record<string, ComputeFn> = {
   },
 
   'hsl-v-hex': (inputs) => {
-    const h = Number(inputs.h);
-    const s = Number(inputs.s);
-    const l = Number(inputs.l);
+    const h = Number(inputs.h) || 0;
+    const s = Number(inputs.s) || 0;
+    const l = Number(inputs.l) || 0;
     if (!isValidNumber(h) || !isValidNumber(s) || !isValidNumber(l)) {
       return [{ value: DASH, label: 'HEX' }];
     }
@@ -212,9 +212,9 @@ export const computeMap_missing_2: Record<string, ComputeFn> = {
   },
 
   'hsv-v-rgb': (inputs) => {
-    const h = Number(inputs.h);
-    const s = Number(inputs.s);
-    const v = Number(inputs.v);
+    const h = Number(inputs.h) || 0;
+    const s = Number(inputs.s) || 0;
+    const v = Number(inputs.v) || 0;
     if (!isValidNumber(h) || !isValidNumber(s) || !isValidNumber(v)) {
       return [{ value: DASH, label: 'RGB' }];
     }
@@ -227,26 +227,26 @@ export const computeMap_missing_2: Record<string, ComputeFn> = {
     let rgb: RGB | null = null;
 
     if (format === 'rgb') {
-      const r = Number(inputs.r);
-      const g = Number(inputs.g);
-      const b = Number(inputs.b);
+      const r = Number(inputs.r) || 0;
+      const g = Number(inputs.g) || 0;
+      const b = Number(inputs.b) || 0;
       if (isValidNumber(r) && isValidNumber(g) && isValidNumber(b)) {
         rgb = [clamp(r, 0, 255), clamp(g, 0, 255), clamp(b, 0, 255)];
       }
     } else if (format === 'hex') {
       rgb = parseHex(inputs.hexInput);
     } else if (format === 'hsl') {
-      const h = Number(inputs.hslH);
-      const s = Number(inputs.hslS);
-      const l = Number(inputs.hslL);
+      const h = Number(inputs.hslH) || 0;
+      const s = Number(inputs.hslS) || 0;
+      const l = Number(inputs.hslL) || 0;
       if (isValidNumber(h) && isValidNumber(s) && isValidNumber(l)) {
         rgb = hslToRgb(h, s, l);
       }
     } else if (format === 'cmyk') {
-      const c = Number(inputs.c);
-      const m = Number(inputs.m);
-      const y = Number(inputs.y);
-      const k = Number(inputs.k);
+      const c = Number(inputs.c) || 0;
+      const m = Number(inputs.m) || 0;
+      const y = Number(inputs.y) || 0;
+      const k = Number(inputs.k) || 0;
       if (isValidNumber(c) && isValidNumber(m) && isValidNumber(y) && isValidNumber(k)) {
         rgb = cmykToRgb(c, m, y, k);
       }
@@ -274,7 +274,7 @@ export const computeMap_missing_2: Record<string, ComputeFn> = {
   },
 
   'konverter-shriftov': (inputs) => {
-    const value = Number(inputs.value);
+    const value = Number(inputs.value) || 0;
     const base = Number(inputs.baseSize) || 16;
     const from = String(inputs.from || 'px');
     if (!isValidNumber(value) || !isValidNumber(base) || base <= 0) {
@@ -310,7 +310,7 @@ export const computeMap_missing_2: Record<string, ComputeFn> = {
   },
 
   'perevod-sistem-schisleniya': (inputs) => {
-    const base = Number(inputs.from);
+    const base = Number(inputs.from) || 0;
     const numStr = String(inputs.number ?? '');
     if (![2, 8, 10, 16].includes(base)) {
       return [

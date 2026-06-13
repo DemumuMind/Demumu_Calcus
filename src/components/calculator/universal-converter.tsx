@@ -126,7 +126,7 @@ export function UniversalConverter({
   
   return (
     <div className="space-y-6">
-      <Card className="mb-8">
+      <Card className="mb-8" role="form" aria-label={`Конвертер ${category.name.toLowerCase()}`}>
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <Calculator className="h-5 w-5 text-primary" />
@@ -166,7 +166,7 @@ export function UniversalConverter({
           </div>
           
           {result !== null && (
-            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4">
+            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4" aria-live="polite" aria-atomic="true" aria-label="Результат конвертации">
               <div className="text-center">
                 <p className="text-sm text-muted-foreground mb-2">
                   {parseFloat(value).toLocaleString('ru-RU')} {fromShort} =

@@ -4,9 +4,9 @@
     "id": "carbon-footprint-calculator",
     "title": "Калькулятор углеродного следа",
     "description": "Рассчитайте свой годовой углеродный след",
-    "subcategory": "eco-lifestyle",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -29,9 +29,9 @@
     "id": "waste-sorting-calculator",
     "title": "Калькулятор раздельного сбора",
     "description": "Рассчитайте, сколько отходов вы можете переработать",
-    "subcategory": "eco-lifestyle",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -54,9 +54,9 @@
     "id": "water-footprint-calculator",
     "title": "Калькулятор водного следа",
     "description": "Рассчитайте прямое и косвенное потребление воды",
-    "subcategory": "eco-lifestyle",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -79,9 +79,9 @@
     "id": "solar-calculator",
     "title": "Калькулятор солнечных панелей",
     "description": "Рассчитайте мощность и окупаемость солнечной станции",
-    "subcategory": "energy",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -104,9 +104,9 @@
     "id": "energy-efficiency-calculator",
     "title": "Калькулятор энергоэффективности",
     "description": "Рассчитайте экономию от энергоэффективных решений",
-    "subcategory": "energy",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -129,9 +129,9 @@
     "id": "compost-eco-calculator",
     "title": "Калькулятор компостирования",
     "description": "Рассчитайте, сколько удобрений вы получите из органики",
-    "subcategory": "garden-eco",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -154,9 +154,9 @@
     "id": "electric-car-savings",
     "title": "Калькулятор экономии электромобиля",
     "description": "Рассчитайте, сколько вы сэкономите на переходе на электромобиль",
-    "subcategory": "transport",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -179,9 +179,9 @@
     "id": "eco-score-calculator",
     "title": "Калькулятор эко-рейтинга",
     "description": "Узнайте, насколько экологичен ваш образ жизни",
-    "subcategory": "eco-lifestyle",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -204,9 +204,9 @@
     "id": "tree-impact-calculator",
     "title": "Калькулятор влияния деревьев",
     "description": "Рассчитайте, сколько CO₂ поглощают деревья",
-    "subcategory": "nature",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -229,9 +229,9 @@
     "id": "reusable-items-calculator",
     "title": "Калькулятор многоразовых вещей",
     "description": "Рассчитайте экономию и снижение отходов от многоразовых предметов",
-    "subcategory": "eco-lifestyle",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",
@@ -254,9 +254,9 @@
     "id": "garden-water-calculator",
     "title": "Калькулятор полива сада",
     "description": "Рассчитайте оптимальное количество воды для огорода",
-    "subcategory": "garden-eco",
+    "subcategory": "fizika",
     "type": "formula",
-    "category": "environment",
+    "category": "nauka-i-ucheba",
     "inputs": [
       {
         "name": "value",

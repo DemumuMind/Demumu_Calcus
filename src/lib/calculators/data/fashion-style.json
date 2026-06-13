@@ -4,9 +4,9 @@
     "id": "size-converter",
     "title": "Конвертер размеров одежды",
     "description": "Переводите размеры одежды между разными системами",
-    "subcategory": "shopping",
+    "subcategory": "vneshnost",
     "type": "converter",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "fromValue",
@@ -28,9 +28,9 @@
     "id": "shoe-size-fashion",
     "title": "Конвертер размеров обуви",
     "description": "Переводите размеры обуви между разными странами",
-    "subcategory": "shopping",
+    "subcategory": "vneshnost",
     "type": "converter",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "fromValue",
@@ -52,9 +52,9 @@
     "id": "body-shape-calculator",
     "title": "Калькулятор типа фигуры",
     "description": "Определите свой тип фигуры по обхватам",
-    "subcategory": "style",
+    "subcategory": "vneshnost",
     "type": "formula",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -77,9 +77,9 @@
     "id": "color-season-calculator",
     "title": "Калькулятор цветотипа",
     "description": "Определите свой цветовой тип (весна, лето, осень, зима)",
-    "subcategory": "style",
+    "subcategory": "vneshnost",
     "type": "formula",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -102,9 +102,9 @@
     "id": "bra-size-calculator",
     "title": "Калькулятор размера бюстгальтера",
     "description": "Определите правильный размер бюстгальтера",
-    "subcategory": "shopping",
+    "subcategory": "vneshnost",
     "type": "arithmetic",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -126,9 +126,9 @@
     "id": "outfit-cost-calculator",
     "title": "Калькулятор стоимости образа",
     "description": "Рассчитайте стоимость комплекта одежды и cost-per-wear",
-    "subcategory": "budget",
+    "subcategory": "krasota",
     "type": "arithmetic",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -150,9 +150,9 @@
     "id": "capsule-wardrobe-calculator",
     "title": "Калькулятор капсульного гардероба",
     "description": "Рассчитайте минимальный набор одежды для разных образов",
-    "subcategory": "style",
+    "subcategory": "vneshnost",
     "type": "formula",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",
@@ -175,9 +175,9 @@
     "id": "jewelry-calculator",
     "title": "Калькулятор украшений",
     "description": "Подберите украшения по типу лица и образу",
-    "subcategory": "style",
+    "subcategory": "vneshnost",
     "type": "arithmetic",
-    "category": "fashion",
+    "category": "zdorove-i-krasota",
     "inputs": [
       {
         "name": "value",

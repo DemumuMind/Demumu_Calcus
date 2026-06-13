@@ -4,9 +4,9 @@
     "id": "dog-food",
     "title": "Норма корма для собак",
     "description": "Расчёт дневной нормы корма для собак на основе веса, возраста и активности",
-    "subcategory": "pets-dogs",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "weight",
@@ -131,9 +131,9 @@
     "id": "cat-food",
     "title": "Норма корма для кошек",
     "description": "Расчёт дневной нормы корма для кошек на основе веса, возраста и состояния",
-    "subcategory": "pets-cats",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "weight",
@@ -254,9 +254,9 @@
     "id": "pet-age",
     "title": "Возраст питомца в \"человеческих\" годах",
     "description": "Перевод возраста собак и кошек в эквивалент человеческого возраста",
-    "subcategory": "pets-general",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "petType",
@@ -338,9 +338,9 @@
     "id": "pet-medication-dosage",
     "title": "Дозировка лекарств для питомцев",
     "description": "Расчёт дозировки лекарств на основе веса питомца (только для ориентира, консультируйтесь с ветеринаром)",
-    "subcategory": "pets-health",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "petType",
@@ -436,9 +436,9 @@
     "id": "pet-cost",
     "title": "Стоимость содержания питомца",
     "description": "Расчёт месячных и годовых расходов на содержание собаки или кошки",
-    "subcategory": "pets-finance",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "petType",
@@ -570,9 +570,9 @@
     "id": "pet-ideal-weight",
     "title": "Оценка веса питомца",
     "description": "Определение, находится ли питомец в идеальном весе (по системе BCS)",
-    "subcategory": "pets-health",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "petType",
@@ -651,9 +651,9 @@
     "id": "pet-walk",
     "title": "Норма прогулок для собак",
     "description": "Расчёт необходимого времени прогулок на основе породы, возраста и энергии",
-    "subcategory": "pets-dogs",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "breedType",
@@ -770,9 +770,9 @@
     "id": "pet-space",
     "title": "Пространство для питомца",
     "description": "Оценка достаточности жилого пространства для разных типов питомцев",
-    "subcategory": "pets-general",
+    "subcategory": "pitomcy",
     "type": "formula",
-    "category": "dlya-zhivotnyh",
+    "category": "povsednevnoe",
     "inputs": [
       {
         "name": "petType",

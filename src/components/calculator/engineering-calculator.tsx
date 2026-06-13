@@ -355,49 +355,49 @@ export function EngineeringCalculator({ calculator: _calculator, initialParams }
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [inputNumber, inputDecimal, performCalculation, clear, inputOperation, backspace, inputParen, inputPower, performPower, inputFactorial]);
 
-  const scientificButtons = [
-    { label: 'sin', onClick: () => applyUnary(Math.sin, 'sin'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'cos', onClick: () => applyUnary(Math.cos, 'cos'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'tan', onClick: () => applyUnary(Math.tan, 'tan'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'ln', onClick: () => applyUnary(Math.log, 'ln'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'log', onClick: () => applyUnary(Math.log10, 'log'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'eˣ', onClick: () => applyUnary(Math.exp, 'e^'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'x²', onClick: () => applyPower(2, '²'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'xʸ', onClick: inputPower, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '√', onClick: () => applyUnary(Math.sqrt, '√'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'π', onClick: inputPi, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'x!', onClick: inputFactorial, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: 'abs', onClick: () => applyUnary(Math.abs, 'abs'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '(', onClick: () => inputParen('('), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: ')', onClick: () => inputParen(')'), className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+  const scientificButtons: { label: string; onClick: () => void; ariaLabel: string; className?: string }[] = [
+    { label: 'sin', onClick: () => applyUnary(Math.sin, 'sin'), ariaLabel: 'Синус', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'cos', onClick: () => applyUnary(Math.cos, 'cos'), ariaLabel: 'Косинус', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'tan', onClick: () => applyUnary(Math.tan, 'tan'), ariaLabel: 'Тангенс', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'ln', onClick: () => applyUnary(Math.log, 'ln'), ariaLabel: 'Натуральный логарифм', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'log', onClick: () => applyUnary(Math.log10, 'log'), ariaLabel: 'Десятичный логарифм', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'eˣ', onClick: () => applyUnary(Math.exp, 'e^'), ariaLabel: 'Экспонента', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'x²', onClick: () => applyPower(2, '²'), ariaLabel: 'Квадрат', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'xʸ', onClick: inputPower, ariaLabel: 'Степень', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '√', onClick: () => applyUnary(Math.sqrt, '√'), ariaLabel: 'Квадратный корень', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'π', onClick: inputPi, ariaLabel: 'Число пи', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'x!', onClick: inputFactorial, ariaLabel: 'Факториал', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: 'abs', onClick: () => applyUnary(Math.abs, 'abs'), ariaLabel: 'Модуль', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '(', onClick: () => inputParen('('), ariaLabel: 'Открывающая скобка', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: ')', onClick: () => inputParen(')'), ariaLabel: 'Закрывающая скобка', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
   ];
 
-  const memoryButtons = [
-    { label: 'MC', onClick: memoryClear, title: 'Очистить память' },
-    { label: 'MR', onClick: memoryRecall, title: 'Вызвать из памяти' },
-    { label: 'M+', onClick: memoryAdd, title: 'Добавить в память' },
-    { label: 'M-', onClick: memorySubtract, title: 'Вычесть из памяти' },
+  const memoryButtons: { label: string; onClick: () => void; title: string; ariaLabel: string }[] = [
+    { label: 'MC', onClick: memoryClear, title: 'Очистить память', ariaLabel: 'Очистить память' },
+    { label: 'MR', onClick: memoryRecall, title: 'Вызвать из памяти', ariaLabel: 'Вызвать из памяти' },
+    { label: 'M+', onClick: memoryAdd, title: 'Добавить в память', ariaLabel: 'Добавить в память' },
+    { label: 'M-', onClick: memorySubtract, title: 'Вычесть из памяти', ariaLabel: 'Вычесть из памяти' },
   ];
 
-  const basicButtons = [
-    { label: 'C', onClick: clear, className: 'bg-destructive/10 text-destructive hover:bg-destructive/20' },
-    { label: 'CE', onClick: clearEntry, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '⌫', onClick: backspace, className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
-    { label: '÷', onClick: () => inputOperation('÷'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+  const basicButtons: { label: string; onClick: () => void; ariaLabel?: string; className?: string }[] = [
+    { label: 'C', onClick: clear, ariaLabel: 'Очистить', className: 'bg-destructive/10 text-destructive hover:bg-destructive/20' },
+    { label: 'CE', onClick: clearEntry, ariaLabel: 'Очистить ввод', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '⌫', onClick: backspace, ariaLabel: 'Стереть', className: 'bg-secondary text-secondary-foreground hover:bg-secondary/80' },
+    { label: '÷', onClick: () => inputOperation('÷'), ariaLabel: 'Разделить', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '7', onClick: () => inputNumber('7'), className: 'bg-background hover:bg-accent' },
     { label: '8', onClick: () => inputNumber('8'), className: 'bg-background hover:bg-accent' },
     { label: '9', onClick: () => inputNumber('9'), className: 'bg-background hover:bg-accent' },
-    { label: '×', onClick: () => inputOperation('×'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '×', onClick: () => inputOperation('×'), ariaLabel: 'Умножить', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '4', onClick: () => inputNumber('4'), className: 'bg-background hover:bg-accent' },
     { label: '5', onClick: () => inputNumber('5'), className: 'bg-background hover:bg-accent' },
     { label: '6', onClick: () => inputNumber('6'), className: 'bg-background hover:bg-accent' },
-    { label: '-', onClick: () => inputOperation('-'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '-', onClick: () => inputOperation('-'), ariaLabel: 'Вычесть', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '1', onClick: () => inputNumber('1'), className: 'bg-background hover:bg-accent' },
     { label: '2', onClick: () => inputNumber('2'), className: 'bg-background hover:bg-accent' },
     { label: '3', onClick: () => inputNumber('3'), className: 'bg-background hover:bg-accent' },
-    { label: '+', onClick: () => inputOperation('+'), className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
+    { label: '+', onClick: () => inputOperation('+'), ariaLabel: 'Сложить', className: 'bg-primary text-primary-foreground hover:bg-primary/90' },
     { label: '0', onClick: () => inputNumber('0'), className: 'col-span-2 bg-background hover:bg-accent' },
-    { label: '.', onClick: inputDecimal, className: 'bg-background hover:bg-accent' },
+    { label: '.', onClick: inputDecimal, ariaLabel: 'Десятичная точка', className: 'bg-background hover:bg-accent' },
     {
       label: '=',
       onClick: () => {
@@ -409,12 +409,13 @@ export function EngineeringCalculator({ calculator: _calculator, initialParams }
           performCalculation();
         }
       },
+      ariaLabel: 'Рассчитать',
       className: 'bg-primary text-primary-foreground hover:bg-primary/90'
     },
   ];
 
   return (
-    <Card className="mb-8">
+    <Card className="mb-8" role="form" aria-label="Калькулятор инженерный">
       <CardHeader>
         <CardTitle className="text-lg flex items-center gap-2">
           <CalculatorIcon className="h-5 w-5 text-primary" />
@@ -423,7 +424,7 @@ export function EngineeringCalculator({ calculator: _calculator, initialParams }
       </CardHeader>
       <CardContent className="space-y-3">
         {/* Display */}
-        <div className="rounded-lg bg-muted p-4 text-right">
+        <div className="rounded-lg bg-muted p-4 text-right" role="status" aria-live="polite" aria-atomic="true" aria-label="Результат">
           {expression && (
             <p className="text-sm text-muted-foreground mb-1">{expression}</p>
           )}
@@ -439,6 +440,7 @@ export function EngineeringCalculator({ calculator: _calculator, initialParams }
               key={btn.label}
               onClick={btn.onClick}
               title={btn.title}
+              aria-label={btn.ariaLabel}
               className="flex-1 h-9 text-xs font-medium bg-muted hover:bg-muted/80"
               variant="ghost"
             >
@@ -453,6 +455,7 @@ export function EngineeringCalculator({ calculator: _calculator, initialParams }
             <Button
               key={button.label}
               onClick={button.onClick}
+              aria-label={button.ariaLabel}
               className={`h-10 text-xs font-medium ${button.className}`}
               variant="secondary"
             >
@@ -469,6 +472,7 @@ export function EngineeringCalculator({ calculator: _calculator, initialParams }
               onClick={button.onClick}
               className={`h-14 text-lg font-medium ${button.className} ${button.label === '0' ? 'col-span-2' : ''}`}
               variant={button.label === 'C' ? 'destructive' : button.label.match(/[CE⌫]/) ? 'secondary' : button.label.match(/[÷×\-+=]/) ? 'default' : 'outline'}
+              aria-label={button.ariaLabel}
             >
               {button.label === '⌫' ? <Delete className="h-5 w-5" /> : button.label}
             </Button>

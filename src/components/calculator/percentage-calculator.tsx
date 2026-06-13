@@ -111,7 +111,7 @@ export function PercentageCalculator({
   return (
     <div className="space-y-6">
       {/* Основной калькулятор */}
-      <Card className="mb-8">
+      <Card className="mb-8" role="form" aria-label="Калькулятор процентов">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <Percent className="h-5 w-5 text-primary" />
@@ -121,9 +121,9 @@ export function PercentageCalculator({
         <CardContent className="space-y-6">
           {/* Выбор типа расчёта */}
           <div className="space-y-2">
-            <Label>Тип расчёта</Label>
+            <Label htmlFor="calcType">Тип расчёта</Label>
             <Select value={selectedType} onValueChange={handleTypeChange}>
-              <SelectTrigger>
+              <SelectTrigger id="calcType">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -212,12 +212,12 @@ export function PercentageCalculator({
           
           {/* Результат */}
           {result && (
-            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4">
+            <div className="rounded-lg bg-primary/5 border border-primary/20 p-4" aria-live="polite" aria-atomic="true" aria-label="Результат">
               <div className="text-center">
                 <p className="text-sm text-muted-foreground mb-2">
                   Результат
                 </p>
-                <p className="text-3xl font-bold text-primary mb-2">
+                <p className="text-3xl font-bold text-primary mb-2" role="status" aria-atomic="true">
                   {calcType.id === 'percent-of-number' || calcType.id === 'number-is-percent-of'
                     ? `${formatNumber(result.result)}${calcType.id === 'number-is-percent-of' ? '%' : ''}`
                     : formatNumber(result.result)

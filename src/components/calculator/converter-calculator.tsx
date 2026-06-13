@@ -157,7 +157,7 @@ export function ConverterCalculator({ calculator, initialParams }: ConverterCalc
   );
 
   return (
-    <Card className="mb-8">
+    <Card className="mb-8" role="form" aria-label="Калькулятор конвертер">
       <CardHeader>
         <CardTitle className="text-lg flex items-center gap-2">
           <Calculator className="h-5 w-5 text-primary" />
@@ -213,9 +213,9 @@ export function ConverterCalculator({ calculator, initialParams }: ConverterCalc
         </Button>
 
         {results.length > 0 && (
-          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="converter-result">
+          <div className="rounded-lg bg-primary/5 border border-primary/20 p-4 space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-300" data-testid="converter-result" aria-live="polite" aria-atomic="true" aria-label="Результаты">
             {results.map((result, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" role="status" aria-atomic="true">
                 <p className="text-sm text-muted-foreground mb-1">{result.label}</p>
                 <p className="text-2xl font-bold text-primary">
                   {typeof result.value === 'number' 
