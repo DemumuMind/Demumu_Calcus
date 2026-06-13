@@ -1,14 +1,22 @@
 {
   "name": "Calcus — онлайн калькуляторы",
   "short_name": "Calcus",
-  "description": "540+ бесплатных онлайн-калькуляторов, конвертеров и таймеров",
+  "description": "759 бесплатных онлайн-калькуляторов, конвертеров и таймеров",
   "start_url": "/",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "categories": ["productivity", "utilities", "education", "finance"],
+  "categories": [
+    "productivity",
+    "utilities",
+    "education",
+    "finance"
+  ],
   "scope": "/",
   "lang": "ru",
   "dir": "ltr",
@@ -41,21 +49,36 @@
       "short_name": "Калькулятор",
       "description": "Быстрые арифметические расчёты",
       "url": "/prostoj-kalkulyator",
-      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Конвертер длины",
       "short_name": "Конвертер",
       "description": "Перевод единиц длины",
       "url": "/dlina",
-      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Проценты",
       "short_name": "Проценты",
       "description": "Калькулятор процентов",
       "url": "/procenty",
-      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

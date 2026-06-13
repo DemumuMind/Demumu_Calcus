@@ -240,7 +240,7 @@
     }
   },
   {
-    "slug": "vyčest-procent",
+    "slug": "vycest-procent",
     "id": "subtract-percent",
     "title": "Вычесть процент из числа",
     "description": "Вычтите X% из числа Y",
@@ -297,7 +297,7 @@
     }
   },
   {
-    "slug": "složnye-procenty",
+    "slug": "sloznye-procenty",
     "id": "compound-percent",
     "title": "Сложные проценты",
     "description": "Расчёт сложных процентов (капитализация)",

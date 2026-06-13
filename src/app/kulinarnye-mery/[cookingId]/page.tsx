@@ -72,21 +72,25 @@ export async function generateMetadata({ params }: CookingConverterPageProps): P
 }
 
 export function generateStaticParams() {
-  const params: Array<{ cookingId: string }> = [];
+  // Only pre-render popular cooking combos at build time.
+  // The rest are generated on-demand and cached via ISR.
+  const POPULAR_INGREDIENTS = ['wheat_flour', 'sugar', 'salt', 'butter', 'milk', 'vegetable_oil', 'rice', 'honey', 'sour_cream', 'kefir'];
+  const POPULAR_MEASURES = ['teaspoon', 'tablespoon', 'shot', 'faceted_glass'];
 
-  Object.keys(cookingIngredients).forEach((ingredientId) => {
-    Object.keys(standardMeasures).forEach((measureId) => {
+  const params: Array<{ cookingId: string }> = [];
+  POPULAR_INGREDIENTS.forEach((ingredientId) => {
+    POPULAR_MEASURES.forEach((measureId) => {
       const slug = generateCookingSlug(ingredientId, measureId);
       if (slug) {
         params.push({ cookingId: slug });
       }
     });
   });
-
   return params;
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 86400; // ISR: revalidate every 24h
 
 export default async function CookingConverterPage({ params }: CookingConverterPageProps) {
   const { cookingId } = await params;

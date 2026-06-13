@@ -335,6 +335,29 @@ export const computeMap_science_science_b_2: Record<string, ComputeFn> = {
     }
     return [{ value: Math.round(speed), label: 'Скорость звука', unit: 'м/с' }];
 },
+  'sloznye-procenty': (inputs) => {
+    // Alias for slozhnye-procenty (transliteration fix)
+    const P = Number(inputs.P) || 0;
+    const n = Number(inputs.n) || 0;
+    const r = Number(inputs.r) || 0;
+    const result = P * Math.pow(1 + r / 100, n);
+    const diff = result - P;
+    return [
+      { value: result.toFixed(2), label: 'Итоговая сумма', unit: '' },
+      { value: diff.toFixed(2), label: 'Прибыль/прирост', unit: '' },
+    ];
+  },
+  'vycest-procent': (inputs) => {
+    // Subtract percent from number
+    const value = Number(inputs.value) || 0;
+    const percent = Number(inputs.percent) || 0;
+    const result = value - (value * percent / 100);
+    const deducted = value * percent / 100;
+    return [
+      { value: result.toFixed(2), label: 'Результат', unit: '' },
+      { value: deducted.toFixed(2), label: 'Вычтено', unit: '' },
+    ];
+  },
   'slozhnye-procenty': (inputs) => {
     const principal = Number(inputs.principal);
     const rate = Number(inputs.rate) / 100;

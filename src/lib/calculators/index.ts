@@ -64,6 +64,12 @@ import { computeMap_tech_it_a_3 } from './compute-tech_it_a_3';
 import { computeMap_tech_it_a_4 } from './compute-tech_it_a_4';
 import { computeMap_tech_it_b_1 } from './compute-tech_it_b_1';
 import { computeMap_tech_it_b_2 } from './compute-tech_it_b_2';
+import { computeMap_missing_1 } from './compute-missing-1';
+import { computeMap_missing_2 } from './compute-missing-2';
+import { computeMap_missing_3 } from './compute-missing-3';
+import { computeMap_missing_4 } from './compute-missing-4';
+import { computeMap_missing_5 } from './compute-missing-5';
+import { computeMap_missing_6 } from './compute-missing-6';
 
 // JSON data
 import additional_calculators from './data/additional-calculators.json';
@@ -150,7 +156,7 @@ import tips_calculator from './data/tips-calculator.json';
 import transport from './data/transport.json';
 
 const computeMap: Record<string, ComputeFn> = {
-  ...computeMap_construction_a_1, ...computeMap_construction_a_2, ...computeMap_construction_b_1, ...computeMap_construction_b_2, ...computeMap_clothing_sizes, ...computeMap_currency, ...computeMap_length_mass, ...computeMap_temp_speed_a, ...computeMap_temp_speed_b, ...computeMap_conv_energy_power_1, ...computeMap_conv_energy_power_2, ...computeMap_conv_pressure_area_1, ...computeMap_conv_pressure_area_2, ...computeMap_daily_daily_a_1, ...computeMap_daily_daily_a_2, ...computeMap_daily_daily_a_3, ...computeMap_daily_daily_a_4, ...computeMap_daily_daily_a_5, ...computeMap_daily_daily_b_1, ...computeMap_daily_daily_b_2, ...computeMap_daily_daily_b_3, ...computeMap_daily_daily_b_4, ...computeMap_daily_daily_b_5, ...computeMap_finance_a_1, ...computeMap_finance_a_2, ...computeMap_finance_b_1, ...computeMap_finance_b_2, ...computeMap_health_beauty, ...computeMap_health_health2_a_1, ...computeMap_health_health2_a_2, ...computeMap_health_health2_a_3, ...computeMap_health_health2_a_4, ...computeMap_health_health2_b_1, ...computeMap_health_health2_b_2, ...computeMap_health_health2_b_3, ...computeMap_health_health2_b_4, ...computeMap_hobby_a, ...computeMap_hobby_b_1, ...computeMap_hobby_b_2, ...computeMap_other_other2_a_1, ...computeMap_other_other2_a_2, ...computeMap_other_other2_a_3, ...computeMap_other_other2_a_4, ...computeMap_other_other2_a_5, ...computeMap_other_other2_b_1, ...computeMap_other_other2_b_2, ...computeMap_other_other2_b_3, ...computeMap_other_other2_b_4, ...computeMap_other_other2_b_5, ...computeMap_science_science_a_1, ...computeMap_science_science_a_2, ...computeMap_science_science_a_3, ...computeMap_science_science_a_4, ...computeMap_science_science_a_5, ...computeMap_science_science_b_1, ...computeMap_science_science_b_2, ...computeMap_science_science_b_3, ...computeMap_science_science_b_4, ...computeMap_tech_it_a_1, ...computeMap_tech_it_a_2, ...computeMap_tech_it_a_3, ...computeMap_tech_it_a_4, ...computeMap_tech_it_b_1, ...computeMap_tech_it_b_2
+  ...computeMap_tech_it_b_2, ...computeMap_missing_1, ...computeMap_missing_2, ...computeMap_missing_3, ...computeMap_missing_4, ...computeMap_missing_5, ...computeMap_missing_6
 };
 
 const allJsonData: any[] = [

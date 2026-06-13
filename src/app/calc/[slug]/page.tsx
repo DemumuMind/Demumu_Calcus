@@ -26,12 +26,25 @@ interface CalculatorPageProps {
 }
 
 export async function generateStaticParams() {
-  return calculators.map((calc) => ({
-    slug: calc.slug,
-  }));
+  // Only pre-render popular calculators at build time.
+  // The rest are generated on-demand and cached via ISR.
+  const POPULAR_SLUGS = [
+    'kalkulyator-imt', 'kreditnyj-kalkulyator',
+    'kalkulyator-nds', 'generator-parolej',
+    'kalkulyator-kalorij', 'konverter-valyut',
+    'raznica-mezhdu-datami', 'vozrast-tochnyj',
+    'ipotechnyj-kalkulyator', 'kalkulyator-skidok',
+    'dozirovka-lekarstv', 'kalkulyator-otpusknyh',
+    'slozhnye-procenty', 'obmen-valyuty',
+    'data-cherez-n-dnej', 'kalkulyator-kalorij-kbzhu',
+  ];
+  return calculators
+    .filter((calc) => POPULAR_SLUGS.includes(calc.slug))
+    .map((calc) => ({ slug: calc.slug }));
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const revalidate = 86400; // ISR: revalidate cached pages every 24h
 
 export async function generateMetadata({ params }: CalculatorPageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -50,6 +63,18 @@ export async function generateMetadata({ params }: CalculatorPageProps): Promise
       siteName: 'Calcus',
       type: 'website',
       locale: 'ru_RU',
+      images: [{
+        url: `${SITE_URL}/api/og?title=${encodeURIComponent(calculator.title)}&description=${encodeURIComponent(calculator.description)}&category=${calculator.category}`,
+        width: 1200,
+        height: 630,
+        alt: calculator.title,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: calculator.title,
+      description: calculator.description,
+      images: [`${SITE_URL}/api/og?title=${encodeURIComponent(calculator.title)}&description=${encodeURIComponent(calculator.description)}&category=${calculator.category}`],
     },
     alternates: {
       canonical: `${SITE_URL}/${slug}`,
