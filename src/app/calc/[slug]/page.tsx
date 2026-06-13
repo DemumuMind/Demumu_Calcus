@@ -6,6 +6,7 @@ import { calculators, getCalculatorBySlug, getCalculatorsByCategory, getCalculat
 import { getCategoryStyle } from '@/lib/category-styles';
 import { CalculatorClientWrapper } from '@/components/calculator/calculator-client-wrapper';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
+import { AD_BLOCK_IDS } from '@/lib/ads/config';
 import { TableOfContents } from '@/components/table-of-contents';
 
 import {
@@ -238,13 +239,13 @@ export default async function CalculatorPage({ params }: CalculatorPageProps) {
           <p className="text-muted-foreground leading-relaxed" data-testid="calculator-description">{calculator.description}</p>
         </div>
 
-        <YandexAdBlock blockId="R-A-99999999-3" renderTo="yandex_rtb_R-A-99999999-3" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.calcTop} size="leaderboard" className="mb-8" />
 
         <div className="mb-8">
           <CalculatorClientWrapper slug={calculator.slug} type={calculator.type} />
         </div>
 
-        <YandexAdBlock blockId="R-A-99999999-4" renderTo="yandex_rtb_R-A-99999999-4" size="rectangle" className="mb-8 mx-auto" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.calcBottom} size="rectangle" className="mb-8 mx-auto" />
 
         <div id="how-to" className="mb-8">
           <div className="flex items-center gap-2 mb-4">

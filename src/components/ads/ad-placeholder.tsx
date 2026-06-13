@@ -30,7 +30,8 @@ interface YandexAdBlockProps {
 }
 
 
-export function YandexAdBlock({ blockId, renderTo, className, size = 'rectangle' }: YandexAdBlockProps) {
+export function YandexAdBlock({ blockId, className, size = 'rectangle' }: Omit<YandexAdBlockProps, 'renderTo'>) {
+  const renderTo = `yandex_rtb_${blockId}`;
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -85,8 +86,7 @@ export function AdPlaceholder({ slot, className, size = 'rectangle' }: AdPlaceho
   // In production, render real Yandex ad
   if (process.env.NODE_ENV !== 'development') {
     const blockId = SLOT_TO_BLOCK_ID[slot] || AD_BLOCK_IDS.calcTop;
-    const renderTo = `yandex_rtb_${blockId}`;
-    return <YandexAdBlock blockId={blockId} renderTo={renderTo} className={className} size={size} />;
+    return <YandexAdBlock blockId={blockId} className={className} size={size} />;
   }
 
   return (

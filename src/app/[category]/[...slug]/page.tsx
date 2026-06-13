@@ -301,7 +301,7 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
 
       {/* Main Content */}
       <main className="flex-1 mx-auto max-w-4xl px-4 py-8 w-full">
-        <YandexAdBlock blockId={AD_BLOCK_IDS.converterTop} renderTo="yandex_rtb_R-A-99999999-7" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.converterTop} size="leaderboard" className="mb-8" />
 
         {/* Header */}
         <div className="mb-8">
@@ -443,7 +443,7 @@ export default async function ConverterPage({ params }: ConverterPageProps) {
           </CardContent>
         </Card>
 
-        <YandexAdBlock blockId={AD_BLOCK_IDS.converterBottom} renderTo="yandex_rtb_R-A-99999999-8" size="rectangle" className="mt-8 mx-auto" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.converterBottom} size="rectangle" className="mt-8 mx-auto" />
 
         {/* Navigation */}
         <div className="mt-8 flex justify-between">

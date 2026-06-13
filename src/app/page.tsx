@@ -19,6 +19,7 @@ import { calculators, getCalculatorsByCategory, getCalculatorsBySubcategory } fr
 import { CategoryCard } from '@/components/category/category-card';
 import { SearchBox } from '@/components/search/search-box';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
+import { AD_BLOCK_IDS } from '@/lib/ads/config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SchemaInjector } from '@/components/seo/schema-injector';
 import { generateHomePageSchema } from '@/lib/schema';
@@ -237,7 +238,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <YandexAdBlock blockId="R-A-99999999-1" renderTo="yandex_rtb_R-A-99999999-1" size="leaderboard" className="mx-auto max-w-7xl px-4 my-8" />
+      <YandexAdBlock blockId={AD_BLOCK_IDS.homeTop} size="leaderboard" className="mx-auto max-w-7xl px-4 my-8" />
 
       {/* Categories Grid */}
       <section className="border-t bg-muted/30 py-16 md:py-20">
@@ -314,7 +315,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <YandexAdBlock blockId="R-A-99999999-2" renderTo="yandex_rtb_R-A-99999999-2" size="leaderboard" className="mx-auto max-w-7xl px-4 my-8" />
+      <YandexAdBlock blockId={AD_BLOCK_IDS.homeBottom} size="leaderboard" className="mx-auto max-w-7xl px-4 my-8" />
 
       {/* SEO Content Block */}
       <section className="py-16 md:py-20">

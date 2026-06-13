@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </section>
 
       <div className="mx-auto max-w-7xl px-4 py-12 w-full">
-        <YandexAdBlock blockId={AD_BLOCK_IDS.categoryTop} renderTo="yandex_rtb_R-A-99999999-5" size="leaderboard" className="mb-8" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.categoryTop} size="leaderboard" className="mb-8" />
 
         <div className="mb-12">
           <h2 className="text-xl font-bold mb-6">Подкатегории</h2>
@@ -192,7 +192,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         )}
 
-        <YandexAdBlock blockId={AD_BLOCK_IDS.categoryBottom} renderTo="yandex_rtb_R-A-99999999-6" size="rectangle" className="mt-8 mx-auto" />
+        <YandexAdBlock blockId={AD_BLOCK_IDS.categoryBottom} size="rectangle" className="mt-8 mx-auto" />
       </div>
     </div>
   );
