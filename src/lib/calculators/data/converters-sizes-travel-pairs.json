@@ -2947,7 +2947,7 @@
   {
     "slug": "awg-v-mm",
     "id": "awg-v-mm",
-    "title": "AWG в мм",
+    "title": "AWG в мм (Калибр AWG, Из)",
     "description": "Перевод калибра провода AWG в диаметр в миллиметрах",
     "subcategory": "conv-kalibr",
     "type": "converter",
@@ -3183,7 +3183,7 @@
   {
     "slug": "mm-v-awg",
     "id": "mm-v-awg",
-    "title": "мм в AWG",
+    "title": "мм в AWG (Диаметр (мм), Из)",
     "description": "Перевод диаметра провода в миллиметрах в калибр AWG",
     "subcategory": "conv-kalibr",
     "type": "converter",
@@ -3419,7 +3419,7 @@
   {
     "slug": "utc-v-moscow",
     "id": "utc-v-moscow",
-    "title": "UTC в Москву",
+    "title": "UTC в Москву (Время UTC, Из)",
     "description": "Перевод времени из UTC в московское время (MSK, UTC+3)",
     "subcategory": "conv-chasovoy-poyas",
     "type": "converter",
@@ -3490,8 +3490,8 @@
   {
     "slug": "moscow-v-utc",
     "id": "moscow-v-utc",
-    "title": "Москва в UTC",
-    "description": "Перевод московского времени (MSK) в UTC",
+    "title": "Москва в UTC (Время в Москве, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Время в Москве, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-chasovoy-poyas",
     "type": "converter",
     "category": "konvertery",
@@ -3561,7 +3561,7 @@
   {
     "slug": "utc-v-local",
     "id": "utc-v-local",
-    "title": "UTC в местное время",
+    "title": "UTC в местное время (Время UTC, Часовой пояс)",
     "description": "Перевод UTC в местное время выбранного часового пояса",
     "subcategory": "conv-chasovoy-poyas",
     "type": "converter",
@@ -3681,8 +3681,8 @@
   {
     "slug": "local-v-utc",
     "id": "local-v-utc",
-    "title": "Местное время в UTC",
-    "description": "Перевод местного времени в UTC",
+    "title": "Местное время в UTC (Местное время, Часовой пояс)",
+    "description": "Онлайн калькулятор: рассчитайте Местное время, Часовой пояс, Из. Бесплатно, без регистрации.",
     "subcategory": "conv-chasovoy-poyas",
     "type": "converter",
     "category": "konvertery",
@@ -3801,7 +3801,7 @@
   {
     "slug": "kg-bagazha-v-funty",
     "id": "kg-bagazha-v-funty",
-    "title": "Кг багажа в фунты",
+    "title": "Кг багажа в фунты (Вес (кг), Из)",
     "description": "Перевод веса багажа из килограммов в фунты (pounds)",
     "subcategory": "conv-bagazh",
     "type": "converter",
@@ -3879,8 +3879,8 @@
   {
     "slug": "funty-bagazha-v-kg",
     "id": "funty-bagazha-v-kg",
-    "title": "Фунты багажа в кг",
-    "description": "Перевод веса багажа из фунтов в килограммы",
+    "title": "Фунты багажа в кг (Вес (lb), Из)",
+    "description": "Онлайн калькулятор: рассчитайте Вес (lb), Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-bagazh",
     "type": "converter",
     "category": "konvertery",
@@ -3957,7 +3957,7 @@
   {
     "slug": "vysota-v-davlenie",
     "id": "vysota-v-davlenie",
-    "title": "Высота в давление",
+    "title": "Высота в давление (Высота (м), Из)",
     "description": "Расчёт атмосферного давления на заданной высоте над уровнем моря",
     "subcategory": "conv-vysota",
     "type": "converter",
@@ -4040,8 +4040,8 @@
   {
     "slug": "davlenie-v-vysotu",
     "id": "davlenie-v-vysotu",
-    "title": "Давление в высоту",
-    "description": "Расчёт высоты по атмосферному давлению",
+    "title": "Давление в высоту (Давление (кПа), Из)",
+    "description": "Онлайн калькулятор: рассчитайте Давление (кПа), Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-vysota",
     "type": "converter",
     "category": "konvertery",

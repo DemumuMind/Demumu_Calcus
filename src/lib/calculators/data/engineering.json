@@ -2,8 +2,8 @@
   {
     "slug": "zakon-oma",
     "id": "ohms-law-calculator",
-    "title": "Закон Ома",
-    "description": "Расчёт напряжения, силы тока, сопротивления",
+    "title": "Закон Ома — физические расчёты",
+    "description": "Онлайн физические расчёты: рассчитайте Что известно?, Первое значение, Второе значение. Бесплатно, без регистрации.",
     "subcategory": "fizika",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -203,8 +203,8 @@
   {
     "slug": "rc-cepy",
     "id": "capacitor-calculator",
-    "title": "RC-цепь",
-    "description": "Расчёт постоянной времени RC-цепи (заряд/разряд)",
+    "title": "RC-цепь — физические расчёты",
+    "description": "Онлайн физические расчёты: рассчитайте Сопротивление R (кОм), Ёмкость C (мкФ), Напряжение питания (В). Бесплатно, без регистрации.",
     "subcategory": "fizika",
     "type": "formula",
     "category": "nauka-i-ucheba",

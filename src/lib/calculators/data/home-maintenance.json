@@ -2,7 +2,7 @@
   {
     "slug": "raskhod-kraski",
     "id": "paint-renovation-calculator",
-    "title": "Калькулятор краски",
+    "title": "Калькулятор краски (для стен) (Raskhod kraski)",
     "description": "Расчёт количества краски для стен и потолка с учётом площади, пористости и количества слоёв",
     "subcategory": "otdelka",
     "type": "formula",
@@ -48,7 +48,7 @@
   {
     "slug": "raskhod-laminata",
     "id": "flooring-calculator",
-    "title": "Калькулятор напольного покрытия",
+    "title": "Калькулятор напольного покрытия (вариант 2)",
     "description": "Расчёт количества ламината, паркета, плитки или линолеума с учётом укладки и запаса",
     "subcategory": "otdelka",
     "type": "formula",
@@ -173,7 +173,7 @@
   {
     "slug": "raskhod-oboev",
     "id": "wallpaper-renovation-calculator",
-    "title": "Калькулятор обоев",
+    "title": "Калькулятор обоев (для комнаты) (Raskhod oboev)",
     "description": "Расчёт количества рулонов обоев с учётом площади, рисунка и высоты потолков",
     "subcategory": "otdelka",
     "type": "formula",
@@ -219,7 +219,7 @@
   {
     "slug": "raskhod-shtukaturki",
     "id": "plaster-calculator",
-    "title": "Калькулятор штукатурки",
+    "title": "Калькулятор штукатурки (для стен) (Raskhod shtukaturki)",
     "description": "Расчёт количества штукатурной смеси с учётом площади и толщины слоя",
     "subcategory": "stroitelnye-materialy",
     "type": "formula",
@@ -646,7 +646,7 @@
   {
     "slug": "raskhod-gruntovki",
     "id": "primer-renovation-calculator",
-    "title": "Калькулятор грунтовки",
+    "title": "Калькулятор грунтовки (вариант 2)",
     "description": "Расчёт количества грунтовочной смеси для подготовки стен и пола",
     "subcategory": "otdelka",
     "type": "formula",

@@ -99,7 +99,7 @@
   {
     "slug": "generator-uuid-guid",
     "id": "uuid-generator",
-    "title": "Генератор UUID/GUID",
+    "title": "Генератор UUID/GUID (Версия UUID, Количество)",
     "description": "Генератор уникальных идентификаторов: UUID v4 (случайный), v1 (timestamp), v5 (SHA-1)",
     "subcategory": "generatory",
     "type": "formula",
@@ -893,7 +893,7 @@
   {
     "slug": "generator-cvetovyh-palitr",
     "id": "color-palette-generator",
-    "title": "Генератор цветовых палитр",
+    "title": "Генератор цветовых палитр (вариант 2)",
     "description": "Генерация цветовых палитр: случайные, комплементарные, триадные, аналоговые, монохромные",
     "subcategory": "generatory",
     "type": "formula",

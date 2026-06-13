@@ -188,7 +188,7 @@
   {
     "slug": "konverter-parsekov",
     "id": "parsec-converter",
-    "title": "Конвертер парсеков",
+    "title": "Конвертер парсеков (Значение, Единица)",
     "description": "Перевод парсеков в световые годы, килопарсеки и мегапарсеки для космических расстояний",
     "subcategory": "space-units",
     "type": "converter",

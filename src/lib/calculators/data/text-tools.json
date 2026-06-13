@@ -2,7 +2,7 @@
   {
     "slug": "schyotchik-simvolov",
     "id": "character-counter",
-    "title": "Счётчик символов",
+    "title": "Счётчик символов (Текст)",
     "description": "Подсчёт символов с пробелами и без, строк, абзацев и байтов",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
@@ -81,7 +81,7 @@
   {
     "slug": "analiz-teksta",
     "id": "text-analyzer",
-    "title": "Анализ текста",
+    "title": "Анализ текста (Текст для анализа)",
     "description": "Частотность слов, читаемость по Флешу, количество уникальных слов",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
@@ -248,7 +248,7 @@
   {
     "slug": "transliteratsiya",
     "id": "transliteration",
-    "title": "Транслитерация",
+    "title": "Транслитерация (Текст, Направление)",
     "description": "Преобразование текста между кириллицей и латиницей по международным стандартам",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
@@ -348,7 +348,7 @@
   {
     "slug": "tsifrt-tsezarya",
     "id": "caesar-cipher",
-    "title": "Шифр Цезаря",
+    "title": "Шифр Цезаря (Текст, Сдвиг)",
     "description": "Шифрование методом сдвига (ROT13, произвольный сдвиг)",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
@@ -478,7 +478,7 @@
   {
     "slug": "url-kodirovshchik",
     "id": "url-encoder",
-    "title": "URL кодировщик",
+    "title": "URL кодировщик (Текст или URL, Режим)",
     "description": "Кодирование и декодирование URL (percent-encoding)",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
@@ -832,8 +832,8 @@
   {
     "slug": "reshetka-anagramm",
     "id": "anagram-solver",
-    "title": "Решатель анаграмм",
-    "description": "Поиск слов из заданных букв",
+    "title": "Решатель анаграмм (Буквы, Минимальная длина слова)",
+    "description": "Онлайн калькулятор: рассчитайте Буквы, Минимальная длина слова, Максимум результатов. Бесплатно, без регистрации.",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
     "category": "tekhnologii",
@@ -909,8 +909,8 @@
   {
     "slug": "konverter-registra",
     "id": "case-converter",
-    "title": "Конвертер регистра",
-    "description": "Преобразование между различными стилями написания",
+    "title": "Конвертер регистра (Текст, Целевой регистр)",
+    "description": "Онлайн калькулятор: рассчитайте Текст, Целевой регистр. Бесплатно, без регистрации.",
     "subcategory": "tekstovye-instrumenty",
     "type": "formula",
     "category": "tekhnologii",

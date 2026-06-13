@@ -2,7 +2,7 @@
   {
     "slug": "generator-palitry",
     "id": "palette-generator",
-    "title": "Генератор цветовых палитр",
+    "title": "Генератор цветовых палитр (вариант 1)",
     "description": "Создание гармоничных цветовых сочетаний: случайные, из базового цвета, по настроению",
     "subcategory": "tekhnologii-raznoe",
     "type": "formula",
@@ -337,7 +337,7 @@
   {
     "slug": "pantone-poisk",
     "id": "pantone-finder",
-    "title": "Поиск Pantone",
+    "title": "Поиск Pantone (Код Pantone)",
     "description": "Поиск цветов Pantone Coated и конвертация в RGB/CMYK/HEX",
     "subcategory": "tekhnologii-raznoe",
     "type": "reference",
@@ -403,7 +403,7 @@
   {
     "slug": "ral-konverter",
     "id": "ral-converter",
-    "title": "Конвертер RAL",
+    "title": "Конвертер RAL (Код RAL)",
     "description": "Конвертация цветов RAL Classic и RAL Design в RGB/HEX",
     "subcategory": "tekhnologii-raznoe",
     "type": "reference",
@@ -572,7 +572,7 @@
   {
     "slug": "smesitel-cvetov",
     "id": "color-mixer",
-    "title": "Смеситель цветов",
+    "title": "Смеситель цветов (Цвет 1 (HEX), Цвет 2 (HEX))",
     "description": "Смешивание двух цветов с регулируемым соотношением",
     "subcategory": "tekhnologii-raznoe",
     "type": "formula",

@@ -2,7 +2,7 @@
   {
     "slug": "konverter-kulinarnyh-mer",
     "id": "cooking-measures-converter",
-    "title": "Конвертер кулинарных мер",
+    "title": "Конвертер кулинарных мер (вариант 2)",
     "description": "Перевод между чашками, ложками, миллилитрами и жидкими унциями для разных систем мер",
     "subcategory": "special",
     "type": "converter",
@@ -533,7 +533,7 @@
   {
     "slug": "konverter-razmerov-odezhdy",
     "id": "clothing-sizes-converter",
-    "title": "Конвертер размеров одежды",
+    "title": "Конвертер размеров одежды (вариант 1)",
     "description": "Перевод размеров XS-XXL между США, Великобританией, ЕС, Россией, Японией и Китаем",
     "subcategory": "special",
     "type": "converter",
@@ -650,7 +650,7 @@
   {
     "slug": "konverter-razmerov-obuvi",
     "id": "shoe-size-converter",
-    "title": "Конвертер размеров обуви",
+    "title": "Конвертер размеров обуви (вариант 1)",
     "description": "Перевод между системами размеров обуви США, Великобритании, ЕС, России, Японии, Китая и длиной стопы",
     "subcategory": "special",
     "type": "converter",

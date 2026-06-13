@@ -2,7 +2,7 @@
   {
     "slug": "kalkulyator-otpusknyh",
     "id": "vacation-calculator",
-    "title": "Калькулятор отпускных",
+    "title": "Калькулятор отпускных (вариант 1)",
     "description": "Расчёт отпускных по среднему заработку за 12 месяцев",
     "subcategory": "zarplata",
     "type": "formula",
@@ -200,7 +200,7 @@
   {
     "slug": "kalkulyator-neustoiki-395-gk",
     "id": "penalty-395-calculator",
-    "title": "Калькулятор неустойки по 395 ГК РФ",
+    "title": "Калькулятор неустойки по 395 ГК РФ (вариант 1)",
     "description": "Расчёт процентов за просрочку платежа по статье 395 Гражданского кодекса РФ",
     "subcategory": "yuridicheskie",
     "type": "formula",
@@ -549,8 +549,8 @@
   {
     "slug": "kalkulyator-ndfl",
     "id": "ndfl-calculator",
-    "title": "Калькулятор НДФЛ",
-    "description": "Расчёт налога на доходы физических лиц (13%, 15%)",
+    "title": "Калькулятор НДФЛ — налоговые расчёты",
+    "description": "Онлайн налоговые расчёты: рассчитайте Сумма дохода, Тип дохода, Учитывать вычеты. Бесплатно, без регистрации.",
     "subcategory": "nalogi",
     "type": "formula",
     "category": "finansy",

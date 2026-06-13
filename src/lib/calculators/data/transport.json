@@ -322,7 +322,7 @@
     "slug": "utilizacionnyj-sbor",
     "id": "utilization-fee",
     "title": "Калькулятор утилизационного сбора",
-    "description": "Расчёт утилизационного сбора для автомобилей",
+    "description": "Онлайн калькулятор: рассчитайте Объём двигателя (см³), Тип транспортного средства, Юридическое лицо. Бесплатно, без регистрации.",
     "subcategory": "utilizacionnyj-sbor",
     "type": "formula",
     "category": "transport",

@@ -3,7 +3,7 @@
     "slug": "shpaklyovka",
     "id": "putty-calculator",
     "title": "Калькулятор шпаклёвки",
-    "description": "Расчёт количества шпаклёвки для выравнивания стен",
+    "description": "Онлайн калькулятор: рассчитайте Площадь стен (м²), Толщина слоя (мм), Тип шпаклёвки. Бесплатно, без регистрации.",
     "subcategory": "stroitelnye-materialy",
     "type": "formula",
     "category": "stroitelstvo-i-remont",
@@ -98,8 +98,8 @@
   {
     "slug": "gruntovka",
     "id": "primer-calculator",
-    "title": "Калькулятор грунтовки",
-    "description": "Расчёт расхода грунтовки для стен и потолков",
+    "title": "Калькулятор грунтовки (вариант 1)",
+    "description": "Онлайн калькулятор: рассчитайте Значение. Бесплатно, без регистрации.",
     "subcategory": "stroitelnye-materialy",
     "type": "formula",
     "category": "stroitelstvo-i-remont",
@@ -144,7 +144,7 @@
   {
     "slug": "utepitel",
     "id": "insulation-calculator",
-    "title": "Калькулятор утеплителя",
+    "title": "Калькулятор утеплителя (вариант 1)",
     "description": "Расчёт количества утеплителя для стен, полов и крыш",
     "subcategory": "stroitelnye-materialy",
     "type": "formula",

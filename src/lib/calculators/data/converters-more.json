@@ -275,7 +275,7 @@
   {
     "slug": "khimicheskie-edinicy",
     "id": "chemistry-converter",
-    "title": "Химические единицы",
+    "title": "Химические единицы (Значение, Из)",
     "description": "Перевод молярной массы, концентрации, молей, молярности и других химических единиц",
     "subcategory": "conv-khimiya",
     "type": "converter",
@@ -493,7 +493,7 @@
   {
     "slug": "proporcii",
     "id": "proportion",
-    "title": "Решение пропорций",
+    "title": "Решение пропорций (a (первое значение), b (второе значение))",
     "description": "Решение пропорций вида a:b = c:d. Нахождение неизвестного члена пропорции",
     "subcategory": "matematicheskie",
     "type": "formula",
@@ -593,7 +593,7 @@
   {
     "slug": "vremya-rasshirennoe",
     "id": "time-extended",
-    "title": "Время (расширенный)",
+    "title": "Время (расширенный) (Значение, Из)",
     "description": "Перевод между секундами, минутами, часами, днями, неделями, месяцами, годами, декадами, веками",
     "subcategory": "conv-vremya",
     "type": "converter",
@@ -741,7 +741,7 @@
   {
     "slug": "moshchnost",
     "id": "power-advanced-converter",
-    "title": "Мощность",
+    "title": "Мощность (Значение, Из)",
     "description": "Перевод мощности между ваттами, киловаттами, лошадиными силами, BTU/ч и другими единицами",
     "subcategory": "conv-moshchnost",
     "type": "converter",
@@ -1084,7 +1084,7 @@
   {
     "slug": "plotnost",
     "id": "density-converter",
-    "title": "Плотность",
+    "title": "Плотность (Значение, Из)",
     "description": "Перевод плотности между кг/м³, г/см³, кг/л, фунт/фут³ и другими единицами",
     "subcategory": "conv-plotnost",
     "type": "converter",

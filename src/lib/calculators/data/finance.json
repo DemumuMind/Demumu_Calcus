@@ -2,7 +2,7 @@
   {
     "slug": "kalkulyator-nds",
     "id": "vat-calculator",
-    "title": "Калькулятор НДС",
+    "title": "Калькулятор НДС (Сумма, Ставка НДС (%))",
     "description": "Расчёт НДС: выделить из суммы или начислить на сумму",
     "subcategory": "kredity",
     "type": "formula",
@@ -100,7 +100,7 @@
   {
     "slug": "kalkulyator-vklada",
     "id": "deposit-basic-calculator",
-    "title": "Калькулятор вклада",
+    "title": "Калькулятор вклада (вариант 2)",
     "description": "Расчёт дохода по банковскому вкладу с капитализацией",
     "subcategory": "kredity",
     "type": "formula",
@@ -204,7 +204,7 @@
   {
     "slug": "slozhnyj-procent",
     "id": "compound-interest-basic",
-    "title": "Сложный процент",
+    "title": "Сложный процент (Начальная сумма, Процентная ставка (% годовых))",
     "description": "Расчёт итоговой суммы при сложном проценте с ежемесячным пополнением",
     "subcategory": "kredity",
     "type": "formula",

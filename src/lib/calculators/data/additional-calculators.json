@@ -2,7 +2,7 @@
   {
     "slug": "kalkulyator-imt",
     "id": "bmi-calculator",
-    "title": "Калькулятор ИМТ",
+    "title": "Калькулятор ИМТ — расчёты для здоровья",
     "description": "Рассчитайте индекс массы тела (ИМТ) онлайн. Узнайте, есть ли у вас избыточный вес или дефицит массы тела.",
     "subcategory": "zdorove",
     "type": "calculator",
@@ -67,7 +67,7 @@
   {
     "slug": "kalkulyator-kalorij",
     "id": "calorie-calculator",
-    "title": "Калькулятор калорий",
+    "title": "Калькулятор калорий — расчёты для здоровья",
     "description": "Рассчитайте суточную норму калорий (BMR и TDEE) для поддержания, похудения или набора веса.",
     "subcategory": "zdorove",
     "type": "calculator",
@@ -221,7 +221,7 @@
   {
     "slug": "ipotchnyj-kalkulyator",
     "id": "mortgage-calculator",
-    "title": "Ипотечный калькулятор",
+    "title": "Ипотечный калькулятор (вариант 1)",
     "description": "Рассчитайте ежемесячный платёж по ипотеке, переплату и общую сумму выплат. Аннуитетные и дифференцированные платежи.",
     "subcategory": "finansovye",
     "type": "calculator",

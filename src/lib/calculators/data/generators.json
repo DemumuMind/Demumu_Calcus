@@ -2,8 +2,8 @@
   {
     "slug": "generator-sluchajnyh-chisel",
     "id": "random-number",
-    "title": "Случайное число",
-    "description": "Генератор случайных чисел в заданном диапазоне",
+    "title": "Случайное число (Минимум, Максимум)",
+    "description": "Онлайн калькулятор: рассчитайте Минимум, Максимум, Количество. Бесплатно, без регистрации.",
     "subcategory": "generatory",
     "type": "formula",
     "category": "tekhnologii",
@@ -66,8 +66,8 @@
   {
     "slug": "generator-parolej",
     "id": "password-generator",
-    "title": "Генератор паролей",
-    "description": "Генератор надёжных случайных паролей",
+    "title": "Генератор паролей (Длина пароля, Заглавные буквы (A-Z))",
+    "description": "Онлайн калькулятор: рассчитайте Длина пароля, Заглавные буквы (A-Z), Цифры (0-9). Бесплатно, без регистрации.",
     "subcategory": "generatory",
     "type": "formula",
     "category": "tekhnologii",
@@ -169,7 +169,7 @@
   {
     "slug": "broskok-kostej",
     "id": "dice-roller",
-    "title": "Бросок костей",
+    "title": "Бросок костей (Тип кости, Количество костей)",
     "description": "Симуляция броска игральных костей d4, d6, d8, d10, d12, d20",
     "subcategory": "razvlecheniya",
     "type": "formula",

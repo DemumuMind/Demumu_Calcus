@@ -186,7 +186,7 @@
   {
     "slug": "ipotechnyj-kalkulyator",
     "id": "mortgage",
-    "title": "Ипотечный калькулятор",
+    "title": "Ипотечный калькулятор (вариант 2)",
     "description": "Рассчитайте платежи по ипотеке, график погашения и переплату.",
     "subcategory": "finansovye",
     "type": "formula",
@@ -232,7 +232,7 @@
   {
     "slug": "arenda-ili-pokupka",
     "id": "rent-vs-buy",
-    "title": "Аренда или покупка",
+    "title": "Аренда или покупка (Значение)",
     "description": "Сравните финансовые выгоды аренды жилья и покупки собственного.",
     "subcategory": "finansovye",
     "type": "formula",

@@ -266,7 +266,7 @@
   {
     "slug": "odnopovtornyj-maksimum",
     "id": "one-rep-max-calculator",
-    "title": "Калькулятор 1RM",
+    "title": "Калькулятор 1RM (Значение)",
     "description": "Расчёт одноповторного максимума (1RM) по формулам Бриzycki, Эпли и Ломбарди",
     "subcategory": "sport-i-aktivnost",
     "type": "formula",
@@ -411,7 +411,7 @@
   {
     "slug": "razgruzochnaya-nedelya",
     "id": "deload-calculator",
-    "title": "Калькулятор deload",
+    "title": "Калькулятор deload (Текущий объём (кг/неделю), Текущая интенсивность (% от 1RM))",
     "description": "Планирование разгрузочной недели для восстановления и предотвращения перетренированности",
     "subcategory": "sport-i-aktivnost",
     "type": "formula",
@@ -645,7 +645,7 @@
   {
     "slug": "shkala-rpe",
     "id": "rpe-calculator",
-    "title": "Калькулятор RPE",
+    "title": "Калькулятор RPE (Ваш 1RM (кг), Целевой RPE)",
     "description": "Расчёт веса по шкале воспринимаемой нагрузки (RPE) и определение запаса повторов (RIR)",
     "subcategory": "sport-i-aktivnost",
     "type": "formula",

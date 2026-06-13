@@ -70,7 +70,7 @@
     "slug": "sila-parolya",
     "id": "password-strength",
     "title": "Проверка силы пароля",
-    "description": "Оценка надёжности и энтропии пароля",
+    "description": "Онлайн калькулятор: рассчитайте Пароль. Бесплатно, без регистрации.",
     "subcategory": "tekhnologii-raznoe",
     "type": "formula",
     "category": "tekhnologii",

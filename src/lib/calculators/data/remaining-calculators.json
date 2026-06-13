@@ -251,7 +251,7 @@
   {
     "slug": "srednij-ball-gpa",
     "id": "gpa-calculator",
-    "title": "Калькулятор GPA",
+    "title": "Калькулятор GPA (вариант 3)",
     "description": "Расчёт среднего балла по шкалам 5, 10, 12 и 100 баллов с переводом между ними",
     "subcategory": "matematicheskie",
     "type": "formula",
@@ -347,7 +347,7 @@
   {
     "slug": "oboi-kalkulyator",
     "id": "wallpaper-calculator",
-    "title": "Калькулятор обоев",
+    "title": "Калькулятор обоев (для комнаты) (Oboi)",
     "description": "Расчёт количества рулонов обоев по площади стен с учётом рисунка и запаса",
     "subcategory": "otdelka",
     "type": "formula",
@@ -475,7 +475,7 @@
   {
     "slug": "plitka-kalkulyator",
     "id": "tile-calculator",
-    "title": "Калькулятор плитки",
+    "title": "Калькулятор плитки (для ванной) (Plitka)",
     "description": "Расчёт количества плитки для пола и стен с учётом запаса и раскладки",
     "subcategory": "pokrytiya",
     "type": "formula",
@@ -723,7 +723,7 @@
   {
     "slug": "laminat-kalkulyator",
     "id": "laminate-calculator",
-    "title": "Калькулятор ламината",
+    "title": "Калькулятор ламината (вариант 2)",
     "description": "Расчёт количества упаковок ламината с учётом запаса на подрезку",
     "subcategory": "pokrytiya",
     "type": "formula",
@@ -1063,7 +1063,7 @@
   {
     "slug": "otpusknye-kalkulyator",
     "id": "vacation-calculator",
-    "title": "Калькулятор отпускных",
+    "title": "Калькулятор отпускных (вариант 2)",
     "description": "Расчёт суммы отпускных по средней зарплате за 12 месяцев",
     "subcategory": "finansovye",
     "type": "formula",
@@ -1155,7 +1155,7 @@
     "slug": "dekretnye-kalkulyator",
     "id": "maternity-calculator",
     "title": "Калькулятор декретных пособий",
-    "description": "Расчёт пособия по беременности и родам в России",
+    "description": "Онлайн калькулятор: рассчитайте Зарплата за 2 года (₽), Исключённые дни (больничные и т.д.), Длительность отпуска (дней). Бесплатно, без регистрации.",
     "subcategory": "beremennost-i-deti",
     "type": "formula",
     "category": "zdorove-i-krasota",
@@ -1256,7 +1256,7 @@
   {
     "slug": "neustojka-395-gk",
     "id": "penalty-calculator",
-    "title": "Калькулятор неустойки по 395 ГК РФ",
+    "title": "Калькулятор неустойки по 395 ГК РФ (вариант 2)",
     "description": "Расчёт процентов за просрочку платежа по ключевой ставке ЦБ (1/300 ставки за каждый день)",
     "subcategory": "finansovye",
     "type": "formula",
@@ -1341,7 +1341,7 @@
   {
     "slug": "razmer-obuvi-konverter",
     "id": "shoe-size-converter",
-    "title": "Калькулятор размера обуви",
+    "title": "Калькулятор размера обуви (вариант 2)",
     "description": "Перевод размеров обуви между российской, европейской, американской и британской системами",
     "subcategory": "razmery",
     "type": "formula",

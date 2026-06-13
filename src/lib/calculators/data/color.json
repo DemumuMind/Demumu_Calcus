@@ -2,8 +2,8 @@
   {
     "slug": "konverter-cvetov",
     "id": "color-converter",
-    "title": "Конвертер цветов",
-    "description": "RGB в HEX, HEX в RGB, RGB в HSL",
+    "title": "Конвертер цветов (R (красный), G (зелёный))",
+    "description": "Онлайн калькулятор: рассчитайте R (красный), G (зелёный), B (синий). Бесплатно, без регистрации.",
     "subcategory": "tekhnologii-raznoe",
     "type": "formula",
     "category": "tekhnologii",
@@ -80,8 +80,8 @@
   {
     "slug": "kontrastnost-cveta",
     "id": "contrast-calculator",
-    "title": "Контрастность цвета",
-    "description": "Проверка соотношения контраста по стандарту WCAG",
+    "title": "Контрастность цвета (Фон R, Фон G)",
+    "description": "Онлайн калькулятор: рассчитайте Фон R, Фон G, Фон B. Бесплатно, без регистрации.",
     "subcategory": "tekhnologii-raznoe",
     "type": "formula",
     "category": "tekhnologii",

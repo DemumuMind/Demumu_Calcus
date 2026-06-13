@@ -48,7 +48,7 @@
   {
     "slug": "lestnica-raschet",
     "id": "stairs-calculator",
-    "title": "Расчёт лестницы",
+    "title": "Расчёт лестницы (Значение)",
     "description": "Расчёт количества ступеней, их высоты и глубины для удобной лестницы",
     "subcategory": "stroitelnye-materialy",
     "type": "formula",
@@ -140,7 +140,7 @@
   {
     "slug": "styazhka-pola",
     "id": "floor-screed",
-    "title": "Расчёт стяжки пола",
+    "title": "Расчёт стяжки пола (Значение)",
     "description": "Расчёт объёма и количества материалов для стяжки пола",
     "subcategory": "otdelka",
     "type": "formula",
@@ -186,8 +186,8 @@
   {
     "slug": "gipsokarton-raschet",
     "id": "drywall-calculator",
-    "title": "Расчёт гипсокартона",
-    "description": "Расчёт количества листов ГКЛ, профилей и крепежа",
+    "title": "Расчёт гипсокартона (Значение)",
+    "description": "Онлайн калькулятор: рассчитайте Значение. Бесплатно, без регистрации.",
     "subcategory": "otdelka",
     "type": "formula",
     "category": "stroitelstvo-i-remont",
@@ -324,7 +324,7 @@
   {
     "slug": "beton-m300",
     "id": "concrete-m300",
-    "title": "Расчёт бетона М300",
+    "title": "Расчёт бетона М300 (Значение)",
     "description": "Расчёт состава бетона М300 (ПВ20) для фундаментов и перекрытий",
     "subcategory": "stroitelnye-materialy",
     "type": "formula",

@@ -610,7 +610,7 @@
   {
     "slug": "idealnyj-ves-pitomca",
     "id": "pet-ideal-weight",
-    "title": "Оценка веса питомца",
+    "title": "Оценка веса питомца (Питомец, Текущий вес (кг))",
     "description": "Определение, находится ли питомец в идеальном весе (по системе BCS)",
     "subcategory": "pitomcy",
     "type": "formula",

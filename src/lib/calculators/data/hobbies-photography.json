@@ -92,7 +92,7 @@
   {
     "slug": "glubina-rezkosti",
     "id": "depth-of-field",
-    "title": "Глубина резкости",
+    "title": "Глубина резкости (Фокусное расстояние (мм), Диафрагма (f/))",
     "description": "Расчёт глубины резкости (DOF) на основе фокусного расстояния, диафрагмы и расстояния до объекта",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -288,7 +288,7 @@
   {
     "slug": "zvezdy-vyderzhka",
     "id": "star-trails",
-    "title": "Выдержка для звёзд",
+    "title": "Выдержка для звёзд (Фокусное расстояние (мм), Размер сенсора)",
     "description": "Расчёт максимальной выдержки для съёмки звёзд без смазывания (правило 500, 600, NPF)",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -485,7 +485,7 @@
   {
     "slug": "razmer-pechati",
     "id": "print-size",
-    "title": "Размеры печати фото",
+    "title": "Размеры печати фото (Ширина изображения (пиксели), Высота изображения (пиксели))",
     "description": "Расчёт оптимальных размеров печати на основе разрешения файла и требуемого PPI",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -588,7 +588,7 @@
   {
     "slug": "svetosila",
     "id": "aperture",
-    "title": "Светосила (f-stop)",
+    "title": "Светосила (f-stop) (Базовая диафрагма (f/), Новая диафрагма (f/))",
     "description": "Расчёт изменения светосилы при разных значениях диафрагмы",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -731,7 +731,7 @@
   {
     "slug": "hdr-breketing",
     "id": "hdr-bracketing",
-    "title": "HDR брекетинг",
+    "title": "HDR брекетинг (Диапазон сцены (EV), Шаг брекетинга (EV))",
     "description": "Расчёт настроек для съёмки HDR (High Dynamic Range) с брекетингом экспозиции",
     "subcategory": "razvlecheniya",
     "type": "formula",

@@ -2,7 +2,7 @@
   {
     "slug": "konverter-valyut",
     "id": "currency-converter",
-    "title": "Конвертер валют",
+    "title": "Конвертер валют (Сумма, Из валюты)",
     "description": "Онлайн конвертер валют: доллары, евро, рубли, гривны и другие",
     "subcategory": "finansovye",
     "type": "converter",
@@ -139,7 +139,7 @@
   {
     "slug": "konverter-dlina",
     "id": "length-converter",
-    "title": "Конвертер длины",
+    "title": "Конвертер длины (Значение, Из)",
     "description": "Перевод метров, километров, сантиметров, дюймов, футов, миль",
     "subcategory": "conv-dlina",
     "type": "converter",
@@ -284,8 +284,8 @@
   {
     "slug": "konverter-massa",
     "id": "weight-converter",
-    "title": "Конвертер массы",
-    "description": "Перевод килограммов, граммов, тонн, фунтов, унций",
+    "title": "Конвертер массы (Значение, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Значение, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-massa",
     "type": "converter",
     "category": "konvertery",
@@ -406,7 +406,7 @@
     "slug": "konverter-temperatury",
     "id": "temperature-converter",
     "title": "Конвертер температуры",
-    "description": "Перевод Цельсия, Фаренгейта, Кельвина, Реомюра",
+    "description": "Онлайн калькулятор: рассчитайте Температура, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-temperatura",
     "type": "converter",
     "category": "konvertery",

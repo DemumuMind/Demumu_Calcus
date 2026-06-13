@@ -2,7 +2,7 @@
   {
     "slug": "raskhod-semyan",
     "id": "seed-calculator",
-    "title": "Калькулятор семян",
+    "title": "Калькулятор семян (Площадь посадки (м²), Расстояние между растениями (см))",
     "description": "Расчёт количества семян для посадки с учётом площади, густоты и всхожести",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -250,7 +250,7 @@
   {
     "slug": "poliv-rasteniy",
     "id": "watering-calculator",
-    "title": "Калькулятор полива",
+    "title": "Калькулятор полива (Площадь (м²), Норма полива (см/м²))",
     "description": "Расчёт количества воды для полива растений с учётом площади и типа почвы",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -598,7 +598,7 @@
   {
     "slug": "sroki-posadki",
     "id": "planting-calendar",
-    "title": "Календарь посадки",
+    "title": "Календарь посадки (Культура, Последние заморозки (дата))",
     "description": "Расчёт сроков посадки семян и высаживания рассады с учётом региона",
     "subcategory": "razvlecheniya",
     "type": "formula",

@@ -2,7 +2,7 @@
   {
     "slug": "shakhmatnye-chasy",
     "id": "chess-clock",
-    "title": "Шахматные часы",
+    "title": "Шахматные часы (Режим игры, Свой лимит (мин))",
     "description": "Режимы блиц, рапид и классика с инкрементом времени",
     "subcategory": "razvlecheniya",
     "type": "calculator",
@@ -171,7 +171,7 @@
   {
     "slug": "azbuka-morze",
     "id": "morse-code",
-    "title": "Азбука Морзе",
+    "title": "Азбука Морзе (Текст или код, Режим)",
     "description": "Конвертер текста в код Морзе и обратно с аудио-проигрыванием",
     "subcategory": "tekhnologii-raznoe",
     "type": "tool",
@@ -246,7 +246,7 @@
   {
     "slug": "konverter-chasovyh-poyasov",
     "id": "timezone-converter",
-    "title": "Конвертер часовых поясов",
+    "title": "Конвертер часовых поясов (вариант 2)",
     "description": "Время в городах мира — перевод между часовыми поясами",
     "subcategory": "data-i-vremya",
     "type": "converter",
@@ -424,7 +424,7 @@
   {
     "slug": "kalkulyator-rosta-rebenka",
     "id": "child-growth",
-    "title": "Калькулятор роста ребёнка",
+    "title": "Калькулятор роста ребёнка (вариант 1)",
     "description": "Перцентили роста и веса по возрасту и полу по данным ВОЗ",
     "subcategory": "beremennost-i-deti",
     "type": "assessment",

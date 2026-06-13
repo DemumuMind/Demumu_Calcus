@@ -104,7 +104,7 @@
   {
     "slug": "depozitnyj-kalkulyator",
     "id": "deposit-calculator",
-    "title": "Калькулятор вклада",
+    "title": "Калькулятор вклада (вариант 1)",
     "description": "Расчёт дохода по банковскому депозиту с капитализацией",
     "subcategory": "finansovye",
     "type": "formula",
@@ -151,7 +151,7 @@
     "slug": "roi-okupaemost",
     "id": "roi-calculator",
     "title": "Калькулятор ROI (окупаемость)",
-    "description": "Расчёт возврата инвестиций и срока окупаемости",
+    "description": "Онлайн калькулятор: рассчитайте Первоначальные инвестиции (₽), Годовой доход/прибыль (₽), Годовые расходы (₽). Бесплатно, без регистрации.",
     "subcategory": "finansovye",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -240,7 +240,7 @@
   {
     "slug": "npv-chistaya-stoimost",
     "id": "npv-calculator",
-    "title": "Калькулятор NPV",
+    "title": "Калькулятор NPV (Первоначальные инвестиции (₽), Годовой денежный поток (₽))",
     "description": "Чистая приведённая стоимость инвестиционного проекта",
     "subcategory": "finansovye",
     "type": "formula",

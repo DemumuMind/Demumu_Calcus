@@ -2,7 +2,7 @@
   {
     "slug": "kalkulyator-shtukaturki",
     "id": "plaster-calculator",
-    "title": "Калькулятор штукатурки",
+    "title": "Калькулятор штукатурки (для стен) (Shtukaturki)",
     "description": "Расчёт количества штукатурки по площади и толщине слоя",
     "subcategory": "otdelka",
     "type": "formula",

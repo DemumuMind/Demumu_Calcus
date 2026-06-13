@@ -176,7 +176,7 @@
   {
     "slug": "chastoty-not",
     "id": "note-frequency",
-    "title": "Частоты нот",
+    "title": "Частоты нот (Нота, Октава)",
     "description": "Расчёт частоты любой ноты в равномерно темперированном строе",
     "subcategory": "razvlecheniya",
     "type": "formula",
@@ -331,7 +331,7 @@
   {
     "slug": "razmer-audio",
     "id": "audio-file-size",
-    "title": "Размер аудиофайла",
+    "title": "Размер аудиофайла (Длительность (мин), Битрейт (kbps))",
     "description": "Расчёт размера аудиофайла в зависимости от битрейта и длительности",
     "subcategory": "razvlecheniya",
     "type": "formula",

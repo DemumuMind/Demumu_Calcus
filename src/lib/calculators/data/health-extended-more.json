@@ -190,7 +190,7 @@
   {
     "slug": "raschet-bzhu",
     "id": "bju-calculator",
-    "title": "Калькулятор БЖУ",
+    "title": "Калькулятор БЖУ (Суточная норма калорий (ккал), Вес (кг))",
     "description": "Расчёт нормы белков, жиров и углеводов для вашей цели",
     "subcategory": "health-pitanie",
     "type": "formula",

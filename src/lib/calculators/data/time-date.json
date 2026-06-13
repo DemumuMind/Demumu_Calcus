@@ -2,8 +2,8 @@
   {
     "slug": "kalkulyator-vozrasta",
     "id": "age-detailed-calculator",
-    "title": "Калькулятор возраста",
-    "description": "Точный расчёт возраста в годах, месяцах и днях",
+    "title": "Калькулятор возраста (вариант 2)",
+    "description": "Онлайн калькулятор: рассчитайте Дата рождения, Дата расчёта (по умолчанию сегодня). Бесплатно, без регистрации.",
     "subcategory": "data-i-vremya",
     "type": "formula",
     "category": "povsednevnoe",
@@ -70,8 +70,8 @@
   {
     "slug": "kalkulyator-rabochih-dnej",
     "id": "work-days-calculator",
-    "title": "Калькулятор рабочих дней",
-    "description": "Сколько рабочих дней между датами (без выходных)",
+    "title": "Калькулятор рабочих дней (вариант 2)",
+    "description": "Онлайн калькулятор: рассчитайте Начальная дата, Конечная дата. Бесплатно, без регистрации.",
     "subcategory": "data-i-vremya",
     "type": "formula",
     "category": "povsednevnoe",

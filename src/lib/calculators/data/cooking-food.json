@@ -304,7 +304,7 @@
   {
     "slug": "temperatura-duhovki",
     "id": "oven-temperature",
-    "title": "Конвертер температуры духовки",
+    "title": "Конвертер температуры духовки (вариант 2)",
     "description": "Перевод между градусами Цельсия, Фаренгейта, Газовой шкалой и уровнями мощности",
     "subcategory": "eda-i-napitki",
     "type": "converter",

@@ -2,7 +2,7 @@
   {
     "slug": "gpa-kalkulyator",
     "id": "gpa-calculator",
-    "title": "Калькулятор GPA",
+    "title": "Калькулятор GPA (вариант 1)",
     "description": "Расчёт среднего балла GPA по шкалам 4.0, 5.0 и 100-балльной системе",
     "subcategory": "education",
     "type": "formula",
@@ -668,7 +668,7 @@
   {
     "slug": "konverter-ocenok",
     "id": "grade-converter",
-    "title": "Конвертер оценок",
+    "title": "Конвертер оценок (Оценка, Из системы)",
     "description": "Перевод оценок между российской 5-балльной, американской буквенной и 100-балльной системами",
     "subcategory": "education",
     "type": "converter",

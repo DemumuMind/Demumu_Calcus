@@ -256,7 +256,7 @@
   {
     "slug": "bar-v-atm",
     "id": "pressure-bar-atm",
-    "title": "Бар в атмосферы",
+    "title": "Бар в атмосферы (Значение, Из)",
     "description": "Конвертер давления: перевод баров в физические и технические атмосферы",
     "subcategory": "conv-davlenie",
     "type": "converter",
@@ -474,7 +474,7 @@
   {
     "slug": "psi-v-bar",
     "id": "pressure-psi-bar",
-    "title": "PSI в бар",
+    "title": "PSI в бар (Значение, Из)",
     "description": "Конвертер давления: фунты на квадратный дюйм в бары",
     "subcategory": "conv-davlenie",
     "type": "converter",

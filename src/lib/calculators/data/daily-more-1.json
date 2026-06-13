@@ -2,7 +2,7 @@
   {
     "slug": "planirovshik-pitaniya",
     "id": "meal-planner-calculator",
-    "title": "Планировщик питания",
+    "title": "Планировщик питания (Тип диеты, Калорий в день (ккал))",
     "description": "Расчёт калорий и макронутриентов для разных типов диет",
     "subcategory": "everyday-eda",
     "type": "formula",
@@ -553,7 +553,7 @@
   {
     "slug": "kalkulyator-skidok",
     "id": "discount-calculator",
-    "title": "Калькулятор скидок",
+    "title": "Калькулятор скидок (вариант 1)",
     "description": "Расчёт итоговой цены с учётом различных типов скидок и акций",
     "subcategory": "everyday-dengi",
     "type": "formula",
@@ -686,7 +686,7 @@
   {
     "slug": "kalkulyator-nalogov",
     "id": "tax-calculator-price",
-    "title": "Калькулятор налогов",
+    "title": "Калькулятор налогов (Сумма (₽), Ставка налога (%))",
     "description": "Расчёт цены с налогом или выделение налога из общей суммы",
     "subcategory": "everyday-dengi",
     "type": "formula",

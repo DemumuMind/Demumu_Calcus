@@ -2,7 +2,7 @@
   {
     "slug": "kalkulyator-bmr",
     "id": "bmr-calculator",
-    "title": "Калькулятор BMR",
+    "title": "Калькулятор BMR (Пол, Возраст (лет))",
     "description": "Расчёт базального метаболизма (формула Миффлина-Сан Жеора)",
     "subcategory": "pitanie-i-ves",
     "type": "formula",
@@ -87,8 +87,8 @@
   {
     "slug": "kalkulyator-tdee",
     "id": "tdee-calculator",
-    "title": "Калькулятор TDEE",
-    "description": "Расчёт суточной нормы калорий с учётом активности",
+    "title": "Калькулятор TDEE (Пол, Возраст (лет))",
+    "description": "Онлайн калькулятор: рассчитайте Пол, Возраст (лет), Рост (см). Бесплатно, без регистрации.",
     "subcategory": "pitanie-i-ves",
     "type": "formula",
     "category": "zdorove-i-krasota",
@@ -478,7 +478,7 @@
   {
     "slug": "razmer-byustgaltera",
     "id": "bra-size-calculator-ru",
-    "title": "Калькулятор размера бюстгальтера",
+    "title": "Калькулятор размера бюстгальтера (вариант 2)",
     "description": "Определение размера бюстгальтера по обхвату под грудью и обхвату груди",
     "subcategory": "krasota",
     "type": "formula",

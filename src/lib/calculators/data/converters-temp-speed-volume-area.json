@@ -2,7 +2,7 @@
   {
     "slug": "c-v-f",
     "id": "temperature-celsius-fahrenheit",
-    "title": "Цельсий в Фаренгейт",
+    "title": "Цельсий в Фаренгейт (Температура, Из)",
     "description": "Конвертер температуры: перевод градусов Цельсия в градусы Фаренгейта",
     "subcategory": "conv-temperatura",
     "type": "converter",
@@ -73,7 +73,7 @@
   {
     "slug": "f-v-c",
     "id": "temperature-fahrenheit-celsius",
-    "title": "Фаренгейт в Цельсий",
+    "title": "Фаренгейт в Цельсий (Температура, Из)",
     "description": "Конвертер температуры: перевод градусов Фаренгейта в градусы Цельсия",
     "subcategory": "conv-temperatura",
     "type": "converter",
@@ -144,7 +144,7 @@
   {
     "slug": "c-v-k",
     "id": "temperature-celsius-kelvin",
-    "title": "Цельсий в Кельвины",
+    "title": "Цельсий в Кельвины (Температура, Из)",
     "description": "Конвертер температуры: перевод градусов Цельсия в Кельвины",
     "subcategory": "conv-temperatura",
     "type": "converter",
@@ -215,7 +215,7 @@
   {
     "slug": "k-v-c",
     "id": "temperature-kelvin-celsius",
-    "title": "Кельвины в Цельсий",
+    "title": "Кельвины в Цельсий (Температура, Из)",
     "description": "Конвертер температуры: перевод Кельвинов в градусы Цельсия",
     "subcategory": "conv-temperatura",
     "type": "converter",
@@ -431,7 +431,7 @@
   {
     "slug": "re-v-c",
     "id": "temperature-reaumur-celsius",
-    "title": "Реомюр в Цельсий",
+    "title": "Реомюр в Цельсий (Температура, Из)",
     "description": "Конвертер температуры: перевод градусов Реомюра в градусы Цельсия",
     "subcategory": "conv-temperatura",
     "type": "converter",
@@ -502,7 +502,7 @@
   {
     "slug": "c-v-re",
     "id": "temperature-celsius-reaumur",
-    "title": "Цельсий в Реомюр",
+    "title": "Цельсий в Реомюр (Температура, Из)",
     "description": "Конвертер температуры: перевод градусов Цельсия в градусы Реомюра",
     "subcategory": "conv-temperatura",
     "type": "converter",
@@ -574,7 +574,7 @@
   {
     "slug": "km-ch-v-m-s",
     "id": "speed-kmh-ms",
-    "title": "Км/ч в м/с",
+    "title": "Км/ч в м/с (Скорость, Из)",
     "description": "Конвертер скорости: перевод километров в час в метры в секунду",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -646,7 +646,7 @@
   {
     "slug": "m-s-v-km-ch",
     "id": "speed-ms-kmh",
-    "title": "М/с в км/ч",
+    "title": "М/с в км/ч (Скорость, Из)",
     "description": "Конвертер скорости: перевод метров в секунду в километры в час",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -718,7 +718,7 @@
   {
     "slug": "km-ch-v-mil-ch",
     "id": "speed-kmh-mph",
-    "title": "Км/ч в миль/ч",
+    "title": "Км/ч в миль/ч (Скорость, Из)",
     "description": "Конвертер скорости: перевод километров в час в мили в час",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -790,7 +790,7 @@
   {
     "slug": "mil-ch-v-km-ch",
     "id": "speed-mph-kmh",
-    "title": "Миль/ч в км/ч",
+    "title": "Миль/ч в км/ч (Скорость, Из)",
     "description": "Конвертер скорости: перевод миль в час в километры в час",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -862,7 +862,7 @@
   {
     "slug": "uzel-v-km-ch",
     "id": "speed-knot-kmh",
-    "title": "Узлы в км/ч",
+    "title": "Узлы в км/ч (Скорость, Из)",
     "description": "Конвертер скорости: перевод узлов в километры в час",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -933,7 +933,7 @@
   {
     "slug": "km-ch-v-uzel",
     "id": "speed-kmh-knot",
-    "title": "Км/ч в узлы",
+    "title": "Км/ч в узлы (Скорость, Из)",
     "description": "Конвертер скорости: перевод километров в час в узлы",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -1005,7 +1005,7 @@
   {
     "slug": "mah-v-km-ch",
     "id": "speed-mach-kmh",
-    "title": "Махи в км/ч",
+    "title": "Махи в км/ч (Число Маха, Из)",
     "description": "Конвертер скорости: перевод чисел Маха в километры в час",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -1076,7 +1076,7 @@
   {
     "slug": "km-ch-v-mah",
     "id": "speed-kmh-mach",
-    "title": "Км/ч в махи",
+    "title": "Км/ч в махи (Скорость, Из)",
     "description": "Конвертер скорости: перевод километров в час в числа Маха",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -1147,8 +1147,8 @@
   {
     "slug": "litr-v-ml",
     "id": "volume-l-ml",
-    "title": "Литры в миллилитры",
-    "description": "Конвертер объёма: перевод литров в миллилитры",
+    "title": "Литры в миллилитры (Объём, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Объём, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-obem",
     "type": "converter",
     "category": "konvertery",
@@ -1220,8 +1220,8 @@
   {
     "slug": "ml-v-litr",
     "id": "volume-ml-l",
-    "title": "Миллилитры в литры",
-    "description": "Конвертер объёма: перевод миллилитров в литры",
+    "title": "Миллилитры в литры (Объём, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Объём, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-obem",
     "type": "converter",
     "category": "konvertery",
@@ -1439,7 +1439,7 @@
   {
     "slug": "kub-metr-v-litr",
     "id": "volume-m3-l",
-    "title": "Куб. метры в литры",
+    "title": "Куб. метры в литры (Объём, Из)",
     "description": "Конвертер объёма: перевод кубических метров в литры",
     "subcategory": "conv-obem",
     "type": "converter",
@@ -1512,7 +1512,7 @@
   {
     "slug": "litr-v-kub-metr",
     "id": "volume-l-m3",
-    "title": "Литры в куб. метры",
+    "title": "Литры в куб. метры (Объём, Из)",
     "description": "Конвертер объёма: перевод литров в кубические метры",
     "subcategory": "conv-obem",
     "type": "converter",
@@ -1730,8 +1730,8 @@
   {
     "slug": "pinta-v-litr",
     "id": "volume-pt-l",
-    "title": "Пинты в литры",
-    "description": "Конвертер объёма: перевод пинт в литры",
+    "title": "Пинты в литры (Объём, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Объём, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-obem",
     "type": "converter",
     "category": "konvertery",
@@ -1803,8 +1803,8 @@
   {
     "slug": "litr-v-pinta",
     "id": "volume-l-pt",
-    "title": "Литры в пинты",
-    "description": "Конвертер объёма: перевод литров в пинты",
+    "title": "Литры в пинты (Объём, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Объём, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-obem",
     "type": "converter",
     "category": "konvertery",
@@ -1876,8 +1876,8 @@
   {
     "slug": "kvart-v-litr",
     "id": "volume-qt-l",
-    "title": "Кварты в литры",
-    "description": "Конвертер объёма: перевод кварт в литры",
+    "title": "Кварты в литры (Объём, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Объём, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-obem",
     "type": "converter",
     "category": "konvertery",
@@ -1949,8 +1949,8 @@
   {
     "slug": "litr-v-kvart",
     "id": "volume-l-qt",
-    "title": "Литры в кварты",
-    "description": "Конвертер объёма: перевод литров в кварты",
+    "title": "Литры в кварты (Объём, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Объём, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-obem",
     "type": "converter",
     "category": "konvertery",
@@ -2168,7 +2168,7 @@
   {
     "slug": "kv-metr-v-sotka",
     "id": "area-sqm-are",
-    "title": "М² в сотки",
+    "title": "М² в сотки (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных метров в сотки (ары)",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2241,7 +2241,7 @@
   {
     "slug": "sotka-v-kv-metr",
     "id": "area-are-sqm",
-    "title": "Сотки в м²",
+    "title": "Сотки в м² (Площадь, Из)",
     "description": "Конвертер площади: перевод соток (аров) в квадратные метры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2314,8 +2314,8 @@
   {
     "slug": "gektar-v-sotka",
     "id": "area-ha-are",
-    "title": "Гектары в сотки",
-    "description": "Конвертер площади: перевод гектаров в сотки (ары)",
+    "title": "Гектары в сотки (Площадь, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Площадь, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-ploshchad",
     "type": "converter",
     "category": "konvertery",
@@ -2387,8 +2387,8 @@
   {
     "slug": "sotka-v-gektar",
     "id": "area-are-ha",
-    "title": "Сотки в гектары",
-    "description": "Конвертер площади: перевод соток (аров) в гектары",
+    "title": "Сотки в гектары (Площадь, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Площадь, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-ploshchad",
     "type": "converter",
     "category": "konvertery",
@@ -2460,7 +2460,7 @@
   {
     "slug": "gektar-v-kv-km",
     "id": "area-ha-sqkm",
-    "title": "Гектары в кв. км",
+    "title": "Гектары в кв. км (Площадь, Из)",
     "description": "Конвертер площади: перевод гектаров в квадратные километры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2533,7 +2533,7 @@
   {
     "slug": "kv-km-v-gektar",
     "id": "area-sqkm-ha",
-    "title": "Кв. км в гектары",
+    "title": "Кв. км в гектары (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных километров в гектары",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2606,7 +2606,7 @@
   {
     "slug": "kv-metr-v-akr",
     "id": "area-sqm-acre",
-    "title": "М² в акры",
+    "title": "М² в акры (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных метров в акры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2679,7 +2679,7 @@
   {
     "slug": "akr-v-kv-metr",
     "id": "area-acre-sqm",
-    "title": "Акры в м²",
+    "title": "Акры в м² (Площадь, Из)",
     "description": "Конвертер площади: перевод акров в квадратные метры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2752,7 +2752,7 @@
   {
     "slug": "kv-sm-v-kv-metr",
     "id": "area-sqcm-sqm",
-    "title": "Кв. см в м²",
+    "title": "Кв. см в м² (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных сантиметров в квадратные метры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2825,7 +2825,7 @@
   {
     "slug": "kv-metr-v-kv-sm",
     "id": "area-sqm-sqcm",
-    "title": "М² в кв. см",
+    "title": "М² в кв. см (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных метров в квадратные сантиметры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2898,7 +2898,7 @@
   {
     "slug": "kv-mm-v-kv-sm",
     "id": "area-sqmm-sqcm",
-    "title": "Кв. мм в кв. см",
+    "title": "Кв. мм в кв. см (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных миллиметров в квадратные сантиметры",
     "subcategory": "conv-ploshchad",
     "type": "converter",
@@ -2975,7 +2975,7 @@
   {
     "slug": "kv-sm-v-kv-mm",
     "id": "area-sqcm-sqmm",
-    "title": "Кв. см в кв. мм",
+    "title": "Кв. см в кв. мм (Площадь, Из)",
     "description": "Конвертер площади: перевод квадратных сантиметров в квадратные миллиметры",
     "subcategory": "conv-ploshchad",
     "type": "converter",

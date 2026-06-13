@@ -681,7 +681,7 @@
   {
     "slug": "base64-koder",
     "id": "base64-converter",
-    "title": "Base64 кодирование",
+    "title": "Base64 кодирование (Текст, Режим)",
     "description": "Кодирование и декодирование текста в Base64 и обратно",
     "subcategory": "it-tools",
     "type": "converter",

@@ -2,7 +2,7 @@
   {
     "slug": "chasovye-poyasa",
     "id": "timezone-converter",
-    "title": "Конвертер часовых поясов",
+    "title": "Конвертер часовых поясов (вариант 1)",
     "description": "Перевод времени между различными часовыми поясами мира",
     "subcategory": "travel-tools",
     "type": "converter",
@@ -156,7 +156,7 @@
   {
     "slug": "naevye",
     "id": "tip-travel-calculator",
-    "title": "Калькулятор чаевых",
+    "title": "Калькулятор чаевых (водителю)",
     "description": "Расчёт чаевых в ресторане с учётом процента, количества людей и качества обслуживания",
     "subcategory": "stoimost-poezdki",
     "type": "formula",
@@ -202,7 +202,7 @@
   {
     "slug": "raschet-bagazha",
     "id": "luggage-calculator",
-    "title": "Калькулятор багажа",
+    "title": "Калькулятор багажа (Вес (кг), Длина (см))",
     "description": "Проверка веса и размеров багажа на соответствие требованиям авиакомпаний",
     "subcategory": "stoimost-poezdki",
     "type": "formula",

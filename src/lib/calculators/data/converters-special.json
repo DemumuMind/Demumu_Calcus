@@ -2,7 +2,7 @@
   {
     "slug": "perevod-sistem-schisleniya",
     "id": "number-system-converter",
-    "title": "Перевод систем счисления",
+    "title": "Перевод систем счисления (вариант 1)",
     "description": "Конвертер между двоичной, восьмеричной, десятичной и шестнадцатеричной системами",
     "subcategory": "special",
     "type": "converter",
@@ -92,7 +92,7 @@
     "slug": "konverter-cvetovyh-modelej",
     "id": "color-model-converter",
     "title": "Конвертер цветовых моделей",
-    "description": "Перевод между RGB, HEX, CMYK, HSL и HSV",
+    "description": "Онлайн калькулятор: рассчитайте Из формата, R (0-255), G (0-255). Бесплатно, без регистрации.",
     "subcategory": "special",
     "type": "converter",
     "category": "tekhnologii",
@@ -360,7 +360,7 @@
   {
     "slug": "konverter-ph",
     "id": "ph-converter",
-    "title": "Конвертер pH",
+    "title": "Конвертер pH (pH значение)",
     "description": "Перевод pH в концентрацию ионов водорода и определение характера среды",
     "subcategory": "special",
     "type": "converter",
@@ -514,7 +514,7 @@
   {
     "slug": "konverter-tverdosti",
     "id": "hardness-converter",
-    "title": "Конвертер твёрдости",
+    "title": "Конвертер твёрдости (Значение твёрдости, Шкала)",
     "description": "Перевод между шкалами Мооса, Бриннеля, Роквелла, Виккерса",
     "subcategory": "special",
     "type": "converter",

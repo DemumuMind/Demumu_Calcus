@@ -2,7 +2,7 @@
   {
     "slug": "truboprovod",
     "id": "pipe-calculator",
-    "title": "Трубопровод",
+    "title": "Трубопровод (Диаметр трубы D (мм), Расход Q (м³/ч))",
     "description": "Расчёт диаметра, расхода, скорости потока и потерь давления в трубопроводе",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
@@ -142,7 +142,7 @@
   {
     "slug": "remennaya-peredacha",
     "id": "belt-pulley-calculator",
-    "title": "Ременная передача",
+    "title": "Ременная передача (Диаметр ведущего шкива d1 (мм), Диаметр ведомого шкива d2 (мм))",
     "description": "Расчёт передаточного отношения, длины ремня и центрального расстояния",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
@@ -228,7 +228,7 @@
   {
     "slug": "pruzhina",
     "id": "spring-calculator",
-    "title": "Пружина",
+    "title": "Пружина (Тип пружины, Диаметр проволоки d (мм))",
     "description": "Расчёт жёсткости, деформации и параметров сжатия, растяжения, кручения",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
@@ -486,7 +486,7 @@
   {
     "slug": "zubchatoe-koleso",
     "id": "gear-calculator",
-    "title": "Зубчатое колесо",
+    "title": "Зубчатое колесо (Модуль m (мм), Число зубьев колеса 1 z1)",
     "description": "Расчёт модуля, числа зубьев, делительного диаметра, передаточного отношения",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
@@ -582,7 +582,7 @@
   {
     "slug": "podshipnik",
     "id": "bearing-calculator",
-    "title": "Подшипник качения",
+    "title": "Подшипник качения (Динамическая грузоподъёмность C (кН), Эквивалентная нагрузка P (кН))",
     "description": "Расчёт номинального ресурса L10 и срока службы подшипника",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
@@ -826,8 +826,8 @@
   {
     "slug": "listovoj-metall",
     "id": "sheet-metal-calculator",
-    "title": "Листовой металл",
-    "description": "Расчёт развёртки, поправки на изгиб и K-фактора",
+    "title": "Листовой металл (Толщина листа S (мм), Угол изгиба alpha (град.))",
+    "description": "Онлайн калькулятор: рассчитайте Толщина листа S (мм), Угол изгиба alpha (град.), Внутренний радиус изгиба r (мм). Бесплатно, без регистрации.",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -931,7 +931,7 @@
   {
     "slug": "teploobmennik",
     "id": "heat-exchanger-calculator",
-    "title": "Теплообменник",
+    "title": "Теплообменник (Температура горячей среды на входе T1h (°C), Температура горячей среды на выходе T2h (°C))",
     "description": "Расчёт тепловой мощности, температур и КПД теплообменника",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",
@@ -1041,7 +1041,7 @@
   {
     "slug": "pnevmocilindr",
     "id": "pneumatic-cylinder-calculator",
-    "title": "Пневмоцилиндр",
+    "title": "Пневмоцилиндр (Диаметр поршня D (мм), Диаметр штока d (мм))",
     "description": "Расчёт усилия и расхода воздуха пневматического цилиндра",
     "subcategory": "inzhenernye-raschety",
     "type": "formula",

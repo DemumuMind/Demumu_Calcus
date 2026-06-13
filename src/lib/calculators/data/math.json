@@ -72,7 +72,7 @@
     "slug": "kvadratnye-uravneniya",
     "id": "quadratic-equation",
     "title": "Квадратные уравнения",
-    "description": "Решение квадратных уравнений ax² + bx + c = 0",
+    "description": "Онлайн калькулятор: рассчитайте a (коэффициент при x²), b (коэффициент при x), c (свободный член). Бесплатно, без регистрации.",
     "subcategory": "matematicheskie",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -143,7 +143,7 @@
   {
     "slug": "kalkulyator-kornej",
     "id": "root-calculator",
-    "title": "Калькулятор корней",
+    "title": "Калькулятор корней (Число, Степень корня)",
     "description": "Извлечение квадратного, кубического и n-ной степени корня",
     "subcategory": "matematicheskie",
     "type": "formula",
@@ -205,8 +205,8 @@
   {
     "slug": "kalkulyator-drobej",
     "id": "fraction-calculator",
-    "title": "Калькулятор дробей",
-    "description": "Сложение, вычитание, умножение и деление дробей",
+    "title": "Калькулятор дробей (Числитель 1, Знаменатель 1)",
+    "description": "Онлайн калькулятор: рассчитайте Числитель 1, Знаменатель 1, Операция. Бесплатно, без регистрации.",
     "subcategory": "matematicheskie",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -305,8 +305,8 @@
   {
     "slug": "kalkulyator-faktoriala",
     "id": "factorial-simple-calculator",
-    "title": "Калькулятор факториала",
-    "description": "Вычисление факториала числа n!",
+    "title": "Калькулятор факториала (вариант 2)",
+    "description": "Онлайн калькулятор: рассчитайте n (число). Бесплатно, без регистрации.",
     "subcategory": "matematicheskie",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -360,7 +360,7 @@
   {
     "slug": "tablica-umnozheniya",
     "id": "multiplication-table",
-    "title": "Таблица умножения",
+    "title": "Таблица умножения (До какого числа)",
     "description": "Интерактивная таблица умножения от 1 до 10 (или 12)",
     "subcategory": "matematicheskie",
     "type": "reference",
@@ -476,8 +476,8 @@
   {
     "slug": "kalkulyator-gpa",
     "id": "gpa-calculator-math",
-    "title": "Калькулятор GPA",
-    "description": "Расчёт среднего балла (GPA) по шкале 4.0",
+    "title": "Калькулятор GPA (вариант 2)",
+    "description": "Онлайн калькулятор: рассчитайте Значение. Бесплатно, без регистрации.",
     "subcategory": "matematicheskie",
     "type": "formula",
     "category": "nauka-i-ucheba",
@@ -522,7 +522,7 @@
   {
     "slug": "tablicy-shulte",
     "id": "schulte-tables-calculator",
-    "title": "Таблицы Шульте",
+    "title": "Таблицы Шульте (Значение)",
     "description": "Тренировка внимания и периферического зрения на сетке 5×5",
     "subcategory": "matematicheskie",
     "type": "tool",

@@ -576,7 +576,7 @@
   {
     "slug": "prognoz-prodazh",
     "id": "sales-forecast",
-    "title": "Прогноз продаж",
+    "title": "Прогноз продаж (Продажи прошлого месяца (₽), Ожидаемый рост (%))",
     "description": "Простой прогноз продаж на основе исторических данных и темпов роста",
     "subcategory": "kredity",
     "type": "formula",

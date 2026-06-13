@@ -2,7 +2,7 @@
   {
     "slug": "konverter-vremeni",
     "id": "time-basic-converter",
-    "title": "Конвертер времени",
+    "title": "Конвертер времени (Значение, Из)",
     "description": "Перевод секунд, минут, часов, дней, недель, месяцев, лет",
     "subcategory": "conv-vremya",
     "type": "converter",
@@ -131,8 +131,8 @@
   {
     "slug": "konverter-davleniya",
     "id": "pressure-converter",
-    "title": "Конвертер давления",
-    "description": "Перевод Паскалей, бар, атмосфер, мм рт. ст., psi",
+    "title": "Конвертер давления (Значение, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Значение, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-davlenie",
     "type": "converter",
     "category": "konvertery",
@@ -260,8 +260,8 @@
   {
     "slug": "konverter-energii",
     "id": "energy-converter",
-    "title": "Конвертер энергии",
-    "description": "Перевод Джоулей, калорий, кВт⋅ч, эВ, BTU",
+    "title": "Конвертер энергии (Значение, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Значение, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-energiya",
     "type": "converter",
     "category": "konvertery",
@@ -389,8 +389,8 @@
   {
     "slug": "konverter-moshchnosti",
     "id": "power-basic-converter",
-    "title": "Конвертер мощности",
-    "description": "Перевод Ватт, киловатт, лошадиных сил, BTU/ч",
+    "title": "Конвертер мощности (Значение, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Значение, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-moshchnost",
     "type": "converter",
     "category": "konvertery",
@@ -510,7 +510,7 @@
   {
     "slug": "konverter-skorosti",
     "id": "speed-converter-extended",
-    "title": "Конвертер скорости",
+    "title": "Конвертер скорости (Значение, Из)",
     "description": "Перевод м/с, км/ч, миль/ч, узлов, скорости звука и света",
     "subcategory": "conv-skorost",
     "type": "converter",
@@ -631,7 +631,7 @@
   {
     "slug": "konverter-uglov",
     "id": "angle-basic-converter",
-    "title": "Конвертер углов",
+    "title": "Конвертер углов (Значение, Из единицы)",
     "description": "Перевод градусов, радиан, градов, минут, угловых секунд",
     "subcategory": "conv-ugol",
     "type": "converter",
@@ -729,7 +729,7 @@
   {
     "slug": "konverter-dannyh",
     "id": "data-storage-converter",
-    "title": "Конвертер данных",
+    "title": "Конвертер данных (Значение, Из)",
     "description": "Перевод байтов, килобайтов, мегабайтов, гигабайтов, терабайтов",
     "subcategory": "conv-informaciya",
     "type": "converter",
@@ -842,8 +842,8 @@
   {
     "slug": "konverter-chastoty",
     "id": "frequency-converter",
-    "title": "Конвертер частоты",
-    "description": "Перевод Герц, килогерц, мегагерц, гигагерц",
+    "title": "Конвертер частоты (Значение, Из)",
+    "description": "Онлайн калькулятор: рассчитайте Значение, Из, В. Бесплатно, без регистрации.",
     "subcategory": "conv-chastota",
     "type": "converter",
     "category": "konvertery",
