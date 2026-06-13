@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { BottomNav } from "@/components/mobile/bottom-nav";
 import { AnalyticsProvider } from "@/components/analytics-provider";
+import { CookieConsent } from "@/components/cookie-consent";
 import { PwaProvider } from "@/components/pwa-provider";
 import { CryptoRatesUpdater } from "@/components/crypto-rates-updater";
 import { calculators } from "@/lib/calculators";
@@ -72,6 +73,7 @@ export default function RootLayout({
         <AnalyticsProvider />
         <PwaProvider />
         <CryptoRatesUpdater />
+        <CookieConsent />
         {process.env.NODE_ENV !== 'development' && (
           <Script
             id="yandex-rtb"
