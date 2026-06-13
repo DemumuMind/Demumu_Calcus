@@ -161,7 +161,16 @@ function FeaturedBlock({
 }
 
 export default function HomePage() {
-  const homeSchema = generateHomePageSchema();
+  const homeSchema = [
+    generateHomePageSchema(),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
+      ],
+    },
+  ];
 
   return (
     <div className="flex flex-col">

@@ -53,7 +53,7 @@ export const articles: Article[] = [
     [
       { title: 'Калькулятор НДС', href: '/kalkulyator-nds' },
       { title: 'Кредитный калькулятор', href: '/kreditnyj-kalkulyator' },
-      { title: 'Простой калькулятор', href: '/prostoj-kalkulyator' },
+      { title: 'Простой калькулятор', href: '/prostoj-kalkulyator-ot-1-do-100' },
     ],
   ),
   makeArticle(
@@ -107,7 +107,7 @@ export const articles: Article[] = [
     [
       { title: 'Калькулятор ипотеки', href: '/ipotechnyj-kalkulyator' },
       { title: 'Калькулятор процентов', href: '/procenty' },
-      { title: 'Калькулятор вкладов', href: '/kalkulyator-vkladov' },
+      { title: 'Калькулятор вкладов', href: '/depozitnyj-kalkulyator' },
     ],
   ),
   makeArticle(
@@ -133,7 +133,7 @@ export const articles: Article[] = [
     { text: 'Выделяйте и начисляйте НДС мгновенно — без ошибок и сложных формул.', link: '/kalkulyator-nds', linkText: 'Калькулятор НДС' },
     [
       { title: 'Калькулятор процентов', href: '/procenty' },
-      { title: 'Простой калькулятор', href: '/prostoj-kalkulyator' },
+      { title: 'Простой калькулятор', href: '/prostoj-kalkulyator-ot-1-do-100' },
       { title: 'Кредитный калькулятор', href: '/kreditnyj-kalkulyator' },
     ],
   ),
