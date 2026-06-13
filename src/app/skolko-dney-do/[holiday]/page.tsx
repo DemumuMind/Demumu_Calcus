@@ -13,7 +13,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Countdown } from '@/components/holiday/countdown';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 interface HolidayPageProps {
   params: Promise<{

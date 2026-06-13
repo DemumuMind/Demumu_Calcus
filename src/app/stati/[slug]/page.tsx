@@ -28,7 +28,7 @@ import {
   Clock,
 } from 'lucide-react';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;

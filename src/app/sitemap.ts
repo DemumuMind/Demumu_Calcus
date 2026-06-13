@@ -8,9 +8,9 @@ import { timerPresets } from '@/lib/timers';
 import { holidays } from '@/lib/holidays';
 import { getAllArticles } from '@/lib/articles';
 
-export const dynamic = 'force-static';
+export const revalidate = 86400; // Revalidate sitemap daily
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 /** Helper to add a sitemap entry with deduplication */
 function addRoute(routes: MetadataRoute.Sitemap, seen: Set<string>, url: string, priority: number, changeFrequency: MetadataRoute.Sitemap[0]['changeFrequency'] = 'monthly') {

@@ -12,7 +12,7 @@ import { SearchBox } from '@/components/search/search-box';
 import { YandexAdBlock } from '@/components/ads/ad-placeholder';
 import { AD_BLOCK_IDS } from '@/lib/ads/config';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 interface CategoryPageProps {
   params: Promise<{

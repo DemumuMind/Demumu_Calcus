@@ -24,7 +24,7 @@ import { SchemaInjector } from '@/components/seo/schema-injector';
 import { generateHomePageSchema } from '@/lib/schema';
 import { getCategoryStyle } from '@/lib/category-styles';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 const getCategoryCalculatorCount = (slug: string) => {
   return getCalculatorsByCategory(slug).length;

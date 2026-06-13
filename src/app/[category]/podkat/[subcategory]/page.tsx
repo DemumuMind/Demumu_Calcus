@@ -8,7 +8,7 @@ import { getCategoryStyle, getSubcategoryIcon } from '@/lib/category-styles';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SearchBox } from '@/components/search/search-box';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 interface SubcategoryPageProps {
   params: Promise<{

@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
   return {
     rules: [

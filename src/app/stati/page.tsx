@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
 import { SchemaInjector } from '@/components/seo/schema-injector';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 export const metadata: Metadata = {
   title: 'Полезные статьи — руководства по расчётам и конвертации | Calcus',

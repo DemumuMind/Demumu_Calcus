@@ -5,7 +5,7 @@ import type { CookingIngredient } from './cooking';
 import type { TimerPreset } from './timers';
 import type { PercentageCalculation } from './percentages';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 /** Helper to create a HowTo schema with steps */
 function makeHowToSchema(name: string, description: string, steps: Array<{ name: string; text: string; url?: string }>) {
@@ -44,7 +44,7 @@ export function generateHomePageSchema() {
     '@type': 'WebSite',
     name: 'Calcus — Онлайн калькуляторы и конвертеры',
     url: SITE_URL,
-    description: 'Бесплатные онлайн калькуляторы, конвертеры единиц измерения, процентные калькуляторы, таймеры и кулинарные меры. Более 2500 конверсий и 100+ калькуляторов.',
+    description: '759 бесплатных онлайн калькуляторов, конвертеров единиц измерения, процентных калькуляторов, таймеров и кулинарных мер. Все расчёты мгновенно и без регистрации.',
     potentialAction: {
       '@type': 'SearchAction',
       target: `${SITE_URL}/search?q={search_term_string}`,

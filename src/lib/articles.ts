@@ -20,7 +20,7 @@ export interface ArticleSection {
   body: string;
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 /** Helper to reduce repetitive article object structure */
 export function makeArticle(
@@ -40,13 +40,16 @@ export function makeArticle(
 
 export { additionalArticles } from './articles-additional';
 export { articles } from './articles-main';
+export { seoArticles } from './articles-seo';
 
 import { additionalArticles } from './articles-additional';
 import { articles } from './articles-main';
+import { seoArticles } from './articles-seo';
 
 const articleSlugMap = new Map<string, Article>([
   ...additionalArticles.map((a) => [a.slug, a] as const),
   ...articles.map((a) => [a.slug, a] as const),
+  ...seoArticles.map((a) => [a.slug, a] as const),
 ]);
 
 export function getArticleBySlug(slug: string): Article | undefined {
@@ -54,7 +57,7 @@ export function getArticleBySlug(slug: string): Article | undefined {
 }
 
 export function getAllArticles(): Article[] {
-  return [...additionalArticles, ...articles];
+  return [...additionalArticles, ...articles, ...seoArticles];
 }
 
 export function generateArticleSchema(article: Article) {

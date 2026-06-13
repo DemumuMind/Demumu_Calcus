@@ -13,7 +13,7 @@ import { YandexAdBlock } from '@/components/ads/ad-placeholder';
 import { AD_BLOCK_IDS } from '@/lib/ads/config';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://demumu-calcus.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://calcus.ru';
 
 interface ConverterPageProps {
   params: Promise<{
