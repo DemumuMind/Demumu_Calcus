@@ -30,7 +30,7 @@ const EngineeringCalculator = dynamic(
 
 function CalculatorSkeleton() {
   return (
-    <Card className="mb-8 animate-pulse">
+    <Card className="mb-8 animate-pulse" role="status" aria-label="Загрузка калькулятора" aria-busy="true">
       <CardContent className="p-6 space-y-4">
         <div className="flex items-center gap-2">
           <CalculatorIcon className="h-5 w-5 text-muted-foreground/50" />
@@ -80,7 +80,7 @@ export function CalculatorClientWrapper({ slug, type, searchParams }: Calculator
 
   if (!baseCalculator || !calculator) {
     return (
-      <div className="rounded-xl border p-8 text-center text-muted-foreground">
+      <div className="rounded-xl border p-8 text-center text-muted-foreground" role="alert">
         Калькулятор не найден
       </div>
     );
